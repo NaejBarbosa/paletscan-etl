@@ -5,13 +5,27 @@
   "main": "dist/index.js",
   "scripts": {
     "scrape:friboi": "npx tsx scrapers/friboi/index.ts",
+    "sync:supabase": "npx tsx db_sync/sync.ts",
     "build": "tsc"
   },
-  "keywords": ["etl", "scraper", "friboi", "paletscan", "data-ingestion"],
+  "keywords": [
+    "etl",
+    "scraper",
+    "friboi",
+    "paletscan",
+    "supabase",
+    "data-ingestion"
+  ],
   "author": "PaletScan Data Team",
   "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "dotenv": "^16.4.5",
+    "uuid": "^10.0.0"
+  },
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "@types/uuid": "^10.0.0",
     "tsx": "^4.19.0",
     "typescript": "^5.5.0"
   }
