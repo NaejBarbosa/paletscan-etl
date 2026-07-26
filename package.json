@@ -6,6 +6,7 @@
   "scripts": {
     "scrape:friboi": "npx tsx scrapers/friboi/index.ts",
     "sync:supabase": "npx tsx db_sync/sync.ts",
+    "sync:images": "npx tsx db_sync/sync_images.ts",
     "build": "tsc"
   },
   "keywords": [
@@ -14,7 +15,9 @@
     "friboi",
     "paletscan",
     "supabase",
-    "data-ingestion"
+    "data-ingestion",
+    "rembg",
+    "storage"
   ],
   "author": "PaletScan Data Team",
   "license": "ISC",
