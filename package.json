@@ -1,0 +1,18 @@
+{
+  "name": "paletscan-etl",
+  "version": "1.0.0",
+  "description": "ETL Pipeline & Web Scraper suite for PaletScan data ingestion",
+  "main": "dist/index.js",
+  "scripts": {
+    "scrape:friboi": "npx tsx scrapers/friboi/index.ts",
+    "build": "tsc"
+  },
+  "keywords": ["etl", "scraper", "friboi", "paletscan", "data-ingestion"],
+  "author": "PaletScan Data Team",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}

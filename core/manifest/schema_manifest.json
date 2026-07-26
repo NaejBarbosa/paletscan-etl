@@ -1,0 +1,196 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PaletScanETLSchemaManifest",
+  "description": "Esquema de validação rigoroso para ingestão de dados relacionais do PaletScan ETL.",
+  "type": "object",
+  "properties": {
+    "fabricantes": {
+      "type": "array",
+      "description": "Lista de empresas holdings / fabricantes principais.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identificador único (UUID ou slug) do fabricante."
+          },
+          "nome": {
+            "type": "string",
+            "minLength": 2,
+            "description": "Razão social ou nome de mercado da holding fabricante."
+          },
+          "cnpj": {
+            "type": ["string", "null"],
+            "pattern": "^$|^\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}$|^\\d{14}$",
+            "description": "CNPJ formatado ou apenas dígitos."
+          },
+          "site_oficial": {
+            "type": ["string", "null"],
+            "description": "URL principal do site do fabricante."
+          },
+          "ativo": {
+            "type": "boolean",
+            "default": true
+          },
+          "criado_em": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": ["id", "nome"]
+      }
+    },
+    "marcas": {
+      "type": "array",
+      "description": "Marcas comerciais pertencentes às holdings fabricantes.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identificador único da marca."
+          },
+          "fabricante_id": {
+            "type": "string",
+            "description": "Chave estrangeira vinculada ao id da tabela fabricantes."
+          },
+          "nome": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nome da marca comercial (ex: Friboi Black, Maturatta, Do Chef, 1953)."
+          },
+          "slug": {
+            "type": "string",
+            "description": "Identificador legível em URL (slug)."
+          },
+          "descricao": {
+            "type": ["string", "null"]
+          },
+          "ativo": {
+            "type": "boolean",
+            "default": true
+          },
+          "criado_em": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": ["id", "fabricante_id", "nome"]
+      }
+    },
+    "produtos": {
+      "type": "array",
+      "description": "Catálogo de produtos normalizados com atributos padronizados.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identificador único do produto."
+          },
+          "marca_id": {
+            "type": "string",
+            "description": "Chave estrangeira vinculada ao id da tabela marcas."
+          },
+          "descricao_padronizada": {
+            "type": "string",
+            "minLength": 3,
+            "description": "Descrição tratada e padronizada no formato 'Nome do Produto + Peso' ou 'Nome do Produto (pesar)'."
+          },
+          "descricao_original": {
+            "type": "string",
+            "description": "Descrição original extraída da fonte."
+          },
+          "classe": {
+            "type": "string",
+            "description": "Categoria/Classe do produto (ex: Bovinos, Suínos, Aves, Pescados, Processados)."
+          },
+          "conservacao": {
+            "type": "string",
+            "enum": ["Resfriado", "Congelado", "Temperatura Ambiente", "Outros"],
+            "description": "Estado de conservação da mercadoria."
+          },
+          "peso_gramas": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "description": "Peso líquido normalizado em gramas (ex: 1kg = 1000). Nulo caso seja produto fracionado sem peso fixo."
+          },
+          "fracionado": {
+            "type": "boolean",
+            "description": "Indica se o produto é vendido por peso variável (fracionado/pesar)."
+          },
+          "imagem_url": {
+            "type": ["string", "null"],
+            "description": "URL da imagem de alta qualidade do produto."
+          },
+          "status_imagem": {
+            "type": "string",
+            "enum": ["aprovado", "pendente_aprovacao", "sem_imagem"],
+            "description": "Status da validação da imagem."
+          },
+          "criado_em": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": ["id", "marca_id", "descricao_padronizada", "classe", "conservacao", "fracionado"]
+      }
+    },
+    "codigos_barras": {
+      "type": "array",
+      "description": "Identificadores de códigos de barras (SKU, EAN-13, DUN-14) vinculados ao produto.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identificador único da entrada do código de barras."
+          },
+          "produto_id": {
+            "type": "string",
+            "description": "Chave estrangeira vinculada ao id da tabela produtos."
+          },
+          "tipo": {
+            "type": "string",
+            "enum": ["SKU", "EAN", "DUN"],
+            "description": "Tipo de código (SKU interno, EAN unidade, DUN caixa)."
+          },
+          "codigo": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Valor numérico/alfanumérico do código de barras ou SKU."
+          },
+          "embalagem": {
+            "type": ["string", "null"],
+            "description": "Descrição da embalagem (ex: Caixa, Pacote, Peça, Unidade)."
+          },
+          "quantidade_embalagem": {
+            "type": ["integer", "null"],
+            "minimum": 1,
+            "description": "Quantidade de unidades contidas na caixa/embalagem (relevante para DUN)."
+          },
+          "criado_em": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": ["id", "produto_id", "tipo", "codigo"]
+      }
+    },
+    "pending_images_approval": {
+      "type": "array",
+      "description": "Matriz de produtos cujas imagens eram placeholders genéricos e aguardam aprovação manual.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "produto_id": { "type": "string" },
+          "sku": { "type": "string" },
+          "descricao": { "type": "string" },
+          "placeholder_url": { "type": "string" }
+        },
+        "required": ["produto_id", "sku", "descricao", "placeholder_url"]
+      }
+    }
+  },
+  "required": ["fabricantes", "marcas", "produtos", "codigos_barras", "pending_images_approval"]
+}
