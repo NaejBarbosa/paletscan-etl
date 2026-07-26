@@ -41,9 +41,9 @@ Para evitar registros duplicados em execuções repetidas do ETL (upserts concor
 
 ## ⚙️ 3. Pipeline de ETL e Inteligência Artificial Local
 
-O pipeline de dados é dividido em camadas modulares em TypeScript/Node.js e Python:
+O pipeline de dados é totalmente independente e executa requisições web HTTP ao vivo:
 
-1. **Extração Isolada (Scrapers)**: Módulos dedicados em `scrapers/<empresa>/index.ts` extraem os catálogos B2B sem acoplamento.
+1. **Extração Web ao Vivo (Fetch & Parse)**: O módulo [`scrapers/friboi/index.ts`](file:///root/paletscan-etl/scrapers/friboi/index.ts) realiza web scraping em tempo real baixando o sitemap XML oficial do portal B2B Friboi (`https://www.friboionline.com.br/productSitemap.xml`) e consultando concorrentemente as APIs HTTP de produto (`ccstoreui/v1/products/`) para capturar dados vivos.
 2. **Normalização de Texto e Pesos (`core/normalizers/text_parser.ts`)**:
    - Converte strings ALL CAPS para Title Case respeitando a acentuação em PT-BR (corrigindo termos como "Filé", "Moída", "Acém").
    - Extrai pesos fixos para gramas numéricas (`peso_gramas`).
@@ -52,7 +52,7 @@ O pipeline de dados é dividido em camadas modulares em TypeScript/Node.js e Pyt
    - Classifica automaticamente marcas secundárias (*Friboi Black, Maturatta, Do Chef, 1953, Swift, etc.*).
    - Infere a classe do produto (*Bovinos, Suínos, Aves, Pescados, Processados*) e o estado de conservação (*Resfriado, Congelado, Temperatura Ambiente*).
 4. **Pipeline de Imagens e IA Local (`images/ai_pipeline/process_image.py`)**:
-   - Inspeciona URLs da fonte: se for um placeholder genérico (como `355027_05.jpeg` ou `_00.JPG`), o produto vai para a matriz `pending_images_approval`.
+   - Inspeciona URLs da fonte em tempo real: se for um placeholder genérico (como `355027_05.jpeg` ou `_00.JPG`), o produto vai para a matriz `pending_images_approval`.
    - Para fotos reais: realiza a remoção do fundo com rede neural local (`rembg` em Python), converte para `.webp` transparente em `images/processed/` e efetua upload para o Supabase Storage (`produtos-imagens`), atualizando a `imagem_url` para o status `aprovado` e movendo o arquivo para `images/archived/`.
 
 ---
@@ -63,8 +63,8 @@ O pipeline de dados é dividido em camadas modulares em TypeScript/Node.js e Pyt
 - [x] **Esquema de Validação Rigoroso**: Manifesto JSON Schema em [`core/manifest/schema_manifest.json`](file:///root/paletscan-etl/core/manifest/schema_manifest.json).
 - [x] **Módulo Normalizador de Texto e Pesos**: [`core/normalizers/text_parser.ts`](file:///root/paletscan-etl/core/normalizers/text_parser.ts).
 - [x] **Heurísticas de Marca e Categoria**: [`core/heuristics/brand_classifier.ts`](file:///root/paletscan-etl/core/heuristics/brand_classifier.ts) e [`category_classifier.ts`](file:///root/paletscan-etl/core/heuristics/category_classifier.ts).
+- [x] **Web Scraper Friboi B2B em Tempo Real**: Refatorado em [`scrapers/friboi/index.ts`](file:///root/paletscan-etl/scrapers/friboi/index.ts) para realizar extração via rede HTTP (1.812 produtos extraídos ao vivo da internet, 3.354 códigos de barras, 588 pendências de imagem).
 - [x] **Pipeline de IA para Remoção de Fundo**: [`images/ai_pipeline/process_image.py`](file:///root/paletscan-etl/images/ai_pipeline/process_image.py).
-- [x] **Scraper Friboi B2B**: Extrator em [`scrapers/friboi/index.ts`](file:///root/paletscan-etl/scrapers/friboi/index.ts) gerando staging normalizado em `staging/friboi_staging.json` (1.813 produtos, 3.355 códigos de barras, 557 pendências de imagem).
 - [x] **Script de Sincronização Supabase (UUIDv5)**: [`db_sync/sync.ts`](file:///root/paletscan-etl/db_sync/sync.ts) para conversão determinística e upserts em ordem relacional.
 - [x] **Pipeline de Carga de Mídia e Arquivamento**: [`db_sync/sync_images.ts`](file:///root/paletscan-etl/db_sync/sync_images.ts).
 
@@ -73,5 +73,5 @@ O pipeline de dados é dividido em camadas modulares em TypeScript/Node.js e Pyt
 ## 🎯 5. Próximos Passos (Next Steps)
 
 1. **Integração Backend Supabase com Frontend PWA**: Conectar o novo banco relacional PostgreSQL/Supabase à aplicação PWA em produção, substituindo a integração legada via Google Sheets.
-2. **Painel ADM de Aprovação de Imagens Pendentes**: Desenvolver a interface administrativa para revisão das 557 imagens marcadas como `pendente_aprovacao`.
+2. **Painel ADM de Aprovação de Imagens Pendentes**: Desenvolver a interface administrativa para revisão das 588 imagens marcadas como `pendente_aprovacao`.
 3. **Busca Unificada Fuzzy no PWA**: Implementar busca rápida por SKU, EAN-13, DUN-14 e termos aproximados de produtos diretamente no scanner do operador.

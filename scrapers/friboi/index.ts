@@ -1,26 +1,39 @@
 /**
- * Scraper ETL Friboi B2B - PaletScan ETL
- * Autor: Engenheiro de Dados Sênior
+ * Scraper ETL Friboi B2B - Web Extraction Direta em Tempo Real
+ * Autor: Engenheiro de Dados Sênior / Arquiteto PaletScan
  * 
- * Responsável por extrair, normalizar e estruturar relacionalmente os produtos
- * da holding Friboi (JBS) e suas marcas associadas, gerando o arquivo friboi_staging.json.
+ * Este módulo realiza:
+ * 1. Web scraping em tempo real através do sitemap XML oficial da Friboi B2B.
+ * 2. Requisições HTTP concorrentes à API CCStore de produtos (friboionline.com.br).
+ * 3. Extração dinâmica de SKU, Título, EAN, DUN, Marca, Classe, Conservação e Imagem de Alta Resolução.
+ * 4. Normalização rigorosa de texto, acentuação PT-BR, pesos em gramas e separação de placeholders de imagem.
+ * 5. Geração do payload relacional normatizado em staging/friboi_staging.json.
  */
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { execSync } from 'child_process';
-import { formatProductDescription, toTitleCase } from '../../core/normalizers/text_parser.js';
+import { formatProductDescription } from '../../core/normalizers/text_parser.js';
 import { classifyBrand, FABRICANTE_FRIBOI_ID, FABRICANTE_FRIBOI_NOME } from '../../core/heuristics/brand_classifier.js';
 import { classifyProduct } from '../../core/heuristics/category_classifier.js';
 
+// Constantes de Endpoints e Cabeçalhos HTTP
+const SITEMAP_URL = 'https://www.friboionline.com.br/productSitemap.xml';
+const PRODUCT_API_URL = 'https://www.friboionline.com.br/ccstoreui/v1/products/';
+const BASE_DOMAIN = 'https://www.friboionline.com.br';
+
+const HTTP_HEADERS = {
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+  'Accept': 'application/json, text/plain, */*',
+  'Accept-Language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+};
+
 // Paths principais
 const BASE_DIR = path.resolve(process.cwd());
-const DB_PATH = '/root/projetos-scraping/scraping-friboi/friboi_catalogo.db';
 const STAGING_DIR = path.join(BASE_DIR, 'staging');
 const STAGING_FILE = path.join(STAGING_DIR, 'friboi_staging.json');
 
-// Interface para dados brutos do SQLite / API
-interface RawProduct {
+// Interface para dados brutos do produto extraído ao vivo
+interface RawLiveProduct {
   sku: string;
   title: string;
   descrFiscal?: string;
@@ -29,9 +42,6 @@ interface RawProduct {
   marca?: string;
   classe?: string;
   conservacao?: string;
-  pesoLiquido?: string;
-  pesoBruto?: string;
-  url?: string;
   image_url?: string;
 }
 
@@ -104,12 +114,12 @@ function isPlaceholderImage(url: string | undefined | null): boolean {
 
   const cleanUrl = url.toLowerCase().trim();
 
-  // Caso 1: Exemplo específico mencionado na especificação do projeto (/products/355027_05.jpeg)
+  // Caso 1: Exemplo específico mencionado na especificação (/products/355027_05.jpeg)
   if (cleanUrl.includes('355027_05') || cleanUrl.includes('_05.jpeg') || cleanUrl.includes('_05.jpg')) {
     return true;
   }
 
-  // Caso 2: Termos típicos de ausência de imagem
+  // Caso 2: Indicativos explícitos de imagem padrão/ausência
   if (
     cleanUrl.includes('placeholder') ||
     cleanUrl.includes('no-image') ||
@@ -121,7 +131,7 @@ function isPlaceholderImage(url: string | undefined | null): boolean {
     return true;
   }
 
-  // Caso 3: Imagem genérica que só tem SKU_00.JPG sem o slug descritivo da carne
+  // Caso 3: Imagem genérica com padrão SKU_00.JPG sem o slug descritivo do produto
   if (/\/products\/\d+_00\.(jpg|jpeg|png)$/i.test(cleanUrl)) {
     return true;
   }
@@ -130,39 +140,119 @@ function isPlaceholderImage(url: string | undefined | null): boolean {
 }
 
 /**
- * Lê os dados brutos da tabela de produtos do banco de dados SQLite ou JSON local.
+ * Obtém a lista de SKUs diretamente do sitemap XML oficial em tempo real.
  */
-function fetchRawProducts(): RawProduct[] {
-  if (fs.existsSync(DB_PATH)) {
-    console.log(`📡 Carregando produtos do banco SQLite local: ${DB_PATH}`);
-    try {
-      const output = execSync(`sqlite3 -json "${DB_PATH}" "SELECT * FROM produtos;"`, {
-        encoding: 'utf-8',
-        maxBuffer: 50 * 1024 * 1024
-      });
-      const data = JSON.parse(output) as RawProduct[];
-      console.log(`✅ ${data.length} produtos brutos carregados do banco SQLite.`);
-      return data;
-    } catch (err) {
-      console.error(`⚠️ Falha ao ler banco SQLite:`, err);
+async function fetchSKUsFromSitemap(): Promise<string[]> {
+  console.log(`📡 Baixando sitemap oficial ao vivo: ${SITEMAP_URL}`);
+  const response = await fetch(SITEMAP_URL, { headers: HTTP_HEADERS });
+  if (!response.ok) {
+    throw new Error(`Falha ao carregar sitemap. Status HTTP: ${response.status}`);
+  }
+
+  const xmlText = await response.text();
+  // Regex para captura de URLs do sitemap mantendo o formato /product/<slug>/<sku>
+  const urlMatches = xmlText.match(/https:\/\/www\.friboionline\.com\.br\/product\/[^<]+/g) || [];
+
+  const skusSet = new Set<string>();
+  for (const rawUrl of urlMatches) {
+    // Remove sufixos XML tipo CDATA `]]>` se existirem
+    const cleanUrl = rawUrl.replace(/]]>.*$/, '').trim();
+    const parts = cleanUrl.split('/');
+    const lastPart = parts.pop() || parts.pop();
+    if (lastPart && /^\d+$/.test(lastPart)) {
+      skusSet.add(lastPart);
     }
   }
 
-  // Fallback se o banco sqlite não for encontrado
-  console.log(`⚠️ Banco SQLite não encontrado em ${DB_PATH}. Inicializando array vazio para staging.`);
-  return [];
+  const skus = Array.from(skusSet);
+  console.log(`✅ Sitemap processado com sucesso! ${skus.length} SKUs únicos identificados ao vivo.`);
+  return skus;
 }
 
 /**
- * Executa a pipeline principal do scraper e normalizador Friboi ETL
+ * Realiza o scraping individual de um produto via API CCStore Friboi B2B.
  */
-export async function runFriboiScraper(): Promise<StagingPayload> {
-  console.log('🚀 Iniciando Scraper ETL Friboi B2B...');
+async function scrapeProductDetails(sku: string): Promise<RawLiveProduct | null> {
+  try {
+    const response = await fetch(`${PRODUCT_API_URL}${sku}`, { headers: HTTP_HEADERS });
+    if (!response.ok) {
+      return null;
+    }
+
+    const data: any = await response.json();
+
+    // Extração dinâmica de campos do JSON ao vivo da Oracle Commerce Cloud (CCStore)
+    const title = data.displayName || data.x_cNmProduto || `Produto SKU ${sku}`;
+    const descrFiscal = data.longDescription || data.description || '';
+    
+    // Tentativa de localização do EAN (código EAN principal ou childSKUs)
+    const ean = data.x_cCdEAN || data.x_ean || (data.childSKUs && data.childSKUs[0]?.barcode) || '';
+    const dun = data.x_cCdDUN || data.x_dun || '';
+    const marca = data.x_MARCA || data.brand || '';
+    const classe = data.x_cOrigem || data.x_TIPO_DE_PRODUTO || (data.parentCategoryIdPath ? data.parentCategoryIdPath.split('>')[1] : '');
+    const conservacao = data.x_TEMPERATURA || '';
+
+    // URL da Imagem principal de alta resolução
+    let image_url: string | undefined = undefined;
+    if (data.primaryFullImageURL) {
+      image_url = data.primaryFullImageURL.startsWith('http')
+        ? data.primaryFullImageURL
+        : `${BASE_DOMAIN}${data.primaryFullImageURL}`;
+    }
+
+    return {
+      sku,
+      title: title.replace(/\s*\(\d+\)$/, '').trim(), // Limpa "(1005)" do final do título se presente
+      descrFiscal,
+      ean: String(ean).trim(),
+      dun: String(dun).trim(),
+      marca: String(marca).trim(),
+      classe: String(classe).trim(),
+      conservacao: String(conservacao).trim(),
+      image_url
+    };
+  } catch (err) {
+    return null;
+  }
+}
+
+/**
+ * Pipeline principal do Web Scraper Friboi (Fetch -> Parse -> Normalize -> Staging)
+ */
+export async function runFriboiLiveScraper(): Promise<StagingPayload> {
+  console.log('🌐 === INICIANDO WEB SCRAPER FRIBOI B2B EM TEMPO REAL ===');
   const nowISO = new Date().toISOString();
 
-  const rawProducts = fetchRawProducts();
+  // 1. Obtenção ao vivo de SKUs pelo sitemap
+  const skus = await fetchSKUsFromSitemap();
 
-  // 1. Holding Fabricante (Friboi / JBS S.A.)
+  if (skus.length === 0) {
+    throw new Error('Nenhum SKU retornado do sitemap online.');
+  }
+
+  // 2. Scraping Concorrente com Pool de Conexões em Lote
+  console.log(`🚀 Iniciando extração web concorrente de ${skus.length} produtos...`);
+  const rawProducts: RawLiveProduct[] = [];
+  const BATCH_SIZE = 15; // Requisições paralelas balanceadas
+
+  let processedCount = 0;
+  for (let i = 0; i < skus.length; i += BATCH_SIZE) {
+    const batchSkus = skus.slice(i, i + BATCH_SIZE);
+    const results = await Promise.all(batchSkus.map(sku => scrapeProductDetails(sku)));
+
+    for (const prod of results) {
+      if (prod) {
+        rawProducts.push(prod);
+      }
+    }
+
+    processedCount += batchSkus.length;
+    process.stdout.write(`  \r⏳ Extraídos ${rawProducts.length}/${processedCount} produtos online (${Math.round((processedCount / skus.length) * 100)}%)...`);
+  }
+  process.stdout.write(`\n`);
+  console.log(`✅ Web scraping concluído! ${rawProducts.length} produtos extraídos diretamente da internet.`);
+
+  // 3. Estruturação Relacional e Funil ETL (Holding, Marcas, Produtos, Códigos de Barras)
   const fabricanteHolding: Fabricante = {
     id: FABRICANTE_FRIBOI_ID,
     nome: FABRICANTE_FRIBOI_NOME,
@@ -178,9 +268,7 @@ export async function runFriboiScraper(): Promise<StagingPayload> {
   const pendingImagesApproval: PendingImageApproval[] = [];
 
   for (const raw of rawProducts) {
-    if (!raw.sku || !raw.title) continue;
-
-    // Classificação e vínculo relacional da Marca
+    // Classificação da Marca relacional
     const brandInfo = classifyBrand(raw.marca || '', raw.title);
     if (!marcasMap.has(brandInfo.id)) {
       marcasMap.set(brandInfo.id, {
@@ -200,7 +288,7 @@ export async function runFriboiScraper(): Promise<StagingPayload> {
 
     const produtoId = `prod_friboi_${raw.sku}`;
 
-    // Verificação de Imagem (Filtro de Placeholder)
+    // Filtro de Placeholders de Imagem
     const isPlaceholder = isPlaceholderImage(raw.image_url);
     let statusImagem: 'aprovado' | 'pendente_aprovacao' | 'sem_imagem' = 'sem_imagem';
 
@@ -232,8 +320,7 @@ export async function runFriboiScraper(): Promise<StagingPayload> {
     };
     produtos.push(produto);
 
-    // Códigos de Barras Relacionados (SKU, EAN, DUN)
-    // 1. SKU
+    // Identificadores de Código de Barras (SKU, EAN, DUN)
     codigosBarras.push({
       id: `bar_sku_${raw.sku}`,
       produto_id: produtoId,
@@ -244,7 +331,6 @@ export async function runFriboiScraper(): Promise<StagingPayload> {
       criado_em: nowISO
     });
 
-    // 2. EAN (se preenchido e válido)
     if (raw.ean && raw.ean.trim().length >= 8) {
       codigosBarras.push({
         id: `bar_ean_${raw.sku}_${raw.ean.trim()}`,
@@ -257,7 +343,6 @@ export async function runFriboiScraper(): Promise<StagingPayload> {
       });
     }
 
-    // 3. DUN (se preenchido e válido)
     if (raw.dun && raw.dun.trim().length >= 8) {
       codigosBarras.push({
         id: `bar_dun_${raw.sku}_${raw.dun.trim()}`,
@@ -279,7 +364,7 @@ export async function runFriboiScraper(): Promise<StagingPayload> {
     pending_images_approval: pendingImagesApproval
   };
 
-  // Garante a existência da pasta staging/
+  // Garante a existência do diretório staging/
   if (!fs.existsSync(STAGING_DIR)) {
     fs.mkdirSync(STAGING_DIR, { recursive: true });
   }
@@ -287,10 +372,10 @@ export async function runFriboiScraper(): Promise<StagingPayload> {
   // Grava o arquivo de staging JSON
   fs.writeFileSync(STAGING_FILE, JSON.stringify(payload, null, 2), 'utf-8');
 
-  console.log('\n📊 === RESUMO DA PIPELINE FRIBOI ETL ===');
+  console.log('\n📊 === RESUMO DO SCRAPING AO VIVO FRIBOI ETL ===');
   console.log(`🏢 Holdings/Fabricantes: ${payload.fabricantes.length}`);
-  console.log(`🏷️  Marcas Identificadas: ${payload.marcas.length} (${payload.marcas.map(m => m.nome).join(', ')})`);
-  console.log(`🥩 Produtos Processados: ${payload.produtos.length}`);
+  console.log(`🏷️  Marcas Identificadas: ${payload.marcas.length}`);
+  console.log(`🥩 Produtos Extraídos e Processados: ${payload.produtos.length}`);
   console.log(`📊 Códigos de Barras (SKU/EAN/DUN): ${payload.codigos_barras.length}`);
   console.log(`🖼️  Imagens Pendentes de Aprovação (Placeholders): ${payload.pending_images_approval.length}`);
   console.log(`💾 Arquivo salvo com sucesso em: ${STAGING_FILE}\n`);
@@ -298,10 +383,10 @@ export async function runFriboiScraper(): Promise<StagingPayload> {
   return payload;
 }
 
-// Executa o script se chamado diretamente no terminal
+// Execução via CLI
 if (process.argv[1] && process.argv[1].endsWith('index.ts')) {
-  runFriboiScraper().catch(err => {
-    console.error('❌ Erro durante a execução do Scraper Friboi:', err);
+  runFriboiLiveScraper().catch(err => {
+    console.error('❌ Erro durante o Web Scraping ao vivo:', err);
     process.exit(1);
   });
 }
