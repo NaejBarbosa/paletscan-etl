@@ -28,14 +28,12 @@ O modelo relacional do PaletScan foi projetado para eliminar duplicidades e gara
    [ Produtos ] ◄── Normalização de Pesos e Textos
          │ (1:N)
          ▼
-[ Codigos_Barras ] (SKU, EAN-13, DUN-14)
+[ Codigos_Barras ] (SKU, EAN-13, DUN-14) ◄── Resiliência a Conflitos de EAN/DUN
 ```
 
-### 🔑 Identificadores Determinísticos (UUIDv5)
-Para evitar registros duplicados em execuções repetidas do ETL (upserts concorrentes), os IDs de todas as tabelas são gerados no Node.js via **UUIDv5** a partir de um `PALETSCAN_NAMESPACE` estático (`6ba7b810-9dad-11d1-80b4-00c04fd430c8`).
-- `toUUID5("fab_friboi_jbs")` $\rightarrow$ ID único e imutável para a holding.
-- `toUUID5("prod_friboi_1005")` $\rightarrow$ ID único para o produto SKU 1005.
-- As chaves estrangeiras (`fabricante_id`, `marca_id`, `produto_id`) são convertidas em cascata preservando a integridade relacional.
+### 🔑 Identificadores Determinísticos (UUIDv5) & Tratamento de Conflitos Cross-Scraper
+- Os IDs de todas as tabelas são gerados no Node.js via **UUIDv5** a partir de um `PALETSCAN_NAMESPACE` estático (`6ba7b810-9dad-11d1-80b4-00c04fd430c8`).
+- **Resiliência a Colisões de EAN/DUN**: Como a coluna `codigo` da tabela `codigos_barras` possui constraint `UNIQUE`, colisões entre scrapers de fornecedores diferentes não interrompem o pipeline. O script executa um fallback item-por-item, "engole" erros de duplicidade (`23505`), ignora a inserção conflitante e registra os detalhes em `staging/conflicts_log.json`.
 
 ---
 
@@ -63,9 +61,8 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
 - [x] **Esquema de Validação Rigoroso**: Manifesto JSON Schema em [`core/manifest/schema_manifest.json`](file:///root/paletscan-etl/core/manifest/schema_manifest.json).
 - [x] **Módulo Normalizador de Texto e Pesos**: [`core/normalizers/text_parser.ts`](file:///root/paletscan-etl/core/normalizers/text_parser.ts).
 - [x] **Heurísticas de Marca e Categoria**: [`core/heuristics/brand_classifier.ts`](file:///root/paletscan-etl/core/heuristics/brand_classifier.ts) e [`category_classifier.ts`](file:///root/paletscan-etl/core/heuristics/category_classifier.ts).
-- [x] **Web Scraper Friboi B2B em Tempo Real**: Refatorado em [`scrapers/friboi/index.ts`](file:///root/paletscan-etl/scrapers/friboi/index.ts) para realizar extração via rede HTTP (1.812 produtos extraídos ao vivo da internet, 3.354 códigos de barras, 588 pendências de imagem).
-- [x] **Pipeline de IA para Remoção de Fundo**: [`images/ai_pipeline/process_image.py`](file:///root/paletscan-etl/images/ai_pipeline/process_image.py).
-- [x] **Script de Sincronização Supabase (UUIDv5)**: [`db_sync/sync.ts`](file:///root/paletscan-etl/db_sync/sync.ts) para conversão determinística e upserts em ordem relacional.
+- [x] **Web Scraper Friboi B2B em Tempo Real**: [`scrapers/friboi/index.ts`](file:///root/paletscan-etl/scrapers/friboi/index.ts).
+- [x] **Pipeline de Sincronização Resiliente Supabase (UUIDv5 & Fail-safe Conflitos EAN)**: [`db_sync/sync.ts`](file:///root/paletscan-etl/db_sync/sync.ts) com salvamento automático de log em `staging/conflicts_log.json`.
 - [x] **Pipeline de Carga de Mídia e Arquivamento**: [`db_sync/sync_images.ts`](file:///root/paletscan-etl/db_sync/sync_images.ts).
 
 ---
@@ -73,5 +70,5 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
 ## 🎯 5. Próximos Passos (Next Steps)
 
 1. **Integração Backend Supabase com Frontend PWA**: Conectar o novo banco relacional PostgreSQL/Supabase à aplicação PWA em produção, substituindo a integração legada via Google Sheets.
-2. **Painel ADM de Aprovação de Imagens Pendentes**: Desenvolver a interface administrativa para revisão das 588 imagens marcadas como `pendente_aprovacao`.
+2. **Painel ADM de Aprovação de Imagens Pendentes**: Desenvolver a interface administrativa para revisão das imagens marcadas como `pendente_aprovacao`.
 3. **Busca Unificada Fuzzy no PWA**: Implementar busca rápida por SKU, EAN-13, DUN-14 e termos aproximados de produtos diretamente no scanner do operador.

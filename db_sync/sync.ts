@@ -1,12 +1,13 @@
 /**
- * Script de Sincronização Supabase - PaletScan ETL
+ * Script de Sincronização Supabase com Resiliência a Conflitos de EAN/DUN - PaletScan ETL
  * Autor: Engenheiro de Dados Sênior
  * 
  * Este módulo realiza:
  * 1. Leitura dos dados normalizados em staging/friboi_staging.json.
  * 2. Conversão determinística dos IDs textuais em UUIDs v5 válidos via namespace estático.
  * 3. Atualização rigorosa das Chaves Estrangeiras (fabricante_id, marca_id, produto_id).
- * 4. Carga relacional ordenada (.upsert) no Supabase (Fabricantes -> Marcas -> Produtos -> Codigos de Barras).
+ * 4. Pré-deduplicação e tratamento de colisões de EAN/DUN cross-scraper.
+ * 5. Carga relacional ordenada (.upsert) no Supabase com fallback item por item e registro de conflitos em staging/conflicts_log.json.
  */
 
 import * as fs from 'fs';
@@ -18,7 +19,7 @@ import dotenv from 'dotenv';
 // Carrega variáveis de ambiente (.env)
 dotenv.config();
 
-// Namespace UUIDv5 estático e determinístico do PaletScan ETL (UUID v4 válido)
+// Namespace UUIDv5 estático e determinístico do PaletScan ETL
 export const PALETSCAN_NAMESPACE = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
 
 /**
@@ -29,7 +30,6 @@ export function toUUID5(input: string): string {
   if (!input || typeof input !== 'string') {
     throw new Error(`Entrada inválida para conversão UUIDv5: ${input}`);
   }
-  // Se a entrada já for um UUID v4/v5 válido, retorna o próprio valor
   const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
   if (uuidRegex.test(input)) {
     return input;
@@ -89,40 +89,119 @@ interface StagingData {
   pending_images_approval?: any[];
 }
 
+interface ConflictLogEntry {
+  id: string;
+  produto_id: string;
+  tipo: string;
+  codigo: string;
+  error_message: string;
+  timestamp: string;
+}
+
+const CONFLICTS_LOG_PATH = path.join(process.cwd(), 'staging', 'conflicts_log.json');
+
 /**
- * Executa o upsert em lote dividindo os itens em chunks menores para evitar estouro de memória/payload
+ * Registra conflitos de EAN/DUN no arquivo staging/conflicts_log.json
  */
-async function upsertInBatches<T extends { id: string }>(
+function logBarcodeConflict(item: any, errorMessage: string) {
+  let existingConflicts: ConflictLogEntry[] = [];
+  if (fs.existsSync(CONFLICTS_LOG_PATH)) {
+    try {
+      const content = fs.readFileSync(CONFLICTS_LOG_PATH, 'utf-8');
+      existingConflicts = JSON.parse(content);
+    } catch {
+      existingConflicts = [];
+    }
+  }
+
+  const newEntry: ConflictLogEntry = {
+    id: item.id,
+    produto_id: item.produto_id,
+    tipo: item.tipo || 'DESCONHECIDO',
+    codigo: item.codigo,
+    error_message: errorMessage,
+    timestamp: new Date().toISOString()
+  };
+
+  existingConflicts.push(newEntry);
+
+  const stagingDir = path.dirname(CONFLICTS_LOG_PATH);
+  if (!fs.existsSync(stagingDir)) {
+    fs.mkdirSync(stagingDir, { recursive: true });
+  }
+
+  fs.writeFileSync(CONFLICTS_LOG_PATH, JSON.stringify(existingConflicts, null, 2), 'utf-8');
+}
+
+/**
+ * Executa o upsert em lote dividindo os itens em chunks menores.
+ * Suporta fallback resiliente item-por-item se houver colisões de chaves únicas (código de barras).
+ */
+async function upsertInBatches<T extends { id: string; codigo?: string }>(
   supabase: SupabaseClient,
   tableName: string,
   items: T[],
-  batchSize = 200
-): Promise<number> {
-  if (items.length === 0) return 0;
+  batchSize = 200,
+  handleConflicts = false
+): Promise<{ totalSynced: number; conflictCount: number }> {
+  if (items.length === 0) return { totalSynced: 0, conflictCount: 0 };
 
   let totalSynced = 0;
+  let conflictCount = 0;
+
   for (let i = 0; i < items.length; i += batchSize) {
     const chunk = items.slice(i, i + batchSize);
+
     const { error } = await supabase
       .from(tableName)
       .upsert(chunk, { onConflict: 'id' });
 
-    if (error) {
-      console.error(`❌ Erro de upsert na tabela '${tableName}' (lote ${i / batchSize + 1}):`, error.message);
-      throw error;
+    if (!error) {
+      totalSynced += chunk.length;
+      process.stdout.write(`  \r⏳ Sincronizando ${tableName}: ${totalSynced}/${items.length} registros...`);
+    } else {
+      // Se ocorreu erro e o tratamento de conflitos está ativado (ex: codigos_barras)
+      if (handleConflicts) {
+        console.log(`\n⚠️  Lote de '${tableName}' encontrou duplicidades/conflitos. Ativando modo de resiliência (item por item)...`);
+        
+        for (const item of chunk) {
+          const { error: itemError } = await supabase
+            .from(tableName)
+            .upsert([item], { onConflict: 'id' });
+
+          if (!itemError) {
+            totalSynced++;
+          } else {
+            // Se for erro de violação de restrição única (código de barras duplicado em outro produto)
+            const isUniqueViolation = 
+              itemError.code === '23505' || 
+              /unique constraint|duplicate key|codigo/i.test(itemError.message);
+
+            if (isUniqueViolation) {
+              conflictCount++;
+              logBarcodeConflict(item, itemError.message);
+              console.log(`   ⚠️ Conflito no código de barras ${item.codigo} (Engolido & Registrado em conflicts_log.json)`);
+            } else {
+              console.error(`❌ Erro irrecuperável no item ${item.id}:`, itemError.message);
+            }
+          }
+        }
+      } else {
+        console.error(`❌ Erro de upsert na tabela '${tableName}' (lote ${i / batchSize + 1}):`, error.message);
+        throw error;
+      }
     }
-    totalSynced += chunk.length;
-    process.stdout.write(`  \r⏳ Sincronizando ${tableName}: ${totalSynced}/${items.length} registros...`);
   }
+
   process.stdout.write(`\n`);
-  return totalSynced;
+  return { totalSynced, conflictCount };
 }
 
 /**
- * Pipeline principal de transformação UUID e carga no Supabase
+ * Pipeline principal de transformação UUID e carga resiliente no Supabase
  */
 export async function syncStagingToSupabase() {
-  console.log('🔄 === INICIANDO PIPELINE DE SINCRONIZAÇÃO SUPABASE (UUIDv5) ===');
+  console.log('🔄 === INICIANDO PIPELINE DE SINCRONIZAÇÃO RESILIENTE SUPABASE (UUIDv5) ===');
 
   const baseDir = path.resolve(process.cwd());
   const stagingPath = path.join(baseDir, 'staging', 'friboi_staging.json');
@@ -141,32 +220,53 @@ export async function syncStagingToSupabase() {
   // -------------------------------------------------------------
   console.log('\n⚡ Transformando IDs textuais em UUIDv5 determinísticos...');
 
-  // 1. Transformação de Fabricantes
   const fabricantesUUID = staging.fabricantes.map(f => ({
     ...f,
     id: toUUID5(f.id)
   }));
 
-  // 2. Transformação de Marcas (PK id + FK fabricante_id)
   const marcasUUID = staging.marcas.map(m => ({
     ...m,
     id: toUUID5(m.id),
     fabricante_id: toUUID5(m.fabricante_id)
   }));
 
-  // 3. Transformação de Produtos (PK id + FK marca_id)
   const produtosUUID = staging.produtos.map(p => ({
     ...p,
     id: toUUID5(p.id),
     marca_id: toUUID5(p.marca_id)
   }));
 
-  // 4. Transformação de Códigos de Barras (PK id + FK produto_id)
-  const codigosBarrasUUID = staging.codigos_barras.map(cb => ({
-    ...cb,
-    id: toUUID5(cb.id),
-    produto_id: toUUID5(cb.produto_id)
-  }));
+  // Pré-deduplicação em memória para o mesmo payload (evita duplicados no mesmo lote de entrada)
+  const seenCodes = new Set<string>();
+  const codigosBarrasUUID: StagingCodigoBarras[] = [];
+  let inMemoryConflicts = 0;
+
+  for (const cb of staging.codigos_barras) {
+    const codeClean = (cb.codigo || '').trim();
+    if (!codeClean) continue;
+
+    if (seenCodes.has(codeClean)) {
+      inMemoryConflicts++;
+      logBarcodeConflict(
+        { ...cb, id: toUUID5(cb.id), produto_id: toUUID5(cb.produto_id) },
+        `Duplicidade de código detectada no mesmo payload de staging: ${codeClean}`
+      );
+      continue;
+    }
+
+    seenCodes.add(codeClean);
+    codigosBarrasUUID.push({
+      ...cb,
+      id: toUUID5(cb.id),
+      produto_id: toUUID5(cb.produto_id),
+      codigo: codeClean
+    });
+  }
+
+  if (inMemoryConflicts > 0) {
+    console.log(`⚠️ ${inMemoryConflicts} códigos de barras duplicados no mesmo payload foram salvos em conflicts_log.json.`);
+  }
 
   const payloadUUID = {
     fabricantes: fabricantesUUID,
@@ -176,19 +276,11 @@ export async function syncStagingToSupabase() {
     pending_images_approval: staging.pending_images_approval || []
   };
 
-  // Salva cópia com UUIDs no diretório staging para conferência e auditoria local
   fs.writeFileSync(transformedPath, JSON.stringify(payloadUUID, null, 2), 'utf-8');
   console.log(`✅ Dados transformados com UUIDs salvos em: ${transformedPath}`);
 
-  // Exibição de logs demonstrativos
-  console.log(`\n📌 Mapeamentos Demonstrativos de UUIDv5:`);
-  console.log(`   🏢 Fabricante: "${staging.fabricantes[0]?.id}" -> "${fabricantesUUID[0]?.id}"`);
-  console.log(`   🏷️  Marca:      "${staging.marcas[0]?.id}" -> "${marcasUUID[0]?.id}" (FK fabricante_id: "${marcasUUID[0]?.fabricante_id}")`);
-  console.log(`   🥩 Produto:    "${staging.produtos[0]?.id}" -> "${produtosUUID[0]?.id}" (FK marca_id: "${produtosUUID[0]?.marca_id}")`);
-  console.log(`   📊 Barra SKU:  "${staging.codigos_barras[0]?.id}" -> "${codigosBarrasUUID[0]?.id}" (FK produto_id: "${codigosBarrasUUID[0]?.produto_id}")`);
-
   // -------------------------------------------------------------
-  // CAMADA DE CARGA (LOAD): Supabase Upsert Ordenado
+  // CAMADA DE CARGA (LOAD): Supabase Upsert Ordenado Resiliente
   // -------------------------------------------------------------
   const supabaseUrl = process.env.SUPABASE_URL;
   const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY;
@@ -196,34 +288,41 @@ export async function syncStagingToSupabase() {
   if (!supabaseUrl || !supabaseKey || supabaseUrl.includes('sua-instancia')) {
     console.log('\n⚠️  SUPABASE_URL ou SUPABASE_KEY não configurados no arquivo .env.');
     console.log('💡 Para carregar no banco remoto, preencha as variáveis SUPABASE_URL e SUPABASE_KEY no .env.');
-    console.log('✨ A conversão para UUIDv5 e integridade relacional foram validadas com sucesso localmente!');
+    console.log('✨ A conversão para UUIDv5 e validação relacional foram concluídas com sucesso localmente!');
+    if (inMemoryConflicts > 0) {
+      console.log(`⚠️  Conflitos de EAN/DUN ignorados: ${inMemoryConflicts} (ver staging/conflicts_log.json)`);
+    }
     return;
   }
 
   console.log(`\n📡 Conectando ao Supabase em: ${supabaseUrl}`);
   const supabase = createClient(supabaseUrl, supabaseKey);
 
-  console.log('\n🚀 Executando Carga Relacional Ordenada (.upsert)...');
+  console.log('\n🚀 Executando Carga Relacional Ordenada Resiliente (.upsert)...');
 
-  // Ordem de inserção estrita respeitando as Foreign Keys
   console.log('1️⃣  Sincronizando Fabricantes...');
-  const countFab = await upsertInBatches(supabase, 'fabricantes', fabricantesUUID);
+  const resFab = await upsertInBatches(supabase, 'fabricantes', fabricantesUUID);
 
   console.log('2️⃣  Sincronizando Marcas...');
-  const countMarcas = await upsertInBatches(supabase, 'marcas', marcasUUID);
+  const resMarcas = await upsertInBatches(supabase, 'marcas', marcasUUID);
 
   console.log('3️⃣  Sincronizando Produtos...');
-  const countProdutos = await upsertInBatches(supabase, 'produtos', produtosUUID);
+  const resProdutos = await upsertInBatches(supabase, 'produtos', produtosUUID);
 
-  console.log('4️⃣  Sincronizando Códigos de Barras...');
-  const countCB = await upsertInBatches(supabase, 'codigos_barras', codigosBarrasUUID);
+  console.log('4️⃣  Sincronizando Códigos de Barras (Modo Resiliente)...');
+  const resCB = await upsertInBatches(supabase, 'codigos_barras', codigosBarrasUUID, 200, true);
+
+  const totalConflicts = resCB.conflictCount + inMemoryConflicts;
 
   console.log('\n🎉 === RESUMO DA SINCRONIZAÇÃO SUPABASE ===');
-  console.log(`🏢 Fabricantes sincronizados: ${countFab}`);
-  console.log(`🏷️  Marcas sincronizadas:      ${countMarcas}`);
-  console.log(`🥩 Produtos sincronizados:    ${countProdutos}`);
-  console.log(`📊 Códigos de Barras:         ${countCB}`);
-  console.log('✅ Toda a estrutura relacional foi carregada com sucesso no Supabase!');
+  console.log(`🏢 Fabricantes sincronizados: ${resFab.totalSynced}`);
+  console.log(`🏷️  Marcas sincronizadas:      ${resMarcas.totalSynced}`);
+  console.log(`🥩 Produtos sincronizados:    ${resProdutos.totalSynced}`);
+  console.log(`📊 Códigos de Barras:         ${resCB.totalSynced}`);
+  if (totalConflicts > 0) {
+    console.log(`⚠️  Conflitos de EAN/DUN ignorados: ${totalConflicts} (ver staging/conflicts_log.json)`);
+  }
+  console.log('✅ Pipeline finalizado com resiliência total!');
 }
 
 // Execução via CLI

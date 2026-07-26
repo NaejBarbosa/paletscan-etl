@@ -32211,28 +32211,10 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "b235e96d-6632-5347-8400-3287ef0824ce",
-      "produto_id": "776db632-a10b-59ae-af11-c29fe6aea06d",
-      "tipo": "EAN",
-      "codigo": "789435116573",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "43c88c9b-d443-5d57-a034-274fdc349831",
       "produto_id": "d4a6e6c2-9c15-5a78-a361-11a6be285688",
       "tipo": "SKU",
       "codigo": "370110",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "4f231eed-e9f2-5070-9544-0c182e3fadbf",
-      "produto_id": "d4a6e6c2-9c15-5a78-a361-11a6be285688",
-      "tipo": "EAN",
-      "codigo": "789435116574",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -33777,15 +33759,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "2fa1d302-a4d2-56c3-9393-0f53e38fa75e",
-      "produto_id": "8319a907-fc66-5d4b-9573-45de0aab7541",
-      "tipo": "EAN",
-      "codigo": "789956720559",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "d631bb09-8b3d-5c7d-b65f-ee83fe7062bd",
       "produto_id": "36a8ff21-8fcc-56e6-858f-f45c202b789d",
       "tipo": "SKU",
@@ -34240,15 +34213,6 @@
       "produto_id": "a06618a0-a555-51b2-8c1c-d5fd10bf4f4a",
       "tipo": "SKU",
       "codigo": "374668",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "05b28154-9280-51ce-95a3-c90cdda2051a",
-      "produto_id": "a06618a0-a555-51b2-8c1c-d5fd10bf4f4a",
-      "tipo": "EAN",
-      "codigo": "789854202991",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -35676,15 +35640,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "9df3677c-8db6-5c51-9ca3-38feaf7ff14d",
-      "produto_id": "6a1de230-61cc-5672-91bd-1a7ebdce1c3f",
-      "tipo": "EAN",
-      "codigo": "789854202992",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "93a50418-f4c1-5d04-92db-18c033bdd96f",
       "produto_id": "9a89a3b9-ab96-5701-bf33-83f6f0adb03c",
       "tipo": "SKU",
@@ -36463,15 +36418,6 @@
       "produto_id": "52cd3cbc-b780-58b0-abc6-696df57e367b",
       "tipo": "SKU",
       "codigo": "377772",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "125d4e4c-a965-5b2c-8cea-4459978a0509",
-      "produto_id": "52cd3cbc-b780-58b0-abc6-696df57e367b",
-      "tipo": "EAN",
-      "codigo": "789731853540",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -37458,15 +37404,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "d8ed2ac1-3de6-5b4a-98f6-c38f031527fa",
-      "produto_id": "ce8dfb40-98a9-50e8-abfa-32fe22ea2cde",
-      "tipo": "EAN",
-      "codigo": "789896278618",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "c0a66514-ffef-5c7f-8cdf-fe857ea10d95",
       "produto_id": "c684f6e7-a467-5c96-b937-41d64e7a6ccf",
       "tipo": "SKU",
@@ -37899,28 +37836,10 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "b962005b-5029-5da7-bf99-360d6cb531f6",
-      "produto_id": "561d4249-fec2-54a0-bea8-5b37b7903266",
-      "tipo": "EAN",
-      "codigo": "789956724968",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "e1962364-b7b9-53d2-9da0-84b780e5b407",
       "produto_id": "6fa35961-21ac-5024-b3db-82c0cf2a5f57",
       "tipo": "SKU",
       "codigo": "381616",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "ce90df47-aed9-5abd-9d04-39e1fb5e46fd",
-      "produto_id": "6fa35961-21ac-5024-b3db-82c0cf2a5f57",
-      "tipo": "EAN",
-      "codigo": "789956724997",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -39060,15 +38979,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "9d88ba07-d119-5065-9731-7339b51f5d29",
-      "produto_id": "4e51cb2a-3401-58b1-8624-5e914e976b6a",
-      "tipo": "EAN",
-      "codigo": "789956725998",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "829ec444-6085-5b84-b9d3-c770bc4a7f4f",
       "produto_id": "463eea06-6d90-54b9-9339-fde40156ff3b",
       "tipo": "SKU",
@@ -39447,15 +39357,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "1fdb4518-aed4-50d3-a521-6b4e63ec9a62",
-      "produto_id": "8a6ce7b1-6d3b-515b-93b0-a4a522ccf799",
-      "tipo": "EAN",
-      "codigo": "789641971385",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "c4c5b473-f609-5e5d-a43a-6e262d28aefe",
       "produto_id": "5b9c7387-9ae0-59ce-a1dc-2ef9354bdd54",
       "tipo": "SKU",
@@ -39501,15 +39402,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "894b8c1f-aa70-54a1-9f6e-4f987b7e38bf",
-      "produto_id": "b0cef564-a690-5c14-beec-23e7cda3e781",
-      "tipo": "EAN",
-      "codigo": "789956723286",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "bdd0b032-25c3-5e35-8a4a-15d85143ceaf",
       "produto_id": "2fccd6ae-ff87-5b93-b511-e7c2ab87ed12",
       "tipo": "SKU",
@@ -39519,28 +39411,10 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "6bd52226-6516-5350-9028-baec37f83125",
-      "produto_id": "2fccd6ae-ff87-5b93-b511-e7c2ab87ed12",
-      "tipo": "EAN",
-      "codigo": "789956723259",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "b43462cf-5ee4-5bb1-bfdc-b45b9492b6f6",
       "produto_id": "e2e3ddcf-c0bb-5d47-8dd0-1e160d9fe9e6",
       "tipo": "SKU",
       "codigo": "385218",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "ba756e35-4c90-50be-a5e2-f937dc0190f4",
-      "produto_id": "e2e3ddcf-c0bb-5d47-8dd0-1e160d9fe9e6",
-      "tipo": "EAN",
-      "codigo": "789956723989",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -40027,15 +39901,6 @@
       "produto_id": "766ddeec-496b-5804-a1bc-0d8854e909b6",
       "tipo": "SKU",
       "codigo": "385911",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "72739d09-4517-5b85-8164-45d12bab842f",
-      "produto_id": "766ddeec-496b-5804-a1bc-0d8854e909b6",
-      "tipo": "EAN",
-      "codigo": "789801733523",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -40828,15 +40693,6 @@
       "produto_id": "aab6977f-4602-589a-ba0a-2b0e83ca7ba6",
       "tipo": "SKU",
       "codigo": "388489",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "9b39c6d5-9671-5a2c-90c8-a820a2ff512a",
-      "produto_id": "aab6977f-4602-589a-ba0a-2b0e83ca7ba6",
-      "tipo": "EAN",
-      "codigo": "789490401391",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -42192,15 +42048,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "5303670d-5676-5724-abac-847afac83530",
-      "produto_id": "3fbe6efa-f75f-5f87-90f1-5700a3c771e2",
-      "tipo": "EAN",
-      "codigo": "789893261222",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "1159a97c-52f6-5b5a-ae8e-2b0e6301787d",
       "produto_id": "84cf87d8-e12a-55f1-b3c7-3bd0d5691db2",
       "tipo": "SKU",
@@ -42714,28 +42561,10 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "dd7afcdc-276d-5d74-af4b-31579484cad9",
-      "produto_id": "52aeebd2-e82d-50b9-a534-401c5c179f2b",
-      "tipo": "EAN",
-      "codigo": "789680741682",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "10a4f070-69cf-54c4-bcd9-eda2feb7aba9",
       "produto_id": "c3ed76dd-8e5f-5ed4-8a4b-0c25cb377ba2",
       "tipo": "SKU",
       "codigo": "390304",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "972a2f5d-f256-53c8-b1a9-25eebfdcee1f",
-      "produto_id": "c3ed76dd-8e5f-5ed4-8a4b-0c25cb377ba2",
-      "tipo": "EAN",
-      "codigo": "789680741680",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -44424,15 +44253,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "fcb9663f-9979-5673-b8a6-5ed5dda136a5",
-      "produto_id": "770f56c4-ffff-541a-a6c1-1de78501709d",
-      "tipo": "EAN",
-      "codigo": "789680741012",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "9103af9b-24bc-5cd5-a716-2636a084c304",
       "produto_id": "90ae9dfa-ff9a-5755-8c45-104595c04879",
       "tipo": "SKU",
@@ -45364,15 +45184,6 @@
       "produto_id": "6a5cb544-11b9-5303-addf-db28a8690936",
       "tipo": "SKU",
       "codigo": "392902",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "afbce23f-9d44-5cbb-a489-1bcc4cb51ad2",
-      "produto_id": "6a5cb544-11b9-5303-addf-db28a8690936",
-      "tipo": "EAN",
-      "codigo": "789956723286",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -46953,15 +46764,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "153a9901-fa79-534c-8dbf-5b82e008d7f1",
-      "produto_id": "2cda73eb-6003-5736-8514-836ca02b5150",
-      "tipo": "EAN",
-      "codigo": "789603121459",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "24da3700-2fcb-5154-91c4-798ec898243b",
       "produto_id": "5de430cc-1809-5296-a760-9e09540a327e",
       "tipo": "SKU",
@@ -47146,15 +46948,6 @@
       "produto_id": "4f5ef152-d9c9-5b5a-8a59-342bb1624f4d",
       "tipo": "SKU",
       "codigo": "394418",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "a967dc74-afe6-5f5d-9192-ad68be067e33",
-      "produto_id": "4f5ef152-d9c9-5b5a-8a59-342bb1624f4d",
-      "tipo": "EAN",
-      "codigo": "789897037007",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -47767,15 +47560,6 @@
       "produto_id": "ebbab0d2-328b-56ac-8bc2-b11bdf33bc30",
       "tipo": "SKU",
       "codigo": "395132",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "32572157-ce44-577e-ac45-42609604a482",
-      "produto_id": "ebbab0d2-328b-56ac-8bc2-b11bdf33bc30",
-      "tipo": "EAN",
-      "codigo": "789603124029",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -49842,15 +49626,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "58f6fcf2-cef9-5ac1-a400-48db0786eeb2",
-      "produto_id": "5b8e0adc-90fc-5aac-a249-213e46ac89a0",
-      "tipo": "EAN",
-      "codigo": "789603122384",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "13f6893e-8cb8-58da-91be-317b4ab36e04",
       "produto_id": "f301a199-7800-5b65-aec8-35d0b936ecf5",
       "tipo": "SKU",
@@ -49860,28 +49635,10 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "0f852f37-fda5-55e5-8f0d-98fdcf2fe6df",
-      "produto_id": "f301a199-7800-5b65-aec8-35d0b936ecf5",
-      "tipo": "EAN",
-      "codigo": "789603124978",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "dd2c0754-4cfa-5458-897f-f20b12bfbe51",
       "produto_id": "60df806d-c027-56dd-8177-008eab9af049",
       "tipo": "SKU",
       "codigo": "396686",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "34018ea0-c652-5aca-9d04-3bbb3d08919f",
-      "produto_id": "60df806d-c027-56dd-8177-008eab9af049",
-      "tipo": "EAN",
-      "codigo": "789603124977",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -49945,15 +49702,6 @@
       "produto_id": "ead16458-157c-5760-b238-83b8c57bed13",
       "tipo": "SKU",
       "codigo": "396756",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "34c5306d-9c18-5ac9-8488-a10cce8df97e",
-      "produto_id": "ead16458-157c-5760-b238-83b8c57bed13",
-      "tipo": "EAN",
-      "codigo": "789956724992",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -50575,15 +50323,6 @@
       "produto_id": "e133254a-71f6-51c6-8318-6f0171caea4f",
       "tipo": "SKU",
       "codigo": "397279",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "a6e70ea7-f13a-5e3c-bcf2-bdc15cd52920",
-      "produto_id": "e133254a-71f6-51c6-8318-6f0171caea4f",
-      "tipo": "EAN",
-      "codigo": "789956724968",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -51435,15 +51174,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "62c570a2-f7d0-5ee3-ab43-19425c020b4e",
-      "produto_id": "108e09a8-f6f1-53fa-852f-aa97f8ce4446",
-      "tipo": "EAN",
-      "codigo": "789603120142",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "5645db3b-54da-557e-a473-133c8719cc3d",
       "produto_id": "776e85b1-0ced-5c84-8b93-17b83630c446",
       "tipo": "SKU",
@@ -51660,15 +51390,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "dbbd4677-3fee-5d8b-9391-c11e24a3a01a",
-      "produto_id": "82eb3491-c8e4-5e3e-897c-731e6d57c5e9",
-      "tipo": "EAN",
-      "codigo": "789641972895",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "8c800955-40af-5d23-972a-24fd7739b20a",
       "produto_id": "6bc8b214-dc13-5442-a119-33dad5f0c93a",
       "tipo": "SKU",
@@ -51763,15 +51484,6 @@
       "produto_id": "1508d77c-a03f-5663-ad62-5caab75fc17a",
       "tipo": "SKU",
       "codigo": "398052",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "3162c16b-31bc-5023-8ec0-694596af39c0",
-      "produto_id": "1508d77c-a03f-5663-ad62-5caab75fc17a",
-      "tipo": "EAN",
-      "codigo": "789603120146",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -51957,28 +51669,10 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "02edb6c9-6242-54ff-ac35-f514cc8b65c2",
-      "produto_id": "f5b7e28f-d496-5b6d-9862-c140ab037cdb",
-      "tipo": "EAN",
-      "codigo": "789956724972",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "e3fc9881-40d4-5031-aee4-05d464ab3a4f",
       "produto_id": "9b9e903d-6a2e-58e4-bb8c-4fbd139d6f8b",
       "tipo": "SKU",
       "codigo": "398149",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "19e2bcd1-6803-5fb9-a459-fe23836ce33c",
-      "produto_id": "9b9e903d-6a2e-58e4-bb8c-4fbd139d6f8b",
-      "tipo": "EAN",
-      "codigo": "789956724973",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -52191,15 +51885,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "6db11ff0-979d-53e5-86ed-8691d1eacd93",
-      "produto_id": "3f2e5cdf-4b8a-5b84-a136-a057332c41a5",
-      "tipo": "EAN",
-      "codigo": "789603120139",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "250a7f0c-d54a-5731-a2fa-6c2629c4800b",
       "produto_id": "5e8fe31d-14c0-589b-86d3-d8a982006586",
       "tipo": "SKU",
@@ -52330,15 +52015,6 @@
       "produto_id": "46daf29a-6e1b-5974-8cc4-03d5bb40dd70",
       "tipo": "SKU",
       "codigo": "398501",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "46633cf5-3593-5b61-b6de-70064b523010",
-      "produto_id": "46daf29a-6e1b-5974-8cc4-03d5bb40dd70",
-      "tipo": "EAN",
-      "codigo": "071049722249",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -52479,28 +52155,10 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "dab21369-a650-5a54-981f-9e672fa34881",
-      "produto_id": "13c39d30-4ccc-5681-a3da-d2d1db2dfbec",
-      "tipo": "EAN",
-      "codigo": "789892933167",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "ede9bd22-688d-5549-88d1-e165e469fb46",
       "produto_id": "c27e7f90-06bc-5928-9fcb-4f59e9703dae",
       "tipo": "SKU",
       "codigo": "398539",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "63e9aa10-784d-5da9-b15d-0ef82e8b66b8",
-      "produto_id": "c27e7f90-06bc-5928-9fcb-4f59e9703dae",
-      "tipo": "EAN",
-      "codigo": "789892933138",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -52852,15 +52510,6 @@
       "produto_id": "bc646681-cd1f-5dcb-94b9-ae278e877ae7",
       "tipo": "SKU",
       "codigo": "398756",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "1fdc9d55-62a4-5a93-94ef-a4e50712291b",
-      "produto_id": "bc646681-cd1f-5dcb-94b9-ae278e877ae7",
-      "tipo": "EAN",
-      "codigo": "789808129251",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
@@ -55368,15 +55017,6 @@
       "criado_em": "2026-07-26T16:41:03.597Z"
     },
     {
-      "id": "2bde9d5f-9d93-5859-a905-bc683b7c0034",
-      "produto_id": "eea1785b-3a5e-5a1c-a077-630a7d8f8e18",
-      "tipo": "EAN",
-      "codigo": "871157107075",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
       "id": "20b3669b-0851-54e3-97e8-74ee1a24dbd2",
       "produto_id": "e6b5caf4-9d28-5b03-9a02-cbacc20bd595",
       "tipo": "SKU",
@@ -55417,15 +55057,6 @@
       "produto_id": "44d76391-69ae-5465-97d1-81f3abd307e2",
       "tipo": "SKU",
       "codigo": "8791",
-      "embalagem": "Unidade",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-07-26T16:41:03.597Z"
-    },
-    {
-      "id": "c3911b94-5960-589b-9297-688b1172ac28",
-      "produto_id": "44d76391-69ae-5465-97d1-81f3abd307e2",
-      "tipo": "EAN",
-      "codigo": "789956724996",
       "embalagem": "Unidade",
       "quantidade_embalagem": 1,
       "criado_em": "2026-07-26T16:41:03.597Z"
