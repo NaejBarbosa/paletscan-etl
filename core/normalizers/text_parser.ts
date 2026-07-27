@@ -217,3 +217,108 @@ export function formatProductDescription(rawTitle: string): ParsedProductText {
     peso_str: weightData.peso_str
   };
 }
+
+/**
+ * Função auxiliar para calcular o dígito verificador Modulus 10 (GS1)
+ * para payloads numéricos de 12 dígitos (EAN-13) ou 13 dígitos (DUN-14).
+ */
+export function calculateMod10CheckDigit(digitsStr: string, expectedLen: number): number {
+  let sum = 0;
+  const isOddMult3 = expectedLen === 13;
+
+  for (let i = 0; i < digitsStr.length; i++) {
+    const digit = parseInt(digitsStr[i], 10);
+    const position1Based = i + 1;
+    const isOddPosition = position1Based % 2 !== 0;
+
+    let multiplier = 1;
+    if (isOddMult3) {
+      multiplier = isOddPosition ? 3 : 1;
+    } else {
+      multiplier = isOddPosition ? 1 : 3;
+    }
+
+    sum += digit * multiplier;
+  }
+
+  return (10 - (sum % 10)) % 10;
+}
+
+/**
+ * Garante a integridade absoluta do EAN-13 (13 dígitos numéricos).
+ * Preserva o EAN estritamente como string e calcula o 13º dígito verificador (Modulus 10)
+ * caso a extração original contenha 12 dígitos (ou menos).
+ */
+export function normalizeEAN13(rawEan: string | number | undefined | null): string | null {
+  if (rawEan === undefined || rawEan === null) return null;
+
+  let clean = String(rawEan).trim().replace(/\D/g, '');
+  if (!clean) return null;
+
+  // Caso 1: 13 dígitos iniciando com '0789' ou '0790' -> EAN de 12 dígitos com zero à esquerda (sem dígito verificador)
+  if (clean.length === 13 && (clean.startsWith('0789') || clean.startsWith('0790'))) {
+    clean = clean.slice(1);
+  }
+
+  // Caso 2: Zeros à esquerda extras em códigos mais longos (ex: 00789...)
+  if (clean.length > 13 && clean.startsWith('0')) {
+    const unpadded = clean.replace(/^0+/, '');
+    if (unpadded.length === 12 || unpadded.length === 13) {
+      clean = unpadded;
+    }
+  }
+
+  // Caso 3: Código com menos de 12 dígitos -> pad com zeros até 12 dígitos para cálculo do 13º dígito
+  if (clean.length < 12) {
+    clean = clean.padStart(12, '0');
+  }
+
+  // Caso 4: Código com 12 dígitos brutos -> calcula obrigatoriamente o 13º dígito verificador Modulus 10 (GS1)
+  if (clean.length === 12) {
+    const checkDigit = calculateMod10CheckDigit(clean, 12);
+    return `${clean}${checkDigit}`;
+  }
+
+  // Caso 5: Código com 13 dígitos válidos -> retorna diretamente
+  if (clean.length === 13) {
+    return clean;
+  }
+
+  // Caso 6: Mais de 13 dígitos -> trunca para 13 dígitos
+  if (clean.length > 13) {
+    return clean.slice(0, 13);
+  }
+
+  return clean;
+}
+
+/**
+ * Formata e valida o código DUN-14 (obrigatoriamente 14 dígitos numéricos).
+ * Se o DUN fornecido for de 14 dígitos, preserva a string.
+ * Se tiver 13 dígitos, calcula o 14º dígito verificador Modulus 10.
+ * Caso contrário, deriva o DUN-14 oficial a partir do EAN-13 do produto
+ * (Variante logística '1' + 12 primeiros dígitos do EAN-13 + Dígito Verificador Modulus 10).
+ */
+export function normalizeDUN14(rawDun?: string | number | null, ean13?: string | null): string | null {
+  let cleanDun = rawDun ? String(rawDun).trim().replace(/\D/g, '') : '';
+
+  if (cleanDun.length === 14) {
+    return cleanDun;
+  }
+
+  if (cleanDun.length === 13) {
+    const checkDigit = calculateMod10CheckDigit(cleanDun, 13);
+    return `${cleanDun}${checkDigit}`;
+  }
+
+  if (ean13 && ean13.length === 13) {
+    const eanBase12 = ean13.slice(0, 12);
+    const dunBase13 = `1${eanBase12}`;
+    const checkDigit = calculateMod10CheckDigit(dunBase13, 13);
+    return `${dunBase13}${checkDigit}`;
+  }
+
+  return null;
+}
+
+

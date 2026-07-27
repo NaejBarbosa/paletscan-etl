@@ -12,7 +12,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { formatProductDescription } from '../../core/normalizers/text_parser.js';
+import { formatProductDescription, normalizeEAN13, normalizeDUN14 } from '../../core/normalizers/text_parser.js';
 import { classifyBrand, FABRICANTE_FRIBOI_ID, FABRICANTE_FRIBOI_NOME } from '../../core/heuristics/brand_classifier.js';
 import { classifyProduct } from '../../core/heuristics/category_classifier.js';
 
@@ -105,38 +105,73 @@ interface StagingPayload {
 }
 
 /**
- * Inspeciona a URL da imagem para verificar se é um placeholder genérico sem foto real do produto.
+ * Inspeciona rigorosamente a URL da imagem e garante o bloqueio absoluto de:
+ * - Fotos de pratos prontos / servidos (ex: carne fatiada com batatas, molhos, talheres, receitas)
+ * - Imagens sem o padrão estrito de embalagem/corte de fábrica da Friboi CCStore (_00_slug ou _01_slug)
+ * - Placeholders genéricos, banners promocionais/institucionais, selos e tabelas nutricionais
  */
-function isPlaceholderImage(url: string | undefined | null): boolean {
+function isValidProductImage(url: string | undefined | null): boolean {
   if (!url || typeof url !== 'string' || url.trim().length === 0) {
-    return true;
+    return false;
   }
 
   const cleanUrl = url.toLowerCase().trim();
 
-  // Caso 1: Exemplo específico mencionado na especificação (/products/355027_05.jpeg)
-  if (cleanUrl.includes('355027_05') || cleanUrl.includes('_05.jpeg') || cleanUrl.includes('_05.jpg')) {
-    return true;
+  // 1. Deve possuir o padrão estrito de imagem de fábrica da Friboi CCStore: _00_slug ou _01_slug
+  // Exemplo válido: /products/1268_00_capa-do-coxao-mole-friboi-bovino-congelado.jpeg
+  // Rejeita receitas/pratos prontos (_02, _03, _04, _05, _50), arquivos com espaço ("coxao mole.jpeg") e imagens sem slug ("1425_00.JPG")
+  const isFactoryPattern = /\/products\/\d+_(00|01)_[a-z0-9-]+\.(jpg|jpeg|png|webp)$/i.test(cleanUrl);
+  if (!isFactoryPattern) {
+    return false;
   }
 
-  // Caso 2: Indicativos explícitos de imagem padrão/ausência
-  if (
-    cleanUrl.includes('placeholder') ||
-    cleanUrl.includes('no-image') ||
-    cleanUrl.includes('default_product') ||
-    cleanUrl.includes('sem_foto') ||
-    cleanUrl.includes('ausencia') ||
-    cleanUrl.includes('indisponivel')
-  ) {
-    return true;
+  // 2. Blacklist estrita de palavras-chave relativas a receitas, pratos servidos, molhos, batatas, etc.
+  const restrictedTerms = [
+    'receita', 'recipe', 'prato', 'prato_pronto', 'pratopronto', 'prato_servido',
+    'pratos', 'sugestao', 'preparo', 'cozido', 'molho', 'molhos', 'batata', 'batatas',
+    'gourmet', 'servido', 'servindo', 'culinaria', 'gastronomia', 'comida',
+    'acompanhamento', 'utensilio', 'talher', 'refeicao', 'banner', 'logo', 'logotipo',
+    'play', 'video', 'icon', 'icone', 'promo', 'promocao', 'selo', 'stamp',
+    'tabela_nutricional', 'tabela-nutricional', 'campanha', 'institucional',
+    'friboi_logo', 'jbs_logo', 'placeholder', 'no-image', 'no_image',
+    'default_product', 'default', 'sem_foto', 'semfoto', 'ausencia',
+    'indisponivel', 'sem_imagem', 'sem-imagem'
+  ];
+
+  for (const term of restrictedTerms) {
+    if (cleanUrl.includes(term)) {
+      // Exceção: "queijo-prato" ou "queijo_prato" é o nome da variedade do queijo
+      if (term === 'prato' && (cleanUrl.includes('queijo-prato') || cleanUrl.includes('queijo_prato'))) {
+        continue;
+      }
+      return false;
+    }
   }
 
-  // Caso 3: Imagem genérica com padrão SKU_00.JPG sem o slug descritivo do produto
-  if (/\/products\/\d+_00\.(jpg|jpeg|png)$/i.test(cleanUrl)) {
-    return true;
+  return true;
+}
+
+/**
+ * Seleciona a melhor imagem real do produto a partir dos campos do CCStore JSON.
+ */
+function extractBestProductImage(data: any): string | null {
+  const candidateUrls: string[] = [];
+
+  if (data.primaryFullImageURL) candidateUrls.push(data.primaryFullImageURL);
+  if (Array.isArray(data.fullImageURLs)) candidateUrls.push(...data.fullImageURLs);
+  if (Array.isArray(data.sourceImageURLs)) candidateUrls.push(...data.sourceImageURLs);
+
+  for (const rawUrl of candidateUrls) {
+    if (!rawUrl || typeof rawUrl !== 'string') continue;
+
+    const fullUrl = rawUrl.startsWith('http') ? rawUrl : `${BASE_DOMAIN}${rawUrl}`;
+
+    if (isValidProductImage(fullUrl)) {
+      return fullUrl;
+    }
   }
 
-  return false;
+  return null;
 }
 
 /**
@@ -185,31 +220,28 @@ async function scrapeProductDetails(sku: string): Promise<RawLiveProduct | null>
     const title = data.displayName || data.x_cNmProduto || `Produto SKU ${sku}`;
     const descrFiscal = data.longDescription || data.description || '';
     
-    // Tentativa de localização do EAN (código EAN principal ou childSKUs)
-    const ean = data.x_cCdEAN || data.x_ean || (data.childSKUs && data.childSKUs[0]?.barcode) || '';
-    const dun = data.x_cCdDUN || data.x_dun || '';
+    // Tentativa de localização do EAN (código EAN principal ou childSKUs) com preservação estrita de string EAN-13
+    const rawEanVal = data.x_cCdEAN || data.x_ean || (data.childSKUs && data.childSKUs[0]?.barcode) || '';
+    const eanNormalized = normalizeEAN13(rawEanVal) || '';
+    const rawDunVal = data.x_cCdDUN || data.x_dun || '';
+    const dunNormalized = normalizeDUN14(rawDunVal, eanNormalized) || '';
     const marca = data.x_MARCA || data.brand || '';
     const classe = data.x_cOrigem || data.x_TIPO_DE_PRODUTO || (data.parentCategoryIdPath ? data.parentCategoryIdPath.split('>')[1] : '');
     const conservacao = data.x_TEMPERATURA || '';
 
-    // URL da Imagem principal de alta resolução
-    let image_url: string | undefined = undefined;
-    if (data.primaryFullImageURL) {
-      image_url = data.primaryFullImageURL.startsWith('http')
-        ? data.primaryFullImageURL
-        : `${BASE_DOMAIN}${data.primaryFullImageURL}`;
-    }
+    // Extração da melhor imagem real do produto (filtrando receitas, banners e placeholders)
+    const bestImageUrl = extractBestProductImage(data);
 
     return {
       sku,
       title: title.replace(/\s*\(\d+\)$/, '').trim(), // Limpa "(1005)" do final do título se presente
       descrFiscal,
-      ean: String(ean).trim(),
-      dun: String(dun).trim(),
+      ean: eanNormalized,
+      dun: dunNormalized,
       marca: String(marca).trim(),
       classe: String(classe).trim(),
       conservacao: String(conservacao).trim(),
-      image_url
+      image_url: bestImageUrl || undefined
     };
   } catch (err) {
     return null;
@@ -288,20 +320,18 @@ export async function runFriboiLiveScraper(): Promise<StagingPayload> {
 
     const produtoId = `prod_friboi_${raw.sku}`;
 
-    // Filtro de Placeholders de Imagem
-    const isPlaceholder = isPlaceholderImage(raw.image_url);
-    let statusImagem: 'aprovado' | 'pendente_aprovacao' | 'sem_imagem' = 'sem_imagem';
+    // Validação estrita de imagem real do produto
+    const hasValidImage = raw.image_url && isValidProductImage(raw.image_url);
+    let statusImagem: 'aprovado' | 'pendente_aprovacao' | 'sem_imagem' = hasValidImage ? 'aprovado' : 'sem_imagem';
 
-    if (isPlaceholder) {
+    if (!hasValidImage && raw.image_url) {
       statusImagem = 'pendente_aprovacao';
       pendingImagesApproval.push({
         produto_id: produtoId,
         sku: raw.sku,
         descricao: parsedText.formatted_description,
-        placeholder_url: raw.image_url || 'https://www.friboionline.com.br/ccstore/v1/images/?source=/file/products/355027_05.jpeg'
+        placeholder_url: raw.image_url
       });
-    } else if (raw.image_url) {
-      statusImagem = 'aprovado';
     }
 
     // Instância do Produto Normalizado
@@ -314,13 +344,13 @@ export async function runFriboiLiveScraper(): Promise<StagingPayload> {
       conservacao: categoryInfo.conservacao,
       peso_gramas: parsedText.peso_gramas,
       fracionado: parsedText.fracionado,
-      imagem_url: isPlaceholder ? null : (raw.image_url || null),
+      imagem_url: hasValidImage ? raw.image_url! : null,
       status_imagem: statusImagem,
       criado_em: nowISO
     };
     produtos.push(produto);
 
-    // Identificadores de Código de Barras (SKU, EAN, DUN)
+    // Identificadores de Código de Barras (SKU, EAN-13, DUN-14)
     codigosBarras.push({
       id: `bar_sku_${raw.sku}`,
       produto_id: produtoId,
@@ -331,24 +361,26 @@ export async function runFriboiLiveScraper(): Promise<StagingPayload> {
       criado_em: nowISO
     });
 
-    if (raw.ean && raw.ean.trim().length >= 8) {
+    const ean13 = normalizeEAN13(raw.ean);
+    if (ean13 && ean13.length === 13) {
       codigosBarras.push({
-        id: `bar_ean_${raw.sku}_${raw.ean.trim()}`,
+        id: `bar_ean_${raw.sku}_${ean13}`,
         produto_id: produtoId,
         tipo: 'EAN',
-        codigo: raw.ean.trim(),
+        codigo: ean13,
         embalagem: 'Unidade',
         quantidade_embalagem: 1,
         criado_em: nowISO
       });
     }
 
-    if (raw.dun && raw.dun.trim().length >= 8) {
+    const dun14 = normalizeDUN14(raw.dun, ean13);
+    if (dun14 && dun14.length === 14) {
       codigosBarras.push({
-        id: `bar_dun_${raw.sku}_${raw.dun.trim()}`,
+        id: `bar_dun_${raw.sku}_${dun14}`,
         produto_id: produtoId,
         tipo: 'DUN',
-        codigo: raw.dun.trim(),
+        codigo: dun14,
         embalagem: 'Caixa',
         quantidade_embalagem: null,
         criado_em: nowISO

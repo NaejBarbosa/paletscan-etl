@@ -326,5 +326,1973 @@
     "codigo": "789956724996",
     "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724996",
     "timestamp": "2026-07-26T17:07:28.310Z"
+  },
+  {
+    "id": "b235e96d-6632-5347-8400-3287ef0824ce",
+    "produto_id": "776db632-a10b-59ae-af11-c29fe6aea06d",
+    "tipo": "EAN",
+    "codigo": "789435116573",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789435116573",
+    "timestamp": "2026-07-26T18:25:06.233Z"
+  },
+  {
+    "id": "4f231eed-e9f2-5070-9544-0c182e3fadbf",
+    "produto_id": "d4a6e6c2-9c15-5a78-a361-11a6be285688",
+    "tipo": "EAN",
+    "codigo": "789435116574",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789435116574",
+    "timestamp": "2026-07-26T18:25:06.237Z"
+  },
+  {
+    "id": "2fa1d302-a4d2-56c3-9393-0f53e38fa75e",
+    "produto_id": "8319a907-fc66-5d4b-9573-45de0aab7541",
+    "tipo": "EAN",
+    "codigo": "789956720559",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956720559",
+    "timestamp": "2026-07-26T18:25:06.242Z"
+  },
+  {
+    "id": "05b28154-9280-51ce-95a3-c90cdda2051a",
+    "produto_id": "a06618a0-a555-51b2-8c1c-d5fd10bf4f4a",
+    "tipo": "EAN",
+    "codigo": "789854202991",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789854202991",
+    "timestamp": "2026-07-26T18:25:06.244Z"
+  },
+  {
+    "id": "9df3677c-8db6-5c51-9ca3-38feaf7ff14d",
+    "produto_id": "6a1de230-61cc-5672-91bd-1a7ebdce1c3f",
+    "tipo": "EAN",
+    "codigo": "789854202992",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789854202992",
+    "timestamp": "2026-07-26T18:25:06.248Z"
+  },
+  {
+    "id": "125d4e4c-a965-5b2c-8cea-4459978a0509",
+    "produto_id": "52cd3cbc-b780-58b0-abc6-696df57e367b",
+    "tipo": "EAN",
+    "codigo": "789731853540",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789731853540",
+    "timestamp": "2026-07-26T18:25:06.252Z"
+  },
+  {
+    "id": "d8ed2ac1-3de6-5b4a-98f6-c38f031527fa",
+    "produto_id": "ce8dfb40-98a9-50e8-abfa-32fe22ea2cde",
+    "tipo": "EAN",
+    "codigo": "789896278618",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789896278618",
+    "timestamp": "2026-07-26T18:25:06.257Z"
+  },
+  {
+    "id": "b962005b-5029-5da7-bf99-360d6cb531f6",
+    "produto_id": "561d4249-fec2-54a0-bea8-5b37b7903266",
+    "tipo": "EAN",
+    "codigo": "789956724968",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724968",
+    "timestamp": "2026-07-26T18:25:06.259Z"
+  },
+  {
+    "id": "ce90df47-aed9-5abd-9d04-39e1fb5e46fd",
+    "produto_id": "6fa35961-21ac-5024-b3db-82c0cf2a5f57",
+    "tipo": "EAN",
+    "codigo": "789956724997",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724997",
+    "timestamp": "2026-07-26T18:25:06.260Z"
+  },
+  {
+    "id": "9d88ba07-d119-5065-9731-7339b51f5d29",
+    "produto_id": "4e51cb2a-3401-58b1-8624-5e914e976b6a",
+    "tipo": "EAN",
+    "codigo": "789956725998",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956725998",
+    "timestamp": "2026-07-26T18:25:06.278Z"
+  },
+  {
+    "id": "1fdb4518-aed4-50d3-a521-6b4e63ec9a62",
+    "produto_id": "8a6ce7b1-6d3b-515b-93b0-a4a522ccf799",
+    "tipo": "EAN",
+    "codigo": "789641971385",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789641971385",
+    "timestamp": "2026-07-26T18:25:06.280Z"
+  },
+  {
+    "id": "894b8c1f-aa70-54a1-9f6e-4f987b7e38bf",
+    "produto_id": "b0cef564-a690-5c14-beec-23e7cda3e781",
+    "tipo": "EAN",
+    "codigo": "789956723286",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956723286",
+    "timestamp": "2026-07-26T18:25:06.283Z"
+  },
+  {
+    "id": "6bd52226-6516-5350-9028-baec37f83125",
+    "produto_id": "2fccd6ae-ff87-5b93-b511-e7c2ab87ed12",
+    "tipo": "EAN",
+    "codigo": "789956723259",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956723259",
+    "timestamp": "2026-07-26T18:25:06.285Z"
+  },
+  {
+    "id": "ba756e35-4c90-50be-a5e2-f937dc0190f4",
+    "produto_id": "e2e3ddcf-c0bb-5d47-8dd0-1e160d9fe9e6",
+    "tipo": "EAN",
+    "codigo": "789956723989",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956723989",
+    "timestamp": "2026-07-26T18:25:06.286Z"
+  },
+  {
+    "id": "72739d09-4517-5b85-8164-45d12bab842f",
+    "produto_id": "766ddeec-496b-5804-a1bc-0d8854e909b6",
+    "tipo": "EAN",
+    "codigo": "789801733523",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789801733523",
+    "timestamp": "2026-07-26T18:25:06.288Z"
+  },
+  {
+    "id": "9b39c6d5-9671-5a2c-90c8-a820a2ff512a",
+    "produto_id": "aab6977f-4602-589a-ba0a-2b0e83ca7ba6",
+    "tipo": "EAN",
+    "codigo": "789490401391",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789490401391",
+    "timestamp": "2026-07-26T18:25:06.292Z"
+  },
+  {
+    "id": "5303670d-5676-5724-abac-847afac83530",
+    "produto_id": "3fbe6efa-f75f-5f87-90f1-5700a3c771e2",
+    "tipo": "EAN",
+    "codigo": "789893261222",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789893261222",
+    "timestamp": "2026-07-26T18:25:06.296Z"
+  },
+  {
+    "id": "dd7afcdc-276d-5d74-af4b-31579484cad9",
+    "produto_id": "52aeebd2-e82d-50b9-a534-401c5c179f2b",
+    "tipo": "EAN",
+    "codigo": "789680741682",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789680741682",
+    "timestamp": "2026-07-26T18:25:06.299Z"
+  },
+  {
+    "id": "972a2f5d-f256-53c8-b1a9-25eebfdcee1f",
+    "produto_id": "c3ed76dd-8e5f-5ed4-8a4b-0c25cb377ba2",
+    "tipo": "EAN",
+    "codigo": "789680741680",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789680741680",
+    "timestamp": "2026-07-26T18:25:06.300Z"
+  },
+  {
+    "id": "fcb9663f-9979-5673-b8a6-5ed5dda136a5",
+    "produto_id": "770f56c4-ffff-541a-a6c1-1de78501709d",
+    "tipo": "EAN",
+    "codigo": "789680741012",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789680741012",
+    "timestamp": "2026-07-26T18:25:06.304Z"
+  },
+  {
+    "id": "afbce23f-9d44-5cbb-a489-1bcc4cb51ad2",
+    "produto_id": "6a5cb544-11b9-5303-addf-db28a8690936",
+    "tipo": "EAN",
+    "codigo": "789956723286",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956723286",
+    "timestamp": "2026-07-26T18:25:06.308Z"
+  },
+  {
+    "id": "153a9901-fa79-534c-8dbf-5b82e008d7f1",
+    "produto_id": "2cda73eb-6003-5736-8514-836ca02b5150",
+    "tipo": "EAN",
+    "codigo": "789603121459",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603121459",
+    "timestamp": "2026-07-26T18:25:06.312Z"
+  },
+  {
+    "id": "a967dc74-afe6-5f5d-9192-ad68be067e33",
+    "produto_id": "4f5ef152-d9c9-5b5a-8a59-342bb1624f4d",
+    "tipo": "EAN",
+    "codigo": "789897037007",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789897037007",
+    "timestamp": "2026-07-26T18:25:06.314Z"
+  },
+  {
+    "id": "32572157-ce44-577e-ac45-42609604a482",
+    "produto_id": "ebbab0d2-328b-56ac-8bc2-b11bdf33bc30",
+    "tipo": "EAN",
+    "codigo": "789603124029",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603124029",
+    "timestamp": "2026-07-26T18:25:06.316Z"
+  },
+  {
+    "id": "58f6fcf2-cef9-5ac1-a400-48db0786eeb2",
+    "produto_id": "5b8e0adc-90fc-5aac-a249-213e46ac89a0",
+    "tipo": "EAN",
+    "codigo": "789603122384",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603122384",
+    "timestamp": "2026-07-26T18:25:06.322Z"
+  },
+  {
+    "id": "0f852f37-fda5-55e5-8f0d-98fdcf2fe6df",
+    "produto_id": "f301a199-7800-5b65-aec8-35d0b936ecf5",
+    "tipo": "EAN",
+    "codigo": "789603124978",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603124978",
+    "timestamp": "2026-07-26T18:25:06.324Z"
+  },
+  {
+    "id": "34018ea0-c652-5aca-9d04-3bbb3d08919f",
+    "produto_id": "60df806d-c027-56dd-8177-008eab9af049",
+    "tipo": "EAN",
+    "codigo": "789603124977",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603124977",
+    "timestamp": "2026-07-26T18:25:06.325Z"
+  },
+  {
+    "id": "34c5306d-9c18-5ac9-8488-a10cce8df97e",
+    "produto_id": "ead16458-157c-5760-b238-83b8c57bed13",
+    "tipo": "EAN",
+    "codigo": "789956724992",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724992",
+    "timestamp": "2026-07-26T18:25:06.327Z"
+  },
+  {
+    "id": "a6e70ea7-f13a-5e3c-bcf2-bdc15cd52920",
+    "produto_id": "e133254a-71f6-51c6-8318-6f0171caea4f",
+    "tipo": "EAN",
+    "codigo": "789956724968",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724968",
+    "timestamp": "2026-07-26T18:25:06.329Z"
+  },
+  {
+    "id": "62c570a2-f7d0-5ee3-ab43-19425c020b4e",
+    "produto_id": "108e09a8-f6f1-53fa-852f-aa97f8ce4446",
+    "tipo": "EAN",
+    "codigo": "789603120142",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603120142",
+    "timestamp": "2026-07-26T18:25:06.341Z"
+  },
+  {
+    "id": "dbbd4677-3fee-5d8b-9391-c11e24a3a01a",
+    "produto_id": "82eb3491-c8e4-5e3e-897c-731e6d57c5e9",
+    "tipo": "EAN",
+    "codigo": "789641972895",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789641972895",
+    "timestamp": "2026-07-26T18:25:06.345Z"
+  },
+  {
+    "id": "3162c16b-31bc-5023-8ec0-694596af39c0",
+    "produto_id": "1508d77c-a03f-5663-ad62-5caab75fc17a",
+    "tipo": "EAN",
+    "codigo": "789603120146",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603120146",
+    "timestamp": "2026-07-26T18:25:06.348Z"
+  },
+  {
+    "id": "02edb6c9-6242-54ff-ac35-f514cc8b65c2",
+    "produto_id": "f5b7e28f-d496-5b6d-9862-c140ab037cdb",
+    "tipo": "EAN",
+    "codigo": "789956724972",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724972",
+    "timestamp": "2026-07-26T18:25:06.350Z"
+  },
+  {
+    "id": "19e2bcd1-6803-5fb9-a459-fe23836ce33c",
+    "produto_id": "9b9e903d-6a2e-58e4-bb8c-4fbd139d6f8b",
+    "tipo": "EAN",
+    "codigo": "789956724973",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724973",
+    "timestamp": "2026-07-26T18:25:06.352Z"
+  },
+  {
+    "id": "6db11ff0-979d-53e5-86ed-8691d1eacd93",
+    "produto_id": "3f2e5cdf-4b8a-5b84-a136-a057332c41a5",
+    "tipo": "EAN",
+    "codigo": "789603120139",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603120139",
+    "timestamp": "2026-07-26T18:25:06.354Z"
+  },
+  {
+    "id": "46633cf5-3593-5b61-b6de-70064b523010",
+    "produto_id": "46daf29a-6e1b-5974-8cc4-03d5bb40dd70",
+    "tipo": "EAN",
+    "codigo": "071049722249",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 071049722249",
+    "timestamp": "2026-07-26T18:25:06.355Z"
+  },
+  {
+    "id": "dab21369-a650-5a54-981f-9e672fa34881",
+    "produto_id": "13c39d30-4ccc-5681-a3da-d2d1db2dfbec",
+    "tipo": "EAN",
+    "codigo": "789892933167",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789892933167",
+    "timestamp": "2026-07-26T18:25:06.357Z"
+  },
+  {
+    "id": "63e9aa10-784d-5da9-b15d-0ef82e8b66b8",
+    "produto_id": "c27e7f90-06bc-5928-9fcb-4f59e9703dae",
+    "tipo": "EAN",
+    "codigo": "789892933138",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789892933138",
+    "timestamp": "2026-07-26T18:25:06.358Z"
+  },
+  {
+    "id": "1fdc9d55-62a4-5a93-94ef-a4e50712291b",
+    "produto_id": "bc646681-cd1f-5dcb-94b9-ae278e877ae7",
+    "tipo": "EAN",
+    "codigo": "789808129251",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789808129251",
+    "timestamp": "2026-07-26T18:25:06.360Z"
+  },
+  {
+    "id": "2bde9d5f-9d93-5859-a905-bc683b7c0034",
+    "produto_id": "eea1785b-3a5e-5a1c-a077-630a7d8f8e18",
+    "tipo": "EAN",
+    "codigo": "871157107075",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 871157107075",
+    "timestamp": "2026-07-26T18:25:06.368Z"
+  },
+  {
+    "id": "c3911b94-5960-589b-9297-688b1172ac28",
+    "produto_id": "44d76391-69ae-5465-97d1-81f3abd307e2",
+    "tipo": "EAN",
+    "codigo": "789956724996",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724996",
+    "timestamp": "2026-07-26T18:25:06.371Z"
+  },
+  {
+    "id": "b235e96d-6632-5347-8400-3287ef0824ce",
+    "produto_id": "776db632-a10b-59ae-af11-c29fe6aea06d",
+    "tipo": "EAN",
+    "codigo": "789435116573",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789435116573",
+    "timestamp": "2026-07-26T18:27:04.335Z"
+  },
+  {
+    "id": "4f231eed-e9f2-5070-9544-0c182e3fadbf",
+    "produto_id": "d4a6e6c2-9c15-5a78-a361-11a6be285688",
+    "tipo": "EAN",
+    "codigo": "789435116574",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789435116574",
+    "timestamp": "2026-07-26T18:27:04.339Z"
+  },
+  {
+    "id": "2fa1d302-a4d2-56c3-9393-0f53e38fa75e",
+    "produto_id": "8319a907-fc66-5d4b-9573-45de0aab7541",
+    "tipo": "EAN",
+    "codigo": "789956720559",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956720559",
+    "timestamp": "2026-07-26T18:27:04.344Z"
+  },
+  {
+    "id": "05b28154-9280-51ce-95a3-c90cdda2051a",
+    "produto_id": "a06618a0-a555-51b2-8c1c-d5fd10bf4f4a",
+    "tipo": "EAN",
+    "codigo": "789854202991",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789854202991",
+    "timestamp": "2026-07-26T18:27:04.348Z"
+  },
+  {
+    "id": "9df3677c-8db6-5c51-9ca3-38feaf7ff14d",
+    "produto_id": "6a1de230-61cc-5672-91bd-1a7ebdce1c3f",
+    "tipo": "EAN",
+    "codigo": "789854202992",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789854202992",
+    "timestamp": "2026-07-26T18:27:04.354Z"
+  },
+  {
+    "id": "125d4e4c-a965-5b2c-8cea-4459978a0509",
+    "produto_id": "52cd3cbc-b780-58b0-abc6-696df57e367b",
+    "tipo": "EAN",
+    "codigo": "789731853540",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789731853540",
+    "timestamp": "2026-07-26T18:27:04.358Z"
+  },
+  {
+    "id": "d8ed2ac1-3de6-5b4a-98f6-c38f031527fa",
+    "produto_id": "ce8dfb40-98a9-50e8-abfa-32fe22ea2cde",
+    "tipo": "EAN",
+    "codigo": "789896278618",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789896278618",
+    "timestamp": "2026-07-26T18:27:04.362Z"
+  },
+  {
+    "id": "b962005b-5029-5da7-bf99-360d6cb531f6",
+    "produto_id": "561d4249-fec2-54a0-bea8-5b37b7903266",
+    "tipo": "EAN",
+    "codigo": "789956724968",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724968",
+    "timestamp": "2026-07-26T18:27:04.364Z"
+  },
+  {
+    "id": "ce90df47-aed9-5abd-9d04-39e1fb5e46fd",
+    "produto_id": "6fa35961-21ac-5024-b3db-82c0cf2a5f57",
+    "tipo": "EAN",
+    "codigo": "789956724997",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724997",
+    "timestamp": "2026-07-26T18:27:04.365Z"
+  },
+  {
+    "id": "9d88ba07-d119-5065-9731-7339b51f5d29",
+    "produto_id": "4e51cb2a-3401-58b1-8624-5e914e976b6a",
+    "tipo": "EAN",
+    "codigo": "789956725998",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956725998",
+    "timestamp": "2026-07-26T18:27:04.392Z"
+  },
+  {
+    "id": "1fdb4518-aed4-50d3-a521-6b4e63ec9a62",
+    "produto_id": "8a6ce7b1-6d3b-515b-93b0-a4a522ccf799",
+    "tipo": "EAN",
+    "codigo": "789641971385",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789641971385",
+    "timestamp": "2026-07-26T18:27:04.396Z"
+  },
+  {
+    "id": "894b8c1f-aa70-54a1-9f6e-4f987b7e38bf",
+    "produto_id": "b0cef564-a690-5c14-beec-23e7cda3e781",
+    "tipo": "EAN",
+    "codigo": "789956723286",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956723286",
+    "timestamp": "2026-07-26T18:27:04.400Z"
+  },
+  {
+    "id": "6bd52226-6516-5350-9028-baec37f83125",
+    "produto_id": "2fccd6ae-ff87-5b93-b511-e7c2ab87ed12",
+    "tipo": "EAN",
+    "codigo": "789956723259",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956723259",
+    "timestamp": "2026-07-26T18:27:04.402Z"
+  },
+  {
+    "id": "ba756e35-4c90-50be-a5e2-f937dc0190f4",
+    "produto_id": "e2e3ddcf-c0bb-5d47-8dd0-1e160d9fe9e6",
+    "tipo": "EAN",
+    "codigo": "789956723989",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956723989",
+    "timestamp": "2026-07-26T18:27:04.403Z"
+  },
+  {
+    "id": "72739d09-4517-5b85-8164-45d12bab842f",
+    "produto_id": "766ddeec-496b-5804-a1bc-0d8854e909b6",
+    "tipo": "EAN",
+    "codigo": "789801733523",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789801733523",
+    "timestamp": "2026-07-26T18:27:04.405Z"
+  },
+  {
+    "id": "9b39c6d5-9671-5a2c-90c8-a820a2ff512a",
+    "produto_id": "aab6977f-4602-589a-ba0a-2b0e83ca7ba6",
+    "tipo": "EAN",
+    "codigo": "789490401391",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789490401391",
+    "timestamp": "2026-07-26T18:27:04.408Z"
+  },
+  {
+    "id": "5303670d-5676-5724-abac-847afac83530",
+    "produto_id": "3fbe6efa-f75f-5f87-90f1-5700a3c771e2",
+    "tipo": "EAN",
+    "codigo": "789893261222",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789893261222",
+    "timestamp": "2026-07-26T18:27:04.412Z"
+  },
+  {
+    "id": "dd7afcdc-276d-5d74-af4b-31579484cad9",
+    "produto_id": "52aeebd2-e82d-50b9-a534-401c5c179f2b",
+    "tipo": "EAN",
+    "codigo": "789680741682",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789680741682",
+    "timestamp": "2026-07-26T18:27:04.415Z"
+  },
+  {
+    "id": "972a2f5d-f256-53c8-b1a9-25eebfdcee1f",
+    "produto_id": "c3ed76dd-8e5f-5ed4-8a4b-0c25cb377ba2",
+    "tipo": "EAN",
+    "codigo": "789680741680",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789680741680",
+    "timestamp": "2026-07-26T18:27:04.417Z"
+  },
+  {
+    "id": "fcb9663f-9979-5673-b8a6-5ed5dda136a5",
+    "produto_id": "770f56c4-ffff-541a-a6c1-1de78501709d",
+    "tipo": "EAN",
+    "codigo": "789680741012",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789680741012",
+    "timestamp": "2026-07-26T18:27:04.421Z"
+  },
+  {
+    "id": "afbce23f-9d44-5cbb-a489-1bcc4cb51ad2",
+    "produto_id": "6a5cb544-11b9-5303-addf-db28a8690936",
+    "tipo": "EAN",
+    "codigo": "789956723286",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956723286",
+    "timestamp": "2026-07-26T18:27:04.424Z"
+  },
+  {
+    "id": "153a9901-fa79-534c-8dbf-5b82e008d7f1",
+    "produto_id": "2cda73eb-6003-5736-8514-836ca02b5150",
+    "tipo": "EAN",
+    "codigo": "789603121459",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603121459",
+    "timestamp": "2026-07-26T18:27:04.428Z"
+  },
+  {
+    "id": "a967dc74-afe6-5f5d-9192-ad68be067e33",
+    "produto_id": "4f5ef152-d9c9-5b5a-8a59-342bb1624f4d",
+    "tipo": "EAN",
+    "codigo": "789897037007",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789897037007",
+    "timestamp": "2026-07-26T18:27:04.430Z"
+  },
+  {
+    "id": "32572157-ce44-577e-ac45-42609604a482",
+    "produto_id": "ebbab0d2-328b-56ac-8bc2-b11bdf33bc30",
+    "tipo": "EAN",
+    "codigo": "789603124029",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603124029",
+    "timestamp": "2026-07-26T18:27:04.432Z"
+  },
+  {
+    "id": "58f6fcf2-cef9-5ac1-a400-48db0786eeb2",
+    "produto_id": "5b8e0adc-90fc-5aac-a249-213e46ac89a0",
+    "tipo": "EAN",
+    "codigo": "789603122384",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603122384",
+    "timestamp": "2026-07-26T18:27:04.438Z"
+  },
+  {
+    "id": "0f852f37-fda5-55e5-8f0d-98fdcf2fe6df",
+    "produto_id": "f301a199-7800-5b65-aec8-35d0b936ecf5",
+    "tipo": "EAN",
+    "codigo": "789603124978",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603124978",
+    "timestamp": "2026-07-26T18:27:04.445Z"
+  },
+  {
+    "id": "34018ea0-c652-5aca-9d04-3bbb3d08919f",
+    "produto_id": "60df806d-c027-56dd-8177-008eab9af049",
+    "tipo": "EAN",
+    "codigo": "789603124977",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603124977",
+    "timestamp": "2026-07-26T18:27:04.446Z"
+  },
+  {
+    "id": "34c5306d-9c18-5ac9-8488-a10cce8df97e",
+    "produto_id": "ead16458-157c-5760-b238-83b8c57bed13",
+    "tipo": "EAN",
+    "codigo": "789956724992",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724992",
+    "timestamp": "2026-07-26T18:27:04.448Z"
+  },
+  {
+    "id": "a6e70ea7-f13a-5e3c-bcf2-bdc15cd52920",
+    "produto_id": "e133254a-71f6-51c6-8318-6f0171caea4f",
+    "tipo": "EAN",
+    "codigo": "789956724968",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724968",
+    "timestamp": "2026-07-26T18:27:04.451Z"
+  },
+  {
+    "id": "62c570a2-f7d0-5ee3-ab43-19425c020b4e",
+    "produto_id": "108e09a8-f6f1-53fa-852f-aa97f8ce4446",
+    "tipo": "EAN",
+    "codigo": "789603120142",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603120142",
+    "timestamp": "2026-07-26T18:27:04.454Z"
+  },
+  {
+    "id": "dbbd4677-3fee-5d8b-9391-c11e24a3a01a",
+    "produto_id": "82eb3491-c8e4-5e3e-897c-731e6d57c5e9",
+    "tipo": "EAN",
+    "codigo": "789641972895",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789641972895",
+    "timestamp": "2026-07-26T18:27:04.456Z"
+  },
+  {
+    "id": "3162c16b-31bc-5023-8ec0-694596af39c0",
+    "produto_id": "1508d77c-a03f-5663-ad62-5caab75fc17a",
+    "tipo": "EAN",
+    "codigo": "789603120146",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603120146",
+    "timestamp": "2026-07-26T18:27:04.458Z"
+  },
+  {
+    "id": "02edb6c9-6242-54ff-ac35-f514cc8b65c2",
+    "produto_id": "f5b7e28f-d496-5b6d-9862-c140ab037cdb",
+    "tipo": "EAN",
+    "codigo": "789956724972",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724972",
+    "timestamp": "2026-07-26T18:27:04.460Z"
+  },
+  {
+    "id": "19e2bcd1-6803-5fb9-a459-fe23836ce33c",
+    "produto_id": "9b9e903d-6a2e-58e4-bb8c-4fbd139d6f8b",
+    "tipo": "EAN",
+    "codigo": "789956724973",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724973",
+    "timestamp": "2026-07-26T18:27:04.462Z"
+  },
+  {
+    "id": "6db11ff0-979d-53e5-86ed-8691d1eacd93",
+    "produto_id": "3f2e5cdf-4b8a-5b84-a136-a057332c41a5",
+    "tipo": "EAN",
+    "codigo": "789603120139",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789603120139",
+    "timestamp": "2026-07-26T18:27:04.464Z"
+  },
+  {
+    "id": "46633cf5-3593-5b61-b6de-70064b523010",
+    "produto_id": "46daf29a-6e1b-5974-8cc4-03d5bb40dd70",
+    "tipo": "EAN",
+    "codigo": "071049722249",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 071049722249",
+    "timestamp": "2026-07-26T18:27:04.465Z"
+  },
+  {
+    "id": "dab21369-a650-5a54-981f-9e672fa34881",
+    "produto_id": "13c39d30-4ccc-5681-a3da-d2d1db2dfbec",
+    "tipo": "EAN",
+    "codigo": "789892933167",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789892933167",
+    "timestamp": "2026-07-26T18:27:04.467Z"
+  },
+  {
+    "id": "63e9aa10-784d-5da9-b15d-0ef82e8b66b8",
+    "produto_id": "c27e7f90-06bc-5928-9fcb-4f59e9703dae",
+    "tipo": "EAN",
+    "codigo": "789892933138",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789892933138",
+    "timestamp": "2026-07-26T18:27:04.468Z"
+  },
+  {
+    "id": "1fdc9d55-62a4-5a93-94ef-a4e50712291b",
+    "produto_id": "bc646681-cd1f-5dcb-94b9-ae278e877ae7",
+    "tipo": "EAN",
+    "codigo": "789808129251",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789808129251",
+    "timestamp": "2026-07-26T18:27:04.470Z"
+  },
+  {
+    "id": "2bde9d5f-9d93-5859-a905-bc683b7c0034",
+    "produto_id": "eea1785b-3a5e-5a1c-a077-630a7d8f8e18",
+    "tipo": "EAN",
+    "codigo": "871157107075",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 871157107075",
+    "timestamp": "2026-07-26T18:27:04.475Z"
+  },
+  {
+    "id": "c3911b94-5960-589b-9297-688b1172ac28",
+    "produto_id": "44d76391-69ae-5465-97d1-81f3abd307e2",
+    "tipo": "EAN",
+    "codigo": "789956724996",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 789956724996",
+    "timestamp": "2026-07-26T18:27:04.477Z"
+  },
+  {
+    "id": "df4fca57-623e-5bcd-a547-e3afb6846713",
+    "produto_id": "776db632-a10b-59ae-af11-c29fe6aea06d",
+    "tipo": "EAN",
+    "codigo": "7894351165739",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7894351165739",
+    "timestamp": "2026-07-26T22:49:49.503Z"
+  },
+  {
+    "id": "97da5aa7-09cd-536b-bd0f-df4cef9edf6b",
+    "produto_id": "776db632-a10b-59ae-af11-c29fe6aea06d",
+    "tipo": "DUN",
+    "codigo": "17894351165736",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17894351165736",
+    "timestamp": "2026-07-26T22:49:49.507Z"
+  },
+  {
+    "id": "f85174c5-1f92-5b8a-9a7c-530e6b2c2fe2",
+    "produto_id": "d4a6e6c2-9c15-5a78-a361-11a6be285688",
+    "tipo": "EAN",
+    "codigo": "7894351165746",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7894351165746",
+    "timestamp": "2026-07-26T22:49:49.509Z"
+  },
+  {
+    "id": "fe8e4dca-aaf9-5553-a595-c99d50517103",
+    "produto_id": "d4a6e6c2-9c15-5a78-a361-11a6be285688",
+    "tipo": "DUN",
+    "codigo": "17894351165743",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17894351165743",
+    "timestamp": "2026-07-26T22:49:49.511Z"
+  },
+  {
+    "id": "87f42dc6-2be4-5aaf-99b9-c68f09706a54",
+    "produto_id": "8319a907-fc66-5d4b-9573-45de0aab7541",
+    "tipo": "EAN",
+    "codigo": "7899567205590",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567205590",
+    "timestamp": "2026-07-26T22:49:49.522Z"
+  },
+  {
+    "id": "27dac1c2-561b-5e42-86f9-0b833f8d8b44",
+    "produto_id": "8319a907-fc66-5d4b-9573-45de0aab7541",
+    "tipo": "DUN",
+    "codigo": "17899567205597",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567205597",
+    "timestamp": "2026-07-26T22:49:49.523Z"
+  },
+  {
+    "id": "af6527ed-778e-5fa4-bb09-8f9396edc565",
+    "produto_id": "a06618a0-a555-51b2-8c1c-d5fd10bf4f4a",
+    "tipo": "EAN",
+    "codigo": "7898542029916",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898542029916",
+    "timestamp": "2026-07-26T22:49:49.526Z"
+  },
+  {
+    "id": "697b533d-06f5-5a42-b11d-98b77925a545",
+    "produto_id": "a06618a0-a555-51b2-8c1c-d5fd10bf4f4a",
+    "tipo": "DUN",
+    "codigo": "17898542029913",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898542029913",
+    "timestamp": "2026-07-26T22:49:49.527Z"
+  },
+  {
+    "id": "307095fc-7839-55ea-b5a5-b95f1cec921b",
+    "produto_id": "6a1de230-61cc-5672-91bd-1a7ebdce1c3f",
+    "tipo": "EAN",
+    "codigo": "7898542029923",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898542029923",
+    "timestamp": "2026-07-26T22:49:49.532Z"
+  },
+  {
+    "id": "543a9a0d-a362-50eb-8b17-31c299b0c407",
+    "produto_id": "6a1de230-61cc-5672-91bd-1a7ebdce1c3f",
+    "tipo": "DUN",
+    "codigo": "17898542029920",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898542029920",
+    "timestamp": "2026-07-26T22:49:49.534Z"
+  },
+  {
+    "id": "bfa90639-7084-5fa3-bba5-5affa48d8226",
+    "produto_id": "52cd3cbc-b780-58b0-abc6-696df57e367b",
+    "tipo": "EAN",
+    "codigo": "7897318535408",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7897318535408",
+    "timestamp": "2026-07-26T22:49:49.538Z"
+  },
+  {
+    "id": "f0bd9cf0-63a8-528c-9a2c-674b92aafdad",
+    "produto_id": "52cd3cbc-b780-58b0-abc6-696df57e367b",
+    "tipo": "DUN",
+    "codigo": "17897318535405",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17897318535405",
+    "timestamp": "2026-07-26T22:49:49.540Z"
+  },
+  {
+    "id": "28fabc8d-d870-524c-9ed0-a47c0c524dde",
+    "produto_id": "ce8dfb40-98a9-50e8-abfa-32fe22ea2cde",
+    "tipo": "EAN",
+    "codigo": "7898962786185",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898962786185",
+    "timestamp": "2026-07-26T22:49:49.544Z"
+  },
+  {
+    "id": "0a6564de-dfc1-5d52-87fe-918f94d21e04",
+    "produto_id": "ce8dfb40-98a9-50e8-abfa-32fe22ea2cde",
+    "tipo": "DUN",
+    "codigo": "17898962786182",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898962786182",
+    "timestamp": "2026-07-26T22:49:49.546Z"
+  },
+  {
+    "id": "092410a5-80c2-5a36-bb14-61c6ebf594d9",
+    "produto_id": "561d4249-fec2-54a0-bea8-5b37b7903266",
+    "tipo": "EAN",
+    "codigo": "7899567249686",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249686",
+    "timestamp": "2026-07-26T22:49:49.549Z"
+  },
+  {
+    "id": "e8349913-900c-571d-a74c-cf59c8e7c4ac",
+    "produto_id": "561d4249-fec2-54a0-bea8-5b37b7903266",
+    "tipo": "DUN",
+    "codigo": "17899567249683",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249683",
+    "timestamp": "2026-07-26T22:49:49.550Z"
+  },
+  {
+    "id": "ee497199-f79d-5dea-adb4-b065d9a54419",
+    "produto_id": "6fa35961-21ac-5024-b3db-82c0cf2a5f57",
+    "tipo": "EAN",
+    "codigo": "7899567249976",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249976",
+    "timestamp": "2026-07-26T22:49:49.551Z"
+  },
+  {
+    "id": "2e9bcd31-09d9-5e75-9c20-d3f6bf3aee0b",
+    "produto_id": "6fa35961-21ac-5024-b3db-82c0cf2a5f57",
+    "tipo": "DUN",
+    "codigo": "17899567249973",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249973",
+    "timestamp": "2026-07-26T22:49:49.553Z"
+  },
+  {
+    "id": "b2e72a05-37bd-5e90-beb6-bee07b17c90e",
+    "produto_id": "4e51cb2a-3401-58b1-8624-5e914e976b6a",
+    "tipo": "EAN",
+    "codigo": "7899567259982",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567259982",
+    "timestamp": "2026-07-26T22:49:49.557Z"
+  },
+  {
+    "id": "5ae834d2-6665-5e16-959d-3669ef1bcb5f",
+    "produto_id": "4e51cb2a-3401-58b1-8624-5e914e976b6a",
+    "tipo": "DUN",
+    "codigo": "17899567259989",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567259989",
+    "timestamp": "2026-07-26T22:49:49.559Z"
+  },
+  {
+    "id": "4ef87abc-8218-5c89-a3af-8fa1fec2272f",
+    "produto_id": "8a6ce7b1-6d3b-515b-93b0-a4a522ccf799",
+    "tipo": "EAN",
+    "codigo": "7896419713852",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896419713852",
+    "timestamp": "2026-07-26T22:49:49.562Z"
+  },
+  {
+    "id": "d8bb2856-f1a5-5de2-bb11-05d2ad1071bd",
+    "produto_id": "8a6ce7b1-6d3b-515b-93b0-a4a522ccf799",
+    "tipo": "DUN",
+    "codigo": "17896419713859",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896419713859",
+    "timestamp": "2026-07-26T22:49:49.564Z"
+  },
+  {
+    "id": "25b0fef7-7364-5c64-a31e-3bf78a057ce4",
+    "produto_id": "b0cef564-a690-5c14-beec-23e7cda3e781",
+    "tipo": "EAN",
+    "codigo": "7899567232862",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567232862",
+    "timestamp": "2026-07-26T22:49:49.565Z"
+  },
+  {
+    "id": "f9807b4b-691e-56b0-ad0e-2daae23bb054",
+    "produto_id": "b0cef564-a690-5c14-beec-23e7cda3e781",
+    "tipo": "DUN",
+    "codigo": "17899567232869",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567232869",
+    "timestamp": "2026-07-26T22:49:49.567Z"
+  },
+  {
+    "id": "66a43987-fba3-55dd-89d3-ff0c778d6062",
+    "produto_id": "2fccd6ae-ff87-5b93-b511-e7c2ab87ed12",
+    "tipo": "EAN",
+    "codigo": "7899567232596",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567232596",
+    "timestamp": "2026-07-26T22:49:49.569Z"
+  },
+  {
+    "id": "8f0d5c98-d330-55b9-a15b-71e2137328ec",
+    "produto_id": "2fccd6ae-ff87-5b93-b511-e7c2ab87ed12",
+    "tipo": "DUN",
+    "codigo": "17899567232593",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567232593",
+    "timestamp": "2026-07-26T22:49:49.572Z"
+  },
+  {
+    "id": "492f07f4-7321-5610-963d-686c9e7964a2",
+    "produto_id": "e2e3ddcf-c0bb-5d47-8dd0-1e160d9fe9e6",
+    "tipo": "EAN",
+    "codigo": "7899567239892",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567239892",
+    "timestamp": "2026-07-26T22:49:49.582Z"
+  },
+  {
+    "id": "453b4234-2fae-5994-8c57-9e23ce7d4cf4",
+    "produto_id": "e2e3ddcf-c0bb-5d47-8dd0-1e160d9fe9e6",
+    "tipo": "DUN",
+    "codigo": "17899567239899",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567239899",
+    "timestamp": "2026-07-26T22:49:49.584Z"
+  },
+  {
+    "id": "3df2ae35-51ea-542e-8321-a666f328f0e6",
+    "produto_id": "766ddeec-496b-5804-a1bc-0d8854e909b6",
+    "tipo": "EAN",
+    "codigo": "7898017335238",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898017335238",
+    "timestamp": "2026-07-26T22:49:49.586Z"
+  },
+  {
+    "id": "36acc030-cd63-543c-86a2-17b0a214e870",
+    "produto_id": "766ddeec-496b-5804-a1bc-0d8854e909b6",
+    "tipo": "DUN",
+    "codigo": "17898017335235",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898017335235",
+    "timestamp": "2026-07-26T22:49:49.588Z"
+  },
+  {
+    "id": "c6568df3-1789-547c-86f1-2e3922e0d8bb",
+    "produto_id": "aab6977f-4602-589a-ba0a-2b0e83ca7ba6",
+    "tipo": "EAN",
+    "codigo": "7894904013913",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7894904013913",
+    "timestamp": "2026-07-26T22:49:49.591Z"
+  },
+  {
+    "id": "e697605a-61ac-59dc-8bc1-b67f547e5005",
+    "produto_id": "aab6977f-4602-589a-ba0a-2b0e83ca7ba6",
+    "tipo": "DUN",
+    "codigo": "17894904013910",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17894904013910",
+    "timestamp": "2026-07-26T22:49:49.593Z"
+  },
+  {
+    "id": "45cff33b-5d01-5791-b3d4-c57d55232988",
+    "produto_id": "3fbe6efa-f75f-5f87-90f1-5700a3c771e2",
+    "tipo": "EAN",
+    "codigo": "7898932612223",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898932612223",
+    "timestamp": "2026-07-26T22:49:49.597Z"
+  },
+  {
+    "id": "73553991-e701-505f-8181-1ba4176d438d",
+    "produto_id": "3fbe6efa-f75f-5f87-90f1-5700a3c771e2",
+    "tipo": "DUN",
+    "codigo": "17898932612220",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898932612220",
+    "timestamp": "2026-07-26T22:49:49.599Z"
+  },
+  {
+    "id": "78f370a8-8f26-5209-bea0-42b3abb4eca5",
+    "produto_id": "52aeebd2-e82d-50b9-a534-401c5c179f2b",
+    "tipo": "EAN",
+    "codigo": "7896807416822",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896807416822",
+    "timestamp": "2026-07-26T22:49:49.602Z"
+  },
+  {
+    "id": "d7b903ae-554d-58cf-b7f7-1e699afa1170",
+    "produto_id": "52aeebd2-e82d-50b9-a534-401c5c179f2b",
+    "tipo": "DUN",
+    "codigo": "17896807416829",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896807416829",
+    "timestamp": "2026-07-26T22:49:49.603Z"
+  },
+  {
+    "id": "f6602a8e-29c0-523f-8c86-840899e0c41b",
+    "produto_id": "c3ed76dd-8e5f-5ed4-8a4b-0c25cb377ba2",
+    "tipo": "EAN",
+    "codigo": "7896807416808",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896807416808",
+    "timestamp": "2026-07-26T22:49:49.605Z"
+  },
+  {
+    "id": "9e9cb747-9933-5daa-b4dc-53b5c13e8792",
+    "produto_id": "c3ed76dd-8e5f-5ed4-8a4b-0c25cb377ba2",
+    "tipo": "DUN",
+    "codigo": "17896807416805",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896807416805",
+    "timestamp": "2026-07-26T22:49:49.606Z"
+  },
+  {
+    "id": "6983d29a-0f77-5872-9af9-6be79d2b86b3",
+    "produto_id": "770f56c4-ffff-541a-a6c1-1de78501709d",
+    "tipo": "EAN",
+    "codigo": "7896807410127",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896807410127",
+    "timestamp": "2026-07-26T22:49:49.612Z"
+  },
+  {
+    "id": "c16f1967-31e6-5566-9d09-afb4e2b278f6",
+    "produto_id": "770f56c4-ffff-541a-a6c1-1de78501709d",
+    "tipo": "DUN",
+    "codigo": "17896807410124",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896807410124",
+    "timestamp": "2026-07-26T22:49:49.614Z"
+  },
+  {
+    "id": "f0fbb8eb-782a-5058-9fc4-5496f17da358",
+    "produto_id": "6a5cb544-11b9-5303-addf-db28a8690936",
+    "tipo": "EAN",
+    "codigo": "7899567232862",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567232862",
+    "timestamp": "2026-07-26T22:49:49.618Z"
+  },
+  {
+    "id": "4addafde-62e7-54f6-8430-699691654566",
+    "produto_id": "6a5cb544-11b9-5303-addf-db28a8690936",
+    "tipo": "DUN",
+    "codigo": "17899567232869",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567232869",
+    "timestamp": "2026-07-26T22:49:49.620Z"
+  },
+  {
+    "id": "4224e7f0-2c22-51f5-99b9-ab3d5335651b",
+    "produto_id": "2cda73eb-6003-5736-8514-836ca02b5150",
+    "tipo": "EAN",
+    "codigo": "7896031214591",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031214591",
+    "timestamp": "2026-07-26T22:49:49.641Z"
+  },
+  {
+    "id": "305d3d34-a2b1-5785-830a-7eff779edde6",
+    "produto_id": "2cda73eb-6003-5736-8514-836ca02b5150",
+    "tipo": "DUN",
+    "codigo": "17896031214598",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031214598",
+    "timestamp": "2026-07-26T22:49:49.646Z"
+  },
+  {
+    "id": "8f7fde7e-d4eb-5d1e-8e2b-f91ab998c5b8",
+    "produto_id": "4f5ef152-d9c9-5b5a-8a59-342bb1624f4d",
+    "tipo": "EAN",
+    "codigo": "7898970370079",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898970370079",
+    "timestamp": "2026-07-26T22:49:49.651Z"
+  },
+  {
+    "id": "2e91067c-a98d-5050-b780-f90b80ec7963",
+    "produto_id": "4f5ef152-d9c9-5b5a-8a59-342bb1624f4d",
+    "tipo": "DUN",
+    "codigo": "17898970370076",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898970370076",
+    "timestamp": "2026-07-26T22:49:49.654Z"
+  },
+  {
+    "id": "7f7f2edd-ea3a-5782-8f34-dff14be83dc8",
+    "produto_id": "ebbab0d2-328b-56ac-8bc2-b11bdf33bc30",
+    "tipo": "EAN",
+    "codigo": "7896031240293",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031240293",
+    "timestamp": "2026-07-26T22:49:49.661Z"
+  },
+  {
+    "id": "87b27ccf-0b52-5bd0-9057-0464b24c2ab8",
+    "produto_id": "ebbab0d2-328b-56ac-8bc2-b11bdf33bc30",
+    "tipo": "DUN",
+    "codigo": "17896031240290",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031240290",
+    "timestamp": "2026-07-26T22:49:49.664Z"
+  },
+  {
+    "id": "c29f089a-9ffa-53a1-977b-441aac56055a",
+    "produto_id": "5b8e0adc-90fc-5aac-a249-213e46ac89a0",
+    "tipo": "EAN",
+    "codigo": "7896031223845",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031223845",
+    "timestamp": "2026-07-26T22:49:49.675Z"
+  },
+  {
+    "id": "1ec55882-0159-5ff2-99fc-9e7dcbe163af",
+    "produto_id": "5b8e0adc-90fc-5aac-a249-213e46ac89a0",
+    "tipo": "DUN",
+    "codigo": "17896031223842",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031223842",
+    "timestamp": "2026-07-26T22:49:49.677Z"
+  },
+  {
+    "id": "966c985b-cf70-5ad1-b5b1-f20d1986d8d3",
+    "produto_id": "f301a199-7800-5b65-aec8-35d0b936ecf5",
+    "tipo": "EAN",
+    "codigo": "7896031249784",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031249784",
+    "timestamp": "2026-07-26T22:49:49.679Z"
+  },
+  {
+    "id": "2c8819a8-380e-5d60-a82d-714285f2cee0",
+    "produto_id": "f301a199-7800-5b65-aec8-35d0b936ecf5",
+    "tipo": "DUN",
+    "codigo": "17896031249781",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031249781",
+    "timestamp": "2026-07-26T22:49:49.681Z"
+  },
+  {
+    "id": "d4215a01-8a0f-57ef-aa8e-819a383e7f69",
+    "produto_id": "60df806d-c027-56dd-8177-008eab9af049",
+    "tipo": "EAN",
+    "codigo": "7896031249777",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031249777",
+    "timestamp": "2026-07-26T22:49:49.683Z"
+  },
+  {
+    "id": "62a138a3-b93d-5cf7-b35b-a0e2708bc69c",
+    "produto_id": "60df806d-c027-56dd-8177-008eab9af049",
+    "tipo": "DUN",
+    "codigo": "17896031249774",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031249774",
+    "timestamp": "2026-07-26T22:49:49.685Z"
+  },
+  {
+    "id": "b16a0890-ed8e-54c2-9c66-bfde3608ff53",
+    "produto_id": "ead16458-157c-5760-b238-83b8c57bed13",
+    "tipo": "EAN",
+    "codigo": "7899567249921",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249921",
+    "timestamp": "2026-07-26T22:49:49.688Z"
+  },
+  {
+    "id": "0c85d199-3b5c-5384-875d-91956c309730",
+    "produto_id": "ead16458-157c-5760-b238-83b8c57bed13",
+    "tipo": "DUN",
+    "codigo": "17899567249928",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249928",
+    "timestamp": "2026-07-26T22:49:49.690Z"
+  },
+  {
+    "id": "3d0d0541-9c34-5178-bb83-01153c61a56b",
+    "produto_id": "e133254a-71f6-51c6-8318-6f0171caea4f",
+    "tipo": "EAN",
+    "codigo": "7899567249686",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249686",
+    "timestamp": "2026-07-26T22:49:49.692Z"
+  },
+  {
+    "id": "f43916d7-878b-5e47-9aa5-c15feb16705b",
+    "produto_id": "e133254a-71f6-51c6-8318-6f0171caea4f",
+    "tipo": "DUN",
+    "codigo": "17899567249683",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249683",
+    "timestamp": "2026-07-26T22:49:49.694Z"
+  },
+  {
+    "id": "53c0f095-1055-591c-a92f-124576ffc9c2",
+    "produto_id": "108e09a8-f6f1-53fa-852f-aa97f8ce4446",
+    "tipo": "EAN",
+    "codigo": "7896031201423",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031201423",
+    "timestamp": "2026-07-26T22:49:49.698Z"
+  },
+  {
+    "id": "cb7a4f43-50da-536a-8dc1-3820bc3ac9f0",
+    "produto_id": "108e09a8-f6f1-53fa-852f-aa97f8ce4446",
+    "tipo": "DUN",
+    "codigo": "17896031201420",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031201420",
+    "timestamp": "2026-07-26T22:49:49.700Z"
+  },
+  {
+    "id": "4eb6fef9-a41c-5615-ac23-5dfad0b64b6c",
+    "produto_id": "82eb3491-c8e4-5e3e-897c-731e6d57c5e9",
+    "tipo": "EAN",
+    "codigo": "7896419728955",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896419728955",
+    "timestamp": "2026-07-26T22:49:49.702Z"
+  },
+  {
+    "id": "4ecf8302-1ef8-5a40-b041-fb5a1424932e",
+    "produto_id": "82eb3491-c8e4-5e3e-897c-731e6d57c5e9",
+    "tipo": "DUN",
+    "codigo": "17896419728952",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896419728952",
+    "timestamp": "2026-07-26T22:49:49.704Z"
+  },
+  {
+    "id": "5d3046ff-b9c4-5848-9871-b988a0fb6163",
+    "produto_id": "1508d77c-a03f-5663-ad62-5caab75fc17a",
+    "tipo": "EAN",
+    "codigo": "7896031201461",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031201461",
+    "timestamp": "2026-07-26T22:49:49.707Z"
+  },
+  {
+    "id": "32bde086-e113-57e6-80fb-c627aab3915b",
+    "produto_id": "1508d77c-a03f-5663-ad62-5caab75fc17a",
+    "tipo": "DUN",
+    "codigo": "17896031201468",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031201468",
+    "timestamp": "2026-07-26T22:49:49.717Z"
+  },
+  {
+    "id": "b28ff7a0-56cd-5740-a224-ac0ed3d05478",
+    "produto_id": "f5b7e28f-d496-5b6d-9862-c140ab037cdb",
+    "tipo": "EAN",
+    "codigo": "7899567249723",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249723",
+    "timestamp": "2026-07-26T22:49:49.720Z"
+  },
+  {
+    "id": "b6893cc9-eefe-531d-889b-d3ab2a29e081",
+    "produto_id": "f5b7e28f-d496-5b6d-9862-c140ab037cdb",
+    "tipo": "DUN",
+    "codigo": "17899567249720",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249720",
+    "timestamp": "2026-07-26T22:49:49.723Z"
+  },
+  {
+    "id": "1552dcd4-e92a-506a-9981-67a27785a768",
+    "produto_id": "9b9e903d-6a2e-58e4-bb8c-4fbd139d6f8b",
+    "tipo": "EAN",
+    "codigo": "7899567249730",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249730",
+    "timestamp": "2026-07-26T22:49:49.725Z"
+  },
+  {
+    "id": "b8325a28-add4-589d-9dba-74217a2bf8eb",
+    "produto_id": "9b9e903d-6a2e-58e4-bb8c-4fbd139d6f8b",
+    "tipo": "DUN",
+    "codigo": "17899567249737",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249737",
+    "timestamp": "2026-07-26T22:49:49.726Z"
+  },
+  {
+    "id": "1a175386-f3a0-551a-92b3-ec0554c1627d",
+    "produto_id": "3f2e5cdf-4b8a-5b84-a136-a057332c41a5",
+    "tipo": "EAN",
+    "codigo": "7896031201393",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031201393",
+    "timestamp": "2026-07-26T22:49:49.729Z"
+  },
+  {
+    "id": "d979b57d-f0e6-5d36-b41d-7524060a911c",
+    "produto_id": "3f2e5cdf-4b8a-5b84-a136-a057332c41a5",
+    "tipo": "DUN",
+    "codigo": "17896031201390",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031201390",
+    "timestamp": "2026-07-26T22:49:49.733Z"
+  },
+  {
+    "id": "3d9291c1-c844-5d67-aeb0-240d900f8933",
+    "produto_id": "46daf29a-6e1b-5974-8cc4-03d5bb40dd70",
+    "tipo": "EAN",
+    "codigo": "0710497222495",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 0710497222495",
+    "timestamp": "2026-07-26T22:49:49.740Z"
+  },
+  {
+    "id": "50fbe884-0aff-5800-87a0-079341b89aa1",
+    "produto_id": "46daf29a-6e1b-5974-8cc4-03d5bb40dd70",
+    "tipo": "DUN",
+    "codigo": "10710497222492",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 10710497222492",
+    "timestamp": "2026-07-26T22:49:49.745Z"
+  },
+  {
+    "id": "78da994d-1e54-5c0f-8200-2ce58b03bb9b",
+    "produto_id": "13c39d30-4ccc-5681-a3da-d2d1db2dfbec",
+    "tipo": "EAN",
+    "codigo": "7898929331670",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898929331670",
+    "timestamp": "2026-07-26T22:49:49.748Z"
+  },
+  {
+    "id": "db3e3824-2ce3-56ee-b0c5-62485fa90f4d",
+    "produto_id": "13c39d30-4ccc-5681-a3da-d2d1db2dfbec",
+    "tipo": "DUN",
+    "codigo": "17898929331677",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898929331677",
+    "timestamp": "2026-07-26T22:49:49.752Z"
+  },
+  {
+    "id": "1ff10019-ba31-5d4d-962b-2414fbc463ae",
+    "produto_id": "c27e7f90-06bc-5928-9fcb-4f59e9703dae",
+    "tipo": "EAN",
+    "codigo": "7898929331380",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898929331380",
+    "timestamp": "2026-07-26T22:49:49.757Z"
+  },
+  {
+    "id": "04d06826-ac08-5cd2-8e6b-772c844f2779",
+    "produto_id": "c27e7f90-06bc-5928-9fcb-4f59e9703dae",
+    "tipo": "DUN",
+    "codigo": "17898929331387",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898929331387",
+    "timestamp": "2026-07-26T22:49:49.760Z"
+  },
+  {
+    "id": "56d79a95-e860-512c-b81b-bad989d637db",
+    "produto_id": "bc646681-cd1f-5dcb-94b9-ae278e877ae7",
+    "tipo": "EAN",
+    "codigo": "7898081292512",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898081292512",
+    "timestamp": "2026-07-26T22:49:49.763Z"
+  },
+  {
+    "id": "7b7bdcae-12c0-5e76-ba54-a94c29b7d567",
+    "produto_id": "bc646681-cd1f-5dcb-94b9-ae278e877ae7",
+    "tipo": "DUN",
+    "codigo": "17898081292519",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898081292519",
+    "timestamp": "2026-07-26T22:49:49.766Z"
+  },
+  {
+    "id": "65798043-cd51-573e-8e95-8010ec4879ed",
+    "produto_id": "eea1785b-3a5e-5a1c-a077-630a7d8f8e18",
+    "tipo": "EAN",
+    "codigo": "8711571070751",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 8711571070751",
+    "timestamp": "2026-07-26T22:49:49.780Z"
+  },
+  {
+    "id": "3f113b6f-dcbd-5953-9a53-2c1320845771",
+    "produto_id": "eea1785b-3a5e-5a1c-a077-630a7d8f8e18",
+    "tipo": "DUN",
+    "codigo": "18711571070758",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 18711571070758",
+    "timestamp": "2026-07-26T22:49:49.783Z"
+  },
+  {
+    "id": "8873f3b3-c67c-585a-9dbe-94852fd5b04e",
+    "produto_id": "44d76391-69ae-5465-97d1-81f3abd307e2",
+    "tipo": "EAN",
+    "codigo": "7899567249969",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249969",
+    "timestamp": "2026-07-26T22:49:49.786Z"
+  },
+  {
+    "id": "c1958c06-8dfd-5102-9795-a55ccbd0e2d0",
+    "produto_id": "44d76391-69ae-5465-97d1-81f3abd307e2",
+    "tipo": "DUN",
+    "codigo": "17899567249966",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249966",
+    "timestamp": "2026-07-26T22:49:49.790Z"
+  },
+  {
+    "id": "df4fca57-623e-5bcd-a547-e3afb6846713",
+    "produto_id": "776db632-a10b-59ae-af11-c29fe6aea06d",
+    "tipo": "EAN",
+    "codigo": "7894351165739",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7894351165739",
+    "timestamp": "2026-07-27T00:03:36.857Z"
+  },
+  {
+    "id": "97da5aa7-09cd-536b-bd0f-df4cef9edf6b",
+    "produto_id": "776db632-a10b-59ae-af11-c29fe6aea06d",
+    "tipo": "DUN",
+    "codigo": "17894351165736",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17894351165736",
+    "timestamp": "2026-07-27T00:03:36.865Z"
+  },
+  {
+    "id": "f85174c5-1f92-5b8a-9a7c-530e6b2c2fe2",
+    "produto_id": "d4a6e6c2-9c15-5a78-a361-11a6be285688",
+    "tipo": "EAN",
+    "codigo": "7894351165746",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7894351165746",
+    "timestamp": "2026-07-27T00:03:36.870Z"
+  },
+  {
+    "id": "fe8e4dca-aaf9-5553-a595-c99d50517103",
+    "produto_id": "d4a6e6c2-9c15-5a78-a361-11a6be285688",
+    "tipo": "DUN",
+    "codigo": "17894351165743",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17894351165743",
+    "timestamp": "2026-07-27T00:03:36.873Z"
+  },
+  {
+    "id": "87f42dc6-2be4-5aaf-99b9-c68f09706a54",
+    "produto_id": "8319a907-fc66-5d4b-9573-45de0aab7541",
+    "tipo": "EAN",
+    "codigo": "7899567205590",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567205590",
+    "timestamp": "2026-07-27T00:03:36.885Z"
+  },
+  {
+    "id": "27dac1c2-561b-5e42-86f9-0b833f8d8b44",
+    "produto_id": "8319a907-fc66-5d4b-9573-45de0aab7541",
+    "tipo": "DUN",
+    "codigo": "17899567205597",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567205597",
+    "timestamp": "2026-07-27T00:03:36.887Z"
+  },
+  {
+    "id": "af6527ed-778e-5fa4-bb09-8f9396edc565",
+    "produto_id": "a06618a0-a555-51b2-8c1c-d5fd10bf4f4a",
+    "tipo": "EAN",
+    "codigo": "7898542029916",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898542029916",
+    "timestamp": "2026-07-27T00:03:36.891Z"
+  },
+  {
+    "id": "697b533d-06f5-5a42-b11d-98b77925a545",
+    "produto_id": "a06618a0-a555-51b2-8c1c-d5fd10bf4f4a",
+    "tipo": "DUN",
+    "codigo": "17898542029913",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898542029913",
+    "timestamp": "2026-07-27T00:03:36.893Z"
+  },
+  {
+    "id": "307095fc-7839-55ea-b5a5-b95f1cec921b",
+    "produto_id": "6a1de230-61cc-5672-91bd-1a7ebdce1c3f",
+    "tipo": "EAN",
+    "codigo": "7898542029923",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898542029923",
+    "timestamp": "2026-07-27T00:03:36.899Z"
+  },
+  {
+    "id": "543a9a0d-a362-50eb-8b17-31c299b0c407",
+    "produto_id": "6a1de230-61cc-5672-91bd-1a7ebdce1c3f",
+    "tipo": "DUN",
+    "codigo": "17898542029920",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898542029920",
+    "timestamp": "2026-07-27T00:03:36.900Z"
+  },
+  {
+    "id": "bfa90639-7084-5fa3-bba5-5affa48d8226",
+    "produto_id": "52cd3cbc-b780-58b0-abc6-696df57e367b",
+    "tipo": "EAN",
+    "codigo": "7897318535408",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7897318535408",
+    "timestamp": "2026-07-27T00:03:36.904Z"
+  },
+  {
+    "id": "f0bd9cf0-63a8-528c-9a2c-674b92aafdad",
+    "produto_id": "52cd3cbc-b780-58b0-abc6-696df57e367b",
+    "tipo": "DUN",
+    "codigo": "17897318535405",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17897318535405",
+    "timestamp": "2026-07-27T00:03:36.906Z"
+  },
+  {
+    "id": "28fabc8d-d870-524c-9ed0-a47c0c524dde",
+    "produto_id": "ce8dfb40-98a9-50e8-abfa-32fe22ea2cde",
+    "tipo": "EAN",
+    "codigo": "7898962786185",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898962786185",
+    "timestamp": "2026-07-27T00:03:36.910Z"
+  },
+  {
+    "id": "0a6564de-dfc1-5d52-87fe-918f94d21e04",
+    "produto_id": "ce8dfb40-98a9-50e8-abfa-32fe22ea2cde",
+    "tipo": "DUN",
+    "codigo": "17898962786182",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898962786182",
+    "timestamp": "2026-07-27T00:03:36.912Z"
+  },
+  {
+    "id": "092410a5-80c2-5a36-bb14-61c6ebf594d9",
+    "produto_id": "561d4249-fec2-54a0-bea8-5b37b7903266",
+    "tipo": "EAN",
+    "codigo": "7899567249686",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249686",
+    "timestamp": "2026-07-27T00:03:36.915Z"
+  },
+  {
+    "id": "e8349913-900c-571d-a74c-cf59c8e7c4ac",
+    "produto_id": "561d4249-fec2-54a0-bea8-5b37b7903266",
+    "tipo": "DUN",
+    "codigo": "17899567249683",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249683",
+    "timestamp": "2026-07-27T00:03:36.917Z"
+  },
+  {
+    "id": "ee497199-f79d-5dea-adb4-b065d9a54419",
+    "produto_id": "6fa35961-21ac-5024-b3db-82c0cf2a5f57",
+    "tipo": "EAN",
+    "codigo": "7899567249976",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249976",
+    "timestamp": "2026-07-27T00:03:36.919Z"
+  },
+  {
+    "id": "2e9bcd31-09d9-5e75-9c20-d3f6bf3aee0b",
+    "produto_id": "6fa35961-21ac-5024-b3db-82c0cf2a5f57",
+    "tipo": "DUN",
+    "codigo": "17899567249973",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249973",
+    "timestamp": "2026-07-27T00:03:36.921Z"
+  },
+  {
+    "id": "b2e72a05-37bd-5e90-beb6-bee07b17c90e",
+    "produto_id": "4e51cb2a-3401-58b1-8624-5e914e976b6a",
+    "tipo": "EAN",
+    "codigo": "7899567259982",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567259982",
+    "timestamp": "2026-07-27T00:03:36.926Z"
+  },
+  {
+    "id": "5ae834d2-6665-5e16-959d-3669ef1bcb5f",
+    "produto_id": "4e51cb2a-3401-58b1-8624-5e914e976b6a",
+    "tipo": "DUN",
+    "codigo": "17899567259989",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567259989",
+    "timestamp": "2026-07-27T00:03:36.928Z"
+  },
+  {
+    "id": "4ef87abc-8218-5c89-a3af-8fa1fec2272f",
+    "produto_id": "8a6ce7b1-6d3b-515b-93b0-a4a522ccf799",
+    "tipo": "EAN",
+    "codigo": "7896419713852",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896419713852",
+    "timestamp": "2026-07-27T00:03:36.940Z"
+  },
+  {
+    "id": "d8bb2856-f1a5-5de2-bb11-05d2ad1071bd",
+    "produto_id": "8a6ce7b1-6d3b-515b-93b0-a4a522ccf799",
+    "tipo": "DUN",
+    "codigo": "17896419713859",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896419713859",
+    "timestamp": "2026-07-27T00:03:36.942Z"
+  },
+  {
+    "id": "25b0fef7-7364-5c64-a31e-3bf78a057ce4",
+    "produto_id": "b0cef564-a690-5c14-beec-23e7cda3e781",
+    "tipo": "EAN",
+    "codigo": "7899567232862",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567232862",
+    "timestamp": "2026-07-27T00:03:36.944Z"
+  },
+  {
+    "id": "f9807b4b-691e-56b0-ad0e-2daae23bb054",
+    "produto_id": "b0cef564-a690-5c14-beec-23e7cda3e781",
+    "tipo": "DUN",
+    "codigo": "17899567232869",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567232869",
+    "timestamp": "2026-07-27T00:03:36.959Z"
+  },
+  {
+    "id": "66a43987-fba3-55dd-89d3-ff0c778d6062",
+    "produto_id": "2fccd6ae-ff87-5b93-b511-e7c2ab87ed12",
+    "tipo": "EAN",
+    "codigo": "7899567232596",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567232596",
+    "timestamp": "2026-07-27T00:03:36.968Z"
+  },
+  {
+    "id": "8f0d5c98-d330-55b9-a15b-71e2137328ec",
+    "produto_id": "2fccd6ae-ff87-5b93-b511-e7c2ab87ed12",
+    "tipo": "DUN",
+    "codigo": "17899567232593",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567232593",
+    "timestamp": "2026-07-27T00:03:36.972Z"
+  },
+  {
+    "id": "492f07f4-7321-5610-963d-686c9e7964a2",
+    "produto_id": "e2e3ddcf-c0bb-5d47-8dd0-1e160d9fe9e6",
+    "tipo": "EAN",
+    "codigo": "7899567239892",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567239892",
+    "timestamp": "2026-07-27T00:03:36.975Z"
+  },
+  {
+    "id": "453b4234-2fae-5994-8c57-9e23ce7d4cf4",
+    "produto_id": "e2e3ddcf-c0bb-5d47-8dd0-1e160d9fe9e6",
+    "tipo": "DUN",
+    "codigo": "17899567239899",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567239899",
+    "timestamp": "2026-07-27T00:03:36.981Z"
+  },
+  {
+    "id": "3df2ae35-51ea-542e-8321-a666f328f0e6",
+    "produto_id": "766ddeec-496b-5804-a1bc-0d8854e909b6",
+    "tipo": "EAN",
+    "codigo": "7898017335238",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898017335238",
+    "timestamp": "2026-07-27T00:03:36.985Z"
+  },
+  {
+    "id": "36acc030-cd63-543c-86a2-17b0a214e870",
+    "produto_id": "766ddeec-496b-5804-a1bc-0d8854e909b6",
+    "tipo": "DUN",
+    "codigo": "17898017335235",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898017335235",
+    "timestamp": "2026-07-27T00:03:36.988Z"
+  },
+  {
+    "id": "c6568df3-1789-547c-86f1-2e3922e0d8bb",
+    "produto_id": "aab6977f-4602-589a-ba0a-2b0e83ca7ba6",
+    "tipo": "EAN",
+    "codigo": "7894904013913",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7894904013913",
+    "timestamp": "2026-07-27T00:03:36.992Z"
+  },
+  {
+    "id": "e697605a-61ac-59dc-8bc1-b67f547e5005",
+    "produto_id": "aab6977f-4602-589a-ba0a-2b0e83ca7ba6",
+    "tipo": "DUN",
+    "codigo": "17894904013910",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17894904013910",
+    "timestamp": "2026-07-27T00:03:36.994Z"
+  },
+  {
+    "id": "45cff33b-5d01-5791-b3d4-c57d55232988",
+    "produto_id": "3fbe6efa-f75f-5f87-90f1-5700a3c771e2",
+    "tipo": "EAN",
+    "codigo": "7898932612223",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898932612223",
+    "timestamp": "2026-07-27T00:03:36.999Z"
+  },
+  {
+    "id": "73553991-e701-505f-8181-1ba4176d438d",
+    "produto_id": "3fbe6efa-f75f-5f87-90f1-5700a3c771e2",
+    "tipo": "DUN",
+    "codigo": "17898932612220",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898932612220",
+    "timestamp": "2026-07-27T00:03:37.001Z"
+  },
+  {
+    "id": "78f370a8-8f26-5209-bea0-42b3abb4eca5",
+    "produto_id": "52aeebd2-e82d-50b9-a534-401c5c179f2b",
+    "tipo": "EAN",
+    "codigo": "7896807416822",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896807416822",
+    "timestamp": "2026-07-27T00:03:37.005Z"
+  },
+  {
+    "id": "d7b903ae-554d-58cf-b7f7-1e699afa1170",
+    "produto_id": "52aeebd2-e82d-50b9-a534-401c5c179f2b",
+    "tipo": "DUN",
+    "codigo": "17896807416829",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896807416829",
+    "timestamp": "2026-07-27T00:03:37.008Z"
+  },
+  {
+    "id": "f6602a8e-29c0-523f-8c86-840899e0c41b",
+    "produto_id": "c3ed76dd-8e5f-5ed4-8a4b-0c25cb377ba2",
+    "tipo": "EAN",
+    "codigo": "7896807416808",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896807416808",
+    "timestamp": "2026-07-27T00:03:37.011Z"
+  },
+  {
+    "id": "9e9cb747-9933-5daa-b4dc-53b5c13e8792",
+    "produto_id": "c3ed76dd-8e5f-5ed4-8a4b-0c25cb377ba2",
+    "tipo": "DUN",
+    "codigo": "17896807416805",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896807416805",
+    "timestamp": "2026-07-27T00:03:37.014Z"
+  },
+  {
+    "id": "6983d29a-0f77-5872-9af9-6be79d2b86b3",
+    "produto_id": "770f56c4-ffff-541a-a6c1-1de78501709d",
+    "tipo": "EAN",
+    "codigo": "7896807410127",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896807410127",
+    "timestamp": "2026-07-27T00:03:37.033Z"
+  },
+  {
+    "id": "c16f1967-31e6-5566-9d09-afb4e2b278f6",
+    "produto_id": "770f56c4-ffff-541a-a6c1-1de78501709d",
+    "tipo": "DUN",
+    "codigo": "17896807410124",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896807410124",
+    "timestamp": "2026-07-27T00:03:37.036Z"
+  },
+  {
+    "id": "f0fbb8eb-782a-5058-9fc4-5496f17da358",
+    "produto_id": "6a5cb544-11b9-5303-addf-db28a8690936",
+    "tipo": "EAN",
+    "codigo": "7899567232862",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567232862",
+    "timestamp": "2026-07-27T00:03:37.041Z"
+  },
+  {
+    "id": "4addafde-62e7-54f6-8430-699691654566",
+    "produto_id": "6a5cb544-11b9-5303-addf-db28a8690936",
+    "tipo": "DUN",
+    "codigo": "17899567232869",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567232869",
+    "timestamp": "2026-07-27T00:03:37.043Z"
+  },
+  {
+    "id": "4224e7f0-2c22-51f5-99b9-ab3d5335651b",
+    "produto_id": "2cda73eb-6003-5736-8514-836ca02b5150",
+    "tipo": "EAN",
+    "codigo": "7896031214591",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031214591",
+    "timestamp": "2026-07-27T00:03:37.048Z"
+  },
+  {
+    "id": "305d3d34-a2b1-5785-830a-7eff779edde6",
+    "produto_id": "2cda73eb-6003-5736-8514-836ca02b5150",
+    "tipo": "DUN",
+    "codigo": "17896031214598",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031214598",
+    "timestamp": "2026-07-27T00:03:37.050Z"
+  },
+  {
+    "id": "8f7fde7e-d4eb-5d1e-8e2b-f91ab998c5b8",
+    "produto_id": "4f5ef152-d9c9-5b5a-8a59-342bb1624f4d",
+    "tipo": "EAN",
+    "codigo": "7898970370079",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898970370079",
+    "timestamp": "2026-07-27T00:03:37.053Z"
+  },
+  {
+    "id": "2e91067c-a98d-5050-b780-f90b80ec7963",
+    "produto_id": "4f5ef152-d9c9-5b5a-8a59-342bb1624f4d",
+    "tipo": "DUN",
+    "codigo": "17898970370076",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898970370076",
+    "timestamp": "2026-07-27T00:03:37.055Z"
+  },
+  {
+    "id": "7f7f2edd-ea3a-5782-8f34-dff14be83dc8",
+    "produto_id": "ebbab0d2-328b-56ac-8bc2-b11bdf33bc30",
+    "tipo": "EAN",
+    "codigo": "7896031240293",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031240293",
+    "timestamp": "2026-07-27T00:03:37.059Z"
+  },
+  {
+    "id": "87b27ccf-0b52-5bd0-9057-0464b24c2ab8",
+    "produto_id": "ebbab0d2-328b-56ac-8bc2-b11bdf33bc30",
+    "tipo": "DUN",
+    "codigo": "17896031240290",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031240290",
+    "timestamp": "2026-07-27T00:03:37.062Z"
+  },
+  {
+    "id": "c29f089a-9ffa-53a1-977b-441aac56055a",
+    "produto_id": "5b8e0adc-90fc-5aac-a249-213e46ac89a0",
+    "tipo": "EAN",
+    "codigo": "7896031223845",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031223845",
+    "timestamp": "2026-07-27T00:03:37.069Z"
+  },
+  {
+    "id": "1ec55882-0159-5ff2-99fc-9e7dcbe163af",
+    "produto_id": "5b8e0adc-90fc-5aac-a249-213e46ac89a0",
+    "tipo": "DUN",
+    "codigo": "17896031223842",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031223842",
+    "timestamp": "2026-07-27T00:03:37.071Z"
+  },
+  {
+    "id": "966c985b-cf70-5ad1-b5b1-f20d1986d8d3",
+    "produto_id": "f301a199-7800-5b65-aec8-35d0b936ecf5",
+    "tipo": "EAN",
+    "codigo": "7896031249784",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031249784",
+    "timestamp": "2026-07-27T00:03:37.073Z"
+  },
+  {
+    "id": "2c8819a8-380e-5d60-a82d-714285f2cee0",
+    "produto_id": "f301a199-7800-5b65-aec8-35d0b936ecf5",
+    "tipo": "DUN",
+    "codigo": "17896031249781",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031249781",
+    "timestamp": "2026-07-27T00:03:37.075Z"
+  },
+  {
+    "id": "d4215a01-8a0f-57ef-aa8e-819a383e7f69",
+    "produto_id": "60df806d-c027-56dd-8177-008eab9af049",
+    "tipo": "EAN",
+    "codigo": "7896031249777",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031249777",
+    "timestamp": "2026-07-27T00:03:37.088Z"
+  },
+  {
+    "id": "62a138a3-b93d-5cf7-b35b-a0e2708bc69c",
+    "produto_id": "60df806d-c027-56dd-8177-008eab9af049",
+    "tipo": "DUN",
+    "codigo": "17896031249774",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031249774",
+    "timestamp": "2026-07-27T00:03:37.090Z"
+  },
+  {
+    "id": "b16a0890-ed8e-54c2-9c66-bfde3608ff53",
+    "produto_id": "ead16458-157c-5760-b238-83b8c57bed13",
+    "tipo": "EAN",
+    "codigo": "7899567249921",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249921",
+    "timestamp": "2026-07-27T00:03:37.093Z"
+  },
+  {
+    "id": "0c85d199-3b5c-5384-875d-91956c309730",
+    "produto_id": "ead16458-157c-5760-b238-83b8c57bed13",
+    "tipo": "DUN",
+    "codigo": "17899567249928",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249928",
+    "timestamp": "2026-07-27T00:03:37.100Z"
+  },
+  {
+    "id": "3d0d0541-9c34-5178-bb83-01153c61a56b",
+    "produto_id": "e133254a-71f6-51c6-8318-6f0171caea4f",
+    "tipo": "EAN",
+    "codigo": "7899567249686",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249686",
+    "timestamp": "2026-07-27T00:03:37.105Z"
+  },
+  {
+    "id": "f43916d7-878b-5e47-9aa5-c15feb16705b",
+    "produto_id": "e133254a-71f6-51c6-8318-6f0171caea4f",
+    "tipo": "DUN",
+    "codigo": "17899567249683",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249683",
+    "timestamp": "2026-07-27T00:03:37.107Z"
+  },
+  {
+    "id": "53c0f095-1055-591c-a92f-124576ffc9c2",
+    "produto_id": "108e09a8-f6f1-53fa-852f-aa97f8ce4446",
+    "tipo": "EAN",
+    "codigo": "7896031201423",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031201423",
+    "timestamp": "2026-07-27T00:03:37.112Z"
+  },
+  {
+    "id": "cb7a4f43-50da-536a-8dc1-3820bc3ac9f0",
+    "produto_id": "108e09a8-f6f1-53fa-852f-aa97f8ce4446",
+    "tipo": "DUN",
+    "codigo": "17896031201420",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031201420",
+    "timestamp": "2026-07-27T00:03:37.114Z"
+  },
+  {
+    "id": "4eb6fef9-a41c-5615-ac23-5dfad0b64b6c",
+    "produto_id": "82eb3491-c8e4-5e3e-897c-731e6d57c5e9",
+    "tipo": "EAN",
+    "codigo": "7896419728955",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896419728955",
+    "timestamp": "2026-07-27T00:03:37.118Z"
+  },
+  {
+    "id": "4ecf8302-1ef8-5a40-b041-fb5a1424932e",
+    "produto_id": "82eb3491-c8e4-5e3e-897c-731e6d57c5e9",
+    "tipo": "DUN",
+    "codigo": "17896419728952",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896419728952",
+    "timestamp": "2026-07-27T00:03:37.120Z"
+  },
+  {
+    "id": "5d3046ff-b9c4-5848-9871-b988a0fb6163",
+    "produto_id": "1508d77c-a03f-5663-ad62-5caab75fc17a",
+    "tipo": "EAN",
+    "codigo": "7896031201461",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031201461",
+    "timestamp": "2026-07-27T00:03:37.124Z"
+  },
+  {
+    "id": "32bde086-e113-57e6-80fb-c627aab3915b",
+    "produto_id": "1508d77c-a03f-5663-ad62-5caab75fc17a",
+    "tipo": "DUN",
+    "codigo": "17896031201468",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031201468",
+    "timestamp": "2026-07-27T00:03:37.130Z"
+  },
+  {
+    "id": "b28ff7a0-56cd-5740-a224-ac0ed3d05478",
+    "produto_id": "f5b7e28f-d496-5b6d-9862-c140ab037cdb",
+    "tipo": "EAN",
+    "codigo": "7899567249723",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249723",
+    "timestamp": "2026-07-27T00:03:37.133Z"
+  },
+  {
+    "id": "b6893cc9-eefe-531d-889b-d3ab2a29e081",
+    "produto_id": "f5b7e28f-d496-5b6d-9862-c140ab037cdb",
+    "tipo": "DUN",
+    "codigo": "17899567249720",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249720",
+    "timestamp": "2026-07-27T00:03:37.136Z"
+  },
+  {
+    "id": "1552dcd4-e92a-506a-9981-67a27785a768",
+    "produto_id": "9b9e903d-6a2e-58e4-bb8c-4fbd139d6f8b",
+    "tipo": "EAN",
+    "codigo": "7899567249730",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249730",
+    "timestamp": "2026-07-27T00:03:37.139Z"
+  },
+  {
+    "id": "b8325a28-add4-589d-9dba-74217a2bf8eb",
+    "produto_id": "9b9e903d-6a2e-58e4-bb8c-4fbd139d6f8b",
+    "tipo": "DUN",
+    "codigo": "17899567249737",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249737",
+    "timestamp": "2026-07-27T00:03:37.140Z"
+  },
+  {
+    "id": "1a175386-f3a0-551a-92b3-ec0554c1627d",
+    "produto_id": "3f2e5cdf-4b8a-5b84-a136-a057332c41a5",
+    "tipo": "EAN",
+    "codigo": "7896031201393",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7896031201393",
+    "timestamp": "2026-07-27T00:03:37.143Z"
+  },
+  {
+    "id": "d979b57d-f0e6-5d36-b41d-7524060a911c",
+    "produto_id": "3f2e5cdf-4b8a-5b84-a136-a057332c41a5",
+    "tipo": "DUN",
+    "codigo": "17896031201390",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17896031201390",
+    "timestamp": "2026-07-27T00:03:37.147Z"
+  },
+  {
+    "id": "3d9291c1-c844-5d67-aeb0-240d900f8933",
+    "produto_id": "46daf29a-6e1b-5974-8cc4-03d5bb40dd70",
+    "tipo": "EAN",
+    "codigo": "0710497222495",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 0710497222495",
+    "timestamp": "2026-07-27T00:03:37.153Z"
+  },
+  {
+    "id": "50fbe884-0aff-5800-87a0-079341b89aa1",
+    "produto_id": "46daf29a-6e1b-5974-8cc4-03d5bb40dd70",
+    "tipo": "DUN",
+    "codigo": "10710497222492",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 10710497222492",
+    "timestamp": "2026-07-27T00:03:37.158Z"
+  },
+  {
+    "id": "78da994d-1e54-5c0f-8200-2ce58b03bb9b",
+    "produto_id": "13c39d30-4ccc-5681-a3da-d2d1db2dfbec",
+    "tipo": "EAN",
+    "codigo": "7898929331670",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898929331670",
+    "timestamp": "2026-07-27T00:03:37.167Z"
+  },
+  {
+    "id": "db3e3824-2ce3-56ee-b0c5-62485fa90f4d",
+    "produto_id": "13c39d30-4ccc-5681-a3da-d2d1db2dfbec",
+    "tipo": "DUN",
+    "codigo": "17898929331677",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898929331677",
+    "timestamp": "2026-07-27T00:03:37.170Z"
+  },
+  {
+    "id": "1ff10019-ba31-5d4d-962b-2414fbc463ae",
+    "produto_id": "c27e7f90-06bc-5928-9fcb-4f59e9703dae",
+    "tipo": "EAN",
+    "codigo": "7898929331380",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898929331380",
+    "timestamp": "2026-07-27T00:03:37.172Z"
+  },
+  {
+    "id": "04d06826-ac08-5cd2-8e6b-772c844f2779",
+    "produto_id": "c27e7f90-06bc-5928-9fcb-4f59e9703dae",
+    "tipo": "DUN",
+    "codigo": "17898929331387",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898929331387",
+    "timestamp": "2026-07-27T00:03:37.174Z"
+  },
+  {
+    "id": "56d79a95-e860-512c-b81b-bad989d637db",
+    "produto_id": "bc646681-cd1f-5dcb-94b9-ae278e877ae7",
+    "tipo": "EAN",
+    "codigo": "7898081292512",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7898081292512",
+    "timestamp": "2026-07-27T00:03:37.177Z"
+  },
+  {
+    "id": "7b7bdcae-12c0-5e76-ba54-a94c29b7d567",
+    "produto_id": "bc646681-cd1f-5dcb-94b9-ae278e877ae7",
+    "tipo": "DUN",
+    "codigo": "17898081292519",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17898081292519",
+    "timestamp": "2026-07-27T00:03:37.179Z"
+  },
+  {
+    "id": "65798043-cd51-573e-8e95-8010ec4879ed",
+    "produto_id": "eea1785b-3a5e-5a1c-a077-630a7d8f8e18",
+    "tipo": "EAN",
+    "codigo": "8711571070751",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 8711571070751",
+    "timestamp": "2026-07-27T00:03:37.187Z"
+  },
+  {
+    "id": "3f113b6f-dcbd-5953-9a53-2c1320845771",
+    "produto_id": "eea1785b-3a5e-5a1c-a077-630a7d8f8e18",
+    "tipo": "DUN",
+    "codigo": "18711571070758",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 18711571070758",
+    "timestamp": "2026-07-27T00:03:37.189Z"
+  },
+  {
+    "id": "8873f3b3-c67c-585a-9dbe-94852fd5b04e",
+    "produto_id": "44d76391-69ae-5465-97d1-81f3abd307e2",
+    "tipo": "EAN",
+    "codigo": "7899567249969",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 7899567249969",
+    "timestamp": "2026-07-27T00:03:37.192Z"
+  },
+  {
+    "id": "c1958c06-8dfd-5102-9795-a55ccbd0e2d0",
+    "produto_id": "44d76391-69ae-5465-97d1-81f3abd307e2",
+    "tipo": "DUN",
+    "codigo": "17899567249966",
+    "error_message": "Duplicidade de código detectada no mesmo payload de staging: 17899567249966",
+    "timestamp": "2026-07-27T00:03:37.194Z"
   }
 ]

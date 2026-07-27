@@ -42,16 +42,22 @@ O modelo relacional do PaletScan foi projetado para eliminar duplicidades e gara
 O pipeline de dados é totalmente independente e executa requisições web HTTP ao vivo:
 
 1. **Extração Web ao Vivo (Fetch & Parse)**: O módulo [`scrapers/friboi/index.ts`](file:///root/paletscan-etl/scrapers/friboi/index.ts) realiza web scraping em tempo real baixando o sitemap XML oficial do portal B2B Friboi (`https://www.friboionline.com.br/productSitemap.xml`) e consultando concorrentemente as APIs HTTP de produto (`ccstoreui/v1/products/`) para capturar dados vivos.
-2. **Normalização de Texto e Pesos (`core/normalizers/text_parser.ts`)**:
+2. **Integridade de Códigos de Barras (`normalizeEAN13` e `normalizeDUN14`)**:
+   - Tratamento estrito de códigos de barras como `string`.
+   - Cálculo automático de dígito verificador Modulus 10 (GS1) para EAN-13 de 12 dígitos, garantindo integridade de 13 dígitos.
+   - Formatação e derivação de DUN-14 de 14 dígitos (variante logística `1` + EAN base + Modulus 10).
+3. **Normalização de Texto e Pesos (`core/normalizers/text_parser.ts`)**:
    - Converte strings ALL CAPS para Title Case respeitando a acentuação em PT-BR (corrigindo termos como "Filé", "Moída", "Acém").
    - Extrai pesos fixos para gramas numéricas (`peso_gramas`).
    - Identifica cortes fracionados/peso variável e ajusta a descrição para `"Nome do Produto (pesar)"` ou `"Nome do Produto + Peso"`.
-3. **Classificação Heurística (`core/heuristics/`)**:
-   - Classifica automaticamente marcas secundárias (*Friboi Black, Maturatta, Do Chef, 1953, Swift, etc.*).
-   - Infere a classe do produto (*Bovinos, Suínos, Aves, Pescados, Processados*) e o estado de conservação (*Resfriado, Congelado, Temperatura Ambiente*).
-4. **Pipeline de Imagens e IA Local (`images/ai_pipeline/process_image.py`)**:
-   - Inspeciona URLs da fonte em tempo real: se for um placeholder genérico (como `355027_05.jpeg` ou `_00.JPG`), o produto vai para a matriz `pending_images_approval`.
-   - Para fotos reais: realiza a remoção do fundo com rede neural local (`rembg` em Python), converte para `.webp` transparente em `images/processed/` e efetua upload para o Supabase Storage (`produtos-imagens`), atualizando a `imagem_url` para o status `aprovado` e movendo o arquivo para `images/archived/`.
+4. **Validação de Imagens Reais do Produto (`isValidProductImage` / `extractBestProductImage`)**:
+   - Filtro heurístico rigoroso para rejeitar banners promocionais, fotos de receitas/pratos prontos, logos institucionais, selos, tabelas nutricionais e ícones "play".
+   - Apenas fotos reais de produtos/cortes embalados de fábrica são marcadas como `aprovado`.
+5. **Pipeline de Imagens com Fundo Branco Sólido e IA Local (`images/ai_pipeline/process_image.py`)**:
+   - Remoção de fundo com IA local (`rembg` em Python).
+   - Achatamento do canal alpha sobre fundo branco sólido RGB (`#FFFFFF`).
+   - Redimensionamento máximo otimizado (`--max-dim 1000`) e conversão para `.webp` leve (< 100-150KB) mantendo alta nitidez.
+   - Upload para o Supabase Storage (`produtos-imagens`), atualizando a `imagem_url` para o status `aprovado` e movendo o arquivo para `images/archived/`.
 
 ---
 
@@ -59,6 +65,9 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
 
 - [x] **Estrutura Base do Repositório**: Diretórios `scrapers/`, `core/`, `images/`, `staging/`, `db_sync/`.
 - [x] **Esquema de Validação Rigoroso**: Manifesto JSON Schema em [`core/manifest/schema_manifest.json`](file:///root/paletscan-etl/core/manifest/schema_manifest.json).
+- [x] **Integridade Estrita de EAN-13 e DUN-14**: Modulus 10 GS1 em [`core/normalizers/text_parser.ts`](file:///root/paletscan-etl/core/normalizers/text_parser.ts).
+- [x] **Algoritmo de Validação de Imagens de Produtos**: Rejeição de receitas, banners e placeholders em [`scrapers/friboi/index.ts`](file:///root/paletscan-etl/scrapers/friboi/index.ts).
+- [x] **Padronização de Fundo Branco e Otimização WebP**: Pipeline Python em [`images/ai_pipeline/process_image.py`](file:///root/paletscan-etl/images/ai_pipeline/process_image.py).
 - [x] **Módulo Normalizador de Texto e Pesos**: [`core/normalizers/text_parser.ts`](file:///root/paletscan-etl/core/normalizers/text_parser.ts).
 - [x] **Heurísticas de Marca e Categoria**: [`core/heuristics/brand_classifier.ts`](file:///root/paletscan-etl/core/heuristics/brand_classifier.ts) e [`category_classifier.ts`](file:///root/paletscan-etl/core/heuristics/category_classifier.ts).
 - [x] **Web Scraper Friboi B2B em Tempo Real**: [`scrapers/friboi/index.ts`](file:///root/paletscan-etl/scrapers/friboi/index.ts).
