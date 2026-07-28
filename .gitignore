@@ -2,9 +2,13 @@ node_modules/
 dist/
 .DS_Store
 *.log
+.env
+.env.local
 images/raw/*
 !images/raw/.gitkeep
 images/processed/*
 !images/processed/.gitkeep
 images/archived/*
 !images/archived/.gitkeep
+site/
+.cache/

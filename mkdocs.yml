@@ -1,0 +1,71 @@
+site_name: PaletScan ETL - Documentação Técnica
+site_description: Documentação técnica oficial do pipeline de dados, scrapers B2B, IA de imagem e sincronização Supabase do PaletScan.
+site_author: Jean Barbosa & Antigravity Data Engineering Team
+site_url: https://NaejBarbosa.github.io/paletscan-etl/
+
+theme:
+  name: material
+  language: pt
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Alternar para modo escuro
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Alternar para modo claro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - "Início": "index.md"
+  - "Pipeline Friboi": "pipeline-friboi.md"
+  - "Normalizadores e Heurísticas": "heuristicas-normalizadores.md"
+  - "Pipeline de IA de Imagens": "processamento-imagens.md"
+  - "Governança e Schema": "schema-manifesto.md"
+  - "Sincronização com Supabase": "supabase.md"
