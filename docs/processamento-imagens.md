@@ -10,11 +10,11 @@ Em vez de dependências de APIs de terceiros pagas, o PaletScan utiliza um pipel
 
 ```mermaid
 graph LR
-    A[Imagem Bruta / Raw] -->|process_image.py| B[Rede Neural rembg U2Net]
-    B -->|Máscara Transparente| C[Canal Alpha RGBA]
-    C -->|Achatamento Alpha| D[Fundo Branco Sólido #FFFFFF]
-    D -->|Resize max-dim 1000| E[Pillow Resampling]
-    E -->|Compressão WebP| F[Arquivo Otimizado .webp <150KB]
+    A["Imagem Bruta / Raw"] -->|process_image.py| B["Rede Neural rembg U2Net"]
+    B -->|Máscara Transparente| C["Canal Alpha RGBA"]
+    C -->|Achatamento Alpha| D["Fundo Branco Sólido #FFFFFF"]
+    D -->|Resize max-dim 1000| E["Pillow Resampling"]
+    E -->|Compressão WebP| F["Arquivo Otimizado .webp (Menos de 150KB)"]
 ```
 
 ---

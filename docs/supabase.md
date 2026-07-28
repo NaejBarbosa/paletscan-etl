@@ -23,7 +23,7 @@ sequenceDiagram
         SyncEngine->>PostgreSQL: INSERT em codigos_barras
         alt Sucesso
             PostgreSQL-->>SyncEngine: 201 Created / OK
-        else Conflito de EAN/DUN (Erro PostgreSQL 23505)
+        else Conflito de EAN ou DUN (Erro PostgreSQL 23505)
             PostgreSQL-->>SyncEngine: 409 Conflict (unique_violation)
             SyncEngine->>SyncEngine: Executa Fallback Item-por-Item
             SyncEngine->>ConflictLog: Registra detalhes do conflito em conflicts_log.json

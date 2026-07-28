@@ -10,28 +10,28 @@ O modelo de dados do PaletScan foi desenhado para eliminar duplicidades e garant
 
 ```mermaid
 erDiagram
-    FABRICANTES ||--o{ MARCAS : "possui (1:N)"
-    MARCAS ||--o{ PRODUTOS : "categoriza (1:N)"
-    PRODUTOS ||--o{ CODIGOS_BARRAS : "associa (1:N)"
+    FABRICANTES ||--o{ MARCAS : "possui"
+    MARCAS ||--o{ PRODUTOS : "categoriza"
+    PRODUTOS ||--o{ CODIGOS_BARRAS : "associa"
 
     FABRICANTES {
-        uuid id PK "UUIDv5 Determinístico"
-        string nome "Razão Social / Holding"
+        uuid id PK "UUIDv5 Deterministico"
+        string nome "Razao Social / Holding"
         string cnpj "CNPJ do Fabricante"
     }
 
     MARCAS {
-        uuid id PK "UUIDv5 Determinístico"
+        uuid id PK "UUIDv5 Deterministico"
         uuid fabricante_id FK
         string nome "Nome Comercial da Marca"
     }
 
     PRODUTOS {
-        uuid id PK "UUIDv5 Determinístico"
+        uuid id PK "UUIDv5 Deterministico"
         uuid marca_id FK
         string nome "Nome Normalizado (Title Case)"
-        string categoria "Categoria Logística"
-        string conservacao "Tipo de Conservação"
+        string categoria "Categoria Logistica"
+        string conservacao "Tipo de Conservacao"
         integer peso_gramas "Peso Fixo em Gramas"
         boolean peso_variavel "Flag de Corte por Pesagem"
         string imagem_url "URL CDN Supabase Storage"
@@ -39,11 +39,11 @@ erDiagram
     }
 
     CODIGOS_BARRAS {
-        uuid id PK "UUIDv5 Determinístico"
+        uuid id PK "UUIDv5 Deterministico"
         uuid produto_id FK
         string codigo UK "EAN-13 / DUN-14 / SKU (VARCHAR Estrito)"
         string tipo "EAN-13 | DUN-14 | SKU"
-        integer quantidade_embalagem "Fator de Embalagem (Ex: 1 ou 12)"
+        integer quantidade_embalagem "Fator de Embalagem"
     }
 ```
 

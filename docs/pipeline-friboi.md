@@ -19,9 +19,9 @@ sequenceDiagram
     Scraper->>Sitemap: GET /productSitemap.xml
     Sitemap-->>Scraper: Retorna lista de URLs de produtos
     loop Para cada lote de URLs (Concorrente)
-        Scraper->>CCStore: GET /ccstoreui/v1/products/<product_id>
+        Scraper->>CCStore: GET /ccstoreui/v1/products/product_id
         CCStore-->>Scraper: Retorna Payload JSON completo do produto
-        Scraper->>Scraper: Executa Algoritmo de Seleção & Acurácia de Imagens
+        Scraper->>Scraper: Executa Algoritmo de Seleção e Acurácia de Imagens
         Scraper->>Scraper: Extrai SKUs, EANs e DUNs
         Scraper->>Staging: Grava dados brutos sanitizados em staging/
     end
@@ -50,7 +50,7 @@ O algoritmo inspeciona recursivamente todos os nós de mídia retornados pelo JS
 - Objeto de variação `childSKUs`
 
 ### 🛡️ B. Validação Semântica e Filtro de SKU Exato
-- **Correspondência de SKU no Nome do Arquivo**: Garante que a URL da imagem contenha o padrão `/products/<SKU>_(00|01)_<slug>`. O SKU contido na imagem deve corresponder estritamente ao SKU do produto inspecionado.
+- **Correspondência de SKU no Nome do Arquivo**: Garante que a URL da imagem containment o padrão `/products/<SKU>_(00|01)_<slug>`. O SKU contido na imagem deve corresponder estritamente ao SKU do produto inspecionado.
 - **Sobreposição Semântica**: Realiza a comparação entre os termos do slug do arquivo da imagem e as palavras-chave do título do produto.
 
 ### 🚫 C. Regras de Rejeição (Filtro Anti-Ruído)

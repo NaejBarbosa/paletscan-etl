@@ -25,20 +25,23 @@ A validação de códigos de barras é uma das etapas mais críticas do PaletSca
 
 ```mermaid
 flowchart TD
-    A[Código Bruto de Entrada] --> B{Tipagem de Dado?}
-    B -->|Integer/Number| C[ERRO: Risco de Truncamento de Zeros]
-    B -->|String Estrita| D[Inspeciona Tamanho da String]
-    D -->|12 Dígitos| E[Adiciona Prefixo & Calcula 13º Dígito Mod10]
-    D -->|13 Dígitos com 0789...| F[Remove 0 Espúrio & Recalcula Mod10]
-    D -->|13 Dígitos Válidos| G[EAN-13 Confirmado]
-    G --> H{DUN-14 Existe?}
-    H -->|Sim| I[Valida/Recalcula Mod10 para 14 Dígitos]
-    H -->|Não| J[Deriva DUN-14: '1' + EAN12 + Mod10]
-    E & F & I & J --> K[EAN-13 (13 dig) & DUN-14 (14 dig) Sanitizados]
+    A["Código Bruto de Entrada"] --> B{"Tipagem de Dado?"}
+    B -->|Integer ou Number| C["ERRO: Risco de Truncamento de Zeros"]
+    B -->|String Estrita| D["Inspeciona Tamanho da String"]
+    D -->|12 Dígitos| E["Adiciona Prefixo e Calcula 13º Dígito Mod10"]
+    D -->|13 Dígitos com 0789...| F["Remove 0 Espúrio e Recalcula Mod10"]
+    D -->|13 Dígitos Válidos| G["EAN-13 Confirmado"]
+    G --> H{"DUN-14 Existe?"}
+    H -->|Sim| I["Valida ou Recalcula Mod10 para 14 Dígitos"]
+    H -->|Não| J["Deriva DUN-14: 1 + EAN12 + Mod10"]
+    E --> K["EAN-13 (13 dig) e DUN-14 (14 dig) Sanitizados"]
+    F --> K
+    I --> K
+    J --> K
 ```
 
 ### 🛡️ A. Tipagem Estrita como String
-Todas as funções de código de barras trabalham **exclusivamente com o tipo `string`**. Isso impede que compiladores ou bibliotecas convertam códigos iniciados em zero (como `07891515...`) em números inteiros, o que causaria a perda irreparável de zeros à esquerda.
+Todas as funções de código de barras trabalham **exclusivamente com o tipo `string`**. Isso impede que compiladores ou bibliotecas convertam códigos iniciados em zero (como `07891515...`) em números inteiros, o que causaria a perda irreparable de zeros à esquerda.
 
 ### 📐 B. Função `normalizeEAN13` (GS1 Modulus 10)
 - **Sanitização de Zeros Espúrios**: Detecta sequências de 13 dígitos iniciadas com zero indevido (`0789...` ou `0790...`), limpa o zero inicial e recalcula o dígito verificador real.

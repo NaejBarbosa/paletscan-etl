@@ -18,19 +18,22 @@ O diagrama abaixo sintetiza o ciclo de vida completo do dado, desde a extração
 
 ```mermaid
 graph TD
-    A[Sitemap XML B2B Friboi] -->|Fetch URLs| B(Scraper Concurrent Engine - TS)
-    B -->|API CCStore Oracle| C{Validação Exaustiva & Acurácia}
-    C -->|Filtro SKU & Imagem| D[Raw Data Staging JSON]
-    D --> E[Core Engine: Normalização & Heurísticas]
-    E -->|Modulus 10 GS1| F[EAN-13 & DUN-14 Higienizados]
-    E -->|Title Case PT-BR & Pesos| G[Descrições Padronizadas]
-    D -->|Download Imagens Reais| H[Pipeline de IA Local - Python]
-    H -->|rembg - U2Net| I[Remoção de Fundo]
-    I -->|Fundo Branco & Otimização WebP| J[Assets Processados <150KB]
-    F & G & J --> K[Supabase Sync Engine]
-    K -->|Fallback Conflict 23505| L[(Supabase PostgreSQL)]
-    J -->|Upload CDN| M[Supabase Storage Bucket]
-    L & M --> N[PaletScan PWA Frontend]
+    A["Sitemap XML B2B Friboi"] -->|Fetch URLs| B["Scraper Concurrent Engine - TS"]
+    B -->|API CCStore Oracle| C{"Validação Exaustiva e Acurácia"}
+    C -->|Filtro SKU e Imagem| D["Raw Data Staging JSON"]
+    D --> E["Core Engine: Normalização e Heurísticas"]
+    E -->|Modulus 10 GS1| F["EAN-13 e DUN-14 Higienizados"]
+    E -->|Title Case PT-BR e Pesos| G["Descrições Padronizadas"]
+    D -->|Download Imagens Reais| H["Pipeline de IA Local - Python"]
+    H -->|rembg - U2Net| I["Remoção de Fundo"]
+    I -->|Fundo Branco e Otimização WebP| J["Assets Processados (Menos de 150KB)"]
+    J -->|Upload CDN| M["Supabase Storage Bucket"]
+    F --> K["Supabase Sync Engine"]
+    G --> K
+    J --> K
+    K -->|Fallback Conflict 23505| L[("Supabase PostgreSQL")]
+    L --> N["PaletScan PWA Frontend"]
+    M --> N
 ```
 
 ---
@@ -66,15 +69,3 @@ paletscan-etl/
 ├── staging/                # Arquivos JSON sanitizados prontos para sync
 └── mkdocs.yml              # Arquivo de configuração da documentação
 ```
-
----
-
-## 🚀 5. Módulos da Documentação
-
-Navegue pelo menu lateral para explorar cada detalhe técnico:
-
-- [Pipeline Friboi (Scraper B2B)](file:///root/paletscan-etl/docs/arquitetura/pipeline-friboi.md): Funcionamento da extração concorrente via API Oracle CCStore.
-- [Heurísticas e Normalizadores](file:///root/paletscan-etl/docs/core/heuristicas-normalizadores.md): Regras de sanitização de texto, pesos e cálculos de EAN-13/DUN-14.
-- [Processamento de Imagens com IA](file:///root/paletscan-etl/docs/IA/processamento-imagens.md): Remoção de fundo com `rembg` e conversão WebP.
-- [Schema e Manifesto de Governança](file:///root/paletscan-etl/docs/governanca/schema-manifesto.md): Especificação do JSON Schema e integridade relacional.
-- [Integração Supabase](file:///root/paletscan-etl/docs/integracao/supabase.md): Sincronização resiliente a conflitos de chave única e upload de assets.
