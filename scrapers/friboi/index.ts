@@ -105,34 +105,26 @@ interface StagingPayload {
 }
 
 /**
- * Inspeciona rigorosamente a URL da imagem e garante o bloqueio absoluto de:
- * - Fotos de pratos prontos / servidos (ex: carne fatiada com batatas, molhos, talheres, receitas)
- * - Imagens sem o padrão estrito de embalagem/corte de fábrica da Friboi CCStore (_00_slug ou _01_slug)
- * - Placeholders genéricos, banners promocionais/institucionais, selos e tabelas nutricionais
+ * Inspeciona rigorosamente a URL da imagem e garante:
+ * 1. Validação estrita de SKU exato: a imagem DEVE pertencer ao produto analisado (fileSku === targetSku).
+ *    Bloqueia imagens de outros produtos ou de outras seções da página.
+ * 2. Validação estrita de embalagem de fábrica (_00_ ou _01_):
+ *    Descarte absoluto de fotos de pratos servidos, receitas, sugestões de consumo (_02, _03, _04, _05) e selos (_50).
+ * 3. Bloqueio absoluto de placeholders genéricos, banners promocionais/institucionais, selos e tabelas nutricionais.
+ * 4. Validação semântica entre o slug do arquivo de imagem e o título do produto (se houver slug textual).
  */
-function isValidProductImage(url: string | undefined | null): boolean {
+function isValidProductImage(url: string | undefined | null, targetSku?: string, productTitle?: string): boolean {
   if (!url || typeof url !== 'string' || url.trim().length === 0) {
     return false;
   }
 
   const cleanUrl = url.toLowerCase().trim();
 
-  // 1. Deve possuir o padrão estrito de imagem de fábrica da Friboi CCStore: _00_slug ou _01_slug
-  // Exemplo válido: /products/1268_00_capa-do-coxao-mole-friboi-bovino-congelado.jpeg
-  // Rejeita receitas/pratos prontos (_02, _03, _04, _05, _50), arquivos com espaço ("coxao mole.jpeg") e imagens sem slug ("1425_00.JPG")
-  const isFactoryPattern = /\/products\/\d+_(00|01)_[a-z0-9-]+\.(jpg|jpeg|png|webp)$/i.test(cleanUrl);
-  if (!isFactoryPattern) {
-    return false;
-  }
-
-  // 2. Blacklist estrita de palavras-chave relativas a receitas, pratos servidos, molhos, batatas, etc.
+  // 1. Blacklist estrita de termos institucionais, logos, banners e placeholders de imagem ausente
   const restrictedTerms = [
-    'receita', 'recipe', 'prato', 'prato_pronto', 'pratopronto', 'prato_servido',
-    'pratos', 'sugestao', 'preparo', 'cozido', 'molho', 'molhos', 'batata', 'batatas',
-    'gourmet', 'servido', 'servindo', 'culinaria', 'gastronomia', 'comida',
-    'acompanhamento', 'utensilio', 'talher', 'refeicao', 'banner', 'logo', 'logotipo',
-    'play', 'video', 'icon', 'icone', 'promo', 'promocao', 'selo', 'stamp',
-    'tabela_nutricional', 'tabela-nutricional', 'campanha', 'institucional',
+    'receita', 'recipe', 'prato_pronto', 'pratopronto', 'prato_servido',
+    'banner', 'logo', 'logotipo', 'play', 'video', 'icon', 'icone', 'promo', 'promocao',
+    'selo', 'stamp', 'tabela_nutricional', 'tabela-nutricional', 'campanha', 'institucional',
     'friboi_logo', 'jbs_logo', 'placeholder', 'no-image', 'no_image',
     'default_product', 'default', 'sem_foto', 'semfoto', 'ausencia',
     'indisponivel', 'sem_imagem', 'sem-imagem'
@@ -140,10 +132,40 @@ function isValidProductImage(url: string | undefined | null): boolean {
 
   for (const term of restrictedTerms) {
     if (cleanUrl.includes(term)) {
-      // Exceção: "queijo-prato" ou "queijo_prato" é o nome da variedade do queijo
-      if (term === 'prato' && (cleanUrl.includes('queijo-prato') || cleanUrl.includes('queijo_prato'))) {
-        continue;
+      return false;
+    }
+  }
+
+  // 2. Deve possuir obrigatoriamente o padrão de embalagem/corte de fábrica da Friboi CCStore: _00_ ou _01_
+  // Rejeita categoricamente receitas e pratos servidos (_02, _03, _04, _05) e selos institucionais (_50)
+  const match = cleanUrl.match(/\/products\/(\d+)_(00|01)(?:_([a-z0-9-]+))?\.(jpg|jpeg|png|webp)/i);
+  if (!match) {
+    return false;
+  }
+
+  const [, fileSku, , slug] = match;
+
+  // 3. Validação de SKU Exato: O código SKU no arquivo de imagem DEVE corresponder ao SKU do produto solicitado
+  // Garante que imagens relativas a outros produtos da página ou vitrine não sejam retornadas
+  if (targetSku && fileSku !== targetSku) {
+    return false;
+  }
+
+  // 4. Validação de Acurácia Semântica: Se houver slug textual no arquivo, compara com o título do produto
+  if (slug && productTitle) {
+    const titleNorm = productTitle.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const titleWords = titleNorm.split(/\W+/).filter(w => w.length > 2);
+    const slugWords = slug.split('-').filter(w => w.length > 2);
+
+    let matchCount = 0;
+    for (const sw of slugWords) {
+      if (titleWords.some(tw => tw.includes(sw) || sw.includes(tw))) {
+        matchCount++;
       }
+    }
+
+    // Se o slug da imagem não tiver nenhuma palavra relevante em comum com o título do produto, rejeita por baixa acurácia
+    if (slugWords.length > 0 && matchCount === 0) {
       return false;
     }
   }
@@ -152,21 +174,35 @@ function isValidProductImage(url: string | undefined | null): boolean {
 }
 
 /**
- * Seleciona a melhor imagem real do produto a partir dos campos do CCStore JSON.
+ * Seleciona exaustivamente a melhor imagem real do produto a partir de todos os campos do CCStore JSON.
+ * Se não houver acurácia suficiente, retorna null.
  */
-function extractBestProductImage(data: any): string | null {
+function extractBestProductImage(data: any, targetSku?: string, productTitle?: string): string | null {
   const candidateUrls: string[] = [];
 
   if (data.primaryFullImageURL) candidateUrls.push(data.primaryFullImageURL);
+  if (data.primaryLargeImageURL) candidateUrls.push(data.primaryLargeImageURL);
+  if (data.primaryMediumImageURL) candidateUrls.push(data.primaryMediumImageURL);
   if (Array.isArray(data.fullImageURLs)) candidateUrls.push(...data.fullImageURLs);
   if (Array.isArray(data.sourceImageURLs)) candidateUrls.push(...data.sourceImageURLs);
+
+  if (Array.isArray(data.childSKUs)) {
+    for (const child of data.childSKUs) {
+      if (child.primaryFullImageURL) candidateUrls.push(child.primaryFullImageURL);
+      if (child.primaryLargeImageURL) candidateUrls.push(child.primaryLargeImageURL);
+      if (Array.isArray(child.fullImageURLs)) candidateUrls.push(...child.fullImageURLs);
+      if (Array.isArray(child.sourceImageURLs)) candidateUrls.push(...child.sourceImageURLs);
+    }
+  }
 
   for (const rawUrl of candidateUrls) {
     if (!rawUrl || typeof rawUrl !== 'string') continue;
 
-    const fullUrl = rawUrl.startsWith('http') ? rawUrl : `${BASE_DOMAIN}${rawUrl}`;
+    // Limpa parâmetros de dimensões de imagem da URL se presentes
+    const cleanUrl = rawUrl.replace(/&height=\d+&width=\d+/, '');
+    const fullUrl = cleanUrl.startsWith('http') ? cleanUrl : `${BASE_DOMAIN}${cleanUrl}`;
 
-    if (isValidProductImage(fullUrl)) {
+    if (isValidProductImage(fullUrl, targetSku, productTitle)) {
       return fullUrl;
     }
   }
@@ -205,11 +241,29 @@ async function fetchSKUsFromSitemap(): Promise<string[]> {
 }
 
 /**
+ * Realiza requisição HTTP com tentativas automáticas (retries) em caso de falha de rede ou oscilação.
+ */
+async function fetchWithRetry(url: string, options: any, retries = 3, delayMs = 800): Promise<Response> {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const response = await fetch(url, options);
+      if (response.ok || response.status === 404) {
+        return response;
+      }
+    } catch (err) {
+      if (attempt === retries) throw err;
+    }
+    await new Promise(res => setTimeout(res, delayMs * attempt));
+  }
+  return fetch(url, options);
+}
+
+/**
  * Realiza o scraping individual de um produto via API CCStore Friboi B2B.
  */
 async function scrapeProductDetails(sku: string): Promise<RawLiveProduct | null> {
   try {
-    const response = await fetch(`${PRODUCT_API_URL}${sku}`, { headers: HTTP_HEADERS });
+    const response = await fetchWithRetry(`${PRODUCT_API_URL}${sku}`, { headers: HTTP_HEADERS });
     if (!response.ok) {
       return null;
     }
@@ -229,12 +283,14 @@ async function scrapeProductDetails(sku: string): Promise<RawLiveProduct | null>
     const classe = data.x_cOrigem || data.x_TIPO_DE_PRODUTO || (data.parentCategoryIdPath ? data.parentCategoryIdPath.split('>')[1] : '');
     const conservacao = data.x_TEMPERATURA || '';
 
-    // Extração da melhor imagem real do produto (filtrando receitas, banners e placeholders)
-    const bestImageUrl = extractBestProductImage(data);
+    const cleanTitle = title.replace(/\s*\(\d+\)$/, '').trim();
+
+    // Extração da melhor imagem real do produto (exigindo acurácia semântica e SKU exato)
+    const bestImageUrl = extractBestProductImage(data, sku, cleanTitle);
 
     return {
       sku,
-      title: title.replace(/\s*\(\d+\)$/, '').trim(), // Limpa "(1005)" do final do título se presente
+      title: cleanTitle,
       descrFiscal,
       ean: eanNormalized,
       dun: dunNormalized,
@@ -262,10 +318,10 @@ export async function runFriboiLiveScraper(): Promise<StagingPayload> {
     throw new Error('Nenhum SKU retornado do sitemap online.');
   }
 
-  // 2. Scraping Concorrente com Pool de Conexões em Lote
+  // 2. Scraping Concorrente com Pool de Conexões Resiliente
   console.log(`🚀 Iniciando extração web concorrente de ${skus.length} produtos...`);
   const rawProducts: RawLiveProduct[] = [];
-  const BATCH_SIZE = 15; // Requisições paralelas balanceadas
+  const BATCH_SIZE = 10; // Lote menor com retries para garantir estabilidade de 100% dos produtos
 
   let processedCount = 0;
   for (let i = 0; i < skus.length; i += BATCH_SIZE) {
@@ -280,6 +336,9 @@ export async function runFriboiLiveScraper(): Promise<StagingPayload> {
 
     processedCount += batchSkus.length;
     process.stdout.write(`  \r⏳ Extraídos ${rawProducts.length}/${processedCount} produtos online (${Math.round((processedCount / skus.length) * 100)}%)...`);
+    
+    // Pequena pausa entre lotes para estabilidade HTTP
+    await new Promise(res => setTimeout(res, 100));
   }
   process.stdout.write(`\n`);
   console.log(`✅ Web scraping concluído! ${rawProducts.length} produtos extraídos diretamente da internet.`);
@@ -320,8 +379,8 @@ export async function runFriboiLiveScraper(): Promise<StagingPayload> {
 
     const produtoId = `prod_friboi_${raw.sku}`;
 
-    // Validação estrita de imagem real do produto
-    const hasValidImage = raw.image_url && isValidProductImage(raw.image_url);
+    // Validação estrita de imagem real do produto (exigindo correspondência de SKU e título)
+    const hasValidImage = raw.image_url && isValidProductImage(raw.image_url, raw.sku, parsedText.formatted_description);
     let statusImagem: 'aprovado' | 'pendente_aprovacao' | 'sem_imagem' = hasValidImage ? 'aprovado' : 'sem_imagem';
 
     if (!hasValidImage && raw.image_url) {
