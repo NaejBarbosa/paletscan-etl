@@ -13,65 +13,81 @@ export interface BrandInfo {
 export const FABRICANTE_FRIBOI_ID = 'fab_friboi_jbs';
 export const FABRICANTE_FRIBOI_NOME = 'Friboi / JBS S.A.';
 
-// Dicionário de Marcas Conhecidas vinculadas à holding Friboi / JBS
-export const FRIBOI_BRANDS: Record<string, { nome: string; slug: string }> = {
-  'friboi': { nome: 'Friboi', slug: 'friboi' },
-  'friboi black': { nome: 'Friboi Black', slug: 'friboi-black' },
-  'black friboi': { nome: 'Friboi Black', slug: 'friboi-black' },
-  'maturatta': { nome: 'Maturatta', slug: 'maturatta' },
-  'do chef': { nome: 'Do Chef', slug: 'do-chef' },
-  'do chef - friboi': { nome: 'Do Chef', slug: 'do-chef' },
-  '1953': { nome: '1953 Friboi', slug: '1953-friboi' },
-  '1953 friboi': { nome: '1953 Friboi', slug: '1953-friboi' },
-  'swift': { nome: 'Swift', slug: 'swift' },
-  'reserva friboi': { nome: 'Reserva Friboi', slug: 'reserva-friboi' },
-  'bordon': { nome: 'Bordon', slug: 'bordon' },
-  'anglo': { nome: 'Anglo', slug: 'anglo' },
-  'bertin': { nome: 'Bertin', slug: 'bertin' },
-  'seara': { nome: 'Seara', slug: 'seara' },
-  'seara gourmet': { nome: 'Seara Gourmet', slug: 'seara-gourmet' },
+export const FABRICANTE_BRF_ID = 'fab_brf_sa';
+export const FABRICANTE_BRF_NOME = 'BRF S.A.';
+
+// Dicionário de Marcas Conhecidas vinculadas às holdings (JBS e BRF)
+export const KNOWN_BRANDS: Record<string, { nome: string; slug: string; fabricante_id: string }> = {
+  // --- Marcas Friboi / JBS ---
+  'friboi': { nome: 'Friboi', slug: 'friboi', fabricante_id: FABRICANTE_FRIBOI_ID },
+  'friboi black': { nome: 'Friboi Black', slug: 'friboi-black', fabricante_id: FABRICANTE_FRIBOI_ID },
+  'black friboi': { nome: 'Friboi Black', slug: 'friboi-black', fabricante_id: FABRICANTE_FRIBOI_ID },
+  'maturatta': { nome: 'Maturatta', slug: 'maturatta', fabricante_id: FABRICANTE_FRIBOI_ID },
+  'do chef': { nome: 'Do Chef', slug: 'do-chef', fabricante_id: FABRICANTE_FRIBOI_ID },
+  'do chef - friboi': { nome: 'Do Chef', slug: 'do-chef', fabricante_id: FABRICANTE_FRIBOI_ID },
+  '1953': { nome: '1953 Friboi', slug: '1953-friboi', fabricante_id: FABRICANTE_FRIBOI_ID },
+  '1953 friboi': { nome: '1953 Friboi', slug: '1953-friboi', fabricante_id: FABRICANTE_FRIBOI_ID },
+  'swift': { nome: 'Swift', slug: 'swift', fabricante_id: FABRICANTE_FRIBOI_ID },
+  'reserva friboi': { nome: 'Reserva Friboi', slug: 'reserva-friboi', fabricante_id: FABRICANTE_FRIBOI_ID },
+  'bordon': { nome: 'Bordon', slug: 'bordon', fabricante_id: FABRICANTE_FRIBOI_ID },
+  'anglo': { nome: 'Anglo', slug: 'anglo', fabricante_id: FABRICANTE_FRIBOI_ID },
+  'bertin': { nome: 'Bertin', slug: 'bertin', fabricante_id: FABRICANTE_FRIBOI_ID },
+  'seara': { nome: 'Seara', slug: 'seara', fabricante_id: FABRICANTE_FRIBOI_ID },
+  'seara gourmet': { nome: 'Seara Gourmet', slug: 'seara-gourmet', fabricante_id: FABRICANTE_FRIBOI_ID },
+
+  // --- Marcas BRF S.A. ---
+  'sadia': { nome: 'Sadia', slug: 'sadia', fabricante_id: FABRICANTE_BRF_ID },
+  'perdigao': { nome: 'Perdigão', slug: 'perdigao', fabricante_id: FABRICANTE_BRF_ID },
+  'perdigão': { nome: 'Perdigão', slug: 'perdigao', fabricante_id: FABRICANTE_BRF_ID },
+  'qualy': { nome: 'Qualy', slug: 'qualy', fabricante_id: FABRICANTE_BRF_ID },
+  'deline': { nome: 'Deline', slug: 'deline', fabricante_id: FABRICANTE_BRF_ID },
+  'rezende': { nome: 'Rezende', slug: 'rezende', fabricante_id: FABRICANTE_BRF_ID },
+  'claybom': { nome: 'Claybom', slug: 'claybom', fabricante_id: FABRICANTE_BRF_ID },
+  'namesa': { nome: 'NaMesa', slug: 'namesa', fabricante_id: FABRICANTE_BRF_ID },
+  'na mesa': { nome: 'NaMesa', slug: 'namesa', fabricante_id: FABRICANTE_BRF_ID },
+  'chester': { nome: 'Chester', slug: 'chester', fabricante_id: FABRICANTE_BRF_ID },
+  'brf': { nome: 'BRF', slug: 'brf', fabricante_id: FABRICANTE_BRF_ID },
 };
 
 /**
  * Normaliza e classifica a marca a partir do campo bruto do catálogo ou título do produto.
  */
-export function classifyBrand(rawBrand: string, productTitle: string): BrandInfo {
+export function classifyBrand(rawBrand: string, productTitle: string, defaultFabricanteId = FABRICANTE_FRIBOI_ID): BrandInfo {
   const brandLower = (rawBrand || '').toLowerCase().trim();
   const titleLower = (productTitle || '').toLowerCase().trim();
 
-  // Verifica marca informada no campo da API
-  if (brandLower && FRIBOI_BRANDS[brandLower]) {
-    const brandData = FRIBOI_BRANDS[brandLower];
+  // 1. Verifica marca informada no campo bruto
+  if (brandLower && KNOWN_BRANDS[brandLower]) {
+    const brandData = KNOWN_BRANDS[brandLower];
     return {
       id: `marca_${brandData.slug}`,
       nome: brandData.nome,
       slug: brandData.slug,
-      fabricante_id: FABRICANTE_FRIBOI_ID
+      fabricante_id: brandData.fabricante_id
     };
   }
 
-  // Tenta identificar marcas secundárias ou sub-marcas através do título do produto
-  if (titleLower.includes('maturatta')) {
-    return { id: 'marca_maturatta', nome: 'Maturatta', slug: 'maturatta', fabricante_id: FABRICANTE_FRIBOI_ID };
-  }
-  if (titleLower.includes('black') || titleLower.includes('friboi black')) {
-    return { id: 'marca_friboi-black', nome: 'Friboi Black', slug: 'friboi-black', fabricante_id: FABRICANTE_FRIBOI_ID };
-  }
-  if (titleLower.includes('1953')) {
-    return { id: 'marca_1953-friboi', nome: '1953 Friboi', slug: '1953-friboi', fabricante_id: FABRICANTE_FRIBOI_ID };
-  }
-  if (titleLower.includes('do chef') || titleLower.includes('dochef')) {
-    return { id: 'marca_do-chef', nome: 'Do Chef', slug: 'do-chef', fabricante_id: FABRICANTE_FRIBOI_ID };
+  // 2. Tenta identificar no título do produto
+  for (const [key, brandData] of Object.entries(KNOWN_BRANDS)) {
+    if (titleLower.includes(key)) {
+      return {
+        id: `marca_${brandData.slug}`,
+        nome: brandData.nome,
+        slug: brandData.slug,
+        fabricante_id: brandData.fabricante_id
+      };
+    }
   }
 
-  // Marca padrão Friboi
-  const fallbackSlug = rawBrand ? rawBrand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : 'friboi';
-  const fallbackNome = rawBrand ? rawBrand : 'Friboi';
+  // Fallback de Marca
+  const fallbackSlug = rawBrand ? rawBrand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : 'brf';
+  const fallbackNome = rawBrand ? rawBrand : 'BRF';
 
   return {
     id: `marca_${fallbackSlug}`,
     nome: fallbackNome,
     slug: fallbackSlug,
-    fabricante_id: FABRICANTE_FRIBOI_ID
+    fabricante_id: defaultFabricanteId
   };
 }
+

@@ -204,16 +204,33 @@ export async function syncStagingToSupabase() {
   console.log('🔄 === INICIANDO PIPELINE DE SINCRONIZAÇÃO RESILIENTE SUPABASE (UUIDv5) ===');
 
   const baseDir = path.resolve(process.cwd());
-  const stagingPath = path.join(baseDir, 'staging', 'friboi_staging.json');
-  const transformedPath = path.join(baseDir, 'staging', 'friboi_staging_uuid.json');
+  const stagingDir = path.join(baseDir, 'staging');
 
-  if (!fs.existsSync(stagingPath)) {
-    throw new Error(`Arquivo de staging não encontrado em: ${stagingPath}. Execute primeiro 'npm run scrape:friboi'.`);
+  if (!fs.existsSync(stagingDir)) {
+    throw new Error(`Diretório de staging não encontrado em: ${stagingDir}.`);
   }
 
-  console.log(`📖 Lendo dados de staging: ${stagingPath}`);
-  const rawContent = fs.readFileSync(stagingPath, 'utf-8');
-  const staging: StagingData = JSON.parse(rawContent);
+  // Lista todos os arquivos *_staging.json (ignorando *_uuid.json)
+  const stagingFiles = fs.readdirSync(stagingDir)
+    .filter(file => file.endsWith('_staging.json') && !file.endsWith('_uuid.json'))
+    .map(file => path.join(stagingDir, file));
+
+  if (stagingFiles.length === 0) {
+    throw new Error(`Nenhum arquivo de staging encontrado em: ${stagingDir}`);
+  }
+
+  console.log(`📁 Arquivos de staging identificados para sincronização (${stagingFiles.length}):`);
+  stagingFiles.forEach(f => console.log(`   - ${path.basename(f)}`));
+
+  for (const stagingPath of stagingFiles) {
+    const filename = path.basename(stagingPath);
+    const transformedPath = path.join(stagingDir, filename.replace('_staging.json', '_staging_uuid.json'));
+
+    console.log(`\n==================================================`);
+    console.log(`📖 Processando staging: ${filename}`);
+    console.log(`==================================================`);
+    const rawContent = fs.readFileSync(stagingPath, 'utf-8');
+    const staging: StagingData = JSON.parse(rawContent);
 
   // -------------------------------------------------------------
   // CAMADA DE TRANSFORMAÇÃO: String IDs -> UUIDv5 (PKs e FKs)
@@ -322,7 +339,8 @@ export async function syncStagingToSupabase() {
   if (totalConflicts > 0) {
     console.log(`⚠️  Conflitos de EAN/DUN ignorados: ${totalConflicts} (ver staging/conflicts_log.json)`);
   }
-  console.log('✅ Pipeline finalizado com resiliência total!');
+  console.log('✅ Pipeline finalizado com resiliência total para este arquivo!');
+  }
 }
 
 // Execução via CLI

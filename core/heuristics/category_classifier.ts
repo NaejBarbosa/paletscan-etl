@@ -27,13 +27,15 @@ export function classifyProduct(title: string, rawClasse?: string, rawConservaca
   // Determinando Classe
   let classe = 'Bovinos';
 
-  if (/su[íi]no|pork|lombo|costelinha|bacon|bochecha|copa|pernil|paleta su[íi]na/i.test(text)) {
+  if (/su[íi]no|pork|lombo|costelinha|bacon|bochecha|copa|pernil|paleta su[íi]na|tender/i.test(text)) {
     classe = 'Suínos';
-  } else if (/frango|ave|coxa|sobrecoxa|peito|asa|tutu|peru|chester/i.test(text)) {
+  } else if (/frango|ave|coxa|sobrecoxa|peito|asa|tutu|peru|chester|nuggets|sassami/i.test(text)) {
     classe = 'Aves';
   } else if (/peixe|pescado|tilap|salm[aã]o|bacalhau|camar[aã]o|merluza|ca[çc][aã]o/i.test(text)) {
     classe = 'Pescados';
-  } else if (/hamb[úu]rguer|kibe|lingui[çc]a|salsicha|mortadela|presunto|nugget|empessado|kebab/i.test(text)) {
+  } else if (/margarina|manteiga|gordura|requeij[aã]o/i.test(text)) {
+    classe = 'Margarinas & Gorduras';
+  } else if (/hamb[úu]rguer|kibe|lingui[çc]a|salsicha|mortadela|presunto|nugget|empessado|kebab|lasanha|pizza|prato pronto|escondidinho/i.test(text)) {
     classe = 'Processados';
   } else if (rawClasse && rawClasse.trim().length > 0) {
     classe = rawClasse.charAt(0).toUpperCase() + rawClasse.slice(1).toLowerCase();
