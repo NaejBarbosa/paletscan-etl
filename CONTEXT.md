@@ -87,14 +87,16 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
   - Limpeza completa de arquivos estáticos residuais em `public/imagens_produtos/`.
   - Atualização do componente [`ProdutoAvatar.tsx`](file:///root/repo_pwa/components/ProdutoAvatar.tsx) no repositório PWA para respeitar o status `sem_imagem` do Supabase e desativar fallbacks para imagens locais legadas.
   - Ajuste na API `/api/validar` com redução do TTL de cache para 1 minuto e suporte a consulta direta em tempo real no Supabase.
-- [x] **Pipeline de Sincronização Resiliente Supabase (UUIDv5 & Fail-safe Conflitos EAN)**: [`db_sync/sync.ts`](file:///root/paletscan-etl/db_sync/sync.ts) com salvamento automático de log em `staging/conflicts_log.json`.
+- [x] **Pipeline de Sincronização Resiliente Supabase (UUIDv5 & Fail-safe Conflitos EAN)**: [`db_sync/sync.ts`](file:///root/paletscan-etl/db_sync/sync.ts) com suporte a múltiplos arquivos de staging e salvamento de log em `staging/conflicts_log.json`.
 - [x] **Pipeline de Carga de Mídia e Arquivamento**: [`db_sync/sync_images.ts`](file:///root/paletscan-etl/db_sync/sync_images.ts).
+- [x] **Web Scraper Multi-Fonte BRF S.A.**: [`scrapers/brf/index.ts`](file:///root/paletscan-etl/scrapers/brf/index.ts) com extração combinada de sitemaps Sadia/Perdigão, portal B2B e PDF comercial, gerando 1.120 produtos e 3.184 EANs/DUNs.
+- [x] **Gerador de Relatórios Excel (.xlsx)**: Scripts [`scripts/export_excel.ts`](file:///root/paletscan-etl/scripts/export_excel.ts) e [`scripts/export_pending.ts`](file:///root/paletscan-etl/scripts/export_pending.ts) com envio direto para a pasta Download e integração com `termux-media-scan`.
+- [x] **Módulo de Validação e Aprovação de Imagens Pendentes no PWA**: Módulo administrativo em [`repo_pwa/components/ValidacaoPendenciasAdmin.tsx`](file:///root/repo_pwa/components/ValidacaoPendenciasAdmin.tsx) e API [`repo_pwa/pages/api/admin/pendencias.ts`](file:///root/repo_pwa/pages/api/admin/pendencias.ts) integrado ao `/admin` do PWA.
 
 ---
 
 ## 🎯 5. Próximos Passos (Next Steps)
 
 1. **Integração Backend Supabase com Frontend PWA**: Conectar o novo banco relacional PostgreSQL/Supabase à aplicação PWA em produção, substituindo a integração legada via Google Sheets.
-2. **Painel ADM de Aprovação de Imagens Pendentes**: Desenvolver a interface administrativa para revisão das imagens marcadas como `pendente_aprovacao`.
-3. **Busca Unificada Fuzzy no PWA**: Implementar busca rápida por SKU, EAN-13, DUN-14 e termos aproximados de produtos diretamente no scanner do operador.
+2. **Busca Unificada Fuzzy no PWA**: Implementar busca rápida por SKU, EAN-13, DUN-14 e termos aproximados de produtos diretamente no scanner do operador.
 
