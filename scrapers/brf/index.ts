@@ -190,26 +190,58 @@ async function scrapeInstitutionalPage(url: string, marcaNome: string): Promise<
       if (titleMatch) title = titleMatch[1];
     }
 
-    title = title.replace(/\s*-\s*(Sadia|Perdigão)\s*$/i, '').trim();
+    // Clean brand name prefix/suffix (e.g. "Sadia - Pizza..." or "... - Sadia")
+    title = title
+      .replace(/^(Sadia|Perdigão|Perdigao)\s*[-|]\s*/i, '')
+      .replace(/\s*[-|]\s*(Sadia|Perdigão|Perdigao)$/i, '')
+      .trim();
 
-    // 2. Imagem HD da embalagem
+    // 2. Imagem HD da embalagem real do produto
     let image_url = '';
-    const figureMatch = html.match(/<figure[^>]*class=["'][^"']*product-pack[^"']*["'][^>]*>[\s\S]*?<img[^>]*src=["']([^"']+)["']/i);
-    if (figureMatch) {
-      image_url = figureMatch[1];
+
+    // Prioridade A: Container da foto oficial do produto (ex: <figure class="photo-product"> ou class="product-pack")
+    const photoContainerMatch = html.match(/<figure[^>]*class=["'][^"']*(photo-product|product-pack|product-photo|product-image)[^"']*["'][^>]*>[\s\S]*?<img[^>]*src=["']([^"']+)["']/i);
+    if (photoContainerMatch && photoContainerMatch[2]) {
+      image_url = photoContainerMatch[2];
     }
 
+    // Prioridade B: Tag <img> apontando para diretório de produtos (/products/ ou /assets/images/_/products/)
+    if (!image_url) {
+      const prodImgMatch = html.match(/<img[^>]*src=["']([^"']*(?:\/products\/|\/product\/|assets\/images\/_\/products\/)[^"']+)["']/i);
+      if (prodImgMatch) image_url = prodImgMatch[1];
+    }
+
+    // Prioridade C: alt="imagem do produto..."
     if (!image_url) {
       const imgAltMatch = html.match(/<img[^>]*alt=["'][^"']*imagem do produto:[^"']*["'][^>]*src=["']([^"']+)["']/i);
       if (imgAltMatch) image_url = imgAltMatch[1];
     }
 
+    // Prioridade D: og:image (Apenas se NÃO for um banner genérico de compartilhamento do site como /storage/product/files/ ou share.jpg)
     if (!image_url) {
       const ogImgMatch = html.match(/<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']/i);
-      if (ogImgMatch) image_url = ogImgMatch[1];
+      if (ogImgMatch) {
+        const ogVal = ogImgMatch[1];
+        if (!ogVal.includes('/storage/product/files/') && !ogVal.includes('share.jpg') && !ogVal.includes('logo')) {
+          image_url = ogVal;
+        }
+      }
     }
 
-    // 3. EAN (Procura padrão 789XXXXXXXXXX)
+    // Formatação de URL absoluta caso seja relativa
+    if (image_url) {
+      if (image_url.startsWith('//')) {
+        image_url = `https:${image_url}`;
+      } else if (image_url.startsWith('/')) {
+        const origin = new URL(url).origin;
+        image_url = `${origin}${image_url}`;
+      } else if (!image_url.startsWith('http://') && !image_url.startsWith('https://')) {
+        const origin = new URL(url).origin;
+        image_url = `${origin}/${image_url}`;
+      }
+    }
+
+    // 3. EAN (Procura padrão 789XXXXXXXXXX no HTML)
     const eanMatches = html.match(/\b789\d{10}\b/g);
     const ean = eanMatches ? eanMatches[0] : '';
 
