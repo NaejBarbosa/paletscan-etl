@@ -118,6 +118,24 @@ function generateUUID(namespace: string, name: string): string {
 }
 
 /**
+ * Helper para detectar URLs de imagens inválidas, quebradas ou páginas de erro 404 (Salesforce/HTML)
+ */
+function isInvalidImageUrl(url: string | null | undefined): boolean {
+  if (!url) return true;
+  const lower = url.toLowerCase().trim();
+  return (
+    lower === '' ||
+    lower === 'n/a' ||
+    lower === 'null' ||
+    lower === 'undefined' ||
+    lower.includes('brfsacoeintgrcprd') ||
+    lower.includes('force.com') ||
+    lower.includes('salesforce.com') ||
+    lower.includes('servlet.imageserver')
+  );
+}
+
+/**
  * Carrega os dados brutos consolidados da base de dados BRF SQLite via Python.
  */
 function loadLegacyDatabase(): any[] {
@@ -413,7 +431,7 @@ export async function runBRFScraper(): Promise<StagingPayload> {
     let imagem_url: string | null = null;
     let status_imagem: 'aprovado' | 'pendente_aprovacao' | 'sem_imagem' = 'sem_imagem';
 
-    if (rawItem.image_url && rawItem.image_url !== 'N/A' && !rawItem.image_url.includes('brfsacoeintgrcprd')) {
+    if (rawItem.image_url && !isInvalidImageUrl(rawItem.image_url)) {
       imagem_url = rawItem.image_url;
       status_imagem = 'aprovado';
     } else if (rawItem.ean || rawItem.dun) {
