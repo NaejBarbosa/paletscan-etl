@@ -3,9 +3,9 @@
  * Autor: Engenheiro de Dados Sênior / Arquiteto PaletScan
  * 
  * Este módulo realiza:
- * 1. Web scraping 100% ao vivo via sitemaps XML oficiais da Seara (searafoodsolutions.com.br & compre.seara.com.br).
- * 2. Requisições HTTP concorrentes e extração dinâmica do window.SEARAFS_DATA_LAYER e microdados VTEX.
- * 3. Extração de SKU, Título, EAN, DUN, Marca (Seara, Seara Gourmet, Hans, Eder, Incrível!), Classe e Foto HD.
+ * 1. Web scraping 100% ao vivo via sitemaps XML oficiais da Seara (searafoodsolutions.com.br & www.seara.com.br).
+ * 2. Requisições HTTP concorrentes para extração B2B (DataLayer JS) e B2C (HTML Microdados).
+ * 3. Extração de SKU, Título, EAN, DUN, Marca (Seara, Seara Gourmet, Hans, Eder, Incrível!, Rezende, DaGranja), Classe e Foto HD.
  * 4. Normalização de texto PT-BR, peso_gramas, detecção de peso variável/fracionado e filtro de imagens inválidas.
  * 5. Geração do payload relacional normatizado em staging/seara_staging.json.
  */
@@ -16,9 +16,9 @@ import { formatProductDescription, normalizeEAN13, normalizeDUN14 } from '../../
 import { classifyBrand, FABRICANTE_FRIBOI_ID, FABRICANTE_FRIBOI_NOME } from '../../core/heuristics/brand_classifier.js';
 import { classifyProduct } from '../../core/heuristics/category_classifier.js';
 
-// Endpoints ao vivo da Seara
+// Endpoints ao vivo da Seara (B2B + B2C)
 const B2B_SITEMAP_URL = 'https://www.searafoodsolutions.com.br/product-sitemap.xml';
-const ECOM_SITEMAP_URL = 'https://compre.seara.com.br/sitemap/product-0.xml';
+const B2C_SITEMAP_URL = 'https://www.seara.com.br/produto-sitemap.xml';
 
 const HTTP_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -97,6 +97,8 @@ function isInvalidImageUrl(url: string | null | undefined): boolean {
     lower === 'n/a' ||
     lower.includes('placeholder') ||
     lower.includes('no-image') ||
+    lower.includes('logo') ||
+    lower.includes('icon') ||
     lower.includes('force.com') ||
     lower.includes('salesforce.com')
   );
@@ -138,17 +140,14 @@ async function extractUrlsFromSitemap(sitemapUrl: string): Promise<string[]> {
   return locs.filter(url => url.startsWith('http'));
 }
 
-// Extrai metadados do HTML de uma página do Seara Food Solutions (B2B)
+// Extrai metadados B2B da Seara Food Solutions
 function parseSearaB2BPage(html: string, pageUrl: string): RawSearaProduct | null {
   if (!html) return null;
 
-  // 1. Título do produto
   const titleMatch = html.match(/<h1[^>]*>(.*?)<\/h1>/s);
   let title = titleMatch ? titleMatch[1].replace(/<[^>]+>/g, '').replace(/&#8211;/g, '-').trim() : '';
-
   if (!title) return null;
 
-  // 2. SKU / Post ID
   const postIdMatch = html.match(/"post_id"\s*:\s*(\d+)/);
   let sku = postIdMatch ? postIdMatch[1] : '';
   if (!sku) {
@@ -156,7 +155,6 @@ function parseSearaB2BPage(html: string, pageUrl: string): RawSearaProduct | nul
     sku = skuMatch ? skuMatch[1] : title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
   }
 
-  // 3. EAN / DUN
   let ean = '';
   let dun = '';
   const eanMatch = html.match(/EAN13?\s*:\s*([\d\.]+)/i);
@@ -165,13 +163,11 @@ function parseSearaB2BPage(html: string, pageUrl: string): RawSearaProduct | nul
   const dunMatch = html.match(/DUN14?\s*:\s*([\d\.]+)/i);
   if (dunMatch) dun = dunMatch[1].replace(/\./g, '');
 
-  // 4. Marca e Categoria
   const marcaMatch = html.match(/"marca"\s*:\s*\["([^"]+)"\]/);
   const catMatch = html.match(/"category"\s*:\s*\["([^"]+)"\]/);
   let marca = marcaMatch ? marcaMatch[1] : 'Seara';
   let classe = catMatch ? catMatch[1] : 'Aves';
 
-  // 5. Imagem HD
   const imgMatch = html.match(/<img[^>]+src="([^"]*searafoodsolutions\.com\.br\/files\/[^"]+)"/i);
   let imageUrl = imgMatch ? imgMatch[1] : '';
 
@@ -191,16 +187,65 @@ function parseSearaB2BPage(html: string, pageUrl: string): RawSearaProduct | nul
   };
 }
 
-export async function runSearaScraper() {
-  console.log('🚀 === INICIANDO SCRAPER SEARA ETL (LIVE WEB EXTRACTION 100%) ===');
+// Extrai metadados B2C do portal Seara (www.seara.com.br)
+function parseSearaB2CPage(html: string, pageUrl: string): RawSearaProduct | null {
+  if (!html) return null;
 
-  // 1. Extração B2B
-  const b2bProductUrls = await extractUrlsFromSitemap(B2B_SITEMAP_URL);
-  const filteredB2BUrls = b2bProductUrls.filter(u => u.includes('/produto/'));
-  console.log(`📦 Encontradas ${filteredB2BUrls.length} URLs de produtos B2B na Seara.`);
+  const titleMatch = html.match(/<h1[^>]*>(.*?)<\/h1>/s) || html.match(/<title>(.*?)<\/title>/s);
+  let title = titleMatch ? titleMatch[1].replace(/<[^>]+>/g, '').replace(/&#8211;/g, '-').replace(/\s*-\s*Seara\s*$/i, '').trim() : '';
+
+  if (!title) return null;
+
+  let ean = '';
+  const eanMatch1 = html.match(/data-ean="(\d{13})"/i) || html.match(/data-dl-product_ean="(\d{13})"/i);
+  if (eanMatch1) {
+    ean = eanMatch1[1];
+  } else {
+    const eanMatch2 = html.match(/\b789\d{10}\b/);
+    if (eanMatch2) ean = eanMatch2[0];
+  }
+
+  let imageUrl = '';
+  const imgMatch1 = html.match(/data-product-image="([^"]+)"/i);
+  if (imgMatch1) {
+    imageUrl = imgMatch1[1];
+  } else {
+    const imgMatch2 = html.match(/<img[^>]+src="([^"]*seara\.com\.br\/wp-content\/uploads\/[^"]+)"/i);
+    if (imgMatch2 && !imgMatch2[1].includes('Logo') && !imgMatch2[1].includes('icon') && !imgMatch2[1].includes('svg')) {
+      imageUrl = imgMatch2[1];
+    }
+  }
+
+  const slugMatch = pageUrl.match(/\/produto\/([^\/]+)/);
+  const slug = slugMatch ? slugMatch[1] : title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const sku = `seara_b2c_${slug}`;
+
+  const conservacao = (html.includes('Congelado') || title.includes('Congelad')) ? 'Congelado' : 'Resfriado';
+
+  return {
+    sku,
+    title,
+    descrFiscal: title,
+    ean,
+    dun: '',
+    marca: 'Seara',
+    classe: 'Aves',
+    conservacao,
+    pesoLiquido: '',
+    image_url: imageUrl
+  };
+}
+
+export async function runSearaScraper() {
+  console.log('🚀 === INICIANDO SCRAPER SEARA ETL (COMPLETO B2B + B2C LIVE WEB EXTRACTION) ===');
 
   const rawProducts: RawSearaProduct[] = [];
-  const batchSize = 15;
+  const batchSize = 20;
+
+  // 1. Extração B2B (Seara Food Solutions)
+  const b2bProductUrls = await extractUrlsFromSitemap(B2B_SITEMAP_URL);
+  const filteredB2BUrls = b2bProductUrls.filter(u => u.includes('/produto/'));
+  console.log(`📦 Encontradas ${filteredB2BUrls.length} URLs de produtos B2B na Seara Food Solutions.`);
 
   for (let i = 0; i < filteredB2BUrls.length; i += batchSize) {
     const chunk = filteredB2BUrls.slice(i, i + batchSize);
@@ -214,9 +259,30 @@ export async function runSearaScraper() {
       }
     });
   }
-  console.log(`\n✅ Extraídos ${rawProducts.length} produtos válidos ao vivo da Seara B2B.`);
+  console.log(`\n✅ Extraídos ${rawProducts.length} produtos B2B ao vivo da Seara.`);
 
-  // 2. Montagem dos Objetos Relacionais do PaletScan
+  // 2. Extração B2C (Seara Institucional)
+  const b2cProductUrls = await extractUrlsFromSitemap(B2C_SITEMAP_URL);
+  const filteredB2CUrls = b2cProductUrls.filter(u => u.includes('/produto/'));
+  console.log(`📦 Encontradas ${filteredB2CUrls.length} URLs de produtos B2C na Seara Institucional.`);
+
+  const b2cCountBefore = rawProducts.length;
+  for (let i = 0; i < filteredB2CUrls.length; i += batchSize) {
+    const chunk = filteredB2CUrls.slice(i, i + batchSize);
+    process.stdout.write(`  \r⏳ Processando páginas B2C: ${Math.min(i + batchSize, filteredB2CUrls.length)}/${filteredB2CUrls.length}...`);
+
+    const htmls = await Promise.all(chunk.map(url => fetchWithTimeout(url)));
+    chunk.forEach((url, idx) => {
+      const parsed = parseSearaB2CPage(htmls[idx], url);
+      if (parsed && parsed.title) {
+        rawProducts.push(parsed);
+      }
+    });
+  }
+  console.log(`\n✅ Extraídos ${rawProducts.length - b2cCountBefore} produtos B2C ao vivo da Seara.`);
+  console.log(`🔥 Total Bruto Combinado de Produtos Seara: ${rawProducts.length}`);
+
+  // 3. Montagem dos Objetos Relacionais do PaletScan
   const fabricanteId = FABRICANTE_FRIBOI_ID;
   const fabricantesMap: Record<string, Fabricante> = {};
   const marcasMap: Record<string, Marca> = {};
@@ -232,7 +298,7 @@ export async function runSearaScraper() {
     criado_em: new Date().toISOString()
   };
 
-  rawProducts.forEach((p, idx) => {
+  rawProducts.forEach((p) => {
     const brandInfo = classifyBrand(p.marca || 'Seara', p.title, fabricanteId);
     
     if (!marcasMap[brandInfo.id]) {
@@ -241,7 +307,7 @@ export async function runSearaScraper() {
         fabricante_id: fabricanteId,
         nome: brandInfo.nome,
         slug: brandInfo.slug,
-        descricao: `Linha de produtos ${brandInfo.nome} pertenente ao Grupo JBS / Seara`,
+        descricao: `Linha de produtos ${brandInfo.nome} pertencente ao Grupo JBS / Seara`,
         ativo: true,
         criado_em: new Date().toISOString()
       };
@@ -273,7 +339,6 @@ export async function runSearaScraper() {
       criado_em: new Date().toISOString()
     };
 
-    // Códigos de barras
     if (eanNorm) {
       codigosBarras.push({
         id: `cod_ean_${eanNorm}`,
@@ -323,7 +388,7 @@ export async function runSearaScraper() {
   }
 
   fs.writeFileSync(STAGING_FILE, JSON.stringify(payload, null, 2), 'utf-8');
-  console.log(`\n🎉 === SUCESSO! STAGING DA SEARA GERADO AO VIVO ===`);
+  console.log(`\n🎉 === SUCESSO! STAGING COMPLETO DA SEARA GERADO AO VIVO ===`);
   console.log(`📁 Arquivo salvo em: ${STAGING_FILE}`);
   console.log(`🏢 Fabricantes: ${payload.fabricantes.length}`);
   console.log(`🏷️  Marcas:      ${payload.marcas.length}`);
