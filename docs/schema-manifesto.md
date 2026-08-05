@@ -54,6 +54,7 @@ erDiagram
 O arquivo [`core/manifest/schema_manifest.json`](file:///root/paletscan-etl/core/manifest/schema_manifest.json) define o contrato formal (JSON Schema Draft-07) que todo arquivo de staging deve respeitar rigorosamente antes do processo de carga no banco.
 
 ### Principais Regras de Integridade:
+- **Filtro Estrito de EAN Obrigatório**: Todo produto ingerido no banco de dados DEVE possuir obrigatoriamente ao menos um código de barras EAN válido (`EAN-13` / `EAN-8`). Produtos exclusivamente com SKU interno/código de catálogo são filtrados e descartados na fase de transformação.
 - **Tipos de Dados Estritos**: Atributos de identificação e códigos de barras são declarados obrigatoriamente como `string`.
 - **Prevenção de Truncamento**: Proíbe a coerção de códigos de barras iniciados em zero para tipos numéricos (`integer`/`number`).
 - **Validação de Formato**: Exige a especificação do tipo de código de barras (`EAN-13`, `DUN-14`, `SKU`) e fatores de conversão de embalagem.

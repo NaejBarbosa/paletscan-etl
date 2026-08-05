@@ -88,9 +88,10 @@ npm run sync:supabase
 
 > ℹ️ **O que este comando faz**:
 > 1. Lê `staging/brf_staging.json`, `staging/friboi_staging.json` e `staging/seara_staging.json`.
-> 2. Converte IDs em UUIDv5 e gera os arquivos `*_uuid.json`.
-> 3. Envia os lotes em ordem de dependência: `fabricantes` $\rightarrow$ `marcas` $\rightarrow$ `produtos` $\rightarrow$ `codigos_barras`.
-> 4. Ativa fallback item-por-item se houver colisões de código de barras.
+> 2. **Aplica Validação Estrita de EAN**: Mantém exclusivamente produtos com ao menos 1 código de barras EAN válido (rejeitando itens puramente SKU), reduzindo a base tratada para **2.988 produtos com EAN** (1.025 BRF, 1.542 Friboi, 421 Seara).
+> 3. Converte IDs em UUIDv5 e gera os arquivos `*_uuid.json`.
+> 4. Envia os lotes em ordem de dependência: `fabricantes` $\rightarrow$ `marcas` $\rightarrow$ `produtos` $\rightarrow$ `codigos_barras`.
+> 5. Ativa fallback item-por-item se houver colisões de código de barras.
 
 ### C. Publicação e Upload de Imagens HD no Supabase Storage
 Para publicar imagens tratadas no formato `.webp` para o bucket CDN:

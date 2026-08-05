@@ -91,6 +91,12 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
 - [x] **Pipeline de Carga de Mídia e Arquivamento**: [`db_sync/sync_images.ts`](file:///root/paletscan-etl/db_sync/sync_images.ts).
 - [x] **Web Scraper Multi-Fonte BRF S.A.**: [`scrapers/brf/index.ts`](file:///root/paletscan-etl/scrapers/brf/index.ts) com extração combinada de sitemaps Sadia/Perdigão, portal B2B e PDF comercial, gerando 1.120 produtos e 3.184 EANs/DUNs.
 - [x] **Gerador de Relatórios Excel (.xlsx)**: Scripts [`scripts/export_excel.ts`](file:///root/paletscan-etl/scripts/export_excel.ts) e [`scripts/export_pending.ts`](file:///root/paletscan-etl/scripts/export_pending.ts) com envio direto para a pasta Download e integração com `termux-media-scan`.
+- [x] **Validação Estrita de EAN Obrigatório (Módulo ETL & Banco)**:
+  - Trava estrita em [`db_sync/sync.ts`](file:///root/paletscan-etl/db_sync/sync.ts) que filtra e descarta produtos sem ao menos um código de barras EAN válido (EAN-13/EAN-8).
+  - Otimização da base mestre para **2.988 produtos exclusivamente respaldados por EAN** (1.025 BRF, 1.542 Friboi, 421 Seara).
+- [x] **Tratamento de Modais e Busca Fuzzy no PWA (`repo_pwa`)**:
+  - Exibição de EANs puramente numéricos nos modais (`DetalheProdutoModal`, `ResultadoScanModal`, `Relatorio`), eliminando vazamentos de UUIDs e exibindo `"Não cadastrado"` quando apropriado.
+  - Servidor `/api/validar` servindo o catálogo mestre de 2.988 produtos com EAN e busca fuzzy (`PesquisaProduto.tsx`) expandida para até 500 resultados.
 - [x] **Módulo de Validação e Aprovação de Imagens Pendentes no PWA**: Módulo administrativo em [`repo_pwa/components/ValidacaoPendenciasAdmin.tsx`](file:///root/repo_pwa/components/ValidacaoPendenciasAdmin.tsx) e API [`repo_pwa/pages/api/admin/pendencias.ts`](file:///root/repo_pwa/pages/api/admin/pendencias.ts) integrado ao `/admin` do PWA.
 
 ---
