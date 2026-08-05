@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "scrape:friboi": "npx tsx scrapers/friboi/index.ts",
+    "scrape:seara": "npx tsx scrapers/seara/index.ts",
     "sync:supabase": "npx tsx db_sync/sync.ts",
     "sync:images": "npx tsx db_sync/sync_images.ts",
     "build": "tsc"

@@ -69,8 +69,11 @@ Para limpar a base de dados local SQLite / IndexedDB no aplicativo do coletor / 
 Para re-extrair dados brutos dos portais institucionais B2B:
 
 ```bash
-# Scraper Friboi / JBS / Swift / Seara
+# Scraper Friboi / JBS / Swift
 npm run scrape:friboi
+
+# Scraper Seara (Multi-Site 100% Live: B2B, B2C, E-Com)
+npm run scrape:seara
 
 # Scraper BRF (Sadia, Perdigão, Qualy, Central MBRF, Catalogo PDF)
 npx tsx scrapers/brf/index.ts
@@ -84,7 +87,7 @@ npm run sync:supabase
 ```
 
 > ℹ️ **O que este comando faz**:
-> 1. Lê `staging/brf_staging.json` e `staging/friboi_staging.json`.
+> 1. Lê `staging/brf_staging.json`, `staging/friboi_staging.json` e `staging/seara_staging.json`.
 > 2. Converte IDs em UUIDv5 e gera os arquivos `*_uuid.json`.
 > 3. Envia os lotes em ordem de dependência: `fabricantes` $\rightarrow$ `marcas` $\rightarrow$ `produtos` $\rightarrow$ `codigos_barras`.
 > 4. Ativa fallback item-por-item se houver colisões de código de barras.
