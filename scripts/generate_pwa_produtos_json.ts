@@ -45,11 +45,46 @@ async function generatePwaProdutosJson() {
 
   console.log(`📊 Registros obtidos da View do Supabase: ${allData.length}`);
 
+  // Buscar todos os códigos DUN da tabela codigos_barras
+  console.log('📦 Carregando códigos DUN da tabela codigos_barras...');
+  const dunMap = new Map<string, string>();
+  page = 0;
+  hasMore = true;
+  while (hasMore) {
+    const { data: duns, error: dunError } = await supabase
+      .from('codigos_barras')
+      .select('produto_id, codigo, tipo')
+      .in('tipo', ['DUN', 'DUN_14'])
+      .range(page * pageSize, (page + 1) * pageSize - 1);
+
+    if (dunError) {
+      console.error('⚠️ Erro ao buscar DUNs:', dunError.message);
+      break;
+    }
+
+    if (duns && duns.length > 0) {
+      duns.forEach(d => {
+        const cleanDun = String(d.codigo || '').trim();
+        if (cleanDun && /^\d+$/.test(cleanDun)) {
+          dunMap.set(d.produto_id, cleanDun);
+        }
+      });
+      page++;
+      if (duns.length < pageSize) hasMore = false;
+    } else {
+      hasMore = false;
+    }
+  }
+  console.log(`✅ Total de códigos DUN identificados: ${dunMap.size}`);
+
   const mapUnicos = new Map<string, any>();
   allData.forEach((row) => {
     const candidateEan = String(row.ean || row.produto_ean || row.codigo || '');
     const eanVal = /^\d+$/.test(candidateEan.trim()) ? candidateEan.trim() : '';
+    if (!eanVal) return; // PaletScan business rule: only products with valid EAN in app
+
     const key = String(row.produto_id || row.id || eanVal || row.sku || '');
+    const dunVal = dunMap.get(row.produto_id || row.id) || row.dun || row.produto_dun || '';
 
     let descr = '';
     if (row.descricao_padronizada) {
@@ -76,7 +111,7 @@ async function generatePwaProdutosJson() {
         marca_nome: row.marca_nome || 'N/D',
         produtoClasse: row.classe || row.produto_classe || '',
         produtoEan: eanVal,
-        produtoDun: row.dun || row.produto_dun || '',
+        produtoDun: dunVal,
         sku: eanVal,
         produtoConservacao: row.conservacao || row.produto_conservacao || '',
         produtoDescr: descr,

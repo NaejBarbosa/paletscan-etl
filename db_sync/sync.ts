@@ -322,10 +322,18 @@ export async function syncStagingToSupabase() {
     const prodUuid = toUUID5(cb.produto_id);
     if (!produtosValidosUUIDSet.has(prodUuid)) continue;
 
+    let tipoNormalizado = (cb.tipo || '').trim();
+    if (tipoNormalizado.toUpperCase().includes('EAN')) {
+      tipoNormalizado = 'EAN';
+    } else if (tipoNormalizado.toUpperCase().includes('DUN')) {
+      tipoNormalizado = 'DUN';
+    }
+
     codigosBarrasUUID.push({
       ...cb,
       id: toUUID5(cb.id),
-      produto_id: prodUuid
+      produto_id: prodUuid,
+      tipo: tipoNormalizado
     });
   }
 

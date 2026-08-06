@@ -20,7 +20,7 @@ async function wipeTable(tableName: string) {
     const { data, error } = await supabase
       .from(tableName)
       .select('id')
-      .limit(1000);
+      .limit(100);
 
     if (error) {
       console.warn(`Aviso ao consultar ${tableName}:`, error.message);
@@ -41,10 +41,11 @@ async function wipeTable(tableName: string) {
     }
 
     totalDeleted += ids.length;
-    console.log(`  🗑️ ${tableName}: ${totalDeleted} registros deletados...`);
+    process.stdout.write(`  \r🗑️ ${tableName}: ${totalDeleted} registros deletados...`);
 
-    if (data.length < 1000) break;
+    if (data.length < 100) break;
   }
+  console.log('');
   return totalDeleted;
 }
 
