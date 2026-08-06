@@ -420,7 +420,7 @@ export async function runBRFScraper(): Promise<StagingPayload> {
     }
 
     // Normalização de Texto e Pesos
-    const parsedText = formatProductDescription(rawItem.title, rawItem.descrFiscal);
+    const parsedText = formatProductDescription(rawItem.title);
     const classification = classifyProduct(rawItem.title, rawItem.classe, rawItem.conservacao);
 
     // ID Determinístico do Produto via UUIDv5
@@ -529,7 +529,7 @@ export async function runBRFScraper(): Promise<StagingPayload> {
 }
 
 // Execução direta via CLI se chamado diretamente
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (require.main === module) {
   runBRFScraper().catch(err => {
     console.error('💥 Erro fatal ao rodar scraper BRF:', err);
     process.exit(1);

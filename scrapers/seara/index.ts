@@ -328,9 +328,9 @@ export async function runSearaScraper() {
     produtosMap[produtoId] = {
       id: produtoId,
       marca_id: brandInfo.id,
-      descricao_padronizada: descrPadronizada,
+      descricao_padronizada: descrPadronizada.formatted_description,
       descricao_original: p.title,
-      classe: p.classe || classifyProduct(descrPadronizada),
+      classe: p.classe || classifyProduct(p.title).classe,
       conservacao: p.conservacao || 'Resfriado',
       peso_gramas: pesoGramas,
       fracionado: isFracionado,
@@ -396,6 +396,6 @@ export async function runSearaScraper() {
   console.log(`📊 Códigos:     ${payload.codigos_barras.length}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (require.main === module) {
   runSearaScraper().catch(console.error);
 }

@@ -1,0 +1,32 @@
+[
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "be7314e2-54a4-5eca-958f-eb9d8b33e93a",
+    "details": "Produto \"Coxinhas das Asas Envelopadas • Congeladas\" (be7314e2-54a4-5eca-958f-eb9d8b33e93a) possui códigos [DUN_14:17896419721168], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "5478cd7c-fde6-53b5-a41c-504f139b6e4a",
+    "details": "Produto \"Coxas e Sobrecoxas Envelopadas • Congeladas\" (5478cd7c-fde6-53b5-a41c-504f139b6e4a) possui códigos [DUN_14:17896419721175], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "b7bc454d-ffdd-5185-86bd-e778a212eb1c",
+    "details": "Produto \"Filé de Peito Envelopado • Congelado\" (b7bc454d-ffdd-5185-86bd-e778a212eb1c) possui códigos [DUN_14:17896419721182], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "909965dd-5fb9-5abd-8391-478668c7ceba",
+    "details": "Produto \"Filezinho Sassami Envelopado • Congelado\" (909965dd-5fb9-5abd-8391-478668c7ceba) possui códigos [DUN_14:17896419721205], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "7cb161d8-9692-5ea8-ae11-12a695114764",
+    "details": "Produto \"Sobrecoxas Envelopadas • Congeladas\" (7cb161d8-9692-5ea8-ae11-12a695114764) possui códigos [DUN_14:17896419721267], mas NENHUM EAN numérico válido!"
+  }
+]

@@ -15,6 +15,8 @@ import * as path from 'path';
 import { v5 as uuidv5 } from 'uuid';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
+import { sanitizeDatabase } from './sanitize_supabase_db';
+import { formatProductDescription } from '../core/normalizers/text_parser';
 
 // Carrega variáveis de ambiente (.env)
 dotenv.config();
@@ -232,58 +234,87 @@ export async function syncStagingToSupabase() {
     const rawContent = fs.readFileSync(stagingPath, 'utf-8');
     const staging: StagingData = JSON.parse(rawContent);
 
-  // -------------------------------------------------------------
-  // CAMADA DE TRANSFORMAÇÃO: String IDs -> UUIDv5 (PKs e FKs)
-  // -------------------------------------------------------------
-  console.log('\n⚡ Transformando IDs textuais em UUIDv5 determinísticos...');
+    // -------------------------------------------------------------
+    // PRÉ-DEDUPLICAÇÃO E VALIDAÇÃO EAN: Garantir EAN numérico único
+    // -------------------------------------------------------------
+    const seenCodesInStaging = new Set<string>();
+    const deduplicatedCodigos: typeof staging.codigos_barras = [];
 
-  const fabricantesUUID = staging.fabricantes.map(f => ({
-    ...f,
-    id: toUUID5(f.id)
-  }));
+    for (const cb of staging.codigos_barras) {
+      const codeClean = (cb.codigo || '').trim();
+      if (!codeClean) continue;
 
-  const marcasUUID = staging.marcas.map(m => ({
-    ...m,
-    id: toUUID5(m.id),
-    fabricante_id: toUUID5(m.fabricante_id)
-  }));
-
-  const produtosUUID = staging.produtos.map(p => ({
-    ...p,
-    id: toUUID5(p.id),
-    marca_id: toUUID5(p.marca_id)
-  }));
-
-  // Pré-deduplicação em memória para o mesmo payload (evita duplicados no mesmo lote de entrada)
-  const seenCodes = new Set<string>();
-  const codigosBarrasUUID: StagingCodigoBarras[] = [];
-  let inMemoryConflicts = 0;
-
-  for (const cb of staging.codigos_barras) {
-    const codeClean = (cb.codigo || '').trim();
-    if (!codeClean) continue;
-
-    if (seenCodes.has(codeClean)) {
-      inMemoryConflicts++;
-      logBarcodeConflict(
-        { ...cb, id: toUUID5(cb.id), produto_id: toUUID5(cb.produto_id) },
-        `Duplicidade de código detectada no mesmo payload de staging: ${codeClean}`
-      );
-      continue;
+      if (seenCodesInStaging.has(codeClean)) {
+        logBarcodeConflict(
+          { ...cb, id: toUUID5(cb.id), produto_id: toUUID5(cb.produto_id) },
+          `Duplicidade de código detectada no staging: ${codeClean}`
+        );
+        continue;
+      }
+      seenCodesInStaging.add(codeClean);
+      deduplicatedCodigos.push(cb);
     }
 
-    seenCodes.add(codeClean);
+    const eanProductIds = new Set<string>();
+    for (const cb of deduplicatedCodigos) {
+      if (cb.tipo && cb.tipo.toUpperCase().includes('EAN') && cb.codigo && /^\d+$/.test(cb.codigo.trim())) {
+        eanProductIds.add(cb.produto_id);
+      }
+    }
+
+    const produtosFiltrados = staging.produtos.filter(p => eanProductIds.has(p.id));
+    const marcasAtivasIds = new Set(produtosFiltrados.map(p => p.marca_id));
+    const marcasFiltradas = staging.marcas.filter(m => marcasAtivasIds.has(m.id));
+
+    console.log(`🔍 Validação EAN: ${staging.produtos.length} produtos recebidos -> ${produtosFiltrados.length} mantidos (com ao menos 1 EAN único).`);
+
+    // -------------------------------------------------------------
+    // CAMADA DE TRANSFORMAÇÃO: String IDs -> UUIDv5 (PKs e FKs)
+    // -------------------------------------------------------------
+    console.log('\n⚡ Transformando IDs textuais em UUIDv5 determinísticos...');
+
+    const fabricantesUUID = staging.fabricantes.map(f => ({
+      ...f,
+      id: toUUID5(f.id)
+    }));
+
+    const marcasUUID = marcasFiltradas.map(m => ({
+      ...m,
+      id: toUUID5(m.id),
+      fabricante_id: toUUID5(m.fabricante_id)
+    }));
+
+    const produtosUUID = produtosFiltrados.map(p => {
+      const rawText = p.descricao_original
+        || (typeof p.descricao_padronizada === 'string' ? p.descricao_padronizada : (p.descricao_padronizada as any)?.formatted_description || (p.descricao_padronizada as any)?.title_clean)
+        || p.descricao
+        || '';
+      const parsedText = formatProductDescription(rawText);
+
+      return {
+        ...p,
+        id: toUUID5(p.id),
+        marca_id: toUUID5(p.marca_id),
+        descricao_padronizada: parsedText.formatted_description,
+        peso_gramas: parsedText.peso_gramas !== null ? parsedText.peso_gramas : p.peso_gramas,
+        fracionado: parsedText.fracionado,
+      };
+    });
+
+  const codigosBarrasUUID: StagingCodigoBarras[] = [];
+  const produtosValidosUUIDSet = new Set(produtosUUID.map(p => p.id));
+
+  for (const cb of deduplicatedCodigos) {
+    const prodUuid = toUUID5(cb.produto_id);
+    if (!produtosValidosUUIDSet.has(prodUuid)) continue;
+
     codigosBarrasUUID.push({
       ...cb,
       id: toUUID5(cb.id),
-      produto_id: toUUID5(cb.produto_id),
-      codigo: codeClean
+      produto_id: prodUuid
     });
   }
 
-  if (inMemoryConflicts > 0) {
-    console.log(`⚠️ ${inMemoryConflicts} códigos de barras duplicados no mesmo payload foram salvos em conflicts_log.json.`);
-  }
 
   const payloadUUID = {
     fabricantes: fabricantesUUID,
@@ -329,7 +360,7 @@ export async function syncStagingToSupabase() {
   console.log('4️⃣  Sincronizando Códigos de Barras (Modo Resiliente)...');
   const resCB = await upsertInBatches(supabase, 'codigos_barras', codigosBarrasUUID, 200, true);
 
-  const totalConflicts = resCB.conflictCount + inMemoryConflicts;
+  const totalConflicts = resCB.conflictCount;
 
   console.log('\n🎉 === RESUMO DA SINCRONIZAÇÃO SUPABASE ===');
   console.log(`🏢 Fabricantes sincronizados: ${resFab.totalSynced}`);
@@ -339,8 +370,10 @@ export async function syncStagingToSupabase() {
   if (totalConflicts > 0) {
     console.log(`⚠️  Conflitos de EAN/DUN ignorados: ${totalConflicts} (ver staging/conflicts_log.json)`);
   }
-  console.log('✅ Pipeline finalizado com resiliência total para este arquivo!');
   }
+
+  console.log('\n🧹 Executando higienização pós-sincronização no Supabase...');
+  await sanitizeDatabase();
 }
 
 // Execução via CLI

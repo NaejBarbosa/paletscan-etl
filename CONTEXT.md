@@ -91,12 +91,15 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
 - [x] **Pipeline de Carga de Mídia e Arquivamento**: [`db_sync/sync_images.ts`](file:///root/paletscan-etl/db_sync/sync_images.ts).
 - [x] **Web Scraper Multi-Fonte BRF S.A.**: [`scrapers/brf/index.ts`](file:///root/paletscan-etl/scrapers/brf/index.ts) com extração combinada de sitemaps Sadia/Perdigão, portal B2B e PDF comercial, gerando 1.120 produtos e 3.184 EANs/DUNs.
 - [x] **Gerador de Relatórios Excel (.xlsx)**: Scripts [`scripts/export_excel.ts`](file:///root/paletscan-etl/scripts/export_excel.ts) e [`scripts/export_pending.ts`](file:///root/paletscan-etl/scripts/export_pending.ts) com envio direto para a pasta Download e integração com `termux-media-scan`.
+- [x] **Web Scraper Lar Cooperativa Agroindustrial**: [`scrapers/lar/index.ts`](file:///root/paletscan-etl/scrapers/lar/index.ts) com sitemap XML ao vivo, gerando 111 produtos e 218 códigos de barras válidos com EAN.
 - [x] **Validação Estrita de EAN Obrigatório (Módulo ETL & Banco)**:
-  - Trava estrita em [`db_sync/sync.ts`](file:///root/paletscan-etl/db_sync/sync.ts) que filtra e descarta produtos sem ao menos um código de barras EAN válido (EAN-13/EAN-8).
-  - Otimização da base mestre para **2.988 produtos exclusivamente respaldados por EAN** (1.025 BRF, 1.542 Friboi, 421 Seara).
+  - Trava estrita em [`db_sync/sync.ts`](file:///root/paletscan-etl/db_sync/sync.ts) que padroniza descrições para Title Case com pesagem exata (`1kg`, `700g`, `1,005kg`) ou `(pesar)` e executa higienização automatizada pós-sincronização.
+  - Higienização e auditoria automatizada em [`db_sync/sanitize_supabase_db.ts`](file:///root/paletscan-etl/db_sync/sanitize_supabase_db.ts) e [`scripts/audit_database.ts`](file:///root/paletscan-etl/scripts/audit_database.ts), consolidando a base mestre em **3.001 produtos 100% padronizados e exclusivamente respaldados por EAN** (0 anomalias).
 - [x] **Tratamento de Modais e Busca Fuzzy no PWA (`repo_pwa`)**:
-  - Exibição de EANs puramente numéricos nos modais (`DetalheProdutoModal`, `ResultadoScanModal`, `Relatorio`), eliminando vazamentos de UUIDs e exibindo `"Não cadastrado"` quando apropriado.
-  - Servidor `/api/validar` servindo o catálogo mestre de 2.988 produtos com EAN e busca fuzzy (`PesquisaProduto.tsx`) expandida para até 500 resultados.
+  - Gerados e sincronizados os arquivos [`repo_pwa/produtos.json`](file:///root/repo_pwa/produtos.json) e [`repo_pwa/public/produtos.json`](file:///root/repo_pwa/public/produtos.json) contendo os 3.001 produtos purificados em *Title Case* com pesagem exata e 0 anomalias.
+  - Unificada a constante de cache `PRODUCT_CATALOG_CACHE_KEY` (`banco_valida_data_v38_clean`) em [`repo_pwa/lib/cache.ts`](file:///root/repo_pwa/lib/cache.ts) e em todas as APIs (`validar.ts`, `atualizar-conservacao.ts`, `atualizar-pesar-cod.ts`, `cadastrar-produto.ts`, `atualizar-classe.ts`), com fallback local robusto para `produtos.json`.
+  - Corrigida a lógica em [`repo_pwa/pages/index.tsx`](file:///root/repo_pwa/pages/index.tsx) para **sempre priorizar a base viva da API (`apiProducts`)**, eliminando o bloqueio por contagem de cache local.
+  - Ajustada a resposta do sincronizador [`repo_pwa/lib/database/sync.ts`](file:///root/repo_pwa/lib/database/sync.ts) durante `forceReset` para retornar produtos no array `created` (em vez de `updated`), garantindo o repovoamento total dos registros purificados em Title Case (3.001 produtos e 0 anomalias).
 - [x] **Módulo de Validação e Aprovação de Imagens Pendentes no PWA**: Módulo administrativo em [`repo_pwa/components/ValidacaoPendenciasAdmin.tsx`](file:///root/repo_pwa/components/ValidacaoPendenciasAdmin.tsx) e API [`repo_pwa/pages/api/admin/pendencias.ts`](file:///root/repo_pwa/pages/api/admin/pendencias.ts) integrado ao `/admin` do PWA.
 
 ---
