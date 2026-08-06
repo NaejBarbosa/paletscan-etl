@@ -1,87 +1,133 @@
-# 🛒 Pipeline de Extração B2B Friboi
+# 🛒 Scrapers e Pipelines de Extração Multi-Fornecedores
 
-O módulo de extração da Friboi ([`scrapers/friboi/index.ts`](file:///root/paletscan-etl/scrapers/friboi/index.ts)) é um pipeline de web scraping de alta concorrência projetado para coletar catalogação atualizada, dados nutricionais, códigos logísticos e mídias de produtos diretamente da infraestrutura B2B da Oracle Commerce Cloud.
+O módulo de extração do **PaletScan ETL** ([`scrapers/`](file:///root/paletscan-etl/scrapers/)) é composto por pipelines de web scraping de alta concorrência projetados para coletar catalogação atualizada, dados nutricionais, códigos logísticos e mídias de produtos diretamente dos portais institucionais e APIs B2B dos 4 maiores grupos frigoríficos e alimentícios parceiros: **JBS / Friboi**, **Seara Alimentos**, **BRF S.A.** e **Cooperativa Lar**.
 
 ---
 
-## 🏗️ 1. Arquitetura do Scraper
+## 📊 1. Matriz Comparativa dos Scrapers B2B
 
-O processo de extração não depende de varreduras HTML lentas no navegador (DOM parsing). Em vez disso, utiliza um fluxo em duas etapas otimizado para requisições HTTP diretas:
+| Fabricante (Holding) | Diretório do Scraper | Estratégia de Captura | Produtos Brutos | Produtos Validados (com EAN) | Tempo Médio |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **JBS S.A. (Friboi)** | [`scrapers/friboi/`](file:///root/paletscan-etl/scrapers/friboi/index.ts) | Sitemap XML + API REST Oracle CCStore | ~1.812 | **1.501** | **35s a 45s** |
+| **BRF S.A.** | [`scrapers/brf/`](file:///root/paletscan-etl/scrapers/brf/index.ts) | Catálogo PDF + Central MBRF REST | ~1.120 | **1.025** | **25s a 35s** |
+| **Seara Alimentos** | [`scrapers/seara/`](file:///root/paletscan-etl/scrapers/seara/index.ts) | Multi-site B2B/B2C + E-Commerce Live | ~621 | **365** | **20s a 30s** |
+| **Cooperativa Lar** | [`scrapers/lar/`](file:///root/paletscan-etl/scrapers/lar/index.ts) | Portal Institucional Lar Alimentos | ~111 | **110** | **5s a 10s** |
+
+---
+
+## 🏗️ 2. Arquitetura Geral de Extração Concorrente
+
+Os scrapers do PaletScan não dependem de varreduras HTML lentas via navegadores automatizados (Selenium/Puppeteer). Em vez disso, utilizam um fluxo em duas etapas otimizado para requisições HTTP diretas e concorrência controlada via `p-limit`:
 
 ```mermaid
 sequenceDiagram
     autonumber
-    participant Sitemap as Sitemap XML Friboi
-    participant Scraper as Scraper Engine (Node.js)
-    participant CCStore as Oracle CCStore API
-    participant Staging as Staging Storer
+    participant Portais as Portais B2B / Sitemaps / APIs
+    participant Engine as Scraper Engine (Node.js/TS)
+    participant Core as Core Normalizer & GS1 Mod10
+    participant Staging as Staging JSON (staging/*_staging.json)
 
-    Scraper->>Sitemap: GET /productSitemap.xml
-    Sitemap-->>Scraper: Retorna lista de URLs de produtos
-    loop Para cada lote de URLs (Concorrente)
-        Scraper->>CCStore: GET /ccstoreui/v1/products/product_id
-        CCStore-->>Scraper: Retorna Payload JSON completo do produto
-        Scraper->>Scraper: Executa Algoritmo de Seleção e Acurácia de Imagens
-        Scraper->>Scraper: Extrai SKUs, EANs e DUNs
-        Scraper->>Staging: Grava dados brutos sanitizados em staging/
+    Engine->>Portais: Extrai lista de URLs e SKUs da origem
+    Portais-->>Engine: Retorna payloads JSON / Estrutura de dados
+    loop Para cada lote de SKUs (Pool Concorrente)
+        Engine->>Engine: Executa Algoritmo de Seleção e Acurácia de Imagens
+        Engine->>Engine: Extrai SKUs, EANs e DUNs
+        Engine->>Core: Normaliza Textos, Pesos e Códigos de Barras
+        Core-->>Engine: Retorna Dados Higienizados
+        Engine->>Staging: Salva arquivo em staging/*_staging.json
     end
 ```
 
 ---
 
-## ⚡ 2. Leitura do Sitemap XML e Concorrência HTTP
+## 🏭 3. Detalhamento dos Pipelines de Ingestão por Fornecedor
 
-1. **Extração de URLs**: O scraper inicia lendo o endpoint público `https://www.friboionline.com.br/productSitemap.xml`.
-2. **Parsing das Tags `<loc>`**: Extrai os identificadores únicos de produtos contidos na estrutura dos links.
-3. **Pool Concorrente**: Utiliza um limitador de requisições concorrentes (`p-limit` / batches configuráveis) para realizar chamadas paralelas ao endpoint de API REST `ccstoreui/v1/products/` da Oracle Commerce Cloud, otimizando o tempo total de execução sem sobrecarregar a origem.
+### A. Pipeline JBS / Friboi (`scrapers/friboi/`)
+- **Marcas Mapeadas**: Friboi, Reserva, Maturatta Friboi, 1953 Friboi, Swift, Do Chef, Black Friboi.
+- **Estratégia**: Varredura inicial no endpoint XML `https://www.friboionline.com.br/productSitemap.xml`, seguida de requisições concorrentes paralelas à API REST `ccstoreui/v1/products/` da Oracle Commerce Cloud.
+- **Diferencial**: Captura detalhada de tabelas nutricionais, peças por caixa, peso médio e DUN-14 da caixa de despacho.
+
+### B. Pipeline BRF S.A. (`scrapers/brf/`)
+- **Marcas Mapeadas**: Sadia, Perdigão, Qualy, Chester, Central MBRF.
+- **Estratégia**: Ingestão combinada de APIs REST da Central MBRF com parsing estruturado do catálogo oficial de produtos em PDF.
+- **Diferencial**: Resolução exata de códigos EAN primários de cortes congelados e de produtos processados para exportação.
+
+### C. Pipeline Seara Alimentos (`scrapers/seara/`)
+- **Marcas Mapeadas**: Seara, Seara Gourmet, Incrível (Plant-Based), Rezende, Wilson.
+- **Estratégia**: Varredura multi-site ao vivo cobrindo os portais institucionais B2B, B2C e e-commerce oficial da Seara.
+- **Diferencial**: Tratamento de cortes fracionados por pesagem dinâmica e linha completa de industrializados.
+
+### D. Pipeline Cooperativa Lar (`scrapers/lar/`)
+- **Marcas Mapeadas**: Lar Alimentos (Aves, Suínos, Cortes Especiais).
+- **Estratégia**: Ingestão automatizada do catálogo oficial de produtos da Cooperativa Agroindustrial Lar.
+- **Diferencial**: 100% dos produtos validados possuem EAN e DUN cadastrados e higienizados.
 
 ---
 
-## 🎯 3. Algoritmo de Seleção Exaustiva e Acurácia de Imagens
+## 🎯 4. Algoritmo de Acurácia de Imagens e Filtro Anti-Ruído
 
-Um dos grandes desafios de scrapers em e-commerce B2B é a presença de imagens genéricas, banners promocionais, tabelas nutricionais e fotos de receitas preparadas na página do produto. O PaletScan implementa um algoritmo de filtragem heurística rigorosa através das funções `isValidProductImage` e `extractBestProductImage`:
+Para evitar a exibição de imagens incorretas (como fotos de receitas, pratos prontos ou marcas d'água de distribuidores), todos os scrapers aplicam o algoritmo de filtragem heurística `extractBestProductImage`:
 
-### 🔍 A. Busca Exaustiva em Múltiplos Campos
-O algoritmo inspeciona recursivamente todos os nós de mídia retornados pelo JSON da API CCStore:
-- `primaryFullImageURL`
-- `primaryLargeImageURL`
-- `fullImageURLs`
-- `sourceImageURLs`
-- Objeto de variação `childSKUs`
+### 🔍 A. Regras de Rejeição Automatizadas:
 
-### 🛡️ B. Validação Semântica e Filtro de SKU Exato
-- **Correspondência de SKU no Nome do Arquivo**: Garante que a URL da imagem containment o padrão `/products/<SKU>_(00|01)_<slug>`. O SKU contido na imagem deve corresponder estritamente ao SKU do produto inspecionado.
-- **Sobreposição Semântica**: Realiza a comparação entre os termos do slug do arquivo da imagem e as palavras-chave do título do produto.
-
-### 🚫 C. Regras de Rejeição (Filtro Anti-Ruído)
-As imagens que contiverem qualquer um dos sufixos ou palavras-chave abaixo são imediatamente descartadas:
-
-| Indicador no Nome do Arquivo | Motivo da Rejeição |
+| Indicador no Nome do Arquivo / URL | Motivo do Descarte |
 | :--- | :--- |
-| `_02`, `_03`, `_04`, `_05` | Fotos de pratos prontos, receitas, ângulos secundários ou embalagens de envio. |
-| `_50` | Logotipos institucionais e marcas d'água de fornecedores. |
+| `_02`, `_03`, `_04`, `_05` | Fotos de pratos prontos, receitas preparadas ou embalagens de despacho. |
+| `_50` | Logotipos institucionais e marcas d'água de distribuidores. |
 | `receita`, `prato`, `banner` | Imagens publicitárias ou sugestões de consumo. |
 | `tabela`, `nutricional`, `selo` | Tabelas de informação nutricional ou selos de certificação. |
-| `placeholder`, `no-image` | Imagens padrão quando o produto não possui foto. |
-
-> [!NOTE]
-> Se nenhuma imagem passar nos critérios de acurácia com 100% de confiança, a função retorna `null`, marcando o registro com o status `sem_imagem` para evitar o cadastro de imagens incorretas no aplicativo PWA.
+| `placeholder`, `no-image` | Imagens padrão quando o produto não possui foto real. |
 
 ---
 
-## 📄 4. Formato de Saída em Staging
+## 📄 5. Formato Unificado de Saída em Staging
 
-Após a extração e validações de acurácia, os produtos são consolidados em arquivos JSON em `staging/friboi_raw.json` seguindo a estrutura padrão do projeto:
+Após a extração e sanitização estrita, todos os scrapers salvam os dados brutos consolidados na pasta `staging/` seguindo a estrutura de contrato padronizada (`*_staging.json`):
 
 ```json
 {
-  "sku": "109403",
-  "nome_origem": "Corte Dianteiro bovino Friboi Peito resfriado vácuo",
-  "marca_origem": "Friboi",
-  "ean_origem": "7891515432101",
-  "dun_origem": "17891515432108",
-  "imagem_url_origem": "https://www.friboionline.com.br/ccstore/v1/images/?source=/file/v12345/products/109403_00_peito_friboi.jpg",
-  "peso_bruto": 20.5,
-  "unidade_medida": "KG"
+  "fabricantes": [
+    {
+      "id": "fab_jbs",
+      "nome": "JBS S.A.",
+      "cnpj": "10000000000000"
+    }
+  ],
+  "marcas": [
+    {
+      "id": "marca_friboi",
+      "fabricante_id": "fab_jbs",
+      "nome": "Friboi"
+    }
+  ],
+  "produtos": [
+    {
+      "id": "prod_109403",
+      "marca_id": "marca_friboi",
+      "nome": "Corte Dianteiro Bovino Friboi Peito (pesar)",
+      "categoria": "Bovinos - Resfriados",
+      "conservacao": "Resfriado",
+      "peso_gramas": null,
+      "peso_variavel": true,
+      "imagem_url": "https://www.friboionline.com.br/ccstore/v1/images/?source=/file/v123/products/109403_00.jpg",
+      "imagem_status": "aprovado"
+    }
+  ],
+  "codigos_barras": [
+    {
+      "id": "cb_ean_7891515432101",
+      "produto_id": "prod_109403",
+      "codigo": "7891515432101",
+      "tipo": "EAN",
+      "quantidade_embalagem": 1
+    },
+    {
+      "id": "cb_dun_17891515432108",
+      "produto_id": "prod_109403",
+      "codigo": "17891515432108",
+      "tipo": "DUN",
+      "quantidade_embalagem": 6
+    }
+  ]
 }
 ```
