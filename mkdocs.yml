@@ -70,3 +70,4 @@ nav:
   - "Pipeline de IA de Imagens": "processamento-imagens.md"
   - "Governança e Schema": "schema-manifesto.md"
   - "Sincronização com Supabase": "supabase.md"
+  - "Glossário de Termos Técnicos": "glossario.md"
