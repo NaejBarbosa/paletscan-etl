@@ -148,6 +148,22 @@ async function upsertInBatches<T extends { id: string; codigo?: string }>(
 ): Promise<{ totalSynced: number; conflictCount: number }> {
   if (items.length === 0) return { totalSynced: 0, conflictCount: 0 };
 
+  // Para códigos de barras, garante deduplicação estrita por 'codigo' e upsert por conflito em 'codigo'
+  if (tableName === 'codigos_barras') {
+    const seenCodes = new Set<string>();
+    const deduped: T[] = [];
+    for (const item of items) {
+      const codeKey = (item.codigo || '').trim();
+      if (codeKey && !seenCodes.has(codeKey)) {
+        seenCodes.add(codeKey);
+        deduped.push(item);
+      }
+    }
+    items = deduped;
+  }
+
+  const onConflictCol = tableName === 'codigos_barras' ? 'codigo' : 'id';
+
   let totalSynced = 0;
   let conflictCount = 0;
 
@@ -156,25 +172,23 @@ async function upsertInBatches<T extends { id: string; codigo?: string }>(
 
     const { error } = await supabase
       .from(tableName)
-      .upsert(chunk, { onConflict: 'id' });
+      .upsert(chunk, { onConflict: onConflictCol });
 
     if (!error) {
       totalSynced += chunk.length;
       process.stdout.write(`  \r⏳ Sincronizando ${tableName}: ${totalSynced}/${items.length} registros...`);
     } else {
-      // Se ocorreu erro e o tratamento de conflitos está ativado (ex: codigos_barras)
       if (handleConflicts) {
         console.log(`\n⚠️  Lote de '${tableName}' encontrou duplicidades/conflitos. Ativando modo de resiliência (item por item)...`);
         
         for (const item of chunk) {
           const { error: itemError } = await supabase
             .from(tableName)
-            .upsert([item], { onConflict: 'id' });
+            .upsert([item], { onConflict: onConflictCol });
 
           if (!itemError) {
             totalSynced++;
           } else {
-            // Se for erro de violação de restrição única (código de barras duplicado em outro produto)
             const isUniqueViolation = 
               itemError.code === '23505' || 
               /unique constraint|duplicate key|codigo/i.test(itemError.message);
