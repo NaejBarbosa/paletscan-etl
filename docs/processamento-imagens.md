@@ -1,6 +1,6 @@
 # 🖼️ Pipeline de IA e Processamento de Imagens
 
-O módulo de visão computacional do PaletScan ETL ([`images/ai_pipeline/process_image.py`](file:///root/paletscan-etl/images/ai_pipeline/process_image.py)) é responsável pela remoção de fundo por inteligência artificial, padronização em fundo branco sólido e otimização para formato WebP ultra-leve.
+O módulo de visão computacional do **PaletScan ETL** ([`images/ai_pipeline/process_image.py`](file:///root/paletscan-etl/images/ai_pipeline/process_image.py)) é responsável pela remoção de fundo por inteligência artificial, padronização em fundo branco sólido, detecção de atualizações de layout de embalagens e otimização para o formato WebP ultra-leve.
 
 ---
 
@@ -53,7 +53,36 @@ images/
 
 ---
 
-## 🖥️ 4. Como Executar o Script
+## 🔄 4. Detecção de Novos Layouts de Embalagem e Ciclo de Atualização
+
+Quando um fornecedor atualiza o visual da embalagem ou lança um novo layout no mercado, o PaletScan detecta a alteração e executa o re-processamento automático:
+
+```mermaid
+flowchart TD
+    A["1. Scraper detecta nova URL/Layout"] --> B["2. Download da Imagem Bruta em images/raw/"]
+    B --> C["3. IA Local (rembg / U2Net)\nRemoção de Fundo"]
+    C --> D["4. Composição com Fundo Branco Sólido RGB\ne Compressão WebP (< 150KB)"]
+    D --> E["5. Upload para Supabase Storage\nBucket 'produtos-imagens' (upsert: true)"]
+    E --> F["6. UPDATE na tabela 'produtos'\n(imagem_url + status_imagem = 'aprovado')"]
+    F --> G["7. Re-geração do produtos.json PWA\ne Pré-carregamento no Coletor"]
+```
+
+### A. Como o ETL Identifica Alteraçoes de Layout:
+1. **Detecção de URL e Token de Versão na Origem B2B**:
+   - Os scrapers de extração (`scrapers/friboi`, `seara`, `brf`, `lar`) inspecionam as URLs de mídias das APIs dos fabricantes. Quando a indústria altera o layout de uma embalagem, a URL de origem da foto muda na CDN do fabricante (ex: alteração de token de versão `/v8734254.../products/393432_01.JPG` ou novo sufixo de arquivo).
+   - O algoritmo de acurácia `extractBestProductImage` compara a nova URL com o registro de staging pré-existente.
+2. **Comparação de Hash MD5 da Imagem Bruta**:
+   - Quando o arquivo é baixado para `images/raw/`, o sistema calcula e compara o hash MD5 da imagem. Caso divirja da versão em cache, a imagem é sinalizada para re-processamento por Inteligência Artificial.
+
+### B. Etapas de Processamento e Propagação para o PWA:
+1. **Tratamento Neural de IA (`process_image.py`)**: A nova imagem da embalagem passa pelo modelo neural `rembg` (U2Net), recebe o fundo branco sólido RGB e é exportada em `.webp` otimizado para `images/processed/`.
+2. **Upload Resiliente na CDN (`db_sync/sync_images.ts`)**: A nova foto `.webp` é enviada para o bucket `produtos-imagens` no Supabase Storage utilizando `upsert: true`, sobrescrevendo o ativo antigo na CDN.
+3. **Atualização Relacional PostgreSQL**: O script atualiza a coluna `imagem_url` na tabela `produtos` do Supabase e registra o carimbo de data `updated_at`.
+4. **Propagação para o Aplicativo PWA**: O script `generate_pwa_produtos_json.ts` regera o catálogo `produtos.json`. No PWA do operador, ao acionar **"Limpar Banco Local e Sincronizar"** (ou via sync automático em segundo plano), o módulo `imageOfflineCache.ts` realiza o *prefetch* do novo WebP e substitui a foto no cache local do dispositivo.
+
+---
+
+## 🖥️ 5. Como Executar o Script
 
 O script pode ser executado manualmente via linha de comando ou ser invocado pelo pipeline TypeScript:
 
