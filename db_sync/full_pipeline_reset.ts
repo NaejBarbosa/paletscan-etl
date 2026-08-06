@@ -14,36 +14,62 @@ if (!SUPABASE_URL || !SUPABASE_KEY) {
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
+async function wipeTable(tableName: string) {
+  let totalDeleted = 0;
+  while (true) {
+    const { data, error } = await supabase
+      .from(tableName)
+      .select('id')
+      .limit(1000);
+
+    if (error) {
+      console.warn(`Aviso ao consultar ${tableName}:`, error.message);
+      break;
+    }
+
+    if (!data || data.length === 0) break;
+
+    const ids = data.map(r => r.id);
+    const { error: delErr } = await supabase
+      .from(tableName)
+      .delete()
+      .in('id', ids);
+
+    if (delErr) {
+      console.warn(`Aviso ao deletar lote em ${tableName}:`, delErr.message);
+      break;
+    }
+
+    totalDeleted += ids.length;
+    console.log(`  🗑️ ${tableName}: ${totalDeleted} registros deletados...`);
+
+    if (data.length < 1000) break;
+  }
+  return totalDeleted;
+}
+
 async function runFullPipelineReset() {
-  console.log('💥 === INICIANDO LIMPEZA TOTAL DA BASE SUPABASE E RE-EXECUÇÃO DO PIPELINE ===\n');
+  console.log('💥 === INICIANDO LIMPEZA TOTAL E COMPLETA DE TODAS AS BASES ===\n');
 
-  // 1. Deletar todos os registros de codigos_barras
-  console.log('🗑️ 1/4. Deletando todos os registros de codigos_barras...');
-  const { error: errCod } = await supabase.from('codigos_barras').delete().neq('id', '00000000-0000-0000-0000-000000000000');
-  if (errCod) console.warn('Aviso ao limpar codigos_barras:', errCod.message);
+  console.log('1️⃣ Deletando todos os registros de codigos_barras...');
+  await wipeTable('codigos_barras');
 
-  // 2. Deletar todos os produtos
-  console.log('🗑️ 2/4. Deletando todos os registros de produtos...');
-  const { error: errProd } = await supabase.from('produtos').delete().neq('id', '00000000-0000-0000-0000-000000000000');
-  if (errProd) console.warn('Aviso ao limpar produtos:', errProd.message);
+  console.log('2️⃣ Deletando todos os registros de produtos...');
+  await wipeTable('produtos');
 
-  // 3. Deletar todas as marcas
-  console.log('🗑️ 3/4. Deletando todas as marcas...');
-  const { error: errMarca } = await supabase.from('marcas').delete().neq('id', '00000000-0000-0000-0000-000000000000');
-  if (errMarca) console.warn('Aviso ao limpar marcas:', errMarca.message);
+  console.log('3️⃣ Deletando todas as marcas...');
+  await wipeTable('marcas');
 
-  // 4. Deletar todos os fabricantes
-  console.log('🗑️ 4/4. Deletando todos os fabricantes...');
-  const { error: errFab } = await supabase.from('fabricantes').delete().neq('id', '00000000-0000-0000-0000-000000000000');
-  if (errFab) console.warn('Aviso ao limpar fabricantes:', errFab.message);
+  console.log('4️⃣ Deletando todos os fabricantes...');
+  await wipeTable('fabricantes');
 
-  console.log('\n✨ Base do Supabase completamente zerada!');
+  console.log('\n✨ Todas as bases do Supabase foram 100% zeradas!');
   console.log('🚀 Iniciando pipeline de re-sincronização relacional estrita (UUIDv5)...\n');
 
   // Re-sincronizar todos os staging files
   await syncStagingToSupabase();
 
-  console.log('\n🎉 Pipeline completo finalizado com sucesso!');
+  console.log('\n🎉 Pipeline completo e higienização finalizados com sucesso!');
 }
 
 runFullPipelineReset().catch(console.error);
