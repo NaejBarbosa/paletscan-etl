@@ -8,18 +8,9 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -35,22 +26,6 @@ jobs:
           pip install --upgrade pip
           pip install mkdocs-material
 
-      - name: Build MkDocs Site
-        run: |
-          mkdocs build
-
-      - name: Deploy to gh-pages branch
+      - name: Build and Deploy to gh-pages branch
         run: |
           mkdocs gh-deploy --force
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'site'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
