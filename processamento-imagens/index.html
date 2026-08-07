@@ -1,0 +1,963 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica oficial do pipeline de dados, scrapers B2B, IA de imagem e sincronização Supabase do PaletScan.">
+      
+      
+        <meta name="author" content="Jean Barbosa & Antigravity Data Engineering Team">
+      
+      
+        <link rel="canonical" href="https://NaejBarbosa.github.io/paletscan-etl/processamento-imagens/">
+      
+      
+        <link rel="prev" href="../heuristicas-normalizadores/">
+      
+      
+        <link rel="next" href="../schema-manifesto/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Pipeline de IA de Imagens - PaletScan ETL - Documentação Técnica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pipeline-de-ia-e-processamento-de-imagens" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="PaletScan ETL - Documentação Técnica" class="md-header__button md-logo" aria-label="PaletScan ETL - Documentação Técnica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PaletScan ETL - Documentação Técnica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pipeline de IA de Imagens
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Alternar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Alternar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PaletScan ETL - Documentação Técnica" class="md-nav__button md-logo" aria-label="PaletScan ETL - Documentação Técnica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    PaletScan ETL - Documentação Técnica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Operações e CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scrapers-multi-fornecedores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scrapers Multi-Fornecedores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heuristicas-normalizadores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normalizadores e Heurísticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de IA de Imagens
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de IA de Imagens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-pipeline-de-inteligencia-artificial-local-process_imagepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 1. Pipeline de Inteligência Artificial Local (process_image.py)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-etapas-do-processamento-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚙️ 2. Etapas do Processamento Visual
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ 2. Etapas do Processamento Visual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-remocao-de-fundo-via-ia-rembg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Remoção de Fundo via IA (rembg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-achatamento-sobre-fundo-branco-solido-ffffff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Achatamento sobre Fundo Branco Sólido (#FFFFFF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-redimensionamento-e-otimizacao-webp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Redimensionamento e Otimização WebP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ciclo-de-vida-das-imagens-nos-diretorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 3. Ciclo de Vida das Imagens nos Diretórios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-deteccao-de-novos-layouts-de-embalagem-e-ciclo-de-atualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 4. Detecção de Novos Layouts de Embalagem e Ciclo de Atualização
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 4. Detecção de Novos Layouts de Embalagem e Ciclo de Atualização">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-como-o-etl-identifica-alteracoes-de-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Como o ETL Identifica Alteraçoes de Layout:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-etapas-de-processamento-e-propagacao-para-o-pwa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Etapas de Processamento e Propagação para o PWA:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-como-executar-o-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🖥️ 5. Como Executar o Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema-manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governança e Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supabase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sincronização com Supabase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossário de Termos Técnicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-pipeline-de-inteligencia-artificial-local-process_imagepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 1. Pipeline de Inteligência Artificial Local (process_image.py)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-etapas-do-processamento-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚙️ 2. Etapas do Processamento Visual
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ 2. Etapas do Processamento Visual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-remocao-de-fundo-via-ia-rembg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Remoção de Fundo via IA (rembg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-achatamento-sobre-fundo-branco-solido-ffffff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Achatamento sobre Fundo Branco Sólido (#FFFFFF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-redimensionamento-e-otimizacao-webp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Redimensionamento e Otimização WebP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ciclo-de-vida-das-imagens-nos-diretorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 3. Ciclo de Vida das Imagens nos Diretórios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-deteccao-de-novos-layouts-de-embalagem-e-ciclo-de-atualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 4. Detecção de Novos Layouts de Embalagem e Ciclo de Atualização
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 4. Detecção de Novos Layouts de Embalagem e Ciclo de Atualização">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-como-o-etl-identifica-alteracoes-de-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Como o ETL Identifica Alteraçoes de Layout:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-etapas-de-processamento-e-propagacao-para-o-pwa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Etapas de Processamento e Propagação para o PWA:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-como-executar-o-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🖥️ 5. Como Executar o Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="pipeline-de-ia-e-processamento-de-imagens">🖼️ Pipeline de IA e Processamento de Imagens</h1>
+<p>O módulo de visão computacional do <strong>PaletScan ETL</strong> (<a href="file:///root/paletscan-etl/images/ai_pipeline/process_image.py"><code>images/ai_pipeline/process_image.py</code></a>) é responsável pela remoção de fundo por inteligência artificial, padronização em fundo branco sólido, detecção de atualizações de layout de embalagens e otimização para o formato WebP ultra-leve.</p>
+<hr />
+<h2 id="1-pipeline-de-inteligencia-artificial-local-process_imagepy">🤖 1. Pipeline de Inteligência Artificial Local (<code>process_image.py</code>)</h2>
+<p>Em vez de dependências de APIs de terceiros pagas, o PaletScan utiliza um pipeline de IA <strong>100% local e privado</strong> construído em Python com <code>rembg</code> (baseado em modelos de redes neurais U2Net/ONNX) e <code>Pillow</code>.</p>
+<pre class="mermaid"><code>graph LR
+    A["Imagem Bruta / Raw"] --&gt;|process_image.py| B["Rede Neural rembg U2Net"]
+    B --&gt;|Máscara Transparente| C["Canal Alpha RGBA"]
+    C --&gt;|Achatamento Alpha| D["Fundo Branco Sólido #FFFFFF"]
+    D --&gt;|Resize max-dim 1000| E["Pillow Resampling"]
+    E --&gt;|Compressão WebP| F["Arquivo Otimizado .webp (Menos de 150KB)"]</code></pre>
+<hr />
+<h2 id="2-etapas-do-processamento-visual">⚙️ 2. Etapas do Processamento Visual</h2>
+<h3 id="a-remocao-de-fundo-via-ia-rembg">A. Remoção de Fundo via IA (<code>rembg</code>)</h3>
+<p>A imagem bruta baixada pelo scraper em <code>images/raw/</code> é submetida ao modelo neural da biblioteca <code>rembg</code>. O modelo isola a peça de carne ou embalagem comercial do cenário original (estantes, sombras de estúdio ou marcas d'água), gerando uma imagem intermediária com transparência no canal Alpha (<code>RGBA</code>).</p>
+<h3 id="b-achatamento-sobre-fundo-branco-solido-ffffff">B. Achatamento sobre Fundo Branco Sólido (<code>#FFFFFF</code>)</h3>
+<p>Para garantir padrão visual homogêneo e legibilidade máxima no aplicativo PWA (especialmente em telas de coletores de dados e smartphones sob pouca iluminação em câmaras frias), o script cria uma imagem base sólida em RGB na cor branca pura (<code>255, 255, 255</code>) e sobrepõe a imagem tratada utilizando a máscara de transparência do canal Alpha:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Trecho simplificado da lógica implementada em process_image.py</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">background</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="n">img_rgba</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">background</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">img_rgba</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">img_rgba</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">3</span><span class="p">])</span>  <span class="c1"># Aplica o Alpha channel</span>
+</span></code></pre></div>
+<h3 id="c-redimensionamento-e-otimizacao-webp">C. Redimensionamento e Otimização WebP</h3>
+<ul>
+<li><strong>Dimensão Máxima (<code>--max-dim 1000</code>)</strong>: Mantém a proporção original da foto limitando a maior dimensão a 1000 pixels, o que garante excelente definição de rótulos e selos sem desperdício de resolução.</li>
+<li><strong>Conversão Otimizada para <code>.webp</code></strong>: Salva a imagem final no formato WebP de alta eficiência, reduzindo o peso médio dos arquivos de 2MB-5MB (brutos) para <strong>menos de 100-150KB</strong>.</li>
+</ul>
+<hr />
+<h2 id="3-ciclo-de-vida-das-imagens-nos-diretorios">📁 3. Ciclo de Vida das Imagens nos Diretórios</h2>
+<p>O gerenciamento de arquivos de mídia segue um fluxo limpo e rastreável dentro de <code>images/</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>images/
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── raw/         # Recebe as fotos brutas baixadas pelos scrapers
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── processed/   # Armazena as imagens tratadas prontas para upload
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├── archived/    # Imagens que já foram enviadas com sucesso para o Supabase Storage
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>└── ai_pipeline/ # Código fonte Python (process_image.py)
+</span></code></pre></div>
+<hr />
+<h2 id="4-deteccao-de-novos-layouts-de-embalagem-e-ciclo-de-atualizacao">🔄 4. Detecção de Novos Layouts de Embalagem e Ciclo de Atualização</h2>
+<p>Quando um fornecedor atualiza o visual da embalagem ou lança um novo layout no mercado, o PaletScan detecta a alteração e executa o re-processamento automático:</p>
+<pre class="mermaid"><code>flowchart TD
+    A["1. Scraper detecta nova URL/Layout"] --&gt; B["2. Download da Imagem Bruta em images/raw/"]
+    B --&gt; C["3. IA Local (rembg / U2Net)\nRemoção de Fundo"]
+    C --&gt; D["4. Composição com Fundo Branco Sólido RGB\ne Compressão WebP (&lt; 150KB)"]
+    D --&gt; E["5. Upload para Supabase Storage\nBucket 'produtos-imagens' (upsert: true)"]
+    E --&gt; F["6. UPDATE na tabela 'produtos'\n(imagem_url + status_imagem = 'aprovado')"]
+    F --&gt; G["7. Re-geração do produtos.json PWA\ne Pré-carregamento no Coletor"]</code></pre>
+<h3 id="a-como-o-etl-identifica-alteracoes-de-layout">A. Como o ETL Identifica Alteraçoes de Layout:</h3>
+<ol>
+<li><strong>Detecção de URL e Token de Versão na Origem B2B</strong>:</li>
+<li>Os scrapers de extração (<code>scrapers/friboi</code>, <code>seara</code>, <code>brf</code>, <code>lar</code>) inspecionam as URLs de mídias das APIs dos fabricantes. Quando a indústria altera o layout de uma embalagem, a URL de origem da foto muda na CDN do fabricante (ex: alteração de token de versão <code>/v8734254.../products/393432_01.JPG</code> ou novo sufixo de arquivo).</li>
+<li>O algoritmo de acurácia <code>extractBestProductImage</code> compara a nova URL com o registro de staging pré-existente.</li>
+<li><strong>Comparação de Hash MD5 da Imagem Bruta</strong>:</li>
+<li>Quando o arquivo é baixado para <code>images/raw/</code>, o sistema calcula e compara o hash MD5 da imagem. Caso divirja da versão em cache, a imagem é sinalizada para re-processamento por Inteligência Artificial.</li>
+</ol>
+<h3 id="b-etapas-de-processamento-e-propagacao-para-o-pwa">B. Etapas de Processamento e Propagação para o PWA:</h3>
+<ol>
+<li><strong>Tratamento Neural de IA (<code>process_image.py</code>)</strong>: A nova imagem da embalagem passa pelo modelo neural <code>rembg</code> (U2Net), recebe o fundo branco sólido RGB e é exportada em <code>.webp</code> otimizado para <code>images/processed/</code>.</li>
+<li><strong>Upload Resiliente na CDN (<code>db_sync/sync_images.ts</code>)</strong>: A nova foto <code>.webp</code> é enviada para o bucket <code>produtos-imagens</code> no Supabase Storage utilizando <code>upsert: true</code>, sobrescrevendo o ativo antigo na CDN.</li>
+<li><strong>Atualização Relacional PostgreSQL</strong>: O script atualiza a coluna <code>imagem_url</code> na tabela <code>produtos</code> do Supabase e registra o carimbo de data <code>updated_at</code>.</li>
+<li><strong>Propagação para o Aplicativo PWA</strong>: O script <code>generate_pwa_produtos_json.ts</code> regera o catálogo <code>produtos.json</code>. No PWA do operador, ao acionar <strong>"Limpar Banco Local e Sincronizar"</strong> (ou via sync automático em segundo plano), o módulo <code>imageOfflineCache.ts</code> realiza o <em>prefetch</em> do novo WebP e substitui a foto no cache local do dispositivo.</li>
+</ol>
+<hr />
+<h2 id="5-como-executar-o-script">🖥️ 5. Como Executar o Script</h2>
+<p>O script pode ser executado manualmente via linha de comando ou ser invocado pelo pipeline TypeScript:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Execução básica apontando para o diretório de imagens brutas</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>python3<span class="w"> </span>images/ai_pipeline/process_image.py<span class="w"> </span>--input<span class="w"> </span>images/raw<span class="w"> </span>--output<span class="w"> </span>images/processed
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Execução com parâmetros de dimensão máxima e qualidade WebP</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>python3<span class="w"> </span>images/ai_pipeline/process_image.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span>--input<span class="w"> </span>images/raw<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span>--output<span class="w"> </span>images/processed<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span>--max-dim<span class="w"> </span><span class="m">1000</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span>--quality<span class="w"> </span><span class="m">85</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../heuristicas-normalizadores/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Normalizadores e Heurísticas">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Normalizadores e Heurísticas
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../schema-manifesto/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Governança e Schema">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Governança e Schema
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.expand", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

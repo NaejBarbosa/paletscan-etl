@@ -1,0 +1,1249 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica oficial do pipeline de dados, scrapers B2B, IA de imagem e sincronização Supabase do PaletScan.">
+      
+      
+        <meta name="author" content="Jean Barbosa & Antigravity Data Engineering Team">
+      
+      
+        <link rel="canonical" href="https://NaejBarbosa.github.io/paletscan-etl/operacoes/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../scrapers-multi-fornecedores/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Guia de Operações e CLI - PaletScan ETL - Documentação Técnica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-pratico-de-operacoes-cli-e-manutencao-de-dados" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="PaletScan ETL - Documentação Técnica" class="md-header__button md-logo" aria-label="PaletScan ETL - Documentação Técnica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PaletScan ETL - Documentação Técnica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guia de Operações e CLI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Alternar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Alternar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PaletScan ETL - Documentação Técnica" class="md-nav__button md-logo" aria-label="PaletScan ETL - Documentação Técnica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    PaletScan ETL - Documentação Técnica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Operações e CLI
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Operações e CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-limpeza-de-bases-de-dados-supabase-watermelondb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧹 1. Limpeza de Bases de Dados (Supabase &amp; WatermelonDB)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧹 1. Limpeza de Bases de Dados (Supabase &amp; WatermelonDB)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-limpeza-no-supabase-remoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Limpeza no Supabase (Remoto)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A. Limpeza no Supabase (Remoto)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcao-1-via-script-cli-typescript-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opção 1: Via Script CLI (TypeScript / Node.js)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcao-2-via-console-sql-no-supabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opção 2: Via Console SQL no Supabase
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-limpeza-no-watermelondb-dispositivos-pwa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Limpeza no WatermelonDB (Dispositivos / PWA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-processo-de-execucao-do-pipeline-e-mapeamento-de-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 2. Processo de Execução do Pipeline e Mapeamento de Desempenho
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 2. Processo de Execução do Pipeline e Mapeamento de Desempenho">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-scrapers-primarios-e-tempos-medios-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Scrapers Primários e Tempos Médios de Execução
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-ciclo-completo-do-pipeline-e-tempo-medio-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Ciclo Completo do Pipeline e Tempo Médio Geral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-relacao-atual-de-fabricantes-marcas-e-produtos-no-banco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Relação Atual de Fabricantes, Marcas e Produtos no Banco
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-comandos-para-execucao-e-sincronizacao-automatizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Comandos para Execução e Sincronização Automatizada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-acompanhamento-de-logs-e-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 3. Acompanhamento de Logs e Auditoria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 3. Acompanhamento de Logs e Auditoria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-monitoramento-de-conflitos-de-ean-dun-conflicts_logjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Monitoramento de Conflitos de EAN / DUN (conflicts_log.json)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-acompanhamento-de-relatorios-de-auditoria-audit_reportjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Acompanhamento de Relatórios de Auditoria (audit_report.json)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-verificacao-de-saude-das-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 4. Verificação de Saúde das Bases
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scrapers-multi-fornecedores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scrapers Multi-Fornecedores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heuristicas-normalizadores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normalizadores e Heurísticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processamento-imagens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de IA de Imagens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema-manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governança e Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supabase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sincronização com Supabase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossário de Termos Técnicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-limpeza-de-bases-de-dados-supabase-watermelondb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧹 1. Limpeza de Bases de Dados (Supabase &amp; WatermelonDB)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧹 1. Limpeza de Bases de Dados (Supabase &amp; WatermelonDB)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-limpeza-no-supabase-remoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Limpeza no Supabase (Remoto)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A. Limpeza no Supabase (Remoto)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcao-1-via-script-cli-typescript-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opção 1: Via Script CLI (TypeScript / Node.js)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcao-2-via-console-sql-no-supabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opção 2: Via Console SQL no Supabase
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-limpeza-no-watermelondb-dispositivos-pwa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Limpeza no WatermelonDB (Dispositivos / PWA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-processo-de-execucao-do-pipeline-e-mapeamento-de-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 2. Processo de Execução do Pipeline e Mapeamento de Desempenho
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 2. Processo de Execução do Pipeline e Mapeamento de Desempenho">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-scrapers-primarios-e-tempos-medios-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Scrapers Primários e Tempos Médios de Execução
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-ciclo-completo-do-pipeline-e-tempo-medio-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Ciclo Completo do Pipeline e Tempo Médio Geral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-relacao-atual-de-fabricantes-marcas-e-produtos-no-banco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Relação Atual de Fabricantes, Marcas e Produtos no Banco
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-comandos-para-execucao-e-sincronizacao-automatizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Comandos para Execução e Sincronização Automatizada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-acompanhamento-de-logs-e-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 3. Acompanhamento de Logs e Auditoria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 3. Acompanhamento de Logs e Auditoria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-monitoramento-de-conflitos-de-ean-dun-conflicts_logjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Monitoramento de Conflitos de EAN / DUN (conflicts_log.json)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-acompanhamento-de-relatorios-de-auditoria-audit_reportjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Acompanhamento de Relatórios de Auditoria (audit_report.json)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-verificacao-de-saude-das-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 4. Verificação de Saúde das Bases
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-pratico-de-operacoes-cli-e-manutencao-de-dados">🛠️ Guia Prático de Operações, CLI e Manutenção de Dados</h1>
+<p>Este guia fornece os procedimentos operacionais padrão para administradores e engenheiros de dados executarem <strong>limpeza de bases</strong>, <strong>execução do pipeline ETL</strong>, <strong>benchmarks de desempenho</strong>, <strong>acompanhamento de logs</strong> e <strong>verificação de saúde do sistema</strong> no ecossistema PaletScan.</p>
+<hr />
+<h2 id="1-limpeza-de-bases-de-dados-supabase-watermelondb">🧹 1. Limpeza de Bases de Dados (Supabase &amp; WatermelonDB)</h2>
+<p>Quando for necessário resetar o ambiente antes de um novo ciclo de ingestão de dados, siga as instruções abaixo:</p>
+<h3 id="a-limpeza-no-supabase-remoto">A. Limpeza no Supabase (Remoto)</h3>
+<p>Existem duas formas seguras de excluir todos os dados das tabelas do Supabase mantendo a estrutura relacional pronta para novos inserts:</p>
+<h4 id="opcao-1-via-script-cli-typescript-nodejs">Opção 1: Via Script CLI (TypeScript / Node.js)</h4>
+<p>Execute o comando a partir do diretório raiz do <code>paletscan-etl</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npx<span class="w"> </span>tsx<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s1">import { createClient } from &quot;@supabase/supabase-js&quot;;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s1">import dotenv from &quot;dotenv&quot;;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s1">dotenv.config();</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s1">const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s1">async function wipeAll() {</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s1">  console.log(&quot;🧹 Limpando todas as tabelas do Supabase...&quot;);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="s1">  const { error: e1 } = await supabase.from(&quot;codigos_barras&quot;).delete().neq(&quot;id&quot;, &quot;00000000-0000-0000-0000-000000000000&quot;);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="s1">  console.log(&quot;codigos_barras limpo:&quot;, e1?.message || &quot;OK&quot;);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="s1">  const { error: e2 } = await supabase.from(&quot;produtos&quot;).delete().neq(&quot;id&quot;, &quot;00000000-0000-0000-0000-000000000000&quot;);</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="s1">  console.log(&quot;produtos limpo:&quot;, e2?.message || &quot;OK&quot;);</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="s1">  const { error: e3 } = await supabase.from(&quot;marcas&quot;).delete().neq(&quot;id&quot;, &quot;00000000-0000-0000-0000-000000000000&quot;);</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="s1">  console.log(&quot;marcas limpo:&quot;, e3?.message || &quot;OK&quot;);</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="s1">  const { error: e4 } = await supabase.from(&quot;fabricantes&quot;).delete().neq(&quot;id&quot;, &quot;00000000-0000-0000-0000-000000000000&quot;);</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="s1">  console.log(&quot;fabricantes limpo:&quot;, e4?.message || &quot;OK&quot;);</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="s1">  console.log(&quot;✅ Limpeza concluída!&quot;);</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="s1">}</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="s1">wipeAll();</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="s1">&#39;</span>
+</span></code></pre></div>
+<h4 id="opcao-2-via-console-sql-no-supabase">Opção 2: Via Console SQL no Supabase</h4>
+<p>Caso prefira executar via interface administrativa do Supabase SQL Editor:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- Exclusão rápida e segura em cascata</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">TRUNCATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">codigos_barras</span><span class="p">,</span><span class="w"> </span><span class="n">paletes_armazenados</span><span class="p">,</span><span class="w"> </span><span class="n">produtos</span><span class="p">,</span><span class="w"> </span><span class="n">marcas</span><span class="p">,</span><span class="w"> </span><span class="n">fabricantes</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">;</span>
+</span></code></pre></div>
+<hr />
+<h3 id="b-limpeza-no-watermelondb-dispositivos-pwa">B. Limpeza no WatermelonDB (Dispositivos / PWA)</h3>
+<p>Para limpar a base de dados local SQLite / IndexedDB no aplicativo do coletor / navegador:</p>
+<ol>
+<li>Abra o aplicativo PaletScan PWA.</li>
+<li>Acesse o menu de <strong>Configurações</strong> <span class="arithmatex">\(\rightarrow\)</span> clique no botão <strong>"Limpar Banco Local e Sincronizar"</strong>.</li>
+<li>O aplicativo limpará o WatermelonDB (<code>unsafeResetDatabase()</code>), zerará o <code>CacheStorage</code> do Service Worker, limpará o <code>localStorage</code> e executará o <code>pullChanges</code> limpo diretamente da nuvem.</li>
+</ol>
+<hr />
+<h2 id="2-processo-de-execucao-do-pipeline-e-mapeamento-de-desempenho">🚀 2. Processo de Execução do Pipeline e Mapeamento de Desempenho</h2>
+<h3 id="a-scrapers-primarios-e-tempos-medios-de-execucao">A. Scrapers Primários e Tempos Médios de Execução</h3>
+<p>A camada de extração é composta por 4 scrapers especializados que realizam requisições HTTP paralelas aos portais institucionais e APIs B2B dos fabricantes:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Scraper / Fabricante</th>
+<th style="text-align: left;">Diretório do Módulo</th>
+<th style="text-align: left;">Itens Brutos Coletados</th>
+<th style="text-align: left;">Tempo Médio de Execução</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Friboi / JBS / Swift</strong></td>
+<td style="text-align: left;"><code>scrapers/friboi/</code></td>
+<td style="text-align: left;">~1.812 itens brutos</td>
+<td style="text-align: left;"><strong>35s a 45s</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Seara Alimentos</strong></td>
+<td style="text-align: left;"><code>scrapers/seara/</code></td>
+<td style="text-align: left;">~621 itens brutos</td>
+<td style="text-align: left;"><strong>20s a 30s</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>BRF (Sadia / Perdigão)</strong></td>
+<td style="text-align: left;"><code>scrapers/brf/</code></td>
+<td style="text-align: left;">~1.120 itens brutos</td>
+<td style="text-align: left;"><strong>25s a 35s</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cooperativa Lar</strong></td>
+<td style="text-align: left;"><code>scrapers/lar/</code></td>
+<td style="text-align: left;">~111 itens brutos</td>
+<td style="text-align: left;"><strong>5s a 10s</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Para re-extrair dados brutos dos portais institucionais B2B:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Scraper Friboi / JBS / Swift</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>npm<span class="w"> </span>run<span class="w"> </span>scrape:friboi
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Scraper Seara (Multi-Site 100% Live: B2B, B2C, E-Com)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>npm<span class="w"> </span>run<span class="w"> </span>scrape:seara
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Scraper BRF (Sadia, Perdigão, Qualy, Central MBRF, Catalogo PDF)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>npx<span class="w"> </span>tsx<span class="w"> </span>scrapers/brf/index.ts
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Scraper Lar (Cooperativa Agroindustrial Lar)</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>npx<span class="w"> </span>tsx<span class="w"> </span>scrapers/lar/index.ts
+</span></code></pre></div>
+<hr />
+<h3 id="b-ciclo-completo-do-pipeline-e-tempo-medio-geral">B. Ciclo Completo do Pipeline e Tempo Médio Geral</h3>
+<p>O pipeline completo de tratamento, normalização, carga no Supabase e exportação do catálogo PWA opera em 4 etapas sequenciais automatizadas:</p>
+<pre class="mermaid"><code>flowchart LR
+    A["1. Scrapers B2B\n(~1.5 - 2.0 min)"] --&gt; B["2. Transformação UUIDv5\ne Validação EAN/DUN\n(~10s - 15s)"]
+    B --&gt; C["3. Carga Supabase Sync\n(db_sync/sync.ts)\n(~35s - 45s)"]
+    C --&gt; D["4. Exclusão de Órfãos\ne Exportação PWA JSON\n(~5s - 8s)"]</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Etapa do Pipeline</th>
+<th style="text-align: left;">Script Executado</th>
+<th style="text-align: left;">Descrição da Operação</th>
+<th style="text-align: left;">Tempo Médio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Extração Concorrente</strong></td>
+<td style="text-align: left;">Scrapers B2B (Friboi, Seara, BRF, Lar)</td>
+<td style="text-align: left;">Varredura de sitemaps XML e APIs REST dos 4 fabricantes.</td>
+<td style="text-align: left;"><strong>1.5 min a 2.0 min</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Transformação Relacional</strong></td>
+<td style="text-align: left;">Core Engine (<code>core/</code>)</td>
+<td style="text-align: left;">Validação estrita de EANs, conversão para UUIDv5 e normalização de <code>EAN</code>/<code>DUN</code>.</td>
+<td style="text-align: left;"><strong>10s a 15s</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Sincronização Supabase</strong></td>
+<td style="text-align: left;"><code>db_sync/sync.ts</code></td>
+<td style="text-align: left;">Upsert ordenado nas tabelas <code>fabricantes</code> <span class="arithmatex">\(\rightarrow\)</span> <code>marcas</code> <span class="arithmatex">\(\rightarrow\)</span> <code>produtos</code> <span class="arithmatex">\(\rightarrow\)</span> <code>codigos_barras</code>.</td>
+<td style="text-align: left;"><strong>35s a 45s</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4. Sanitização &amp; Exportação</strong></td>
+<td style="text-align: left;"><code>generate_pwa_produtos_json.ts</code></td>
+<td style="text-align: left;">Expurgativo de produtos sem EAN e geração de <code>produtos.json</code> para o PWA.</td>
+<td style="text-align: left;"><strong>5s a 8s</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TEMPO TOTAL DO PIPELINE</strong></td>
+<td style="text-align: left;"><strong>Pipeline Completo</strong></td>
+<td style="text-align: left;"><strong>Ciclo completo de ponta a ponta (ingestão a publicação PWA).</strong></td>
+<td style="text-align: left;"><strong>~2.5 min a 3.0 min</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="c-relacao-atual-de-fabricantes-marcas-e-produtos-no-banco">C. Relação Atual de Fabricantes, Marcas e Produtos no Banco</h3>
+<p>Com a conclusão do pipeline, a base relacional apresenta a seguinte distribuição consolidada de registros auditados:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Fabricante (Holding)</th>
+<th style="text-align: left;">Marcas Principais Mapeadas</th>
+<th style="text-align: left;">Produtos Validados (com EAN)</th>
+<th style="text-align: left;">Códigos de Barras (EAN + DUN)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>JBS S.A. (Friboi)</strong></td>
+<td style="text-align: left;">Friboi, Reserva, Maturatta, 1953, Swift, Do Chef, Friboi Black</td>
+<td style="text-align: left;"><strong>1.501</strong></td>
+<td style="text-align: left;">4.503</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>BRF S.A.</strong></td>
+<td style="text-align: left;">Sadia, Perdigão, Qualy, Chester, MBRF</td>
+<td style="text-align: left;"><strong>1.025</strong></td>
+<td style="text-align: left;">3.073</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Seara Alimentos LTDA</strong></td>
+<td style="text-align: left;">Seara, Seara Gourmet, Incrível, Rezende, Wilson</td>
+<td style="text-align: left;"><strong>365</strong></td>
+<td style="text-align: left;">699</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cooperativa Lar</strong></td>
+<td style="text-align: left;">Lar Alimentos</td>
+<td style="text-align: left;"><strong>110</strong></td>
+<td style="text-align: left;">220</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TOTAL GERAL</strong></td>
+<td style="text-align: left;"><strong>141 Marcas Comerciais</strong></td>
+<td style="text-align: left;"><strong>3.001 Produtos</strong></td>
+<td style="text-align: left;"><strong>8.495 Códigos</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="d-comandos-para-execucao-e-sincronizacao-automatizada">D. Comandos para Execução e Sincronização Automatizada</h3>
+<p>Para rodar a carga relacional otimizada no Supabase e gerar o catálogo do PWA em um único fluxo:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Sincroniza todos os arquivos de staging com o Supabase</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>npm<span class="w"> </span>run<span class="w"> </span>sync:supabase
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Exporta o catálogo produtos.json padronizado para o PWA</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>npx<span class="w"> </span>tsx<span class="w"> </span>scripts/generate_pwa_produtos_json.ts
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Executa auditoria exaustiva de integridade e anomalias</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>npx<span class="w"> </span>tsx<span class="w"> </span>scripts/audit_database.ts
+</span></code></pre></div>
+<hr />
+<h2 id="3-acompanhamento-de-logs-e-auditoria">📊 3. Acompanhamento de Logs e Auditoria</h2>
+<h3 id="a-monitoramento-de-conflitos-de-ean-dun-conflicts_logjson">A. Monitoramento de Conflitos de EAN / DUN (<code>conflicts_log.json</code>)</h3>
+<p>Códigos de barras duplicados ou com colisões cross-scraper são registrados em <code>staging/conflicts_log.json</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Exibir últimos conflitos registrados no staging</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>cat<span class="w"> </span>staging/conflicts_log.json<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">40</span>
+</span></code></pre></div>
+<h3 id="b-acompanhamento-de-relatorios-de-auditoria-audit_reportjson">B. Acompanhamento de Relatórios de Auditoria (<code>audit_report.json</code>)</h3>
+<p>Para verificar se existem produtos sem código ou com anomalias de EAN:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Exibir relatório de auditoria gerado pelo audit_database.ts</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>cat<span class="w"> </span>staging/audit_report.json
+</span></code></pre></div>
+<hr />
+<h2 id="4-verificacao-de-saude-das-bases">🔍 4. Verificação de Saúde das Bases</h2>
+<p>Para consultar a contagem exata de registros salvos no Supabase a qualquer momento:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>npx<span class="w"> </span>tsx<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="s1">import { createClient } from &quot;@supabase/supabase-js&quot;;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="s1">import dotenv from &quot;dotenv&quot;;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="s1">dotenv.config();</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="s1">const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="s1">async function verify() {</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="s1">  const { count: prodCount } = await supabase.from(&quot;produtos&quot;).select(&quot;*&quot;, { count: &quot;exact&quot;, head: true });</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="s1">  const { count: codCount } = await supabase.from(&quot;codigos_barras&quot;).select(&quot;*&quot;, { count: &quot;exact&quot;, head: true });</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="s1">  const { count: marcaCount } = await supabase.from(&quot;marcas&quot;).select(&quot;*&quot;, { count: &quot;exact&quot;, head: true });</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="s1">  const { count: fabCount } = await supabase.from(&quot;fabricantes&quot;).select(&quot;*&quot;, { count: &quot;exact&quot;, head: true });</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="s1">  console.log(&quot;📊 STATUS ATUAL DAS BASES (SUPABASE):&quot;);</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="s1">  console.log(` 🏢 Fabricantes:        ${fabCount}`);</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="s1">  console.log(` 🏷️  Marcas:             ${marcaCount}`);</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="s1">  console.log(` 🥩 Produtos:           ${prodCount}`);</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="s1">  console.log(` 📊 Códigos de Barras:  ${codCount}`);</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="s1">}</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="s1">verify();</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="s1">&#39;</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Anterior: Início">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Início
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../scrapers-multi-fornecedores/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Scrapers Multi-Fornecedores">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Scrapers Multi-Fornecedores
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.expand", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

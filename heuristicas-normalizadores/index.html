@@ -1,0 +1,989 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica oficial do pipeline de dados, scrapers B2B, IA de imagem e sincronização Supabase do PaletScan.">
+      
+      
+        <meta name="author" content="Jean Barbosa & Antigravity Data Engineering Team">
+      
+      
+        <link rel="canonical" href="https://NaejBarbosa.github.io/paletscan-etl/heuristicas-normalizadores/">
+      
+      
+        <link rel="prev" href="../scrapers-multi-fornecedores/">
+      
+      
+        <link rel="next" href="../processamento-imagens/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Normalizadores e Heurísticas - PaletScan ETL - Documentação Técnica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#core-engine-heuristicas-e-normalizadores" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="PaletScan ETL - Documentação Técnica" class="md-header__button md-logo" aria-label="PaletScan ETL - Documentação Técnica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PaletScan ETL - Documentação Técnica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Normalizadores e Heurísticas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Alternar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Alternar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PaletScan ETL - Documentação Técnica" class="md-nav__button md-logo" aria-label="PaletScan ETL - Documentação Técnica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    PaletScan ETL - Documentação Técnica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Operações e CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scrapers-multi-fornecedores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scrapers Multi-Fornecedores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normalizadores e Heurísticas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normalizadores e Heurísticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-normalizacao-de-texto-e-pesos-text_parserts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔤 1. Normalização de Texto e Pesos (text_parser.ts)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔤 1. Normalização de Texto e Pesos (text_parser.ts)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-conversao-de-caixa-e-preservacao-de-acentos-title-case-pt-br" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Conversão de Caixa e Preservação de Acentos (Title Case PT-BR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-extracao-de-pesos-numericos-e-deteccao-de-peso-variavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Extração de Pesos Numéricos e Detecção de Peso Variável
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-algoritmos-matematicos-modulus-10-gs1-ean-13-dun-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔢 2. Algoritmos Matemáticos Modulus 10 (GS1 EAN-13 &amp; DUN-14)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔢 2. Algoritmos Matemáticos Modulus 10 (GS1 EAN-13 &amp; DUN-14)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-tipagem-estrita-como-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ A. Tipagem Estrita como String
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-funcao-normalizeean13-gs1-modulus-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 B. Função normalizeEAN13 (GS1 Modulus 10)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-funcao-normalizedun14-e-derivacao-logistica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 C. Função normalizeDUN14 e Derivação Logística
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-classificadores-e-heuristicas-de-dominio-coreheuristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏷️ 3. Classificadores e Heurísticas de Domínio (core/heuristics/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏷️ 3. Classificadores e Heurísticas de Domínio (core/heuristics/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-classificacao-de-marcas-brand_classifierts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Classificação de Marcas (brand_classifier.ts)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-classificacao-de-categorias-e-conservacao-category_classifierts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Classificação de Categorias e Conservação (category_classifier.ts)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processamento-imagens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de IA de Imagens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema-manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governança e Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supabase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sincronização com Supabase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossário de Termos Técnicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-normalizacao-de-texto-e-pesos-text_parserts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔤 1. Normalização de Texto e Pesos (text_parser.ts)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔤 1. Normalização de Texto e Pesos (text_parser.ts)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-conversao-de-caixa-e-preservacao-de-acentos-title-case-pt-br" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Conversão de Caixa e Preservação de Acentos (Title Case PT-BR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-extracao-de-pesos-numericos-e-deteccao-de-peso-variavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Extração de Pesos Numéricos e Detecção de Peso Variável
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-algoritmos-matematicos-modulus-10-gs1-ean-13-dun-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔢 2. Algoritmos Matemáticos Modulus 10 (GS1 EAN-13 &amp; DUN-14)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔢 2. Algoritmos Matemáticos Modulus 10 (GS1 EAN-13 &amp; DUN-14)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-tipagem-estrita-como-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ A. Tipagem Estrita como String
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-funcao-normalizeean13-gs1-modulus-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 B. Função normalizeEAN13 (GS1 Modulus 10)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-funcao-normalizedun14-e-derivacao-logistica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 C. Função normalizeDUN14 e Derivação Logística
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-classificadores-e-heuristicas-de-dominio-coreheuristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏷️ 3. Classificadores e Heurísticas de Domínio (core/heuristics/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏷️ 3. Classificadores e Heurísticas de Domínio (core/heuristics/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-classificacao-de-marcas-brand_classifierts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Classificação de Marcas (brand_classifier.ts)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-classificacao-de-categorias-e-conservacao-category_classifierts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Classificação de Categorias e Conservação (category_classifier.ts)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="core-engine-heuristicas-e-normalizadores">🧮 Core Engine: Heurísticas e Normalizadores</h1>
+<p>O diretório <a href="file:///root/paletscan-etl/core/"><code>core/</code></a> abriga os algoritmos de sanitização, normalização e heurísticas de domínio do PaletScan ETL. É o responsável por transformar dados brutos e ruidosos vindos da web em registros padronizados com alta integridade de negócios.</p>
+<hr />
+<h2 id="1-normalizacao-de-texto-e-pesos-text_parserts">🔤 1. Normalização de Texto e Pesos (<code>text_parser.ts</code>)</h2>
+<p>O arquivo <a href="file:///root/paletscan-etl/core/normalizers/text_parser.ts"><code>core/normalizers/text_parser.ts</code></a> implementa regras estritas de padronização textual voltadas para a indústria alimentícia em Português (PT-BR).</p>
+<h3 id="a-conversao-de-caixa-e-preservacao-de-acentos-title-case-pt-br">A. Conversão de Caixa e Preservação de Acentos (Title Case PT-BR)</h3>
+<ul>
+<li>Converte textos em <code>ALL CAPS</code> para <code>Title Case</code>.</li>
+<li>Preserva acentuações corretas da língua portuguesa (ex: <em>"FILÉ DE PEITO DE FRANGO"</em> ➔ <em>"Filé de Peito de Frango"</em>).</li>
+<li>Prepara conjunções e preposições curtas em minúsculo (<em>de, da, do, com, em, e</em>).</li>
+</ul>
+<h3 id="b-extracao-de-pesos-numericos-e-deteccao-de-peso-variavel">B. Extração de Pesos Numéricos e Detecção de Peso Variável</h3>
+<ul>
+<li><strong>Pesos Fixos (<code>peso_gramas</code>)</strong>: Extrai valores gramaticais e converte para gramas numéricas inteiras (ex: <code>"500g"</code> ➔ <code>500</code>, <code>"1.2kg"</code> ➔ <code>1200</code>).</li>
+<li><strong>Cortes por Peso Variável</strong>: Identifica cortes de carne e produtos vendidos por pesagem dinâmica na câmara fria (ex: <em>"peça vácuo"</em>, <em>"peso variável"</em>), ajustando a descrição do produto para incluir o sufixo <code>(pesar)</code>.</li>
+</ul>
+<hr />
+<h2 id="2-algoritmos-matematicos-modulus-10-gs1-ean-13-dun-14">🔢 2. Algoritmos Matemáticos Modulus 10 (GS1 EAN-13 &amp; DUN-14)</h2>
+<p>A validação de códigos de barras é uma das etapas mais críticas do PaletScan. Códigos mal formatados ou com zeros truncados inviabilizam a leitura no scanner do operador.</p>
+<pre class="mermaid"><code>flowchart TD
+    A["Código Bruto de Entrada"] --&gt; B{"Tipagem de Dado?"}
+    B --&gt;|Integer ou Number| C["ERRO: Risco de Truncamento de Zeros"]
+    B --&gt;|String Estrita| D["Inspeciona Tamanho da String"]
+    D --&gt;|12 Dígitos| E["Adiciona Prefixo e Calcula 13º Dígito Mod10"]
+    D --&gt;|13 Dígitos com 0789...| F["Remove 0 Espúrio e Recalcula Mod10"]
+    D --&gt;|13 Dígitos Válidos| G["EAN-13 Confirmado"]
+    G --&gt; H{"DUN-14 Existe?"}
+    H --&gt;|Sim| I["Valida ou Recalcula Mod10 para 14 Dígitos"]
+    H --&gt;|Não| J["Deriva DUN-14: 1 + EAN12 + Mod10"]
+    E --&gt; K["EAN-13 (13 dig) e DUN-14 (14 dig) Sanitizados"]
+    F --&gt; K
+    I --&gt; K
+    J --&gt; K</code></pre>
+<h3 id="a-tipagem-estrita-como-string">🛡️ A. Tipagem Estrita como String</h3>
+<p>Todas as funções de código de barras trabalham <strong>exclusivamente com o tipo <code>string</code></strong>. Isso impede que compiladores ou bibliotecas convertam códigos iniciados em zero (como <code>07891515...</code>) em números inteiros, o que causaria a perda irreparable de zeros à esquerda.</p>
+<h3 id="b-funcao-normalizeean13-gs1-modulus-10">📐 B. Função <code>normalizeEAN13</code> (GS1 Modulus 10)</h3>
+<ul>
+<li><strong>Sanitização de Zeros Espúrios</strong>: Detecta sequências de 13 dígitos iniciadas com zero indevido (<code>0789...</code> ou <code>0790...</code>), limpa o zero inicial e recalcula o dígito verificador real.</li>
+<li><strong>Tratamento de 12 Dígitos</strong>: Caso o fornecedor retorne um EAN de 12 dígitos, calcula matematicamente o 13º dígito verificador utilizando o algoritmo estipulado pela GS1:</li>
+</ul>
+<div class="arithmatex">\[\text{Soma} = \sum_{i=1}^{12} d_i \times w_i \quad \text{onde } w_i = 1 \text{ (posições ímpares)}, w_i = 3 \text{ (posições pares)}\]</div>
+<div class="arithmatex">\[\text{Dígito Verificador} = (10 - (\text{Soma} \bmod 10)) \bmod 10\]</div>
+<h3 id="c-funcao-normalizedun14-e-derivacao-logistica">📦 C. Função <code>normalizeDUN14</code> e Derivação Logística</h3>
+<ul>
+<li><strong>Validação de DUN-14</strong>: Garante que o código logístico da caixa (DUN-14) possua exatamente 14 dígitos e passe no teste Modulus 10.</li>
+<li><strong>Derivação Automática a partir do EAN-13</strong>: Quando o fornecedor B2B não disponibiliza o DUN-14 da caixa, o PaletScan constrói o DUN-14 determinístico utilizando a regra logística internacional:</li>
+</ul>
+<div class="arithmatex">\[\text{DUN-14 Derivado} = \text{'1'} + \text{EAN13}_{[1..12]} + \text{Modulus10}(\text{'1'} + \text{EAN13}_{[1..12]})\]</div>
+<hr />
+<h2 id="3-classificadores-e-heuristicas-de-dominio-coreheuristics">🏷️ 3. Classificadores e Heurísticas de Domínio (<code>core/heuristics/</code>)</h2>
+<h3 id="a-classificacao-de-marcas-brand_classifierts">A. Classificação de Marcas (<code>brand_classifier.ts</code>)</h3>
+<p>O módulo <a href="file:///root/paletscan-etl/core/heuristics/brand_classifier.ts"><code>brand_classifier.ts</code></a> identifica a marca do produto através da análise de padrões de texto e fallback para holdings de fabricantes:
+- <strong>Padrões Regex</strong>: Detecta variações comerciais como <em>Friboi Reserva, Maturatta Friboi, Swift, Seara Gourmet, Mataboi, Minerva Prime, 1953 Friboi</em>.
+- <strong>Mapeamento de Fabricante</strong>: Associa automaticamente a marca à Holding correspondente (ex: <em>Friboi</em> ➔ <em>JBS S.A.</em>).</p>
+<h3 id="b-classificacao-de-categorias-e-conservacao-category_classifierts">B. Classificação de Categorias e Conservação (<code>category_classifier.ts</code>)</h3>
+<p>O módulo <a href="file:///root/paletscan-etl/core/heuristics/category_classifier.ts"><code>category_classifier.ts</code></a> segmenta o produto em categorias funcionais e determina a temperatura de conservação:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Categoria</th>
+<th style="text-align: left;">Tipo de Conservação</th>
+<th style="text-align: left;">Palavras-Chave de Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Bovinos - Cortes Resfriados</strong></td>
+<td style="text-align: left;"><code>Resfriado (0°C a 4°C)</code></td>
+<td style="text-align: left;"><em>vácuo, resfriado, peça, carne fresca</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Bovinos - Cortes Congelados</strong></td>
+<td style="text-align: left;"><code>Congelado (-18°C)</code></td>
+<td style="text-align: left;"><em>congelado, caixa IQF, bloco</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Aves e Suínos</strong></td>
+<td style="text-align: left;"><code>Resfriado / Congelado</code></td>
+<td style="text-align: left;"><em>frango, lombo, costela suína, pernil</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Processados e Industrializados</strong></td>
+<td style="text-align: left;"><code>Resfriado / Ambiente</code></td>
+<td style="text-align: left;"><em>hambúrguer, linguiça, salsicha, almôndega</em></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../scrapers-multi-fornecedores/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Scrapers Multi-Fornecedores">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Scrapers Multi-Fornecedores
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../processamento-imagens/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Pipeline de IA de Imagens">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Pipeline de IA de Imagens
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.expand", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
