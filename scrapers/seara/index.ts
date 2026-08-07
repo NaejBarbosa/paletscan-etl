@@ -197,7 +197,7 @@ function parseSearaB2CPage(html: string, pageUrl: string): RawSearaProduct | nul
   if (!title) return null;
 
   let ean = '';
-  const eanMatch1 = html.match(/data-ean="(\d{13})"/i) || html.match(/data-dl-product_ean="(\d{13})"/i);
+  const eanMatch1 = html.match(/data-ean="\s*(\d{13})\s*"/i) || html.match(/data-dl-product_ean="\s*(\d{13})\s*"/i);
   if (eanMatch1) {
     ean = eanMatch1[1];
   } else {
