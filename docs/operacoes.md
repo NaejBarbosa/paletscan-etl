@@ -4,62 +4,51 @@ Este guia fornece os procedimentos operacionais padrão para administradores e e
 
 ---
 
-## 🧹 1. Limpeza de Bases de Dados (Supabase & WatermelonDB)
+## 🧹 1. Limpeza Total de Bases de Dados e Caches Multi-Camadas
 
-Quando for necessário resetar o ambiente antes de um novo ciclo de ingestão de dados, siga as instruções abaixo:
+Quando for necessário resetar o ambiente ou zerar completamente o catálogo antes de um novo ciclo de ingestão de dados, siga o protocolo de limpeza em 3 níveis (Banco Remoto, Fallbacks Estáticos e Cache PWA):
 
-### A. Limpeza no Supabase (Remoto)
-Existem duas formas seguras de excluir todos os dados das tabelas do Supabase mantendo a estrutura relacional pronta para novos inserts:
-
-#### Opção 1: Via Script CLI (TypeScript / Node.js)
-Execute o comando a partir do diretório raiz do `paletscan-etl`:
+### A. Limpeza no Supabase (Remoto via CLI)
+Execute o script dedicado de limpeza sem acionar a re-sincronização do pipeline:
 
 ```bash
-npx tsx -e '
-import { createClient } from "@supabase/supabase-js";
-import dotenv from "dotenv";
-dotenv.config();
-
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
-
-async function wipeAll() {
-  console.log("🧹 Limpando todas as tabelas do Supabase...");
-
-  const { error: e1 } = await supabase.from("codigos_barras").delete().neq("id", "00000000-0000-0000-0000-000000000000");
-  console.log("codigos_barras limpo:", e1?.message || "OK");
-
-  const { error: e2 } = await supabase.from("produtos").delete().neq("id", "00000000-0000-0000-0000-000000000000");
-  console.log("produtos limpo:", e2?.message || "OK");
-
-  const { error: e3 } = await supabase.from("marcas").delete().neq("id", "00000000-0000-0000-0000-000000000000");
-  console.log("marcas limpo:", e3?.message || "OK");
-
-  const { error: e4 } = await supabase.from("fabricantes").delete().neq("id", "00000000-0000-0000-0000-000000000000");
-  console.log("fabricantes limpo:", e4?.message || "OK");
-
-  console.log("✅ Limpeza concluída!");
-}
-
-wipeAll();
-'
+npx tsx db_sync/wipe_db_only.ts
 ```
 
-#### Opção 2: Via Console SQL no Supabase
-Caso prefira executar via interface administrativa do Supabase SQL Editor:
+> ⚠️ **Nota Técnica:** O script executa exclusões em bloco com `.neq('id', '00000000-0000-0000-0000-000000000000')` e fallback em lotes de 50 registros, evitando erros `400 Bad Request` do PostgREST devido a limites de tamanho de URL.
+
+### B. Limpeza dos Arquivos Estáticos de Fallback (PWA)
+Caso os arquivos estáticos `produtos.json` e `public/produtos.json` não sejam zerados, as APIs Next.js (`/api/validar`) continuarão servindo o catálogo antigo de backup offline.
+
+Execute o comando para zerar os fallbacks estáticos nos repositórios:
+
+```bash
+# Zerar no repositório PWA principal
+echo "[]" > /root/meus-repos/PaletScan/produtos.json
+echo "[]" > /root/meus-repos/PaletScan/public/produtos.json
+
+# Zerar no repositório PWA secundário
+echo "[]" > /root/repo_pwa/produtos.json
+echo "[]" > /root/repo_pwa/public/produtos.json
+```
+
+### C. Purga de Caches e Trava de Segurança no PWA (IndexedDB / Vercel KV / Service Worker)
+Para garantir que os coletores e navegadores não mantenham dados legados em cache:
+
+1. **Atualização da Chave de Reset Forçado (`cleanKey`)**:
+   No arquivo `lib/database/sync.ts`, altere `cleanKey` (ex: `'ps_pwa_reset_v41_empty_wipe'`). Isso força o WatermelonDB/IndexedDB de todos os dispositivos clientes a expurgar a base local ao sincronizar.
+2. **Atualização da Chave de Cache Redis/KV**:
+   No arquivo `lib/cache.ts`, atualize `PRODUCT_CATALOG_CACHE_KEY` para forçar a substituição de memórias em cache na nuvem (Vercel KV).
+3. **Trava do Motor de Imagens (`IMAGE_CACHE`)**:
+   O módulo `lib/imageOfflineCache.ts` possui trava estrita no `prefetchGlobalCatalogImages()`: se o catálogo local do WatermelonDB contiver 0 produtos, o pré-carregamento de imagens é cancelado imediatamente.
+
+### D. Execução via Console SQL no Supabase
+Caso prefira zerar via SQL Editor no painel do Supabase:
 
 ```sql
 -- Exclusão rápida e segura em cascata
 TRUNCATE TABLE codigos_barras, paletes_armazenados, produtos, marcas, fabricantes CASCADE;
 ```
-
----
-
-### B. Limpeza no WatermelonDB (Dispositivos / PWA)
-Para limpar a base de dados local SQLite / IndexedDB no aplicativo do coletor / navegador:
-
-1. Abra o aplicativo PaletScan PWA.
-2. Acesse o menu de **Configurações** $\rightarrow$ clique no botão **"Limpar Banco Local e Sincronizar"**.
-3. O aplicativo limpará o WatermelonDB (`unsafeResetDatabase()`), zerará o `CacheStorage` do Service Worker, limpará o `localStorage` e executará o `pullChanges` limpo diretamente da nuvem.
 
 ---
 
