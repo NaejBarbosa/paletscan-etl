@@ -101,6 +101,13 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
   - Corrigida a lógica em [`repo_pwa/pages/index.tsx`](file:///root/repo_pwa/pages/index.tsx) para **sempre priorizar a base viva da API (`apiProducts`)**, eliminando o bloqueio por contagem de cache local.
   - Ajustada a resposta do sincronizador [`repo_pwa/lib/database/sync.ts`](file:///root/repo_pwa/lib/database/sync.ts) durante `forceReset` para retornar produtos no array `created` (em vez de `updated`), garantindo o repovoamento total dos registros purificados em Title Case (3.001 produtos e 0 anomalias).
 - [x] **Módulo de Validação e Aprovação de Imagens Pendentes no PWA**: Módulo administrativo em [`repo_pwa/components/ValidacaoPendenciasAdmin.tsx`](file:///root/repo_pwa/components/ValidacaoPendenciasAdmin.tsx) e API [`repo_pwa/pages/api/admin/pendencias.ts`](file:///root/repo_pwa/pages/api/admin/pendencias.ts) integrado ao `/admin` do PWA.
+- [x] **Web Scraper Cooperativa Central Aurora Alimentos (Novo Padrão & Fallback PDF)**: [`scrapers/aurora/index.ts`](file:///root/paletscan-etl/scrapers/aurora/index.ts) com raspagem de sitemap XML ao vivo, ingestão enriquecida do catálogo PDF/SQLite (385 produtos com EAN/DUN), normalização via `text_parser.ts`, geração de staging relacional UUIDv5 (`aurora_staging.json` / `aurora_staging_uuid.json`), inclusão das sub-marcas em `brand_classifier.ts` e módulo de fallback para extração geométrica do PDF + tratamento de fundo branco RGB `#FFFFFF` e salvamento em WebP ([`images/ai_pipeline/pdf_extractor.py`](file:///root/paletscan-etl/images/ai_pipeline/pdf_extractor.py) e [`core/validators/pdf_extractor.ts`](file:///root/paletscan-etl/core/validators/pdf_extractor.ts)) acionado automaticamente para itens sem imagem no sitemap.
+- [x] **Módulo de Limpeza Total e Purga de Caches Multi-Camadas (Supabase & PWA)**:
+  - Script de reset estrito [`db_sync/wipe_db_only.ts`](file:///root/paletscan-etl/db_sync/wipe_db_only.ts) para zerar tabelas no Supabase (`fabricantes`, `marcas`, `produtos`, `codigos_barras`) com resiliência a limites de URL do PostgREST.
+  - Eliminação de fallbacks estáticos legados nos repositórios PWA (`meus-repos/PaletScan` e `repo_pwa`), zerando os arquivos `produtos.json` e `public/produtos.json`.
+  - Atualização da chave de reset forçado (`cleanKey`) para `'ps_pwa_reset_v41_empty_wipe'` em [`lib/database/sync.ts`](file:///root/repo_pwa/lib/database/sync.ts) e purga de cache KV Redis via `PRODUCT_CATALOG_CACHE_KEY`.
+  - Trava de segurança no motor de cache offline de mídia ([`lib/imageOfflineCache.ts`](file:///root/repo_pwa/lib/imageOfflineCache.ts)) em `prefetchGlobalCatalogImages()` para omitir o pré-carregamento de imagens quando o banco local contiver `0` produtos.
+
 
 ---
 
