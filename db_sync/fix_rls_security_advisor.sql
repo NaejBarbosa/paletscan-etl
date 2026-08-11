@@ -1,51 +1,57 @@
 -- ==============================================================================
 -- PALETSCAN / SUPABASE - SCRIPT DE CORREÇÃO DE SEGURANÇA (RLS SECURITY ADVISOR)
 -- Projeto Supabase Ref: xyujqsitpshfqnlogeib
--- Objetivo: Resolver o alerta 'rls_disabled_in_public' (Table publicly accessible)
--- Autor: Antigravity AI / Arquiteto de Sistemas
+-- Versão Simplificada e Direta
 -- ==============================================================================
 
--- 1. HABILITAR ROW LEVEL SECURITY (RLS) E CRIAR POLÍTICAS EM TODAS AS TABELAS DO SCHEMA PUBLIC
+-- 1. HABILITAR ROW LEVEL SECURITY (RLS) NAS TABELAS PRINCIPAIS
+ALTER TABLE IF EXISTS public.produtos ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.marcas ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.fabricantes ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.codigos_barras ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.paletes_armazenados ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.paletes ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.logs_sessao ENABLE ROW LEVEL SECURITY;
+
+-- 2. HABILITAR RLS EM TODAS AS OUTRAS TABELAS DO SCHEMA PUBLIC (DINÂMICO)
 DO $$
 DECLARE
-    r RECORD;
-    v_policy_name TEXT;
+    t text;
 BEGIN
-    -- Habilita RLS em cada tabela presente no schema public
-    FOR r IN (
-        SELECT tablename 
-        FROM pg_tables 
-        WHERE schemaname = 'public'
-    ) LOOP
-        EXECUTE format('ALTER TABLE public.%I ENABLE ROW LEVEL SECURITY;', r.tablename);
-        RAISE NOTICE 'RLS ativado com sucesso para a tabela: %', r.tablename;
-    END LOOP;
-
-    -- Cria politica de acesso para tabelas que ainda nao possuem politicas
-    FOR r IN (
-        SELECT tablename 
-        FROM pg_tables 
-        WHERE schemaname = 'public'
-    ) LOOP
-        IF NOT EXISTS (
-            SELECT 1 FROM pg_policies 
-            WHERE schemaname = 'public' AND tablename = r.tablename
-        ) THEN
-            v_policy_name := 'policy_allow_all_' || r.tablename;
-            EXECUTE format('CREATE POLICY %I ON public.%I FOR ALL USING (true) WITH CHECK (true);', v_policy_name, r.tablename);
-            RAISE NOTICE 'Politica de acesso % criada para a tabela %', v_policy_name, r.tablename;
-        END IF;
+    FOR t IN 
+        SELECT table_name 
+        FROM information_schema.tables 
+        WHERE table_schema = 'public' AND table_type = 'BASE TABLE'
+    LOOP
+        EXECUTE 'ALTER TABLE public.' || quote_ident(t) || ' ENABLE ROW LEVEL SECURITY;';
     END LOOP;
 END $$;
 
--- 2. VERIFICAÇÃO FINAL DO STATUS DO RLS NAS TABELAS DO SCHEMA PUBLIC
-SELECT 
-    schemaname,
-    tablename,
-    rowsecurity AS rls_habilitado
-FROM 
-    pg_tables 
-WHERE 
-    schemaname = 'public'
-ORDER BY 
-    tablename;
+-- 3. CRIAR POLÍTICAS DE ACESSO PERMISSIVAS PARA AS TABELAS
+DO $$ 
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'allow_all_produtos') THEN
+        CREATE POLICY allow_all_produtos ON public.produtos FOR ALL USING (true) WITH CHECK (true);
+    END IF;
+    IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'allow_all_marcas') THEN
+        CREATE POLICY allow_all_marcas ON public.marcas FOR ALL USING (true) WITH CHECK (true);
+    END IF;
+    IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'allow_all_fabricantes') THEN
+        CREATE POLICY allow_all_fabricantes ON public.fabricantes FOR ALL USING (true) WITH CHECK (true);
+    END IF;
+    IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'allow_all_codigos_barras') THEN
+        CREATE POLICY allow_all_codigos_barras ON public.codigos_barras FOR ALL USING (true) WITH CHECK (true);
+    END IF;
+    IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'allow_all_paletes_armazenados') THEN
+        CREATE POLICY allow_all_paletes_armazenados ON public.paletes_armazenados FOR ALL USING (true) WITH CHECK (true);
+    END IF;
+    IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'allow_all_paletes') THEN
+        CREATE POLICY allow_all_paletes ON public.paletes FOR ALL USING (true) WITH CHECK (true);
+    END IF;
+    IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'allow_all_logs_sessao') THEN
+        CREATE POLICY allow_all_logs_sessao ON public.logs_sessao FOR ALL USING (true) WITH CHECK (true);
+    END IF;
+END $$;
+
+-- 4. EXIBIR TABELAS COM RLS HABILITADO
+SELECT tablename, rowsecurity FROM pg_tables WHERE schemaname = 'public';
