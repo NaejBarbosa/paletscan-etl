@@ -6,6 +6,8 @@ ALTER TABLE IF EXISTS public.fabricantes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE IF EXISTS public.codigos_barras ENABLE ROW LEVEL SECURITY;
 ALTER TABLE IF EXISTS public.paletes_armazenados ENABLE ROW LEVEL SECURITY;
 ALTER TABLE IF EXISTS public.paletes ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.itens_palete ENABLE ROW LEVEL SECURITY;
+ALTER TABLE IF EXISTS public.locais_armazenagem ENABLE ROW LEVEL SECURITY;
 ALTER TABLE IF EXISTS public.logs_sessao ENABLE ROW LEVEL SECURITY;
 
 DO $$
@@ -40,6 +42,12 @@ BEGIN
     END IF;
     IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'allow_all_paletes') THEN
         CREATE POLICY allow_all_paletes ON public.paletes FOR ALL USING (true) WITH CHECK (true);
+    END IF;
+    IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'allow_all_itens_palete') THEN
+        CREATE POLICY allow_all_itens_palete ON public.itens_palete FOR ALL USING (true) WITH CHECK (true);
+    END IF;
+    IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'allow_all_locais_armazenagem') THEN
+        CREATE POLICY allow_all_locais_armazenagem ON public.locais_armazenagem FOR ALL USING (true) WITH CHECK (true);
     END IF;
     IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'allow_all_logs_sessao') THEN
         CREATE POLICY allow_all_logs_sessao ON public.logs_sessao FOR ALL USING (true) WITH CHECK (true);
