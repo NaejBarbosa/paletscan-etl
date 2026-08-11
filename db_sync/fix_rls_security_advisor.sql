@@ -1,10 +1,5 @@
--- ==============================================================================
--- PALETSCAN / SUPABASE - SCRIPT DE CORREÇÃO DE SEGURANÇA (RLS SECURITY ADVISOR)
--- Projeto Supabase Ref: xyujqsitpshfqnlogeib
--- Versão Simplificada e Direta
--- ==============================================================================
+/* PALETSCAN - CORRECAO DE SEGURANCA RLS SUPABASE */
 
--- 1. HABILITAR ROW LEVEL SECURITY (RLS) NAS TABELAS PRINCIPAIS
 ALTER TABLE IF EXISTS public.produtos ENABLE ROW LEVEL SECURITY;
 ALTER TABLE IF EXISTS public.marcas ENABLE ROW LEVEL SECURITY;
 ALTER TABLE IF EXISTS public.fabricantes ENABLE ROW LEVEL SECURITY;
@@ -13,7 +8,6 @@ ALTER TABLE IF EXISTS public.paletes_armazenados ENABLE ROW LEVEL SECURITY;
 ALTER TABLE IF EXISTS public.paletes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE IF EXISTS public.logs_sessao ENABLE ROW LEVEL SECURITY;
 
--- 2. HABILITAR RLS EM TODAS AS OUTRAS TABELAS DO SCHEMA PUBLIC (DINÂMICO)
 DO $$
 DECLARE
     t text;
@@ -27,7 +21,6 @@ BEGIN
     END LOOP;
 END $$;
 
--- 3. CRIAR POLÍTICAS DE ACESSO PERMISSIVAS PARA AS TABELAS
 DO $$ 
 BEGIN
     IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'allow_all_produtos') THEN
@@ -53,5 +46,4 @@ BEGIN
     END IF;
 END $$;
 
--- 4. EXIBIR TABELAS COM RLS HABILITADO
 SELECT tablename, rowsecurity FROM pg_tables WHERE schemaname = 'public';
