@@ -446,10 +446,19 @@ export async function syncStagingToSupabase() {
   console.log(`🏷️  Marcas sincronizadas:      ${resMarcas.totalSynced}`);
   console.log(`🥩 Produtos sincronizados:    ${resProdutos.totalSynced}`);
   console.log(`📊 Códigos de Barras:         ${resCB.totalSynced}`);
-  if (novosProdutos.length > 0) {
-    console.log(`✨ Novos produtos incluídos nesta execução: ${novosProdutos.length}`);
-    console.log(`   (Detalhes gravados em staging/novos_produtos_log.json)`);
+
+  const logExibicao = novosProdutosLog.length > 0 ? novosProdutosLog : [];
+  if (logExibicao.length > 0) {
+    console.log('\n✨ ==================================================');
+    console.log(`🆕 NOVOS PRODUTOS INCLUÍDOS NA BASE (${logExibicao.length}):`);
+    console.log('==================================================');
+    logExibicao.forEach((item, idx) => {
+      const eanStr = item.ean ? `EAN: ${item.ean}` : 'Sem EAN';
+      console.log(`  ${idx + 1}. [${item.marca}] ${eanStr} | ${item.descricao}`);
+    });
+    console.log('==================================================');
   }
+
   if (totalConflicts > 0) {
     console.log(`⚠️  Conflitos de EAN/DUN ignorados: ${totalConflicts} (ver staging/conflicts_log.json)`);
   }

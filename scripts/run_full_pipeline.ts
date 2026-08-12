@@ -152,12 +152,14 @@ async function runPipeline() {
 
   // Leitura de novos produtos em staging/novos_produtos_log.json
   let novosCount = 0;
+  let novosItems: any[] = [];
   const novosLogPath = require("path").join(process.cwd(), "staging", "novos_produtos_log.json");
   if (require("fs").existsSync(novosLogPath)) {
     try {
       const rawNovos = require("fs").readFileSync(novosLogPath, "utf-8");
       const parsedNovos = JSON.parse(rawNovos);
       if (Array.isArray(parsedNovos)) {
+        novosItems = parsedNovos;
         novosCount = parsedNovos.length;
       }
     } catch {
@@ -173,7 +175,13 @@ async function runPipeline() {
   console.log(` 📊 Códigos de Barras: ${supabaseStats.codCount}`);
   if (novosCount > 0) {
     console.log(` ✨ Novos Produtos:    \x1b[1;32m${novosCount} recém-incluídos\x1b[0m`);
-    console.log(` 💡 Execute '\x1b[1;36metl-novos\x1b[0m' para detalhar os novos produtos.`);
+    console.log("\x1b[1;33m📌 RESUMO DOS NOVOS PRODUTOS:\x1b[0m");
+    novosItems.slice(0, 8).forEach((item: any, idx: number) => {
+      console.log(`   ${idx + 1}. \x1b[1m${item.marca || 'N/D'}\x1b[0m - EAN: ${item.ean || 'N/D'} | ${item.descricao}`);
+    });
+    if (novosItems.length > 8) {
+      console.log(`   ... e mais ${novosItems.length - 8} novos produtos (\x1b[1;36metl-novos\x1b[0m).`);
+    }
   }
   console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
   console.log("\x1b[1;32m✔ PIPELINE FINALIZADO COM SUCESSO!\x1b[0m");
