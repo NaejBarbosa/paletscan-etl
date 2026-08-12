@@ -92,8 +92,13 @@ etl-pipeline
 📊 BASE DE DADOS SUPABASE (AO VIVO):
  🏢 Fabricantes:       4
  🏷️  Marcas:            143
- 🥩 Produtos:          3.386
+ 🥩 Produtos Totais:   3.415
  📊 Códigos de Barras: 9.310
+ ✨ Novos Produtos:    20 recém-incluídos
+📌 RESUMO DOS NOVOS PRODUTOS:
+   1. AURORA - EAN: 47891164004246 | Linguiça Toscana 800g Cx. de 16kg
+   2. FRIBOI - EAN: 17898302298313 | Alcatra com Maminha (3 Partes) - Friboi
+   ... e mais 12 novos produtos (etl-novos).
 ────────────────────────────────────
 ✔ PIPELINE FINALIZADO COM SUCESSO!
 ────────────────────────────────────
