@@ -125,6 +125,7 @@ Para evitar inconsistências caso uma marca ou holding entre ou saia do projeto,
 | `etl-audit` | `npm run audit` | Executa auditoria de integridade de banco de dados. |
 | `etl-wipe` | `npm run wipe` | Reset estrito / Limpeza do Supabase (sem deletar arquivos brutos em staging). |
 | `etl-logs` | `tail -n 40 -f logs/latest.log` | Transmissão de logs em tempo real na CLI. |
+| `etl-novos` | `npx tsx scripts/show_new_products.ts` | Exibe os novos produtos incluídos na base (ou atalho `etl-novos-produtos`). |
 | `etl-conflicts` | `cat staging/conflicts_log.json` | Exibe conflitos de códigos de barras EAN/DUN em staging. |
 | `etl-status` | `npm run status` | Exibe contagem de registros no Supabase ao vivo em formato 36 colunas. |
 | `etl-schedule` | CLI Interativo | Menu para cadastrar agendamentos no Crontab do Linux. |
@@ -132,6 +133,21 @@ Para evitar inconsistências caso uma marca ou holding entre ou saia do projeto,
 | `etl-cron-remove`| `crontab -r` | Remove os agendamentos do PaletScan no Crontab. |
 
 ---
+
+## 🆕 6. Monitoramento de Novos Produtos Incluídos
+
+Quando novas cargas de scrapers ou ingestões de fornecedores são executadas, o pipeline detecta automaticamente quais produtos foram recentemente incorporados ao banco relacional.
+
+Os novos produtos são destacados no relatório final do `etl-run`, registrados em `staging/novos_produtos_log.json` e exportados com timestamp de inclusão (`criado_em`) para a aplicação PWA.
+
+Para inspecionar rapidamente os novos produtos no terminal:
+
+```bash
+etl-novos
+# ou o atalho equivalente:
+etl-novos-produtos
+```
+
 
 ## ⏰ 4. Agendamento Automático de Execução no Linux (Crontab)
 

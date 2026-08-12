@@ -56,8 +56,9 @@ export async function runLarScraper(): Promise<LarStagingProduct[]> {
   // Se o staging/lar_staging.json já existir com dados validados, carrega ou sincroniza
   if (fs.existsSync(STAGING_FILE)) {
     const raw = fs.readFileSync(STAGING_FILE, 'utf-8');
-    const existing = JSON.parse(raw) as LarStagingProduct[];
-    const valid = existing.filter(p => p.ean && /^\d+$/.test(p.ean.trim()));
+    const parsed = JSON.parse(raw);
+    const existing: LarStagingProduct[] = Array.isArray(parsed) ? parsed : (parsed.produtos || []);
+    const valid = existing.filter(p => p && p.ean && /^\d+$/.test(String(p.ean).trim()));
     console.log(`[+] Staging Lar carregado de ${STAGING_FILE} com ${valid.length} produtos válidos com EAN.`);
     return valid;
   }

@@ -145,6 +145,13 @@ etl-status() {
   npm run status
 }
 
+etl-novos() {
+  cd "$PALETSCAN_ETL_DIR" || return 1
+  npx tsx scripts/show_new_products.ts
+}
+
+alias etl-novos-produtos="etl-novos"
+
 # ==============================================================================
 # ⏰ GERENCIAMENTO DE AGENDAMENTO (CRONTAB LINUX)
 # ==============================================================================

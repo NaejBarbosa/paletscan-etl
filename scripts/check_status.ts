@@ -18,6 +18,18 @@ async function verify() {
   const { count: marcaCount } = await supabase.from("marcas").select("*", { count: "exact", head: true });
   const { count: fabCount } = await supabase.from("fabricantes").select("*", { count: "exact", head: true });
 
+  let novosCount = 0;
+  const novosLogPath = require("path").join(process.cwd(), "staging", "novos_produtos_log.json");
+  if (require("fs").existsSync(novosLogPath)) {
+    try {
+      const rawNovos = require("fs").readFileSync(novosLogPath, "utf-8");
+      const parsedNovos = JSON.parse(rawNovos);
+      if (Array.isArray(parsedNovos)) novosCount = parsedNovos.length;
+    } catch {
+      novosCount = 0;
+    }
+  }
+
   console.log("────────────────────────────────────");
   console.log("📊 STATUS SUPABASE (AO VIVO)");
   console.log("────────────────────────────────────");
@@ -25,6 +37,9 @@ async function verify() {
   console.log(` 🏷️  Marcas:            ${marcaCount ?? 0}`);
   console.log(` 🥩 Produtos:          ${prodCount ?? 0}`);
   console.log(` 📊 Códigos de Barras: ${codCount ?? 0}`);
+  if (novosCount > 0) {
+    console.log(` ✨ Novos Produtos:    ${novosCount} recém-incluídos`);
+  }
   console.log("────────────────────────────────────");
 }
 

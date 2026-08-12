@@ -140,6 +140,7 @@ async function generatePwaProdutosJson() {
     }
 
     if (key && !mapUnicos.has(key)) {
+      const criadoEmVal = row.criado_em || row.created_at || row.criadoEm || new Date().toISOString();
       mapUnicos.set(key, {
         marcaId: row.marca_id || '',
         marcaDescr: row.marca_nome || 'N/D',
@@ -160,6 +161,8 @@ async function generatePwaProdutosJson() {
         imagem_url: finalImgUrl,
         statusImagem: finalStatus,
         status_imagem: finalStatus,
+        criado_em: criadoEmVal,
+        criadoEm: criadoEmVal,
       });
     }
   });

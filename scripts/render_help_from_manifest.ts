@@ -82,6 +82,7 @@ export function renderHelpFromManifest() {
   console.log("");
   console.log("\x1b[1;33m📊 LOGS & SAÚDE DO SISTEMA\x1b[0m");
   console.log("  \x1b[1;32metl-logs\x1b[0m       Ver logs em tempo real");
+  console.log("  \x1b[1;32metl-novos\x1b[0m      Ver novos produtos da base");
   console.log("  \x1b[1;32metl-conflicts\x1b[0m  Conflitos de EAN/DUN");
   console.log("  \x1b[1;32metl-status\x1b[0m     Status Supabase ao vivo");
   console.log("");

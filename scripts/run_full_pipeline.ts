@@ -150,12 +150,31 @@ async function runPipeline() {
     console.log(`   └─ Detalhes: ${stg.description}`);
   }
 
+  // Leitura de novos produtos em staging/novos_produtos_log.json
+  let novosCount = 0;
+  const novosLogPath = require("path").join(process.cwd(), "staging", "novos_produtos_log.json");
+  if (require("fs").existsSync(novosLogPath)) {
+    try {
+      const rawNovos = require("fs").readFileSync(novosLogPath, "utf-8");
+      const parsedNovos = JSON.parse(rawNovos);
+      if (Array.isArray(parsedNovos)) {
+        novosCount = parsedNovos.length;
+      }
+    } catch {
+      novosCount = 0;
+    }
+  }
+
   console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
   console.log("\x1b[1;33m📊 BASE DE DADOS SUPABASE (AO VIVO):\x1b[0m");
   console.log(` 🏢 Fabricantes:       ${supabaseStats.fabCount}`);
   console.log(` 🏷️  Marcas:            ${supabaseStats.marcaCount}`);
-  console.log(` 🥩 Produtos:          ${supabaseStats.prodCount}`);
+  console.log(` 🥩 Produtos Totais:   ${supabaseStats.prodCount}`);
   console.log(` 📊 Códigos de Barras: ${supabaseStats.codCount}`);
+  if (novosCount > 0) {
+    console.log(` ✨ Novos Produtos:    \x1b[1;32m${novosCount} recém-incluídos\x1b[0m`);
+    console.log(` 💡 Execute '\x1b[1;36metl-novos\x1b[0m' para detalhar os novos produtos.`);
+  }
   console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
   console.log("\x1b[1;32m✔ PIPELINE FINALIZADO COM SUCESSO!\x1b[0m");
   console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");

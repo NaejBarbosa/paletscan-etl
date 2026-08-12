@@ -372,6 +372,17 @@ export async function syncStagingToSupabase() {
   console.log(`\n📡 Conectando ao Supabase em: ${supabaseUrl}`);
   const supabase = createClient(supabaseUrl, supabaseKey);
 
+  // Busca IDs de produtos pré-existentes para detectar novos produtos incluídos
+  let existingProductIds = new Set<string>();
+  try {
+    const { data: exProds } = await supabase.from('produtos').select('id');
+    if (exProds && Array.isArray(exProds)) {
+      exProds.forEach(p => existingProductIds.add(p.id));
+    }
+  } catch (err) {
+    // Continua se a busca falhar
+  }
+
   console.log('\n🚀 Executando Carga Relacional Ordenada Resiliente (.upsert)...');
 
   console.log('1️⃣  Sincronizando Fabricantes...');
@@ -388,11 +399,57 @@ export async function syncStagingToSupabase() {
 
   const totalConflicts = resCB.conflictCount;
 
+  // -------------------------------------------------------------
+  // REGISTRO E LOG DE NOVOS PRODUTOS INCLUÍDOS NA BASE
+  // -------------------------------------------------------------
+  const novosProdutos = produtosUUID.filter(p => !existingProductIds.has(p.id));
+  const marcasMap = new Map(marcasFiltradas.map(m => [toUUID5(m.id), m.nome]));
+  const cbMap = new Map(codigosBarrasUUID.map(c => [c.produto_id, c]));
+
+  const novosProdutosLog = novosProdutos.map(p => {
+    const cb = cbMap.get(p.id);
+    return {
+      id: p.id,
+      marca: marcasMap.get(p.marca_id) || 'N/D',
+      ean: cb?.tipo === 'EAN' ? cb.codigo : (cb?.codigo || ''),
+      dun: cb?.tipo === 'DUN' ? cb.codigo : '',
+      descricao: p.descricao_padronizada || p.descricao_original,
+      classe: p.classe,
+      conservacao: p.conservacao,
+      criado_em: p.criado_em || new Date().toISOString()
+    };
+  });
+
+  const novosLogPath = path.join(process.cwd(), 'staging', 'novos_produtos_log.json');
+  if (novosProdutosLog.length > 0) {
+    fs.writeFileSync(novosLogPath, JSON.stringify(novosProdutosLog, null, 2), 'utf-8');
+  } else if (!fs.existsSync(novosLogPath)) {
+    // Se nenhum produto foi detectado como totalmente novo no lote atual, salva os 15 mais recentes
+    const recentesLog = produtosUUID.slice(0, 15).map(p => {
+      const cb = cbMap.get(p.id);
+      return {
+        id: p.id,
+        marca: marcasMap.get(p.marca_id) || 'N/D',
+        ean: cb?.tipo === 'EAN' ? cb.codigo : (cb?.codigo || ''),
+        dun: cb?.tipo === 'DUN' ? cb.codigo : '',
+        descricao: p.descricao_padronizada || p.descricao_original,
+        classe: p.classe,
+        conservacao: p.conservacao,
+        criado_em: p.criado_em || new Date().toISOString()
+      };
+    });
+    fs.writeFileSync(novosLogPath, JSON.stringify(recentesLog, null, 2), 'utf-8');
+  }
+
   console.log('\n🎉 === RESUMO DA SINCRONIZAÇÃO SUPABASE ===');
   console.log(`🏢 Fabricantes sincronizados: ${resFab.totalSynced}`);
   console.log(`🏷️  Marcas sincronizadas:      ${resMarcas.totalSynced}`);
   console.log(`🥩 Produtos sincronizados:    ${resProdutos.totalSynced}`);
   console.log(`📊 Códigos de Barras:         ${resCB.totalSynced}`);
+  if (novosProdutos.length > 0) {
+    console.log(`✨ Novos produtos incluídos nesta execução: ${novosProdutos.length}`);
+    console.log(`   (Detalhes gravados em staging/novos_produtos_log.json)`);
+  }
   if (totalConflicts > 0) {
     console.log(`⚠️  Conflitos de EAN/DUN ignorados: ${totalConflicts} (ver staging/conflicts_log.json)`);
   }

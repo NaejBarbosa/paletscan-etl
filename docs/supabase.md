@@ -76,3 +76,15 @@ A infraestrutura Supabase comunica-se diretamente com a aplicação PWA em produ
 
 - **Componente `ProdutoAvatar.tsx`**: Exibe o avatar do produto respeitando o status `imagem_status`. Quando o status é `sem_imagem`, renderiza automaticamente um placeholder limpo em SVG sem dependências residuais de imagens estáticas locais.
 - **Redução do TTL de Cache**: O endpoint `/api/validar` opera com TTL de 1 minuto e consulta direta em tempo real ao Supabase, garantindo que novos EANs cadastrados fiquem disponíveis para escaneamento no coletor em poucos segundos.
+
+---
+
+## 🆕 5. Rastreamento e Log de Novos Produtos Incluídos
+
+Durante a execução da carga relacional, o `sync.ts` compara as chaves primárias dos produtos recebidos em staging com as chaves já existentes no Supabase:
+
+1. **Detecção Automática**: Produtos não encontrados na base remota são identificados como novos produtos incluídos.
+2. **Log de Novos Produtos (`staging/novos_produtos_log.json`)**: Armazena os dados dos novos produtos (EAN, DUN, marca, descrição, classe, conservação e timestamp de inclusão `criado_em`).
+3. **Integração com PWA**: O script `scripts/generate_pwa_produtos_json.ts` injeta o timestamp de inclusão em `produtos.json` para acionar as notificações em tempo real na aplicação PWA.
+4. **Comando CLI (`etl-novos`)**: Permite visualizar a lista detalhada de produtos recentemente incluídos diretamente no terminal Linux.
+

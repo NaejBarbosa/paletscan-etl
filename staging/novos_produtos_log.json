@@ -1,0 +1,182 @@
+[
+  {
+    "id": "prod_aurora_424",
+    "marca": "Aurora",
+    "ean": "47891164004246",
+    "descricao": "Linguiça Toscana 800g Cx. de 16kg - 20 Pcts. de 800g",
+    "classe": "Processados",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:45:59.285Z"
+  },
+  {
+    "id": "prod_aurora_443",
+    "marca": "Aurora",
+    "ean": "47891164004437",
+    "descricao": "Linguiça Churrasco 800g Cx. de 16kg - 20 Pcts. de 800g",
+    "classe": "Processados",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:45:59.285Z"
+  },
+  {
+    "id": "prod_aurora_1643",
+    "marca": "Aurora",
+    "ean": "47891164016430",
+    "descricao": "Linguiça de Frango 800g Cx. de 16kg - 20 Pcts. de 800g",
+    "classe": "Aves",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:45:59.285Z"
+  },
+  {
+    "id": "prod_aurora_462",
+    "marca": "Aurora",
+    "ean": "47891164004628",
+    "descricao": "Linguiça de Frango Fina 800g Cx. de 8kg - 10 Pcts. de 800g",
+    "classe": "Aves",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:45:59.285Z"
+  },
+  {
+    "id": "prod_aurora_425",
+    "marca": "Aurora",
+    "ean": "47891164004253",
+    "descricao": "Linguiça de Pernil 800g Cx. de 16kg - 20 Pcts. de 800g",
+    "classe": "Suínos",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:45:59.285Z"
+  },
+  {
+    "id": "prod_aurora_442",
+    "marca": "Aurora",
+    "ean": "47891164004420",
+    "descricao": "Linguiça Calabresa Fresca Enroladinha 800g Cx. de 16kg - 20 Pcts. de 800g",
+    "classe": "Processados",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:45:59.285Z"
+  },
+  {
+    "id": "prod_aurora_463",
+    "marca": "Aurora",
+    "ean": "87891164004633",
+    "descricao": "Linguiça Churrasco Congelada 700g Cx. de 16,8kg - 24 Pcts. de 700g",
+    "classe": "Processados",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:45:59.285Z"
+  },
+  {
+    "id": "prod_aurora_401",
+    "marca": "Aurora",
+    "ean": "37891164004010",
+    "descricao": "Linguiça Toscana 5kg Cx. de 25kg - 5 Pcts. de 5kg",
+    "classe": "Processados",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:45:59.285Z"
+  },
+  {
+    "id": "prod_aurora_468",
+    "marca": "Aurora",
+    "ean": "37891164004683",
+    "descricao": "Linguiça Calabresa 2,5kg Cx. de 25kg - 10 Pcts. de 2,5kg",
+    "classe": "Processados",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:45:59.285Z"
+  },
+  {
+    "id": "prod_aurora_440",
+    "marca": "Aurora",
+    "ean": "37891164004409",
+    "descricao": "Linguiça Churrasco Mini 5kg Cx. de 25kg - 5 Pcts. de 5kg",
+    "classe": "Processados",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:45:59.285Z"
+  },
+  {
+    "id": "prod_friboi_1005",
+    "marca": "Friboi",
+    "ean": "17898302298313",
+    "descricao": "Alcatra com Maminha (3 Partes) - Friboi (pesar)",
+    "classe": "Bovino",
+    "conservacao": "Resfriado",
+    "criado_em": "2026-08-12T14:36:29.661Z"
+  },
+  {
+    "id": "prod_friboi_1024",
+    "marca": "Do Chef",
+    "ean": "17898302283272",
+    "descricao": "Alcatra Completa (Acima de 6,8kg) - do Chef",
+    "classe": "Bovino",
+    "conservacao": "Resfriado",
+    "criado_em": "2026-08-12T14:36:29.661Z"
+  },
+  {
+    "id": "prod_friboi_1026",
+    "marca": "Do Chef",
+    "ean": "17898302283296",
+    "descricao": "Picanha - do Chef (pesar)",
+    "classe": "Bovino",
+    "conservacao": "Resfriado",
+    "criado_em": "2026-08-12T14:36:29.661Z"
+  },
+  {
+    "id": "prod_friboi_1027",
+    "marca": "Do Chef",
+    "ean": "17898302283302",
+    "descricao": "Maminha da Alcatra - do Chef (pesar)",
+    "classe": "Bovino",
+    "conservacao": "Resfriado",
+    "criado_em": "2026-08-12T14:36:29.661Z"
+  },
+  {
+    "id": "prod_friboi_1029",
+    "marca": "Do Chef",
+    "ean": "17898302283326",
+    "descricao": "Fralda (Acima de 1,5kg) - do Chef",
+    "classe": "Bovino",
+    "conservacao": "Resfriado",
+    "criado_em": "2026-08-12T14:36:29.661Z"
+  },
+  {
+    "id": "prod_friboi_1030",
+    "marca": "Do Chef",
+    "ean": "17898302283333",
+    "descricao": "Cupim (2 a 3,5kg) - do Chef",
+    "classe": "Bovino",
+    "conservacao": "Resfriado",
+    "criado_em": "2026-08-12T14:36:29.661Z"
+  },
+  {
+    "id": "prod_friboi_111",
+    "marca": "Friboi",
+    "ean": "17898302290874",
+    "descricao": "Cupim B - Friboi (pesar)",
+    "classe": "Bovino",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:36:29.661Z"
+  },
+  {
+    "id": "prod_friboi_116",
+    "marca": "Maturatta",
+    "ean": "17898302290904",
+    "descricao": "Coraçao da Alcatra (Baby Beef) - Maturatta (pesar)",
+    "classe": "Bovino",
+    "conservacao": "Resfriado",
+    "criado_em": "2026-08-12T14:36:29.661Z"
+  },
+  {
+    "id": "prod_friboi_1184",
+    "marca": "Friboi",
+    "ean": "17898302283210",
+    "descricao": "Cupim B Fatiado - Friboi (pesar)",
+    "classe": "Bovino",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:36:29.661Z"
+  },
+  {
+    "id": "prod_friboi_1188",
+    "marca": "Friboi",
+    "ean": "17898302283258",
+    "descricao": "Músculo Mole e Duro - Friboi (pesar)",
+    "classe": "Bovino",
+    "conservacao": "Congelado",
+    "criado_em": "2026-08-12T14:36:29.661Z"
+  }
+]
