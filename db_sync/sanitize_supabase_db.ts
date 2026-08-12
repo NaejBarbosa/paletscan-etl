@@ -26,8 +26,8 @@ export async function sanitizeDatabase() {
       .select('id, descricao_original')
       .range(from, from + pageSize - 1);
     if (error) {
-      console.error('Erro ao buscar produtos:', error.message);
-      break;
+      console.error('❌ Erro ao buscar produtos:', error.message);
+      throw new Error(`Falha ao buscar produtos durante higienização: ${error.message}`);
     }
     if (!prods || prods.length === 0) break;
     allProdutos = allProdutos.concat(prods);
@@ -45,8 +45,8 @@ export async function sanitizeDatabase() {
       .select('id, produto_id, tipo, codigo')
       .range(from, from + pageSize - 1);
     if (error) {
-      console.error('Erro ao buscar códigos de barras:', error.message);
-      break;
+      console.error('❌ Erro ao buscar códigos de barras:', error.message);
+      throw new Error(`Falha ao buscar códigos de barras durante higienização: ${error.message}`);
     }
     if (!cods || cods.length === 0) break;
     allCodigos = allCodigos.concat(cods);

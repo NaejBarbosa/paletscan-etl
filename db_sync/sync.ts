@@ -170,13 +170,17 @@ async function upsertInBatches<T extends { id: string; codigo?: string }>(
   for (let i = 0; i < items.length; i += batchSize) {
     const chunk = items.slice(i, i + batchSize);
 
+    const upsertOptions = tableName === 'codigos_barras'
+      ? { onConflict: 'codigo', ignoreDuplicates: true }
+      : { onConflict: 'id' };
+
     const { error } = await supabase
       .from(tableName)
-      .upsert(chunk, { onConflict: onConflictCol });
+      .upsert(chunk, upsertOptions);
 
     if (!error) {
       totalSynced += chunk.length;
-      process.stdout.write(`  \r⏳ Sincronizando ${tableName}: ${totalSynced}/${items.length} registros...`);
+      process.stdout.write(`  \r⏳ Sincronizando ${tableName}: ${totalSynced}/${items.length} registros...\n`);
     } else {
       if (handleConflicts) {
         console.log(`\n⚠️  Lote de '${tableName}' encontrou duplicidades/conflitos. Ativando modo de resiliência (item por item)...`);
@@ -184,7 +188,7 @@ async function upsertInBatches<T extends { id: string; codigo?: string }>(
         for (const item of chunk) {
           const { error: itemError } = await supabase
             .from(tableName)
-            .upsert([item], { onConflict: onConflictCol });
+            .upsert([item], upsertOptions);
 
           if (!itemError) {
             totalSynced++;

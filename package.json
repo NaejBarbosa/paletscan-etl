@@ -6,8 +6,20 @@
   "scripts": {
     "scrape:friboi": "npx tsx scrapers/friboi/index.ts",
     "scrape:seara": "npx tsx scrapers/seara/index.ts",
+    "scrape:brf": "npx tsx scrapers/brf/index.ts",
+    "scrape:aurora": "npx tsx scrapers/aurora/index.ts",
+    "scrape:lar": "npx tsx scrapers/lar/index.ts",
+    "scrape:all": "npx tsx scrapers/friboi/index.ts && npx tsx scrapers/seara/index.ts && npx tsx scrapers/brf/index.ts && npx tsx scrapers/aurora/index.ts && npx tsx scrapers/lar/index.ts",
     "sync:supabase": "npx tsx db_sync/sync.ts",
     "sync:images": "npx tsx db_sync/sync_images.ts",
+    "sanitize": "npx tsx db_sync/sanitize_supabase_db.ts",
+    "export:pwa": "npx tsx scripts/generate_pwa_produtos_json.ts",
+    "export:excel": "npx tsx scripts/export_excel.ts",
+    "audit": "npx tsx scripts/audit_database.ts",
+    "status": "npx tsx scripts/check_status.ts",
+    "help:manifest": "npx tsx scripts/render_help_from_manifest.ts",
+    "wipe": "npx tsx db_sync/wipe_db_only.ts",
+    "full": "npx tsx scripts/run_full_pipeline.ts",
     "build": "tsc"
   },
   "keywords": [

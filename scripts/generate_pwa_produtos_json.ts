@@ -77,6 +77,26 @@ async function generatePwaProdutosJson() {
   }
   console.log(`✅ Total de códigos DUN identificados: ${dunMap.size}`);
 
+  // Sincronizar imagens preparadas locais da Aurora para public/imagens_produtos
+  const auroraPreparedDir = '/root/projetos-scraping/scraping-aurora/imagens_preparadas';
+  const publicImgDir = '/root/repo_pwa/public/imagens_produtos';
+  if (fs.existsSync(auroraPreparedDir)) {
+    if (!fs.existsSync(publicImgDir)) fs.mkdirSync(publicImgDir, { recursive: true });
+    const auroraFiles = fs.readdirSync(auroraPreparedDir);
+    let copiedCount = 0;
+    auroraFiles.forEach(f => {
+      const src = path.join(auroraPreparedDir, f);
+      const dest = path.join(publicImgDir, f);
+      if (!fs.existsSync(dest)) {
+        fs.copyFileSync(src, dest);
+        copiedCount++;
+      }
+    });
+    if (copiedCount > 0) {
+      console.log(`🖼️ [PWA Image Sync] Copiadas ${copiedCount} novas imagens preparadas para ${publicImgDir}`);
+    }
+  }
+
   const mapUnicos = new Map<string, any>();
   allData.forEach((row) => {
     const candidateEan = String(row.ean || row.produto_ean || row.codigo || '');
@@ -103,6 +123,22 @@ async function generatePwaProdutosJson() {
       descr = row.descricao_original || row.produto_descr || row.descricao || '';
     }
 
+    // Verifica se a imagem local existe fisicamente no PWA E o status no Supabase permite exibição
+    const localEanFile = `${eanVal}.webp`;
+    const localPath = path.join(publicImgDir, localEanFile);
+    let finalImgUrl = row.imagem_url ?? null;
+    let finalStatus = row.status_imagem ?? 'sem_imagem';
+
+    // Se o Supabase determinou que o produto está SEM_IMAGEM, não força imagem local legada
+    if (finalStatus === 'sem_imagem' || finalStatus === 'SEM_IMAGEM') {
+      finalImgUrl = null;
+    } else if (fs.existsSync(localPath)) {
+      finalImgUrl = `/imagens_produtos/${localEanFile}`;
+      if (!finalStatus) {
+        finalStatus = 'VALIDATED';
+      }
+    }
+
     if (key && !mapUnicos.has(key)) {
       mapUnicos.set(key, {
         marcaId: row.marca_id || '',
@@ -120,10 +156,10 @@ async function generatePwaProdutosJson() {
         peso_gramas: row.peso_gramas ?? null,
         fracionado: row.fracionado ?? false,
         pesarCod: row.tipo_codigo || row.codigo || row.pesar_cod || '',
-        imagemUrl: row.imagem_url ?? null,
-        imagem_url: row.imagem_url ?? null,
-        statusImagem: row.status_imagem ?? null,
-        status_imagem: row.status_imagem ?? null,
+        imagemUrl: finalImgUrl,
+        imagem_url: finalImgUrl,
+        statusImagem: finalStatus,
+        status_imagem: finalStatus,
       });
     }
   });

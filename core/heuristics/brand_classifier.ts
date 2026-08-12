@@ -16,8 +16,21 @@ export const FABRICANTE_FRIBOI_NOME = 'Friboi / JBS S.A.';
 export const FABRICANTE_BRF_ID = 'fab_brf_sa';
 export const FABRICANTE_BRF_NOME = 'BRF S.A.';
 
-// Dicionário de Marcas Conhecidas vinculadas às holdings (JBS e BRF)
+export const FABRICANTE_AURORA_ID = 'fab_aurora_cooperativa';
+export const FABRICANTE_AURORA_NOME = 'Cooperativa Central Aurora Alimentos';
+
+// Dicionário de Marcas Conhecidas vinculadas às holdings (JBS, BRF e Aurora)
 export const KNOWN_BRANDS: Record<string, { nome: string; slug: string; fabricante_id: string }> = {
+  // --- Marcas Aurora Alimentos ---
+  'aurora': { nome: 'Aurora', slug: 'aurora', fabricante_id: FABRICANTE_AURORA_ID },
+  'aurora premium': { nome: 'Aurora Premium', slug: 'aurora-premium', fabricante_id: FABRICANTE_AURORA_ID },
+  'aurora bem leve': { nome: 'Aurora Bem Leve', slug: 'aurora-bem-leve', fabricante_id: FABRICANTE_AURORA_ID },
+  'nobre': { nome: 'Nobre', slug: 'nobre', fabricante_id: FABRICANTE_AURORA_ID },
+  'nobreza': { nome: 'Nobre', slug: 'nobre', fabricante_id: FABRICANTE_AURORA_ID },
+  'lanche nobreza': { nome: 'Nobre', slug: 'nobre', fabricante_id: FABRICANTE_AURORA_ID },
+  'peperi': { nome: 'Peperi', slug: 'peperi', fabricante_id: FABRICANTE_AURORA_ID },
+  'gran mestri': { nome: 'Gran Mestri', slug: 'gran-mestri', fabricante_id: FABRICANTE_AURORA_ID },
+
   // --- Marcas Friboi / JBS ---
   'friboi': { nome: 'Friboi', slug: 'friboi', fabricante_id: FABRICANTE_FRIBOI_ID },
   'friboi black': { nome: 'Friboi Black', slug: 'friboi-black', fabricante_id: FABRICANTE_FRIBOI_ID },
@@ -102,5 +115,15 @@ export function classifyBrand(rawBrand: string, productTitle: string, defaultFab
     slug: fallbackSlug,
     fabricante_id: defaultFabricanteId
   };
+}
+
+/**
+ * Verifica se duas marcas pertencem ao mesmo fabricante / holding (ex: 'Nobre' e 'Aurora').
+ */
+export function areBrandsCompatible(brandA: string, brandB: string): boolean {
+  if (!brandA || !brandB) return false;
+  const brandAInfo = classifyBrand(brandA, '');
+  const brandBInfo = classifyBrand(brandB, '');
+  return brandAInfo.fabricante_id === brandBInfo.fabricante_id;
 }
 

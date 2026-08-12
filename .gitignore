@@ -12,3 +12,5 @@ images/archived/*
 !images/archived/.gitkeep
 site/
 .cache/
+__pycache__/
+*.pyc

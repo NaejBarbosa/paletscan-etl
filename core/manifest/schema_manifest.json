@@ -192,5 +192,64 @@
       }
     }
   },
+  "manifesto_holdings": [
+    {
+      "id": "fab_friboi_jbs",
+      "nome": "JBS S.A.",
+      "divisoes": ["Friboi", "Seara Alimentos"],
+      "marcas": [
+        "Friboi", "Friboi Black", "Maturatta Friboi", "1953 Friboi", "Swift", "Do Chef Friboi",
+        "Reserva Friboi", "Bordon", "Anglo", "Bertin", "Seara", "Seara Gourmet", "Seara Nature",
+        "Incrível!", "Doriana", "DaGranja", "LeBon", "Delicata", "Confiança", "Frangosul", "Wilson"
+      ],
+      "scrapers": ["scrapers/friboi/index.ts", "scrapers/seara/index.ts"],
+      "aliases_scraper": ["etl-friboi", "etl-seara"]
+    },
+    {
+      "id": "fab_brf_sa",
+      "nome": "BRF S.A.",
+      "divisoes": ["BRF Alimentos"],
+      "marcas": ["Sadia", "Perdigão", "Qualy", "Deline", "Rezende", "Claybom", "NaMesa", "Chester", "BRF"],
+      "scrapers": ["scrapers/brf/index.ts"],
+      "aliases_scraper": ["etl-brf"]
+    },
+    {
+      "id": "fab_aurora_cooperativa",
+      "nome": "Cooperativa Central Aurora Alimentos",
+      "divisoes": ["Aurora Alimentos"],
+      "marcas": ["Aurora", "Aurora Premium", "Aurora Bem Leve", "Nobre", "Peperi", "Gran Mestri"],
+      "scrapers": ["scrapers/aurora/index.ts"],
+      "aliases_scraper": ["etl-aurora"]
+    },
+    {
+      "id": "fab_lar_cooperativa",
+      "nome": "Cooperativa Lar Agroindustrial",
+      "divisoes": ["Lar Alimentos"],
+      "marcas": ["Lar Alimentos"],
+      "scrapers": ["scrapers/lar/index.ts"],
+      "aliases_scraper": ["etl-lar"]
+    }
+  ],
+  "manifesto_aliases": {
+    "etl-run": "Executa o pipeline completo (Scrape All -> Sync Supabase -> Sanitize -> Export PWA -> Audit) e exibe os logs e timestamps na CLI.",
+    "etl-pipeline": "Atalho idêntico ao etl-run.",
+    "etl-friboi": "Extrai catálogo B2B Friboi/JBS.",
+    "etl-seara": "Extrai catálogo B2B Seara Alimentos.",
+    "etl-brf": "Extrai catálogo BRF S.A. (Sadia, Perdigão, Qualy).",
+    "etl-aurora": "Extrai catálogo Cooperativa Aurora Alimentos.",
+    "etl-lar": "Extrai catálogo Cooperativa Agroindustrial Lar.",
+    "etl-scrape-all": "Extrai dados de todos os 5 scrapers em lote.",
+    "etl-sync": "Sincroniza tabelas em formato relacional UUIDv5 com Supabase.",
+    "etl-images": "Remoção de fundo via IA e upload para o Supabase Storage.",
+    "etl-sanitize": "Higienização Title Case, gramatura e EAN-13 GS1 Modulus 10.",
+    "etl-export": "Gera produtos.json purificado para o PWA.",
+    "etl-export-excel": "Exporta relatório em planilha Excel (.xlsx).",
+    "etl-audit": "Auditoria exaustiva de integridade no Supabase.",
+    "etl-wipe": "Limpa tabelas no PostgreSQL do Supabase.",
+    "etl-logs": "Exibe logs em tempo real via tail -f.",
+    "etl-conflicts": "Exibe log de conflitos EAN/DUN em staging.",
+    "etl-status": "Consulta status e contagem de registros no Supabase ao vivo.",
+    "etl-schedule": "Menu interativo de agendamento no Crontab Linux."
+  },
   "required": ["fabricantes", "marcas", "produtos", "codigos_barras", "pending_images_approval"]
 }

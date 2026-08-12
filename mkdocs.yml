@@ -66,6 +66,7 @@ nav:
   - "Início": "index.md"
   - "Guia de Operações e CLI": "operacoes.md"
   - "Scrapers Multi-Fornecedores": "scrapers-multi-fornecedores.md"
+  - "Pipeline Friboi / JBS": "pipeline-friboi.md"
   - "Normalizadores e Heurísticas": "heuristicas-normalizadores.md"
   - "Pipeline de IA de Imagens": "processamento-imagens.md"
   - "Governança e Schema": "schema-manifesto.md"
