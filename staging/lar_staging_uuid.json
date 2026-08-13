@@ -581,6 +581,19 @@
       "criado_em": "2026-08-05T18:07:49.805035+00:00"
     },
     {
+      "id": "a5502431-9c40-5052-b519-2f5b27d6e6f6",
+      "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
+      "descricao_padronizada": "Steak Empanado (pesar)",
+      "descricao_original": "Steak Empanado",
+      "classe": "Empanados",
+      "conservacao": "Congelado",
+      "peso_gramas": 100,
+      "fracionado": true,
+      "imagem_url": "https://www.lar.ind.br/wp-content/uploads/2021/02/STEAK-EMPANADO-100g-copiar-1024x1024.png",
+      "status_imagem": "VALIDATED",
+      "criado_em": "2026-08-05T18:07:49.805035+00:00"
+    },
+    {
       "id": "bdadb759-54ae-516e-80ac-e7f37536baed",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Hambúrguer Empanado de Frango (pesar)",
@@ -2223,6 +2236,15 @@
       "produto_id": "080a3a4b-9407-50fb-93dd-53d0a8adb450",
       "tipo": "DUN",
       "codigo": "17896419713859",
+      "embalagem": "CX",
+      "quantidade_embalagem": null,
+      "criado_em": "2026-08-05T18:07:49.805035+00:00"
+    },
+    {
+      "id": "e28ab12e-5fcc-5101-ada1-86f92292c11a",
+      "produto_id": "a5502431-9c40-5052-b519-2f5b27d6e6f6",
+      "tipo": "DUN",
+      "codigo": "17896419723476",
       "embalagem": "CX",
       "quantidade_embalagem": null,
       "criado_em": "2026-08-05T18:07:49.805035+00:00"

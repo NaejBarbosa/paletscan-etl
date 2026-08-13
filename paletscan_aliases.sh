@@ -152,6 +152,13 @@ etl-novos() {
 
 alias etl-novos-produtos="etl-novos"
 
+etl-atualizados() {
+  cd "$PALETSCAN_ETL_DIR" || return 1
+  npx tsx scripts/show_updated_products.ts
+}
+
+alias etl-alteracoes="etl-atualizados"
+
 # ==============================================================================
 # ⏰ GERENCIAMENTO DE AGENDAMENTO (CRONTAB LINUX)
 # ==============================================================================

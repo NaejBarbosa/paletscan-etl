@@ -30,6 +30,18 @@ async function verify() {
     }
   }
 
+  let atualizadosCount = 0;
+  const atualizadosLogPath = require("path").join(process.cwd(), "staging", "produtos_atualizados_log.json");
+  if (require("fs").existsSync(atualizadosLogPath)) {
+    try {
+      const rawAlt = require("fs").readFileSync(atualizadosLogPath, "utf-8");
+      const parsedAlt = JSON.parse(rawAlt);
+      if (Array.isArray(parsedAlt)) atualizadosCount = parsedAlt.length;
+    } catch {
+      atualizadosCount = 0;
+    }
+  }
+
   console.log("────────────────────────────────────");
   console.log("📊 STATUS SUPABASE (AO VIVO)");
   console.log("────────────────────────────────────");
@@ -38,7 +50,12 @@ async function verify() {
   console.log(` 🥩 Produtos:          ${prodCount ?? 0}`);
   console.log(` 📊 Códigos de Barras: ${codCount ?? 0}`);
   if (novosCount > 0) {
-    console.log(` ✨ Novos Produtos:    ${novosCount} recém-incluídos`);
+    console.log(` ✨ Novos Produtos:    ${novosCount} recém-incluídos nesta execução`);
+  } else {
+    console.log(` ✨ Novos Produtos:    0 recém-incluídos`);
+  }
+  if (atualizadosCount > 0) {
+    console.log(` 🔄 Alterados/Atualiz.: ${atualizadosCount} produtos modificados`);
   }
   console.log("────────────────────────────────────");
 }

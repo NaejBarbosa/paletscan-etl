@@ -81,10 +81,28 @@ A infraestrutura Supabase comunica-se diretamente com a aplicação PWA em produ
 
 ## 🆕 5. Rastreamento e Log de Novos Produtos Incluídos
 
-Durante a execução da carga relacional, o `sync.ts` compara as chaves primárias dos produtos recebidos em staging com as chaves já existentes no Supabase:
+Durante a execução da carga relacional, o `sync.ts` compara as chaves primárias dos produtos recebidos em staging com as chaves já existentes no Supabase através de consultas paginadas:
 
-1. **Detecção Automática**: Produtos não encontrados na base remota são identificados como novos produtos incluídos.
-2. **Log de Novos Produtos (`staging/novos_produtos_log.json`)**: Armazena os dados dos novos produtos (EAN, DUN, marca, descrição, classe, conservação e timestamp de inclusão `criado_em`).
-3. **Integração com PWA**: O script `scripts/generate_pwa_produtos_json.ts` injeta o timestamp de inclusão em `produtos.json` para acionar as notificações em tempo real na aplicação PWA.
-4. **Comando CLI (`etl-novos`)**: Permite visualizar a lista detalhada de produtos recentemente incluídos diretamente no terminal Linux.
+1. **Regra de Status de Novo Produto**: Um produto ganha o status de **NOVO** única e exclusivamente na **primeira execução em que é incluído no Supabase**.
+2. **Ciclo de Vida Automático**: Na execução subsequente, por já constar na base do Supabase, o produto perde automaticamente o status de novo e passa a constar como produto pré-existente (`0 novos produtos`).
+3. **Log de Novos Produtos (`staging/novos_produtos_log.json`)**: Armazena a lista de produtos inseridos na execução mais recente.
+4. **Comando CLI (`etl-novos`)**: Permite consultar via terminal Linux a relação detalhada dos produtos incluídos na última carga (`npx tsx scripts/show_new_products.ts`).
+5. **Sinalização Exclusiva em Log (ETL)**: A sinalização visual e modais de novos produtos foram removidos da interface PWA, mantendo o rastreamento concentrado nos relatórios operacionais do pipeline ETL.
+
+---
+
+## 📝 6. Rastreamento e Log de Produtos Alterados / Atualizados
+
+Qualquer alteração ou atualização nos atributos de um produto pré-existente no Supabase é detectada automaticamente durante a sincronização relacional:
+
+1. **Diffing em Nível de Campo**: O `sync.ts` compara campo por campo do produto pré-existente com os dados novos do staging:
+   - `imagem_url` / `status_imagem`
+   - `descricao_padronizada`
+   - `classe`
+   - `conservacao`
+   - `peso_gramas` / `fracionado`
+   - `marca_id`
+2. **Log de Alterações (`staging/produtos_atualizados_log.json`)**: Quando uma mudança é detectada, o arquivo armazena os valores anteriores (`anterior`) e os valores atualizados (`atualizado`).
+3. **Comando CLI (`etl-atualizados`)**: O utilitário `scripts/show_updated_products.ts` permite inspecionar quais produtos sofreram alteração na última execução do pipeline.
+
 

@@ -29,7 +29,7 @@ export function showNewProducts() {
     console.log('\x1b[1;36m────────────────────────────────────\x1b[0m');
 
     if (!Array.isArray(items) || items.length === 0) {
-      console.log('Nenhum novo produto registrado.');
+      console.log('Nenhum produto novo foi incluído na base nesta execução (0 novos).');
       return;
     }
 

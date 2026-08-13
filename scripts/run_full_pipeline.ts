@@ -167,6 +167,23 @@ async function runPipeline() {
     }
   }
 
+  // Leitura de produtos alterados em staging/produtos_atualizados_log.json
+  let atualizadosCount = 0;
+  let atualizadosItems: any[] = [];
+  const atualizadosLogPath = require("path").join(process.cwd(), "staging", "produtos_atualizados_log.json");
+  if (require("fs").existsSync(atualizadosLogPath)) {
+    try {
+      const rawAlt = require("fs").readFileSync(atualizadosLogPath, "utf-8");
+      const parsedAlt = JSON.parse(rawAlt);
+      if (Array.isArray(parsedAlt)) {
+        atualizadosItems = parsedAlt;
+        atualizadosCount = parsedAlt.length;
+      }
+    } catch {
+      atualizadosCount = 0;
+    }
+  }
+
   console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
   console.log("\x1b[1;33m📊 BASE DE DADOS SUPABASE (AO VIVO):\x1b[0m");
   console.log(` 🏢 Fabricantes:       ${supabaseStats.fabCount}`);
@@ -174,7 +191,7 @@ async function runPipeline() {
   console.log(` 🥩 Produtos Totais:   ${supabaseStats.prodCount}`);
   console.log(` 📊 Códigos de Barras: ${supabaseStats.codCount}`);
   if (novosCount > 0) {
-    console.log(` ✨ Novos Produtos:    \x1b[1;32m${novosCount} recém-incluídos\x1b[0m`);
+    console.log(` ✨ Novos Produtos:    \x1b[1;32m${novosCount} recém-incluídos nesta execução\x1b[0m`);
     console.log("\x1b[1;33m📌 RESUMO DOS NOVOS PRODUTOS:\x1b[0m");
     novosItems.slice(0, 8).forEach((item: any, idx: number) => {
       console.log(`   ${idx + 1}. \x1b[1m${item.marca || 'N/D'}\x1b[0m - EAN: ${item.ean || 'N/D'} | ${item.descricao}`);
@@ -182,6 +199,23 @@ async function runPipeline() {
     if (novosItems.length > 8) {
       console.log(`   ... e mais ${novosItems.length - 8} novos produtos (\x1b[1;36metl-novos\x1b[0m).`);
     }
+  } else {
+    console.log(` ✨ Novos Produtos:    0 recém-incluídos nesta execução`);
+  }
+
+  if (atualizadosCount > 0) {
+    console.log(` 🔄 Alterados/Atualiz.: \x1b[1;33m${atualizadosCount} produtos modificados nesta execução\x1b[0m`);
+    console.log("\x1b[1;33m📌 RESUMO DAS ALTERAÇÕES/ATUALIZAÇÕES:\x1b[0m");
+    atualizadosItems.slice(0, 8).forEach((item: any, idx: number) => {
+      const camposStr = item.alteracoes?.map((a: any) => a.campo).join(', ') || '';
+      console.log(`   ${idx + 1}. \x1b[1m${item.marca || 'N/D'}\x1b[0m - EAN: ${item.ean || 'N/D'} | ${item.descricao}`);
+      console.log(`      └─ Campos: ${camposStr}`);
+    });
+    if (atualizadosItems.length > 8) {
+      console.log(`   ... e mais ${atualizadosItems.length - 8} produtos alterados (\x1b[1;36metl-atualizados\x1b[0m).`);
+    }
+  } else {
+    console.log(` 🔄 Alterados/Atualiz.: 0 produtos modificados nesta execução`);
   }
   console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
   console.log("\x1b[1;32m✔ PIPELINE FINALIZADO COM SUCESSO!\x1b[0m");

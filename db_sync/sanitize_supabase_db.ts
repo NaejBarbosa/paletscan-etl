@@ -55,33 +55,45 @@ export async function sanitizeDatabase() {
   }
   console.log(`📊 Total de códigos de barras na base: ${allCodigos.length}`);
 
-  // Indexar EANs por produto_id
-  const productEanSet = new Set<string>();
+  // Indexar códigos numéricos válidos (EAN/DUN) por produto_id
+  const productValidBarcodeSet = new Set<string>();
+  const nonNumericBarcodeIds: string[] = [];
+
   for (const c of allCodigos) {
-    const isEANType = c.tipo && c.tipo.toUpperCase().includes('EAN');
-    const isEANNumeric = c.codigo && /^\d{8,13}$/.test(String(c.codigo).trim());
-    if (isEANType && isEANNumeric) {
-      productEanSet.add(c.produto_id);
+    const isNumeric = c.codigo && /^\d+$/.test(String(c.codigo).trim());
+    if (isNumeric) {
+      productValidBarcodeSet.add(c.produto_id);
+    } else {
+      nonNumericBarcodeIds.push(c.id);
     }
   }
 
-  // Identificar produtos inválidos (sem ao menos 1 EAN numérico)
+  // Identificar produtos inválidos (sem ao menos 1 código de barras numérico EAN/DUN)
   const invalidProductIds: string[] = [];
   for (const p of allProdutos) {
-    if (!productEanSet.has(p.id)) {
+    if (!productValidBarcodeSet.has(p.id)) {
       invalidProductIds.push(p.id);
     }
   }
 
-  console.log(`\n🚨 Produtos sem EAN numérico identificados para remoção: ${invalidProductIds.length}`);
+  // Deletar códigos de barras não-numéricos (sujeiras textuais residuais)
+  if (nonNumericBarcodeIds.length > 0) {
+    console.log(`🧹 Removendo ${nonNumericBarcodeIds.length} códigos de barras não-numéricos...`);
+    for (let i = 0; i < nonNumericBarcodeIds.length; i += 100) {
+      const chunk = nonNumericBarcodeIds.slice(i, i + 100);
+      await supabase.from('codigos_barras').delete().in('id', chunk);
+    }
+  }
+
+  console.log(`\n🚨 Produtos sem nenhum código de barras numérico identificados para remoção: ${invalidProductIds.length}`);
 
   if (invalidProductIds.length === 0) {
-    console.log('✅ A base já está 100% limpa e todos os produtos possuem EAN!');
+    console.log('✅ A base já está 100% limpa e todos os produtos possuem EAN/DUN numérico!');
     return;
   }
 
   // 3. Remover códigos de barras de produtos inválidos
-  console.log('🗑️  Removendo códigos de barras associados a produtos sem EAN...');
+  console.log('🗑️  Removendo códigos de barras associados a produtos sem EAN/DUN...');
   for (let i = 0; i < invalidProductIds.length; i += 50) {
     const batch = invalidProductIds.slice(i, i + 50);
     const { error: errDelCod } = await supabase

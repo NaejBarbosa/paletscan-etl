@@ -171,7 +171,7 @@ async function upsertInBatches<T extends { id: string; codigo?: string }>(
     const chunk = items.slice(i, i + batchSize);
 
     const upsertOptions = tableName === 'codigos_barras'
-      ? { onConflict: 'codigo', ignoreDuplicates: true }
+      ? { onConflict: 'codigo' }
       : { onConflict: 'id' };
 
     const { error } = await supabase
@@ -242,6 +242,14 @@ export async function syncStagingToSupabase() {
   console.log(`📁 Arquivos de staging identificados para sincronização (${stagingFiles.length}):`);
   stagingFiles.forEach(f => console.log(`   - ${path.basename(f)}`));
 
+  const allNovosProdutosLog: any[] = [];
+  const allProdutosAtualizadosLog: any[] = [];
+  let totalFabricantesSynced = 0;
+  let totalMarcasSynced = 0;
+  let totalProdutosSynced = 0;
+  let totalCodigosSynced = 0;
+  let totalConflictsGlobal = 0;
+
   for (const stagingPath of stagingFiles) {
     const filename = path.basename(stagingPath);
     const transformedPath = path.join(stagingDir, filename.replace('_staging.json', '_staging_uuid.json'));
@@ -275,7 +283,7 @@ export async function syncStagingToSupabase() {
 
     const eanProductIds = new Set<string>();
     for (const cb of deduplicatedCodigos) {
-      if (cb.tipo && cb.tipo.toUpperCase().includes('EAN') && cb.codigo && /^\d+$/.test(cb.codigo.trim())) {
+      if (cb.codigo && /^\d+$/.test(cb.codigo.trim())) {
         eanProductIds.add(cb.produto_id);
       }
     }
@@ -319,115 +327,112 @@ export async function syncStagingToSupabase() {
       };
     });
 
-  const codigosBarrasUUID: StagingCodigoBarras[] = [];
-  const produtosValidosUUIDSet = new Set(produtosUUID.map(p => p.id));
+    const codigosBarrasUUID: StagingCodigoBarras[] = [];
+    const produtosValidosUUIDSet = new Set(produtosUUID.map(p => p.id));
 
-  for (const cb of deduplicatedCodigos) {
-    const prodUuid = toUUID5(cb.produto_id);
-    if (!produtosValidosUUIDSet.has(prodUuid)) continue;
+    for (const cb of deduplicatedCodigos) {
+      const prodUuid = toUUID5(cb.produto_id);
+      if (!produtosValidosUUIDSet.has(prodUuid)) continue;
+      if (!cb.codigo || !/^\d+$/.test(cb.codigo.trim())) continue;
 
-    let tipoNormalizado = (cb.tipo || '').trim();
-    if (tipoNormalizado.toUpperCase().includes('EAN')) {
-      tipoNormalizado = 'EAN';
-    } else if (tipoNormalizado.toUpperCase().includes('DUN')) {
-      tipoNormalizado = 'DUN';
+      let tipoNormalizado = (cb.tipo || '').trim();
+      if (tipoNormalizado.toUpperCase().includes('EAN')) {
+        tipoNormalizado = 'EAN';
+      } else if (tipoNormalizado.toUpperCase().includes('DUN')) {
+        tipoNormalizado = 'DUN';
+      }
+
+      codigosBarrasUUID.push({
+        ...cb,
+        id: toUUID5(cb.id),
+        produto_id: prodUuid,
+        tipo: tipoNormalizado
+      });
     }
 
-    codigosBarrasUUID.push({
-      ...cb,
-      id: toUUID5(cb.id),
-      produto_id: prodUuid,
-      tipo: tipoNormalizado
-    });
-  }
-
-
-  const payloadUUID = {
-    fabricantes: fabricantesUUID,
-    marcas: marcasUUID,
-    produtos: produtosUUID,
-    codigos_barras: codigosBarrasUUID,
-    pending_images_approval: staging.pending_images_approval || []
-  };
-
-  fs.writeFileSync(transformedPath, JSON.stringify(payloadUUID, null, 2), 'utf-8');
-  console.log(`✅ Dados transformados com UUIDs salvos em: ${transformedPath}`);
-
-  // -------------------------------------------------------------
-  // CAMADA DE CARGA (LOAD): Supabase Upsert Ordenado Resiliente
-  // -------------------------------------------------------------
-  const supabaseUrl = process.env.SUPABASE_URL;
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY;
-
-  if (!supabaseUrl || !supabaseKey || supabaseUrl.includes('sua-instancia')) {
-    console.log('\n⚠️  SUPABASE_URL ou SUPABASE_KEY não configurados no arquivo .env.');
-    console.log('💡 Para carregar no banco remoto, preencha as variáveis SUPABASE_URL e SUPABASE_KEY no .env.');
-    console.log('✨ A conversão para UUIDv5 e validação relacional foram concluídas com sucesso localmente!');
-    if (inMemoryConflicts > 0) {
-      console.log(`⚠️  Conflitos de EAN/DUN ignorados: ${inMemoryConflicts} (ver staging/conflicts_log.json)`);
-    }
-    return;
-  }
-
-  console.log(`\n📡 Conectando ao Supabase em: ${supabaseUrl}`);
-  const supabase = createClient(supabaseUrl, supabaseKey);
-
-  // Busca IDs de produtos pré-existentes para detectar novos produtos incluídos
-  let existingProductIds = new Set<string>();
-  try {
-    const { data: exProds } = await supabase.from('produtos').select('id');
-    if (exProds && Array.isArray(exProds)) {
-      exProds.forEach(p => existingProductIds.add(p.id));
-    }
-  } catch (err) {
-    // Continua se a busca falhar
-  }
-
-  console.log('\n🚀 Executando Carga Relacional Ordenada Resiliente (.upsert)...');
-
-  console.log('1️⃣  Sincronizando Fabricantes...');
-  const resFab = await upsertInBatches(supabase, 'fabricantes', fabricantesUUID);
-
-  console.log('2️⃣  Sincronizando Marcas...');
-  const resMarcas = await upsertInBatches(supabase, 'marcas', marcasUUID);
-
-  console.log('3️⃣  Sincronizando Produtos...');
-  const resProdutos = await upsertInBatches(supabase, 'produtos', produtosUUID);
-
-  console.log('4️⃣  Sincronizando Códigos de Barras (Modo Resiliente)...');
-  const resCB = await upsertInBatches(supabase, 'codigos_barras', codigosBarrasUUID, 200, true);
-
-  const totalConflicts = resCB.conflictCount;
-
-  // -------------------------------------------------------------
-  // REGISTRO E LOG DE NOVOS PRODUTOS INCLUÍDOS NA BASE
-  // -------------------------------------------------------------
-  const novosProdutos = produtosUUID.filter(p => !existingProductIds.has(p.id));
-  const marcasMap = new Map(marcasFiltradas.map(m => [toUUID5(m.id), m.nome]));
-  const cbMap = new Map(codigosBarrasUUID.map(c => [c.produto_id, c]));
-
-  const novosProdutosLog = novosProdutos.map(p => {
-    const cb = cbMap.get(p.id);
-    return {
-      id: p.id,
-      marca: marcasMap.get(p.marca_id) || 'N/D',
-      ean: cb?.tipo === 'EAN' ? cb.codigo : (cb?.codigo || ''),
-      dun: cb?.tipo === 'DUN' ? cb.codigo : '',
-      descricao: p.descricao_padronizada || p.descricao_original,
-      classe: p.classe,
-      conservacao: p.conservacao,
-      criado_em: p.criado_em || new Date().toISOString()
+    const payloadUUID = {
+      fabricantes: fabricantesUUID,
+      marcas: marcasUUID,
+      produtos: produtosUUID,
+      codigos_barras: codigosBarrasUUID,
+      pending_images_approval: staging.pending_images_approval || []
     };
-  });
 
-  const novosLogPath = path.join(process.cwd(), 'staging', 'novos_produtos_log.json');
-  if (novosProdutosLog.length > 0) {
-    fs.writeFileSync(novosLogPath, JSON.stringify(novosProdutosLog, null, 2), 'utf-8');
-  } else if (!fs.existsSync(novosLogPath)) {
-    // Se nenhum produto foi detectado como totalmente novo no lote atual, salva os 15 mais recentes
-    const recentesLog = produtosUUID.slice(0, 15).map(p => {
+    fs.writeFileSync(transformedPath, JSON.stringify(payloadUUID, null, 2), 'utf-8');
+    console.log(`✅ Dados transformados com UUIDs salvos em: ${transformedPath}`);
+
+    // -------------------------------------------------------------
+    // CAMADA DE CARGA (LOAD): Supabase Upsert Ordenado Resiliente
+    // -------------------------------------------------------------
+    const supabaseUrl = process.env.SUPABASE_URL;
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY;
+
+    if (!supabaseUrl || !supabaseKey || supabaseUrl.includes('sua-instancia')) {
+      console.log('\n⚠️  SUPABASE_URL ou SUPABASE_KEY não configurados no arquivo .env.');
+      continue;
+    }
+
+    console.log(`\n📡 Conectando ao Supabase em: ${supabaseUrl}`);
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    // Busca paginada de TODOS os produtos pré-existentes para detectar novos produtos e alterações/atualizações
+    let existingProductIds = new Set<string>();
+    let existingProductsMap = new Map<string, any>();
+    try {
+      let page = 0;
+      const pageSize = 1000;
+      let hasMore = true;
+      while (hasMore) {
+        const { data: exProds, error } = await supabase
+          .from('produtos')
+          .select('id, marca_id, descricao_padronizada, descricao_original, classe, conservacao, peso_gramas, fracionado, imagem_url, status_imagem')
+          .range(page * pageSize, (page + 1) * pageSize - 1);
+
+        if (!error && exProds && exProds.length > 0) {
+          exProds.forEach(p => {
+            existingProductIds.add(p.id);
+            existingProductsMap.set(p.id, p);
+          });
+          page++;
+          if (exProds.length < pageSize) hasMore = false;
+        } else {
+          hasMore = false;
+        }
+      }
+    } catch (err) {
+      // Continua se a busca falhar
+    }
+
+    console.log('\n🚀 Executando Carga Relacional Ordenada Resiliente (.upsert)...');
+
+    console.log('1️⃣  Sincronizando Fabricantes...');
+    const resFab = await upsertInBatches(supabase, 'fabricantes', fabricantesUUID);
+
+    console.log('2️⃣  Sincronizando Marcas...');
+    const resMarcas = await upsertInBatches(supabase, 'marcas', marcasUUID);
+
+    console.log('3️⃣  Sincronizando Produtos...');
+    const resProdutos = await upsertInBatches(supabase, 'produtos', produtosUUID);
+
+    console.log('4️⃣  Sincronizando Códigos de Barras (Modo Resiliente)...');
+    const resCB = await upsertInBatches(supabase, 'codigos_barras', codigosBarrasUUID, 200, true);
+
+    totalFabricantesSynced += resFab.totalSynced;
+    totalMarcasSynced += resMarcas.totalSynced;
+    totalProdutosSynced += resProdutos.totalSynced;
+    totalCodigosSynced += resCB.totalSynced;
+    totalConflictsGlobal += resCB.conflictCount;
+
+    // -------------------------------------------------------------
+    // DETECÇÃO DE NOVOS PRODUTOS INCLUÍDOS NESTE ARQUIVO
+    // -------------------------------------------------------------
+    const novosProdutos = produtosUUID.filter(p => !existingProductIds.has(p.id));
+    const marcasMap = new Map(marcasFiltradas.map(m => [toUUID5(m.id), m.nome]));
+    const cbMap = new Map(codigosBarrasUUID.map(c => [c.produto_id, c]));
+
+    novosProdutos.forEach(p => {
       const cb = cbMap.get(p.id);
-      return {
+      allNovosProdutosLog.push({
         id: p.id,
         marca: marcasMap.get(p.marca_id) || 'N/D',
         ean: cb?.tipo === 'EAN' ? cb.codigo : (cb?.codigo || ''),
@@ -436,32 +441,129 @@ export async function syncStagingToSupabase() {
         classe: p.classe,
         conservacao: p.conservacao,
         criado_em: p.criado_em || new Date().toISOString()
-      };
+      });
     });
-    fs.writeFileSync(novosLogPath, JSON.stringify(recentesLog, null, 2), 'utf-8');
+
+    // -------------------------------------------------------------
+    // DETECÇÃO DE ALTERAÇÕES E ATUALIZAÇÕES EM PRODUTOS EXISTENTES
+    // -------------------------------------------------------------
+    const produtosExistentes = produtosUUID.filter(p => existingProductIds.has(p.id));
+
+    for (const p of produtosExistentes) {
+      const existing = existingProductsMap.get(p.id);
+      if (!existing) continue;
+
+      const alteracoes: { campo: string; de: any; para: any }[] = [];
+
+      const imgEx = (existing.imagem_url || '').trim();
+      const imgNew = (p.imagem_url || '').trim();
+      if (imgEx !== imgNew) {
+        alteracoes.push({ campo: 'Imagem (URL)', de: imgEx || 'Sem imagem', para: imgNew || 'Sem imagem' });
+      }
+
+      const stEx = (existing.status_imagem || '').trim();
+      const stNew = (p.status_imagem || '').trim();
+      if (stEx !== stNew) {
+        alteracoes.push({ campo: 'Status da Imagem', de: stEx || 'N/D', para: stNew || 'N/D' });
+      }
+
+      const descEx = (existing.descricao_padronizada || '').trim();
+      const descNew = (p.descricao_padronizada || '').trim();
+      if (descEx !== descNew) {
+        alteracoes.push({ campo: 'Descrição', de: descEx || 'N/D', para: descNew || 'N/D' });
+      }
+
+      const clEx = (existing.classe || '').trim();
+      const clNew = (p.classe || '').trim();
+      if (clEx !== clNew) {
+        alteracoes.push({ campo: 'Classe', de: clEx || 'N/D', para: clNew || 'N/D' });
+      }
+
+      const consEx = (existing.conservacao || '').trim();
+      const consNew = (p.conservacao || '').trim();
+      if (consEx !== consNew) {
+        alteracoes.push({ campo: 'Conservação', de: consEx || 'N/D', para: consNew || 'N/D' });
+      }
+
+      const pesoEx = existing.peso_gramas ?? null;
+      const pesoNew = p.peso_gramas ?? null;
+      if (pesoEx !== pesoNew) {
+        alteracoes.push({ campo: 'Peso (g)', de: pesoEx ?? 'N/D', para: pesoNew ?? 'N/D' });
+      }
+
+      const fracEx = Boolean(existing.fracionado);
+      const fracNew = Boolean(p.fracionado);
+      if (fracEx !== fracNew) {
+        alteracoes.push({ campo: 'Fracionado', de: fracEx, para: fracNew });
+      }
+
+      const marcaEx = (existing.marca_id || '').trim();
+      const marcaNew = (p.marca_id || '').trim();
+      if (marcaEx !== marcaNew) {
+        alteracoes.push({ campo: 'Marca ID', de: marcaEx || 'N/D', para: marcaNew || 'N/D' });
+      }
+
+      if (alteracoes.length > 0) {
+        const cb = cbMap.get(p.id);
+        allProdutosAtualizadosLog.push({
+          id: p.id,
+          marca: marcasMap.get(p.marca_id) || 'N/D',
+          ean: cb?.tipo === 'EAN' ? cb.codigo : (cb?.codigo || ''),
+          dun: cb?.tipo === 'DUN' ? cb.codigo : '',
+          descricao: p.descricao_padronizada || p.descricao_original,
+          alteracoes,
+          atualizado_em: new Date().toISOString()
+        });
+      }
+    }
   }
 
-  console.log('\n🎉 === RESUMO DA SINCRONIZAÇÃO SUPABASE ===');
-  console.log(`🏢 Fabricantes sincronizados: ${resFab.totalSynced}`);
-  console.log(`🏷️  Marcas sincronizadas:      ${resMarcas.totalSynced}`);
-  console.log(`🥩 Produtos sincronizados:    ${resProdutos.totalSynced}`);
-  console.log(`📊 Códigos de Barras:         ${resCB.totalSynced}`);
+  // -------------------------------------------------------------
+  // SALVAMENTO E RELATÓRIO CONSOLIDADO DO ETL COMPLETO
+  // -------------------------------------------------------------
+  const novosLogPath = path.join(process.cwd(), 'staging', 'novos_produtos_log.json');
+  fs.writeFileSync(novosLogPath, JSON.stringify(allNovosProdutosLog, null, 2), 'utf-8');
 
-  const logExibicao = novosProdutosLog.length > 0 ? novosProdutosLog : [];
-  if (logExibicao.length > 0) {
+  const atualizadosLogPath = path.join(process.cwd(), 'staging', 'produtos_atualizados_log.json');
+  fs.writeFileSync(atualizadosLogPath, JSON.stringify(allProdutosAtualizadosLog, null, 2), 'utf-8');
+
+  console.log('\n🎉 === RESUMO FINAL DA SINCRONIZAÇÃO SUPABASE ===');
+  console.log(`🏢 Fabricantes sincronizados: ${totalFabricantesSynced}`);
+  console.log(`🏷️  Marcas sincronizadas:      ${totalMarcasSynced}`);
+  console.log(`🥩 Produtos sincronizados:    ${totalProdutosSynced}`);
+  console.log(`📊 Códigos de Barras:         ${totalCodigosSynced}`);
+
+  if (allNovosProdutosLog.length > 0) {
     console.log('\n✨ ==================================================');
-    console.log(`🆕 NOVOS PRODUTOS INCLUÍDOS NA BASE (${logExibicao.length}):`);
+    console.log(`🆕 NOVOS PRODUTOS INCLUÍDOS NA BASE NESTA EXECUÇÃO (${allNovosProdutosLog.length}):`);
     console.log('==================================================');
-    logExibicao.forEach((item, idx) => {
+    allNovosProdutosLog.forEach((item, idx) => {
       const eanStr = item.ean ? `EAN: ${item.ean}` : 'Sem EAN';
       console.log(`  ${idx + 1}. [${item.marca}] ${eanStr} | ${item.descricao}`);
     });
     console.log('==================================================');
+  } else {
+    console.log('\nℹ️  Nenhum produto novo incluído na base nesta execução (0 novos).');
   }
 
-  if (totalConflicts > 0) {
-    console.log(`⚠️  Conflitos de EAN/DUN ignorados: ${totalConflicts} (ver staging/conflicts_log.json)`);
+  if (allProdutosAtualizadosLog.length > 0) {
+    console.log('\n🔄 ==================================================');
+    console.log(`📝 PRODUTOS ALTERADOS / ATUALIZADOS NA BASE NESTA EXECUÇÃO (${allProdutosAtualizadosLog.length}):`);
+    console.log('==================================================');
+    allProdutosAtualizadosLog.forEach((item, idx) => {
+      const eanStr = item.ean ? `EAN: ${item.ean}` : 'Sem EAN';
+      console.log(`  ${idx + 1}. [${item.marca}] ${eanStr} | ${item.descricao}`);
+      item.alteracoes.forEach((alt: any) => {
+        console.log(`     └─ • ${alt.campo}: de "${alt.de}" ➔ "${alt.para}"`);
+      });
+    });
+    console.log('==================================================');
+  } else {
+    console.log('ℹ️  Nenhum produto sofreu alterações de dados nesta execução.');
   }
+
+  if (totalConflictsGlobal > 0) {
+    console.log(`⚠️  Conflitos de EAN/DUN ignorados: ${totalConflictsGlobal} (ver staging/conflicts_log.json)`);
   }
 
   console.log('\n🧹 Executando higienização pós-sincronização no Supabase...');
