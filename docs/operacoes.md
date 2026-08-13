@@ -172,17 +172,119 @@ etl-alteracoes
 
 
 
-## ⏰ 4. Agendamento Automático de Execução no Linux (Crontab)
+## ⏰ 8. Agendamento Automático e Gestão de Tarefas Recorrentes (Linux / Crontab)
 
-Para manter o catálogo permanentemente atualizado sem intervenção manual, utilize o agendador nativo:
-
-1. Digite **`etl-schedule`** no terminal.
-2. Selecione a frequência desejada (ex: `1` para diariamente às 03:00 da manhã).
-3. O comando cadastra a tarefa no Crontab redirecionando a saída para `logs/cron_output.log`.
+Para manter a base de dados permanentemente atualizada sem intervenção manual, o ecossistema PaletScan dispõe de integração nativa com o **Crontab do Linux**, permitindo agendamentos flexíveis com logs e relatórios automáticos.
 
 ---
 
-## 🧹 5. Limpeza Total de Bases de Dados e Caches Multi-Camadas
+### A. Agendamento Interativo via CLI (`etl-schedule`)
+
+Execute no terminal:
+
+```bash
+etl-schedule
+```
+
+A CLI exibirá um menu interativo com os perfis mais comuns:
+
+```text
+────────────────────────────────────
+ ⏰ AGENDAMENTO LINUX (CRONTAB)
+────────────────────────────────────
+Frequência para etl-run:
+ 1) Diariamente às 03:00
+ 2) De 12 em 12 horas
+ 3) De 6 em 6 horas
+ 4) Personalizado (Cron)
+ 5) Cancelar
+Opção [1-5]:
+```
+
+---
+
+### B. Sintaxe e Expressões Cron Personalizadas
+
+Caso selecione a **Opção 4 (Personalizado)**, você pode definir qualquer regra de execução utilizando a estrutura padrão de 5 campos do Cron:
+
+$$\begin{matrix} \text{Minuto} & \text{Hora} & \text{Dia-do-Mês} & \text{Mês} & \text{Dia-da-Semana} \\ \text{(0-59)} & \text{(0-23)} & \text{(1-31)} & \text{(1-12)} & \text{(0-6, Dom=0)} \end{matrix}$$
+
+#### 📋 Guia de Exemplos Práticos de Agendamento:
+
+| Objetivo de Agendamento | Expressão Cron | Descrição Operacional |
+| :--- | :--- | :--- |
+| **Diário na Madrugada** | `0 3 * * *` | Roda diariamente às 03:00 da manhã. |
+| **A cada 12 horas** | `0 3,15 * * *` | Roda duas vezes ao dia: às 03:00 e às 15:00. |
+| **A cada 6 horas** | `0 */6 * * *` | Roda de 6 em 6 horas (00:00, 06:00, 12:00, 18:00). |
+| **Horários de Pico (3x ao dia)** | `0 6,12,18 * * *` | Roda exatamente às 06:00, 12:00 e 18:00. |
+| **A cada 30 minutos em Horário Comercial** | `*/30 8-18 * * 1-5` | Roda a cada 30 min, entre 08:00 e 18:00, de segunda a sexta. |
+| **A cada 15 minutos (Alta Frequência)** | `*/15 * * * *` | Roda a cada 15 minutos, 24h por dia. |
+| **Executar 4 vezes ao dia (a cada 3h)** | `0 0,6,12,18 * * *` | Roda a cada 6 horas marcadas no relógio. |
+| **Apenas aos Finais de Semana** | `0 4 * * 0,6` | Roda às 04:00 da manhã aos sábados e domingos. |
+
+---
+
+### C. Listar e Auditar Agendamentos Ativos
+
+Para inspecionar as tarefas agendadas e verificar se a suíte PaletScan está ativa no sistema:
+
+#### 1. Via Alias PaletScan (Recomendado):
+```bash
+etl-cron-list
+```
+*Retorna a linha exata do comando agendado com os parâmetros de diretório e arquivo de log.*
+
+#### 2. Via Comando Nativo Linux:
+```bash
+crontab -l
+```
+
+#### 3. Acompanhamento dos Logs de Execução Automática:
+Toda execução do agendador redireciona o output em tempo real para `logs/cron_output.log`. Para visualizar a transmissão dos logs ao vivo:
+
+```bash
+tail -f logs/cron_output.log
+```
+
+---
+
+### D. Cancelar e Remover Agendamentos
+
+#### 1. Remoção Rápida via CLI:
+```bash
+etl-cron-remove
+```
+*Limpa todos os agendamentos registrados no Crontab.*
+
+#### 2. Edição Manual do Crontab:
+Para alterar ou remover uma linha específica manualmente:
+```bash
+crontab -e
+```
+*(Utilize o editor para remover a linha da tarefa `PALETSCAN_ETL_FULL_JOB` e salve o arquivo).*
+
+---
+
+### E. Garantias de Execução em Segundo Plano no Android / Termux
+
+Para agendamentos executados no **Termux (Android)**, garanta as seguintes diretrizes para evitar que o sistema operacional interrompa a rotina quando a tela estiver apagada:
+
+1. **Ativar Wake-Lock do Termux (Impede o Deep Sleep da CPU)**:
+   ```bash
+   termux-wake-lock
+   ```
+   *(Cria uma notificação persistente na barra do Android mantendo a CPU desperta no horário agendado).*
+
+2. **Remover Otimização de Bateria do Android**:
+   - Vá em **Configurações do Android** $\rightarrow$ **Aplicativos** $\rightarrow$ **Termux** $\rightarrow$ **Bateria**.
+   - Altere para a opção **Sem Restrições** (*Unrestricted*).
+
+3. **Início do Serviço Daemon Pós-Reboot**:
+   - Se o celular for reiniciado, basta abrir o aplicativo Termux uma vez para ativar automaticamente o daemon do `crond` e o `termux-wake-lock`.
+
+---
+
+## 🧹 9. Limpeza Total de Bases de Dados e Caches Multi-Camadas
 
 Quando for necessário resetar o ambiente ou zerar completamente o catálogo antes de um novo ciclo de ingestão de dados, siga o protocolo de limpeza em 3 níveis (Banco Remoto, Fallbacks Estáticos e Cache PWA):
 
