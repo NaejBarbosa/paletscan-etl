@@ -228,6 +228,14 @@
       "marcas": ["Lar Alimentos"],
       "scrapers": ["scrapers/lar/index.ts"],
       "aliases_scraper": ["etl-lar"]
+    },
+    {
+      "id": "fab_copacol_cooperativa",
+      "nome": "Copacol Cooperativa Agroindustrial Consolata",
+      "divisoes": ["Copacol Alimentos"],
+      "marcas": ["Copacol", "Copacol Agro"],
+      "scrapers": ["scrapers/copacol/index.ts"],
+      "aliases_scraper": ["etl-copacol"]
     }
   ],
   "manifesto_aliases": {
@@ -238,7 +246,8 @@
     "etl-brf": "Extrai catálogo BRF S.A. (Sadia, Perdigão, Qualy).",
     "etl-aurora": "Extrai catálogo Cooperativa Aurora Alimentos.",
     "etl-lar": "Extrai catálogo Cooperativa Agroindustrial Lar.",
-    "etl-scrape-all": "Extrai dados de todos os 5 scrapers em lote.",
+    "etl-copacol": "Extrai catálogo Copacol Cooperativa Agroindustrial Consolata.",
+    "etl-scrape-all": "Extrai dados de todos os scrapers em lote.",
     "etl-sync": "Sincroniza tabelas em formato relacional UUIDv5 com Supabase.",
     "etl-images": "Remoção de fundo via IA e upload para o Supabase Storage.",
     "etl-sanitize": "Higienização Title Case, gramatura e EAN-13 GS1 Modulus 10.",

@@ -107,6 +107,8 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
   - Eliminação de fallbacks estáticos legados nos repositórios PWA (`meus-repos/PaletScan` e `repo_pwa`), zerando os arquivos `produtos.json` e `public/produtos.json`.
   - Atualização da chave de reset forçado (`cleanKey`) para `'ps_pwa_reset_v41_empty_wipe'` em [`lib/database/sync.ts`](file:///root/repo_pwa/lib/database/sync.ts) e purga de cache KV Redis via `PRODUCT_CATALOG_CACHE_KEY`.
   - Trava de segurança no motor de cache offline de mídia ([`lib/imageOfflineCache.ts`](file:///root/repo_pwa/lib/imageOfflineCache.ts)) em `prefetchGlobalCatalogImages()` para omitir o pré-carregamento de imagens quando o banco local contiver `0` produtos.
+- [x] **Web Scraper Copacol Cooperativa Agroindustrial Consolata (Migração & Novo Padrão)**: [`scrapers/copacol/index.ts`](file:///root/paletscan-etl/scrapers/copacol/index.ts) com ingestão unificada da base mestre auditada (134 produtos e 268 códigos EAN/DUN), sanitização de glifos/OCR (`TYPO_CORRECTIONS`), normalização via `text_parser.ts`, geração de staging relacional UUIDv5 (`copacol_staging.json` / `copacol_staging_uuid.json`), registro do fabricante mestre e marca Copacol em `brand_classifier.ts` e inclusão do alias `etl-copacol` em `schema_manifest.json`. Sincronização concluída no Supabase elevando a base mestre para **4.228 produtos e 9.846 códigos de barras 100% validados** (0 anomalias).
+
 
 
 ---

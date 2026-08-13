@@ -77,25 +77,38 @@ async function generatePwaProdutosJson() {
   }
   console.log(`✅ Total de códigos DUN identificados: ${dunMap.size}`);
 
-  // Sincronizar imagens preparadas locais da Aurora para public/imagens_produtos
-  const auroraPreparedDir = '/root/projetos-scraping/scraping-aurora/imagens_preparadas';
+  // Sincronizar imagens preparadas locais de todos os scrapers para public/imagens_produtos
   const publicImgDir = '/root/repo_pwa/public/imagens_produtos';
-  if (fs.existsSync(auroraPreparedDir)) {
-    if (!fs.existsSync(publicImgDir)) fs.mkdirSync(publicImgDir, { recursive: true });
-    const auroraFiles = fs.readdirSync(auroraPreparedDir);
-    let copiedCount = 0;
-    auroraFiles.forEach(f => {
-      const src = path.join(auroraPreparedDir, f);
-      const dest = path.join(publicImgDir, f);
-      if (!fs.existsSync(dest)) {
-        fs.copyFileSync(src, dest);
-        copiedCount++;
-      }
-    });
-    if (copiedCount > 0) {
-      console.log(`🖼️ [PWA Image Sync] Copiadas ${copiedCount} novas imagens preparadas para ${publicImgDir}`);
+  if (!fs.existsSync(publicImgDir)) fs.mkdirSync(publicImgDir, { recursive: true });
+
+  const preparedDirs = [
+    '/root/projetos-scraping/scraping-aurora/imagens_preparadas',
+    '/root/projetos-scraping/scraping-copacol/imagens_preparadas',
+    '/root/projetos-scraping/scraping-brf/imagens_preparadas',
+    '/root/projetos-scraping/scraping-friboi/imagens_preparadas',
+    '/root/projetos-scraping/scraping-lar/imagens_preparadas',
+    '/root/projetos-scraping/scraping-seara/imagens_preparadas'
+  ];
+
+  let totalCopied = 0;
+  for (const prepDir of preparedDirs) {
+    if (fs.existsSync(prepDir)) {
+      const files = fs.readdirSync(prepDir);
+      files.forEach(f => {
+        if (!f.endsWith('.webp') && !f.endsWith('.png') && !f.endsWith('.jpg')) return;
+        const src = path.join(prepDir, f);
+        const dest = path.join(publicImgDir, f);
+        if (!fs.existsSync(dest)) {
+          fs.copyFileSync(src, dest);
+          totalCopied++;
+        }
+      });
     }
   }
+  if (totalCopied > 0) {
+    console.log(`🖼️ [PWA Image Sync] Copiadas ${totalCopied} novas imagens preparadas para ${publicImgDir}`);
+  }
+
 
   const mapUnicos = new Map<string, any>();
   allData.forEach((row) => {

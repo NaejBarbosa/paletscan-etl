@@ -19,8 +19,15 @@ export const FABRICANTE_BRF_NOME = 'BRF S.A.';
 export const FABRICANTE_AURORA_ID = 'fab_aurora_cooperativa';
 export const FABRICANTE_AURORA_NOME = 'Cooperativa Central Aurora Alimentos';
 
-// Dicionário de Marcas Conhecidas vinculadas às holdings (JBS, BRF e Aurora)
+export const FABRICANTE_COPACOL_ID = 'fab_copacol_cooperativa';
+export const FABRICANTE_COPACOL_NOME = 'Copacol Cooperativa Agroindustrial Consolata';
+
+// Dicionário de Marcas Conhecidas vinculadas às holdings (JBS, BRF, Aurora e Copacol)
 export const KNOWN_BRANDS: Record<string, { nome: string; slug: string; fabricante_id: string }> = {
+  // --- Marcas Copacol ---
+  'copacol': { nome: 'Copacol', slug: 'copacol', fabricante_id: FABRICANTE_COPACOL_ID },
+  'copacol agro': { nome: 'Copacol Agro', slug: 'copacol-agro', fabricante_id: FABRICANTE_COPACOL_ID },
+
   // --- Marcas Aurora Alimentos ---
   'aurora': { nome: 'Aurora', slug: 'aurora', fabricante_id: FABRICANTE_AURORA_ID },
   'aurora premium': { nome: 'Aurora Premium', slug: 'aurora-premium', fabricante_id: FABRICANTE_AURORA_ID },
