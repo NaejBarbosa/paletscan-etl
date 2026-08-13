@@ -43,39 +43,44 @@ async function generatePwaProdutosJson() {
     }
   }
 
-  console.log(`📊 Registros obtidos da View do Supabase: ${allData.length}`);
+  console.log(`📊 Registros obtidos da View do Supabase (IDs únicos de produtos): ${allData.length}`);
 
-  // Buscar todos os códigos DUN da tabela codigos_barras
-  console.log('📦 Carregando códigos DUN da tabela codigos_barras...');
+  // Buscar todos os códigos EAN e DUN da tabela codigos_barras
+  console.log('📦 Carregando códigos EAN e DUN da tabela codigos_barras...');
+  const eanMap = new Map<string, string>();
   const dunMap = new Map<string, string>();
   page = 0;
   hasMore = true;
   while (hasMore) {
-    const { data: duns, error: dunError } = await supabase
+    const { data: cbList, error: cbError } = await supabase
       .from('codigos_barras')
       .select('produto_id, codigo, tipo')
-      .in('tipo', ['DUN', 'DUN_14'])
       .range(page * pageSize, (page + 1) * pageSize - 1);
 
-    if (dunError) {
-      console.error('⚠️ Erro ao buscar DUNs:', dunError.message);
+    if (cbError) {
+      console.error('⚠️ Erro ao buscar códigos de barras:', cbError.message);
       break;
     }
 
-    if (duns && duns.length > 0) {
-      duns.forEach(d => {
-        const cleanDun = String(d.codigo || '').trim();
-        if (cleanDun && /^\d+$/.test(cleanDun)) {
-          dunMap.set(d.produto_id, cleanDun);
+    if (cbList && cbList.length > 0) {
+      cbList.forEach(c => {
+        const cleanCode = String(c.codigo || '').trim();
+        if (cleanCode && /^\d+$/.test(cleanCode)) {
+          const tipoUpper = (c.tipo || '').toUpperCase();
+          if (tipoUpper.includes('DUN')) {
+            dunMap.set(c.produto_id, cleanCode);
+          } else {
+            eanMap.set(c.produto_id, cleanCode);
+          }
         }
       });
       page++;
-      if (duns.length < pageSize) hasMore = false;
+      if (cbList.length < pageSize) hasMore = false;
     } else {
       hasMore = false;
     }
   }
-  console.log(`✅ Total de códigos DUN identificados: ${dunMap.size}`);
+  console.log(`✅ Total de EANs identificados: ${eanMap.size} | Total de DUNs identificados: ${dunMap.size}`);
 
   // Sincronizar imagens preparadas locais de todos os scrapers para public/imagens_produtos
   const publicImgDir = '/root/repo_pwa/public/imagens_produtos';
@@ -109,15 +114,18 @@ async function generatePwaProdutosJson() {
     console.log(`🖼️ [PWA Image Sync] Copiadas ${totalCopied} novas imagens preparadas para ${publicImgDir}`);
   }
 
-
+  // Deduplicação estrita baseada no ID único do produto (produtos.id)
   const mapUnicos = new Map<string, any>();
   allData.forEach((row) => {
-    const candidateEan = String(row.ean || row.produto_ean || row.codigo || '');
-    const eanVal = /^\d+$/.test(candidateEan.trim()) ? candidateEan.trim() : '';
-    if (!eanVal) return; // PaletScan business rule: only products with valid EAN in app
+    const prodId = String(row.produto_id || row.id || '').trim();
+    if (!prodId) return;
 
-    const key = String(row.produto_id || row.id || eanVal || row.sku || '');
-    const dunVal = dunMap.get(row.produto_id || row.id) || row.dun || row.produto_dun || '';
+    // Regra PaletScan: apenas produtos aprovados respaldados por ao menos um EAN ou DUN numérico válido
+    const eanVal = eanMap.get(prodId) || String(row.ean || row.produto_ean || '').trim();
+    const dunVal = dunMap.get(prodId) || String(row.dun || row.produto_dun || '').trim();
+
+    const primaryBarcode = (/^\d+$/.test(eanVal) ? eanVal : '') || (/^\d+$/.test(dunVal) ? dunVal : '');
+    if (!primaryBarcode) return; // Filtra produtos sem nenhum código numérico válido
 
     let descr = '';
     if (row.descricao_padronizada) {
@@ -137,7 +145,7 @@ async function generatePwaProdutosJson() {
     }
 
     // Verifica se a imagem local existe fisicamente no PWA E o status no Supabase permite exibição
-    const localEanFile = `${eanVal}.webp`;
+    const localEanFile = `${primaryBarcode}.webp`;
     const localPath = path.join(publicImgDir, localEanFile);
     let finalImgUrl = row.imagem_url ?? null;
     let finalStatus = row.status_imagem ?? 'sem_imagem';
@@ -152,17 +160,19 @@ async function generatePwaProdutosJson() {
       }
     }
 
-    if (key && !mapUnicos.has(key)) {
+    // A chave do Map é estritamente o ID ÚNICO DO PRODUTO (prodId), garantindo 1 item por produto no catálogo
+    if (!mapUnicos.has(prodId)) {
       const criadoEmVal = row.criado_em || row.created_at || row.criadoEm || new Date().toISOString();
-      mapUnicos.set(key, {
+      mapUnicos.set(prodId, {
+        id: prodId,
         marcaId: row.marca_id || '',
         marcaDescr: row.marca_nome || 'N/D',
         marcaNome: row.marca_nome || 'N/D',
         marca_nome: row.marca_nome || 'N/D',
         produtoClasse: row.classe || row.produto_classe || '',
-        produtoEan: eanVal,
+        produtoEan: primaryBarcode,
         produtoDun: dunVal,
-        sku: eanVal,
+        sku: primaryBarcode,
         produtoConservacao: row.conservacao || row.produto_conservacao || '',
         produtoDescr: descr,
         title: descr,
@@ -193,10 +203,10 @@ async function generatePwaProdutosJson() {
     const dir = path.dirname(p);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(p, jsonContent, 'utf-8');
-    console.log(`✅ Arquivo salvo com ${produtosLimpos.length} produtos em: ${p}`);
+    console.log(`✅ Arquivo salvo com ${produtosLimpos.length} produtos únicos em: ${p}`);
   });
 
-  console.log('🎉 Geração do produtos.json do PWA concluída com 0 anomalias!');
+  console.log(`🎉 Geração do produtos.json do PWA concluída: ${produtosLimpos.length} produtos únicos aprovados respaldados por EAN!`);
 }
 
 generatePwaProdutosJson().catch(err => {
