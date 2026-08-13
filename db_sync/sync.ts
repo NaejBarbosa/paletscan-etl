@@ -324,6 +324,7 @@ export async function syncStagingToSupabase() {
         descricao_padronizada: parsedText.formatted_description,
         peso_gramas: parsedText.peso_gramas !== null ? parsedText.peso_gramas : p.peso_gramas,
         fracionado: parsedText.fracionado,
+        updated_at: new Date().toISOString(),
       };
     });
 
