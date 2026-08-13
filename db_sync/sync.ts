@@ -324,7 +324,6 @@ export async function syncStagingToSupabase() {
         descricao_padronizada: parsedText.formatted_description,
         peso_gramas: parsedText.peso_gramas !== null ? parsedText.peso_gramas : p.peso_gramas,
         fracionado: parsedText.fracionado,
-        updated_at: new Date().toISOString(),
       };
     });
 
@@ -379,10 +378,12 @@ export async function syncStagingToSupabase() {
     // Busca paginada de TODOS os produtos pré-existentes para detectar novos produtos e alterações/atualizações
     let existingProductIds = new Set<string>();
     let existingProductsMap = new Map<string, any>();
+
     try {
       let page = 0;
       const pageSize = 1000;
       let hasMore = true;
+
       while (hasMore) {
         const { data: exProds, error } = await supabase
           .from('produtos')
@@ -404,6 +405,19 @@ export async function syncStagingToSupabase() {
       // Continua se a busca falhar
     }
 
+    // Preserva status_imagem aprovado/reprovado e imagem_url aprovada pré-existente no Supabase para não sobrescrever validações manuais
+    const produtosUUIDParaUpsert = produtosUUID.map(p => {
+      const existing = existingProductsMap.get(p.id);
+      if (existing && (existing.status_imagem === 'aprovado' || existing.status_imagem === 'reprovado')) {
+        return {
+          ...p,
+          status_imagem: existing.status_imagem,
+          imagem_url: existing.imagem_url || p.imagem_url,
+        };
+      }
+      return p;
+    });
+
     console.log('\n🚀 Executando Carga Relacional Ordenada Resiliente (.upsert)...');
 
     console.log('1️⃣  Sincronizando Fabricantes...');
@@ -413,7 +427,7 @@ export async function syncStagingToSupabase() {
     const resMarcas = await upsertInBatches(supabase, 'marcas', marcasUUID);
 
     console.log('3️⃣  Sincronizando Produtos...');
-    const resProdutos = await upsertInBatches(supabase, 'produtos', produtosUUID);
+    const resProdutos = await upsertInBatches(supabase, 'produtos', produtosUUIDParaUpsert);
 
     console.log('4️⃣  Sincronizando Códigos de Barras (Modo Resiliente)...');
     const resCB = await upsertInBatches(supabase, 'codigos_barras', codigosBarrasUUID, 200, true);
