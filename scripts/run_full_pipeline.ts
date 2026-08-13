@@ -16,11 +16,27 @@ interface StageResult {
 }
 
 function formatTime(d: Date): string {
-  return d.toLocaleTimeString("pt-BR", { hour12: false, hour: "2-digit", minute: "2-digit", second: "2-digit" });
+  const hh = String(d.getHours()).padStart(2, "0");
+  const mm = String(d.getMinutes()).padStart(2, "0");
+  const ss = String(d.getSeconds()).padStart(2, "0");
+  return `${hh}h ${mm}min ${ss}s`;
 }
 
 function formatDate(d: Date): string {
   return d.toLocaleDateString("pt-BR");
+}
+
+function formatDuration(totalSec: number): string {
+  const h = Math.floor(totalSec / 3600);
+  const m = Math.floor((totalSec % 3600) / 60);
+  const s = (totalSec % 60).toFixed(2);
+
+  const parts: string[] = [];
+  if (h > 0) parts.push(`${h}h`);
+  if (m > 0 || h > 0) parts.push(`${m}min`);
+  parts.push(`${s}s`);
+
+  return parts.join(" ");
 }
 
 async function runPipeline() {
@@ -83,7 +99,8 @@ async function runPipeline() {
     }
 
     const sEnd = new Date();
-    const duration = ((sEnd.getTime() - sStart.getTime()) / 1000).toFixed(2);
+    const durationNum = (sEnd.getTime() - sStart.getTime()) / 1000;
+    const durationStr = formatDuration(durationNum);
 
     stages.push({
       id: stg.id,
@@ -91,12 +108,12 @@ async function runPipeline() {
       description: stg.description,
       startTime: formatTime(sStart),
       endTime: formatTime(sEnd),
-      durationSeconds: `${duration}s`,
+      durationSeconds: durationStr,
       status,
       details,
     });
 
-    console.log(`\x1b[1;32m✔ [${formatTime(sEnd)}]\x1b[0m Status: ${status} (Duração: ${duration}s)\n`);
+    console.log(`\x1b[1;32m✔ [${formatTime(sEnd)}]\x1b[0m Status: ${status} (Duração: ${durationStr})\n`);
 
     if (status === "ERRO") {
       console.error(`\x1b[1;31m❌ Pipeline interrompido na etapa: ${stg.name}\x1b[0m`);
@@ -105,7 +122,8 @@ async function runPipeline() {
   }
 
   const globalEnd = new Date();
-  const totalDuration = ((globalEnd.getTime() - globalStart.getTime()) / 1000).toFixed(2);
+  const totalDurationNum = (globalEnd.getTime() - globalStart.getTime()) / 1000;
+  const totalDurationStr = formatDuration(totalDurationNum);
 
   // Consulta do Supabase em Tempo Real
   let supabaseStats = { fabCount: 0, marcaCount: 0, prodCount: 0, codCount: 0 };
@@ -138,7 +156,7 @@ async function runPipeline() {
   console.log(` 📅 Data:           ${formatDate(globalStart)}`);
   console.log(` ⏰ Horário Início: ${formatTime(globalStart)}`);
   console.log(` 🏁 Horário Fim:    ${formatTime(globalEnd)}`);
-  console.log(` ⏱️  Tempo Total:    ${totalDuration}s`);
+  console.log(` ⏱️  Tempo Total:    ${totalDurationStr}`);
   console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
   console.log("\x1b[1;33m📌 DETALHAMENTO DE CADA ETAPA:\x1b[0m\n");
 
@@ -146,7 +164,7 @@ async function runPipeline() {
     const icon = stg.status === "SUCESSO" ? "✅" : "❌";
     console.log(`${icon} \x1b[1m${stg.name}\x1b[0m`);
     console.log(`   ├─ Início  : ${stg.startTime}`);
-    console.log(`   ├─ Término : ${stg.endTime} (${stg.durationSeconds})`);
+    console.log(`   ├─ Término : ${stg.endTime} (Duração: ${stg.durationSeconds})`);
     console.log(`   └─ Detalhes: ${stg.description}`);
   }
 

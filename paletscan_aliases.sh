@@ -5,6 +5,19 @@
 # Arquivo: /root/paletscan-etl/paletscan_aliases.sh
 # ==============================================================================
 
+# Garante ambiente NVM, Node.js e PATH corretos para execuções interativas e via cron
+export NVM_DIR="${NVM_DIR:-/root/.nvm}"
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  . "$NVM_DIR/nvm.sh" 2>/dev/null
+fi
+if [ -d "$NVM_DIR/versions/node" ]; then
+  NODE_LATEST=$(ls -vd "$NVM_DIR/versions/node"/v* 2>/dev/null | tail -n 1)
+  if [ -n "$NODE_LATEST" ] && [ -d "$NODE_LATEST/bin" ]; then
+    export PATH="$NODE_LATEST/bin:$PATH"
+  fi
+fi
+export PATH="/root/.local/bin:$PATH:/usr/local/bin:/usr/bin:/bin"
+
 PALETSCAN_ETL_DIR="/root/paletscan-etl"
 PALETSCAN_LOG_DIR="${PALETSCAN_ETL_DIR}/logs"
 

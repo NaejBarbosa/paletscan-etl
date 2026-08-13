@@ -1,1 +1,1307 @@
-[]
+[
+  {
+    "id": "3f67bfa9-3ed7-5756-9c6b-66d6f257d7b0",
+    "marca": "Sadia",
+    "ean": "17891515223394",
+    "dun": "17891515223394",
+    "descricao": "Filezinho Sassami Cozido Sadia Na Receita 2kg -caixa C/5",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.761Z"
+  },
+  {
+    "id": "0588f3f9-b390-524b-9130-1f3a5506eb08",
+    "marca": "Sadia",
+    "ean": "17893000521329",
+    "dun": "17893000521329",
+    "descricao": "Bacon Fatiado Sadia Na Receita 750g -caixa C/6",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.761Z"
+  },
+  {
+    "id": "440f22ce-5ec5-5320-b7fa-d1ac7343c601",
+    "marca": "Sadia",
+    "ean": "17891515482012",
+    "dun": "17891515482012",
+    "descricao": "Medalhão de Peru sem Osso e Pele Food Service Sadia 2kg -caixa C/4",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.761Z"
+  },
+  {
+    "id": "54af8fa2-b4f3-5777-8e63-62088cb53943",
+    "marca": "Qualy",
+    "ean": "17891515560789",
+    "dun": "17891515560789",
+    "descricao": "Pão de Queijo Amanteigado Lanche Qualy 900g -caixa C/10",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.761Z"
+  },
+  {
+    "id": "7ae3a71e-7842-5a5a-9eb0-d925217227cd",
+    "marca": "Sadia",
+    "ean": "17893000913919",
+    "dun": "17893000913919",
+    "descricao": "Nuggets de Frango Food Service Sadia 1,5kg -caixa C/4",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.761Z"
+  },
+  {
+    "id": "f51ae94a-ae6c-5025-8fb3-a01e80a91db4",
+    "marca": "Sadia",
+    "ean": "17893000040141",
+    "dun": "17893000040141",
+    "descricao": "Linguiça Toscana Sadia 950g -caixa C/12",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.761Z"
+  },
+  {
+    "id": "34e3f900-072f-513a-b30e-e32e77f79407",
+    "marca": "Qualy",
+    "ean": "17893000084367",
+    "dun": "17893000084367",
+    "descricao": "Margarina Qualy Aéra com Sal 500g -caixa C/9",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.761Z"
+  },
+  {
+    "id": "4c89cc64-c065-596d-a345-a9b56fece6f7",
+    "marca": "Qualy",
+    "ean": "17893000081625",
+    "dun": "17893000081625",
+    "descricao": "Margarina Qualy Aéra com Sal 250g -caixa C/24",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.761Z"
+  },
+  {
+    "id": "2e12dc59-a66e-5743-87bd-319bdee438bb",
+    "marca": "Perdigão",
+    "ean": "17891515627208",
+    "dun": "17891515627208",
+    "descricao": "Hambúrguer Bovino Costela Na Brasa Perdigão (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.762Z"
+  },
+  {
+    "id": "a2e76d39-6ac1-5dc7-bc41-ff98585e975f",
+    "marca": "Perdigão",
+    "ean": "17891515627413",
+    "dun": "17891515627413",
+    "descricao": "Hambúrguer Bovino Picanha Na Brasa Perdigão (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.762Z"
+  },
+  {
+    "id": "aedf7c9c-d260-56d5-9716-a27d8fe55662",
+    "marca": "BRF",
+    "ean": "17891515979352",
+    "dun": "17891515979352",
+    "descricao": "Margarina Cremosa sem Sal Claybom Pote 500g -caixa C/12",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.762Z"
+  },
+  {
+    "id": "b2375c26-c472-508f-b0f4-c4f8e10396bf",
+    "marca": "BRF",
+    "ean": "17899638342886",
+    "dun": "17899638342886",
+    "descricao": "Pernil de Cordeiro sem Osso Premium Nirea - 1,48kg",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.762Z"
+  },
+  {
+    "id": "d3f97d5e-9245-5fda-9174-1871cf1cf1d5",
+    "marca": "Perdigão",
+    "ean": "17899638334348",
+    "dun": "17899638334348",
+    "descricao": "Rabo Miúdos Perdigão Na Brasa - 0,8 a 1,1kg",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.762Z"
+  },
+  {
+    "id": "bd966950-259d-5836-a587-0a920554a0be",
+    "marca": "Perdigão",
+    "ean": "17891515402164",
+    "dun": "17891515402164",
+    "descricao": "Chester Inteiro Congelado Assa Fácil CX - 16kg a 21kg",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.762Z"
+  },
+  {
+    "id": "ccd5d4a9-7c4b-5d98-a212-5bfe2fb15a10",
+    "marca": "Sadia",
+    "ean": "17891515622807",
+    "dun": "17891515622807",
+    "descricao": "Emp Nacho Frg Coz Cong 700g",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.762Z"
+  },
+  {
+    "id": "a74b7a25-b5ed-5c1b-8911-d3bc1d67fd97",
+    "marca": "BRF",
+    "ean": "17899638345757",
+    "dun": "17899638345757",
+    "descricao": "Picanha Angus L Tacuarembó (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.762Z"
+  },
+  {
+    "id": "b7a4739a-4076-5208-b4f5-19b2824566b1",
+    "marca": "BRF",
+    "ean": "17899638345566",
+    "dun": "17899638345566",
+    "descricao": "Picanha Pesada Tacuarembó - 1,6kg",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.762Z"
+  },
+  {
+    "id": "938e7073-c24b-5ac8-96b5-125994b9ec50",
+    "marca": "BRF",
+    "ean": "17899638301814",
+    "dun": "17899638301814",
+    "descricao": "Picanha B Tacuarembó (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.762Z"
+  },
+  {
+    "id": "425805fc-d15b-5618-9905-0e48d5c59c24",
+    "marca": "BRF",
+    "ean": "17899638304464",
+    "dun": "17899638304464",
+    "descricao": "Picanha Pesada Tacuarembó (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.762Z"
+  },
+  {
+    "id": "06a446d3-d949-5dab-9dff-7fa7c19ddf82",
+    "marca": "BRF",
+    "ean": "17899638304549",
+    "dun": "17899638304549",
+    "descricao": "Picanha Leve Tacuarembó (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.762Z"
+  },
+  {
+    "id": "44b91e64-a93e-5682-a6ee-c3cc3e6a0982",
+    "marca": "Perdigão",
+    "ean": "17891515586413",
+    "dun": "17891515586413",
+    "descricao": "Panceta Suína Congelada Temperada Toque de Limão Perdigão Na Brasa - Caixa C/ 16 (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "8dcaa6c1-29fd-5a72-ba16-5e3072506e16",
+    "marca": "BRF",
+    "ean": "17891515562233",
+    "dun": "17891515562233",
+    "descricao": "Margarina com Fitoesteróis Pro Activ Becel 250g - Caixa C/12",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "ab98a019-a95f-54b7-88a7-9faab2bb5f6e",
+    "marca": "BRF",
+    "ean": "17891515555266",
+    "dun": "17891515555266",
+    "descricao": "Margarina Becel Original sem Sal 250g -caixa C/24",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "3b09f1d1-01d1-5619-a2ef-f0de5f44b4bc",
+    "marca": "BRF",
+    "ean": "17891515555358",
+    "dun": "17891515555358",
+    "descricao": "Margarina Becel Amanteigada com Sal 250g -caixa C/24",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "1f976567-572c-5f58-99d7-7fdd3e69889c",
+    "marca": "BRF",
+    "ean": "17891515555242",
+    "dun": "17891515555242",
+    "descricao": "Margarina Becel Original com Sal 250g -caixa C/24",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "c0ca1c6b-db70-511d-8268-a81d84efa699",
+    "marca": "BRF",
+    "ean": "17891515555341",
+    "dun": "17891515555341",
+    "descricao": "Margarina Amanteigada C/ Sal Becel 500g -caixa C/12",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "93b1d2e3-d738-5745-b245-a826524dd5f7",
+    "marca": "BRF",
+    "ean": "17891515555259",
+    "dun": "17891515555259",
+    "descricao": "Margarina Ômega 6 Original S/ Sal Becel Pote 500g -caixa C/12",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "c5aa787b-7866-5077-b2e1-4ac013a28fda",
+    "marca": "BRF",
+    "ean": "17891515555334",
+    "dun": "17891515555334",
+    "descricao": "Margarina Ômega 6 Original C/ Sal Becel 500g-Caixa C/12",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "579c49a1-edff-54f1-9a62-00e7bca5a972",
+    "marca": "Qualy",
+    "ean": "17891515557444",
+    "dun": "17891515557444",
+    "descricao": "Manteiga Qualy Tablete sem Sal 200g -caixa C/30",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "d4e10856-b284-5bcf-bbed-043608253f0b",
+    "marca": "Sadia",
+    "ean": "17891515554221",
+    "dun": "17891515554221",
+    "descricao": "Hambúrguer de Carne de Frango e Bovina Sadia 56g -caixa C/36",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "ab6524f3-5772-540f-b68f-35feb2c3f337",
+    "marca": "Sadia",
+    "ean": "17891515554320",
+    "dun": "17891515554320",
+    "descricao": "Filezinho Peito Frango Sadia Orgânico 600g -caixa C/16",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "725e25b7-3cbf-5419-9cd8-c30996c1f7a6",
+    "marca": "Sadia",
+    "ean": "17891515554368",
+    "dun": "17891515554368",
+    "descricao": "Meio da Asa de Frango Sadia Orgânico 600g -caixa C/16",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "c89d533d-e964-53a7-b7a7-9e005e26461a",
+    "marca": "Sadia",
+    "ean": "17891515554351",
+    "dun": "17891515554351",
+    "descricao": "Coxinha da Asa de Frango Sadia Orgânico 600g -caixa C/16",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "166b3257-730e-52e9-afab-e55c8a4ae77b",
+    "marca": "Sadia",
+    "ean": "17891515554344",
+    "dun": "17891515554344",
+    "descricao": "Sobrecoxa de Frango Sadia Orgânico 600g -caixa C/16",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "d4db4040-131d-57da-9fb9-a8003528205c",
+    "marca": "Sadia",
+    "ean": "17891515554337",
+    "dun": "17891515554337",
+    "descricao": "Coxa de Frango Sadia Orgânico 600g -caixa C/16",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "8755b87b-4db2-5c13-ae7d-b4658d3e5e93",
+    "marca": "Sadia",
+    "ean": "17891515554382",
+    "dun": "17891515554382",
+    "descricao": "Fígado de Frango Sadia Orgânico 600g -caixa C/16",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "0b26ddd8-5507-552b-8a83-ec8ee880dd76",
+    "marca": "Sadia",
+    "ean": "17891515553873",
+    "dun": "17891515553873",
+    "descricao": "Filé de Peito de Frango Sadia Orgânico 600g -caixa C/16",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "8da4afba-3a71-57e5-9b36-8c0d2f2b9891",
+    "marca": "Sadia",
+    "ean": "17891515553866",
+    "dun": "17891515553866",
+    "descricao": "Frango com Miúdos Sadia Orgânico Caixa 16kg",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "5545533f-4bc2-555f-a43e-00ef39ff611d",
+    "marca": "Sadia",
+    "ean": "17891515550902",
+    "dun": "17891515550902",
+    "descricao": "T-Bone Suíno Food Service Sadia Speciale 2kg -caixa C/3",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "0513b364-d24b-5f8b-821d-04b120ef89be",
+    "marca": "Sadia",
+    "ean": "17891515550896",
+    "dun": "17891515550896",
+    "descricao": "Prime Rib Suíno Food Service Sadia Speciale 1,6kg -caixa C/3",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "6f911fc8-5da3-5b0e-ac79-99472cfc5a0c",
+    "marca": "Sadia",
+    "ean": "17891515492226",
+    "dun": "17891515492226",
+    "descricao": "Strogonoff Frango com Arroz e Batata Sadia 350g -caixa C/6",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "e90b25e2-aad9-51ff-a3cc-e7a7c2b57c37",
+    "marca": "Sadia",
+    "ean": "17891515443235",
+    "dun": "17891515443235",
+    "descricao": "Frango Assado com Arroz e Batata Sadia 350g -caixa C/6",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "2aa20dd7-ce67-5ee1-bd18-33409d13bbee",
+    "marca": "Sadia",
+    "ean": "17891515443228",
+    "dun": "17891515443228",
+    "descricao": "Frango À Parmegiana com Arroz e Batata Palha Sadia 350g -caixa C/6",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "d32b7a6e-f2f0-558e-8b8a-50c24fa18eeb",
+    "marca": "Sadia",
+    "ean": "17899638352304",
+    "dun": "17899638352304",
+    "descricao": "Contra - Filé Tira Sadia Bassi (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.763Z"
+  },
+  {
+    "id": "431a523a-7f63-5b0b-b7f4-7233f3467896",
+    "marca": "Sadia",
+    "ean": "17899638370155",
+    "dun": "17899638370155",
+    "descricao": "Fralda Sadia Bassi Stars - 1,4kg",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "3f8dd918-7712-5819-968b-1cbe4185a43c",
+    "marca": "Sadia",
+    "ean": "5801036",
+    "dun": "",
+    "descricao": "Peito Sadia Bassi Stars (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "3978fb0e-08eb-59ff-8a5c-4853a87e4d1d",
+    "marca": "Sadia",
+    "ean": "5801034",
+    "dun": "",
+    "descricao": "Contra - Filé Sadia Bassi Stars (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "2b71fe2a-7153-511d-88dd-13b539d8aa99",
+    "marca": "Sadia",
+    "ean": "5801031",
+    "dun": "",
+    "descricao": "Filé Costela Sadia Bassi Stars - 2,5kg",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "ca953a86-2dcf-5aad-a6be-f5d654205c33",
+    "marca": "BRF",
+    "ean": "17899638344637",
+    "dun": "17899638344637",
+    "descricao": "Recorte Traseiro Palatare - 140 a 260g",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "1e536f29-3567-51b9-bd08-26056e92b6b0",
+    "marca": "BRF",
+    "ean": "15602772403021",
+    "dun": "15602772403021",
+    "descricao": "Bolinhos com Bacalhau Soguima - 360g",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "ef038889-388f-5662-b815-65e6ac3a6f95",
+    "marca": "BRF",
+    "ean": "17899638341100",
+    "dun": "17899638341100",
+    "descricao": "Picanha Importado P La Morocha (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "4808690b-35bc-54aa-a816-642cb6fc39ee",
+    "marca": "BRF",
+    "ean": "13270120014292",
+    "dun": "13270120014292",
+    "descricao": "Filé Merluza Interfolhado Importado Taturiello (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "d9b12a3e-c641-5570-8881-bcb3acf8b4c9",
+    "marca": "Perdigão",
+    "ean": "17899638367261",
+    "dun": "17899638367261",
+    "descricao": "Carne Industrial Lombinho do Diafragma Bloco Perdigão Montana (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "a978d1f6-b4df-51e2-8ff4-893c8a3a1138",
+    "marca": "BRF",
+    "ean": "17899638356364",
+    "dun": "17899638356364",
+    "descricao": "Filé de Merluza Interfolhado Tradarsa - 210g",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "73a2ef8d-be6f-5cfa-8245-6847340e88a7",
+    "marca": "BRF",
+    "ean": "17899638322765",
+    "dun": "17899638322765",
+    "descricao": "Picanha B Importado Quickfood (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "21772871-5e87-5ef2-80a3-2de49c790d55",
+    "marca": "Sadia",
+    "ean": "17899638365458",
+    "dun": "17899638365458",
+    "descricao": "Costela do Dianteiro Sadia Bassi Angus (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "49558965-9f4b-5c7b-992d-4e1d0c08aaa2",
+    "marca": "BRF",
+    "ean": "17899638371176",
+    "dun": "17899638371176",
+    "descricao": "Pernil Cordeiro Nirea (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "cda8e540-48c9-5214-b2d1-d508eb48e2d3",
+    "marca": "BRF",
+    "ean": "17899638348413",
+    "dun": "17899638348413",
+    "descricao": "Cordeiro Costela Importado Nirea (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "d9e4e305-12bd-5d2d-b546-cf8ea6334e89",
+    "marca": "BRF",
+    "ean": "17899638371695",
+    "dun": "17899638371695",
+    "descricao": "Ovino Pernil Importado Majada (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "c71c8282-0af4-59c8-98b2-cba0f1df644a",
+    "marca": "BRF",
+    "ean": "17899638355282",
+    "dun": "17899638355282",
+    "descricao": "Filé de Merluza Hg Marisco - 210g",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "b3fb06f5-c4c1-5b71-a9d6-5aa45c279f51",
+    "marca": "Sadia",
+    "ean": "17899638365618",
+    "dun": "17899638365618",
+    "descricao": "Filé de Costela Maturado Sadia Bassi Angus - 2,5kg",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "74de0bc8-b76b-5c44-9983-13c3c8788c15",
+    "marca": "BRF",
+    "ean": "15602772413631",
+    "dun": "15602772413631",
+    "descricao": "Polvo Eviscerado Tenderizado Soguima (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "33abb11a-4cb1-5643-a36c-0c1fab6971e0",
+    "marca": "BRF",
+    "ean": "15602772413655",
+    "dun": "15602772413655",
+    "descricao": "Polvo Eviscerado Tenderizado Soguima (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "0abc208a-aa50-5ea4-a378-e47e9e1d220e",
+    "marca": "Sadia",
+    "ean": "5801041",
+    "dun": "",
+    "descricao": "Picanha Sadia Bassi Stars - 1,6kg",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "7b67060a-86a7-5c0a-a957-5b871199f8d4",
+    "marca": "Sadia",
+    "ean": "5801039",
+    "dun": "",
+    "descricao": "Costela Dianteiro Sadia Bassi Stars (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "b79e06e3-8876-5c9d-b247-cae0c69ae2e6",
+    "marca": "Sadia",
+    "ean": "5801038",
+    "dun": "",
+    "descricao": "Fralda Red Sadia Bassi Stars (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "f1667733-00a9-53de-a90e-44207e1113ac",
+    "marca": "Sadia",
+    "ean": "5801035",
+    "dun": "",
+    "descricao": "Raquete Red Sadia Bassi Stars - 1,2kg",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "14527db0-ba69-53ba-8dfe-d0abe24f935f",
+    "marca": "Perdigão",
+    "ean": "17899638366929",
+    "dun": "17899638366929",
+    "descricao": "Gordura Perdigão Na Brasa (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "6c01e6e6-d5a1-5823-811b-97a9cadc4ccb",
+    "marca": "Sadia",
+    "ean": "5801033",
+    "dun": "",
+    "descricao": "Acém Short Rib Sadia Bassi Stars - 4 a 6,5kg",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "71d42a7f-797e-53dd-bda3-372479374fa7",
+    "marca": "BRF",
+    "ean": "15602772304908",
+    "dun": "15602772304908",
+    "descricao": "Risoles de Bacalhau Reymar - 360g",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "f43e635e-8d95-562d-a882-d38135e28cce",
+    "marca": "BRF",
+    "ean": "15601809014599",
+    "dun": "15601809014599",
+    "descricao": "Posta Bacalhau Dessalgado Maralto (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "57ba4355-30b5-5d87-abe0-4615c9258b15",
+    "marca": "BRF",
+    "ean": "15601809008505",
+    "dun": "15601809008505",
+    "descricao": "Bacalhau Lombo Dessalgado Soguima (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "8f44d862-74ec-56d1-9d05-3cc5acaf58f4",
+    "marca": "Perdigão",
+    "ean": "17899638343814",
+    "dun": "17899638343814",
+    "descricao": "Hambúrguer Perdigão Na Brasa - 540g",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "2265fdb3-939b-50ad-b238-83a90b4dbc3e",
+    "marca": "BRF",
+    "ean": "800119",
+    "dun": "",
+    "descricao": "Posta de Bacalhau Dessalgado Soguima (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "2503c482-169d-59c1-a714-4386c41de4e6",
+    "marca": "BRF",
+    "ean": "5800298",
+    "dun": "",
+    "descricao": "Filé de Tilápia Nova Pesca - 140g",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "729f270c-36aa-580b-9c84-324ade60f407",
+    "marca": "BRF",
+    "ean": "17899638374900",
+    "dun": "17899638374900",
+    "descricao": "Cordeiro Carre Rack Nirea - 2,8 a 6,2kg",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "a4c3815c-836b-5f7f-9516-91c652d1abae",
+    "marca": "BRF",
+    "ean": "17899638354384",
+    "dun": "17899638354384",
+    "descricao": "Hambúrguer a Base Vegetal Sabor Costela (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.764Z"
+  },
+  {
+    "id": "6a155b46-6d7d-5628-b952-c6b43071ec97",
+    "marca": "BRF",
+    "ean": "17899638354391",
+    "dun": "17899638354391",
+    "descricao": "Hambúrguer a Base Vegetal Sabor Picanha (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.765Z"
+  },
+  {
+    "id": "934c50f5-71c9-5aed-a728-5c193f025d9e",
+    "marca": "BRF",
+    "ean": "17899638357699",
+    "dun": "17899638357699",
+    "descricao": "Almôndega À Base de Vegetal Plantplus Foods Bandeja 250g 10 Unidades - Caixa C/12",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.765Z"
+  },
+  {
+    "id": "07d11819-0057-571e-b7b9-0b221d986b7a",
+    "marca": "BRF",
+    "ean": "17899638357705",
+    "dun": "17899638357705",
+    "descricao": "Linguiça Toscana À Base de Vegetal Toscana Plantplus Foods Caixa 250g 3 Unidades - Caixa C/12",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.765Z"
+  },
+  {
+    "id": "f242eaca-946d-5129-82a1-e585188c362d",
+    "marca": "BRF",
+    "ean": "17899638357675",
+    "dun": "17899638357675",
+    "descricao": "Hambúrguer a Base Vegetal Plant Plus (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.765Z"
+  },
+  {
+    "id": "bc57fc48-d47b-5ec5-82f6-57aff6c74b59",
+    "marca": "BRF",
+    "ean": "17891515605510",
+    "dun": "17891515605510",
+    "descricao": "Margarina Ômega 6 Original C/ Sal Embalagem Econômica Becel 1kg- Caixa C/6",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.765Z"
+  },
+  {
+    "id": "14476dbd-850a-5e11-9ed1-6d09d27c84f0",
+    "marca": "BRF",
+    "ean": "37891515901609",
+    "dun": "37891515901609",
+    "descricao": "Margarina Cremosa com Sal Claybom Pote 500g -caixa C/12",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.765Z"
+  },
+  {
+    "id": "a4c1fee4-6364-5502-a2c4-87b8775c7a6c",
+    "marca": "BRF",
+    "ean": "18719200225302",
+    "dun": "18719200225302",
+    "descricao": "Manteiga Vegetal C/ Sal Zero Lactose Becel 227g - Caixa C/ 24",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.765Z"
+  },
+  {
+    "id": "dc1474f1-5258-52bb-b0be-ad779f344aed",
+    "marca": "BRF",
+    "ean": "17899638357682",
+    "dun": "17899638357682",
+    "descricao": "Kibe Vegetal Plantplus Foods Bandeja 250g 5 Unidades - Caixa C/12",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.765Z"
+  },
+  {
+    "id": "70c20389-c274-52ea-98d0-25e51be5125e",
+    "marca": "Sadia",
+    "ean": "17891515606128",
+    "dun": "17891515606128",
+    "descricao": "Bacon em Cubos Sadia (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.765Z"
+  },
+  {
+    "id": "c02acb7d-a788-58f6-8ff7-aa7b5f7e4e5a",
+    "marca": "Sadia",
+    "ean": "17891515591134",
+    "dun": "17891515591134",
+    "descricao": "Kit Sucesso (Ave) Sd C/ 2 Kits (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Status da Imagem",
+        "de": "aprovado",
+        "para": "pendente_aprovacao"
+      }
+    ],
+    "atualizado_em": "2026-08-13T11:56:50.765Z"
+  }
+]

@@ -34,59 +34,59 @@ etl-pipeline
 ────────────────────────────────────
 🚀 PALETSCAN ETL ── PIPELINE FULL
  📅 Data: 12/08/2026
- ⏰ Horário Inicial: 10:49:15
+ ⏰ Horário Inicial: 10h 49min 15s
 ────────────────────────────────────
 
-▶ [10:49:15] 1. Scrapers Multi-Fornecedores
+▶ [10h 49min 15s] 1. Scrapers Multi-Fornecedores
   Desc: Extração B2B (Friboi, Seara, BRF, Aurora, Lar)
 ... [Logs ao vivo da extração] ...
-✔ [10:50:35] Status: SUCESSO (Duração: 80.12s)
+✔ [10h 50min 35s] Status: SUCESSO (Duração: 1min 20.12s)
 
-▶ [10:50:35] 2. Sincronização Supabase
+▶ [10h 50min 35s] 2. Sincronização Supabase
   Desc: Carga relacional UUIDv5 & tratamento de EAN/DUN
-✔ [10:51:10] Status: SUCESSO (Duração: 35.40s)
+✔ [10h 51min 10s] Status: SUCESSO (Duração: 35.40s)
 
-▶ [10:51:10] 3. Sanitização PostgreSQL
+▶ [10h 51min 10s] 3. Sanitização PostgreSQL
   Desc: Normalização Title Case & Modulus 10 EAN-13
-✔ [10:51:18] Status: SUCESSO (Duração: 7.82s)
+✔ [10h 51min 18s] Status: SUCESSO (Duração: 7.82s)
 
-▶ [10:51:18] 4. Publicação PWA
+▶ [10h 51min 18s] 4. Publicação PWA
   Desc: Geração de produtos.json purificado para o PWA
-✔ [10:51:23] Status: SUCESSO (Duração: 4.91s)
+✔ [10h 51min 23s] Status: SUCESSO (Duração: 4.91s)
 
-▶ [10:51:23] 5. Auditoria de Integridade
+▶ [10h 51min 23s] 5. Auditoria de Integridade
   Desc: Auditoria exaustiva contra anomalias e órfãos
-✔ [10:51:28] Status: SUCESSO (Duração: 4.85s)
+✔ [10h 51min 28s] Status: SUCESSO (Duração: 4.85s)
 
 ────────────────────────────────────
 📋 RELATÓRIO DE EXECUÇÃO DO ETL
 ────────────────────────────────────
  📅 Data:           12/08/2026
- ⏰ Horário Início: 10:49:15
- 🏁 Horário Fim:    10:51:28
- ⏱️  Tempo Total:    133.10s
+ ⏰ Horário Início: 10h 49min 15s
+ 🏁 Horário Fim:    10h 51min 28s
+ ⏱️  Tempo Total:    2min 13.10s
 ────────────────────────────────────
 📌 DETALHAMENTO DE CADA ETAPA:
 
 ✅ 1. Scrapers Multi-Fornecedores
-   ├─ Início  : 10:49:15
-   ├─ Término : 10:50:35 (80.12s)
+   ├─ Início  : 10h 49min 15s
+   ├─ Término : 10h 50min 35s (Duração: 1min 20.12s)
    └─ Detalhes: Extração B2B (Friboi, Seara, BRF, Aurora, Lar)
 ✅ 2. Sincronização Supabase
-   ├─ Início  : 10:50:35
-   ├─ Término : 10:51:10 (35.40s)
+   ├─ Início  : 10h 50min 35s
+   ├─ Término : 10h 51min 10s (Duração: 35.40s)
    └─ Detalhes: Carga relacional UUIDv5 & tratamento de EAN/DUN
 ✅ 3. Sanitização PostgreSQL
-   ├─ Início  : 10:51:10
-   ├─ Término : 10:51:18 (7.82s)
+   ├─ Início  : 10h 51min 10s
+   ├─ Término : 10h 51min 18s (Duração: 7.82s)
    └─ Detalhes: Normalização Title Case & Modulus 10 EAN-13
 ✅ 4. Publicação PWA
-   ├─ Início  : 10:51:18
-   ├─ Término : 10:51:23 (4.91s)
+   ├─ Início  : 10h 51min 18s
+   ├─ Término : 10h 51min 23s (Duração: 4.91s)
    └─ Detalhes: Geração de produtos.json purificado para o PWA
 ✅ 5. Auditoria de Integridade
-   ├─ Início  : 10:51:23
-   ├─ Término : 10:51:28 (4.85s)
+   ├─ Início  : 10h 51min 23s
+   ├─ Término : 10h 51min 28s (Duração: 4.85s)
    └─ Detalhes: Auditoria exaustiva contra anomalias e órfãos
 ────────────────────────────────────
 📊 BASE DE DADOS SUPABASE (AO VIVO):
