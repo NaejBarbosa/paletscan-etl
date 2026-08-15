@@ -212,10 +212,10 @@ export async function runCopacolScraper() {
     let finalImageUrl: string | null = null;
     let imageStatus: 'aprovado' | 'pendente_aprovacao' | 'sem_imagem' = 'sem_imagem';
 
-    const primaryBarcode = eanClean || dunClean || rawProd.sku;
-    const localPreparedPath = `/root/projetos-scraping/scraping-copacol/imagens_preparadas/${primaryBarcode}.webp`;
+    const primaryBarcode = eanClean || dunClean;
+    const localPreparedPath = primaryBarcode ? `/root/projetos-scraping/scraping-copacol/imagens_preparadas/${primaryBarcode}.webp` : '';
 
-    if (fs.existsSync(localPreparedPath)) {
+    if (localPreparedPath && fs.existsSync(localPreparedPath)) {
       finalImageUrl = `/imagens_produtos/${primaryBarcode}.webp`;
       imageStatus = 'aprovado';
       imageValidatedCount++;

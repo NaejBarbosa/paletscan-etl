@@ -101,6 +101,12 @@ async function generatePwaProdutosJson() {
       const files = fs.readdirSync(prepDir);
       files.forEach(f => {
         if (!f.endsWith('.webp') && !f.endsWith('.png') && !f.endsWith('.jpg')) return;
+        const nameWithoutExt = f.replace(/\.(webp|png|jpg)$/i, '');
+        // Valida se o arquivo é um EAN-13, DUN-14, UUID ou prefixo legítimo de scraper (ex: prod_friboi_XXXX)
+        const isStandard = /^\d{13,14}$/.test(nameWithoutExt) ||
+                           /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(nameWithoutExt) ||
+                           nameWithoutExt.startsWith('prod_');
+        if (!isStandard) return; // Evita copiar IDs curtos legados como 398.webp, 1.webp etc.
         const src = path.join(prepDir, f);
         const dest = path.join(publicImgDir, f);
         if (!fs.existsSync(dest)) {
@@ -145,6 +151,8 @@ async function generatePwaProdutosJson() {
     }
 
     // Verifica se a imagem local existe fisicamente no PWA E o status no Supabase permite exibição
+    // Apenas vincula imagem local se o código for um EAN-13 / DUN-14 padrão para evitar colisões com SKUs numéricos curtos
+    const isStandardBarcode = /^\d{13,14}$/.test(primaryBarcode);
     const localEanFile = `${primaryBarcode}.webp`;
     const localPath = path.join(publicImgDir, localEanFile);
     let finalImgUrl = row.imagem_url ?? null;
@@ -153,7 +161,7 @@ async function generatePwaProdutosJson() {
     // Se o Supabase determinou que o produto está SEM_IMAGEM, não força imagem local legada
     if (finalStatus === 'sem_imagem' || finalStatus === 'SEM_IMAGEM') {
       finalImgUrl = null;
-    } else if (fs.existsSync(localPath)) {
+    } else if (isStandardBarcode && fs.existsSync(localPath)) {
       finalImgUrl = `/imagens_produtos/${localEanFile}`;
       if (!finalStatus) {
         finalStatus = 'VALIDATED';
