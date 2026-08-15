@@ -45,10 +45,11 @@ async function generatePwaProdutosJson() {
 
   console.log(`📊 Registros obtidos da View do Supabase (IDs únicos de produtos): ${allData.length}`);
 
-  // Buscar todos os códigos EAN e DUN da tabela codigos_barras
-  console.log('📦 Carregando códigos EAN e DUN da tabela codigos_barras...');
+  // Buscar todos os códigos EAN, DUN e SKU da tabela codigos_barras
+  console.log('📦 Carregando códigos EAN, DUN e SKU da tabela codigos_barras...');
   const eanMap = new Map<string, string>();
   const dunMap = new Map<string, string>();
+  const skuMap = new Map<string, string>();
   page = 0;
   hasMore = true;
   while (hasMore) {
@@ -65,13 +66,22 @@ async function generatePwaProdutosJson() {
     if (cbList && cbList.length > 0) {
       cbList.forEach(c => {
         const cleanCode = String(c.codigo || '').trim();
-        if (cleanCode && /^\d+$/.test(cleanCode)) {
-          const tipoUpper = (c.tipo || '').toUpperCase();
-          if (tipoUpper.includes('DUN')) {
+        if (!cleanCode) return;
+        const tipoUpper = (c.tipo || '').toUpperCase();
+
+        // 1. DUN-14: estritamente 14 dígitos numéricos
+        if (/^\d{14}$/.test(cleanCode) || (tipoUpper.includes('DUN') && /^\d+$/.test(cleanCode))) {
+          if (/^\d{14}$/.test(cleanCode)) {
             dunMap.set(c.produto_id, cleanCode);
-          } else {
-            eanMap.set(c.produto_id, cleanCode);
           }
+        }
+        // 2. EAN-13: estritamente 13 dígitos numéricos
+        else if (/^\d{13}$/.test(cleanCode) && (tipoUpper.includes('EAN') || !tipoUpper.includes('SKU'))) {
+          eanMap.set(c.produto_id, cleanCode);
+        }
+        // 3. SKU / Código Interno de Fabricante: códigos curtos (< 13 dígitos) ou tipo SKU
+        else if (tipoUpper.includes('SKU') || cleanCode.length < 13) {
+          skuMap.set(c.produto_id, cleanCode);
         }
       });
       page++;
@@ -80,7 +90,7 @@ async function generatePwaProdutosJson() {
       hasMore = false;
     }
   }
-  console.log(`✅ Total de EANs identificados: ${eanMap.size} | Total de DUNs identificados: ${dunMap.size}`);
+  console.log(`✅ Total de EANs (13 dígitos): ${eanMap.size} | Total de DUNs (14 dígitos): ${dunMap.size} | Total de SKUs: ${skuMap.size}`);
 
   // Sincronizar imagens preparadas locais de todos os scrapers para public/imagens_produtos
   const publicImgDir = '/root/repo_pwa/public/imagens_produtos';
@@ -126,12 +136,24 @@ async function generatePwaProdutosJson() {
     const prodId = String(row.produto_id || row.id || '').trim();
     if (!prodId) return;
 
-    // Regra PaletScan: apenas produtos aprovados respaldados por ao menos um EAN ou DUN numérico válido
-    const eanVal = eanMap.get(prodId) || String(row.ean || row.produto_ean || '').trim();
-    const dunVal = dunMap.get(prodId) || String(row.dun || row.produto_dun || '').trim();
+    const rawEan = String(row.ean || row.produto_ean || '').trim();
+    const rawDun = String(row.dun || row.produto_dun || '').trim();
+    const rawSku = String(row.sku || row.codigo || row.tipo_codigo || '').trim();
 
-    const primaryBarcode = (/^\d+$/.test(eanVal) ? eanVal : '') || (/^\d+$/.test(dunVal) ? dunVal : '');
-    if (!primaryBarcode) return; // Filtra produtos sem nenhum código numérico válido
+    // EAN estritamente 13 dígitos numéricos (nunca códigos curtos como 398)
+    const candEan = eanMap.get(prodId) || rawEan;
+    const eanVal = /^\d{13}$/.test(candEan) ? candEan : '';
+
+    // DUN estritamente 14 dígitos numéricos
+    const candDun = dunMap.get(prodId) || rawDun;
+    const dunVal = /^\d{14}$/.test(candDun) ? candDun : '';
+
+    // SKU / Código de fabricante
+    const skuVal = skuMap.get(prodId) || rawSku || (/^\d+$/.test(rawEan) && rawEan.length < 13 ? rawEan : '') || eanVal || dunVal || '';
+
+    // Identificador principal: preferência EAN-13, depois DUN-14, depois SKU
+    const primaryBarcode = eanVal || dunVal || skuVal;
+    if (!primaryBarcode) return; // Filtra produtos sem nenhum identificador numérico/alfanumérico
 
     let descr = '';
     if (row.descricao_padronizada) {
@@ -178,9 +200,9 @@ async function generatePwaProdutosJson() {
         marcaNome: row.marca_nome || 'N/D',
         marca_nome: row.marca_nome || 'N/D',
         produtoClasse: row.classe || row.produto_classe || '',
-        produtoEan: primaryBarcode,
-        produtoDun: dunVal,
-        sku: primaryBarcode,
+        produtoEan: eanVal, // EAN estritamente 13 dígitos numéricos ou ""
+        produtoDun: dunVal, // DUN estritamente 14 dígitos numéricos ou ""
+        sku: skuVal,
         produtoConservacao: row.conservacao || row.produto_conservacao || '',
         produtoDescr: descr,
         title: descr,
