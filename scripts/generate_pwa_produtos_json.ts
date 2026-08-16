@@ -178,14 +178,36 @@ async function generatePwaProdutosJson() {
     let finalImgUrl = row.imagem_url ?? null;
     let finalStatus = row.status_imagem ?? 'sem_imagem';
 
+    const isInvalidPlaceholder = (url: string | null | undefined) => {
+      if (!url) return false;
+      const lower = url.toLowerCase();
+      return (
+        lower.includes('default-product-image') ||
+        lower.includes('placeholder') ||
+        lower.includes('blob.core.windows.net') ||
+        lower.includes('brfsacoeintgrcprd') ||
+        lower.includes('force.com') ||
+        lower.includes('salesforce.com') ||
+        lower.includes('servlet.imageserver')
+      );
+    };
+
+    if (isInvalidPlaceholder(finalImgUrl)) {
+      finalImgUrl = null;
+      finalStatus = 'sem_imagem';
+    }
+
     // Se o Supabase determinou que o produto está SEM_IMAGEM, não força imagem local legada
     if (finalStatus === 'sem_imagem' || finalStatus === 'SEM_IMAGEM') {
       finalImgUrl = null;
-    } else if (fs.existsSync(localPath)) {
+    } else if (fs.existsSync(localPath) && fs.statSync(localPath).size > 1000) {
       finalImgUrl = `/imagens_produtos/${localEanFile}`;
       if (!finalStatus) {
         finalStatus = 'VALIDATED';
       }
+    } else if (!finalImgUrl || finalStatus === 'pendente_aprovacao') {
+      finalImgUrl = null;
+      finalStatus = 'sem_imagem';
     }
 
     // A chave do Map é estritamente o ID ÚNICO DO PRODUTO (prodId), garantindo 1 item por produto no catálogo

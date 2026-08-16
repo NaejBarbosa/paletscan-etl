@@ -116,9 +116,42 @@ export async function sanitizeDatabase() {
       .in('id', batch);
     if (errDelProd) {
       console.error('Erro ao deletar produtos:', errDelProd.message);
-    } else {
-      totalDeleted += batch.length;
+  // 5. Higienizar URLs de imagens (limpar placeholders e fallbacks quebrados)
+  console.log('🖼️  Higienizando URLs de imagens no Supabase (removendo placeholders e links quebrados)...');
+  let imgPage = 0;
+  let totalImgsCleaned = 0;
+  while (true) {
+    const { data: imgProds, error: imgErr } = await supabase
+      .from('produtos')
+      .select('id, imagem_url')
+      .range(imgPage * pageSize, (imgPage + 1) * pageSize - 1);
+    if (imgErr || !imgProds || imgProds.length === 0) break;
+
+    const badImgIds = imgProds
+      .filter((p: any) => p.imagem_url && (
+        p.imagem_url.includes('default-product-image') ||
+        p.imagem_url.includes('placeholder') ||
+        p.imagem_url.includes('blob.core.windows.net') ||
+        p.imagem_url.includes('force.com') ||
+        p.imagem_url.includes('salesforce.com')
+      ))
+      .map((p: any) => p.id);
+
+    if (badImgIds.length > 0) {
+      for (let i = 0; i < badImgIds.length; i += 50) {
+        const batch = badImgIds.slice(i, i + 50);
+        await supabase
+          .from('produtos')
+          .update({ imagem_url: null, status_imagem: 'sem_imagem' })
+          .in('id', batch);
+        totalImgsCleaned += batch.length;
+      }
     }
+    if (imgProds.length < pageSize) break;
+    imgPage++;
+  }
+  if (totalImgsCleaned > 0) {
+    console.log(`🧹 ${totalImgsCleaned} produtos com imagens placeholder foram redefinidos para sem_imagem.`);
   }
 
   console.log(`\n🎉 === HIGIENIZAÇÃO CONCLUÍDA ===`);
@@ -127,3 +160,4 @@ export async function sanitizeDatabase() {
 }
 
 sanitizeDatabase().catch(console.error);
+

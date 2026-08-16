@@ -128,6 +128,9 @@ function isInvalidImageUrl(url: string | null | undefined): boolean {
     lower === 'n/a' ||
     lower === 'null' ||
     lower === 'undefined' ||
+    lower.includes('default-product-image') ||
+    lower.includes('placeholder') ||
+    lower.includes('blob.core.windows.net') ||
     lower.includes('brfsacoeintgrcprd') ||
     lower.includes('force.com') ||
     lower.includes('salesforce.com') ||
@@ -434,18 +437,6 @@ export async function runBRFScraper(): Promise<StagingPayload> {
     if (rawItem.image_url && !isInvalidImageUrl(rawItem.image_url)) {
       imagem_url = rawItem.image_url;
       status_imagem = 'aprovado';
-    } else if (rawItem.ean || rawItem.dun) {
-      const barcode = rawItem.ean || rawItem.dun;
-      const blobFallback = `https://brfsaprodutosprd.blob.core.windows.net/centralbrf/B2B_Product_Photos/${barcode}_1_1_1000_72_RGB.webp`;
-      imagem_url = blobFallback;
-      status_imagem = 'pendente_aprovacao';
-
-      pendingImagesApproval.push({
-        produto_id: produtoId,
-        sku: rawItem.sku,
-        descricao: parsedText.formatted_description,
-        placeholder_url: blobFallback
-      });
     }
 
     // Grava Registro do Produto
