@@ -107,9 +107,10 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
   - Eliminação de fallbacks estáticos legados nos repositórios PWA (`meus-repos/PaletScan` e `repo_pwa`), zerando os arquivos `produtos.json` e `public/produtos.json`.
   - Atualização da chave de reset forçado (`cleanKey`) para `'ps_pwa_reset_v41_empty_wipe'` em [`lib/database/sync.ts`](file:///root/repo_pwa/lib/database/sync.ts) e purga de cache KV Redis via `PRODUCT_CATALOG_CACHE_KEY`.
   - Trava de segurança no motor de cache offline de mídia ([`lib/imageOfflineCache.ts`](file:///root/repo_pwa/lib/imageOfflineCache.ts)) em `prefetchGlobalCatalogImages()` para omitir o pré-carregamento de imagens quando o banco local contiver `0` produtos.
-- [x] **Web Scraper Copacol Cooperativa Agroindustrial Consolata (Migração & Novo Padrão)**: [`scrapers/copacol/index.ts`](file:///root/paletscan-etl/scrapers/copacol/index.ts) com ingestão unificada da base mestre auditada (134 produtos e 268 códigos EAN/DUN), sanitização de glifos/OCR (`TYPO_CORRECTIONS`), normalização via `text_parser.ts`, geração de staging relacional UUIDv5 (`copacol_staging.json` / `copacol_staging_uuid.json`), registro do fabricante mestre e marca Copacol em `brand_classifier.ts` e inclusão do alias `etl-copacol` em `schema_manifest.json`. Sincronização concluída no Supabase elevando a base mestre para **4.228 produtos e 9.846 códigos de barras 100% validados** (0 anomalias).
-
-
+- [x] **Regra Estrita de Exportação PWA (EAN-13 Obrigatório e Bloqueio de SKU)**:
+  - Definido no manifesto [`core/manifest/schema_manifest.json`](file:///root/paletscan-etl/core/manifest/schema_manifest.json) e documentado em [`docs/schema-manifesto.md`](file:///root/paletscan-etl/docs/schema-manifesto.md) que apenas produtos com no mínimo **EAN de 13 dígitos numéricos** são exportados para o PWA.
+  - Atualizado [`scripts/generate_pwa_produtos_json.ts`](file:///root/paletscan-etl/scripts/generate_pwa_produtos_json.ts) e [`repo_pwa/pages/api/validar.ts`](file:///root/repo_pwa/pages/api/validar.ts) para filtrar categoricamente qualquer produto sem EAN-13 (descartando os 683 itens de catálogos B2B sem EAN de consumidor).
+  - Removido qualquer fallback e exibição de SKU da experiência do usuário no PWA ([`PesquisaProduto.tsx`](file:///root/repo_pwa/components/PesquisaProduto.tsx), [`DetalheProdutoModal.tsx`](file:///root/repo_pwa/components/DetalheProdutoModal.tsx), [`NovosProdutosModal.tsx`](file:///root/repo_pwa/components/NovosProdutosModal.tsx)), restringindo a exibição exclusivamente a **EAN (13 dígitos)** e **DUN (14 dígitos)**.
 
 ---
 

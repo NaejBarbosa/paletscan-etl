@@ -140,20 +140,20 @@ async function generatePwaProdutosJson() {
     const rawDun = String(row.dun || row.produto_dun || '').trim();
     const rawSku = String(row.sku || row.codigo || row.tipo_codigo || '').trim();
 
-    // EAN estritamente 13 dígitos numéricos (nunca códigos curtos como 398)
+    // EAN estritamente 13 dígitos numéricos (obrigatório para exibição no PWA)
     const candEan = eanMap.get(prodId) || rawEan;
     const eanVal = /^\d{13}$/.test(candEan) ? candEan : '';
+
+    // REGRA ESTRITA DO PWA: Apenas produtos com no mínimo EAN de 13 dígitos vão para o PWA!
+    // Produtos que possuem apenas SKU interno ou apenas DUN são descartados da exportação ao PWA.
+    if (!eanVal) return;
 
     // DUN estritamente 14 dígitos numéricos
     const candDun = dunMap.get(prodId) || rawDun;
     const dunVal = /^\d{14}$/.test(candDun) ? candDun : '';
 
-    // SKU / Código de fabricante
-    const skuVal = skuMap.get(prodId) || rawSku || (/^\d+$/.test(rawEan) && rawEan.length < 13 ? rawEan : '') || eanVal || dunVal || '';
-
-    // Identificador principal: preferência EAN-13, depois DUN-14, depois SKU
-    const primaryBarcode = eanVal || dunVal || skuVal;
-    if (!primaryBarcode) return; // Filtra produtos sem nenhum identificador numérico/alfanumérico
+    // Identificador principal é estritamente o EAN-13
+    const primaryBarcode = eanVal;
 
     let descr = '';
     if (row.descricao_padronizada) {
@@ -173,8 +173,6 @@ async function generatePwaProdutosJson() {
     }
 
     // Verifica se a imagem local existe fisicamente no PWA E o status no Supabase permite exibição
-    // Apenas vincula imagem local se o código for um EAN-13 / DUN-14 padrão para evitar colisões com SKUs numéricos curtos
-    const isStandardBarcode = /^\d{13,14}$/.test(primaryBarcode);
     const localEanFile = `${primaryBarcode}.webp`;
     const localPath = path.join(publicImgDir, localEanFile);
     let finalImgUrl = row.imagem_url ?? null;
@@ -183,7 +181,7 @@ async function generatePwaProdutosJson() {
     // Se o Supabase determinou que o produto está SEM_IMAGEM, não força imagem local legada
     if (finalStatus === 'sem_imagem' || finalStatus === 'SEM_IMAGEM') {
       finalImgUrl = null;
-    } else if (isStandardBarcode && fs.existsSync(localPath)) {
+    } else if (fs.existsSync(localPath)) {
       finalImgUrl = `/imagens_produtos/${localEanFile}`;
       if (!finalStatus) {
         finalStatus = 'VALIDATED';
@@ -200,9 +198,9 @@ async function generatePwaProdutosJson() {
         marcaNome: row.marca_nome || 'N/D',
         marca_nome: row.marca_nome || 'N/D',
         produtoClasse: row.classe || row.produto_classe || '',
-        produtoEan: eanVal, // EAN estritamente 13 dígitos numéricos ou ""
+        produtoEan: eanVal, // EAN estritamente 13 dígitos numéricos
         produtoDun: dunVal, // DUN estritamente 14 dígitos numéricos ou ""
-        sku: skuVal,
+        sku: eanVal, // SKU normalizado para o EAN para evitar vazamento de códigos internos
         produtoConservacao: row.conservacao || row.produto_conservacao || '',
         produtoDescr: descr,
         title: descr,

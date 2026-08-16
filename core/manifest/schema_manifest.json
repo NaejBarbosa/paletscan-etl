@@ -260,5 +260,10 @@
     "etl-status": "Consulta status e contagem de registros no Supabase ao vivo.",
     "etl-schedule": "Menu interativo de agendamento no Crontab Linux."
   },
+  "regras_exportacao_pwa": {
+    "requisito_minimo_ean13": "Apenas produtos com código EAN de 13 dígitos numéricos válido (EAN-13) são elegíveis para exportação e sincronização com o PWA.",
+    "bloqueio_sku_frontend": "SKU ou códigos internos de fabricante nunca devem ser exibidos na experiência de usuário (PWA). A interface do usuário restringe-se exclusivamente a EAN (13 dígitos) e DUN (14 dígitos).",
+    "descarte_produtos_sem_ean": "Produtos que contenham apenas SKU interno ou apenas DUN sem EAN-13 associado são mantidos no Supabase para rastreabilidade relacional, mas descartados estritamente na geração do produtos.json do PWA."
+  },
   "required": ["fabricantes", "marcas", "produtos", "codigos_barras", "pending_images_approval"]
 }

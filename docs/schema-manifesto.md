@@ -109,3 +109,14 @@ Exemplo de chaves naturais utilizadas:
 ## 🛢️ 5. Higienização SQL em Nível de Banco (`validar_e_corrigir_eans.sql`)
 
 Como camada adicional de proteção e governança, o arquivo [`db_sync/validar_e_corrigir_eans.sql`](file:///root/paletscan-etl/db_sync/validar_e_corrigir_eans.sql) instala a função `fn_calculate_mod10_ean13` diretamente no banco Supabase em PL/pgSQL.
+
+---
+
+## 📱 6. Diretrizes Estritas de Exportação ao PWA (Regras de Negócio)
+
+Para preservar a excelência da experiência do usuário e a precisão operacional nos coletores/smartphones:
+
+1. **Requisito Mínimo de EAN-13:** Apenas produtos com código **EAN numérico de 13 dígitos** válido são exportados para os arquivos `produtos.json` e servidos ao PWA.
+2. **Eliminação de SKUs na Interface do Usuário:** O PWA não exibe códigos SKU ou referências internas de fabricante. A experiência de usuário restringe-se exclusivamente aos identificadores **EAN (13 dígitos)** e **DUN (14 dígitos)**.
+3. **Isolamento Relacional de Produtos sem EAN:** Produtos provenientes de canais B2B que contenham apenas SKU interno ou DUN são preservados no Supabase para auditoria e rastreabilidade, mas são categoricamente descartados da publicação no catálogo do PWA.
+
