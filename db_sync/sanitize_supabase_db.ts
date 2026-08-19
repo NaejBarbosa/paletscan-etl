@@ -116,6 +116,11 @@ export async function sanitizeDatabase() {
       .in('id', batch);
     if (errDelProd) {
       console.error('Erro ao deletar produtos:', errDelProd.message);
+    } else {
+      totalDeleted += batch.length;
+    }
+  }
+
   // 5. Higienizar URLs de imagens (limpar placeholders e fallbacks quebrados)
   console.log('🖼️  Higienizando URLs de imagens no Supabase (removendo placeholders e links quebrados)...');
   let imgPage = 0;
@@ -159,5 +164,7 @@ export async function sanitizeDatabase() {
   console.log(`🥩 Sobraram ${allProdutos.length - totalDeleted} produtos 100% respaldados por EAN no banco de dados!`);
 }
 
-sanitizeDatabase().catch(console.error);
+if (process.argv[1] && process.argv[1].endsWith('sanitize_supabase_db.ts')) {
+  sanitizeDatabase().catch(console.error);
+}
 

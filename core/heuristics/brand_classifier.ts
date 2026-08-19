@@ -22,8 +22,15 @@ export const FABRICANTE_AURORA_NOME = 'Cooperativa Central Aurora Alimentos';
 export const FABRICANTE_COPACOL_ID = 'fab_copacol_cooperativa';
 export const FABRICANTE_COPACOL_NOME = 'Copacol Cooperativa Agroindustrial Consolata';
 
-// Dicionário de Marcas Conhecidas vinculadas às holdings (JBS, BRF, Aurora e Copacol)
+export const FABRICANTE_LAR_ID = 'fab_lar_cooperativa';
+export const FABRICANTE_LAR_NOME = 'Lar Cooperativa Agroindustrial';
+
+// Dicionário de Marcas Conhecidas vinculadas às holdings (JBS, BRF, Aurora, Copacol e Lar)
 export const KNOWN_BRANDS: Record<string, { nome: string; slug: string; fabricante_id: string }> = {
+  // --- Marcas Lar Cooperativa Agroindustrial ---
+  'lar': { nome: 'Lar', slug: 'lar', fabricante_id: FABRICANTE_LAR_ID },
+  'lar cooperativa': { nome: 'Lar', slug: 'lar', fabricante_id: FABRICANTE_LAR_ID },
+
   // --- Marcas Copacol ---
   'copacol': { nome: 'Copacol', slug: 'copacol', fabricante_id: FABRICANTE_COPACOL_ID },
   'copacol agro': { nome: 'Copacol Agro', slug: 'copacol-agro', fabricante_id: FABRICANTE_COPACOL_ID },

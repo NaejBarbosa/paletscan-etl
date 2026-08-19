@@ -35,12 +35,11 @@ const codeMap: Record<string, string[]> = {};
 const prodMap: Record<string, string> = {};
 
 const prodRows = (larData.produtos || []).map((p: any) => {
-  const parsed = formatProductDescription(p.descricao_original || p.descricao_padronizada || '');
-  const descrPadronizada = parsed.formatted_description;
+  const descrPadronizada = p.descricao_padronizada || p.descricao_original || p.title || '';
   prodMap[p.id] = descrPadronizada;
 
-  const pesoG = parsed.peso_gramas !== null ? parsed.peso_gramas : p.peso_gramas;
-  const fracionado = parsed.fracionado;
+  const pesoG = p.peso_gramas !== null && p.peso_gramas !== undefined ? p.peso_gramas : null;
+  const fracionado = p.fracionado !== undefined ? p.fracionado : (pesoG === null);
 
   let pesoStr = 'Variável (pesar)';
   if (pesoG !== null && pesoG !== undefined) {

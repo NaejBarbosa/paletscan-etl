@@ -311,19 +311,32 @@ export async function syncStagingToSupabase() {
     }));
 
     const produtosUUID = produtosFiltrados.map(p => {
-      const rawText = p.descricao_original
-        || (typeof p.descricao_padronizada === 'string' ? p.descricao_padronizada : (p.descricao_padronizada as any)?.formatted_description || (p.descricao_padronizada as any)?.title_clean)
-        || p.descricao
+      const rawText = (typeof p.descricao_padronizada === 'string' && p.descricao_padronizada.trim() ? p.descricao_padronizada : '')
+        || (p.descricao_padronizada as any)?.formatted_description
+        || (p.descricao_padronizada as any)?.title_clean
+        || p.descricao_original
+        || (p as any).title
+        || (p as any).descricao
         || '';
-      const parsedText = formatProductDescription(rawText);
+
+      const parsedText = formatProductDescription(
+        rawText,
+        p.peso_gramas,
+        p.fracionado
+      );
+
+      const finalPeso = parsedText.peso_gramas !== null ? parsedText.peso_gramas : (p.peso_gramas ?? null);
+      const finalFracionado = finalPeso !== null && finalPeso > 0
+        ? (p.fracionado === true ? true : parsedText.fracionado)
+        : true;
 
       return {
         ...p,
         id: toUUID5(p.id),
         marca_id: toUUID5(p.marca_id),
         descricao_padronizada: parsedText.formatted_description,
-        peso_gramas: parsedText.peso_gramas !== null ? parsedText.peso_gramas : p.peso_gramas,
-        fracionado: parsedText.fracionado,
+        peso_gramas: finalPeso,
+        fracionado: finalFracionado,
       };
     });
 

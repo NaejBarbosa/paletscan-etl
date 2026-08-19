@@ -161,17 +161,54 @@ export function extractWeight(text: string): {
 
   const lowerText = text.toLowerCase();
 
-  // Multiplicadores (ex: "2 x 2,5kg", "2x500g", "caixa 4x1kg")
-  const multiMatch = lowerText.match(/(\d+)\s*x\s*(\d+(?:[.,]\d+)?)\s*(kg|g)\b/i);
+  // Se o texto explicitamente diz que é pesagem variável / a granel / pesar (sem peso fixo numérico individual)
+  if (
+    /\b(peso\s+vari[aá]vel|a\s+granel)\b/i.test(lowerText) ||
+    (/\b(pesar)\b/i.test(lowerText) && !/\b\d+(?:[.,]\d+)?\s*(kg|g|l|ml)\b/i.test(lowerText))
+  ) {
+    return { peso_gramas: null, fracionado: true, peso_str: null };
+  }
+
+  // Multiplicadores (ex: "2 x 2,5kg", "2x500g", "caixa 4x1kg", "12x1L")
+  const multiMatch = lowerText.match(/(\d+)\s*x\s*(\d+(?:[.,]\d+)?)\s*(kg|g|l|ml)\b/i);
   if (multiMatch) {
     const qtd = parseFloat(multiMatch[1]);
     const val = parseFloat(multiMatch[2].replace(',', '.'));
     const unit = multiMatch[3].toLowerCase();
-    const totalGrams = unit === 'kg' ? qtd * val * 1000 : qtd * val;
+    let totalGrams = 0;
+    if (unit === 'kg' || unit === 'l') {
+      totalGrams = qtd * val * 1000;
+    } else {
+      totalGrams = qtd * val;
+    }
     return {
       peso_gramas: Math.round(totalGrams),
       fracionado: false,
       peso_str: `${qtd}x${val}${unit}`
+    };
+  }
+
+  // Regex para captura de peso/volume em Litros (ex: "1L", "12L", "1,5 L")
+  const literMatch = lowerText.match(/(\d+(?:[.,]\d+)?)\s*l\b/i);
+  if (literMatch && !lowerText.includes('linguica') && !lowerText.includes('linguiça')) {
+    const rawValStr = literMatch[1];
+    const val = parseFloat(rawValStr.replace(',', '.'));
+    return {
+      peso_gramas: Math.round(val * 1000),
+      fracionado: false,
+      peso_str: `${rawValStr}l`
+    };
+  }
+
+  // Regex para captura de volume em Mililitros (ex: "500ml", "200 ml")
+  const mlMatch = lowerText.match(/(\d+(?:[.,]\d+)?)\s*ml\b/i);
+  if (mlMatch) {
+    const rawValStr = mlMatch[1];
+    const val = parseFloat(rawValStr.replace(',', '.'));
+    return {
+      peso_gramas: Math.round(val),
+      fracionado: false,
+      peso_str: `${rawValStr}ml`
     };
   }
 
@@ -189,7 +226,7 @@ export function extractWeight(text: string): {
   }
 
   // Regex para captura de peso fixo em Gramas (ex: "500g", "350 g", "700g")
-  const gMatch = lowerText.match(/(\d+(?:[.,]\d+)?)\s*g\b(?!r)/i);
+  const gMatch = lowerText.match(/(\d+(?:[.,]\d+)?)\s*g\b(?!r|[a-z])/i);
   if (gMatch) {
     const rawValStr = gMatch[1];
     const val = parseFloat(rawValStr.replace(',', '.'));
@@ -212,9 +249,37 @@ export function extractWeight(text: string): {
  * Formata a string final no padrão padronizado PaletScan:
  * "Nome do Produto + Peso" (se peso fixo) OU "Nome do Produto (pesar)" (se fracionado)
  */
-export function formatProductDescription(rawTitle: string): ParsedProductText {
+export function formatProductDescription(
+  rawTitle: string,
+  knownWeightGrams?: number | null,
+  isExplicitlyFracionado?: boolean
+): ParsedProductText {
   const cleanTitle = toTitleCase(rawTitle);
-  const weightData = extractWeight(rawTitle);
+  let weightData = extractWeight(rawTitle);
+
+  // Se o título não continha peso, mas temos um peso conhecido no catálogo e não é fracionado
+  if (
+    weightData.peso_gramas === null &&
+    knownWeightGrams !== undefined &&
+    knownWeightGrams !== null &&
+    knownWeightGrams > 0 &&
+    isExplicitlyFracionado !== true
+  ) {
+    const pesoG = Math.round(knownWeightGrams);
+    const pesoStr =
+      pesoG >= 1000
+        ? `${(pesoG / 1000).toLocaleString('pt-BR', { maximumFractionDigits: 3 })}kg`
+        : `${pesoG}g`;
+    weightData = {
+      peso_gramas: pesoG,
+      fracionado: false,
+      peso_str: pesoStr
+    };
+  } else if (isExplicitlyFracionado === true) {
+    weightData.fracionado = true;
+  } else if (isExplicitlyFracionado === false && weightData.peso_gramas !== null) {
+    weightData.fracionado = false;
+  }
 
   let formatted_description = cleanTitle;
 
@@ -227,12 +292,15 @@ export function formatProductDescription(rawTitle: string): ParsedProductText {
       formatted_description = `${formatted_description} (pesar)`;
     }
   } else if (weightData.peso_str) {
+    // Se a descrição limpa contiver "(pesar)", remove já que possui peso fixo
+    formatted_description = formatted_description.replace(/\s*\(pesar\)/gi, '').trim();
+
     // Se a descrição limpa ainda não contiver o peso, anexa
     const numPart = weightData.peso_str.replace(/[^\d.,]/g, '');
     const unitPart = weightData.peso_str.replace(/[\d.,]/g, '');
     const weightRegex = new RegExp(`\\b${numPart.replace('.', '[.,]')}\\s*${unitPart}\\b`, 'i');
 
-    if (!weightRegex.test(cleanTitle)) {
+    if (!weightRegex.test(formatted_description)) {
       formatted_description = `${formatted_description} ${weightData.peso_str}`;
     }
   }

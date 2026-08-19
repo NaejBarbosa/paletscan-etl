@@ -126,7 +126,7 @@ const TYPO_CORRECTIONS: Record<string, string> = {
 
 function sanitizeTitle(rawText: string): string {
   if (!rawText) return '';
-  let cleaned = rawText.strip ? rawText.strip() : rawText.trim();
+  let cleaned = rawText.trim();
   for (const [typo, fix] of Object.entries(TYPO_CORRECTIONS)) {
     const reg = new RegExp(typo, 'gi');
     cleaned = cleaned.replace(reg, fix);
@@ -174,7 +174,13 @@ export async function runCopacolScraper() {
   let noImageCount = 0;
 
   for (const rawProd of rawProducts) {
-    const rawTitle = sanitizeTitle(rawProd.title || rawProd.descricao || rawProd.descrFiscal || '');
+    const fullDescr = (rawProd.descrFiscal && !rawProd.descrFiscal.includes('(pesar)'))
+      ? rawProd.descrFiscal
+      : (rawProd.pesoLiquido && rawProd.pesoLiquido.trim() !== '' && rawProd.pesoLiquido !== 'N/A' && !rawProd.pesoLiquido.toLowerCase().includes('variável')
+          ? `${rawProd.title || rawProd.descricao || ''} ${rawProd.pesoLiquido}`
+          : (rawProd.title || rawProd.descricao || rawProd.descrFiscal || ''));
+
+    const rawTitle = sanitizeTitle(fullDescr);
     if (!rawTitle) continue;
 
     // Normalização de descrição e pesagens via text_parser.ts
