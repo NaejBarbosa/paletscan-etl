@@ -107,9 +107,12 @@ export function classifyBrand(rawBrand: string, productTitle: string, defaultFab
     };
   }
 
-  // 2. Tenta identificar no título do produto
-  for (const [key, brandData] of Object.entries(KNOWN_BRANDS)) {
-    if (titleLower.includes(key)) {
+  // 2. Tenta identificar no título do produto (usando limite de palavra inteira para evitar falso-positivos como 'retangular' -> 'lar')
+  const sortedEntries = Object.entries(KNOWN_BRANDS).sort((a, b) => b[0].length - a[0].length);
+  for (const [key, brandData] of sortedEntries) {
+    const escapedKey = key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(?:^|[^a-z0-9à-ÿ])${escapedKey}(?:$|[^a-z0-9à-ÿ])`, 'i');
+    if (regex.test(titleLower)) {
       return {
         id: `marca_${brandData.slug}`,
         nome: brandData.nome,
