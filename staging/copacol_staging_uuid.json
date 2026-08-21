@@ -6,7 +6,7 @@
       "cnpj": "76.092.736/0001-38",
       "site_oficial": "https://www.copacol.com.br",
       "ativo": true,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     }
   ],
   "marcas": [
@@ -17,7 +17,7 @@
       "slug": "copacol",
       "descricao": "Produtos da Copacol Cooperativa Agroindustrial Consolata",
       "ativo": true,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     }
   ],
   "produtos": [
@@ -32,7 +32,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527039351.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "33f06517-5226-558e-8ab2-e7bfbe0bea64",
@@ -45,7 +45,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527062991.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2bebe7d3-7835-5f30-9472-ec5aeb6ea491",
@@ -58,7 +58,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527039405.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ef2de5c8-253d-5ace-a9ea-679d053cdd50",
@@ -71,7 +71,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527068092.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "d0922965-1711-50ea-837d-89599df9c16b",
@@ -84,7 +84,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069365.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "63924f4d-ccee-5314-9587-518a3c46a2b2",
@@ -97,7 +97,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069969.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "51e4694e-99b4-53d5-945e-86de90282c6f",
@@ -110,7 +110,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527070149.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "d1637ee3-94b4-5cb5-883d-6ea9aa4ca5a6",
@@ -123,7 +123,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527070156.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "238bf6ca-66fb-5c57-9f77-58960336cf75",
@@ -136,7 +136,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "0fedd8d9-b0f8-5726-90e1-47fc422b9b28",
@@ -149,7 +149,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "98a48523-398a-5b0d-8d8e-f792937a541b",
@@ -162,7 +162,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527055191.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8ee8d83e-6f79-5512-8885-ece7242dfad1",
@@ -175,7 +175,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069228.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "64de6bbd-fced-556f-85a3-f8caa2ea1658",
@@ -188,7 +188,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069358.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2f6a1613-26e5-5a96-8e39-cbba6a4a75ba",
@@ -201,7 +201,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527071498.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "66fb8505-3e5e-5441-b143-837d0b236f7b",
@@ -214,7 +214,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527071511.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8a96d2f1-da25-5ffc-9c64-63a9262b104d",
@@ -227,7 +227,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527055078.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b178151c-a74f-5f34-868f-8746e27f22ce",
@@ -240,7 +240,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a4cbc484-0e34-5f38-9694-00ed91bdb231",
@@ -253,7 +253,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "d7b11d86-4fc8-5624-b9b4-773dddc75047",
@@ -266,7 +266,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069150.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "f1e7b368-d7de-51d8-b21f-7f8dce47924f",
@@ -279,7 +279,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069167.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ef1aaed4-af20-5603-8113-0100d9a83c9a",
@@ -292,7 +292,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8b37e2e6-583a-5e2b-8ce4-f5d2f6e7dea2",
@@ -305,7 +305,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e73ccc3e-5745-54ba-8e26-30f8159f262a",
@@ -318,7 +318,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527065855.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b14bd1fa-0357-5284-b9d1-6ed6d3b6a3fa",
@@ -331,7 +331,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527055146.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9af5325d-860a-53ea-b9a8-0ced4f1d7fdd",
@@ -344,7 +344,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "0d430b11-edba-5a5e-a9f4-56e87be66b91",
@@ -357,7 +357,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "06023d11-be63-5b0b-a0a4-fb9b141f725f",
@@ -370,7 +370,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ccf5c188-e316-5c4b-9bc3-c87c27941d1a",
@@ -383,7 +383,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "d0cbd22a-7e9a-514a-b064-48a0d6788954",
@@ -396,7 +396,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e4733970-3a31-5519-a682-e83feb116091",
@@ -409,7 +409,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527065381.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "19875f8c-4c4c-5910-903b-ccb72b6fa32b",
@@ -422,7 +422,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527065398.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "3a40832c-2f69-58f0-997c-1b41620948fa",
@@ -435,7 +435,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527065404.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "746c077f-b922-5f86-9247-c054f3f66362",
@@ -448,7 +448,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064438.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9b461994-d49d-5521-ac36-2337b4dc26ff",
@@ -461,7 +461,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064926.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ddadb2cd-9adb-5092-ba0b-d1d072598dbf",
@@ -474,7 +474,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064889.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9a6355f1-a8d8-50ba-9160-c254a4ee23bb",
@@ -487,7 +487,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527054170.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "405e0f05-2874-53d3-b89b-963718ba8332",
@@ -500,7 +500,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527063783.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "76bf3542-a6d4-5d9c-a7f5-5b3cbd2d7818",
@@ -513,7 +513,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527063776.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "abda4993-7a64-54e6-85ca-f3a8bc998b5c",
@@ -526,7 +526,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064919.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5aa2beb3-4357-5cb2-93e6-1e3faf99c1d2",
@@ -539,7 +539,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064902.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e2dbbaa1-c17f-5aa4-8e72-1b011ae40b08",
@@ -552,7 +552,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527063806.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e4298616-3341-5e64-b6ab-2ba917390c35",
@@ -565,7 +565,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527978193.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "554c407c-7e0c-5658-9011-5d71d7873231",
@@ -578,7 +578,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527044935.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6932dc9a-132b-58ca-8599-95a1700ed085",
@@ -591,7 +591,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527044942.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a57a557b-11d9-5fbc-8468-60c333ede388",
@@ -604,7 +604,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527006728.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ce3c62a3-0b76-5945-9cec-8b38851a5654",
@@ -617,7 +617,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527067972.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "192ba751-50e7-57c1-9364-5fa21ca61fec",
@@ -630,7 +630,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962352.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6d682e58-7bdb-5f4b-8f84-693c2d05dca8",
@@ -643,7 +643,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962253.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c907ee81-f9d2-5019-89db-7a95d4058968",
@@ -656,7 +656,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962314.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "d67bd5e4-dd56-5a9e-99a4-a1059b28b066",
@@ -669,7 +669,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527063721.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "13d257c8-9083-54a3-b73f-8836b209e1af",
@@ -682,7 +682,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962338.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ad77cd68-7fa3-54d1-8c60-ae92a3b8992e",
@@ -695,7 +695,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962376.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "da4168f2-e017-56a2-9f99-61bd39a8ae51",
@@ -708,7 +708,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962277.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4d882edf-0b05-522b-bb05-49abc3f38637",
@@ -721,7 +721,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069334.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2747dbdb-2c61-5cd3-ada9-59c6c368ef89",
@@ -734,7 +734,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527067965.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "59d33d08-bfad-5f0f-87b7-c1217881b8af",
@@ -747,7 +747,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527067842.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "89a8c3bf-7b39-5efc-a135-22779652633c",
@@ -760,7 +760,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962369.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "350197e0-8680-5c4a-ab4a-87719ee199f7",
@@ -773,7 +773,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069310.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "85cea29f-b7fe-5a2a-ac40-4337b97bc97a",
@@ -786,7 +786,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527019070.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "efbfa61d-5b7c-505a-ac0a-bb121ef1373e",
@@ -799,7 +799,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064971.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "37893ef5-6920-5afc-b50e-db5868df30a0",
@@ -812,7 +812,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527057911.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b88cf7a4-11fe-5559-bb10-1e96d2202a02",
@@ -825,7 +825,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064339.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ccb8c374-4abc-5646-82fb-0a3daa8a4caf",
@@ -838,7 +838,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527057928.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "02dcb6cd-3193-511c-a8a2-9f5620438889",
@@ -851,7 +851,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069112.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "153957cc-f001-58c1-bcfa-22ee22df9254",
@@ -864,7 +864,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527031676.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b46fae69-a7cc-54fb-84d6-11e2e4d89b67",
@@ -877,7 +877,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527057935.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "fa6fe96c-93ac-562f-868b-4cbc8e8d19bb",
@@ -890,7 +890,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527019179.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4130ee9a-6d19-5223-b470-9a7903a5fa2b",
@@ -903,7 +903,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527019193.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8cf6fbcf-bec7-58df-9c0f-95b92b41db2d",
@@ -916,7 +916,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527019131.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "df05e867-af04-5f6f-9144-3c9a331127e6",
@@ -929,7 +929,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527019032.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ed2d4676-6f4b-511e-b3d1-bff9ccb4be4d",
@@ -942,7 +942,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000818.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "aa2e941b-4e54-5664-9445-ffa77d8d39cd",
@@ -955,7 +955,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000832.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "08a12601-c150-570f-a91e-0ca9434ced87",
@@ -968,7 +968,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000856.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6790e323-a12b-58d2-9d45-46be266fa960",
@@ -981,7 +981,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000467.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "41ae7365-7360-55de-ae19-24d70fae1475",
@@ -994,7 +994,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000511.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "576d12bc-a19d-5c41-a4a1-b1ddd7d4eeba",
@@ -1007,7 +1007,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000535.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "94ccb5d9-0cb7-58db-8100-88a3917e843f",
@@ -1020,7 +1020,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000559.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "fef8a6cb-14b9-5bca-b20f-da5472360872",
@@ -1033,7 +1033,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000498.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "548549a7-6bf2-5a7e-a244-14c4f07052c1",
@@ -1046,7 +1046,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527002775.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "1e217536-ed61-5954-8dd3-ed0c938f2b19",
@@ -1059,7 +1059,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000665.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "598b7ea5-1ad2-5dde-b7fd-e387b00e8989",
@@ -1072,7 +1072,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000771.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "f3106a80-5504-50c8-b7fa-a15f9b659b85",
@@ -1085,7 +1085,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066623.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2b67fd2c-23e6-5174-9e77-40823e1221d5",
@@ -1098,7 +1098,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066630.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "f6086e99-dde2-5e00-99de-3004843a85b6",
@@ -1111,7 +1111,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066647.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "cfade06f-3291-5db0-8f67-67b55d4394be",
@@ -1124,7 +1124,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066593.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c295b7d0-aff9-5fab-8bd0-bead506a992d",
@@ -1137,7 +1137,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066333.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e099e1a5-13e6-5719-a34c-4623246f0b7e",
@@ -1150,7 +1150,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066265.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "56cbab9a-cfd6-5421-a5f3-8b968028fc4f",
@@ -1163,7 +1163,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066494.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "98363932-7607-5b3b-954a-4069765fbe1b",
@@ -1176,7 +1176,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066579.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "97acf4be-0f63-537c-8306-c3b995d93d1c",
@@ -1189,7 +1189,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066463.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "fe14e865-c0d7-5189-b949-98f9431ccdcc",
@@ -1202,7 +1202,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000801.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e4c111b5-a645-52b3-8a9e-219de6f6c923",
@@ -1215,7 +1215,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000849.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "222f182a-6c02-5c11-801c-eae2118dfcc2",
@@ -1228,7 +1228,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000450.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "1984e891-b5a1-5908-8077-4890453f5512",
@@ -1241,7 +1241,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000504.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b2e0c7ec-a2af-5390-a330-05ec45f42589",
@@ -1254,7 +1254,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000528.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ba1b3a49-a4bf-542e-a4f6-3636aca5601e",
@@ -1267,7 +1267,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000542.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8902304e-8366-5fef-aba2-916975322cbc",
@@ -1280,7 +1280,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000474.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "fca8221e-f4b2-533c-9252-4abdac6e6b26",
@@ -1293,7 +1293,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000573.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "60b27f5d-cdf7-5220-b96e-c056462fdd49",
@@ -1306,7 +1306,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000610.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "be1b2456-0bf2-5781-9c92-22aa09fe890c",
@@ -1319,7 +1319,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000795.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2fde2528-bcd8-59b3-b71e-5224379c3c2f",
@@ -1332,7 +1332,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000863.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "92338b20-bca8-53f0-b8bc-808476daeb4e",
@@ -1345,7 +1345,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000641.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "173ba80d-1397-5848-85d0-b4eb63439000",
@@ -1358,7 +1358,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000764.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5010b25d-e991-5d24-b98c-7d9b182d857e",
@@ -1371,7 +1371,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000054.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "14832eeb-fad4-53c4-83e1-599097d534fb",
@@ -1384,7 +1384,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000085.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "22745bda-74c6-579c-acfb-e81e9a2dc052",
@@ -1397,7 +1397,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527002713.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "cf18a549-8bc3-51b6-944e-22f0ae8f3f59",
@@ -1410,7 +1410,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527064940.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4ba324dc-c35d-5116-9c49-244ff5430539",
@@ -1423,7 +1423,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527054392.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ccf60d3c-0b96-515b-859e-28242185c565",
@@ -1436,7 +1436,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527002805.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "07eb00e0-a658-5f18-b1f7-aa93d4643f86",
@@ -1449,7 +1449,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000139.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "05dea7d1-b928-5353-a1a6-efa6f02835a1",
@@ -1462,7 +1462,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527002683.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8ea4d1ce-baf6-5943-b166-c2bbdf10f203",
@@ -1475,7 +1475,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527069648.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b11f1e9b-fd8f-53d1-809a-7f538f0ca573",
@@ -1488,7 +1488,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000023.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "668e7cd3-6bbc-5731-9cea-3af833db6c69",
@@ -1501,7 +1501,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000375.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9b0c923c-c91e-5fac-a8c3-2fd1fd48173f",
@@ -1514,7 +1514,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527009675.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4a72d944-2c44-5e69-9084-247a4fb9ef56",
@@ -1527,7 +1527,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527050240.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "435e739c-15d3-5c80-a711-70aec06efde2",
@@ -1540,7 +1540,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527004472.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6d74514a-9a3a-5868-8144-11f05b76b515",
@@ -1553,7 +1553,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527061154.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "fff6eddf-54d3-5db7-8da5-2d475b9a6332",
@@ -1566,7 +1566,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527982237.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5b482a25-794e-5747-9368-f83d1a7c9486",
@@ -1579,7 +1579,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527070453.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4a8251bd-533d-5a24-b6df-801da7aa0c8e",
@@ -1592,7 +1592,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527054965.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "74bf8757-9b6f-575e-89d7-febd4133412b",
@@ -1605,7 +1605,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527054996.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "f63cd780-a87c-5864-ac86-0762fd0362c6",
@@ -1618,7 +1618,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527054989.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "fb1adfd0-014f-5404-8a55-ecdc4d361d5c",
@@ -1631,7 +1631,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527055009.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "804d5b2d-37b1-5b8b-9e38-076fe918eb80",
@@ -1644,7 +1644,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069044.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "3b2647b7-f23f-5b94-a264-f0750c0cf8c9",
@@ -1657,7 +1657,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069020.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "71db2193-bb26-5a81-b7ff-938e4c9cb24c",
@@ -1670,7 +1670,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527068986.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "50f8e24e-5032-5afe-89c5-01e99c0707b5",
@@ -1683,7 +1683,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527044881.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "57d646ed-7fa9-5533-bed8-12356c67048d",
@@ -1696,7 +1696,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527037814.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2ccc49ea-20b2-557a-ae7e-74ea024f5517",
@@ -1709,7 +1709,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527068979.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6f91a65a-056a-55c5-8ae8-6d172b0a60c4",
@@ -1722,7 +1722,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527044874.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "419a06e5-58bb-5ebc-93c9-f31b766ee57a",
@@ -1735,7 +1735,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527037784.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "50a779a6-2b20-5281-9b5c-9cdeff0a112d",
@@ -1748,7 +1748,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064391.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2dd50b71-abe7-5f41-b843-d4bef35ed199",
@@ -1761,7 +1761,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     }
   ],
   "codigos_barras": [
@@ -1772,7 +1772,7 @@
       "codigo": "7891527039351",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5ba93cd0-ca33-5925-80e9-ffca4cbf2a96",
@@ -1781,7 +1781,7 @@
       "codigo": "17891527039358",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "dc028de2-0a2e-5389-8fed-61fe24d9c847",
@@ -1790,7 +1790,7 @@
       "codigo": "7891527062991",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "16953945-6653-5281-a89d-34a01bf99ade",
@@ -1799,7 +1799,7 @@
       "codigo": "17891527062998",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4108e2aa-4991-545c-8fe5-397ba20efd71",
@@ -1808,7 +1808,7 @@
       "codigo": "7891527039405",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4ad57209-d46c-5112-81f6-c7795d99e254",
@@ -1817,7 +1817,7 @@
       "codigo": "17891527039402",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "11b74dfa-dcbc-5498-9276-e3639b29e6ce",
@@ -1826,7 +1826,7 @@
       "codigo": "7891527068092",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "84572bf1-2138-5505-bc6b-a5d650b9e5d8",
@@ -1835,7 +1835,7 @@
       "codigo": "17891527068099",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "876115e2-7a94-564e-903a-316ad139cfef",
@@ -1844,7 +1844,7 @@
       "codigo": "7891527069365",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "cfb187af-e8fe-52de-9284-56da2178ddb4",
@@ -1853,7 +1853,7 @@
       "codigo": "17891527069362",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e514d687-3fba-58d1-a1fb-16b1ecc9c693",
@@ -1862,7 +1862,7 @@
       "codigo": "7891527069969",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8f612783-928a-5bda-a774-8522be34443f",
@@ -1871,7 +1871,7 @@
       "codigo": "17891527069966",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "77d21392-e0de-5740-99bc-87c3ea342a15",
@@ -1880,7 +1880,7 @@
       "codigo": "7891527070149",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "058eb06f-4944-5220-9b37-d82f7c758088",
@@ -1889,7 +1889,7 @@
       "codigo": "17891527070146",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c9493e6a-b3f7-5089-943f-2cfe9715149b",
@@ -1898,7 +1898,7 @@
       "codigo": "7891527070156",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9d9099b6-4a68-5f33-a437-94cef17cfb4a",
@@ -1907,7 +1907,7 @@
       "codigo": "17891527070153",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9c51c7a5-5e23-5a3c-a3d0-ad93eb9542fe",
@@ -1916,7 +1916,7 @@
       "codigo": "7891527064957",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8ff0dcd3-ec8f-5ecf-b539-5895bb1efeda",
@@ -1925,7 +1925,7 @@
       "codigo": "17891527064954",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a203ab70-1149-530e-b038-8c7bf2f10085",
@@ -1934,7 +1934,7 @@
       "codigo": "7891527066913",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "158cf34f-6eb2-595e-a717-bc50c8e3b01f",
@@ -1943,7 +1943,7 @@
       "codigo": "17891527066910",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "219eae96-ed41-5f01-806a-a2c558ef9a5b",
@@ -1952,7 +1952,7 @@
       "codigo": "7891527055191",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a5303b36-8316-5e86-b500-8a187d4663c3",
@@ -1961,7 +1961,7 @@
       "codigo": "17891527055198",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "761ee6d6-b75a-57f0-96b9-b81cbbc070a0",
@@ -1970,7 +1970,7 @@
       "codigo": "7891527069228",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "3add16e3-8aac-5512-866f-308d15a67e3f",
@@ -1979,7 +1979,7 @@
       "codigo": "17891527069225",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "03c891d8-3eae-5b32-a7db-df060cecc1e4",
@@ -1988,7 +1988,7 @@
       "codigo": "7891527069358",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "11ffbe4d-fd33-5d35-92c2-6bc76185ebc2",
@@ -1997,7 +1997,7 @@
       "codigo": "17891527069355",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "f805bdd6-fc5b-55f3-93f4-c704b72fb6e9",
@@ -2006,7 +2006,7 @@
       "codigo": "7891527071498",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8aabf2b1-9ab8-55d5-9e3a-37e7793bf3f7",
@@ -2015,7 +2015,7 @@
       "codigo": "17891527071495",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "fedf9462-8477-5475-b641-a44e1ca47314",
@@ -2024,7 +2024,7 @@
       "codigo": "7891527071511",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "369efced-0566-5f9b-845d-2d3558b3514c",
@@ -2033,7 +2033,7 @@
       "codigo": "17891527071518",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "065601bb-6cf9-524c-aabf-496956ad904a",
@@ -2042,7 +2042,7 @@
       "codigo": "7891527055078",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "23fb9fa3-6642-5310-a11e-43dfd839c27b",
@@ -2051,7 +2051,7 @@
       "codigo": "17891527055075",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4e7a27c5-9cb8-5390-9abf-d19b356921da",
@@ -2060,7 +2060,7 @@
       "codigo": "7891527069624",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c373ec27-9906-514c-a055-925a7eaa4072",
@@ -2069,7 +2069,7 @@
       "codigo": "17891527069621",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "31592a03-254d-547a-bf57-c8a8ba93a24c",
@@ -2078,7 +2078,7 @@
       "codigo": "7891527055139",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2c008dca-12ca-546b-8469-8afcbdc3680e",
@@ -2087,7 +2087,7 @@
       "codigo": "17891527055136",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "f8d89336-ffa3-5050-9b6d-9287035b1992",
@@ -2096,7 +2096,7 @@
       "codigo": "7891527069150",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9f915eb6-d88e-5775-a0fd-62959384e1b7",
@@ -2105,7 +2105,7 @@
       "codigo": "17891527069157",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "345dcb91-f8ea-59ba-b510-e73c3b357de7",
@@ -2114,7 +2114,7 @@
       "codigo": "7891527069167",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "509e11cf-f783-56e3-a168-7bcf8136884e",
@@ -2123,7 +2123,7 @@
       "codigo": "17891527069164",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "166ccf19-b1d8-5902-a9d8-7ef1ed0dc84f",
@@ -2132,7 +2132,7 @@
       "codigo": "7891527069174",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "51cb7ca1-638c-556c-8502-cc43bb7e3c22",
@@ -2141,7 +2141,7 @@
       "codigo": "17891527069171",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9602f0c0-2345-58d5-b4a7-5ccf3dab8be3",
@@ -2150,7 +2150,7 @@
       "codigo": "7891527071566",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2486a67e-e0d0-59c1-9cb0-d84b1d17c913",
@@ -2159,7 +2159,7 @@
       "codigo": "17891527071563",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "81a53ffa-fa2a-57c8-abc8-3fe72610bb00",
@@ -2168,7 +2168,7 @@
       "codigo": "7891527065855",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5a22fd0f-c72d-565d-9239-af82cd89944e",
@@ -2177,7 +2177,7 @@
       "codigo": "17891527065852",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "f2f120d6-a28b-5755-b7df-61922566c5df",
@@ -2186,7 +2186,7 @@
       "codigo": "7891527055146",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "3af313ad-0ce7-5170-9a56-fd0156cb6d0d",
@@ -2195,7 +2195,7 @@
       "codigo": "17891527055143",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5496916b-2f1d-54fe-9539-bdea01bfea5c",
@@ -2204,7 +2204,7 @@
       "codigo": "7891527055122",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "175224fa-39cb-59b9-9b45-bba80ee24c6d",
@@ -2213,7 +2213,7 @@
       "codigo": "17891527055129",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a69ee130-623d-56da-9228-7066d87aa9dc",
@@ -2222,7 +2222,7 @@
       "codigo": "7891527065657",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c874bdcd-c586-5cf6-b48e-f009ed51d12b",
@@ -2231,7 +2231,7 @@
       "codigo": "17891527065654",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "07753e88-ef9e-520b-9e07-aeedda14d51b",
@@ -2240,7 +2240,7 @@
       "codigo": "7891527067750",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "84b8cf37-176f-5708-9ecf-887c9de180bb",
@@ -2249,7 +2249,7 @@
       "codigo": "17891527067757",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8d71ebd4-a516-5499-9b88-50a1edc97338",
@@ -2258,7 +2258,7 @@
       "codigo": "7891527070019",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ac5ab84a-9994-5008-8afa-8102bd0cb93b",
@@ -2267,7 +2267,7 @@
       "codigo": "17891527070016",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a114abae-1833-5ff1-9e54-7c5e616be225",
@@ -2276,7 +2276,7 @@
       "codigo": "7891527070026",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8973e5e0-0ca7-57f1-96e5-c4cd5054302e",
@@ -2285,7 +2285,7 @@
       "codigo": "17891527070023",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "19241e2f-4154-5de9-897b-ee8b8795581d",
@@ -2294,7 +2294,7 @@
       "codigo": "7891527065381",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6c9f9d86-a500-50ba-a43e-f5a2da5f8a1e",
@@ -2303,7 +2303,7 @@
       "codigo": "17891527065388",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b6513b9a-ce01-50e3-975f-fe377b0b5966",
@@ -2312,7 +2312,7 @@
       "codigo": "7891527065398",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9d7021f8-1f5f-5e57-b68b-a9ae04b05d0c",
@@ -2321,7 +2321,7 @@
       "codigo": "17891527065395",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "7d962ce9-eff7-5a6d-82e3-14385a29e885",
@@ -2330,7 +2330,7 @@
       "codigo": "7891527065404",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "51554966-ec39-5ea1-af5c-4a1cfa10bd16",
@@ -2339,7 +2339,7 @@
       "codigo": "17891527065401",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "20ec9252-bd47-58e6-b704-cc355c05fa70",
@@ -2348,7 +2348,7 @@
       "codigo": "7891527064438",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "3fde3dd5-720d-5dde-8edf-177ca4a9aceb",
@@ -2357,7 +2357,7 @@
       "codigo": "17891527064435",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "3b553603-9dd8-5dc1-be8d-34da57adf693",
@@ -2366,7 +2366,7 @@
       "codigo": "7891527064926",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "beadd261-df26-5be5-9a2f-bfede6a05c38",
@@ -2375,7 +2375,7 @@
       "codigo": "17891527064923",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "01394a80-3315-5c90-949c-9ea1a1a628c3",
@@ -2384,7 +2384,7 @@
       "codigo": "7891527064889",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ca85e20c-39c1-5bb5-8804-1ee51a0f886b",
@@ -2393,7 +2393,7 @@
       "codigo": "17891527064886",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "67be130a-a358-5e7c-93cc-7e4f9cef9285",
@@ -2402,7 +2402,7 @@
       "codigo": "7891527054170",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c1e4e191-751b-5c44-a170-f1906f596d61",
@@ -2411,7 +2411,7 @@
       "codigo": "17891527054177",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "80d39920-4941-5a3a-a4c5-cf0fbd9477f0",
@@ -2420,7 +2420,7 @@
       "codigo": "7891527063783",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "48313dd4-9178-5017-b41f-081709360d44",
@@ -2429,7 +2429,7 @@
       "codigo": "17891527063780",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8a2927a1-dd82-505e-ae67-df8cc25847d8",
@@ -2438,7 +2438,7 @@
       "codigo": "7891527063776",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "fcd851de-4896-5f14-9354-7f858aa5e20f",
@@ -2447,7 +2447,7 @@
       "codigo": "17891527063773",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a7971aa1-7315-5742-b2bc-9a5881f67ec7",
@@ -2456,7 +2456,7 @@
       "codigo": "7891527064919",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "3f45a797-56a1-5b3e-a8bc-e411c8e91ba9",
@@ -2465,7 +2465,7 @@
       "codigo": "17891527064916",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2521a4b6-92d7-5ce8-9db2-e81cdd8ab70c",
@@ -2474,7 +2474,7 @@
       "codigo": "7891527064902",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "64a4c080-fde5-5592-af9f-d17c98136370",
@@ -2483,7 +2483,7 @@
       "codigo": "17891527064909",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "771b1edb-ee17-513a-ba66-42e873bcbb4c",
@@ -2492,7 +2492,7 @@
       "codigo": "7891527063806",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "48fe2a28-21d7-5781-a8de-75280e613e6c",
@@ -2501,7 +2501,7 @@
       "codigo": "17891527063803",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "106f7034-9162-596a-9b33-f16b2a38af12",
@@ -2510,7 +2510,7 @@
       "codigo": "7891527978193",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6667ee74-64c8-5c52-91bd-26ea0eebd3b3",
@@ -2519,7 +2519,7 @@
       "codigo": "17891527978190",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "11c51d54-e745-5d55-9107-614f1544d06b",
@@ -2528,7 +2528,7 @@
       "codigo": "7891527044935",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5af676e8-dad7-58f8-a6b2-d347bd99a903",
@@ -2537,7 +2537,7 @@
       "codigo": "17891527044932",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "7d25a39f-3baa-55e0-ad34-1ecab4d8dd26",
@@ -2546,7 +2546,7 @@
       "codigo": "7891527044942",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "978128ae-e2aa-5096-ba8c-432410c5ce32",
@@ -2555,7 +2555,7 @@
       "codigo": "17891527044949",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "f2c1c959-158f-52e3-9f7f-aace4c2f9764",
@@ -2564,7 +2564,7 @@
       "codigo": "7891527006728",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e3e28c81-e245-56f5-8ce9-6e123c98bda5",
@@ -2573,7 +2573,7 @@
       "codigo": "17891527006725",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "abeb1919-121e-5d7a-a1a2-300ff7a91c1b",
@@ -2582,7 +2582,7 @@
       "codigo": "7891527067972",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "1998201d-f8d2-5454-a457-9f8f9cfef6b5",
@@ -2591,7 +2591,7 @@
       "codigo": "17891527067979",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5edf78bf-53da-545b-a278-4724fb12ae72",
@@ -2600,7 +2600,7 @@
       "codigo": "7891527962352",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8700d580-5756-5e60-b6f6-ccb581e2b110",
@@ -2609,7 +2609,7 @@
       "codigo": "17891527962359",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "06f8a273-78cc-5501-a8f6-e49aee866196",
@@ -2618,7 +2618,7 @@
       "codigo": "7891527962253",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "d7a5e970-e516-5760-8acc-ff8cc7aba925",
@@ -2627,7 +2627,7 @@
       "codigo": "17891527962250",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "331b9be5-941a-5822-88b7-17278258cd5b",
@@ -2636,7 +2636,7 @@
       "codigo": "7891527962314",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a5ca7ad3-6ebf-5501-84aa-dd711f617f81",
@@ -2645,7 +2645,7 @@
       "codigo": "17891527962311",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5fb1e724-12c9-575e-928b-5312b3291d00",
@@ -2654,7 +2654,7 @@
       "codigo": "7891527063721",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "564ba7f1-22f9-53df-b480-c8210a22cb9d",
@@ -2663,7 +2663,7 @@
       "codigo": "17891527063728",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "155df294-c778-5cd7-980b-969f0cde1d76",
@@ -2672,7 +2672,7 @@
       "codigo": "7891527962338",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "19456eca-9a0f-513d-9e5a-76ba77e991cd",
@@ -2681,7 +2681,7 @@
       "codigo": "17891527962335",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "25541cab-2eb3-56b4-9722-1324582628dc",
@@ -2690,7 +2690,7 @@
       "codigo": "7891527962376",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2eaf3cd3-420f-5c9f-9707-d4b695348c9e",
@@ -2699,7 +2699,7 @@
       "codigo": "17891527962373",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8d54bf3e-1472-510a-81ed-b546de8bfbe3",
@@ -2708,7 +2708,7 @@
       "codigo": "7891527962277",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c8f82e6b-01c4-55a2-add5-31270ac7ec4a",
@@ -2717,7 +2717,7 @@
       "codigo": "17891527962274",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6136d065-dce4-5338-93df-431b1cfb6128",
@@ -2726,7 +2726,7 @@
       "codigo": "7891527069334",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "d7300ffb-a49f-505c-9e26-2fc12b55995a",
@@ -2735,7 +2735,7 @@
       "codigo": "17891527069331",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "d6c684f0-4977-5562-9033-e877b67fa817",
@@ -2744,7 +2744,7 @@
       "codigo": "7891527067965",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "77a2aa88-c8a0-5d3e-91c3-bafcec406d04",
@@ -2753,7 +2753,7 @@
       "codigo": "17891527067962",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8029d93f-0768-5932-90bd-0072ee087d8f",
@@ -2762,7 +2762,7 @@
       "codigo": "7891527067842",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b23350b0-2e4f-5a10-92fa-b234758bba1f",
@@ -2771,7 +2771,7 @@
       "codigo": "17891527067849",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4dab33b6-4559-5289-bba6-9807b7314a6a",
@@ -2780,7 +2780,7 @@
       "codigo": "7891527962369",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "baccdbf2-c420-511b-83cb-cfa1a12cc586",
@@ -2789,7 +2789,7 @@
       "codigo": "17891527962366",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "266ef48e-286c-55ed-8a1b-f89233a34f70",
@@ -2798,7 +2798,7 @@
       "codigo": "7891527069310",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a999c81a-aa1c-5964-866e-ec4dfd4e8fcc",
@@ -2807,7 +2807,7 @@
       "codigo": "17891527069317",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9ebdf939-b481-5db4-b97c-9d9e02ba10ee",
@@ -2816,7 +2816,7 @@
       "codigo": "7891527019070",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b012c66e-fcef-507d-89e0-213910caccc7",
@@ -2825,7 +2825,7 @@
       "codigo": "27891527019074",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "eec4bfbb-4e1b-59df-bcd2-0457d275e7ba",
@@ -2834,7 +2834,7 @@
       "codigo": "7891527064971",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "87aa6546-9b29-5494-b546-9497a9e64731",
@@ -2843,7 +2843,7 @@
       "codigo": "17891527064978",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8d19a304-0bed-5f97-b4e0-7c17f099334a",
@@ -2852,7 +2852,7 @@
       "codigo": "7891527057911",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "eb02945b-5b8b-5f92-ae8d-02878771ff6f",
@@ -2861,7 +2861,7 @@
       "codigo": "17891527057918",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "744a2993-03dc-576a-a124-3cdbdd4329d3",
@@ -2870,7 +2870,7 @@
       "codigo": "7891527064339",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a289025c-f868-518d-86c6-36bc7b21108a",
@@ -2879,7 +2879,7 @@
       "codigo": "17891527064336",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8a685ecf-c6f0-59d0-bb83-b01f7d1f1376",
@@ -2888,7 +2888,7 @@
       "codigo": "7891527057928",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "270a55bd-91c0-53a2-85a2-dae844354b27",
@@ -2897,7 +2897,7 @@
       "codigo": "17891527057925",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "834c6835-e1f2-5dea-a101-4e5209a32cb6",
@@ -2906,7 +2906,7 @@
       "codigo": "7891527069112",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "0df820cd-346b-573b-bf79-850c8e476cda",
@@ -2915,7 +2915,7 @@
       "codigo": "17891527069119",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2bd1cfea-0959-5518-b8dd-80e56fb18de8",
@@ -2924,7 +2924,7 @@
       "codigo": "7891527031676",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "fa502d97-c0b2-5ec3-b182-2a66d7ec30ce",
@@ -2933,7 +2933,7 @@
       "codigo": "17891527031673",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "28a929ce-e111-5d56-bd12-2fdfc43097c0",
@@ -2942,7 +2942,7 @@
       "codigo": "7891527057935",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "32fd798c-fb5a-55bb-aeac-d0b4bbb1d53d",
@@ -2951,7 +2951,7 @@
       "codigo": "17891527057932",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "09b0727e-0f36-5c54-ae00-e9196a0164b6",
@@ -2960,7 +2960,7 @@
       "codigo": "7891527019179",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "7b77160b-b7ee-5d44-aceb-19d773396eb7",
@@ -2969,7 +2969,7 @@
       "codigo": "17891527019176",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9ffaeb0a-7dc0-5f20-82eb-5b77273011af",
@@ -2978,7 +2978,7 @@
       "codigo": "7891527019193",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5c60890e-f437-5824-b461-51e179666d8d",
@@ -2987,7 +2987,7 @@
       "codigo": "17891527019190",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "28e017d2-e484-5df4-8ba3-af13fc0d7738",
@@ -2996,7 +2996,7 @@
       "codigo": "7891527019131",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "664007c7-4c49-538f-902f-69ffad845a11",
@@ -3005,7 +3005,7 @@
       "codigo": "17891527019138",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c62b1fe2-128e-5fbc-9bf7-a0fc39cfd117",
@@ -3014,7 +3014,7 @@
       "codigo": "7891527019032",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "32d90bbf-f243-5139-82bc-f5c0ee2f7981",
@@ -3023,7 +3023,7 @@
       "codigo": "17891527019039",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e572133b-eb49-50af-a957-56b95bb2ee00",
@@ -3032,7 +3032,7 @@
       "codigo": "7891527000818",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "565df30e-582a-5fa4-8931-81f3f2c794ff",
@@ -3041,7 +3041,7 @@
       "codigo": "17891527000815",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "aaa6db3d-e048-5ff2-a9f8-301ee6798447",
@@ -3050,7 +3050,7 @@
       "codigo": "7891527000832",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8a681f16-c3b2-5264-9c42-7f848edb1c1e",
@@ -3059,7 +3059,7 @@
       "codigo": "17891527000839",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "7298a2df-3e1e-588c-bda1-968d7025b0a7",
@@ -3068,7 +3068,7 @@
       "codigo": "7891527000856",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "11c9e044-86d0-5b2a-af9e-afab9f7a9b41",
@@ -3077,7 +3077,7 @@
       "codigo": "17891527000853",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a1ee499b-423f-548a-a393-54a94f2999a5",
@@ -3086,7 +3086,7 @@
       "codigo": "7891527000467",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "7fecf9d5-6525-5416-a618-10dce039938e",
@@ -3095,7 +3095,7 @@
       "codigo": "17891527000464",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ccde1a09-4a86-5ff3-bb0a-7b9bae06a5f3",
@@ -3104,7 +3104,7 @@
       "codigo": "7891527000511",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e431db7b-1625-5c85-a9e6-7bdd6de4d2aa",
@@ -3113,7 +3113,7 @@
       "codigo": "17891527000518",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "7316ca4e-0eb0-5442-a170-e41f3b971b45",
@@ -3122,7 +3122,7 @@
       "codigo": "7891527000535",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "df9341d1-2c83-5bad-8029-33ea5ae8a36d",
@@ -3131,7 +3131,7 @@
       "codigo": "17891527000532",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "68d01a20-8f92-5f8f-920e-19cc0a57d580",
@@ -3140,7 +3140,7 @@
       "codigo": "7891527000559",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c9bae867-e4d3-5207-b284-1247d83f4de0",
@@ -3149,7 +3149,7 @@
       "codigo": "17891527000556",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "57e02b83-9fa6-54ad-b55d-933f4b2bd391",
@@ -3158,7 +3158,7 @@
       "codigo": "7891527000498",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "38c90ebc-4abd-592c-b1f9-2e99454f8c1b",
@@ -3167,7 +3167,7 @@
       "codigo": "17891527000495",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e27fe2e3-968a-5040-ab13-1943858a0f64",
@@ -3176,7 +3176,7 @@
       "codigo": "7891527002775",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6acb32b5-b00a-5a8d-90dc-b521279a9390",
@@ -3185,7 +3185,7 @@
       "codigo": "17891527002772",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "fcf8ff70-9d4a-5408-895a-a009d5056a12",
@@ -3194,7 +3194,7 @@
       "codigo": "7891527000665",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b8c989f3-dbad-5462-ac77-c8938b31c8cc",
@@ -3203,7 +3203,7 @@
       "codigo": "17891527000662",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "28769b76-18c6-5ed9-88b1-2c3ba296271f",
@@ -3212,7 +3212,7 @@
       "codigo": "7891527000771",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b2ab3276-1198-58cc-b556-8d8b957f664b",
@@ -3221,7 +3221,7 @@
       "codigo": "17891527000778",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "163c5ce8-622e-5b3d-b92f-c92fcc011e44",
@@ -3230,7 +3230,7 @@
       "codigo": "7891527066623",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b3576d24-db7b-5631-809f-a60af335450a",
@@ -3239,7 +3239,7 @@
       "codigo": "17891527066620",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ca93a2f0-7de2-5f2b-bf7e-cfd4734492eb",
@@ -3248,7 +3248,7 @@
       "codigo": "7891527066630",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "92dadeb2-22bb-5272-a31a-58c05585607e",
@@ -3257,7 +3257,7 @@
       "codigo": "17891527066637",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "d90a3846-71f6-5fd3-9f25-4412a948b871",
@@ -3266,7 +3266,7 @@
       "codigo": "7891527066647",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4f1c3600-9dbd-536a-bceb-64c04a44e203",
@@ -3275,7 +3275,7 @@
       "codigo": "17891527066644",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "762e4e83-4fdd-5cc8-a6b3-54ff80626505",
@@ -3284,7 +3284,7 @@
       "codigo": "7891527066593",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "17965a72-4c9a-5ba3-ab46-0e05f3d4845f",
@@ -3293,7 +3293,7 @@
       "codigo": "17891527066590",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8956a673-de69-543f-ae5e-f5d23d88988d",
@@ -3302,7 +3302,7 @@
       "codigo": "7891527066333",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "47ee3a0f-038a-5aa5-abb4-486c07a367c6",
@@ -3311,7 +3311,7 @@
       "codigo": "17891527066330",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "19da02a8-d621-5576-b792-13b4c5ff1c21",
@@ -3320,7 +3320,7 @@
       "codigo": "7891527066265",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "499d2651-6237-5dc1-97d6-30dd7d3e5df9",
@@ -3329,7 +3329,7 @@
       "codigo": "17891527066262",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "1f5d5a37-ad6d-58a0-b35b-c0914a41b593",
@@ -3338,7 +3338,7 @@
       "codigo": "7891527066494",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c085bf3a-e60b-5e85-80bc-210edfc3cee8",
@@ -3347,7 +3347,7 @@
       "codigo": "17891527066491",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "aab15a24-46b1-5a65-b63e-3aab8fb20b1d",
@@ -3356,7 +3356,7 @@
       "codigo": "7891527066579",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4921d506-6121-582a-8417-bb002b24a3e7",
@@ -3365,7 +3365,7 @@
       "codigo": "17891527066576",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "62886348-8607-5337-a755-4db03a9ac73f",
@@ -3374,7 +3374,7 @@
       "codigo": "7891527066463",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8e336f69-d76c-5538-a608-964a0a054970",
@@ -3383,7 +3383,7 @@
       "codigo": "17891527066460",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6212c025-6e23-5d9d-ab7d-293036e1ff40",
@@ -3392,7 +3392,7 @@
       "codigo": "7891527000801",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5a03b798-8a2b-5954-9dec-646ebd7de517",
@@ -3401,7 +3401,7 @@
       "codigo": "17891527000808",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "3ffb6c75-29a2-553f-a43d-f8354234c8ae",
@@ -3410,7 +3410,7 @@
       "codigo": "7891527000849",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "31020054-c0c6-5a04-b6df-85e804d7e97c",
@@ -3419,7 +3419,7 @@
       "codigo": "17891527000846",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6513e76e-357b-5dfc-8a7b-116924843406",
@@ -3428,7 +3428,7 @@
       "codigo": "7891527000450",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "230f95d2-678c-597f-a93c-f6fba93304b5",
@@ -3437,7 +3437,7 @@
       "codigo": "17891527000457",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9476199b-9b1a-5552-aff5-90275aa4315d",
@@ -3446,7 +3446,7 @@
       "codigo": "7891527000504",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6da9b89c-6535-59e1-9e6d-07259bc5aac6",
@@ -3455,7 +3455,7 @@
       "codigo": "17891527000501",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "262792a4-ab78-5724-bd71-cb9ea1ab3ae8",
@@ -3464,7 +3464,7 @@
       "codigo": "7891527000528",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "1ebba878-4752-5428-98e8-0b0349ba112b",
@@ -3473,7 +3473,7 @@
       "codigo": "17891527000525",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2503a75c-2fee-5004-ac0c-578b2625dffb",
@@ -3482,7 +3482,7 @@
       "codigo": "7891527000542",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e2ce175a-7536-522f-a249-943594b76b49",
@@ -3491,7 +3491,7 @@
       "codigo": "17891527000549",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "2f6dbb34-5c8b-52ef-ac93-0bc4c12fc05c",
@@ -3500,7 +3500,7 @@
       "codigo": "7891527000474",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c7f5d5b1-bdb9-50e1-810e-6dc4f29be6cc",
@@ -3509,7 +3509,7 @@
       "codigo": "17891527000471",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "21c0e85b-2e53-5be8-8469-265ff30275cf",
@@ -3518,7 +3518,7 @@
       "codigo": "7891527000573",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "bb8eb882-7e1a-5450-ac01-1829a476881a",
@@ -3527,7 +3527,7 @@
       "codigo": "17891527000570",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a6784a23-bcd0-5fca-bd76-65bf2eb16ba2",
@@ -3536,7 +3536,7 @@
       "codigo": "7891527000610",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "73163f15-35a2-5b68-889d-62a6a18f0e43",
@@ -3545,7 +3545,7 @@
       "codigo": "17891527000617",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "baa72228-17dd-5df2-8244-f83dd01ff861",
@@ -3554,7 +3554,7 @@
       "codigo": "7891527000795",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "1ab4d3eb-1cae-51b7-8d07-db38b1a1cdd4",
@@ -3563,7 +3563,7 @@
       "codigo": "17891527000792",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8f4ee595-8b53-537f-bd38-47a6e342d102",
@@ -3572,7 +3572,7 @@
       "codigo": "7891527000863",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ad537624-cd37-5f60-b807-1b66969094b8",
@@ -3581,7 +3581,7 @@
       "codigo": "17891527000860",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e1a3ac2d-ae2a-5a05-bfd7-88b30f6ab361",
@@ -3590,7 +3590,7 @@
       "codigo": "7891527000641",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "9aec62e8-e864-5d21-b065-8ae5e85111ca",
@@ -3599,7 +3599,7 @@
       "codigo": "17891527000648",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "da9faf49-78c6-5d24-8e8d-063583e25697",
@@ -3608,7 +3608,7 @@
       "codigo": "7891527000764",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "bb3d57f3-7994-546c-b4a0-0f672c95b4c9",
@@ -3617,7 +3617,7 @@
       "codigo": "17891527000761",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "31f6d4c5-ee48-5e08-ac74-e03c7e847dfc",
@@ -3626,7 +3626,7 @@
       "codigo": "7891527000054",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "18013a9f-7654-5a72-a918-a494c1d05922",
@@ -3635,7 +3635,7 @@
       "codigo": "17891527000051",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8d8f85f2-ab79-523e-8a9b-f28a38711812",
@@ -3644,7 +3644,7 @@
       "codigo": "7891527000085",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c14e4016-8015-5ecd-aae4-3380c362e989",
@@ -3653,7 +3653,7 @@
       "codigo": "17891527000082",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "470fff5e-c611-5589-9e40-98d789cee387",
@@ -3662,7 +3662,7 @@
       "codigo": "7891527002713",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a0a3e95d-ec2c-5eb3-ae6e-b06b43298bd6",
@@ -3671,7 +3671,7 @@
       "codigo": "17891527002710",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "587d6bc5-485e-5132-9fef-a389fdeec851",
@@ -3680,7 +3680,7 @@
       "codigo": "7891527064940",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8034f954-793d-5a01-822e-c04ee8633c8c",
@@ -3689,7 +3689,7 @@
       "codigo": "17891527064947",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5f1e5e65-06fa-57a5-8917-abb332616d59",
@@ -3698,7 +3698,7 @@
       "codigo": "7891527054392",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5fe0364a-cacb-5fd1-9792-a8220c1fd500",
@@ -3707,7 +3707,7 @@
       "codigo": "17891527054399",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4e0b3b08-48f3-516a-bbd5-117b99342196",
@@ -3716,7 +3716,7 @@
       "codigo": "7891527002805",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "10fc3fc7-fed3-5877-ae62-5f6e6bdfd675",
@@ -3725,7 +3725,7 @@
       "codigo": "17891527002802",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "81243c18-ac1d-57d8-a88a-592bbf246f99",
@@ -3734,7 +3734,7 @@
       "codigo": "7891527000139",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "acf29e97-0152-5d49-bbaa-c458c7c969b7",
@@ -3743,7 +3743,7 @@
       "codigo": "17891527000136",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "8130e260-3762-5bae-97d5-41567d3a6403",
@@ -3752,7 +3752,7 @@
       "codigo": "7891527002683",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "d8791191-7fed-5b73-9db4-1d3bcdbeba47",
@@ -3761,7 +3761,7 @@
       "codigo": "17891527002680",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "687db4b9-f9d5-5a85-970f-41c7a8246593",
@@ -3770,7 +3770,7 @@
       "codigo": "7891527069648",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "60a86312-6250-5e13-9000-1f846cf397bf",
@@ -3779,7 +3779,7 @@
       "codigo": "17891527069645",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "46afa582-85ba-5bff-86c5-272607f7f9aa",
@@ -3788,7 +3788,7 @@
       "codigo": "7891527000023",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "722d149f-f565-5b89-81ac-cbef36626c99",
@@ -3797,7 +3797,7 @@
       "codigo": "17891527000020",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "244aae16-b0c7-5db4-b113-621887c05325",
@@ -3806,7 +3806,7 @@
       "codigo": "7891527000375",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "18b43f4d-706b-57ec-96e6-20a9f84c2a63",
@@ -3815,7 +3815,7 @@
       "codigo": "17891527000372",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5a02f8d4-1c7c-59d1-a1ad-064fce87169f",
@@ -3824,7 +3824,7 @@
       "codigo": "7891527009675",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6072b391-48a1-5188-86a7-6ca98200d2b5",
@@ -3833,7 +3833,7 @@
       "codigo": "17891527009672",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "7667a50f-5e6c-5564-9f39-da3497b72066",
@@ -3842,7 +3842,7 @@
       "codigo": "7891527050240",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e7b4985a-6bef-5be6-beb7-8a48cd3459f6",
@@ -3851,7 +3851,7 @@
       "codigo": "17891527050247",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "3ddab705-520b-5205-b198-18d0f7275962",
@@ -3860,7 +3860,7 @@
       "codigo": "7891527004472",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "973f8189-1cde-5483-bda8-4b3031d05c3e",
@@ -3869,7 +3869,7 @@
       "codigo": "17891527004479",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "6f3c765a-fb31-5749-939b-9ada4f0b7e8f",
@@ -3878,7 +3878,7 @@
       "codigo": "7891527061154",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "40813e88-1311-523c-895b-0afd6689070c",
@@ -3887,7 +3887,7 @@
       "codigo": "17891527061151",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "cc0defd9-6da3-5b1a-883f-5fa155cd4631",
@@ -3896,7 +3896,7 @@
       "codigo": "7891527982237",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e203173a-79c7-5313-960e-5a7404ba5c7d",
@@ -3905,7 +3905,7 @@
       "codigo": "17891527982234",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "86875480-a13c-5b04-911b-db90fe4b7199",
@@ -3914,7 +3914,7 @@
       "codigo": "7891527070453",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "30b6d823-0bf7-55be-bd89-42077c197e6f",
@@ -3923,7 +3923,7 @@
       "codigo": "17891527070450",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c9567793-3803-5ebb-a913-7dad98372ad8",
@@ -3932,7 +3932,7 @@
       "codigo": "7891527054965",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "89c17ba2-8e74-50e7-b749-edf9490007f8",
@@ -3941,7 +3941,7 @@
       "codigo": "17891527054962",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "7c01ec3d-8ea5-56c6-816d-7c60d8dedc10",
@@ -3950,7 +3950,7 @@
       "codigo": "7891527054996",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "d0c22f78-c646-5109-bd88-ec2580ee009a",
@@ -3959,7 +3959,7 @@
       "codigo": "17891527054993",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "dd7ebe71-81ac-5202-b775-ac38155eaa0e",
@@ -3968,7 +3968,7 @@
       "codigo": "7891527054989",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "eb1affe5-113f-523b-9029-e61205efb5af",
@@ -3977,7 +3977,7 @@
       "codigo": "17891527054986",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "82ef2767-2724-598c-ab26-6ef7948354c6",
@@ -3986,7 +3986,7 @@
       "codigo": "7891527055009",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "591455c8-792a-5752-9b44-d44379145f4d",
@@ -3995,7 +3995,7 @@
       "codigo": "17891527055006",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "0f81f6c8-2a00-5896-ae51-29a14556e26c",
@@ -4004,7 +4004,7 @@
       "codigo": "7891527069044",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "d05384d0-a397-59b9-a599-6f403eb980d5",
@@ -4013,7 +4013,7 @@
       "codigo": "17891527069041",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "266b6c72-b204-5705-82f7-5c1697a13634",
@@ -4022,7 +4022,7 @@
       "codigo": "7891527069020",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "0587fa23-754e-5c49-9119-c716c9983f28",
@@ -4031,7 +4031,7 @@
       "codigo": "17891527069027",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "fcbd7f37-e062-54a4-b200-3d1462932d93",
@@ -4040,7 +4040,7 @@
       "codigo": "7891527068986",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "a7dbac24-3a38-50a7-b8bd-19c28e7b1c98",
@@ -4049,7 +4049,7 @@
       "codigo": "17891527068983",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "66a15e1d-c3b3-5efc-9a3c-f7323f6fbd89",
@@ -4058,7 +4058,7 @@
       "codigo": "7891527044881",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "008bb3e2-f99f-561d-87e1-2b0dc5504d6c",
@@ -4067,7 +4067,7 @@
       "codigo": "17891527044888",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "4ec85416-5c0b-53cf-ae52-d2452f3545db",
@@ -4076,7 +4076,7 @@
       "codigo": "7891527037814",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "5197195b-ae2b-5f4f-b72f-25994230ce6a",
@@ -4085,7 +4085,7 @@
       "codigo": "17891527037811",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "0d0e6bba-f703-542e-9ee1-42223b71c10b",
@@ -4094,7 +4094,7 @@
       "codigo": "7891527068979",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "c9572cfa-ebc7-51d8-87dc-78442530ee1b",
@@ -4103,7 +4103,7 @@
       "codigo": "17891527068976",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "b5c00f43-83d9-5dc6-aea6-5229f0c5903a",
@@ -4112,7 +4112,7 @@
       "codigo": "7891527044874",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "ca80e9a6-a549-5f0c-acc0-9f19909a706e",
@@ -4121,7 +4121,7 @@
       "codigo": "17891527044871",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "86f36aaf-5c54-50a7-a948-f8a136205d49",
@@ -4130,7 +4130,7 @@
       "codigo": "7891527037784",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "04f7e285-1ac4-53fa-b231-1be66c08168d",
@@ -4139,7 +4139,7 @@
       "codigo": "17891527037781",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "0c31dfeb-c404-5f8d-b3c6-6f90c9d63717",
@@ -4148,7 +4148,7 @@
       "codigo": "7891527064391",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "29d45bab-4022-51c5-919d-033eaa1902e2",
@@ -4157,7 +4157,7 @@
       "codigo": "17891527064398",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "7961e8db-5c7a-5b26-a471-22f554c68cfd",
@@ -4166,7 +4166,7 @@
       "codigo": "7891527070170",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     },
     {
       "id": "e7c3970f-92ec-5f44-bc1c-67f9fad38ab7",
@@ -4175,7 +4175,7 @@
       "codigo": "17891527070177",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-20T03:35:33.913Z"
+      "criado_em": "2026-08-21T12:51:22.905Z"
     }
   ],
   "pending_images_approval": [

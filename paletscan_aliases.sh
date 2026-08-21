@@ -56,39 +56,15 @@ etl-run() {
   echo -e "\033[1;36m────────────────────────────────────\033[0m"
   echo -e "\033[1;32m🚀 PALETSCAN ETL ── PIPELINE COMPLETO\033[0m"
   echo -e "\033[1;36m────────────────────────────────────\033[0m"
-  echo -e " 1. Scrapers (Friboi, Seara, BRF, Aurora, Lar)"
+  echo -e " 1. Scrapers (Friboi, Seara, BRF, Aurora, Lar, Copacol)"
   echo -e " 2. Carga Relacional UUIDv5 no Supabase"
   echo -e " 3. Sanitização Title Case & Modulus 10"
   echo -e " 4. Exportação produtos.json PWA"
   echo -e " 5. Auditoria de Banco & Exibição de Logs"
   echo -e "\033[1;36m────────────────────────────────────\033[0m"
 
-  # Executa o pipeline completo (npm run full) gravando logs
+  # Executa o pipeline completo (npm run full) gravando logs e exibindo o relatório consolidado único
   _paletscan_run full npm run full
-
-  local latest="${PALETSCAN_LOG_DIR}/latest.log"
-
-  echo ""
-  echo -e "\033[1;36m────────────────────────────────────\033[0m"
-  echo -e "\033[1;33m📊 STATUS ATUAL DAS BASES (SUPABASE)\033[0m"
-  cd "$PALETSCAN_ETL_DIR" || return 1
-  npm run status
-
-  echo ""
-  echo -e "\033[1;36m────────────────────────────────────\033[0m"
-  echo -e "\033[1;32m📄 RESUMO DOS LOGS DE EXECUÇÃO (CLI)\033[0m"
-  echo -e "\033[0;36mArquivo: ${latest}\033[0m"
-  echo -e "\033[1;36m────────────────────────────────────\033[0m"
-  
-  if [ -f "$latest" ]; then
-    tail -n 35 "$latest"
-  else
-    echo -e "\033[1;31mNenhum log encontrado.\033[0m"
-  fi
-
-  echo -e "\033[1;36m────────────────────────────────────\033[0m"
-  echo -e "\033[1;32m✔ PIPELINE & SINCRONIZAÇÃO FINALIZADOS!\033[0m"
-  echo -e "\033[1;36m────────────────────────────────────\033[0m"
 }
 
 alias etl-pipeline="etl-run"
@@ -112,6 +88,7 @@ alias etl-seara='_paletscan_run seara npx tsx scrapers/seara/index.ts'
 alias etl-brf='_paletscan_run brf npx tsx scrapers/brf/index.ts'
 alias etl-aurora='_paletscan_run aurora npx tsx scrapers/aurora/index.ts'
 alias etl-lar='_paletscan_run lar npx tsx scrapers/lar/index.ts'
+alias etl-copacol='_paletscan_run copacol npx tsx scrapers/copacol/index.ts'
 
 alias etl-scrape-all='_paletscan_run scrape_all npm run scrape:all'
 
@@ -136,7 +113,7 @@ etl-logs() {
   if [ -f "$latest" ]; then
     echo -e "\033[1;34m[PaletScan Logs]\033[0m Exibindo logs ao vivo (\033[1;33mCtrl+C para sair\033[0m):"
     echo -e "\033[1;36m────────────────────────────────────\033[0m"
-    tail -n 40 -f "$latest"
+    tail -n 60 -f "$latest"
   else
     echo -e "\033[1;31m[PaletScan Logs]\033[0m Nenhum log recente em ${PALETSCAN_LOG_DIR}."
   fi

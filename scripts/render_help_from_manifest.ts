@@ -69,6 +69,7 @@ export function renderHelpFromManifest() {
   console.log("  \x1b[1;32metl-brf\x1b[0m        BRF (Sadia/Perdigão)");
   console.log("  \x1b[1;32metl-aurora\x1b[0m     Aurora Alimentos");
   console.log("  \x1b[1;32metl-lar\x1b[0m        Cooperativa Lar");
+  console.log("  \x1b[1;32metl-copacol\x1b[0m    Copacol Alimentos");
   console.log("  \x1b[1;32metl-scrape-all\x1b[0m Todos Fornecedores");
   console.log("");
   console.log("\x1b[1;33m🔄 PROCESSAMENTO & PIPELINE\x1b[0m");
