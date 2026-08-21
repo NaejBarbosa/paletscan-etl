@@ -105,4 +105,34 @@ Qualquer alteração ou atualização nos atributos de um produto pré-existente
 2. **Log de Alterações (`staging/produtos_atualizados_log.json`)**: Quando uma mudança é detectada, o arquivo armazena os valores anteriores (`anterior`) e os valores atualizados (`atualizado`).
 3. **Comando CLI (`etl-atualizados`)**: O utilitário `scripts/show_updated_products.ts` permite inspecionar quais produtos sofreram alteração na última execução do pipeline.
 
+---
+
+## 🛡️ 7. Governança de Atributos Manuais Imutáveis (`produtos_atributos_manuais`)
+
+Para garantir que intervenções operacionais de chão de fábrica (como vinculação manual de caixas DUN-14 ou definição de códigos de balança/pesar) nunca sejam sobrescritas pelas execuções automáticas periódicas do pipeline ETL:
+
+1. **Tabela de Overrides Imutáveis**: Criada a tabela `produtos_atributos_manuais` com chave primária `produto_ean`.
+2. **Precedência na View e Sincronização**: Tanto a view `vw_produtos_com_marcas` quanto o motor de sincronização do PWA (`lib/database/sync.ts`) e o endpoint `/api/validar` aplicam a regra de precedência:
+   $$\text{DUN Exibido} = \text{Override Manual} \succ \text{codigos\_barras (ETL)} \succ \text{Catálogo Base}$$
+3. **Imutabilidade contra Cargas B2B**: Mesmo que um scraper colete dados divergentes de embalagem, o vínculo validado pelo operador no PWA permanece preservado.
+
+---
+
+## 🔐 8. Políticas de Segurança e Multi-Tenancy (RLS)
+
+O esquema do banco de dados no Supabase implementa Row Level Security (RLS) para isolamento corporativo de dados:
+
+- **Script de Migração**: [`01_migration_multi_tenant_rls.sql`](file:///root/paletscan-etl/db_sync/01_migration_multi_tenant_rls.sql).
+- **Coluna `empresa_id`**: Presente em tabelas operacionais (`paletes_armazenados`, `produtos_atributos_manuais`, `auditorias`).
+- **Políticas RLS**: Garantem que operadores e sessões acessem estritamente os paletes e registros vinculados à sua respectiva organização ou filial.
+
+---
+
+## 📦 9. Exportação Estrita para Catálogo PWA (`export_pwa_catalog.ts`)
+
+O pipeline inclui a ferramenta de exportação e auditoria pré-deploy do catálogo mestre para o PWA:
+
+- **EAN Obrigatório de 13 Dígitos**: Filtro estrito que elimina SKUs sem código EAN-13 numérico válido (`/^\d{13}$/`), impedindo a poluição do catálogo mobile com códigos internos ou provisórios.
+- **Sanitização de Mídias**: Descarte rigoroso de placeholders, banners e URLs inválidas, garantindo carregamento instantâneo no cliente offline (WatermelonDB).
+
 

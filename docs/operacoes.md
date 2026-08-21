@@ -120,8 +120,9 @@ Para evitar inconsistências caso uma marca ou holding entre ou saia do projeto,
 | `etl-seara` | `npm run scrape:seara` | Extrai catálogo B2B Seara Alimentos (Seara, Gourmet, Incrível!). |
 | `etl-brf` | `npm run scrape:brf` | Extrai catálogo BRF S.A. (Sadia, Perdigão, Qualy, Chester). |
 | `etl-aurora` | `npm run scrape:aurora` | Extrai catálogo Cooperativa Central Aurora Alimentos (Aurora, Nobre, Gran Mestri). |
+| `etl-copacol` | `npm run scrape:copacol` | Extrai catálogo Cooperativa Copacol (Aves, Peixes, Tilápia, Suínos). |
 | `etl-lar` | `npm run scrape:lar` | Extrai catálogo Cooperativa Agroindustrial Lar (Aves e Suínos). |
-| `etl-scrape-all` | `npm run scrape:all` | Extrai dados de todos os 5 scrapers em lote sequencial. |
+| `etl-scrape-all` | `npm run scrape:all` | Extrai dados de todos os 6 scrapers em lote sequencial. |
 | `etl-sync` | `npm run sync:supabase` | Carga relacional com identificadores UUIDv5 no Supabase. |
 | `etl-images` | `npm run sync:images` | Processamento de fundo branco via IA local (`rembg`) e upload no Storage. |
 | `etl-sanitize` | `npm run sanitize` | Sanitização pós-sync (Title Case, Modulus 10 EAN-13 GS1). |

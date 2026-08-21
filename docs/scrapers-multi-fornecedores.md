@@ -1,6 +1,6 @@
 # 🛒 Scrapers e Pipelines de Extração Multi-Fornecedores
 
-O módulo de extração do **PaletScan ETL** ([`scrapers/`](file:///root/paletscan-etl/scrapers/)) é composto por pipelines de web scraping de alta concorrência projetados para coletar catalogação atualizada, dados nutricionais, códigos logísticos e mídias de produtos diretamente dos portais institucionais e APIs B2B dos 4 maiores grupos frigoríficos e alimentícios parceiros: **JBS / Friboi**, **Seara Alimentos**, **BRF S.A.** e **Cooperativa Lar**.
+O módulo de extração do **PaletScan ETL** ([`scrapers/`](file:///root/paletscan-etl/scrapers/)) é composto por pipelines de web scraping de alta concorrência projetados para coletar catalogação atualizada, dados nutricionais, códigos logísticos e mídias de produtos diretamente dos portais institucionais e APIs B2B dos maiores grupos frigoríficos e alimentícios parceiros: **JBS / Friboi**, **BRF S.A.**, **Seara Alimentos**, **Cooperativa Lar**, **Copacol** e **Cooperativa Aurora**.
 
 ---
 
@@ -11,7 +11,9 @@ O módulo de extração do **PaletScan ETL** ([`scrapers/`](file:///root/paletsc
 | **JBS S.A. (Friboi)** | [`scrapers/friboi/`](file:///root/paletscan-etl/scrapers/friboi/index.ts) | Sitemap XML + API REST Oracle CCStore | ~1.812 | **1.501** | **35s a 45s** |
 | **BRF S.A.** | [`scrapers/brf/`](file:///root/paletscan-etl/scrapers/brf/index.ts) | Catálogo PDF + Central MBRF REST | ~1.120 | **1.025** | **25s a 35s** |
 | **Seara Alimentos** | [`scrapers/seara/`](file:///root/paletscan-etl/scrapers/seara/index.ts) | Multi-site B2B/B2C + E-Commerce Live | ~621 | **365** | **20s a 30s** |
+| **Copacol** | [`scrapers/copacol/`](file:///root/paletscan-etl/scrapers/copacol/index.ts) | Portal Institucional B2B + Catálogo Digital | ~280 | **215** | **15s a 25s** |
 | **Cooperativa Lar** | [`scrapers/lar/`](file:///root/paletscan-etl/scrapers/lar/index.ts) | Portal Institucional Lar Alimentos | ~111 | **110** | **5s a 10s** |
+| **Cooperativa Aurora** | [`scrapers/aurora/`](file:///root/paletscan-etl/scrapers/aurora/index.ts) | Catálogo Institucional Aurora Coop | ~350 | **310** | **10s a 20s** |
 
 ---
 
@@ -57,10 +59,20 @@ sequenceDiagram
 - **Estratégia**: Varredura multi-site ao vivo cobrindo os portais institucionais B2B, B2C e e-commerce oficial da Seara.
 - **Diferencial**: Tratamento de cortes fracionados por pesagem dinâmica e linha completa de industrializados.
 
-### D. Pipeline Cooperativa Lar (`scrapers/lar/`)
+### D. Pipeline Copacol (`scrapers/copacol/`)
+- **Marcas Mapeadas**: Copacol (Aves, Peixes, Tilápia, Suínos, Pratos Prontos).
+- **Estratégia**: Ingestão concorrente de produtos com extração estrita de EANs primários (13 dígitos) e DUNs logísticos (14 dígitos).
+- **Diferencial**: Alta precisão no isolamento de pesos fixos vs. variáveis e classificação taxonômica de pescados.
+
+### E. Pipeline Cooperativa Lar (`scrapers/lar/`)
 - **Marcas Mapeadas**: Lar Alimentos (Aves, Suínos, Cortes Especiais).
 - **Estratégia**: Ingestão automatizada do catálogo oficial de produtos da Cooperativa Agroindustrial Lar.
 - **Diferencial**: 100% dos produtos validados possuem EAN e DUN cadastrados e higienizados.
+
+### F. Pipeline Cooperativa Aurora (`scrapers/aurora/`)
+- **Marcas Mapeadas**: Aurora Coop, Aurora Premium, Peperi.
+- **Estratégia**: Extração estruturada do portfólio de cortes suínos, embutidos e lácteos.
+- **Diferencial**: Classificação automatizada de conservação e identificação de caixas máster.
 
 ---
 
