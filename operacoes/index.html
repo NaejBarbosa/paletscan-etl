@@ -1,0 +1,1647 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica oficial do pipeline de dados, scrapers B2B, IA de imagem e sincronização Supabase do PaletScan.">
+      
+      
+        <meta name="author" content="Jean Barbosa & Antigravity Data Engineering Team">
+      
+      
+        <link rel="canonical" href="https://NaejBarbosa.github.io/paletscan-etl/operacoes/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../scrapers-multi-fornecedores/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Guia de Operações e CLI - PaletScan ETL - Documentação Técnica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-pratico-de-operacoes-cli-e-manutencao-de-dados" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="PaletScan ETL - Documentação Técnica" class="md-header__button md-logo" aria-label="PaletScan ETL - Documentação Técnica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PaletScan ETL - Documentação Técnica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guia de Operações e CLI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Alternar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Alternar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PaletScan ETL - Documentação Técnica" class="md-nav__button md-logo" aria-label="PaletScan ETL - Documentação Técnica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    PaletScan ETL - Documentação Técnica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Operações e CLI
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Operações e CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-instalacao-e-ativacao-dos-aliases-no-terminal-linux-1-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ 1. Instalação e Ativação dos Aliases no Terminal Linux (1 Passo)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-o-comando-all-in-one-etl-run-etl-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 2. O Comando All-in-One: etl-run / etl-pipeline
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 2. O Comando All-in-One: etl-run / etl-pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-do-relatorio-de-timestamps-exibido-na-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Estrutura do Relatório de Timestamps Exibido na CLI:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-compatibilidade-dinamica-com-o-manifesto-do-projeto-schema_manifestjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 3. Compatibilidade Dinâmica com o Manifesto do Projeto (schema_manifest.json)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📖 3. Compatibilidade Dinâmica com o Manifesto do Projeto (schema_manifest.json)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dicionario-completo-de-aliases-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicionário Completo de Aliases Disponíveis:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-monitoramento-de-novos-produtos-incluidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🆕 6. Monitoramento de Novos Produtos Incluídos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-monitoramento-de-produtos-alterados-e-atualizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 7. Monitoramento de Produtos Alterados e Atualizados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-agendamento-automatico-e-gestao-de-tarefas-recorrentes-linux-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏰ 8. Agendamento Automático e Gestão de Tarefas Recorrentes (Linux / Crontab)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏰ 8. Agendamento Automático e Gestão de Tarefas Recorrentes (Linux / Crontab)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-agendamento-interativo-via-cli-etl-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Agendamento Interativo via CLI (etl-schedule)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-sintaxe-e-expressoes-cron-personalizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Sintaxe e Expressões Cron Personalizadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Sintaxe e Expressões Cron Personalizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guia-de-exemplos-praticos-de-agendamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Guia de Exemplos Práticos de Agendamento:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-listar-e-auditar-agendamentos-ativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Listar e Auditar Agendamentos Ativos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. Listar e Auditar Agendamentos Ativos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-via-alias-paletscan-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Via Alias PaletScan (Recomendado):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-via-comando-nativo-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Via Comando Nativo Linux:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-acompanhamento-dos-logs-de-execucao-automatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Acompanhamento dos Logs de Execução Automática:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-cancelar-e-remover-agendamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Cancelar e Remover Agendamentos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="D. Cancelar e Remover Agendamentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-remocao-rapida-via-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Remoção Rápida via CLI:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-edicao-manual-do-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Edição Manual do Crontab:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-garantias-de-execucao-em-segundo-plano-no-android-termux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Garantias de Execução em Segundo Plano no Android / Termux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-limpeza-total-de-bases-de-dados-e-caches-multi-camadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧹 9. Limpeza Total de Bases de Dados e Caches Multi-Camadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧹 9. Limpeza Total de Bases de Dados e Caches Multi-Camadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-limpeza-no-supabase-remoto-via-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Limpeza no Supabase (Remoto via CLI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-limpeza-dos-arquivos-estaticos-de-fallback-pwa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Limpeza dos Arquivos Estáticos de Fallback (PWA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-execucao-via-console-sql-no-supabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Execução via Console SQL no Supabase
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scrapers-multi-fornecedores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scrapers Multi-Fornecedores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline-friboi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Friboi / JBS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heuristicas-normalizadores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normalizadores e Heurísticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processamento-imagens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de IA de Imagens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema-manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governança e Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supabase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sincronização com Supabase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossário de Termos Técnicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-instalacao-e-ativacao-dos-aliases-no-terminal-linux-1-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ 1. Instalação e Ativação dos Aliases no Terminal Linux (1 Passo)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-o-comando-all-in-one-etl-run-etl-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 2. O Comando All-in-One: etl-run / etl-pipeline
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 2. O Comando All-in-One: etl-run / etl-pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-do-relatorio-de-timestamps-exibido-na-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Estrutura do Relatório de Timestamps Exibido na CLI:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-compatibilidade-dinamica-com-o-manifesto-do-projeto-schema_manifestjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 3. Compatibilidade Dinâmica com o Manifesto do Projeto (schema_manifest.json)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📖 3. Compatibilidade Dinâmica com o Manifesto do Projeto (schema_manifest.json)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dicionario-completo-de-aliases-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicionário Completo de Aliases Disponíveis:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-monitoramento-de-novos-produtos-incluidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🆕 6. Monitoramento de Novos Produtos Incluídos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-monitoramento-de-produtos-alterados-e-atualizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 7. Monitoramento de Produtos Alterados e Atualizados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-agendamento-automatico-e-gestao-de-tarefas-recorrentes-linux-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏰ 8. Agendamento Automático e Gestão de Tarefas Recorrentes (Linux / Crontab)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏰ 8. Agendamento Automático e Gestão de Tarefas Recorrentes (Linux / Crontab)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-agendamento-interativo-via-cli-etl-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Agendamento Interativo via CLI (etl-schedule)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-sintaxe-e-expressoes-cron-personalizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Sintaxe e Expressões Cron Personalizadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Sintaxe e Expressões Cron Personalizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guia-de-exemplos-praticos-de-agendamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Guia de Exemplos Práticos de Agendamento:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-listar-e-auditar-agendamentos-ativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Listar e Auditar Agendamentos Ativos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. Listar e Auditar Agendamentos Ativos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-via-alias-paletscan-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Via Alias PaletScan (Recomendado):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-via-comando-nativo-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Via Comando Nativo Linux:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-acompanhamento-dos-logs-de-execucao-automatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Acompanhamento dos Logs de Execução Automática:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-cancelar-e-remover-agendamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Cancelar e Remover Agendamentos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="D. Cancelar e Remover Agendamentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-remocao-rapida-via-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Remoção Rápida via CLI:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-edicao-manual-do-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Edição Manual do Crontab:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-garantias-de-execucao-em-segundo-plano-no-android-termux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Garantias de Execução em Segundo Plano no Android / Termux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-limpeza-total-de-bases-de-dados-e-caches-multi-camadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧹 9. Limpeza Total de Bases de Dados e Caches Multi-Camadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧹 9. Limpeza Total de Bases de Dados e Caches Multi-Camadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-limpeza-no-supabase-remoto-via-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Limpeza no Supabase (Remoto via CLI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-limpeza-dos-arquivos-estaticos-de-fallback-pwa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Limpeza dos Arquivos Estáticos de Fallback (PWA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-execucao-via-console-sql-no-supabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Execução via Console SQL no Supabase
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-pratico-de-operacoes-cli-e-manutencao-de-dados">🛠️ Guia Prático de Operações, CLI e Manutenção de Dados</h1>
+<p>Este guia fornece os procedimentos operacionais padrão para administradores e engenheiros de dados executarem a <strong>suíte de aliases Linux (Mobile CLI UX)</strong>, <strong>execução completa do pipeline com relatório de timestamps</strong>, <strong>sincronização dinâmica via manifesto</strong>, <strong>acompanhamento de logs</strong> e <strong>agendamento via Crontab</strong> no ecossistema PaletScan.</p>
+<hr />
+<h2 id="1-instalacao-e-ativacao-dos-aliases-no-terminal-linux-1-passo">⚡ 1. Instalação e Ativação dos Aliases no Terminal Linux (1 Passo)</h2>
+<p>A suíte de aliases foi otimizada para o ambiente <strong>Linux / Termux em smartphones Android</strong>, com suporte a telas de 36 colunas de largura sem quebras serrilhadas (<em>line wrapping</em>).</p>
+<p>Para ativar os aliases na sessão atual do seu terminal:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">source</span><span class="w"> </span>~/.paletscan_aliases.sh
+</span></code></pre></div>
+<blockquote>
+<p>💡 <strong>Carregamento Automático:</strong> O arquivo <code>~/.bashrc</code> está configurado para carregar automaticamente a suíte <code>~/.paletscan_aliases.sh</code> a cada nova janela de terminal aberta.</p>
+</blockquote>
+<hr />
+<h2 id="2-o-comando-all-in-one-etl-run-etl-pipeline">🚀 2. O Comando All-in-One: <code>etl-run</code> / <code>etl-pipeline</code></h2>
+<p>Para rodar todo o pipeline de ponta a ponta, sincronizar o Supabase, sanitizar o banco, exportar para o PWA, auditar e <strong>exibir o relatório completo de timestamps e logs na tela</strong>, utilize o comando:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>etl-run
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># ou o atalho equivalente:</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>etl-pipeline
+</span></code></pre></div>
+<h3 id="estrutura-do-relatorio-de-timestamps-exibido-na-cli">📋 Estrutura do Relatório de Timestamps Exibido na CLI:</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>────────────────────────────────────
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>🚀 PALETSCAN ETL ── PIPELINE FULL
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> 📅 Data: 12/08/2026
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> ⏰ Horário Inicial: 10h 49min 15s
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>────────────────────────────────────
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>▶ [10h 49min 15s] 1. Scrapers Multi-Fornecedores
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  Desc: Extração B2B (Friboi, Seara, BRF, Aurora, Lar)
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>... [Logs ao vivo da extração] ...
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>✔ [10h 50min 35s] Status: SUCESSO (Duração: 1min 20.12s)
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>▶ [10h 50min 35s] 2. Sincronização Supabase
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  Desc: Carga relacional UUIDv5 &amp; tratamento de EAN/DUN
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>✔ [10h 51min 10s] Status: SUCESSO (Duração: 35.40s)
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>▶ [10h 51min 10s] 3. Sanitização PostgreSQL
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>  Desc: Normalização Title Case &amp; Modulus 10 EAN-13
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>✔ [10h 51min 18s] Status: SUCESSO (Duração: 7.82s)
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>▶ [10h 51min 18s] 4. Publicação PWA
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>  Desc: Geração de produtos.json purificado para o PWA
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>✔ [10h 51min 23s] Status: SUCESSO (Duração: 4.91s)
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>▶ [10h 51min 23s] 5. Auditoria de Integridade
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>  Desc: Auditoria exaustiva contra anomalias e órfãos
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>✔ [10h 51min 28s] Status: SUCESSO (Duração: 4.85s)
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>────────────────────────────────────
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>📋 RELATÓRIO DE EXECUÇÃO DO ETL
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>────────────────────────────────────
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a> 📅 Data:           12/08/2026
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a> ⏰ Horário Início: 10h 49min 15s
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a> 🏁 Horário Fim:    10h 51min 28s
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a> ⏱️  Tempo Total:    2min 13.10s
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>────────────────────────────────────
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>📌 DETALHAMENTO DE CADA ETAPA:
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>✅ 1. Scrapers Multi-Fornecedores
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>   ├─ Início  : 10h 49min 15s
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>   ├─ Término : 10h 50min 35s (Duração: 1min 20.12s)
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>   └─ Detalhes: Extração B2B (Friboi, Seara, BRF, Aurora, Lar)
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>✅ 2. Sincronização Supabase
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>   ├─ Início  : 10h 50min 35s
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>   ├─ Término : 10h 51min 10s (Duração: 35.40s)
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>   └─ Detalhes: Carga relacional UUIDv5 &amp; tratamento de EAN/DUN
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>✅ 3. Sanitização PostgreSQL
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>   ├─ Início  : 10h 51min 10s
+</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>   ├─ Término : 10h 51min 18s (Duração: 7.82s)
+</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>   └─ Detalhes: Normalização Title Case &amp; Modulus 10 EAN-13
+</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>✅ 4. Publicação PWA
+</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>   ├─ Início  : 10h 51min 18s
+</span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>   ├─ Término : 10h 51min 23s (Duração: 4.91s)
+</span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>   └─ Detalhes: Geração de produtos.json purificado para o PWA
+</span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>✅ 5. Auditoria de Integridade
+</span><span id="__span-2-55"><a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>   ├─ Início  : 10h 51min 23s
+</span><span id="__span-2-56"><a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>   ├─ Término : 10h 51min 28s (Duração: 4.85s)
+</span><span id="__span-2-57"><a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>   └─ Detalhes: Auditoria exaustiva contra anomalias e órfãos
+</span><span id="__span-2-58"><a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>────────────────────────────────────
+</span><span id="__span-2-59"><a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>📊 BASE DE DADOS SUPABASE (AO VIVO):
+</span><span id="__span-2-60"><a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a> 🏢 Fabricantes:       4
+</span><span id="__span-2-61"><a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a> 🏷️  Marcas:            143
+</span><span id="__span-2-62"><a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a> 🥩 Produtos Totais:   3.415
+</span><span id="__span-2-63"><a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a> 📊 Códigos de Barras: 9.310
+</span><span id="__span-2-64"><a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a> ✨ Novos Produtos:    20 recém-incluídos
+</span><span id="__span-2-65"><a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>📌 RESUMO DOS NOVOS PRODUTOS:
+</span><span id="__span-2-66"><a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>   1. AURORA - EAN: 47891164004246 | Linguiça Toscana 800g Cx. de 16kg
+</span><span id="__span-2-67"><a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>   2. FRIBOI - EAN: 17898302298313 | Alcatra com Maminha (3 Partes) - Friboi
+</span><span id="__span-2-68"><a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a>   ... e mais 12 novos produtos (etl-novos).
+</span><span id="__span-2-69"><a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>────────────────────────────────────
+</span><span id="__span-2-70"><a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a>✔ PIPELINE FINALIZADO COM SUCESSO!
+</span><span id="__span-2-71"><a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a>────────────────────────────────────
+</span></code></pre></div>
+<hr />
+<h2 id="3-compatibilidade-dinamica-com-o-manifesto-do-projeto-schema_manifestjson">📖 3. Compatibilidade Dinâmica com o Manifesto do Projeto (<code>schema_manifest.json</code>)</h2>
+<p>Para evitar inconsistências caso uma marca ou holding entre ou saia do projeto, os aliases e a central de ajuda CLI (<code>paletscan</code> ou <code>etl-help</code>) consomem dinamicamente as seções <code>manifesto_holdings</code> e <code>manifesto_aliases</code> registradas em <a href="file:///root/paletscan-etl/core/manifest/schema_manifest.json"><code>core/manifest/schema_manifest.json</code></a>.</p>
+<h3 id="dicionario-completo-de-aliases-disponiveis">Dicionário Completo de Aliases Disponíveis:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Alias Linux</th>
+<th style="text-align: left;">Comando NPM Subjacente</th>
+<th style="text-align: left;">Descrição Operacional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>etl-run</code></td>
+<td style="text-align: left;"><code>npm run full</code></td>
+<td style="text-align: left;">Executa o pipeline completo (Scrape All <span class="arithmatex">\(\rightarrow\)</span> Sync <span class="arithmatex">\(\rightarrow\)</span> Sanitize <span class="arithmatex">\(\rightarrow\)</span> Export PWA <span class="arithmatex">\(\rightarrow\)</span> Audit) com relatório de timestamps.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-pipeline</code></td>
+<td style="text-align: left;"><code>npm run full</code></td>
+<td style="text-align: left;">Atalho idêntico ao <code>etl-run</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-friboi</code></td>
+<td style="text-align: left;"><code>npm run scrape:friboi</code></td>
+<td style="text-align: left;">Extrai catálogo B2B Friboi / JBS (Friboi, Maturatta, 1953, Swift, Do Chef).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-seara</code></td>
+<td style="text-align: left;"><code>npm run scrape:seara</code></td>
+<td style="text-align: left;">Extrai catálogo B2B Seara Alimentos (Seara, Gourmet, Incrível!).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-brf</code></td>
+<td style="text-align: left;"><code>npm run scrape:brf</code></td>
+<td style="text-align: left;">Extrai catálogo BRF S.A. (Sadia, Perdigão, Qualy, Chester).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-aurora</code></td>
+<td style="text-align: left;"><code>npm run scrape:aurora</code></td>
+<td style="text-align: left;">Extrai catálogo Cooperativa Central Aurora Alimentos (Aurora, Nobre, Gran Mestri).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-copacol</code></td>
+<td style="text-align: left;"><code>npm run scrape:copacol</code></td>
+<td style="text-align: left;">Extrai catálogo Cooperativa Copacol (Aves, Peixes, Tilápia, Suínos).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-lar</code></td>
+<td style="text-align: left;"><code>npm run scrape:lar</code></td>
+<td style="text-align: left;">Extrai catálogo Cooperativa Agroindustrial Lar (Aves e Suínos).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-scrape-all</code></td>
+<td style="text-align: left;"><code>npm run scrape:all</code></td>
+<td style="text-align: left;">Extrai dados de todos os 6 scrapers em lote sequencial.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-sync</code></td>
+<td style="text-align: left;"><code>npm run sync:supabase</code></td>
+<td style="text-align: left;">Carga relacional com identificadores UUIDv5 no Supabase.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-images</code></td>
+<td style="text-align: left;"><code>npm run sync:images</code></td>
+<td style="text-align: left;">Processamento de fundo branco via IA local (<code>rembg</code>) e upload no Storage.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-sanitize</code></td>
+<td style="text-align: left;"><code>npm run sanitize</code></td>
+<td style="text-align: left;">Sanitização pós-sync (Title Case, Modulus 10 EAN-13 GS1).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-export</code></td>
+<td style="text-align: left;"><code>npm run export:pwa</code></td>
+<td style="text-align: left;">Gera e publica <code>produtos.json</code> para o PWA.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-export-excel</code></td>
+<td style="text-align: left;"><code>npm run export:excel</code></td>
+<td style="text-align: left;">Gera relatório comercial em formato Excel (.xlsx).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-audit</code></td>
+<td style="text-align: left;"><code>npm run audit</code></td>
+<td style="text-align: left;">Executa auditoria de integridade de banco de dados.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-wipe</code></td>
+<td style="text-align: left;"><code>npm run wipe</code></td>
+<td style="text-align: left;">Reset estrito / Limpeza do Supabase (sem deletar arquivos brutos em staging).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-logs</code></td>
+<td style="text-align: left;"><code>tail -n 40 -f logs/latest.log</code></td>
+<td style="text-align: left;">Transmissão de logs em tempo real na CLI.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-novos</code></td>
+<td style="text-align: left;"><code>npx tsx scripts/show_new_products.ts</code></td>
+<td style="text-align: left;">Exibe os novos produtos incluídos na base na última execução (ou atalho <code>etl-novos-produtos</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-atualizados</code></td>
+<td style="text-align: left;"><code>npx tsx scripts/show_updated_products.ts</code></td>
+<td style="text-align: left;">Exibe as alterações e atualizações de dados registradas na base (ou atalho <code>etl-alteracoes</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-conflicts</code></td>
+<td style="text-align: left;"><code>cat staging/conflicts_log.json</code></td>
+<td style="text-align: left;">Exibe conflitos de códigos de barras EAN/DUN em staging.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-status</code></td>
+<td style="text-align: left;"><code>npm run status</code></td>
+<td style="text-align: left;">Exibe contagem de registros no Supabase ao vivo em formato 36 colunas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-schedule</code></td>
+<td style="text-align: left;">CLI Interativo</td>
+<td style="text-align: left;">Menu para cadastrar agendamentos no Crontab do Linux.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-cron-list</code></td>
+<td style="text-align: left;"><code>crontab -l</code></td>
+<td style="text-align: left;">Lista os agendamentos ativos do PaletScan no Crontab.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>etl-cron-remove</code></td>
+<td style="text-align: left;"><code>crontab -r</code></td>
+<td style="text-align: left;">Remove os agendamentos do PaletScan no Crontab.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-monitoramento-de-novos-produtos-incluidos">🆕 6. Monitoramento de Novos Produtos Incluídos</h2>
+<p>Quando novas cargas de scrapers ou ingestões de fornecedores são executadas, o pipeline detecta automaticamente quais produtos foram incorporados pela primeira vez ao banco relacional.</p>
+<ul>
+<li><strong>Regra de Status de Novo Produto</strong>: O produto é considerado <strong>novo</strong> exclusivamente no momento em que é inserido no Supabase. Na execução subsequente, por já constar na base, ele perde o status de novo.</li>
+<li><strong>Relatório CLI</strong>: Os novos produtos são registrados em <code>staging/novos_produtos_log.json</code> e destacados no relatório final do <code>etl-run</code>.</li>
+</ul>
+<p>Para inspecionar rapidamente os novos produtos no terminal:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>etl-novos
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># ou o atalho equivalente:</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>etl-novos-produtos
+</span></code></pre></div>
+<hr />
+<h2 id="7-monitoramento-de-produtos-alterados-e-atualizados">📝 7. Monitoramento de Produtos Alterados e Atualizados</h2>
+<p>Quando dados de produtos pré-existentes sofrem modificação no staging (como atualização de foto, descrição padronizada, classe, conservação, peso ou marca):</p>
+<ul>
+<li><strong>Diffing de Campos</strong>: O pipeline compara os dados anteriores com os dados novos e registra a alteração em <code>staging/produtos_atualizados_log.json</code>.</li>
+<li><strong>Relatório CLI</strong>: Para verificar quais produtos sofreram alterações e visualizar o comparativo de valores antigos x novos:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>etl-atualizados
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># ou o atalho equivalente:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>etl-alteracoes
+</span></code></pre></div>
+<h2 id="8-agendamento-automatico-e-gestao-de-tarefas-recorrentes-linux-crontab">⏰ 8. Agendamento Automático e Gestão de Tarefas Recorrentes (Linux / Crontab)</h2>
+<p>Para manter a base de dados permanentemente atualizada sem intervenção manual, o ecossistema PaletScan dispõe de integração nativa com o <strong>Crontab do Linux</strong>, permitindo agendamentos flexíveis com logs e relatórios automáticos.</p>
+<hr />
+<h3 id="a-agendamento-interativo-via-cli-etl-schedule">A. Agendamento Interativo via CLI (<code>etl-schedule</code>)</h3>
+<p>Execute no terminal:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>etl-schedule
+</span></code></pre></div>
+<p>A CLI exibirá um menu interativo com os perfis mais comuns:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>────────────────────────────────────
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a> ⏰ AGENDAMENTO LINUX (CRONTAB)
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>────────────────────────────────────
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Frequência para etl-run:
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a> 1) Diariamente às 03:00
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a> 2) De 12 em 12 horas
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a> 3) De 6 em 6 horas
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a> 4) Personalizado (Cron)
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a> 5) Cancelar
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>Opção [1-5]:
+</span></code></pre></div>
+<hr />
+<h3 id="b-sintaxe-e-expressoes-cron-personalizadas">B. Sintaxe e Expressões Cron Personalizadas</h3>
+<p>Caso selecione a <strong>Opção 4 (Personalizado)</strong>, você pode definir qualquer regra de execução utilizando a estrutura padrão de 5 campos do Cron:</p>
+<div class="arithmatex">\[\begin{matrix} \text{Minuto} &amp; \text{Hora} &amp; \text{Dia-do-Mês} &amp; \text{Mês} &amp; \text{Dia-da-Semana} \\ \text{(0-59)} &amp; \text{(0-23)} &amp; \text{(1-31)} &amp; \text{(1-12)} &amp; \text{(0-6, Dom=0)} \end{matrix}\]</div>
+<h4 id="guia-de-exemplos-praticos-de-agendamento">📋 Guia de Exemplos Práticos de Agendamento:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Objetivo de Agendamento</th>
+<th style="text-align: left;">Expressão Cron</th>
+<th style="text-align: left;">Descrição Operacional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Diário na Madrugada</strong></td>
+<td style="text-align: left;"><code>0 3 * * *</code></td>
+<td style="text-align: left;">Roda diariamente às 03:00 da manhã.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>A cada 12 horas</strong></td>
+<td style="text-align: left;"><code>0 3,15 * * *</code></td>
+<td style="text-align: left;">Roda duas vezes ao dia: às 03:00 e às 15:00.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>A cada 6 horas</strong></td>
+<td style="text-align: left;"><code>0 */6 * * *</code></td>
+<td style="text-align: left;">Roda de 6 em 6 horas (00:00, 06:00, 12:00, 18:00).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Horários de Pico (3x ao dia)</strong></td>
+<td style="text-align: left;"><code>0 6,12,18 * * *</code></td>
+<td style="text-align: left;">Roda exatamente às 06:00, 12:00 e 18:00.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>A cada 30 minutos em Horário Comercial</strong></td>
+<td style="text-align: left;"><code>*/30 8-18 * * 1-5</code></td>
+<td style="text-align: left;">Roda a cada 30 min, entre 08:00 e 18:00, de segunda a sexta.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>A cada 15 minutos (Alta Frequência)</strong></td>
+<td style="text-align: left;"><code>*/15 * * * *</code></td>
+<td style="text-align: left;">Roda a cada 15 minutos, 24h por dia.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Executar 4 vezes ao dia (a cada 3h)</strong></td>
+<td style="text-align: left;"><code>0 0,6,12,18 * * *</code></td>
+<td style="text-align: left;">Roda a cada 6 horas marcadas no relógio.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Apenas aos Finais de Semana</strong></td>
+<td style="text-align: left;"><code>0 4 * * 0,6</code></td>
+<td style="text-align: left;">Roda às 04:00 da manhã aos sábados e domingos.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="c-listar-e-auditar-agendamentos-ativos">C. Listar e Auditar Agendamentos Ativos</h3>
+<p>Para inspecionar as tarefas agendadas e verificar se a suíte PaletScan está ativa no sistema:</p>
+<h4 id="1-via-alias-paletscan-recomendado">1. Via Alias PaletScan (Recomendado):</h4>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>etl-cron-list
+</span></code></pre></div>
+<em>Retorna a linha exata do comando agendado com os parâmetros de diretório e arquivo de log.</em></p>
+<h4 id="2-via-comando-nativo-linux">2. Via Comando Nativo Linux:</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>crontab<span class="w"> </span>-l
+</span></code></pre></div>
+<h4 id="3-acompanhamento-dos-logs-de-execucao-automatica">3. Acompanhamento dos Logs de Execução Automática:</h4>
+<p>Toda execução do agendador redireciona o output em tempo real para <code>logs/cron_output.log</code>. Para visualizar a transmissão dos logs ao vivo:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>tail<span class="w"> </span>-f<span class="w"> </span>logs/cron_output.log
+</span></code></pre></div>
+<hr />
+<h3 id="d-cancelar-e-remover-agendamentos">D. Cancelar e Remover Agendamentos</h3>
+<h4 id="1-remocao-rapida-via-cli">1. Remoção Rápida via CLI:</h4>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>etl-cron-remove
+</span></code></pre></div>
+<em>Limpa todos os agendamentos registrados no Crontab.</em></p>
+<h4 id="2-edicao-manual-do-crontab">2. Edição Manual do Crontab:</h4>
+<p>Para alterar ou remover uma linha específica manualmente:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>crontab<span class="w"> </span>-e
+</span></code></pre></div>
+<em>(Utilize o editor para remover a linha da tarefa <code>PALETSCAN_ETL_FULL_JOB</code> e salve o arquivo).</em></p>
+<hr />
+<h3 id="e-garantias-de-execucao-em-segundo-plano-no-android-termux">E. Garantias de Execução em Segundo Plano no Android / Termux</h3>
+<p>Para agendamentos executados no <strong>Termux (Android)</strong>, garanta as seguintes diretrizes para evitar que o sistema operacional interrompa a rotina quando a tela estiver apagada:</p>
+<ol>
+<li>
+<p><strong>Ativar Wake-Lock do Termux (Impede o Deep Sleep da CPU)</strong>:
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>termux-wake-lock
+</span></code></pre></div>
+   <em>(Cria uma notificação persistente na barra do Android mantendo a CPU desperta no horário agendado).</em></p>
+</li>
+<li>
+<p><strong>Remover Otimização de Bateria do Android</strong>:</p>
+</li>
+<li>Vá em <strong>Configurações do Android</strong> <span class="arithmatex">\(\rightarrow\)</span> <strong>Aplicativos</strong> <span class="arithmatex">\(\rightarrow\)</span> <strong>Termux</strong> <span class="arithmatex">\(\rightarrow\)</span> <strong>Bateria</strong>.</li>
+<li>
+<p>Altere para a opção <strong>Sem Restrições</strong> (<em>Unrestricted</em>).</p>
+</li>
+<li>
+<p><strong>Início do Serviço Daemon Pós-Reboot</strong>:</p>
+</li>
+<li>Se o celular for reiniciado, basta abrir o aplicativo Termux uma vez para ativar automaticamente o daemon do <code>crond</code> e o <code>termux-wake-lock</code>.</li>
+</ol>
+<hr />
+<h2 id="9-limpeza-total-de-bases-de-dados-e-caches-multi-camadas">🧹 9. Limpeza Total de Bases de Dados e Caches Multi-Camadas</h2>
+<p>Quando for necessário resetar o ambiente ou zerar completamente o catálogo antes de um novo ciclo de ingestão de dados, siga o protocolo de limpeza em 3 níveis (Banco Remoto, Fallbacks Estáticos e Cache PWA):</p>
+<h3 id="a-limpeza-no-supabase-remoto-via-cli">A. Limpeza no Supabase (Remoto via CLI)</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>etl-wipe
+</span></code></pre></div>
+<h3 id="b-limpeza-dos-arquivos-estaticos-de-fallback-pwa">B. Limpeza dos Arquivos Estáticos de Fallback (PWA)</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"[]"</span><span class="w"> </span>&gt;<span class="w"> </span>/root/repo_pwa/produtos.json
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"[]"</span><span class="w"> </span>&gt;<span class="w"> </span>/root/repo_pwa/public/produtos.json
+</span></code></pre></div>
+<h3 id="c-execucao-via-console-sql-no-supabase">C. Execução via Console SQL no Supabase</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">TRUNCATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">codigos_barras</span><span class="p">,</span><span class="w"> </span><span class="n">paletes_armazenados</span><span class="p">,</span><span class="w"> </span><span class="n">produtos</span><span class="p">,</span><span class="w"> </span><span class="n">marcas</span><span class="p">,</span><span class="w"> </span><span class="n">fabricantes</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">;</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Anterior: Início">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Início
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../scrapers-multi-fornecedores/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Scrapers Multi-Fornecedores">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Scrapers Multi-Fornecedores
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.expand", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
