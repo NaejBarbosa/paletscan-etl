@@ -157,11 +157,31 @@ function parseSearaB2BPage(html: string, pageUrl: string): RawSearaProduct | nul
 
   let ean = '';
   let dun = '';
-  const eanMatch = html.match(/EAN13?\s*:\s*([\d\.]+)/i);
-  if (eanMatch) ean = eanMatch[1].replace(/\./g, '');
 
-  const dunMatch = html.match(/DUN14?\s*:\s*([\d\.]+)/i);
-  if (dunMatch) dun = dunMatch[1].replace(/\./g, '');
+  // 1. Extração robusta de EAN-13 (suporta <strong>EAN13</strong>: ..., EAN13: ..., e padrão 789/790)
+  const eanMatch = html.match(/<strong>\s*EAN13?\s*<\/strong>\s*:\s*([\d\.\s]+)/i)
+    || html.match(/EAN13?\s*:\s*([\d\.\s]+)/i)
+    || html.match(/data-(?:dl-)?product_ean=["']\s*(\d{13})\s*["']/i)
+    || html.match(/\b(789\d{10}|790\d{10})\b/);
+
+  if (eanMatch) {
+    const rawVal = (eanMatch[1] || eanMatch[0]).replace(/[\.\s]/g, '');
+    if (/^\d{13}$/.test(rawVal)) {
+      ean = rawVal;
+    }
+  }
+
+  // 2. Extração robusta de DUN-14 (suporta <strong>DUN14</strong>: ..., DUN14: ..., e 14 dígitos numéricos)
+  const dunMatch = html.match(/<strong>\s*DUN14?\s*<\/strong>\s*:\s*([\d\.\s]+)/i)
+    || html.match(/DUN14?\s*:\s*([\d\.\s]+)/i)
+    || html.match(/\b([12789]\d{13})\b/);
+
+  if (dunMatch) {
+    const rawVal = (dunMatch[1] || dunMatch[0]).replace(/[\.\s]/g, '');
+    if (/^\d{14}$/.test(rawVal)) {
+      dun = rawVal;
+    }
+  }
 
   const marcaMatch = html.match(/"marca"\s*:\s*\["([^"]+)"\]/);
   const catMatch = html.match(/"category"\s*:\s*\["([^"]+)"\]/);
@@ -197,11 +217,11 @@ function parseSearaB2CPage(html: string, pageUrl: string): RawSearaProduct | nul
   if (!title) return null;
 
   let ean = '';
-  const eanMatch1 = html.match(/data-ean="\s*(\d{13})\s*"/i) || html.match(/data-dl-product_ean="\s*(\d{13})\s*"/i);
+  const eanMatch1 = html.match(/data-ean=["']\s*(\d{13})\s*["']/i) || html.match(/data-dl-product_ean=["']\s*(\d{13})\s*["']/i);
   if (eanMatch1) {
     ean = eanMatch1[1];
   } else {
-    const eanMatch2 = html.match(/\b789\d{10}\b/);
+    const eanMatch2 = html.match(/\b(789\d{10}|790\d{10})\b/);
     if (eanMatch2) ean = eanMatch2[0];
   }
 
@@ -240,6 +260,7 @@ export async function runSearaScraper() {
   console.log('🚀 === INICIANDO SCRAPER SEARA ETL (COMPLETO B2B + B2C LIVE WEB EXTRACTION) ===');
 
   const rawProducts: RawSearaProduct[] = [];
+  const processedSkus = new Set<string>();
   const batchSize = 20;
 
   // 1. Extração B2B (Seara Food Solutions)
@@ -247,19 +268,47 @@ export async function runSearaScraper() {
   const filteredB2BUrls = b2bProductUrls.filter(u => u.includes('/produto/'));
   console.log(`📦 Encontradas ${filteredB2BUrls.length} URLs de produtos B2B na Seara Food Solutions.`);
 
-  for (let i = 0; i < filteredB2BUrls.length; i += batchSize) {
-    const chunk = filteredB2BUrls.slice(i, i + batchSize);
-    process.stdout.write(`  \r⏳ Processando páginas B2B: ${Math.min(i + batchSize, filteredB2BUrls.length)}/${filteredB2BUrls.length}...`);
+  if (filteredB2BUrls.length > 0) {
+    for (let i = 0; i < filteredB2BUrls.length; i += batchSize) {
+      const chunk = filteredB2BUrls.slice(i, i + batchSize);
+      process.stdout.write(`  \r⏳ Processando páginas B2B: ${Math.min(i + batchSize, filteredB2BUrls.length)}/${filteredB2BUrls.length}...`);
 
-    const htmls = await Promise.all(chunk.map(url => fetchWithTimeout(url)));
-    chunk.forEach((url, idx) => {
-      const parsed = parseSearaB2BPage(htmls[idx], url);
-      if (parsed && parsed.title) {
-        rawProducts.push(parsed);
-      }
-    });
+      const htmls = await Promise.all(chunk.map(url => fetchWithTimeout(url)));
+      chunk.forEach((url, idx) => {
+        const parsed = parseSearaB2BPage(htmls[idx], url);
+        if (parsed && parsed.title) {
+          const key = parsed.ean || parsed.sku || parsed.title;
+          if (!processedSkus.has(key)) {
+            processedSkus.add(key);
+            rawProducts.push(parsed);
+          }
+        }
+      });
+    }
   }
-  console.log(`\n✅ Extraídos ${rawProducts.length} produtos B2B ao vivo da Seara.`);
+
+  // Fallback / Enriquecimento B2B via cache local de HTMLs se houver
+  const localB2BDir = '/root/projetos-scraping/scraping-seara/html_produtos';
+  if (fs.existsSync(localB2BDir)) {
+    const localFiles = fs.readdirSync(localB2BDir).filter(f => f.endsWith('.html'));
+    let localAdded = 0;
+    for (const f of localFiles) {
+      const html = fs.readFileSync(path.join(localB2BDir, f), 'utf-8');
+      const parsed = parseSearaB2BPage(html, `https://www.searafoodsolutions.com.br/produto/${f.replace('.html', '')}`);
+      if (parsed && parsed.title) {
+        const key = parsed.ean || parsed.sku || parsed.title;
+        if (!processedSkus.has(key)) {
+          processedSkus.add(key);
+          rawProducts.push(parsed);
+          localAdded++;
+        }
+      }
+    }
+    if (localAdded > 0) {
+      console.log(`\n📦 Enriquecidos ${localAdded} produtos B2B a partir do repositório local de HTMLs.`);
+    }
+  }
+  console.log(`\n✅ Extraídos ${rawProducts.length} produtos B2B no total.`);
 
   // 2. Extração B2C (Seara Institucional)
   const b2cProductUrls = await extractUrlsFromSitemap(B2C_SITEMAP_URL);
@@ -267,19 +316,47 @@ export async function runSearaScraper() {
   console.log(`📦 Encontradas ${filteredB2CUrls.length} URLs de produtos B2C na Seara Institucional.`);
 
   const b2cCountBefore = rawProducts.length;
-  for (let i = 0; i < filteredB2CUrls.length; i += batchSize) {
-    const chunk = filteredB2CUrls.slice(i, i + batchSize);
-    process.stdout.write(`  \r⏳ Processando páginas B2C: ${Math.min(i + batchSize, filteredB2CUrls.length)}/${filteredB2CUrls.length}...`);
+  if (filteredB2CUrls.length > 0) {
+    for (let i = 0; i < filteredB2CUrls.length; i += batchSize) {
+      const chunk = filteredB2CUrls.slice(i, i + batchSize);
+      process.stdout.write(`  \r⏳ Processando páginas B2C: ${Math.min(i + batchSize, filteredB2CUrls.length)}/${filteredB2CUrls.length}...`);
 
-    const htmls = await Promise.all(chunk.map(url => fetchWithTimeout(url)));
-    chunk.forEach((url, idx) => {
-      const parsed = parseSearaB2CPage(htmls[idx], url);
-      if (parsed && parsed.title) {
-        rawProducts.push(parsed);
-      }
-    });
+      const htmls = await Promise.all(chunk.map(url => fetchWithTimeout(url)));
+      chunk.forEach((url, idx) => {
+        const parsed = parseSearaB2CPage(htmls[idx], url);
+        if (parsed && parsed.title) {
+          const key = parsed.ean || parsed.sku || parsed.title;
+          if (!processedSkus.has(key)) {
+            processedSkus.add(key);
+            rawProducts.push(parsed);
+          }
+        }
+      });
+    }
   }
-  console.log(`\n✅ Extraídos ${rawProducts.length - b2cCountBefore} produtos B2C ao vivo da Seara.`);
+
+  // Fallback / Enriquecimento B2C via cache local de HTMLs se houver
+  const localB2CDir = '/root/projetos-scraping/scraping-seara/html_produtos_b2c';
+  if (fs.existsSync(localB2CDir)) {
+    const localFiles = fs.readdirSync(localB2CDir).filter(f => f.endsWith('.html'));
+    let localAdded = 0;
+    for (const f of localFiles) {
+      const html = fs.readFileSync(path.join(localB2CDir, f), 'utf-8');
+      const parsed = parseSearaB2CPage(html, `https://www.seara.com.br/produto/${f.replace('.html', '')}`);
+      if (parsed && parsed.title) {
+        const key = parsed.ean || parsed.sku || parsed.title;
+        if (!processedSkus.has(key)) {
+          processedSkus.add(key);
+          rawProducts.push(parsed);
+          localAdded++;
+        }
+      }
+    }
+    if (localAdded > 0) {
+      console.log(`\n📦 Enriquecidos ${localAdded} produtos B2C a partir do repositório local de HTMLs.`);
+    }
+  }
+  console.log(`\n✅ Extraídos ${rawProducts.length - b2cCountBefore} produtos B2C da Seara.`);
   console.log(`🔥 Total Bruto Combinado de Produtos Seara: ${rawProducts.length}`);
 
   // 3. Montagem dos Objetos Relacionais do PaletScan
@@ -343,7 +420,7 @@ export async function runSearaScraper() {
       codigosBarras.push({
         id: `cod_ean_${eanNorm}`,
         produto_id: produtoId,
-        tipo: 'EAN-13',
+        tipo: 'EAN',
         codigo: eanNorm,
         embalagem: 'UNIDADE',
         quantidade_embalagem: 1,
@@ -355,7 +432,7 @@ export async function runSearaScraper() {
       codigosBarras.push({
         id: `cod_dun_${dunNorm}`,
         produto_id: produtoId,
-        tipo: 'DUN-14',
+        tipo: 'DUN',
         codigo: dunNorm,
         embalagem: 'CAIXA',
         quantidade_embalagem: null,

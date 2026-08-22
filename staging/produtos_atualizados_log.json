@@ -12,21 +12,3071 @@
         "para": "https://www.sadia.com.br/assets/images/_/products/d0a231518cf027345f7b1ab457d034300e6c2b91.webp"
       }
     ],
-    "atualizado_em": "2026-08-21T12:51:54.806Z"
+    "atualizado_em": "2026-08-22T02:03:09.499Z"
+  },
+  {
+    "id": "c1bcdb5b-edbe-56f9-8c11-f74b5a75cf19",
+    "marca": "Seara Gourmet",
+    "ean": "588",
+    "dun": "",
+    "descricao": "Lombo Canadense Fatiado 150g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2022/06/Lombo-Canadense-Fatiado-Seara-Gourmet-150g.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/998542-lombo-canadense-fatiado-seara-gourmet-150g-min.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Lombo Canadense Fatiado Seara Gourmet 150g",
+        "para": "Lombo Canadense Fatiado 150g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "0993e9ff-4b56-5715-baa2-9fa31011ee8d",
+    "marca": "Seara",
+    "ean": "652",
+    "dun": "",
+    "descricao": "Costela Suína 15kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-1967-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-652-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Costela Suína Seara (Pesar)",
+        "para": "Costela Suína 15kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Su\\u00ednos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 15000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "c1936e07-b063-5a09-8d25-8d410c6dd3b6",
+    "marca": "Seara Gourmet",
+    "ean": "182",
+    "dun": "",
+    "descricao": "Jamón Serrano Fatiado 80g – Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2131-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-182-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Jamón Serrano Fatiado Seara Gourmet 80g",
+        "para": "Jamón Serrano Fatiado 80g – Seara Gourmet"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "6646cd1a-36fd-50dd-88c0-ab7837bf0503",
+    "marca": "Seara",
+    "ean": "674",
+    "dun": "",
+    "descricao": "Camarão Descascado 80/100 400g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2183-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/45164-AF03-Beauty-Pescados-Camarao-Desc-80-100-TD-231220_mockup.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Camarão Descascado 80/100 Seara 400g",
+        "para": "Camarão Descascado 80/100 400g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "e64d0de2-da4f-5a19-9948-7e6d8fcc8945",
+    "marca": "Seara",
+    "ean": "677",
+    "dun": "",
+    "descricao": "Camarão Descascado 30/45 200g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2196-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/999536_CAMARAO_DESCASCADO-V2.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Camarão Descascado 30/45 Seara 200g",
+        "para": "Camarão Descascado 30/45 200g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "834a700e-db18-5488-9129-4e586c2e473c",
+    "marca": "Seara",
+    "ean": "679",
+    "dun": "",
+    "descricao": "Camarão sem Cabeça 40/55 200g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2195-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/999537-AF03-Beauty-Pescados-Camarao-S-Cabeca-45-50-TD-231220_MOCKUP.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Camarão sem Cabeça 40/50 Seara 200g",
+        "para": "Camarão sem Cabeça 40/55 200g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "a4b6cfd6-c38a-593a-8ab7-64ecbb2e54e7",
+    "marca": "Seara",
+    "ean": "680",
+    "dun": "",
+    "descricao": "Filé de Tilápia Empanada IQF 400g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2198-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/Finalizado-PIT-9061-Mockups-Seara-Projeto-Beauty-999403-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Filé de Tilápia Empanada Seara 400g",
+        "para": "Filé de Tilápia Empanada IQF 400g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "8a4953d2-b23a-55d3-a106-66f08d74b156",
+    "marca": "Seara",
+    "ean": "684",
+    "dun": "",
+    "descricao": "Tirinha de Peixe Empanada IQF 300g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2200-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/Visualizar-PIT-9061-Mockups-Seara-Projeto-Beauty-999395-V2.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Tirinha de Peixe Empanada Seara 300g",
+        "para": "Tirinha de Peixe Empanada IQF 300g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "ec6ec728-ed46-579d-a8eb-ab281923b1c6",
+    "marca": "Seara",
+    "ean": "686",
+    "dun": "",
+    "descricao": "Kit Paella IQF 400g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-16366-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/Copia-de-45158_KIT_PAELLA.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Kit Paella Seara 400g",
+        "para": "Kit Paella IQF 400g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "5e4880f5-5cb1-500d-97ea-3838964733c4",
+    "marca": "Seara",
+    "ean": "690",
+    "dun": "",
+    "descricao": "Filé de Merluza Seara 500g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2187-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/Finalizado-PIT-9061-Mockups-Seara-Projeto-Beauty-56058.png"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "059dffbf-9fd3-5e2c-9192-2a7b2acd9729",
+    "marca": "Seara",
+    "ean": "694",
+    "dun": "",
+    "descricao": "Filé de Salmão 500g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2179-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/Copia-de-Finalizado-PIT-9061-Mockups-Seara-Projeto-Beauty-45159.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Filé de Salmão (Pedaço) Seara 500g",
+        "para": "Filé de Salmão 500g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "bbcad01b-a6ba-5782-a5a4-72ff75fba7c5",
+    "marca": "Seara",
+    "ean": "695",
+    "dun": "",
+    "descricao": "Filé de Salmão em Pedaços IQF 500g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2180-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/45161-AF01-Beauty-Pescados-File-Salmao-TD-231218_MOCKUP.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Filé de Salmão em Pedaços Seara 500g",
+        "para": "Filé de Salmão em Pedaços IQF 500g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "e92e602f-32e8-50be-9122-9050227b745f",
+    "marca": "Seara",
+    "ean": "647",
+    "dun": "",
+    "descricao": "Camarão Empanado IQF 300g - Seara Pescados",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2185-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/45166-AF01-Beauty-Pescados-Camarao-Empanado-TD-231218-CV_MOCKUP.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Camarão Empanado Seara 300g",
+        "para": "Camarão Empanado IQF 300g - Seara Pescados"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "4eef5d19-4aad-5612-9552-ad410f925303",
+    "marca": "Seara",
+    "ean": "653",
+    "dun": "",
+    "descricao": "Galeto Congelado 800g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5691-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-653-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Galeto sem Miúdos Seara 800g",
+        "para": "Galeto Congelado 800g - Seara"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "de5692f7-579e-5455-ab3d-88221a8c23fa",
+    "marca": "Seara",
+    "ean": "654",
+    "dun": "",
+    "descricao": "Jerked Suíno 400g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5724-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-654-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Jerked Suíno Seara 400g",
+        "para": "Jerked Suíno 400g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Su\\u00ednos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "d22323f4-bfca-502f-8695-2b570790801d",
+    "marca": "Seara",
+    "ean": "656",
+    "dun": "",
+    "descricao": "Jerked Suíno 3kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-16365-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-656-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Jerked Suíno Seara 3kg",
+        "para": "Jerked Suíno 3kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Su\\u00ednos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "ab0e71d3-0859-5b79-92bc-5b597587d73b",
+    "marca": "Seara",
+    "ean": "659",
+    "dun": "",
+    "descricao": "Banha Suína 1kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5194-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-659-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Banha Suína Seara 1kg",
+        "para": "Banha Suína 1kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Su\\u00ednos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "11a690a8-929b-551e-9898-dedae6a73eb1",
+    "marca": "Seara",
+    "ean": "663",
+    "dun": "",
+    "descricao": "Lombo de Bacalhau 600g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2194-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/AF03-Beauty-Lombo-Bacalhau-600g-TD-231220.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Lombo de Bacalhau Seara 600g",
+        "para": "Lombo de Bacalhau 600g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "5a2d6674-18f5-5c7c-81ad-b456b97ca93a",
+    "marca": "Seara",
+    "ean": "668",
+    "dun": "",
+    "descricao": "Bolinhos com Bacalhau 300g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2192-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/999898.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Bolinhos com Bacalhau Seara 300g",
+        "para": "Bolinhos com Bacalhau 300g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "67c81554-d6b9-50d8-8fd1-c2afaafca713",
+    "marca": "Seara",
+    "ean": "669",
+    "dun": "",
+    "descricao": "Camarão Descascado 30/50 400g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2181-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/45162-AF04-Beauty-Pescados-Camarao-Desc-30-50-TD-231218-CV_mockup.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Camarão Descascado 30/50 Seara 400g",
+        "para": "Camarão Descascado 30/50 400g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "4efa5f80-affa-50fe-abe7-4459d76fdd6e",
+    "marca": "Seara Gourmet",
+    "ean": "619",
+    "dun": "",
+    "descricao": "Coxinha da Asa Buffalo Wings 800g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2075-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-619-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Coxinha da Asa Buffalo Wings Seara Gourmet 800g",
+        "para": "Coxinha da Asa Buffalo Wings 800g - Seara Gourmet"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "e2663469-0676-5cb9-88da-0eb014b635d0",
+    "marca": "Seara Gourmet",
+    "ean": "618",
+    "dun": "",
+    "descricao": "Bacon Fatias 250g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2081-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-618-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Bacon em Fatias Seara Gourmet 250g",
+        "para": "Bacon Fatias 250g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "184628e2-60b5-50b9-b6c6-ea61878f0df3",
+    "marca": "Seara Gourmet",
+    "ean": "604",
+    "dun": "",
+    "descricao": "Linguiça com Alho-Poró 500g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2090-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-604-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça com Alho Poró Seara Gourmet 500g",
+        "para": "Linguiça com Alho-Poró 500g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "f3de54a4-9a61-5ab9-abc3-6f34d2c1969c",
+    "marca": "Seara Gourmet",
+    "ean": "605",
+    "dun": "",
+    "descricao": "Linguiça com Pimenta Biquinho 500g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2089-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-605-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça com Pimenta Biquinho Seara Gourmet 500g",
+        "para": "Linguiça com Pimenta Biquinho 500g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "a4046de1-3d45-5155-b533-3864dd02c850",
+    "marca": "Seara Gourmet",
+    "ean": "608",
+    "dun": "",
+    "descricao": "Linguiça Apimentada 450g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2088-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-608-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça Apimentada Seara Gourmet 450g",
+        "para": "Linguiça Apimentada 450g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "34c44161-052a-56fe-aa8a-bb269c366fd2",
+    "marca": "Seara Gourmet",
+    "ean": "599",
+    "dun": "",
+    "descricao": "Linguiça Tipo Cuiabana 500g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2093-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-599-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça Tipo Cuiabana Seara Gourmet 500g",
+        "para": "Linguiça Tipo Cuiabana 500g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "5a479770-ee4a-5369-8c6e-bf12321ed714",
+    "marca": "Seara Gourmet",
+    "ean": "602",
+    "dun": "",
+    "descricao": "Linguiça de Frango com Bacon 500g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2091-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-602-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango com Bacon Seara Gourmet 500g",
+        "para": "Linguiça de Frango com Bacon 500g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "016c0160-9fb8-5f3e-9c70-3b632fcf4c32",
+    "marca": "Seara Gourmet",
+    "ean": "596",
+    "dun": "",
+    "descricao": "Presunto Serrano - Seara Gourmet (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-16251-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-596-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Jamón Serrano Seara Gourmet (Pesar)",
+        "para": "Presunto Serrano - Seara Gourmet (Pesar)"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "956d5ef0-430c-53b2-a098-68020719222e",
+    "marca": "Seara Gourmet",
+    "ean": "598",
+    "dun": "",
+    "descricao": "Presunto de Parma 6,5kg - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-16250-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-598-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Presunto de Parma Seara Gourmet (Pesar)",
+        "para": "Presunto de Parma 6,5kg - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 6500
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "12bd3833-13e5-5c93-ad60-e9087cc13ced",
+    "marca": "Seara Gourmet",
+    "ean": "554",
+    "dun": "",
+    "descricao": "Gran Angus Burger 400g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2080-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-554-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Gran Angus Burger Seara Gourmet 400g",
+        "para": "Gran Angus Burger 400g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "8099de72-1c12-5d95-a706-cfc4dd2ed101",
+    "marca": "Seara Gourmet",
+    "ean": "572",
+    "dun": "",
+    "descricao": "Pão de Queijo 300g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2117-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-572-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Pão de Queijo Seara Gourmet 300g",
+        "para": "Pão de Queijo 300g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Massas"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "457fac9e-c095-54c2-b4d2-0c38168ad7ce",
+    "marca": "Seara Gourmet",
+    "ean": "580",
+    "dun": "",
+    "descricao": "Pepperoni Fatiado 100g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2118-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-580-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Pepperoni Fatiado Seara Gourmet 100g",
+        "para": "Pepperoni Fatiado 100g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "9bd0e73e-332f-565c-aea5-1114e6c3a86c",
+    "marca": "Seara Gourmet",
+    "ean": "578",
+    "dun": "",
+    "descricao": "Salame Tipo Italiano Fatiado 100g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2143-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-578-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Salame Tipo Italiano Fatiado Seara Gourmet 100g",
+        "para": "Salame Tipo Italiano Fatiado 100g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "767f897f-aa9e-5649-81a1-1a508b40d178",
+    "marca": "Seara Gourmet",
+    "ean": "575",
+    "dun": "",
+    "descricao": "Lombo Tipo Canadense ±1kg - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2066-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-575-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Lombo Tipo Canadense Seara Gourmet (Pesar)",
+        "para": "Lombo Tipo Canadense ±1kg - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "c68d2022-3968-50e5-a0a9-ca6c4f4381b2",
+    "marca": "Seara Gourmet",
+    "ean": "584",
+    "dun": "",
+    "descricao": "Salame Tipo Hamburguês Fatiado 100g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-16161-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-584-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Salame Tipo Hamburguês Fatiado Seara Gourmet 100g",
+        "para": "Salame Tipo Hamburguês Fatiado 100g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "daeceb08-4380-5fb7-a47a-e59dc8313b2c",
+    "marca": "Seara Gourmet",
+    "ean": "582",
+    "dun": "",
+    "descricao": "Presunto Royal 6,5kg - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2130-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-582-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Presunto Royal Seara Gourmet (Pesar)",
+        "para": "Presunto Royal 6,5kg - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 6500
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "729f3359-1645-500d-83bd-a22a0b3cb619",
+    "marca": "Seara Gourmet",
+    "ean": "590",
+    "dun": "",
+    "descricao": "Presunto Cru Italiano 80g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-16243-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-590-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Presunto Cru Italiano Seara Gourmet 80g",
+        "para": "Presunto Cru Italiano 80g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "661a5575-68a5-5966-b541-7c6edabd1982",
+    "marca": "Seara Gourmet",
+    "ean": "586",
+    "dun": "",
+    "descricao": "Salame com Borda Pimenta 100g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2135-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-586-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Salame com Borda de Pimenta Fatiado Seara Gourmet 100g",
+        "para": "Salame com Borda Pimenta 100g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "2e31ca57-4e76-51d4-80d7-0d150a7f5f8b",
+    "marca": "Seara Gourmet",
+    "ean": "591",
+    "dun": "",
+    "descricao": "Copa Fatiada 100g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2069-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-591-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Copa Fatiada Seara Gourmet 80g",
+        "para": "Copa Fatiada 100g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 80,
+        "para": 100
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "c9e2ec0e-fca9-59fa-86d9-dcc950c883d8",
+    "marca": "Seara",
+    "ean": "529",
+    "dun": "",
+    "descricao": "Apresuntado Retangular ±3,6kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2024/08/Apresuntado-Retangular-Seara.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-529-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Apresuntado Retangular Seara (Pesar)",
+        "para": "Apresuntado Retangular ±3,6kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 3600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "e8a39137-ea6b-5081-9933-35aab52dfd82",
+    "marca": "Seara",
+    "ean": "542",
+    "dun": "",
+    "descricao": "Peito de Peru Defumado ±2,6kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-6012-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-542-500-1.jpg"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Peito de Peru Defumado Seara (Pesar)",
+        "para": "Peito de Peru Defumado ±2,6kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 2600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "830c65f7-ccea-580d-8d23-dd5c5c264e42",
+    "marca": "Seara",
+    "ean": "502",
+    "dun": "",
+    "descricao": "Empanado Presunto e Queijo 110g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2026-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-502-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Empanado Presunto e Queijo Seara 110g",
+        "para": "Empanado Presunto e Queijo 110g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "1584ab59-4937-5e5e-92b0-37caef19a4af",
+    "marca": "Seara",
+    "ean": "504",
+    "dun": "",
+    "descricao": "Linguiça Fininha Defumada 215g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5815-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-504-500-1.jpg"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça Fininha Defumada Seara 215g",
+        "para": "Linguiça Fininha Defumada 215g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "3932dccf-b217-518d-b02c-9b02df7d18ce",
+    "marca": "Seara",
+    "ean": "485",
+    "dun": "",
+    "descricao": "Salsicha Hot Dog 500g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-6141-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-485-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Salsicha Hot Dog Seara 500g",
+        "para": "Salsicha Hot Dog 500g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "69a2713d-5ca5-5744-8fda-d2833ccc792b",
+    "marca": "Seara",
+    "ean": "482",
+    "dun": "",
+    "descricao": "Bacon Extra Paleta - Seara (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-23190-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-482-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Bacon Extra Paleta Seara (Pesar)",
+        "para": "Bacon Extra Paleta - Seara (Pesar)"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "56533eec-8f51-5917-83a2-e9442d677329",
+    "marca": "Seara",
+    "ean": "478",
+    "dun": "",
+    "descricao": "Linguiça Tipo Calabresa 400g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-1968-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-478-500-1.jpg"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça Calabresa Seara (Pesar)",
+        "para": "Linguiça Tipo Calabresa 400g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 400
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "d4b2d010-77f8-50d9-bec0-ce1ac8e7b1f8",
+    "marca": "Seara",
+    "ean": "468",
+    "dun": "",
+    "descricao": "Levíssimo ±3,4kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5775-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-468-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Levíssimo Seara (Pesar)",
+        "para": "Levíssimo ±3,4kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 3400
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "bfb14d20-2244-5908-86f3-0bc2438b8d70",
+    "marca": "Seara",
+    "ean": "462",
+    "dun": "",
+    "descricao": "Linguiça Reta 2,5kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5833-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-462-500-1.jpg"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça Defumada Reta Seara (Pesar)",
+        "para": "Linguiça Reta 2,5kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 2500
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "0fbd4bf1-52d3-54e5-b7c0-40cc3835c7a8",
+    "marca": "Seara",
+    "ean": "454",
+    "dun": "",
+    "descricao": "Steak Tradicional 100g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-12414-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-454-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Steak Tradicional Seara 100g",
+        "para": "Steak Tradicional 100g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "bc91910e-8abb-5c1a-b461-f929749e40fa",
+    "marca": "Seara",
+    "ean": "450",
+    "dun": "",
+    "descricao": "Bacon Suíno Defumado - Seara (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-22643-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-450-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Bacon Suíno Defumado Seara (Pesar)",
+        "para": "Bacon Suíno Defumado - Seara (Pesar)"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "8e99f2b8-82c6-5dea-a260-e2a3bb78ce3f",
+    "marca": "Seara",
+    "ean": "438",
+    "dun": "",
+    "descricao": "Presunto Cozido Magro Oval ±3,4kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-6094-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-438-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Presunto Cozido Magro Oval Seara (Pesar)",
+        "para": "Presunto Cozido Magro Oval ±3,4kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 3400
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "2136af4a-1109-5251-b0f8-b437891a9ac5",
+    "marca": "Seara",
+    "ean": "430",
+    "dun": "",
+    "descricao": "Linguiça Tipo Calabresa 2,5kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5859-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-430-500-1.jpg"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça Tipo Calabresa Seara (Pesar)",
+        "para": "Linguiça Tipo Calabresa 2,5kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 2500
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "54487452-3146-5e56-b4b0-0552f2a25787",
+    "marca": "Seara",
+    "ean": "432",
+    "dun": "",
+    "descricao": "Salsicha Congelada 5kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-6129-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-432-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Salsicha Seara 5kg",
+        "para": "Salsicha Congelada 5kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "04eaea7c-be3f-5653-8aab-3a509f8d2c65",
+    "marca": "Seara",
+    "ean": "524",
+    "dun": "",
+    "descricao": "Margarina Cremosa sem Sal 500g - Doriana",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2103-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-524-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Margarina Doriana sem Sal 500g",
+        "para": "Margarina Cremosa sem Sal 500g - Doriana"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Margarinas e Maioneses"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "d9344cd9-ef37-549f-a393-ee90e9ecb721",
+    "marca": "Doriana",
+    "ean": "492",
+    "dun": "",
+    "descricao": "Margarina Cremosa com Sal 250g - Doriana",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2098-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-492-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Margarina Doriana com Sal 250g",
+        "para": "Margarina Cremosa com Sal 250g - Doriana"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Margarinas e Maioneses"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "95dd4220-f7f6-51ac-8a6d-c20940a8fccf"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "1391a760-3a65-5c72-9cb8-47fc23f6b884",
+    "marca": "Doriana",
+    "ean": "442",
+    "dun": "",
+    "descricao": "Margarina Cremosa com Sal 500g - Doriana",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2099-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-442-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Margarina Doriana com Sal 500g",
+        "para": "Margarina Cremosa com Sal 500g - Doriana"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Margarinas e Maioneses"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "95dd4220-f7f6-51ac-8a6d-c20940a8fccf"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "4cbce231-079f-5d99-874b-77060b19b2ac",
+    "marca": "Doriana",
+    "ean": "460",
+    "dun": "",
+    "descricao": "Margarina Cremosa com Sal 1kg - Doriana",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2097-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-460-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Margarina Doriana com Sal 1kg",
+        "para": "Margarina Cremosa com Sal 1kg - Doriana"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Margarinas e Maioneses"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "95dd4220-f7f6-51ac-8a6d-c20940a8fccf"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.035Z"
+  },
+  {
+    "id": "1594efa1-d5ea-5cd2-a46a-a3690225ffe6",
+    "marca": "Seara",
+    "ean": "667",
+    "dun": "",
+    "descricao": "Bacalhau Desfiado IQF 400g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2193-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2023/11/7894904261536_Bacalhau-desfiado-Seara-Pescados-400g_IMAGEM-PRINCIPAL_1000x1000.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Bacalhau Desfiado Seara 400g",
+        "para": "Bacalhau Desfiado IQF 400g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "33639efe-9e66-534c-8ebc-3e0f75ec611b",
+    "marca": "Seara",
+    "ean": "692",
+    "dun": "",
+    "descricao": "Posta de Tilápia 500g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-16370-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2023/11/7894904279876_Posta-de-Tilapia-Seara-Pescados-500g_IMAGEM-PRINCIPAL_1000x1000.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Postas de Tilápia Seara 500g",
+        "para": "Posta de Tilápia 500g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "d8976b40-0c34-51e3-914b-358957ae15c3",
+    "marca": "Seara",
+    "ean": "689",
+    "dun": "",
+    "descricao": "Filé de Tilápia IQF 600g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2186-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/45167-AF02-Beauty-Pescados-File-Tilapia-NL-20240105_mockup.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Filé de Tilápia Seara 600g",
+        "para": "Filé de Tilápia IQF 600g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "3ed536a1-a093-5ec2-bd44-b70ecf804bf9",
+    "marca": "Seara",
+    "ean": "673",
+    "dun": "",
+    "descricao": "Camarão Descascado 60/80 400g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-16348-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2023/11/80-Seara-Pescados-400g_IMAGEM-PRINCIPAL_1000x1000.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Camarão Descascado 60/80 Seara 400g",
+        "para": "Camarão Descascado 60/80 400g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "025a1152-da24-5c5c-a980-37f0d0b7bd1c",
+    "marca": "Seara",
+    "ean": "664",
+    "dun": "",
+    "descricao": "Postas de Bacalhau Seara Pescados 800g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2191-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2025/07/999907_POSTAS_DE_BACALHAU.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Postas de Bacalhau Seara 800g",
+        "para": "Postas de Bacalhau Seara Pescados 800g"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Pescados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "278bc6ac-95a5-5255-895b-b7db830d31b1",
+    "marca": "Seara",
+    "ean": "644",
+    "dun": "",
+    "descricao": "Frango a Passarinho Seara IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-1975-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-644-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Frango a Passarinho Seara 1kg",
+        "para": "Frango a Passarinho Seara IQF 1kg"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "580f1de8-55fa-52e2-9176-e3426f7085b3",
+    "marca": "Seara",
+    "ean": "636",
+    "dun": "",
+    "descricao": "Peito de Frango Desfiado 400g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-1981-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-636-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Peito de Frango Desfiado Seara 400g",
+        "para": "Peito de Frango Desfiado 400g - Seara"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "f60ec1ce-87a7-5c8c-ab02-187359a05ee5",
+    "marca": "Seara",
+    "ean": "639",
+    "dun": "",
+    "descricao": "Mandioca Supreme 1,5kg - Seara Nature",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2022/10/Mandioca-Supreme-Seara-Nature-15kg.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904955800_Mandioca-supreme-Seara-Nature-15kg_IMAGEM-PRINCIPAL_1000x1000.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Mandioca Supreme Seara Nature 1,5kg",
+        "para": "Mandioca Supreme 1,5kg - Seara Nature"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "c0eccfc8-90c8-50ec-b5ba-1e06518d5a38",
+    "marca": "Seara Gourmet",
+    "ean": "574",
+    "dun": "",
+    "descricao": "Mortadela Defumada Fatiada 180g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2107-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-574-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Mortadela Defumada Fatiada Seara Gourmet 180g",
+        "para": "Mortadela Defumada Fatiada 180g - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "871af9a4-d8ee-5b2a-b268-03dd28db0d3e",
+    "marca": "Seara",
+    "ean": "510",
+    "dun": "",
+    "descricao": "Tekitos Congelado 1kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-11804-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904691005_Tekitos-tradicional-1kg_IMAGEM-PRINCIPAL_1000x1000.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Tekitos Tradicional 1kg",
+        "para": "Tekitos Congelado 1kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "2565aa73-2807-5dff-88b4-59caa6bad077",
+    "marca": "Seara",
+    "ean": "494",
+    "dun": "",
+    "descricao": "Linguiça Fininha Defumada 2,5kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-23111-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-494-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça Fininha Defumada Seara (Pesar)",
+        "para": "Linguiça Fininha Defumada 2,5kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 2500
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "794763c2-525e-5f15-b1eb-3ce1ad1796ec",
+    "marca": "Seara",
+    "ean": "490",
+    "dun": "",
+    "descricao": "Salsicha Resfriada 3kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-6149-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-490-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Salsicha Seara 3kg",
+        "para": "Salsicha Resfriada 3kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "4fd6c3fb-0844-572e-885b-e8345af4a27e",
+    "marca": "Seara",
+    "ean": "452",
+    "dun": "",
+    "descricao": "Texas Burguer 672g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2022/12/Texas-Burger-caixeta-672-Horiz-frontal-copiar.png",
+        "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904002450_Texas-Burger-tradicional-672g_IMAGEM-PRINCIPAL_1000x1000.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Texas Burger 672g",
+        "para": "Texas Burguer 672g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "d6e4ed0f-0ec4-53b6-baaa-053b62ba4102",
+    "marca": "Seara",
+    "ean": "446",
+    "dun": "",
+    "descricao": "Texas Burger Misto 56g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2022/12/Texas-Burger-Misto-56g.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904500383_Texas-Burger-tradicional-56g_IMAGEM-PRINCIPAL_1000x1000.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Texas Burger Misto 56g",
+        "para": "Texas Burger Misto 56g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "e64e8a27-25fc-555c-a3ed-4d94bf0c647f",
+    "marca": "Seara Gourmet",
+    "ean": "570",
+    "dun": "",
+    "descricao": "Costela Barbecue 1kg - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2071-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-570-500.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Costela Barbecue Seara Gourmet 1kg",
+        "para": "Costela Barbecue 1kg - Seara Gourmet"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Marca ID",
+        "de": "e27a0a8d-9e8d-5d2c-a5fb-5618e47e9e62",
+        "para": "cd641b1c-1da7-5ebe-8f0a-49eaba6d3fc6"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "f104db9f-3b97-590b-871a-1523c33fc736",
+    "marca": "Seara",
+    "ean": "527",
+    "dun": "",
+    "descricao": "Pizza de Calabresa 460g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2008-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-527-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Pizza Calabresa Seara (Pesar)",
+        "para": "Pizza de Calabresa 460g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 460
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "f0a0af23-8028-54f5-ae1b-68fd6c880c97",
+    "marca": "Seara",
+    "ean": "531",
+    "dun": "",
+    "descricao": "Presunto Fatiado Seara 180g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-6109-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-531-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Presunto Fatiado Seara 180g",
+        "para": "Presunto Fatiado Seara 180g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "134f372b-0717-57fb-928b-28cab2412d5a",
+    "marca": "Seara",
+    "ean": "552",
+    "dun": "",
+    "descricao": "Pizza de Frango com Catupiry 460g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-111290-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-552-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Pizza de Frango com Catupiry Seara 460g",
+        "para": "Pizza de Frango com Catupiry 460g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "21a7ce01-a831-5528-8673-9b6804ee4cdb",
+    "marca": "Seara",
+    "ean": "549",
+    "dun": "",
+    "descricao": "Lasanha 4 Queijos 600g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-1974-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-549-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Lasanha 4 Queijos Seara 600g",
+        "para": "Lasanha 4 Queijos 600g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "cbd3995d-d24b-57fa-a985-24cba0d72f40",
+    "marca": "Seara",
+    "ean": "488",
+    "dun": "",
+    "descricao": "Tekitos Tradicional 300g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-11806-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904500116_1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Tekitos Tradicional 300g",
+        "para": "Tekitos Tradicional 300g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "39d0cd3a-d499-5fa7-b34b-8fd98c929368",
+    "marca": "Seara",
+    "ean": "484",
+    "dun": "",
+    "descricao": "Mortadela Tradicional ±5kg - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5966-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-484-500-1.jpg"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Mortadela Seara (Pesar)",
+        "para": "Mortadela Tradicional ±5kg - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Frios"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 5000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "d473655b-8cac-557c-a8ff-acfe4bf51c3d",
+    "marca": "Seara",
+    "ean": "472",
+    "dun": "",
+    "descricao": "Linguiça de Frango Churrasco Seara 5 Kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5785-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-472-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Seara 5kg",
+        "para": "Linguiça de Frango Churrasco Seara 5 Kg"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "6e43ff7c-2800-5a11-aeb5-7cb93fed6ab5",
+    "marca": "Seara",
+    "ean": "470",
+    "dun": "",
+    "descricao": "Bacon Mantinha - Seara (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-22637-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-470-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Bacon em Pedaços Seara (Pesar)",
+        "para": "Bacon Mantinha - Seara (Pesar)"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "a6ac46bd-0ff3-57e6-97f7-e9073607d99e",
+    "marca": "Seara",
+    "ean": "464",
+    "dun": "",
+    "descricao": "Linguiça Toscana Churrasco Seara 5 Kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/08/seara-product-16608-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-464-500-1.jpg"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça Toscana Seara 5kg",
+        "para": "Linguiça Toscana Churrasco Seara 5 Kg"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "5bd29e6e-f30a-5178-ad72-9c6d5e61ca05",
+    "marca": "Seara",
+    "ean": "466",
+    "dun": "",
+    "descricao": "Lasanha À Bolonhesa 600g - Seara",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-1973-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-466-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Lasanha À Bolonhesa Seara 600g",
+        "para": "Lasanha À Bolonhesa 600g - Seara"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Congelados"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "997fb1d7-894c-5b96-bd22-b2f8d9a49680",
+    "marca": "Seara",
+    "ean": "458",
+    "dun": "",
+    "descricao": "Linguiça de Pernil Churrasco Seara 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/08/seara-product-5828-500-1.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-458-500-1.jpg"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Pernil Seara 5kg",
+        "para": "Linguiça de Pernil Churrasco Seara 5kg"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "7799d45b-60fc-5c57-96a9-6798731d74a1",
+    "marca": "Seara",
+    "ean": "436",
+    "dun": "",
+    "descricao": "Linguiça Suína Churrasco Seara 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5844-500.webp",
+        "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-436-500-1.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Linguiça Suína Seara 5kg",
+        "para": "Linguiça Suína Churrasco Seara 5kg"
+      },
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "b6f3c9ad-4734-5be8-8d3d-8ed20a0e3127",
+    "marca": "Seara",
+    "ean": "7894904276066",
+    "dun": "",
+    "descricao": "Empanado Levíssimo Seara 110g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/86393_V00_OSA_997322_FI_A.png",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5511-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Empanado de Frango Recheado Seara Protein (Pesar)",
+        "para": "Empanado Levíssimo Seara 110g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 110
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "fe7d3b3d-258d-53bd-90cd-5aa6d2a14a6c",
+    "marca": "Seara",
+    "ean": "7894904575824",
+    "dun": "",
+    "descricao": "Fettuccine À Bolonhesa Seara 350g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-118663-500-1.webp",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2013-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Fettucine À Bolonhesa Seara Protein 350g",
+        "para": "Fettuccine À Bolonhesa Seara 350g"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "44d45773-8060-50e9-9ee2-97e23a66d05f",
+    "marca": "Seara",
+    "ean": "7894904233885",
+    "dun": "",
+    "descricao": "Bife de Filé Mignon Suíno Seara Reserva (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2024/08/File-Mignon-Suino-Seara-Reserva.webp",
+        "para": "https://www.seara.com.br/wp-content/uploads/2024/08/Bife-de-File-Mignon-Suino-Seara-Reserva.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Filé Mignon Suíno Seara Reserva (Pesar)",
+        "para": "Bife de Filé Mignon Suíno Seara Reserva (Pesar)"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "aaa9f4f9-ee23-56ea-b3ec-d23fe165412d",
+    "marca": "Seara",
+    "ean": "7894904223664",
+    "dun": "",
+    "descricao": "Copa Lombo Suína Seara 800g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-18738-500.webp",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-1990-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Copa Lombo Suína em Bifes Seara 800g",
+        "para": "Copa Lombo Suína Seara 800g"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.036Z"
+  },
+  {
+    "id": "ad2ab810-bb43-5345-b900-da5b63f20edc",
+    "marca": "Seara",
+    "ean": "7894904265817",
+    "dun": "",
+    "descricao": "Levíssimo Fatiado Seara 180g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/LEVISSIMO_PROTEIN_180g1.png",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5770-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Levíssimo Fatiado Protein Seara 180g",
+        "para": "Levíssimo Fatiado Seara 180g"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.037Z"
+  },
+  {
+    "id": "c9874fbc-b075-5ff6-a730-2e6c4d8cc63e",
+    "marca": "Seara",
+    "ean": "7894904575367",
+    "dun": "",
+    "descricao": "Almôndega Seara 500g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-118661-500-1.webp",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5140-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Almondegas Seara Protein 500g",
+        "para": "Almôndega Seara 500g"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.037Z"
+  },
+  {
+    "id": "55737973-3256-57d2-8a32-10f974fccdf9",
+    "marca": "Seara",
+    "ean": "7894904578658",
+    "dun": "",
+    "descricao": "Lasanha À Bolonhesa Seara 350g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-118668-500-1.webp",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5740-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Lasanha Bolonhesa Seara Protein 350g",
+        "para": "Lasanha À Bolonhesa Seara 350g"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.037Z"
+  },
+  {
+    "id": "582538a5-00e1-5066-8486-cefa8f5fb218",
+    "marca": "Seara",
+    "ean": "7894904603633",
+    "dun": "",
+    "descricao": "Pipoquinha de Frango Seara Netflix (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2025/03/7894904284726_Iscas-de-frango-tradicional-empanado-crocante-Seara-300g_IMAGEM-PRINCIPAL_500x500.png",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-28573-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Iscas de Frango Air Fryer 300g",
+        "para": "Pipoquinha de Frango Seara Netflix (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 300,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.037Z"
+  },
+  {
+    "id": "efc0cc20-86fa-5029-9111-a918dd9e0a14",
+    "marca": "Seara",
+    "ean": "7894904297917",
+    "dun": "",
+    "descricao": "Levíssimo Fatiado Seara 150g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-118657-500.webp",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-29837-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Levíssimo Protein Fatiado Seara 150g",
+        "para": "Levíssimo Fatiado Seara 150g"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.037Z"
+  },
+  {
+    "id": "2188139b-70d3-545e-9a69-186a51339bb4",
+    "marca": "Seara",
+    "ean": "7894904228447",
+    "dun": "",
+    "descricao": "Frango Defumado Seara Gourmet (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2024/08/Tender-Seara-Gourmet.webp",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2067-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Tender Defumado Seara Gourmet (Pesar)",
+        "para": "Frango Defumado Seara Gourmet (Pesar)"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.037Z"
   },
   {
     "id": "7f1f982b-8082-5507-8061-df82a130d58e",
     "marca": "Seara",
     "ean": "7894904608324",
     "dun": "",
-    "descricao": "Pizza Seara Protein 3 Queijos 210g",
+    "descricao": "Stranger Pizza Cheese Seara Netflix 210 G",
     "alteracoes": [
       {
         "campo": "Imagem (URL)",
         "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-118659-500.webp",
-        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/7894904608324_1.png"
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-106839-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Pizza Seara Protein 3 Queijos 210g",
+        "para": "Stranger Pizza Cheese Seara Netflix 210 G"
       }
     ],
-    "atualizado_em": "2026-08-21T12:52:26.473Z"
+    "atualizado_em": "2026-08-22T02:03:40.037Z"
+  },
+  {
+    "id": "453d90c0-8a1a-51c4-bbbb-5635ece90cd0",
+    "marca": "Seara",
+    "ean": "7894904608331",
+    "dun": "",
+    "descricao": "Stranger Pizza Pepperoni Netflix 210g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-118669-500-1.webp",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-106843-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Pizza Seara Protein Pepperoni 210g",
+        "para": "Stranger Pizza Pepperoni Netflix 210g"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.037Z"
+  },
+  {
+    "id": "1254ccaf-e510-5608-8cdc-d2503e183070",
+    "marca": "Seara",
+    "ean": "7894904285587",
+    "dun": "",
+    "descricao": "Filé a Milanesa Air Fryer 400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-118666-500-1.webp",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-28888-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Filé a Milanesa Seara Protein 400g",
+        "para": "Filé a Milanesa Air Fryer 400g"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.037Z"
+  },
+  {
+    "id": "e1403727-1460-55c8-834c-0b8f8a8f196a",
+    "marca": "Seara",
+    "ean": "7894904612697",
+    "dun": "",
+    "descricao": "Mini Hambúrguer Seara Churrasco 300g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/86411_V00_OSA_988318_FI_Frente_B.png",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-116244-500.webp"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Mini Hambúrguer Bovino Seara Protein 300g",
+        "para": "Mini Hambúrguer Seara Churrasco 300g"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.037Z"
+  },
+  {
+    "id": "b4ff14b2-6ead-5e3f-858f-552aa93ce89a",
+    "marca": "Seara",
+    "ean": "7894904606863",
+    "dun": "",
+    "descricao": "Filé de Coxa e Sobrecoxa Recheado com Bacon e Queijo 600g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-97903-500.webp",
+        "para": "https://www.seara.com.br/wp-content/uploads/2025/12/Adobe-Express-file-9.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Filé de Coxa e Sobrecoxa Recheado com Alho Poró 600g",
+        "para": "Filé de Coxa e Sobrecoxa Recheado com Bacon e Queijo 600g"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.037Z"
+  },
+  {
+    "id": "aeda874e-3d63-560b-9498-d507d52685fd",
+    "marca": "Seara",
+    "ean": "7894904613212",
+    "dun": "",
+    "descricao": "Blend Burger Seara Gourmet 150g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/05/HB_ANGUS_SEARA_GOURMET_150g-1-e1779200319142.png",
+        "para": "https://www.seara.com.br/wp-content/uploads/2026/05/HB_BLEND_SEARA_GOURMET_160g-e1779200363880.png"
+      },
+      {
+        "campo": "Descrição",
+        "de": "Angus Burger Seara Gourmet 150g",
+        "para": "Blend Burger Seara Gourmet 150g"
+      }
+    ],
+    "atualizado_em": "2026-08-22T02:03:40.037Z"
   }
 ]
