@@ -103,11 +103,23 @@
           },
           "classe": {
             "type": "string",
-            "description": "Categoria/Classe do produto (ex: Bovinos, Suínos, Aves, Pescados, Processados)."
+            "enum": [
+              "Bovinos",
+              "Suínos",
+              "Aves",
+              "Pescados",
+              "Ovinos & Caprinos",
+              "Vegetais & Congelados",
+              "Plant-Based & Vegetarianos",
+              "Processados & Embutidos",
+              "Laticínios, Margarinas & Gorduras",
+              "Sobremesas & Panificação"
+            ],
+            "description": "Categoria/Classe Canônica Oficial do produto (10 classes canônicas estritas)."
           },
           "conservacao": {
             "type": "string",
-            "enum": ["Resfriado", "Congelado", "Temperatura Ambiente", "Outros"],
+            "enum": ["Resfriado", "Congelado", "Temperatura Ambiente"],
             "description": "Estado de conservação da mercadoria."
           },
           "peso_gramas": {

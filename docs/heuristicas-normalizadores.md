@@ -74,7 +74,7 @@ O módulo [`category_classifier.ts`](file:///root/paletscan-etl/core/heuristics/
 2. **Delimitação Estrita de Palavra (`\b`)**: Impede sobreposições semânticas (ex: *Peito Brisket Bovino* não vira *Aves*; *Polvo Tenderizado* não vira *Suínos* por causa de `tender`).
 3. **Priorização Hierárquica**: Itens *Plant-Based*, *Vegetais Puros*, *Sobremesas* e *Laticínios* são avaliados antes de cair em categorias de carnes ou embutidos.
 
-#### 🏷️ As 11 Classes Canônicas Oficiais:
+#### 🏷️ As 10 Classes Canônicas Oficiais:
 
 | Classe Canônica | Descrição e Abrangência | Principais Termos / Exemplo |
 | :--- | :--- | :--- |
@@ -83,9 +83,8 @@ O módulo [`category_classifier.ts`](file:///root/paletscan-etl/core/heuristics/
 | **Aves** | Cortes de frango, galinha, peru, chester, cortes IQF e miúdos de aves. | *Filé de Peito, Coxa, Sobrecoxa, Asa, Tulipa, Sassami, Coração de Frango* |
 | **Pescados** | Peixes inteiros, postas, filés congelados, frutos do mar e crustáceos. | *Tilápia, Salmão, Bacalhau, Merluza, Polaca, Camarão, Polvo, Kani Kama* |
 | **Ovinos & Caprinos** | Cortes de cordeiro, carneiro e caprinos. | *Paleta Ovina, Cordeiro, Espinazo, Hasta, Nirea* |
-| **Processados & Embutidos** | Embutidos cárneos, hambúrgueres, linguiças, salsichas, pizzas, lasanhas e pratos prontos. | *Linguiça Toscana, Salsicha, Mortadela, Presunto, Hambúrguer, Nugget, Pizza, Lasanha* |
+| **Processados & Embutidos** | Embutidos cárneos, hambúrgueres, linguiças, salsichas, pizzas, lasanhas, cestas e kits natalinos. | *Linguiça Toscana, Salsicha, Mortadela, Presunto, Hambúrguer, Nugget, Pizza, Lasanha, Cestas* |
 | **Vegetais & Congelados** | Legumes, seletas mistas, ervilhas, milho, batatas pré-fritas, mandiocas e polpas. | *Seleta Mista, Brócolis, Couve-Flor, Ervilha, Batata Palito/Rústica, Mandioca* |
 | **Plant-Based & Vegetarianos** | Produtos 100% vegetais análogos de carnes (substitutos vegetais). | *Linha Incrível!, Sadia Veg&Tal, Plantplus, Hambúrguer 100% Vegetal* |
 | **Laticínios, Margarinas & Gorduras** | Margarinas, queijos fatiados/peça, manteigas, requeijões, bebidas lácteas e gorduras. | *Margarina Doriana, Queijo Prato, Queijo Mussarela Soltíssimo, Requeijão* |
 | **Sobremesas & Panificação** | Tortas doces congeladas, mousses, sobremesas, pães de queijo, panetones e bolos. | *Torta Mousse Miss Daisy, Torta Holandesa, Pão de Queijo Qualy/Perdigão* |
-| **Outros** | Kits comemorativos, cestas de natal e itens sem enquadramento específico. | *Cesta Sucesso Sadia, Cesta Otimismo Perdigão* |

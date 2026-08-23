@@ -5,7 +5,7 @@
 
 export interface ProductClassification {
   classe: string;
-  conservacao: 'Resfriado' | 'Congelado' | 'Temperatura Ambiente' | 'Outros';
+  conservacao: 'Resfriado' | 'Congelado' | 'Temperatura Ambiente';
 }
 
 /**
@@ -48,12 +48,12 @@ export function classifyProduct(title: string, rawClasse?: string, rawConservaca
   const text = `${normTitle} ${normRawClasse} ${normRawConservacao}`;
 
   // 1. Conservação
-  let conservacao: 'Resfriado' | 'Congelado' | 'Temperatura Ambiente' | 'Outros' = 'Resfriado';
+  let conservacao: 'Resfriado' | 'Congelado' | 'Temperatura Ambiente' = 'Resfriado';
   if (/congelad[oa]|iqf|interfolhad[oa]|\bice\b/i.test(text)) {
     conservacao = 'Congelado';
   } else if (/resfriad[oa]|fresc[oa]|maturad[oa]/i.test(text)) {
     conservacao = 'Resfriado';
-  } else if (/conserva|seco|lata|lote|temperatura ambiente|esterilizad[oa]|desidratad[oa]/i.test(text)) {
+  } else if (/conserva|seco|lata|lote|temperatura ambiente|esterilizad[oa]|desidratad[oa]|cesta/i.test(text)) {
     conservacao = 'Temperatura Ambiente';
   } else if (normRawConservacao) {
     if (normRawConservacao.includes('congel')) conservacao = 'Congelado';
@@ -61,8 +61,8 @@ export function classifyProduct(title: string, rawClasse?: string, rawConservaca
     else if (normRawConservacao.includes('ambien')) conservacao = 'Temperatura Ambiente';
   }
 
-  // 2. Classe Canônica
-  let classe = 'Bovinos';
+  // 2. Classe Canônica Oficial (10 Classes - 0% Outros)
+  let classe = 'Processados & Embutidos';
 
   // 1. Sobremesas & Panificação
   const isSobremesa = /\b(pudim|mousse|torta doce|torta holandesa|torta alema|torta mousse|torta de limao|torta de maracuja|torta de chocolate|miss daisy|bolo|bolinho doce|panetone|chocotone|panettone|chocottone|pao de queijo|petit gateau|churros|waffle|cookie|croissant|brownie|sorvete|gelato|docinho|brigadeiro|beijinho|donuts?)\b/i.test(normTitle);
@@ -95,9 +95,9 @@ export function classifyProduct(title: string, rawClasse?: string, rawConservaca
   const isOvino = /\b(ovinos?|cordeiros?|carneiros?|caprinos?|cabritos?|espinazo|hasta|mamao|nirea)\b/i.test(normTitle) ||
     /\bovinos?\b/i.test(normRawClasse) || /\bcordeiros?\b/i.test(normRawClasse) || /\bcaprinos?\b/i.test(normRawClasse);
 
-  // 7. Processados & Embutidos
+  // 7. Processados & Embutidos (Inclui também Cestas/Kits Comemorativos e Lanches)
   const isProcessado = (
-    /\b(hamburguer|burguer|burger|cheeseburguer|churrasburguer|kibe|quibe|linguica|salsicha|mortadela|presunto|paio|nugget|nuggets?|chicken|fingers|crispy|supreme|tekitos|bolovo|hot dog|empessado|kebab|lasanha|pizza|prato pronto|marmita|escondidinho|almondega|empanado|steak|emp nacho|emp fgo|iscas de frango|croquete|torta salgada|panqueca|quiche|coxinha|pastel|salgadinho|bolinho|esfirra|hot pocket|hot hit|hot bowls|feijoada|caldinho de feijao|caldo verde|arroz carreteiro|arroz broc|apresuntado|massa pronta|nhoque|penne|fettuccine|capeletti|ravioli|canelone|prato congelado|prato|sanduiche|choripan|polpetone|salame|salaminho|copa fatiada|frios|defumad[oa]|fatiad[oa]|yakissoba|yakisoba|mac'n cheese|mac&cheese|mac & cheese|meu menu|milanesa|hdf hamb)\b/i.test(normTitle) ||
+    /\b(hamburguer|burguer|burger|cheeseburguer|churrasburguer|kibe|quibe|linguica|salsicha|mortadela|presunto|paio|nugget|nuggets?|chicken|fingers|crispy|supreme|tekitos|bolovo|hot dog|empessado|kebab|lasanha|pizza|prato pronto|marmita|escondidinho|almondega|empanado|steak|emp nacho|emp fgo|iscas de frango|croquete|torta salgada|panqueca|quiche|coxinha|pastel|salgadinho|bolinho|esfirra|hot pocket|hot hit|hot bowls|feijoada|caldinho de feijao|caldo verde|arroz carreteiro|arroz broc|apresuntado|massa pronta|nhoque|penne|fettuccine|capeletti|ravioli|canelone|prato congelado|prato|sanduiche|choripan|polpetone|salame|salaminho|copa fatiada|frios|defumad[oa]|fatiad[oa]|yakissoba|yakisoba|mac'n cheese|mac&cheese|mac & cheese|meu menu|milanesa|hdf hamb|cesta|cestas|kit|kits|combo|comemorativ)\b/i.test(normTitle) ||
     (/\bprocessad/i.test(normRawClasse) || /\bembutid/i.test(normRawClasse) || /\bindustrializ/i.test(normRawClasse) || /\bempanad/i.test(normRawClasse) || /\bfrios\b/i.test(normRawClasse) || /\bmassas\b/i.test(normRawClasse) || /\blanches\b/i.test(normRawClasse))
   ) && !isPlantBased && !isSobremesa;
 
@@ -148,9 +148,8 @@ export function classifyProduct(title: string, rawClasse?: string, rawConservaca
     else if (/\bpescad/i.test(normRawClasse) || /\bpeixe/i.test(normRawClasse)) classe = 'Pescados';
     else if (/\bvegeta/i.test(normRawClasse) || /\bbatata/i.test(normRawClasse)) classe = 'Vegetais & Congelados';
     else if (/\bmargarina/i.test(normRawClasse) || /\blacteo/i.test(normRawClasse)) classe = 'Laticínios, Margarinas & Gorduras';
-    else if (/\bprocessad/i.test(normRawClasse) || /\bindustrializ/i.test(normRawClasse) || /\bembutid/i.test(normRawClasse) || /\bempanad/i.test(normRawClasse)) classe = 'Processados & Embutidos';
     else if (/\bovino\b/i.test(normRawClasse) || /\bcordeiro/i.test(normRawClasse)) classe = 'Ovinos & Caprinos';
-    else classe = 'Outros';
+    else classe = 'Processados & Embutidos';
   }
 
   return { classe, conservacao };
