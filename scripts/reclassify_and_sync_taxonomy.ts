@@ -40,8 +40,7 @@ async function syncTaxonomy() {
         let updatedCount = 0;
         data.produtos.forEach((prod: any) => {
           const rawTitle = prod.descricao_original || prod.descricao_padronizada || '';
-          const rawClasse = file.includes('seara') && prod.classe === 'Aves' ? '' : (file.includes('brf') && prod.classe === 'Outros' ? '' : prod.classe);
-          const classification = classifyProduct(rawTitle, rawClasse, prod.conservacao);
+          const classification = classifyProduct(rawTitle, '', prod.conservacao);
           if (prod.classe !== classification.classe || prod.conservacao !== classification.conservacao) {
             prod.classe = classification.classe;
             prod.conservacao = classification.conservacao;
@@ -86,11 +85,7 @@ async function syncTaxonomy() {
 
   allProducts.forEach(p => {
     const title = p.descricao_original || p.descricao_padronizada || '';
-    const rawClasse = (p.classe === 'Aves' && (title.toLowerCase().includes('seara') || title.toLowerCase().includes('nature') || title.toLowerCase().includes('veget') || title.toLowerCase().includes('legume') || title.toLowerCase().includes('margarina') || title.toLowerCase().includes('tilapia') || title.toLowerCase().includes('polaca') || title.toLowerCase().includes('bovino') || title.toLowerCase().includes('suino') || title.toLowerCase().includes('suíno')))
-      ? ''
-      : (p.classe === 'Outros' ? '' : p.classe);
-
-    const classification = classifyProduct(title, rawClasse, p.conservacao);
+    const classification = classifyProduct(title, '', p.conservacao);
 
     if (p.classe !== classification.classe || p.conservacao !== classification.conservacao) {
       updatesToApply.push({

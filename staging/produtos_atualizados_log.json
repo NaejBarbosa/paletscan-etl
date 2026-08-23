@@ -1,5 +1,1385 @@
 [
   {
+    "id": "ad180842-1648-5bf7-b2b3-8eb03e432b86",
+    "marca": "Aurora",
+    "ean": "77891164005619",
+    "dun": "77891164005619",
+    "descricao": "Presunto Cozido S/ Capa de Gordura 3,5kg Cx. de 7kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.890Z"
+  },
+  {
+    "id": "aea23170-8e4b-58b9-9015-e3b16f3bb7e8",
+    "marca": "Aurora",
+    "ean": "47891164016706",
+    "dun": "47891164016706",
+    "descricao": "Lanche de Frango 3,7kg Cx. de 7,4kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.890Z"
+  },
+  {
+    "id": "1d935461-b065-5c83-b9aa-233c336b8457",
+    "marca": "Aurora",
+    "ean": "27891164017709",
+    "dun": "27891164017709",
+    "descricao": "Lanche de Frango Quadrado 2,5kg Cx. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.890Z"
+  },
+  {
+    "id": "9931fca3-7b48-5622-93cf-3da09cf82c2f",
+    "marca": "Aurora",
+    "ean": "77891164013997",
+    "dun": "77891164013997",
+    "descricao": "Embutido Cozido de Lombo - Peça Caixa de 7kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.890Z"
+  },
+  {
+    "id": "c34103f3-b51c-5f02-b3af-f7aeeb6bf01f",
+    "marca": "Aurora",
+    "ean": "27891164006109",
+    "dun": "27891164006109",
+    "descricao": "Copa Curada Cx. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.890Z"
+  },
+  {
+    "id": "a66e21a7-fa0e-554e-b5d9-58660b250227",
+    "marca": "Aurora",
+    "ean": "47891164113566",
+    "dun": "47891164113566",
+    "descricao": "Tirinhas de Frango 300g Cx. de 4,8kg - 16 Pcts. de 300g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.890Z"
+  },
+  {
+    "id": "f98edafd-69a5-523f-b580-a3e5602ed689",
+    "marca": "Aurora",
+    "ean": "87891164017572",
+    "dun": "87891164017572",
+    "descricao": "Filé de Sobrecoxa Chimichurri Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.891Z"
+  },
+  {
+    "id": "c1f49c76-159a-5fb8-bc28-32233080774d",
+    "marca": "Aurora",
+    "ean": "17891164002760",
+    "dun": "17891164002760",
+    "descricao": "Lombo Temperado Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.891Z"
+  },
+  {
+    "id": "3d78e369-97eb-5bd3-9d73-6e7c7aec0cad",
+    "marca": "Aurora",
+    "ean": "67891164002925",
+    "dun": "67891164002925",
+    "descricao": "Pernil sem Osso Temperado Cx. de 20kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.891Z"
+  },
+  {
+    "id": "acdc59f9-294e-567e-87e1-ef35ee72fe01",
+    "marca": "Aurora",
+    "ean": "87891164005487",
+    "dun": "87891164005487",
+    "descricao": "Tender Suíno Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.891Z"
+  },
+  {
+    "id": "9915b1f4-beb3-57fb-aca4-d12e7b0fa299",
+    "marca": "Aurora",
+    "ean": "27891164003177",
+    "dun": "27891164003177",
+    "descricao": "Bacon em Pedaços Cx. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "f0f23ac2-f516-5e1a-9011-1fea02d38363",
+    "marca": "Aurora",
+    "ean": "17891164003316",
+    "dun": "17891164003316",
+    "descricao": "Bacon em Cubos Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "70135c70-84ae-58bb-899f-f9187e9ccca3",
+    "marca": "Aurora",
+    "ean": "87891164015899",
+    "dun": "87891164015899",
+    "descricao": "Frango a Passarinho Red Sauce 800g Cx. de 12kg - 15 Pcts. de 800g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "1797e1eb-89d2-51e1-86c4-a9d945c78c5a",
+    "marca": "Aurora",
+    "ean": "87891164019330",
+    "dun": "87891164019330",
+    "descricao": "Sobrecoxas Red Sauce 800g Cx. de 12kg - 15 Pcts. de 800g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "adc620a5-4f45-57c5-9abc-2aafc438a942",
+    "marca": "Aurora",
+    "ean": "87891164019347",
+    "dun": "87891164019347",
+    "descricao": "Filé de Peito Red Sauce 800g Cx. de 12kg - 15 Pcts. de 800g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "92128f2f-795c-5301-93e1-be9a1b0693b5",
+    "marca": "Aurora",
+    "ean": "87891164017602",
+    "dun": "87891164017602",
+    "descricao": "Meio da Asa Temperada Cx. de 12kg - 15 Pcts. de 800g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "b412fa69-7785-5bfe-9a35-eb43d7255e56",
+    "marca": "Aurora",
+    "ean": "87891164016285",
+    "dun": "87891164016285",
+    "descricao": "Filé de Peito 3kg Cx. de 12kg - 4 Pcts. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "93b6ecf5-b771-5ea7-87ab-5eeb4683ff15",
+    "marca": "Aurora",
+    "ean": "17891164016293",
+    "dun": "17891164016293",
+    "descricao": "Filé de Peito 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "336dfbc8-c48a-5f2a-a8ee-dbebf639e4e3",
+    "marca": "Aurora",
+    "ean": "87891164016308",
+    "dun": "87891164016308",
+    "descricao": "Meio das Asas 3kg Cx. de 12kg - 4 Pcts. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "1d6f1260-7000-5d95-91ee-da7c50a2f7be",
+    "marca": "Aurora",
+    "ean": "17891164016323",
+    "dun": "17891164016323",
+    "descricao": "Meio das Asas 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "024c4deb-f94e-5e53-8b6c-0592bad6bba7",
+    "marca": "Aurora",
+    "ean": "17891164016347",
+    "dun": "17891164016347",
+    "descricao": "Coxinhas das Asas 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "9c346230-bb40-5430-bbe5-1ef359cb7912",
+    "marca": "Aurora",
+    "ean": "87891164016353",
+    "dun": "87891164016353",
+    "descricao": "Coxinhas das Asas 3kg Cx. de 12kg - 4 Pcts. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "73e109f4-914e-5e49-8925-7f3df5894353",
+    "marca": "Aurora",
+    "ean": "17891164016378",
+    "dun": "17891164016378",
+    "descricao": "Frango a Passarinho 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "6261e32b-6577-5772-82ac-614dad681f12",
+    "marca": "Aurora",
+    "ean": "87891164016384",
+    "dun": "87891164016384",
+    "descricao": "Frango a Passarinho 3kg Cx. de 12kg - 4 Pcts. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "158a74a1-bc35-5c9c-99d0-3a0a3eeeea85",
+    "marca": "Aurora",
+    "ean": "87891164016452",
+    "dun": "87891164016452",
+    "descricao": "Coxas 3kg Cx. de 12kg - 4 Pcts. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "e0465d03-10d9-5f54-98eb-62e651a2d1cd",
+    "marca": "Aurora",
+    "ean": "87891164016650",
+    "dun": "87891164016650",
+    "descricao": "Filé de Coxas e Sobrecoxas 3kg Cx. de 12kg - 4 Pcts. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "dd7fae12-0c80-58c4-a5e3-6387c2614d47",
+    "marca": "Aurora",
+    "ean": "17891164016712",
+    "dun": "17891164016712",
+    "descricao": "Filé de Coxas e Sobrecoxas 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "3da37061-90d2-5849-ad1f-7d64598b99eb",
+    "marca": "Aurora",
+    "ean": "17891164016729",
+    "dun": "17891164016729",
+    "descricao": "Coxas 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "94a16f5f-2709-5841-b35f-b8406c18513a",
+    "marca": "Aurora",
+    "ean": "17891164016736",
+    "dun": "17891164016736",
+    "descricao": "Sobrecoxas 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "e221b623-36a9-533a-b82b-b47b46c2444c",
+    "marca": "Aurora",
+    "ean": "17891164163409",
+    "dun": "17891164163409",
+    "descricao": "Coxinhas das Asas 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "e5a0ada4-32f1-5a0b-8aaa-08393bc436ec",
+    "marca": "Aurora",
+    "ean": "17891164163706",
+    "dun": "17891164163706",
+    "descricao": "Frango a Passarinho 1kg Cx. de 10kg - 4 Pcts. de 2,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "d65daa6e-424d-5cc6-9d9a-7d24aab7aaab",
+    "marca": "Aurora",
+    "ean": "47891164016508",
+    "dun": "47891164016508",
+    "descricao": "Coxas 700g Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "9b255f03-045e-554e-9d52-8ffc5c7a422d",
+    "marca": "Aurora",
+    "ean": "47891164016515",
+    "dun": "47891164016515",
+    "descricao": "Coxas com Osso sem Pele 700g Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "0ed3b69f-80c4-5f7c-9280-0283796631fd",
+    "marca": "Aurora",
+    "ean": "47891164016522",
+    "dun": "47891164016522",
+    "descricao": "Coxinhas das Asas 700g Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.892Z"
+  },
+  {
+    "id": "48ce3ae6-81e3-50e2-b571-337e3cbbd0b4",
+    "marca": "Aurora",
+    "ean": "47891164016539",
+    "dun": "47891164016539",
+    "descricao": "Filé de Coxas e Sobrecoxas 700g Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "1486ec4f-0655-558e-95fe-ef433e2e776f",
+    "marca": "Aurora",
+    "ean": "47891164016546",
+    "dun": "47891164016546",
+    "descricao": "Filé de Peito 700g Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "f3f262a5-b806-529a-9b96-6423363f27ed",
+    "marca": "Aurora",
+    "ean": "47891164016560",
+    "dun": "47891164016560",
+    "descricao": "Peito com Osso 700g Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "2d41111b-2304-50df-8c27-7b4d0c67f84b",
+    "marca": "Aurora",
+    "ean": "47891164016584",
+    "dun": "47891164016584",
+    "descricao": "Sobrecoxas 700g Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "9e714be4-ea70-5cfa-804d-1d7d762557e7",
+    "marca": "Aurora",
+    "ean": "47891164016591",
+    "dun": "47891164016591",
+    "descricao": "Sobrecoxas com Osso sem Pele 700g Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "4ba565cc-9078-5145-8328-71ed64f9a70c",
+    "marca": "Aurora",
+    "ean": "47891164015587",
+    "dun": "47891164015587",
+    "descricao": "Peito de Frango Flow Pack Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "d1d0651c-b605-5224-ba87-f9876fbfa99e",
+    "marca": "Aurora",
+    "ean": "47891164015662",
+    "dun": "47891164015662",
+    "descricao": "Coxas e Sobrecoxas de Frango Flow Pack Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "649b914c-109c-52d5-a477-5fb63065f2b1",
+    "marca": "Aurora",
+    "ean": "47891164017383",
+    "dun": "47891164017383",
+    "descricao": "Filé de Peito Flow Pack Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "4ef97f29-5232-5005-b190-164003191b1b",
+    "marca": "Aurora",
+    "ean": "47891164016928",
+    "dun": "47891164016928",
+    "descricao": "Coxa Flow Pack Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "0ce30bb8-1e70-508b-9bf6-66a49e73c120",
+    "marca": "Aurora",
+    "ean": "47891164016973",
+    "dun": "47891164016973",
+    "descricao": "Sobrecoxa C/ Osso e C/ Pele Flow Pack Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "dad35e47-b0f8-52e1-8789-e8882df47aac",
+    "marca": "Aurora",
+    "ean": "47891164154002",
+    "dun": "47891164154002",
+    "descricao": "Asas de Frango - Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "dfe6950e-07a7-5cf8-a070-96318fb1fa5e",
+    "marca": "Aurora",
+    "ean": "47891164154309",
+    "dun": "47891164154309",
+    "descricao": "Coxas e Sobrecoxas - Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "990f0b02-df6f-5cde-929b-a2b0243c0c2b",
+    "marca": "Aurora",
+    "ean": "47891164154507",
+    "dun": "47891164154507",
+    "descricao": "Filezinho de Frango - Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "5d346765-feb1-55fb-a9b7-9c7b1da47482",
+    "marca": "Aurora",
+    "ean": "47891164154606",
+    "dun": "47891164154606",
+    "descricao": "Peito com Osso de Frango - Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "d70d7c94-02de-56ae-95f7-026ba7359c0a",
+    "marca": "Aurora",
+    "ean": "47891164155405",
+    "dun": "47891164155405",
+    "descricao": "Sobrecoxas de Frango - Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "381f9b69-c36a-503b-bce8-2cd18e6f54be",
+    "marca": "Aurora",
+    "ean": "47891164157003",
+    "dun": "47891164157003",
+    "descricao": "Coração de Frango - Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "668da698-7afa-5eea-bd71-2f32b2800de8",
+    "marca": "Aurora",
+    "ean": "47891164157102",
+    "dun": "47891164157102",
+    "descricao": "Fígado de Frango - Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "0afbeebf-6896-5179-8589-27899c0200ff",
+    "marca": "Aurora",
+    "ean": "47891164016959",
+    "dun": "47891164016959",
+    "descricao": "Meio da Asa Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "0d3206ff-45eb-5f3c-a19a-5d8a8351ca76",
+    "marca": "Aurora",
+    "ean": "47891164157201",
+    "dun": "47891164157201",
+    "descricao": "Moela de Frango - Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "84618b2b-e565-509c-a346-ee3d75fefc58",
+    "marca": "Aurora",
+    "ean": "87891164018173",
+    "dun": "87891164018173",
+    "descricao": "Coxinhas das Asas 1kg Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "c1808086-4ec9-5371-8b84-a94b3632b8df",
+    "marca": "Aurora",
+    "ean": "87891164018180",
+    "dun": "87891164018180",
+    "descricao": "Coxas 1kg Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "68ebf2ac-4729-5473-8c1e-99cdf7bc742a",
+    "marca": "Aurora",
+    "ean": "87891164018197",
+    "dun": "87891164018197",
+    "descricao": "Sobrecoxas 1kg Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "b4e0a7ff-c6c7-520c-942f-e5d7a97d3dff",
+    "marca": "Aurora",
+    "ean": "87891164018210",
+    "dun": "87891164018210",
+    "descricao": "Filé de Peito 1kg Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "9ec91287-c001-55d8-acd9-8e37bc615445",
+    "marca": "Aurora",
+    "ean": "87891164018395",
+    "dun": "87891164018395",
+    "descricao": "Coxas e Sobrecoxas 1kg Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "b8f539f7-1475-59a2-9b04-bfb796b6d041",
+    "marca": "Aurora",
+    "ean": "57891164015102",
+    "dun": "57891164015102",
+    "descricao": "Frango Congelado Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "96e12d09-754e-5e22-a7bf-4009f1bf2219",
+    "marca": "Aurora",
+    "ean": "67891164015192",
+    "dun": "67891164015192",
+    "descricao": "Frango Maravilha Cx. de 20kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "3608660c-7df0-5124-999d-e3a3ac729b65",
+    "marca": "Aurora",
+    "ean": "57891164153903",
+    "dun": "57891164153903",
+    "descricao": "Coxas e Sobrecoxas Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "5ac4ef3c-c28d-565c-93ae-ab12ffc9fbe6",
+    "marca": "Aurora",
+    "ean": "57891164154108",
+    "dun": "57891164154108",
+    "descricao": "Asas Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "05eea7e1-4b7a-57e7-bfaf-400eeb086a35",
+    "marca": "Aurora",
+    "ean": "57891164156003",
+    "dun": "57891164156003",
+    "descricao": "Coxas das Asas Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "2623e13b-5524-5ae7-ad83-388895f9a3db",
+    "marca": "Aurora",
+    "ean": "57891164156201",
+    "dun": "57891164156201",
+    "descricao": "Coxas e Sobrecoxas Desossadas Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "c1eeb1c4-ef45-51e9-91df-9fc57fc3d121",
+    "marca": "Aurora",
+    "ean": "57891164157703",
+    "dun": "57891164157703",
+    "descricao": "Meio das Asas Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "766e130c-7a47-558c-a2f9-2a6a77c3db59",
+    "marca": "Aurora",
+    "ean": "57891164157802",
+    "dun": "57891164157802",
+    "descricao": "Filé de Peito Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "07e6ccd9-713c-5eac-a4f2-d127431fcb8a",
+    "marca": "Aurora",
+    "ean": "57891164016963",
+    "dun": "57891164016963",
+    "descricao": "Peito com Osso e com Pele Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "2dfb8a73-005d-5882-bf52-4dab734c6245",
+    "marca": "Peperi",
+    "ean": "77891164005626",
+    "dun": "77891164005626",
+    "descricao": "Presunto Cozido sem Capa de Gordura 3,5kg Cx. de 7kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "e66bc0bb-d778-5633-b0bf-6b6387a22c81",
+    "marca": "Nobre",
+    "ean": "77891164135071",
+    "dun": "77891164135071",
+    "descricao": "Presunto Cozido sem Capa de Gordura Cx. de 7kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "3b370d05-be3e-5a56-82db-90cffc5a90b3",
+    "marca": "Nobre",
+    "ean": "47891164130105",
+    "dun": "47891164130105",
+    "descricao": "Lombo Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "dbf207c4-1458-5458-ba37-2a881e9023ba",
+    "marca": "Nobre",
+    "ean": "47891164130747",
+    "dun": "47891164130747",
+    "descricao": "Bacon Cx. de 11kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "08d56e7e-2bd7-5b0d-8163-21963d6dd928",
+    "marca": "Nobre",
+    "ean": "47891164130785",
+    "dun": "47891164130785",
+    "descricao": "Bacon em Pedaços Cx. de 6kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "c0845e9d-f567-5a87-bdf3-49ce89b2a8e6",
+    "marca": "Nobre",
+    "ean": "47891164132475",
+    "dun": "47891164132475",
+    "descricao": "Coxa e Sobrecoxa Individual Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "72a650ff-74e1-54a6-94e5-2059e0977abf",
+    "marca": "Nobre",
+    "ean": "47891164132482",
+    "dun": "47891164132482",
+    "descricao": "Coxa e Sobrecoxa Interfolhada Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "a205bbcb-5ff3-5e43-bad7-c0e3dadda301",
+    "marca": "Nobre",
+    "ean": "47891164133090",
+    "dun": "47891164133090",
+    "descricao": "Peito com Osso Individual Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "0fd5d82c-bb07-5248-9f69-11b65ab3be60",
+    "marca": "Nobre",
+    "ean": "47891164133168",
+    "dun": "47891164133168",
+    "descricao": "Peito Interfolhado Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "c9da92fc-0301-5f5b-bf86-3e6807304cf7",
+    "marca": "Nobre",
+    "ean": "47891164133304",
+    "dun": "47891164133304",
+    "descricao": "Peito sem Osso e sem Pele Interfolhado Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "e9134504-d8ab-5ef3-a77e-3ab699fa6199",
+    "marca": "Nobre",
+    "ean": "17891164135413",
+    "dun": "17891164135413",
+    "descricao": "Peito sem Osso e sem Pele Interfolhado Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "9df993e0-f83f-5130-a924-45aca298379c",
+    "marca": "Nobre",
+    "ean": "47891164132864",
+    "dun": "47891164132864",
+    "descricao": "Frango Congelado Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "497ba151-edf5-53ae-96c1-614c3065ced9",
+    "marca": "Nobre",
+    "ean": "47891164132895",
+    "dun": "47891164132895",
+    "descricao": "Frango Resfriado Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "c9b9d530-e406-5746-a85f-fcd7228a9b1e",
+    "marca": "Nobre",
+    "ean": "47891164132253",
+    "dun": "47891164132253",
+    "descricao": "Meio da Asa Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "e9bc3bbd-186c-5d74-9764-b210331ef234",
+    "marca": "Nobre",
+    "ean": "47891164132383",
+    "dun": "47891164132383",
+    "descricao": "Coxa sem Pele Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "4a184882-14ad-5a3c-953b-9b6a55737d38",
+    "marca": "Nobre",
+    "ean": "47891164132611",
+    "dun": "47891164132611",
+    "descricao": "Coxa e Sobrecoxa Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "d5829d55-14d2-5b6f-8fce-ed7c4b2810ce",
+    "marca": "Nobre",
+    "ean": "47891164132659",
+    "dun": "47891164132659",
+    "descricao": "Filé de Coxa e Sobrecoxa Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "c2c36300-d711-533e-8157-e7dc5b4388c5",
+    "marca": "Nobre",
+    "ean": "47891164132673",
+    "dun": "47891164132673",
+    "descricao": "Coxa Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "f037d0b9-c2eb-56c5-b084-6541956c31e4",
+    "marca": "Nobre",
+    "ean": "47891164133137",
+    "dun": "47891164133137",
+    "descricao": "Peito com Osso Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "3ae7c828-42c6-573d-8b50-107155dffcbf",
+    "marca": "Nobre",
+    "ean": "47891164133151",
+    "dun": "47891164133151",
+    "descricao": "Peito com Osso sem Pele Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "3f9a1bd1-181e-52a1-af2e-d77dcf53ad7b",
+    "marca": "Nobre",
+    "ean": "47891164133267",
+    "dun": "47891164133267",
+    "descricao": "Filé de Peito Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "ccb2301e-c438-50ff-b398-d7736dd04705",
+    "marca": "Nobre",
+    "ean": "47891164133373",
+    "dun": "47891164133373",
+    "descricao": "Sobrecoxa com Osso sem Pele Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "8686e7e8-88d3-56a5-bf0b-b9e5b4248beb",
+    "marca": "Nobre",
+    "ean": "47891164133434",
+    "dun": "47891164133434",
+    "descricao": "Sobrecoxa Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "69802c6b-32dc-5d9b-b4df-375e9fdd612c",
+    "marca": "Nobre",
+    "ean": "47891164131140",
+    "dun": "47891164131140",
+    "descricao": "Pernil sem Osso Temperado Caixa de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
+    "id": "6c35accd-a711-50b6-9745-7fb9502aed4d",
+    "marca": "Nobre",
+    "ean": "87891164135351",
+    "dun": "87891164135351",
+    "descricao": "Tender Caixa de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:35.898Z"
+  },
+  {
     "id": "7a446fa0-7afd-52de-9d08-711ab7d5f289",
     "marca": "Sadia",
     "ean": "17893000444901",
@@ -12,7 +1392,2982 @@
         "para": "https://www.sadia.com.br/assets/images/_/products/d0a231518cf027345f7b1ab457d034300e6c2b91.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:12:59.714Z"
+    "atualizado_em": "2026-08-23T16:07:44.881Z"
+  },
+  {
+    "id": "f2e55140-a280-5a17-a35d-35b93e81ec3b",
+    "marca": "Perdigão",
+    "ean": "17891515286177",
+    "dun": "17891515286177",
+    "descricao": "Mortadela Perdigão Mista sem Cubos de Gordura 400g -caixa C/15",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:44.882Z"
+  },
+  {
+    "id": "b17e8430-f0b8-529e-bcde-a2cae5982ca4",
+    "marca": "Sadia",
+    "ean": "17893000446363",
+    "dun": "17893000446363",
+    "descricao": "Presunto Cozido sem Capa de Gordura Sadia 3,4kg -caixa C/2",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:44.883Z"
+  },
+  {
+    "id": "fad2fe8c-7471-5b95-9350-159fc7dce924",
+    "marca": "Sadia",
+    "ean": "17899638365953",
+    "dun": "17899638365953",
+    "descricao": "Coração da Paleta com Gordura Sadia Bassi Angus (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Aves"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:44.885Z"
+  },
+  {
+    "id": "45d7baa9-e28b-58ef-83bd-44447aa97527",
+    "marca": "BRF",
+    "ean": "800684",
+    "dun": "",
+    "descricao": "Gordura Tacuarembó (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:44.886Z"
+  },
+  {
+    "id": "b5668bf5-f4b9-5c98-ad1d-b25143acdcba",
+    "marca": "Sadia",
+    "ean": "17891515647060",
+    "dun": "17891515647060",
+    "descricao": "Batata Palito Pop Pré Frita Sadia 400g C/25",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Congelado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:44.886Z"
+  },
+  {
+    "id": "f60b3e06-995e-5d7a-addc-b088d3d6d633",
+    "marca": "Sadia",
+    "ean": "7899638366102",
+    "dun": "",
+    "descricao": "Sadia - Peito Sadia Bassi Angus Congelado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:44.886Z"
+  },
+  {
+    "id": "943d0a65-dfab-53ea-ac7f-4c394a746736",
+    "marca": "Perdigão",
+    "ean": "17899638367971",
+    "dun": "17899638367971",
+    "descricao": "Peito Congelado Perdigão Montana (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:44.886Z"
+  },
+  {
+    "id": "056a2dc9-edba-5b91-bfc2-7433239bf62e",
+    "marca": "Perdigão",
+    "ean": "17899638369579",
+    "dun": "17899638369579",
+    "descricao": "Jerked Beef Peito (Dois Pelos) 5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:44.886Z"
+  },
+  {
+    "id": "2dd50b71-abe7-5f41-b843-d4bef35ed199",
+    "marca": "Copacol",
+    "ean": "17891527070177",
+    "dun": "17891527070177",
+    "descricao": "Embutido Cozido de Frango Unidades de 380g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:07:48.649Z"
+  },
+  {
+    "id": "c22f0c30-c9f6-528b-b387-03ee15169547",
+    "marca": "Bertin",
+    "ean": "17894351165880",
+    "dun": "17894351165880",
+    "descricao": "Charque Cupim (30kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.223Z"
+  },
+  {
+    "id": "ef818754-e2d7-5e29-92e5-9051619f1a7c",
+    "marca": "Friboi",
+    "ean": "17898302285344",
+    "dun": "17898302285344",
+    "descricao": "Pêra do Coxão Mole - Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.224Z"
+  },
+  {
+    "id": "e58d7510-4568-52db-ba56-6df7b1f13c45",
+    "marca": "Friboi",
+    "ean": "17898302290027",
+    "dun": "17898302290027",
+    "descricao": "Peito - Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.224Z"
+  },
+  {
+    "id": "4a7c6eae-4e82-5207-8ac8-4b59f827b3ad",
+    "marca": "Anglo",
+    "ean": "17896037514838",
+    "dun": "17896037514838",
+    "descricao": "Feijoada Anglo (830g) - Anglo",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.224Z"
+  },
+  {
+    "id": "cd541748-0f36-54f8-b96f-4f353895132f",
+    "marca": "Bordon",
+    "ean": "17896031224085",
+    "dun": "17896031224085",
+    "descricao": "Feijoada (830g) - Bordon",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.224Z"
+  },
+  {
+    "id": "6af51c47-9f82-5273-89b1-9ab3f8ecbcee",
+    "marca": "Anglo",
+    "ean": "17896037514715",
+    "dun": "17896037514715",
+    "descricao": "Fiambre (320g) - Anglo",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.224Z"
+  },
+  {
+    "id": "f1b2f5f2-0fbe-5133-ac9e-288fba44d788",
+    "marca": "Seara",
+    "ean": "17894904006455",
+    "dun": "17894904006455",
+    "descricao": "Bacon em Manta Especial Defumado - Seara (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.224Z"
+  },
+  {
+    "id": "94faf7f0-469b-5232-90cf-5293571167ea",
+    "marca": "Seara",
+    "ean": "17894904009746",
+    "dun": "17894904009746",
+    "descricao": "Linguiça Calabresa Curva Pacote (2,5kg) - Seara",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.224Z"
+  },
+  {
+    "id": "2363b6f2-e015-5e7a-ac2b-d467dddd2d96",
+    "marca": "ALIBEM",
+    "ean": "351520",
+    "dun": "",
+    "descricao": "Linguiça Calabresa Cozida e Defumada - Alibem (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.224Z"
+  },
+  {
+    "id": "da1cd1a0-f2f9-5296-a349-0aa6ad5b7c5c",
+    "marca": "Friboi Black",
+    "ean": "17898503313440",
+    "dun": "17898503313440",
+    "descricao": "Coração da Alcatra sem Rolha e com Gordura - Black Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Aves"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.224Z"
+  },
+  {
+    "id": "4f51cf66-94ef-57b3-96d2-9df77ad1181e",
+    "marca": "Friboi Black",
+    "ean": "17898503315048",
+    "dun": "17898503315048",
+    "descricao": "Coração da Alcatra sem Rolha e sem Gordura - Black Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Aves"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.224Z"
+  },
+  {
+    "id": "2c74501d-ce53-5b96-895d-4e55fa2d6d29",
+    "marca": "Friboi Black",
+    "ean": "17894351002628",
+    "dun": "17894351002628",
+    "descricao": "Lagarto sem Gordura - Black Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "a5813fd4-0b29-54d5-90d7-e87e972ea9c4",
+    "marca": "1953 Friboi",
+    "ean": "17894351158189",
+    "dun": "17894351158189",
+    "descricao": "Coração da Alcatra sem Rolha e com Gordura - 1953 (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Aves"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "545ccbb8-1502-5d1f-a496-1126f86ce96c",
+    "marca": "1953 Friboi",
+    "ean": "17894351608271",
+    "dun": "17894351608271",
+    "descricao": "Coração da Alcatra (sem Rolha e com Gordura) - 1953 (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Aves"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "5e9b2965-f2c9-5b0b-bd51-05ad5507152b",
+    "marca": "Friboi",
+    "ean": "17894351094173",
+    "dun": "17894351094173",
+    "descricao": "Peito - Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "2580246f-6ba7-5134-ab6d-28836d55c554",
+    "marca": "Friboi",
+    "ean": "17894351095620",
+    "dun": "17894351095620",
+    "descricao": "Peito - Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "871a9b08-ab0f-5f3b-a556-05e00512fe4f",
+    "marca": "Friboi",
+    "ean": "17894351105794",
+    "dun": "17894351105794",
+    "descricao": "Peito (Pedaços) - Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "e0ff3400-8855-568b-89db-d23466708811",
+    "marca": "1953 Friboi",
+    "ean": "17899567251044",
+    "dun": "17899567251044",
+    "descricao": "Peito (Brisket) em Pedaços - 1953 (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "b6673617-8cc3-5c30-95ef-df646b08caa6",
+    "marca": "Maturatta",
+    "ean": "17894351114543",
+    "dun": "17894351114543",
+    "descricao": "Ponta de Peito (Brisket) - Maturatta (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "cbaece51-a456-595d-ba6b-af31c385499d",
+    "marca": "Bertin",
+    "ean": "17894351165798",
+    "dun": "17894351165798",
+    "descricao": "Charque Ponta de Agulha (30kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "5fc6bd40-245f-5a4c-919a-d6a48df9ea63",
+    "marca": "Bertin",
+    "ean": "17894351165736",
+    "dun": "17894351165736",
+    "descricao": "Charque Ponta de Agulha (5kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "a9b8cbfd-cf09-5faa-94a5-11f21bda76c2",
+    "marca": "Bertin",
+    "ean": "17894351165811",
+    "dun": "17894351165811",
+    "descricao": "Charque Dianteiro (30kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "422e5e09-4fd5-515b-ab2d-23ef2aac7b3d",
+    "marca": "Bertin",
+    "ean": "17894351165866",
+    "dun": "17894351165866",
+    "descricao": "Charque Capa Coxão Mole (30kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "6de26980-229d-5f9a-888b-aed1cd6185d5",
+    "marca": "Bertin",
+    "ean": "17894351165910",
+    "dun": "17894351165910",
+    "descricao": "Charque Capa Contra Filé (30kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "8d68ba82-ecfc-59ac-a91a-6de67f5289c8",
+    "marca": "Bertin",
+    "ean": "17894351165743",
+    "dun": "17894351165743",
+    "descricao": "Charque Dianteiro (5kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "221537cb-20e6-573e-861d-a599fe14b664",
+    "marca": "1953 Friboi",
+    "ean": "17894351123880",
+    "dun": "17894351123880",
+    "descricao": "Peito (Brisket) em Pedaços - 1953 (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "7164e700-d633-5150-b371-0484fe56538c",
+    "marca": "BRF",
+    "ean": "359410",
+    "dun": "",
+    "descricao": "Fraldão com Gordura (Acima de 1,8kg) - Frigoyi",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.225Z"
+  },
+  {
+    "id": "2c6ed38b-b048-5ac9-956b-9aceba003d4c",
+    "marca": "Friboi Black",
+    "ean": "17894351121510",
+    "dun": "17894351121510",
+    "descricao": "Coração da Alcatra (Bombom) sem Gordura - Black Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Aves"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.226Z"
+  },
+  {
+    "id": "1d1e9a1b-9aa2-5b26-a0e5-098f68005781",
+    "marca": "Friboi Black",
+    "ean": "17894351121312",
+    "dun": "17894351121312",
+    "descricao": "Coração da Alcatra (Bombom) sem Gordura - Black Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Aves"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.226Z"
+  },
+  {
+    "id": "a5edb6d3-d8d8-5abf-a32b-5cc8e4b7c44a",
+    "marca": "Bertin",
+    "ean": "17894351207238",
+    "dun": "17894351207238",
+    "descricao": "Charque Peito Dois Pelos (30kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.226Z"
+  },
+  {
+    "id": "67fc424e-5d92-5adb-82ae-2cf37c521501",
+    "marca": "Friboi Black",
+    "ean": "17898542027995",
+    "dun": "17898542027995",
+    "descricao": "Peito (Brisket) - Black Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.226Z"
+  },
+  {
+    "id": "fa43f2fb-fe41-5338-b253-1b1cf70898fa",
+    "marca": "LeBon",
+    "ean": "17896589503953",
+    "dun": "17896589503953",
+    "descricao": "Linguiça Calabresa Cozida e Defumada Pacote (2,5kg) - Lebon",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "a2dd2bb6-051e-53ef-91b8-3d9043b92bbe",
+    "marca": "INDEPENDENCIA",
+    "ean": "17898542029449",
+    "dun": "17898542029449",
+    "descricao": "Charque Ponta de Agulha (30kg) - Independência",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "bc1feac4-b074-5a8c-8fbf-eddd261afe93",
+    "marca": "TAMA",
+    "ean": "17899567260022",
+    "dun": "17899567260022",
+    "descricao": "Charque Ponta de Agulha (30kg) - Tama",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "b9f17369-ece0-5618-a207-055870290fae",
+    "marca": "Friboi",
+    "ean": "17898542029890",
+    "dun": "17898542029890",
+    "descricao": "Jerked Beef Traseiro (1kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "3c9a1c90-916d-5f1b-88ca-52b73ebec2fa",
+    "marca": "Rezende",
+    "ean": "17894904578167",
+    "dun": "17894904578167",
+    "descricao": "Linguiça Defumada Pacote (2,5kg) - Rezende",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "e50cc813-f9f9-559d-92a7-169d565dc268",
+    "marca": "Seara",
+    "ean": "17894904009685",
+    "dun": "17894904009685",
+    "descricao": "Linguiça Mista Reta Cozida Defumada Pacote (2,5) - Seara (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "04cc76ad-68a0-54a5-a51b-93e33520e498",
+    "marca": "Friboi",
+    "ean": "17898542029869",
+    "dun": "17898542029869",
+    "descricao": "Jerked Beef Traseiro (500g) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "fccbe2d1-d014-59b7-aaa7-bb882bd49140",
+    "marca": "FRIELLA",
+    "ean": "17898017330186",
+    "dun": "17898017330186",
+    "descricao": "Linguiça Calabresa (2,5kg) - Friella",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "81d6cf77-ea24-5470-92a3-036d3c7e5c24",
+    "marca": "Bertin",
+    "ean": "17894351883258",
+    "dun": "17894351883258",
+    "descricao": "Charque Ponta de Agulha (500g) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "41681f29-2a1a-5f2a-9788-34f849b1b556",
+    "marca": "Bertin",
+    "ean": "17894351883272",
+    "dun": "17894351883272",
+    "descricao": "Charque Ponta de Agulha (1kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "d37aef5b-480e-566e-9328-93a0825983aa",
+    "marca": "Bertin",
+    "ean": "17894351883289",
+    "dun": "17894351883289",
+    "descricao": "Charque Dianteiro (500g) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "8dfbe400-f2c7-5191-b14a-9646e4ecfb01",
+    "marca": "Bertin",
+    "ean": "17894351883296",
+    "dun": "17894351883296",
+    "descricao": "Charque Dianteiro (1kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "8b92c242-2e37-5bb9-90f9-a1ba1ae7df4e",
+    "marca": "Friboi",
+    "ean": "17899567205597",
+    "dun": "17899567205597",
+    "descricao": "Jerked Beef Ponta de Agulha (30kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "686de06d-a08e-55d8-9076-e8ee1ef609d0",
+    "marca": "Friboi",
+    "ean": "17898542029913",
+    "dun": "17898542029913",
+    "descricao": "Jerked Beef Ponta de Agulha (5kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "5cd30f62-48b1-5cd8-a3f7-cf11289e2c66",
+    "marca": "Friboi",
+    "ean": "17898542029937",
+    "dun": "17898542029937",
+    "descricao": "Jerked Beef Traseiro (5kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "dc46839c-9091-5598-8f6c-81f112ffd741",
+    "marca": "Friboi",
+    "ean": "17899567205580",
+    "dun": "17899567205580",
+    "descricao": "Jerked Beef Peito 2 Pelos (30kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "c07d0376-5d7b-50ac-8cd8-53c52bf4590e",
+    "marca": "Friboi",
+    "ean": "17896031205077",
+    "dun": "17896031205077",
+    "descricao": "Jerked Beef Dianteiro (30kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "3adcb0de-9295-567e-bc0e-920ee2a5820c",
+    "marca": "Friboi",
+    "ean": "17896031251043",
+    "dun": "17896031251043",
+    "descricao": "Jerked Beef Traseiro (30kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "4e02560a-0d75-5063-8b7f-114a535887c9",
+    "marca": "Friboi",
+    "ean": "17898542029920",
+    "dun": "17898542029920",
+    "descricao": "Jerked Beef Dianteiro (5kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "449b5a81-3cdd-5909-8b6b-c9cb63ee2903",
+    "marca": "Friboi",
+    "ean": "17896031205084",
+    "dun": "17896031205084",
+    "descricao": "Jerked Beef Bovino Paleta (30kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "776db632-a10b-59ae-af11-c29fe6aea06d",
+    "marca": "Bertin",
+    "ean": "370109",
+    "dun": "",
+    "descricao": "Charque Ponta de Agulha (5kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "d4a6e6c2-9c15-5a78-a361-11a6be285688",
+    "marca": "Bertin",
+    "ean": "370110",
+    "dun": "",
+    "descricao": "Charque Dianteiro (5kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "486dbf07-6450-5db7-a5d9-04de70362613",
+    "marca": "LeBon",
+    "ean": "17896589557178",
+    "dun": "17896589557178",
+    "descricao": "Bacon em Manta - Lebon (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "ee592153-7779-5127-9ae3-c7b962693487",
+    "marca": "Bertin",
+    "ean": "17899567213639",
+    "dun": "17899567213639",
+    "descricao": "Charque Ponta de Agulha (30kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "2edd3b2b-800b-5408-8442-505a5f1f5274",
+    "marca": "Friboi",
+    "ean": "17896031205091",
+    "dun": "17896031205091",
+    "descricao": "Jerked Beef Coxão Duro (30kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "a71ab750-f0bc-51e3-b21a-7bddba7b244e",
+    "marca": "Friboi",
+    "ean": "17898542029852",
+    "dun": "17898542029852",
+    "descricao": "Jerked Beef Dianteiro (500g) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "84548507-73c7-5cce-92a3-3bb3bae77fab",
+    "marca": "Friboi",
+    "ean": "17898542029883",
+    "dun": "17898542029883",
+    "descricao": "Jerked Beef Dianteiro (1kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "0b399a1e-d6e8-58b8-9a71-504117d86b8f",
+    "marca": "Friboi",
+    "ean": "17898542029906",
+    "dun": "17898542029906",
+    "descricao": "Jerked Beef Ponta de Agulha (1kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "8dbb27a8-5204-51a4-8934-068893f202a9",
+    "marca": "Friboi",
+    "ean": "17898542029876",
+    "dun": "17898542029876",
+    "descricao": "Jerked Beef Ponta de Agulha (500g) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "6ae698dc-57d3-5cbc-8d19-b7eb0519f602",
+    "marca": "Friboi",
+    "ean": "17896031205107",
+    "dun": "17896031205107",
+    "descricao": "Jerked Beef Cupim (30kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.227Z"
+  },
+  {
+    "id": "e6500620-4fd2-5eea-94c8-9aa7852edf08",
+    "marca": "Friboi",
+    "ean": "17899567217170",
+    "dun": "17899567217170",
+    "descricao": "Peito - Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "62c12d1f-4c4f-517e-a953-3131a42e3a9e",
+    "marca": "Friboi Black",
+    "ean": "17899567221276",
+    "dun": "17899567221276",
+    "descricao": "Coração da Alcatra (Baby Beef) com Gordura Dividido - Black Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Aves"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "5f1d0e1b-ac7e-578a-b044-ddaa3c9d1198",
+    "marca": "Friboi Black",
+    "ean": "17899567225281",
+    "dun": "17899567225281",
+    "descricao": "Bochecha - Black Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "388380ca-df0b-5275-9573-1657a978de5f",
+    "marca": "Friboi",
+    "ean": "17896031217315",
+    "dun": "17896031217315",
+    "descricao": "Jerked Beef Coxão Duro (5kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "bbfa63e3-1ebc-5c6d-85ab-c486b19fde09",
+    "marca": "Friboi",
+    "ean": "17899567218924",
+    "dun": "17899567218924",
+    "descricao": "Jerked Beef Bovino (Cubos) 500g - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "19e83dc0-e8ef-5112-8b61-30b429ffbec3",
+    "marca": "Maturatta",
+    "ean": "17899567228817",
+    "dun": "17899567228817",
+    "descricao": "Ponta de Peito - Maturatta (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "8319a907-fc66-5d4b-9573-45de0aab7541",
+    "marca": "Friboi",
+    "ean": "373711",
+    "dun": "",
+    "descricao": "Jerked Beef Retalho (30kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "8b8a19c9-bcc7-5d70-b284-c58578d3edd0",
+    "marca": "Friboi Black",
+    "ean": "17899567230476",
+    "dun": "17899567230476",
+    "descricao": "Coração da Paleta com Gordura - Black Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Aves"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "1392e0ce-bb81-521d-a4ed-065e8b6de63f",
+    "marca": "Friboi",
+    "ean": "17899567219235",
+    "dun": "17899567219235",
+    "descricao": "Jerked Beef Coxão Duro (500g) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "a2305e5d-2e70-5f57-b0e5-94af29d1b4bf",
+    "marca": "SAUDALI",
+    "ean": "17898229380023",
+    "dun": "17898229380023",
+    "descricao": "Bacon Manta - Saudali (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "fece2c89-702e-5778-ba65-7c90a72026b1",
+    "marca": "FRIELLA",
+    "ean": "374349",
+    "dun": "",
+    "descricao": "Linguiça Tipo Calabresa Reta (2,5kg) - Friella",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "a06618a0-a555-51b2-8c1c-d5fd10bf4f4a",
+    "marca": "Friboi",
+    "ean": "374668",
+    "dun": "",
+    "descricao": "Jerked Beef Ponta de Agulha (5kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "62172de2-2191-58d5-98ec-7ed8b8bb3d63",
+    "marca": "Anglo",
+    "ean": "17898430866996",
+    "dun": "17898430866996",
+    "descricao": "Salsicha Ao Molho (300g) - Anglo",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "eba1a180-594e-578e-bde9-d36d8bf48a13",
+    "marca": "Friboi",
+    "ean": "17899567218108",
+    "dun": "17899567218108",
+    "descricao": "Jerked Beef Ponta de Agulha (400g) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.228Z"
+  },
+  {
+    "id": "5de13645-9cf5-52c0-8a7b-125c84315342",
+    "marca": "Bordon",
+    "ean": "17896031232080",
+    "dun": "17896031232080",
+    "descricao": "Salsicha Bordon (180g) - Bordon",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.229Z"
+  },
+  {
+    "id": "072d6acc-fbde-5d91-a60a-b4e3841080d6",
+    "marca": "Anglo",
+    "ean": "17899567245227",
+    "dun": "17899567245227",
+    "descricao": "Salsicha (180g) - Anglo",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.229Z"
+  },
+  {
+    "id": "6a1de230-61cc-5672-91bd-1a7ebdce1c3f",
+    "marca": "Friboi",
+    "ean": "377121",
+    "dun": "",
+    "descricao": "Jerked Beef Dianteiro (5kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.229Z"
+  },
+  {
+    "id": "e615734b-879f-5246-873c-2a1233ea18ba",
+    "marca": "1953 Friboi",
+    "ean": "17899567251693",
+    "dun": "17899567251693",
+    "descricao": "Peito (Brisket) - 1953 (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.229Z"
+  },
+  {
+    "id": "8f366b8b-2548-59c0-9a1b-7d6464b7105a",
+    "marca": "1953 Friboi",
+    "ean": "17899567253185",
+    "dun": "17899567253185",
+    "descricao": "Peito - 1953 (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.229Z"
+  },
+  {
+    "id": "ad895dc4-dafe-5b4a-a006-480830d2bf89",
+    "marca": "Friboi",
+    "ean": "17896031217230",
+    "dun": "17896031217230",
+    "descricao": "Jerked Beef Coxão Duro (5kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.229Z"
+  },
+  {
+    "id": "86256662-e527-598b-ad58-cd2e068d60cd",
+    "marca": "Bertin",
+    "ean": "17899567256575",
+    "dun": "17899567256575",
+    "descricao": "Charque Fígado (5kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.229Z"
+  },
+  {
+    "id": "15c351c3-c9cf-5fc2-a663-5342f92019bb",
+    "marca": "Bertin",
+    "ean": "17899567256605",
+    "dun": "17899567256605",
+    "descricao": "Charque Língua (5kg) - Bertin",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.229Z"
+  },
+  {
+    "id": "87b2fec6-259d-54b1-b1cb-4592bdce38dc",
+    "marca": "1953 Friboi",
+    "ean": "17899567259569",
+    "dun": "17899567259569",
+    "descricao": "Gordura Bovina - 1953 (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.230Z"
+  },
+  {
+    "id": "e4668368-0381-5882-ba09-2719b4c07381",
+    "marca": "1953 Friboi",
+    "ean": "17899567259750",
+    "dun": "17899567259750",
+    "descricao": "Coração da Paleta com Gordura - 1953 (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Aves"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.230Z"
+  },
+  {
+    "id": "06dc67ad-5a00-5829-893a-d9896cddf776",
+    "marca": "1953 Friboi",
+    "ean": "17899567259774",
+    "dun": "17899567259774",
+    "descricao": "Coração da Paleta com Gordura - 1953 (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Aves"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.230Z"
+  },
+  {
+    "id": "f76557a2-135d-5032-87ff-223b67998d2f",
+    "marca": "Friboi",
+    "ean": "17899567218115",
+    "dun": "17899567218115",
+    "descricao": "Jerked Beef Dianteiro (400g) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.230Z"
+  },
+  {
+    "id": "ad41f79b-4dd8-5ba2-b71c-8a775a7506e5",
+    "marca": "Friboi",
+    "ean": "17896031217322",
+    "dun": "17896031217322",
+    "descricao": "Jerked Beef Traseiro (5kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.230Z"
+  },
+  {
+    "id": "a003e8b8-28b6-527e-a758-7db6c2d4cc9b",
+    "marca": "Friboi",
+    "ean": "17899567218122",
+    "dun": "17899567218122",
+    "descricao": "Jerked Beef Traseiro (400g) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.230Z"
+  },
+  {
+    "id": "2a7e0c5e-eadc-5912-8b11-f0372686df48",
+    "marca": "FRIALL",
+    "ean": "17894611149568",
+    "dun": "17894611149568",
+    "descricao": "Bacon Extra Paleta - Friall (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.230Z"
+  },
+  {
+    "id": "421be80a-c26d-573b-a799-b111a1b271a8",
+    "marca": "1953 Friboi",
+    "ean": "17899567264693",
+    "dun": "17899567264693",
+    "descricao": "Peito (Brisket) - 1953 (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.230Z"
+  },
+  {
+    "id": "ad88301d-0937-58ab-b76c-22c18498763c",
+    "marca": "1953 Friboi",
+    "ean": "17899567271363",
+    "dun": "17899567271363",
+    "descricao": "Peito (Brisket) - 1953 (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.230Z"
+  },
+  {
+    "id": "c7ef24b5-aba3-5d39-99b3-27d8c163a39a",
+    "marca": "Do Chef",
+    "ean": "17899567272407",
+    "dun": "17899567272407",
+    "descricao": "Peito (Brisket) - do Chef (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.230Z"
+  },
+  {
+    "id": "0bbcb417-784a-57c6-978a-b4df5cd2aa94",
+    "marca": "Friboi",
+    "ean": "17899567276627",
+    "dun": "17899567276627",
+    "descricao": "Jerked Beef Bovino Peito (5kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Bovinos",
+        "para": "Processados & Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.231Z"
+  },
+  {
+    "id": "d94f80fb-a2b3-57cc-8c7f-23ee44842259",
+    "marca": "TAMA",
+    "ean": "17899567290159",
+    "dun": "17899567290159",
+    "descricao": "Jerked Beef Ponta de Agulha (30kg) - Tama",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.231Z"
+  },
+  {
+    "id": "424ce417-a45e-5478-821d-50e722f6f946",
+    "marca": "Do Chef",
+    "ean": "17899567290371",
+    "dun": "17899567290371",
+    "descricao": "Jerked Beef Ponta de Agulha (30kg) - do Chef",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.231Z"
+  },
+  {
+    "id": "5b9c7387-9ae0-59ce-a1dc-2ef9354bdd54",
+    "marca": "GRAN CORTE",
+    "ean": "17898626090860",
+    "dun": "17898626090860",
+    "descricao": "Linguiça Calabresa Pacote (2,5kg) - Gran Corte",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.231Z"
+  },
+  {
+    "id": "785f7361-cef7-5450-b119-d192d04c7091",
+    "marca": "FRIALL",
+    "ean": "17894611149087",
+    "dun": "17894611149087",
+    "descricao": "Pernil Suíno sem Osso - Friall (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.231Z"
+  },
+  {
+    "id": "c5042581-67d7-5c90-8878-847b6e2e8dc7",
+    "marca": "Seara",
+    "ean": "17894904238962",
+    "dun": "17894904238962",
+    "descricao": "Bacon em Pedaços - Seara (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.231Z"
+  },
+  {
+    "id": "61340a0a-fa14-5e1e-a9cd-d7358a17868b",
+    "marca": "Seara",
+    "ean": "17894904097309",
+    "dun": "17894904097309",
+    "descricao": "Bacon Meia Manta Extra Paleta - Seara (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.231Z"
+  },
+  {
+    "id": "e9adfb11-ca9f-5004-9860-290ea9f27500",
+    "marca": "PRIMOR",
+    "ean": "17894904271198",
+    "dun": "17894904271198",
+    "descricao": "Gordura (500g) - Primor",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "0f76c495-5770-5062-b076-25f778acb93c",
+    "marca": "Seara",
+    "ean": "17894904230621",
+    "dun": "17894904230621",
+    "descricao": "Presunto Cozido sem Capa de Gordura - Seara (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "9e5e1040-083b-5a98-82c3-5aeb4c3362d7",
+    "marca": "SOMAVE",
+    "ean": "17894904271327",
+    "dun": "17894904271327",
+    "descricao": "Maionese Pacote (3kg) - Soya",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Congelado",
+        "para": "Resfriado"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "b4d2ec40-c119-5d17-8c47-e9d9193aa0b2",
+    "marca": "Seara",
+    "ean": "17894904272393",
+    "dun": "17894904272393",
+    "descricao": "Jerked Suíno (400g) - Seara",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "7c28908c-6e1d-5a07-96da-a32427474d87",
+    "marca": "Bordon",
+    "ean": "17896031224580",
+    "dun": "17896031224580",
+    "descricao": "Feijoada (430g) - Bordon",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "d0ebf237-5734-5df5-9b1a-d6bdb9b368d5",
+    "marca": "Bordon",
+    "ean": "17896031221886",
+    "dun": "17896031221886",
+    "descricao": "Almôndega Ao Molho (420g) - Bordon",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "8d57f628-efa5-5474-8ed9-19e4fba7b51c",
+    "marca": "Bordon",
+    "ean": "17899567218238",
+    "dun": "17899567218238",
+    "descricao": "Salsicha Aperitivo (150g) - Bordon",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "9b7a20d4-3b64-50c7-8298-35b1273d496c",
+    "marca": "KITUT",
+    "ean": "17896031203356",
+    "dun": "17896031203356",
+    "descricao": "Fiambre Bovino e Frango Lata (320g) - Kitut",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "1b67a823-b291-5fe0-a319-c8b67047f9d7",
+    "marca": "Bordon",
+    "ean": "17898430866095",
+    "dun": "17898430866095",
+    "descricao": "Almôndegas Ao Molho (830g) - Bordon",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "0ad1613a-1e7e-58f4-b214-7d2fdf99bae6",
+    "marca": "Friboi",
+    "ean": "17896031219210",
+    "dun": "17896031219210",
+    "descricao": "Gordura - Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "57175f22-fbf9-5696-acf1-e2b291bcb1be",
+    "marca": "Do Chef",
+    "ean": "17896031222241",
+    "dun": "17896031222241",
+    "descricao": "Gordura do Peito - do Chef (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "90f75e08-65dd-5943-b447-c988d83aecab",
+    "marca": "FRIMESA",
+    "ean": "17896275981362",
+    "dun": "17896275981362",
+    "descricao": "Linguiça Tipo Calabresa Cozida Defumada (2kg) - Frimesa",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "97e75a10-c4e4-5320-ba37-54ea56fbca6c",
+    "marca": "FRIMESA",
+    "ean": "17896275940109",
+    "dun": "17896275940109",
+    "descricao": "Bacon em Manta Defumado - Frimesa (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "a0014fbb-297b-5f25-98ab-c4b2015d9a48",
+    "marca": "FRINENSE",
+    "ean": "17898044485002",
+    "dun": "17898044485002",
+    "descricao": "Jerked Beef Dianteiro (500g) - Frinense",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "f08b6d55-e0b0-5597-9def-8a67f0c61f1c",
+    "marca": "FRINENSE",
+    "ean": "17898044480106",
+    "dun": "17898044480106",
+    "descricao": "Jerked Beef Traseiro (Lagarto Plano) (5kg) - Frinense",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "043c2ea5-e093-5ed9-b710-6aff827f5c4c",
+    "marca": "FRINENSE",
+    "ean": "17898044480021",
+    "dun": "17898044480021",
+    "descricao": "Jerked Beef Dianteiro (5kg) - Frinense",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "1d58ff6b-7efe-543d-ade5-2d13d11ebe54",
+    "marca": "FRINENSE",
+    "ean": "17898044480700",
+    "dun": "17898044480700",
+    "descricao": "Charque Ponta de Agulha (30kg) - Frinense",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "08087759-0784-5094-b203-43e643113ac8",
+    "marca": "FRINENSE",
+    "ean": "17898044480717",
+    "dun": "17898044480717",
+    "descricao": "Charque Ponta de Agulha (5kg) - Frinense",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "52b7cc55-2ef3-57e1-843d-c2fe28fd6942",
+    "marca": "FRINENSE",
+    "ean": "17898044481073",
+    "dun": "17898044481073",
+    "descricao": "Jerked Beef Traseiro (5kg) - Frinense",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "9aff6e18-9ea1-52a2-9bcb-1afc0fe626e2",
+    "marca": "FRINENSE",
+    "ean": "17898044481127",
+    "dun": "17898044481127",
+    "descricao": "Jerked Beef Traseiro (400g) - Frinense",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "fee90525-26a6-514a-9106-c9bf9eba589b",
+    "marca": "Bordon",
+    "ean": "17896031230383",
+    "dun": "17896031230383",
+    "descricao": "Fiambre (320g) Abre Fácil - Bordon",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "7ebf168c-dcb9-52a2-9e8a-4f7dda1527a7",
+    "marca": "Friboi",
+    "ean": "17896031241853",
+    "dun": "17896031241853",
+    "descricao": "Jerked Beef Ponta de Agulha (5kg) - Friboi",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "69169f0c-2fef-55d9-a508-1bedf6cb16bc",
+    "marca": "ALIBEM",
+    "ean": "17898335581567",
+    "dun": "17898335581567",
+    "descricao": "Bacon em Manta Defumado - Alibem (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "97b59bd5-cc0e-58a4-a2fa-2d7a5931ffdb",
+    "marca": "Do Chef",
+    "ean": "17896031244786",
+    "dun": "17896031244786",
+    "descricao": "Peito com Osso - do Chef (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "d3090dd5-82e2-544d-a326-8224395b48f8",
+    "marca": "ADEEL",
+    "ean": "17898961618668",
+    "dun": "17898961618668",
+    "descricao": "Paleta Cozida Defumada de Suíno (20kg) - Adeel",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "76a1e9e1-1313-56f7-8ba6-c696dad49fb9",
+    "marca": "Do Chef",
+    "ean": "17896031246636",
+    "dun": "17896031246636",
+    "descricao": "Gordura - do Chef (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "741afc89-1ec2-59fb-b2f7-1d6a50654f79",
+    "marca": "FRINENSE",
+    "ean": "17898044481011",
+    "dun": "17898044481011",
+    "descricao": "Jerked Beef Ponta de Agulha (5kg) - Frinense",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "1924022a-ad38-5123-8cc4-78d155e469d3",
+    "marca": "CATABY",
+    "ean": "17898565150502",
+    "dun": "17898565150502",
+    "descricao": "Paleta Suína Defumada - Cataby (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "601f43fe-9aa5-5b18-8322-a3feb56e5f4b",
+    "marca": "Do Chef",
+    "ean": "17896031248821",
+    "dun": "17896031248821",
+    "descricao": "Frango Salgado Cozido Desfiado Pacote (2,5kg) - do Chef",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.232Z"
+  },
+  {
+    "id": "4715bbca-9d5d-5abd-b22e-bfd029201eae",
+    "marca": "FRIMESA",
+    "ean": "17896275900615",
+    "dun": "17896275900615",
+    "descricao": "Bacon em Cubos - Frimesa (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Suínos",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "c6c1907a-7800-53f7-9d13-8101310a65dd",
+    "marca": "FRIMESA",
+    "ean": "17896275920880",
+    "dun": "17896275920880",
+    "descricao": "Bacon Manta Pedaço (1kg) - Frimesa",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "85d3afed-eb54-5dfe-942d-132fb4bcbaee",
+    "marca": "FRIMESA",
+    "ean": "17896275920682",
+    "dun": "17896275920682",
+    "descricao": "Linguiça Tipo Calabresa Cozida e Defumada Pacote (2,5 Kg) - Frimesa",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "bec84593-e7a8-531c-a5d0-076f439ca5cc",
+    "marca": "MANTIQUEIRA",
+    "ean": "17896982103392",
+    "dun": "17896982103392",
+    "descricao": "Clara Líquida Pasteurizada (1kg) - Mantiqueira",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "3c33883d-7a0a-51bb-93d7-f4485c4653a8",
+    "marca": "SUPREMA CHARQUE",
+    "ean": "10799561000587",
+    "dun": "10799561000587",
+    "descricao": "Jerked Beef Bovino (Ponta de Agulha) 30kg - Suprema",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "e77eabfc-1c70-5a21-ba24-1f094bec46ce",
+    "marca": "SUPREMA CHARQUE",
+    "ean": "10710497222492",
+    "dun": "10710497222492",
+    "descricao": "Jerked Beef Bovino Ponta de Agulha (5kg) - Suprema",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "bb8521d8-5ced-55fe-8b1e-54a212cf1832",
+    "marca": "SUPREMA CHARQUE",
+    "ean": "10799561000556",
+    "dun": "10799561000556",
+    "descricao": "Jerked Beef Bovino Dianteiro (400g) - Suprema",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "71c3c9a3-c750-52b3-9c08-2ff15bec4702",
+    "marca": "SUPREMA CHARQUE",
+    "ean": "10799561000563",
+    "dun": "10799561000563",
+    "descricao": "Jerked Beef Bovino Ponta de Agulha (400g) - Suprema",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "32060844-4718-5ef6-8e82-914f24c8805f",
+    "marca": "FRIGORIFICO CASA BLANCA",
+    "ean": "398145",
+    "dun": "",
+    "descricao": "Costela Ovina - Casa Blanca (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Bovinos",
+        "para": "Ovinos & Caprinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "235f152e-621d-5fc3-8a85-9f46f614fef4",
+    "marca": "FRIGORIFICO CASA BLANCA",
+    "ean": "398151",
+    "dun": "",
+    "descricao": "Paleta Ovina com Osso - Casa Blanca (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Ovinos & Caprinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "25fc0797-cdef-533b-8099-4e1854d84919",
+    "marca": "KITUT",
+    "ean": "398215",
+    "dun": "",
+    "descricao": "Fiambre Abre Fácil (320g) - Kitut",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "9d32c92e-95f3-5bc8-b8bd-f730afe726eb",
+    "marca": "SUPREMA CHARQUE",
+    "ean": "17898880469105",
+    "dun": "17898880469105",
+    "descricao": "Jerked Beef Bovino (30kg) - Suprema",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "46daf29a-6e1b-5974-8cc4-03d5bb40dd70",
+    "marca": "SUPREMA CHARQUE",
+    "ean": "398501",
+    "dun": "",
+    "descricao": "Jerked Beef Ponta de Agulha Retangular (5kg) - Suprema",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "f8aa05ea-1c4a-5393-8167-d17d79ca14da",
+    "marca": "SUPREMA CHARQUE",
+    "ean": "10789888043053",
+    "dun": "10789888043053",
+    "descricao": "Jerked Beef Ponta Agulha Picadinho (500g) - Suprema",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "134cf60d-5886-595f-870c-fa42a522a30a",
+    "marca": "ADEEL",
+    "ean": "17898961618217",
+    "dun": "17898961618217",
+    "descricao": "Linguiça Tipo Calabresa - Adeel (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "e0a30567-76f1-5524-aaeb-1fbb13ee8bc7",
+    "marca": "FRIMESA",
+    "ean": "17896275920842",
+    "dun": "17896275920842",
+    "descricao": "Kit Salgados Ingredientes para Feijoada - Frimesa (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "d172287b-27e0-58d4-834c-ecdc369122b9",
+    "marca": "ELOGIATA",
+    "ean": "17898914796290",
+    "dun": "17898914796290",
+    "descricao": "Óleo de Algodão (5,1l) - Elogiata",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Temperatura Ambiente"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "b307784e-6d6b-5fc1-958b-7360bdaded3a",
+    "marca": "Friboi",
+    "ean": "17896031265859",
+    "dun": "17896031265859",
+    "descricao": "Peito (Pedaços) - Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "8f3e76a8-6ae2-5950-ac14-70b97f3b8f77",
+    "marca": "Friboi",
+    "ean": "17898430861083",
+    "dun": "17898430861083",
+    "descricao": "Peito - Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "984e6494-e726-585d-b7ca-44efc204ca8a",
+    "marca": "Friboi",
+    "ean": "17896031251050",
+    "dun": "17896031251050",
+    "descricao": "Peito - Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "920ab45c-f4f5-5425-b74e-6e22c67989ab",
+    "marca": "Friboi Black",
+    "ean": "17898430866545",
+    "dun": "17898430866545",
+    "descricao": "Peito (Brisket) - Black Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "db2762db-9288-5045-bb8b-ed712f62ed9e",
+    "marca": "Do Chef",
+    "ean": "17898466100019",
+    "dun": "17898466100019",
+    "descricao": "Coração da Alcatra sem Rolha e sem Gordura - do Chef (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Aves"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "5fb031aa-5b28-5211-9f5f-681a8bcaa3ca",
+    "marca": "Friboi",
+    "ean": "17898302290775",
+    "dun": "17898302290775",
+    "descricao": "Peito - Friboi (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Bovinos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:04.233Z"
+  },
+  {
+    "id": "ca6a63e8-da7a-5120-bbaa-56d945c5b400",
+    "marca": "Lar",
+    "ean": "203898",
+    "dun": "",
+    "descricao": "Coxas e Sobrecoxas Bandeja 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.048Z"
+  },
+  {
+    "id": "baa68724-7028-55d7-978f-d1c2d337d614",
+    "marca": "Lar",
+    "ean": "203892",
+    "dun": "",
+    "descricao": "Coxinhas das Asas Bandeja 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "bcb2fe2c-2bc8-5f2b-809c-abf3184381c7",
+    "marca": "Lar",
+    "ean": "163697",
+    "dun": "",
+    "descricao": "Coxinhas das Asas Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "00369476-844e-50f1-b3bd-ca3b44815c29",
+    "marca": "Lar",
+    "ean": "178651",
+    "dun": "",
+    "descricao": "Coxinhas das Asas Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "172312af-b2ac-559f-86a7-c8d6d1fbedfc",
+    "marca": "Lar",
+    "ean": "178554",
+    "dun": "",
+    "descricao": "Meio das Asas Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "b62bf35d-83f1-5fdd-9179-55afeb052784",
+    "marca": "Lar",
+    "ean": "178557",
+    "dun": "",
+    "descricao": "Sobrecoxas Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "8bcddb01-c380-56c7-9f70-53ba05771fe3",
+    "marca": "Lar",
+    "ean": "42309",
+    "dun": "",
+    "descricao": "Filé de Coxas e Sobrecoxas Empanadas 1,5kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "ab6470e7-91f3-505f-8d76-926bf6120592",
+    "marca": "Lar",
+    "ean": "42308",
+    "dun": "",
+    "descricao": "Filé de Coxas e Sobrecoxas Empanadas 700g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "6f74c31d-22ec-55d5-a6bd-a8ccef695302",
+    "marca": "Lar",
+    "ean": "75561",
+    "dun": "",
+    "descricao": "Asas Envelopadas Congeladas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "be7314e2-54a4-5eca-958f-eb9d8b33e93a",
+    "marca": "Lar",
+    "ean": "71707",
+    "dun": "",
+    "descricao": "Coxinhas das Asas Envelopadas Congeladas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "5478cd7c-fde6-53b5-a41c-504f139b6e4a",
+    "marca": "Lar",
+    "ean": "71710",
+    "dun": "",
+    "descricao": "Coxas e Sobrecoxas Envelopadas Congeladas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "39e84073-e047-5c7c-aadc-e89eb33530ec",
+    "marca": "Lar",
+    "ean": "78263",
+    "dun": "",
+    "descricao": "Filé de Coxas Sobrecoxas Envelopadas Congeladas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "eef16381-51fd-5248-a8e6-c2e19f8fb966",
+    "marca": "Lar",
+    "ean": "61707",
+    "dun": "",
+    "descricao": "Peito com Osso Envelopado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "7cb161d8-9692-5ea8-ae11-12a695114764",
+    "marca": "Lar",
+    "ean": "71711",
+    "dun": "",
+    "descricao": "Sobrecoxas Envelopadas Congeladas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "7644bd1f-3aa0-5ecd-bbad-454c25b7277e",
+    "marca": "Lar",
+    "ean": "65763",
+    "dun": "",
+    "descricao": "Coxas e Sobrecoxas Envelopadas Resfriadas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "19021417-a9a8-5548-a5bd-3906dc851e72",
+    "marca": "Lar",
+    "ean": "96367",
+    "dun": "",
+    "descricao": "Sobrecoxas Envelopadas Resfriadas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "18491c0a-9dd9-5fb8-9892-8a2e5650971e",
+    "marca": "Lar",
+    "ean": "96366",
+    "dun": "",
+    "descricao": "Coxas e Sobrecoxas sem Osso Envelopadas Resfriadas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "e13ae9d3-685f-53a3-af76-0a15a4131b50",
+    "marca": "Lar",
+    "ean": "65767",
+    "dun": "",
+    "descricao": "Coxinhas das Asas Envelopadas Resfriadas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "18dbe688-2ced-5ae0-804f-f0815a782584",
+    "marca": "Lar",
+    "ean": "65766",
+    "dun": "",
+    "descricao": "Peito com Osso Envelopado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "acdb640a-7531-5917-bed8-4e3ceb1d898f",
+    "marca": "Lar",
+    "ean": "1015",
+    "dun": "",
+    "descricao": "Coxas IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "afd9e199-7548-5f28-b2d2-b9251fa6567d",
+    "marca": "Lar",
+    "ean": "173809",
+    "dun": "",
+    "descricao": "Coxas IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "698d6326-b60c-5ea3-928a-e63c21565d03",
+    "marca": "Lar",
+    "ean": "722841",
+    "dun": "",
+    "descricao": "Coxinhas das Asas IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "d6f855bf-3718-5d75-8d45-a60ac8f19efb",
+    "marca": "Lar",
+    "ean": "173766",
+    "dun": "",
+    "descricao": "Coxinhas das Asas IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "69482ec1-0ad1-5593-9fbb-e59c54766380",
+    "marca": "Lar",
+    "ean": "29248",
+    "dun": "",
+    "descricao": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "89a547cb-5dc4-59a3-8494-0dc422452646",
+    "marca": "Lar",
+    "ean": "173850",
+    "dun": "",
+    "descricao": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "9ca350ad-a429-5ef1-bbb8-2841f5074bff",
+    "marca": "Lar",
+    "ean": "18399",
+    "dun": "",
+    "descricao": "Sobrecoxas IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "b6b0bbbe-a98a-55de-be1b-79d1721885e7",
+    "marca": "Lar",
+    "ean": "173826",
+    "dun": "",
+    "descricao": "Sobrecoxas IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "14744da6-05c6-5e92-a414-8ffa4ee443b9",
+    "marca": "Lar",
+    "ean": "18441",
+    "dun": "",
+    "descricao": "Meio das Asas IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "fbdf1846-7832-5c28-913e-cd6cb9ba536f",
+    "marca": "Lar",
+    "ean": "291081",
+    "dun": "",
+    "descricao": "Filé de Coxas e Sobrecoxas Temperada IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.049Z"
+  },
+  {
+    "id": "e1d1c141-5079-5d02-98af-405a5a0c7897",
+    "marca": "Lar",
+    "ean": "71367",
+    "dun": "",
+    "descricao": "Coxas e Sobrecoxas com Porção Dorsal Envelopadas Congeladas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.050Z"
+  },
+  {
+    "id": "e77e200b-bfc5-5381-a647-2b30195a6b77",
+    "marca": "Lar",
+    "ean": "94633",
+    "dun": "",
+    "descricao": "Coxas e Sobrecoxas sem Osso sem Pele Envelopadas Congeladas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.050Z"
+  },
+  {
+    "id": "c9fa059f-20dd-509e-8b49-8eb12f7a6a33",
+    "marca": "Lar",
+    "ean": "253387",
+    "dun": "",
+    "descricao": "Meio da Asas Temperadas IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.050Z"
+  },
+  {
+    "id": "6fc73921-1146-5a00-8bde-ea40b1015091",
+    "marca": "Lar",
+    "ean": "206879",
+    "dun": "",
+    "descricao": "Coxinhas das Asas Temperadas 700g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.050Z"
+  },
+  {
+    "id": "b7db4621-64f4-5f70-8384-1cdb6286ce83",
+    "marca": "Lar",
+    "ean": "206863",
+    "dun": "",
+    "descricao": "Meio das Asas Temperadas 700g",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Aves",
+        "para": "Processados & Embutidos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:08.050Z"
+  },
+  {
+    "id": "27cd9cc3-0acf-565f-b564-1e5821ea137f",
+    "marca": "Ricca",
+    "ean": "624",
+    "dun": "",
+    "descricao": "Creme Chantilly 1,05kg - Ricca",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Plant-Based & Vegetarianos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:12.612Z"
   },
   {
     "id": "c1bcdb5b-edbe-56f9-8c11-f74b5a75cf19",
@@ -27,7 +4382,22 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/998542-lombo-canadense-fatiado-seara-gourmet-150g-min.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.612Z"
+  },
+  {
+    "id": "fff4afd4-ced5-5d3d-98ca-cdea9b5c492e",
+    "marca": "Seara Gourmet",
+    "ean": "566",
+    "dun": "",
+    "descricao": "Mix Cogumelos Burger 320g - Seara Gourmet",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Processados & Embutidos",
+        "para": "Plant-Based & Vegetarianos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:12.612Z"
   },
   {
     "id": "0993e9ff-4b56-5715-baa2-9fa31011ee8d",
@@ -42,7 +4412,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-652-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "c1936e07-b063-5a09-8d25-8d410c6dd3b6",
@@ -55,19 +4425,9 @@
         "campo": "Imagem (URL)",
         "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2131-500.webp",
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-182-500.png"
-      },
-      {
-        "campo": "Descrição",
-        "de": "Jamón Serrano Fatiado 80g - Seara Gourmet",
-        "para": "Jamón Serrano Fatiado 80g – Seara Gourmet"
-      },
-      {
-        "campo": "Classe",
-        "de": "Frios",
-        "para": "Aves"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "6646cd1a-36fd-50dd-88c0-ab7837bf0503",
@@ -82,7 +4442,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/45164-AF03-Beauty-Pescados-Camarao-Desc-80-100-TD-231220_mockup.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "e64d0de2-da4f-5a19-9948-7e6d8fcc8945",
@@ -97,7 +4457,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/999536_CAMARAO_DESCASCADO-V2.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "834a700e-db18-5488-9129-4e586c2e473c",
@@ -112,7 +4472,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/999537-AF03-Beauty-Pescados-Camarao-S-Cabeca-45-50-TD-231220_MOCKUP.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "a4b6cfd6-c38a-593a-8ab7-64ecbb2e54e7",
@@ -127,7 +4487,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/Finalizado-PIT-9061-Mockups-Seara-Projeto-Beauty-999403-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "8a4953d2-b23a-55d3-a106-66f08d74b156",
@@ -142,7 +4502,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/Visualizar-PIT-9061-Mockups-Seara-Projeto-Beauty-999395-V2.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "ec6ec728-ed46-579d-a8eb-ab281923b1c6",
@@ -157,7 +4517,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/Copia-de-45158_KIT_PAELLA.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "5e4880f5-5cb1-500d-97ea-3838964733c4",
@@ -172,7 +4532,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/Finalizado-PIT-9061-Mockups-Seara-Projeto-Beauty-56058.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "059dffbf-9fd3-5e2c-9192-2a7b2acd9729",
@@ -187,7 +4547,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/Copia-de-Finalizado-PIT-9061-Mockups-Seara-Projeto-Beauty-45159.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "bbcad01b-a6ba-5782-a5a4-72ff75fba7c5",
@@ -202,7 +4562,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/45161-AF01-Beauty-Pescados-File-Salmao-TD-231218_MOCKUP.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "e92e602f-32e8-50be-9122-9050227b745f",
@@ -217,7 +4577,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/45166-AF01-Beauty-Pescados-Camarao-Empanado-TD-231218-CV_MOCKUP.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "4eef5d19-4aad-5612-9552-ad410f925303",
@@ -232,7 +4592,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-653-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "de5692f7-579e-5455-ab3d-88221a8c23fa",
@@ -247,7 +4607,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-654-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "d22323f4-bfca-502f-8695-2b570790801d",
@@ -262,7 +4622,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-656-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.559Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "ab0e71d3-0859-5b79-92bc-5b597587d73b",
@@ -277,7 +4637,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-659-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "11a690a8-929b-551e-9898-dedae6a73eb1",
@@ -292,7 +4652,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/AF03-Beauty-Lombo-Bacalhau-600g-TD-231220.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "5a2d6674-18f5-5c7c-81ad-b456b97ca93a",
@@ -307,7 +4667,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/999898.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "67c81554-d6b9-50d8-8fd1-c2afaafca713",
@@ -322,7 +4682,22 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/45162-AF04-Beauty-Pescados-Camarao-Desc-30-50-TD-231218-CV_mockup.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
+  },
+  {
+    "id": "5a3cad97-aa31-50cd-95c6-63b6030ea757",
+    "marca": "Seara",
+    "ean": "621",
+    "dun": "",
+    "descricao": "Maionese Balde 3kg - Salada",
+    "alteracoes": [
+      {
+        "campo": "Classe",
+        "de": "Laticínios, Margarinas & Gorduras",
+        "para": "Plant-Based & Vegetarianos"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "4efa5f80-affa-50fe-abe7-4459d76fdd6e",
@@ -337,7 +4712,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-619-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "e2663469-0676-5cb9-88da-0eb014b635d0",
@@ -352,7 +4727,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-618-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "184628e2-60b5-50b9-b6c6-ea61878f0df3",
@@ -367,7 +4742,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-604-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "f3de54a4-9a61-5ab9-abc3-6f34d2c1969c",
@@ -382,7 +4757,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-605-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "a4046de1-3d45-5155-b533-3864dd02c850",
@@ -397,7 +4772,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-608-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "34c44161-052a-56fe-aa8a-bb269c366fd2",
@@ -412,7 +4787,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-599-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "5a479770-ee4a-5369-8c6e-bf12321ed714",
@@ -427,7 +4802,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-602-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "016c0160-9fb8-5f3e-9c70-3b632fcf4c32",
@@ -442,7 +4817,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-596-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "956d5ef0-430c-53b2-a098-68020719222e",
@@ -457,7 +4832,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-598-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "12bd3833-13e5-5c93-ad60-e9087cc13ced",
@@ -472,7 +4847,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-554-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "8099de72-1c12-5d95-a706-cfc4dd2ed101",
@@ -487,7 +4862,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-572-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "457fac9e-c095-54c2-b4d2-0c38168ad7ce",
@@ -502,7 +4877,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-580-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "9bd0e73e-332f-565c-aea5-1114e6c3a86c",
@@ -517,7 +4892,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-578-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "767f897f-aa9e-5649-81a1-1a508b40d178",
@@ -532,7 +4907,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-575-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "c68d2022-3968-50e5-a0a9-ca6c4f4381b2",
@@ -547,7 +4922,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-584-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "daeceb08-4380-5fb7-a47a-e59dc8313b2c",
@@ -562,7 +4937,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-582-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "729f3359-1645-500d-83bd-a22a0b3cb619",
@@ -577,7 +4952,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-590-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "661a5575-68a5-5966-b541-7c6edabd1982",
@@ -592,7 +4967,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-586-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.613Z"
   },
   {
     "id": "2e31ca57-4e76-51d4-80d7-0d150a7f5f8b",
@@ -607,7 +4982,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-591-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "c9e2ec0e-fca9-59fa-86d9-dcc950c883d8",
@@ -622,7 +4997,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-529-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "e8a39137-ea6b-5081-9933-35aab52dfd82",
@@ -637,7 +5012,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-542-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "830c65f7-ccea-580d-8d23-dd5c5c264e42",
@@ -652,7 +5027,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-502-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "1584ab59-4937-5e5e-92b0-37caef19a4af",
@@ -667,7 +5042,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-504-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "3932dccf-b217-518d-b02c-9b02df7d18ce",
@@ -682,7 +5057,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-485-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "69a2713d-5ca5-5744-8fda-d2833ccc792b",
@@ -697,7 +5072,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-482-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "56533eec-8f51-5917-83a2-e9442d677329",
@@ -712,7 +5087,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-478-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "d4b2d010-77f8-50d9-bec0-ce1ac8e7b1f8",
@@ -727,7 +5102,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-468-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "bfb14d20-2244-5908-86f3-0bc2438b8d70",
@@ -742,7 +5117,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-462-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "0fbd4bf1-52d3-54e5-b7c0-40cc3835c7a8",
@@ -757,7 +5132,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-454-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "bc91910e-8abb-5c1a-b461-f929749e40fa",
@@ -772,7 +5147,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-450-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.560Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "8e99f2b8-82c6-5dea-a260-e2a3bb78ce3f",
@@ -787,7 +5162,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-438-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "2136af4a-1109-5251-b0f8-b437891a9ac5",
@@ -802,7 +5177,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-430-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "54487452-3146-5e56-b4b0-0552f2a25787",
@@ -817,7 +5192,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-432-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "04eaea7c-be3f-5653-8aab-3a509f8d2c65",
@@ -832,7 +5207,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-524-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "d9344cd9-ef37-549f-a393-ee90e9ecb721",
@@ -847,7 +5222,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-492-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "1391a760-3a65-5c72-9cb8-47fc23f6b884",
@@ -862,7 +5237,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-442-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "4cbce231-079f-5d99-874b-77060b19b2ac",
@@ -877,7 +5252,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-460-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "1594efa1-d5ea-5cd2-a46a-a3690225ffe6",
@@ -892,7 +5267,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/11/7894904261536_Bacalhau-desfiado-Seara-Pescados-400g_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "33639efe-9e66-534c-8ebc-3e0f75ec611b",
@@ -907,7 +5282,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/11/7894904279876_Posta-de-Tilapia-Seara-Pescados-500g_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "d8976b40-0c34-51e3-914b-358957ae15c3",
@@ -922,7 +5297,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/45167-AF02-Beauty-Pescados-File-Tilapia-NL-20240105_mockup.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "3ed536a1-a093-5ec2-bd44-b70ecf804bf9",
@@ -937,7 +5312,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/11/80-Seara-Pescados-400g_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "025a1152-da24-5c5c-a980-37f0d0b7bd1c",
@@ -952,7 +5327,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/999907_POSTAS_DE_BACALHAU.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "278bc6ac-95a5-5255-895b-b7db830d31b1",
@@ -967,7 +5342,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-644-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "580f1de8-55fa-52e2-9176-e3426f7085b3",
@@ -982,7 +5357,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-636-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "f60ec1ce-87a7-5c8c-ab02-187359a05ee5",
@@ -997,7 +5372,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904955800_Mandioca-supreme-Seara-Nature-15kg_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "c0eccfc8-90c8-50ec-b5ba-1e06518d5a38",
@@ -1012,7 +5387,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-574-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.614Z"
   },
   {
     "id": "871af9a4-d8ee-5b2a-b268-03dd28db0d3e",
@@ -1027,7 +5402,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904691005_Tekitos-tradicional-1kg_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "2565aa73-2807-5dff-88b4-59caa6bad077",
@@ -1042,7 +5417,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-494-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "794763c2-525e-5f15-b1eb-3ce1ad1796ec",
@@ -1057,7 +5432,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-490-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "4fd6c3fb-0844-572e-885b-e8345af4a27e",
@@ -1072,7 +5447,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904002450_Texas-Burger-tradicional-672g_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "d6e4ed0f-0ec4-53b6-baaa-053b62ba4102",
@@ -1087,7 +5462,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904500383_Texas-Burger-tradicional-56g_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "e64e8a27-25fc-555c-a3ed-4d94bf0c647f",
@@ -1102,7 +5477,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-570-500.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "f104db9f-3b97-590b-871a-1523c33fc736",
@@ -1117,7 +5492,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-527-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "f0a0af23-8028-54f5-ae1b-68fd6c880c97",
@@ -1132,7 +5507,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-531-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "134f372b-0717-57fb-928b-28cab2412d5a",
@@ -1147,7 +5522,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-552-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "21a7ce01-a831-5528-8673-9b6804ee4cdb",
@@ -1162,7 +5537,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-549-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "cbd3995d-d24b-57fa-a985-24cba0d72f40",
@@ -1177,7 +5552,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904500116_1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "39d0cd3a-d499-5fa7-b34b-8fd98c929368",
@@ -1192,7 +5567,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-484-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "d473655b-8cac-557c-a8ff-acfe4bf51c3d",
@@ -1207,7 +5582,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-472-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "6e43ff7c-2800-5a11-aeb5-7cb93fed6ab5",
@@ -1222,7 +5597,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-470-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "a6ac46bd-0ff3-57e6-97f7-e9073607d99e",
@@ -1237,7 +5612,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-464-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "5bd29e6e-f30a-5178-ad72-9c6d5e61ca05",
@@ -1252,7 +5627,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-466-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "997fb1d7-894c-5b96-bd22-b2f8d9a49680",
@@ -1267,7 +5642,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-458-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "7799d45b-60fc-5c57-96a9-6798731d74a1",
@@ -1282,7 +5657,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-436-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "b6f3c9ad-4734-5be8-8d3d-8ed20a0e3127",
@@ -1297,7 +5672,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5511-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.561Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
   },
   {
     "id": "fe7d3b3d-258d-53bd-90cd-5aa6d2a14a6c",
@@ -1312,7 +5687,22 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2013-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.562Z"
+    "atualizado_em": "2026-08-23T16:08:12.615Z"
+  },
+  {
+    "id": "6cffb8ec-cccc-5a4e-b0dd-cafbd24488d8",
+    "marca": "Seara",
+    "ean": "7894904574100",
+    "dun": "",
+    "descricao": "Batata Palito Seara 400g",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Congelado",
+        "para": "Resfriado"
+      }
+    ],
+    "atualizado_em": "2026-08-23T16:08:12.616Z"
   },
   {
     "id": "44d45773-8060-50e9-9ee2-97e23a66d05f",
@@ -1327,7 +5717,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2024/08/Bife-de-File-Mignon-Suino-Seara-Reserva.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.562Z"
+    "atualizado_em": "2026-08-23T16:08:12.616Z"
   },
   {
     "id": "aaa9f4f9-ee23-56ea-b3ec-d23fe165412d",
@@ -1342,7 +5732,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-1990-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.562Z"
+    "atualizado_em": "2026-08-23T16:08:12.616Z"
   },
   {
     "id": "ad2ab810-bb43-5345-b900-da5b63f20edc",
@@ -1357,7 +5747,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5770-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.563Z"
+    "atualizado_em": "2026-08-23T16:08:12.616Z"
   },
   {
     "id": "c9874fbc-b075-5ff6-a730-2e6c4d8cc63e",
@@ -1372,7 +5762,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5140-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.563Z"
+    "atualizado_em": "2026-08-23T16:08:12.616Z"
   },
   {
     "id": "55737973-3256-57d2-8a32-10f974fccdf9",
@@ -1387,7 +5777,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5740-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.563Z"
+    "atualizado_em": "2026-08-23T16:08:12.617Z"
   },
   {
     "id": "582538a5-00e1-5066-8486-cefa8f5fb218",
@@ -1402,7 +5792,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-28573-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.563Z"
+    "atualizado_em": "2026-08-23T16:08:12.617Z"
   },
   {
     "id": "efc0cc20-86fa-5029-9111-a918dd9e0a14",
@@ -1417,7 +5807,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-29837-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.564Z"
+    "atualizado_em": "2026-08-23T16:08:12.617Z"
   },
   {
     "id": "2188139b-70d3-545e-9a69-186a51339bb4",
@@ -1432,7 +5822,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2067-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.564Z"
+    "atualizado_em": "2026-08-23T16:08:12.617Z"
   },
   {
     "id": "7f1f982b-8082-5507-8061-df82a130d58e",
@@ -1447,7 +5837,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-106839-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.564Z"
+    "atualizado_em": "2026-08-23T16:08:12.618Z"
   },
   {
     "id": "453d90c0-8a1a-51c4-bbbb-5635ece90cd0",
@@ -1462,7 +5852,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-106843-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.564Z"
+    "atualizado_em": "2026-08-23T16:08:12.618Z"
   },
   {
     "id": "1254ccaf-e510-5608-8cdc-d2503e183070",
@@ -1477,7 +5867,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-28888-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.564Z"
+    "atualizado_em": "2026-08-23T16:08:12.618Z"
   },
   {
     "id": "e1403727-1460-55c8-834c-0b8f8a8f196a",
@@ -1492,7 +5882,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-116244-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.564Z"
+    "atualizado_em": "2026-08-23T16:08:12.618Z"
   },
   {
     "id": "b4ff14b2-6ead-5e3f-858f-552aa93ce89a",
@@ -1507,7 +5897,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2025/12/Adobe-Express-file-9.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.564Z"
+    "atualizado_em": "2026-08-23T16:08:12.618Z"
   },
   {
     "id": "aeda874e-3d63-560b-9498-d507d52685fd",
@@ -1522,6 +5912,6 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/05/HB_BLEND_SEARA_GOURMET_160g-e1779200363880.png"
       }
     ],
-    "atualizado_em": "2026-08-23T06:13:44.564Z"
+    "atualizado_em": "2026-08-23T16:08:12.618Z"
   }
 ]

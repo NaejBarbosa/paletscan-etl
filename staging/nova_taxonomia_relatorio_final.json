@@ -1,16 +1,16 @@
 {
   "total_produtos": 4163,
   "distribuicao_classes": {
-    "Suínos": 444,
-    "Aves": 941,
-    "Processados & Embutidos": 1109,
-    "Bovinos": 862,
-    "Vegetais & Congelados": 168,
-    "Laticínios, Margarinas & Gorduras": 236,
-    "Pescados": 281,
-    "Ovinos & Caprinos": 83,
+    "Suínos": 465,
+    "Bovinos": 1087,
+    "Aves": 888,
+    "Processados & Embutidos": 954,
+    "Vegetais & Congelados": 167,
+    "Laticínios, Margarinas & Gorduras": 202,
+    "Pescados": 277,
+    "Ovinos & Caprinos": 84,
     "Plant-Based & Vegetarianos": 16,
     "Sobremesas & Panificação": 23
   },
-  "atualizacoes_executadas": 7
+  "atualizacoes_executadas": 537
 }
