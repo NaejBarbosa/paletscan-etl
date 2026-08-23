@@ -67,11 +67,25 @@ O módulo [`brand_classifier.ts`](file:///root/paletscan-etl/core/heuristics/bra
 - **Mapeamento de Fabricante**: Associa automaticamente a marca à Holding correspondente (ex: *Friboi* ➔ *JBS S.A.*).
 
 ### B. Classificação de Categorias e Conservação (`category_classifier.ts`)
-O módulo [`category_classifier.ts`](file:///root/paletscan-etl/core/heuristics/category_classifier.ts) segmenta o produto em categorias funcionais e determina a temperatura de conservação:
+O módulo [`category_classifier.ts`](file:///root/paletscan-etl/core/heuristics/category_classifier.ts) implementa a **Taxonomia Canônica Oficial do PaletScan**, eliminando fragmentações, duplicidades de singular/plural e corrigindo escapes Unicode (como `\u00ed` ➔ `í`):
 
-| Categoria | Tipo de Conservação | Palavras-Chave de Exemplo |
+#### 🛡️ Regras e Recursos do Motor:
+1. **Decodificação Automática de Unicode (`decodeUnicodeEscapes`)**: Normaliza strings ruidosas de fontes web (ex: `Su\u00ednos` ➔ `Suínos`).
+2. **Delimitação Estrita de Palavra (`\b`)**: Impede sobreposições semânticas (ex: *Peito Brisket Bovino* não vira *Aves*; *Polvo Tenderizado* não vira *Suínos* por causa de `tender`).
+3. **Priorização Hierárquica**: Itens *Plant-Based*, *Vegetais Puros*, *Sobremesas* e *Laticínios* são avaliados antes de cair em categorias de carnes ou embutidos.
+
+#### 🏷️ As 11 Classes Canônicas Oficiais:
+
+| Classe Canônica | Descrição e Abrangência | Principais Termos / Exemplo |
 | :--- | :--- | :--- |
-| **Bovinos - Cortes Resfriados** | `Resfriado (0°C a 4°C)` | *vácuo, resfriado, peça, carne fresca* |
-| **Bovinos - Cortes Congelados** | `Congelado (-18°C)` | *congelado, caixa IQF, bloco* |
-| **Aves e Suínos** | `Resfriado / Congelado` | *frango, lombo, costela suína, pernil* |
-| **Processados e Industrializados** | `Resfriado / Ambiente` | *hambúrguer, linguiça, salsicha, almôndega* |
+| **Bovinos** | Cortes bovinos in natura, maturados, miúdos bovinos e jerked beef. | *Alcatra, Contrafilé, Picanha, Mignon, Costela Bovina, Acém, Brisket, Cupim* |
+| **Suínos** | Cortes suínos in natura, temperados, pernil, lombo, costela e banha suína. | *Bisteca Suína, Costelinha, Lombo Suíno, Pernil, Panceta, Toucinho, Bacon* |
+| **Aves** | Cortes de frango, galinha, peru, chester, cortes IQF e miúdos de aves. | *Filé de Peito, Coxa, Sobrecoxa, Asa, Tulipa, Sassami, Coração de Frango* |
+| **Pescados** | Peixes inteiros, postas, filés congelados, frutos do mar e crustáceos. | *Tilápia, Salmão, Bacalhau, Merluza, Polaca, Camarão, Polvo, Kani Kama* |
+| **Ovinos & Caprinos** | Cortes de cordeiro, carneiro e caprinos. | *Paleta Ovina, Cordeiro, Espinazo, Hasta, Nirea* |
+| **Processados & Embutidos** | Embutidos cárneos, hambúrgueres, linguiças, salsichas, pizzas, lasanhas e pratos prontos. | *Linguiça Toscana, Salsicha, Mortadela, Presunto, Hambúrguer, Nugget, Pizza, Lasanha* |
+| **Vegetais & Congelados** | Legumes, seletas mistas, ervilhas, milho, batatas pré-fritas, mandiocas e polpas. | *Seleta Mista, Brócolis, Couve-Flor, Ervilha, Batata Palito/Rústica, Mandioca* |
+| **Plant-Based & Vegetarianos** | Produtos 100% vegetais análogos de carnes (substitutos vegetais). | *Linha Incrível!, Sadia Veg&Tal, Plantplus, Hambúrguer 100% Vegetal* |
+| **Laticínios, Margarinas & Gorduras** | Margarinas, queijos fatiados/peça, manteigas, requeijões, bebidas lácteas e gorduras. | *Margarina Doriana, Queijo Prato, Queijo Mussarela Soltíssimo, Requeijão* |
+| **Sobremesas & Panificação** | Tortas doces congeladas, mousses, sobremesas, pães de queijo, panetones e bolos. | *Torta Mousse Miss Daisy, Torta Holandesa, Pão de Queijo Qualy/Perdigão* |
+| **Outros** | Kits comemorativos, cestas de natal e itens sem enquadramento específico. | *Cesta Sucesso Sadia, Cesta Otimismo Perdigão* |
