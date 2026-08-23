@@ -73,17 +73,22 @@ O módulo [`category_classifier.ts`](file:///root/paletscan-etl/core/heuristics/
 1. **Decodificação Automática de Unicode (`decodeUnicodeEscapes`)**: Normaliza strings ruidosas de fontes web (ex: `Su\u00ednos` ➔ `Suínos`).
 2. **Delimitação Estrita de Palavra (`\b`)**: Impede sobreposições semânticas (ex: *Peito Brisket Bovino* não vira *Aves*; *Polvo Tenderizado* não vira *Suínos* por causa de `tender`).
 3. **Priorização Hierárquica**: Itens *Plant-Based*, *Vegetais Puros*, *Sobremesas* e *Laticínios* são avaliados antes de cair em categorias de carnes ou embutidos.
+4. **Desambiguação de Cortes de Aves vs. Processados**:
+   - **Cortes de Aves In Natura e Temperados** (*Coxa, Coxas, Sobrecoxa, Sobrecoxas, Peito com Osso/sem Osso, Filé de Peito, Sassami, Coxinha da Asa / Drumet, Meio da Asa / Tulipa, Asas*) são classificados como **Aves**, mesmo quando temperados ou embalados a vácuo/interfolhados.
+   - **Lookahead Negativo de Salgados**: O termo `coxinha` utiliza regex negativo `\bcoxinhas?(?!(\s+(d[aeo]s?|de)?\s*(asas?|chester)|\s+asas?))` para não capturar cortes de drumette/asa.
+   - **Proteção de Steaks e Brisket Bovinos**: Cortes nobres bovinos (*Chorizo Steak, Denver Steak, Ancho Steak, Peito Brisket, Ponta de Peito, Peito Friboi/1953/Maturatta/Bassi*) são protegidos na classe **Bovinos** e não conflitam com steaks empanados ou peito de ave.
+   - **Processados de Frango/Peru Autênticos**: Embutidos e empanados (*Linguiça de Frango, Salsicha de Frango, Mortadela de Frango, Presunto de Peru, Peito de Peru Defumado (frios), Hambúrguer de Frango, Nuggets, Tekitos, Empanados, Lasanhas de Frango*) permanecem categorizados como **Processados & Embutidos**.
 
 #### 🏷️ As 10 Classes Canônicas Oficiais:
 
 | Classe Canônica | Descrição e Abrangência | Principais Termos / Exemplo |
 | :--- | :--- | :--- |
-| **Bovinos** | Cortes bovinos in natura, maturados, miúdos bovinos e jerked beef. | *Alcatra, Contrafilé, Picanha, Mignon, Costela Bovina, Acém, Brisket, Cupim* |
+| **Bovinos** | Cortes bovinos in natura, maturados, miúdos bovinos, steaks nobres e jerked beef. | *Alcatra, Contrafilé, Picanha, Mignon, Costela Bovina, Acém, Brisket, Chorizo Steak, Cupim* |
 | **Suínos** | Cortes suínos in natura, temperados, pernil, lombo, costela e banha suína. | *Bisteca Suína, Costelinha, Lombo Suíno, Pernil, Panceta, Toucinho, Bacon* |
-| **Aves** | Cortes de frango, galinha, peru, chester, cortes IQF e miúdos de aves. | *Filé de Peito, Coxa, Sobrecoxa, Asa, Tulipa, Sassami, Coração de Frango* |
-| **Pescados** | Peixes inteiros, postas, filés congelados, frutos do mar e crustáceos. | *Tilápia, Salmão, Bacalhau, Merluza, Polaca, Camarão, Polvo, Kani Kama* |
+| **Aves** | Cortes de frango, galinha, peru, chester, cortes IQF, cortes temperados e miúdos de aves. | *Filé de Peito, Peito com Osso, Coxa e Sobrecoxa, Coxinha da Asa (Drumet), Meio da Asa (Tulipa), Sassami, Coração de Frango* |
+| **Pescados** | Peixes inteiros, postas, filés congelados, frutos do mar e crustáceos. | *Tilápia, Salmão, Bacalhau, Merluza, Polaca, Camarão, Polvo, Panga, Kani Kama* |
 | **Ovinos & Caprinos** | Cortes de cordeiro, carneiro e caprinos. | *Paleta Ovina, Cordeiro, Espinazo, Hasta, Nirea* |
-| **Processados & Embutidos** | Embutidos cárneos, hambúrgueres, linguiças, salsichas, pizzas, lasanhas, cestas e kits natalinos. | *Linguiça Toscana, Salsicha, Mortadela, Presunto, Hambúrguer, Nugget, Pizza, Lasanha, Cestas* |
+| **Processados & Embutidos** | Embutidos cárneos, hambúrgueres, empanados, linguiças, salsichas, pizzas, lasanhas, cestas e kits natalinos. | *Linguiça Toscana, Salsicha, Mortadela, Presunto, Hambúrguer, Nugget, Empanado, Pizza, Lasanha, Cestas* |
 | **Vegetais & Congelados** | Legumes, seletas mistas, ervilhas, milho, batatas pré-fritas, mandiocas e polpas. | *Seleta Mista, Brócolis, Couve-Flor, Ervilha, Batata Palito/Rústica, Mandioca* |
 | **Plant-Based & Vegetarianos** | Produtos 100% vegetais análogos de carnes (substitutos vegetais). | *Linha Incrível!, Sadia Veg&Tal, Plantplus, Hambúrguer 100% Vegetal* |
 | **Laticínios, Margarinas & Gorduras** | Margarinas, queijos fatiados/peça, manteigas, requeijões, bebidas lácteas e gorduras. | *Margarina Doriana, Queijo Prato, Queijo Mussarela Soltíssimo, Requeijão* |
