@@ -244,7 +244,9 @@ async function generatePwaProdutosJson() {
 
   const targetPaths = [
     path.join('/root/repo_pwa', 'produtos.json'),
-    path.join('/root/repo_pwa', 'public', 'produtos.json')
+    path.join('/root/repo_pwa', 'public', 'produtos.json'),
+    path.join('/root/meus-repos/PaletScan', 'produtos.json'),
+    path.join('/root/meus-repos/PaletScan', 'public', 'produtos.json')
   ];
 
   const jsonContent = JSON.stringify(produtosLimpos, null, 2);

@@ -186,7 +186,7 @@ function parseSearaB2BPage(html: string, pageUrl: string): RawSearaProduct | nul
   const marcaMatch = html.match(/"marca"\s*:\s*\["([^"]+)"\]/);
   const catMatch = html.match(/"category"\s*:\s*\["([^"]+)"\]/);
   let marca = marcaMatch ? marcaMatch[1] : 'Seara';
-  let classe = catMatch ? catMatch[1] : 'Aves';
+  let classe = catMatch ? catMatch[1] : '';
 
   const imgMatch = html.match(/<img[^>]+src="([^"]*searafoodsolutions\.com\.br\/files\/[^"]+)"/i);
   let imageUrl = imgMatch ? imgMatch[1] : '';
@@ -249,7 +249,7 @@ function parseSearaB2CPage(html: string, pageUrl: string): RawSearaProduct | nul
     ean,
     dun: '',
     marca: 'Seara',
-    classe: 'Aves',
+    classe: '',
     conservacao,
     pesoLiquido: '',
     image_url: imageUrl
@@ -402,13 +402,15 @@ export async function runSearaScraper() {
     const isFracionado = (p.title.toLowerCase().includes('pesar') || p.title.toLowerCase().includes('peça') || pesoGramas === null);
     const hasImage = !isInvalidImageUrl(p.image_url);
 
+    const classification = classifyProduct(p.title, p.classe, p.conservacao);
+
     produtosMap[produtoId] = {
       id: produtoId,
       marca_id: brandInfo.id,
       descricao_padronizada: descrPadronizada.formatted_description,
       descricao_original: p.title,
-      classe: p.classe || classifyProduct(p.title).classe,
-      conservacao: p.conservacao || 'Resfriado',
+      classe: classification.classe,
+      conservacao: classification.conservacao,
       peso_gramas: pesoGramas,
       fracionado: isFracionado,
       imagem_url: hasImage ? p.image_url! : null,

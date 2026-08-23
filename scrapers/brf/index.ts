@@ -366,7 +366,7 @@ export async function runBRFScraper(): Promise<StagingPayload> {
         ean: instData.ean,
         dun: normalizeDUN14('', instData.ean) || '',
         marca: task.marca,
-        classe: 'Outros',
+        classe: '',
         conservacao: 'Resfriado',
         tempMin: '',
         tempMax: '',

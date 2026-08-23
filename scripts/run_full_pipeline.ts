@@ -125,7 +125,7 @@ async function runPipeline() {
       details,
     });
 
-    console.log(`\x1b[1;32m✔ [${formatTime(sEnd)}]\x1b[0m Status: ${status} (Duração: ${durationStr})\n`);
+    console.log(`\x1b[1;32m✔ [${formatTime(sEnd)}]\x1b[0m Status: ${status} (Duração desta etapa: ${durationStr})\n`);
 
     if (status === "ERRO") {
       console.error(`\x1b[1;31m❌ Pipeline interrompido na etapa: ${stg.name}\x1b[0m`);
@@ -260,21 +260,44 @@ async function runPipeline() {
   const pwaPendingPct = totalBase > 0 ? ((pwaPending / totalBase) * 100).toFixed(2) : "0.00";
 
   // IMPRESSÃO DO RELATÓRIO FINAL CONSOLIDADO DE EXECUÇÃO
-  console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
+  console.log("\x1b[1;36m────────────────────────────────────────────────────────────────────────\x1b[0m");
   console.log("\x1b[1;32m📋 RELATÓRIO CONSOLIDADO DO PROCESSAMENTO ETL\x1b[0m");
-  console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
-  console.log(` 📅 Momento da Execução:   \x1b[1m${formatDateTime(globalStart)}\x1b[0m`);
-  console.log(` 🏁 Momento da Conclusão:  \x1b[1m${formatDateTime(globalEnd)}\x1b[0m`);
-  console.log(` ⏱️  Tempo Total Decorrido: \x1b[1;33m${totalDurationStr}\x1b[0m`);
-  console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
+  console.log("\x1b[1;36m────────────────────────────────────────────────────────────────────────\x1b[0m");
+  console.log(` 📅 Início Geral do Pipeline : \x1b[1m${formatDateTime(globalStart)}\x1b[0m`);
+  console.log(` 🏁 Término Geral do Pipeline: \x1b[1m${formatDateTime(globalEnd)}\x1b[0m`);
+  console.log(` ⏱️  Tempo Total do Pipeline  : \x1b[1;33m${totalDurationStr}\x1b[0m`);
+  console.log("\x1b[1;36m────────────────────────────────────────────────────────────────────────\x1b[0m\n");
+
+  // TABELA RESUMO CRONOLÓGICA DAS ETAPAS
+  console.log("\x1b[1;33m📊 CRONOGRAMA CONSOLIDADO POR ETAPA:\x1b[0m\n");
+  console.log("┌────────────────────────────────────┬──────────────┬──────────────┬──────────────┬────────┐");
+  console.log("│ Etapa                              │ Início       │ Término      │ Duração      │ Status │");
+  console.log("├────────────────────────────────────┼──────────────┼──────────────┼──────────────┼────────┤");
+  for (const stg of stages) {
+    const nameCol = stg.name.padEnd(34).substring(0, 34);
+    const startCol = stg.startTime.padEnd(12);
+    const endCol = stg.endTime.padEnd(12);
+    const durCol = stg.durationSeconds.padStart(12);
+    const statusCol = stg.status === "SUCESSO" ? "  ✔ OK " : " ❌ ERRO";
+    console.log(`│ ${nameCol} │ ${startCol} │ ${endCol} │ ${durCol} │${statusCol}│`);
+  }
+  console.log("├────────────────────────────────────┼──────────────┼──────────────┼──────────────┼────────┤");
+  const totalLabel = "🏁 TEMPO TOTAL DO PIPELINE".padEnd(34);
+  const totalStart = formatTime(globalStart).padEnd(12);
+  const totalEnd = formatTime(globalEnd).padEnd(12);
+  const totalDur = totalDurationStr.padStart(12);
+  console.log(`│ \x1b[1m${totalLabel}\x1b[0m │ \x1b[1m${totalStart}\x1b[0m │ \x1b[1m${totalEnd}\x1b[0m │ \x1b[1;33m${totalDur}\x1b[0m │ \x1b[1;32m  ✔ OK \x1b[0m│`);
+  console.log("└────────────────────────────────────┴──────────────┴──────────────┴──────────────┴────────┘\n");
+
+  console.log("\x1b[1;36m────────────────────────────────────────────────────────────────────────\x1b[0m");
   console.log("\x1b[1;33m📌 DETALHAMENTO DE CADA ETAPA:\x1b[0m\n");
 
   for (const stg of stages) {
     const icon = stg.status === "SUCESSO" ? "✅" : "❌";
     console.log(`${icon} \x1b[1m${stg.name}\x1b[0m`);
-    console.log(`   ├─ Início  : ${stg.startTime}`);
-    console.log(`   ├─ Término : ${stg.endTime} (Duração: ${stg.durationSeconds})`);
-    console.log(`   └─ Detalhes: ${stg.description}`);
+    console.log(`   ├─ Início desta etapa  : ${stg.startTime}`);
+    console.log(`   ├─ Término desta etapa : ${stg.endTime} (Duração desta etapa: ${stg.durationSeconds})`);
+    console.log(`   └─ Detalhes            : ${stg.description}`);
   }
 
   // Leitura de novos produtos em staging/novos_produtos_log.json
@@ -362,12 +385,13 @@ async function runPipeline() {
   } else {
     console.log(` 🔄 Alterados/Atualiz.: 0 produtos modificados nesta execução`);
   }
-  console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
-  console.log(` 📅 Executado em: \x1b[1m${formatDateTime(globalStart)}\x1b[0m (Término: \x1b[1m${formatDateTime(globalEnd)}\x1b[0m)`);
-  console.log(` ⏱️  Tempo Total Decorrido: \x1b[1;33m${totalDurationStr}\x1b[0m`);
-  console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
+  console.log("\x1b[1;36m────────────────────────────────────────────────────────────────────────\x1b[0m");
+  console.log(` 📅 Início Geral do Pipeline : \x1b[1m${formatDateTime(globalStart)}\x1b[0m`);
+  console.log(` 🏁 Término Geral do Pipeline: \x1b[1m${formatDateTime(globalEnd)}\x1b[0m`);
+  console.log(` ⏱️  Tempo Total Decorrido   : \x1b[1;33m${totalDurationStr}\x1b[0m`);
+  console.log("\x1b[1;36m────────────────────────────────────────────────────────────────────────\x1b[0m");
   console.log("\x1b[1;32m✔ PIPELINE FINALIZADO COM SUCESSO!\x1b[0m");
-  console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
+  console.log("\x1b[1;36m────────────────────────────────────────────────────────────────────────\x1b[0m");
 }
 
 runPipeline().catch((err) => {

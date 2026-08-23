@@ -6,7 +6,7 @@
       "cnpj": "76.879.878/0001-00",
       "site_oficial": "https://www.lar.ind.br",
       "ativo": true,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     }
   ],
   "marcas": [
@@ -17,7 +17,7 @@
       "slug": "lar",
       "descricao": "Produtos da Lar Cooperativa Agroindustrial",
       "ativo": true,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     }
   ],
   "produtos": [
@@ -26,13 +26,13 @@
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Batata Palito Airfryer 1,005kg",
       "descricao_original": "Batata Palito Airfryer",
-      "classe": "Batatas",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 1005,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419730729.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2adaccd2-d003-55a5-846f-e5c2599f39d6",
@@ -45,7 +45,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419731917.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "ab31fde4-e8da-5d99-8fb3-2dd5cd6594af",
@@ -58,7 +58,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419731801.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "dd7675a5-15f0-5aa2-a9da-c777b5a0e2fd",
@@ -71,111 +71,111 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419731900.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "fe0f3bf7-f6db-5409-a26f-f233bfbae6f3",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Anéis de Cebola 1,1kg",
       "descricao_original": "Anéis de Cebola",
-      "classe": "Quentes",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 1100,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419720270.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "401287cc-bf24-51e0-a9de-49b8b7e7f681",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Anéis de Cebola 400g",
       "descricao_original": "Anéis de Cebola",
-      "classe": "Quentes",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 400,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419720287.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "eb852974-716e-5742-bd11-f88786c97a9d",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Batata Palito 1,5kg",
       "descricao_original": "Batata Palito",
-      "classe": "Batatas",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 1500,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419730705.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5b965366-4e3b-524c-80fd-8a7c148e5589",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Batata Palito 700g",
       "descricao_original": "Batata Palito",
-      "classe": "Batatas",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419730347.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e6284360-e6b9-5819-8232-af9e5ffded7d",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Polenta Palito 1,1kg",
       "descricao_original": "Polenta Palito",
-      "classe": "Quentes",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 1100,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419724384.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "64c35b3d-e01a-5659-9007-e5dca522486a",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Polenta Palito 400g",
       "descricao_original": "Polenta Palito",
-      "classe": "Quentes",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 400,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419712770.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2c7cf502-cdfa-5506-a395-bd23295f2b88",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Coração Bandeja 1kg",
       "descricao_original": "Coração Bandeja • Congelada",
-      "classe": "Bandejas congeladas",
+      "classe": "Aves",
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728887.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "636a6278-e2fc-51dd-9607-70333de0dadc",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Coração Bandeja 600g",
       "descricao_original": "Coração Bandeja • Congelada",
-      "classe": "Bandejas congeladas",
+      "classe": "Aves",
       "conservacao": "Congelado",
       "peso_gramas": 600,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727286.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "ca6a63e8-da7a-5120-bbaa-56d945c5b400",
@@ -188,7 +188,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728900.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "baa68724-7028-55d7-978f-d1c2d337d614",
@@ -201,7 +201,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728894.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bcb2fe2c-2bc8-5f2b-809c-abf3184381c7",
@@ -214,7 +214,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727309.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c1a2215d-573a-5b74-9614-4c9330c6b372",
@@ -227,7 +227,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728870.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "94ff3e8b-fd38-5624-b9b4-ba4eede14d76",
@@ -240,7 +240,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727316.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bd74c756-d439-55d1-88d9-b343eb26ae09",
@@ -253,7 +253,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728917.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "758a6cba-a194-5383-a930-a965b2d708b4",
@@ -266,33 +266,33 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727323.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "738be5b6-e2e9-5ee1-8c55-1dd4c0c462cb",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Moela Bandeja 600g",
       "descricao_original": "Moela Bandeja • Congelada",
-      "classe": "Bandejas congeladas",
+      "classe": "Aves",
       "conservacao": "Congelado",
       "peso_gramas": 600,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727279.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "74ae45eb-984e-51c4-870c-709590881851",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Coração Bandeja 600g",
       "descricao_original": "Coração Bandeja • Resfriado",
-      "classe": "Bandejas resfriadas",
+      "classe": "Aves",
       "conservacao": "Resfriado",
       "peso_gramas": 600,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728078.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "00369476-844e-50f1-b3bd-ca3b44815c29",
@@ -305,7 +305,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728047.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "1ac16cba-486c-58af-bfab-b103f044b36e",
@@ -318,7 +318,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728023.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3c22386a-7b8c-57e1-a1a8-4298b959cb29",
@@ -331,7 +331,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728085.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "172312af-b2ac-559f-86a7-c8d6d1fbedfc",
@@ -344,20 +344,20 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727996.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "050f3178-741f-5a6d-854f-13ad0dd7fd40",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Moela Bandeja 600g",
       "descricao_original": "Moela Bandeja • Resfriada",
-      "classe": "Bandejas resfriadas",
+      "classe": "Aves",
       "conservacao": "Resfriado",
       "peso_gramas": 600,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728030.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b62bf35d-83f1-5fdd-9179-55afeb052784",
@@ -370,7 +370,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728009.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7bcf8a8a-76eb-5951-8568-cfbe21f7e9df",
@@ -383,7 +383,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419731177.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7b336b1b-0d08-5d2a-862c-083410d057f4",
@@ -396,7 +396,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728757.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "8c39f32c-802a-5fe3-9233-b73bf7a3bbfb",
@@ -409,20 +409,20 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728740.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "12a5998c-c865-5ac4-ac5f-ad77facfff12",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Coxinha da Asa Assado Linha Minuto 300g",
       "descricao_original": "Coxinha da Asa Assado Linha Minuto 300g",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728849.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d454b8ba-d225-50ca-b1df-b36efa23f967",
@@ -435,7 +435,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728818.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b74a7947-05e5-55f2-adf3-0cc4dd2af080",
@@ -448,46 +448,46 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728825.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7a160948-47b2-5e5d-975a-3bc90ecfa79b",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Empanitos Empanado 1,5kg",
       "descricao_original": "Empanitos Empanado",
-      "classe": "Empanados",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 1500,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419714071.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "360f0d84-1b8d-5d3e-9476-cd5d6655f76f",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Empanitos Empanado 700g",
       "descricao_original": "Empanitos Empanado",
-      "classe": "Empanados",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419725336.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "68a15aa7-96e8-5d05-97e2-07c75fdb43d7",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Filé À Milanesa 700g",
       "descricao_original": "Filé à milanesa",
-      "classe": "Empanados",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419725480.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "8bcddb01-c380-56c7-9f70-53ba05771fe3",
@@ -500,7 +500,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419717560.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "ab6470e7-91f3-505f-8d76-926bf6120592",
@@ -513,98 +513,98 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419725329.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3bc29673-7d7a-5286-9611-a6e5d9b956ba",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Filezinho Sassami Empanado 1,5kg",
       "descricao_original": "Filezinho Sassami Empanado",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 1500,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419715566.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bad89910-c365-50dc-849c-d5bac9c33e09",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Filezinho Sassami Empanado 700g",
       "descricao_original": "Filezinho Sassami Empanado",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419716129.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5c02f358-5dc6-5762-bd06-1bb6f80fbc78",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Mini Hambúrguer Empanado de Frango 300g",
       "descricao_original": "Mini Hambúrguer Empanado de Frango",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419730156.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "818e697b-1efc-5380-83ff-140d4eb8de98",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Iscas Empanadas 700g",
       "descricao_original": "Iscas Empanadas",
-      "classe": "Empanados",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419725459.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "080a3a4b-9407-50fb-93dd-53d0a8adb450",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Steak Empanado 100g",
       "descricao_original": "Steak Empanado",
-      "classe": "Empanados",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 100,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419713852.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "a5502431-9c40-5052-b519-2f5b27d6e6f6",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Steak Empanado 100g",
       "descricao_original": "Steak Empanado",
-      "classe": "Empanados",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 100,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419713852.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bdadb759-54ae-516e-80ac-e7f37536baed",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Hambúrguer Empanado de Frango 100g",
       "descricao_original": "Hambúrguer Empanado de Frango",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 100,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419729143.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6f74c31d-22ec-55d5-a6bd-a8ccef695302",
@@ -617,7 +617,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419721475.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "be7314e2-54a4-5eca-958f-eb9d8b33e93a",
@@ -630,7 +630,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419720799.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5478cd7c-fde6-53b5-a41c-504f139b6e4a",
@@ -643,7 +643,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419719977.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "39e84073-e047-5c7c-aadc-e89eb33530ec",
@@ -656,7 +656,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419721536.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b7bc454d-ffdd-5185-86bd-e778a212eb1c",
@@ -669,7 +669,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419720386.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "909965dd-5fb9-5abd-8391-478668c7ceba",
@@ -682,7 +682,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419720447.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "eef16381-51fd-5248-a8e6-c2e19f8fb966",
@@ -695,20 +695,20 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419720393.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b98ec681-c99a-5a5e-bf62-09ba26e619ff",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Sambiquira Envelopada (Pesar)",
       "descricao_original": "Sambiquira Envelopada • Congelada",
-      "classe": "Envelopados congelados",
+      "classe": "Aves",
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419720997.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7cb161d8-9692-5ea8-ae11-12a695114764",
@@ -721,7 +721,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419720676.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7644bd1f-3aa0-5ecd-bbad-454c25b7277e",
@@ -734,7 +734,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419720959.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "19021417-a9a8-5548-a5bd-3906dc851e72",
@@ -747,7 +747,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419723424.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "18491c0a-9dd9-5fb8-9892-8a2e5650971e",
@@ -760,7 +760,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419723400.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e13ae9d3-685f-53a3-af76-0a15a4131b50",
@@ -773,7 +773,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419720973.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4e63075d-76f6-5a44-ba9e-5ba6b2934219",
@@ -786,7 +786,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419720966.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "18dbe688-2ced-5ae0-804f-f0815a782584",
@@ -799,7 +799,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419720980.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "acdb640a-7531-5917-bed8-4e3ceb1d898f",
@@ -812,7 +812,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419714224.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "afd9e199-7548-5f28-b2d2-b9251fa6567d",
@@ -825,7 +825,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727811.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "698d6326-b60c-5ea3-928a-e63c21565d03",
@@ -838,7 +838,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419713784.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d6f855bf-3718-5d75-8d45-a60ac8f19efb",
@@ -851,7 +851,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727774.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "69482ec1-0ad1-5593-9fbb-e59c54766380",
@@ -864,7 +864,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419716273.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "89a547cb-5dc4-59a3-8494-0dc422452646",
@@ -877,7 +877,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727859.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "ed1f6c9e-f0e0-5aba-a0e1-9cdbd6acff2f",
@@ -890,7 +890,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727835.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "9d330527-a15e-5fbe-b5f9-18b21f502ea9",
@@ -903,7 +903,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419701637.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "42045c01-5d7b-52ad-b37a-3ed3259485ae",
@@ -916,7 +916,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419716280.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "ef7cc29d-9d48-534f-b605-7eb12d4a43df",
@@ -929,7 +929,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727804.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "fba23199-a792-5a13-8b8a-26247436d1fa",
@@ -942,7 +942,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419714231.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "34af289e-5e1c-52c5-bdd1-a8eb26585aec",
@@ -955,7 +955,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727798.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "9ca350ad-a429-5ef1-bbb8-2841f5074bff",
@@ -968,7 +968,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419715047.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b6b0bbbe-a98a-55de-be1b-79d1721885e7",
@@ -981,7 +981,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727828.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "14744da6-05c6-5e92-a414-8ffa4ee443b9",
@@ -994,7 +994,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419715092.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "eeef1c3c-8537-51ed-8ddd-b7cc319bd8a4",
@@ -1007,189 +1007,189 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728863.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4b994317-466f-54fb-83fb-7af0249be0cd",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Linguiça de Frango Fininha 1kg",
       "descricao_original": "Linguiça de Frango Fininha Congelada",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419722656.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7094649f-ed01-5359-960c-054e734ce2b2",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Linguiça de Frango Fininha 700g",
       "descricao_original": "Linguiça de Frango Fininha Congelada",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728108.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6ace4ce4-3fe7-5ea0-a4a2-263a9ef009cd",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Linguiça de Frango Fininha 700g",
       "descricao_original": "Linguiça de Frango Fininha Resfriada 700g",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Resfriado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728092.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "68866c88-2673-528b-a4d3-22cd6588fd86",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Linguiça de Frango Grossa 5kg",
       "descricao_original": "Linguiça de Frango Grossa Congelada",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 5000,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419722274.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4a465a53-9317-5cef-a133-e4bcc5432e1e",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Linguiça de Frango Grossa 1kg",
       "descricao_original": "Linguiça de Frango Grossa Congelada",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419722663.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f25bda40-1b94-52bd-ac2f-826c77ecb159",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Linguiça de Frango Petisco 700g",
       "descricao_original": "Linguiça de Frango Petisco Congelada",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419727439.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "349ad5d8-05e1-5585-b5f3-8bdc89465058",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Fígado 700g",
       "descricao_original": "Fígado",
-      "classe": "Miúdos",
+      "classe": "Aves",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419729211.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e38004a6-8738-5dcd-a91f-c0b8aae2e552",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Brócolis 300g",
       "descricao_original": "Brócolis Congelado",
-      "classe": "Vegetais",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419724612.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "09e6411d-10bb-583f-95ab-8a5bb712558b",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Ervilhas 1,1kg",
       "descricao_original": "Ervilhas Congeladas",
-      "classe": "Vegetais",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 1100,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419724582.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "dea5befc-67b2-55a0-883e-365f84eec38c",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Ervilhas 300g",
       "descricao_original": "Ervilhas Congeladas",
-      "classe": "Vegetais",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419724599.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "55b26e57-9f7d-5123-b611-752bab003655",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Mix de Vegetais 300g",
       "descricao_original": "Mix de Vegetais Congelado",
-      "classe": "Vegetais",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419724537.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4f049f08-bb0d-5b65-95b6-84542c3b485e",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Seleta de Legumes 1,1kg",
       "descricao_original": "Seleta de Legumes Congeladas",
-      "classe": "Vegetais",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 1100,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419724483.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4252bddd-39fd-5e01-a677-7c1b3e16f716",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Seleta de Legumes 300g",
       "descricao_original": "Seleta de Legumes Congeladas",
-      "classe": "Vegetais",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419724490.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6b8306ca-e47e-5060-8f60-1cbacab902be",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Tirinhas Empanadas 1,5kg",
       "descricao_original": "Tirinhas Empanadas",
-      "classe": "Empanados",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 1500,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419714064.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5447ce04-24a2-5833-b9b8-8b1207e0def9",
@@ -1202,20 +1202,20 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419731160.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5ede6a56-8f89-56ee-a34f-ad50e0d0a76e",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Coxinha da Asa Temperadas IQF 700g",
       "descricao_original": "Coxinha da Asa Temperadas IQF",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419730194.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "fbdf1846-7832-5c28-913e-cd6cb9ba536f",
@@ -1228,7 +1228,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419730774.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "a29a229d-5d72-5520-85d2-9cb51965b007",
@@ -1241,46 +1241,46 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419730200.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5b01914e-b69f-5dc9-ad02-cdf700455ec8",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Linguiça de Frango Grossa 700g",
       "descricao_original": "Linguiça de Frango Grossa Congelada",
-      "classe": "Aves",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728115.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f0347bb8-623a-5edf-a910-0274f6199256",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Coração 700g",
       "descricao_original": "Coração",
-      "classe": "Miúdos",
+      "classe": "Aves",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419729198.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c1171923-1431-5a14-be77-1cca261b46ae",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Moela 700g",
       "descricao_original": "Moela",
-      "classe": "Miúdos",
+      "classe": "Aves",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419729204.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "46e66b20-337c-5700-b5d4-05973f93544a",
@@ -1293,33 +1293,33 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419730224.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6d92bb9d-ce2d-564b-9065-d4318a850f55",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Brócolis 1,1kg",
       "descricao_original": "Brócolis Congelado",
-      "classe": "Vegetais",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 1100,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419720010.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "1674fdc1-1be8-5fb5-9929-a60f3883b640",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Couve-Flor 1,1kg",
       "descricao_original": "Couve-Flor Congelado",
-      "classe": "Vegetais",
+      "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
       "peso_gramas": 1100,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419720003.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7f450a7f-5e0a-55d7-9bfa-c2f97e8dd6a2",
@@ -1332,20 +1332,20 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419730842.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f7b83c9b-6529-54f2-b0f3-d29deb51ded1",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Tirinhas Empanadas 700g",
       "descricao_original": "Tirinhas Empanadas",
-      "classe": "Empanados",
+      "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419725343.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e1d1c141-5079-5d02-98af-405a5a0c7897",
@@ -1358,7 +1358,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419721116.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e77e200b-bfc5-5381-a647-2b30195a6b77",
@@ -1371,7 +1371,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7896419723233.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c9fa059f-20dd-509e-8b49-8eb12f7a6a33",
@@ -1384,7 +1384,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419730187.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "902f76be-811b-58d1-905e-b7ca43078a96",
@@ -1397,7 +1397,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419730767.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e7c41414-6bc7-513f-ba11-34cacfa92103",
@@ -1410,20 +1410,20 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419730217.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2d2c1312-f9aa-50b5-8064-7bca9f20cac8",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
       "descricao_padronizada": "Coração Temperado 700g",
       "descricao_original": "Coração Temperado",
-      "classe": "Temperados",
+      "classe": "Aves",
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419729181.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6fc73921-1146-5a00-8bde-ea40b1015091",
@@ -1436,7 +1436,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728955.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b7db4621-64f4-5f70-8384-1cdb6286ce83",
@@ -1449,7 +1449,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728948.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "61b0ac03-51f5-5b72-96dc-f2900427a3c4",
@@ -1462,7 +1462,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7896419728931.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     }
   ],
   "codigos_barras": [
@@ -1473,7 +1473,7 @@
       "codigo": "7896419730729",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "ebe174da-779f-57ea-91f4-6b41283353f1",
@@ -1482,7 +1482,7 @@
       "codigo": "17896419730726",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "04d69622-3385-5efd-bfb9-92661af4e4e0",
@@ -1491,7 +1491,7 @@
       "codigo": "281093",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e82e9fa1-4e87-53a6-95f7-ec108b1e073c",
@@ -1500,7 +1500,7 @@
       "codigo": "7896419731917",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "81d67f33-076d-5d75-a6d3-c37fee13287b",
@@ -1509,7 +1509,7 @@
       "codigo": "17896419731914",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "204e3d58-aafd-570a-a700-d09d9bd9dd0c",
@@ -1518,7 +1518,7 @@
       "codigo": "311635",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "8235625c-2813-58a1-a519-9e5205e950b8",
@@ -1527,7 +1527,7 @@
       "codigo": "7896419731801",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d3213650-8539-5c36-8077-f68d7e8e76fc",
@@ -1536,7 +1536,7 @@
       "codigo": "17896419731808",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "04b49443-d569-5231-ace1-62bc9650e876",
@@ -1545,7 +1545,7 @@
       "codigo": "310812",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "8d4a8c29-c77c-549b-b7ab-c862693eaacb",
@@ -1554,7 +1554,7 @@
       "codigo": "7896419731900",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6c2580c9-fe22-5e4d-8308-3f63fd32a70f",
@@ -1563,7 +1563,7 @@
       "codigo": "17896419731907",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "51e16d69-0112-58d2-bf90-a7bef1df51a6",
@@ -1572,7 +1572,7 @@
       "codigo": "311632",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "611bdbe1-c62d-50a3-8dee-4d9c370eb5d3",
@@ -1581,7 +1581,7 @@
       "codigo": "7896419720270",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7dfbfbf4-45c8-5bb7-833c-4e7cfdbfea4d",
@@ -1590,7 +1590,7 @@
       "codigo": "17896419720277",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e1ea483a-65c7-5d26-a1c9-2ba9008934a4",
@@ -1599,7 +1599,7 @@
       "codigo": "59605",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5643809b-f6ed-50c0-baa2-72f3bc1b637b",
@@ -1608,7 +1608,7 @@
       "codigo": "7896419720287",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "36ad101d-65ea-5793-bb7b-d0a5d1de9ab0",
@@ -1617,7 +1617,7 @@
       "codigo": "17896419720284",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2b0835ef-9d78-5c24-8e37-3a70e34411c3",
@@ -1626,7 +1626,7 @@
       "codigo": "59604",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c8883bb3-a282-57a8-82b8-bd53d565fc58",
@@ -1635,7 +1635,7 @@
       "codigo": "7896419730705",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7203cad1-d4c7-557d-b661-7ed3ad97911f",
@@ -1644,7 +1644,7 @@
       "codigo": "17896419730702",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f5b056d2-4a02-5d50-a260-ffb61c173049",
@@ -1653,7 +1653,7 @@
       "codigo": "280246",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "17dcf771-4075-532b-97af-ab4a09706217",
@@ -1662,7 +1662,7 @@
       "codigo": "7896419730347",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5e43c583-ab0e-5e4b-90c5-cec59f6e8711",
@@ -1671,7 +1671,7 @@
       "codigo": "17896419730344",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3b7be69e-bdca-56b2-9291-7723688d55b0",
@@ -1680,7 +1680,7 @@
       "codigo": "262634",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5ed266a5-a6e6-5d5c-90db-a5a18dd27a04",
@@ -1689,7 +1689,7 @@
       "codigo": "7896419724384",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "765e5f76-6e42-5f23-aa28-2e9240cca417",
@@ -1698,7 +1698,7 @@
       "codigo": "17896419724381",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "26aad134-7af4-59c4-a2ec-6191249411c9",
@@ -1707,7 +1707,7 @@
       "codigo": "123050",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "a5205e4f-0ad2-5862-89b3-9a95c5fd53ac",
@@ -1716,7 +1716,7 @@
       "codigo": "7896419712770",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "90860769-bbe6-57f3-84e9-71fd04c5c17a",
@@ -1725,7 +1725,7 @@
       "codigo": "17896419712777",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "95486365-bce7-5255-b3da-c8d89491a9f6",
@@ -1734,7 +1734,7 @@
       "codigo": "666198",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5f1449e5-a6c3-58c6-b62a-0983357be478",
@@ -1743,7 +1743,7 @@
       "codigo": "7896419728887",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "64b573b4-ab9e-5608-8e35-6f7299ba2271",
@@ -1752,7 +1752,7 @@
       "codigo": "17896419728884",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "afbe9949-85fd-5153-933f-1d6d3d007f94",
@@ -1761,7 +1761,7 @@
       "codigo": "203889",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e78a4207-0977-5787-88d5-9424d8c531f7",
@@ -1770,7 +1770,7 @@
       "codigo": "7896419727286",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e92cf5cd-46a5-5411-84b1-0a83cba026c0",
@@ -1779,7 +1779,7 @@
       "codigo": "17896419727283",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3a09fb9b-d023-55f8-b067-14a72bd74618",
@@ -1788,7 +1788,7 @@
       "codigo": "163687",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "8730a1b1-cc2a-5921-bf2f-7414f93aba0d",
@@ -1797,7 +1797,7 @@
       "codigo": "7896419728900",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "57a6350e-7ebd-5f6d-80db-655606720e95",
@@ -1806,7 +1806,7 @@
       "codigo": "17896419728907",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2e3cb440-5cbe-51f2-977d-dd48d720c6aa",
@@ -1815,7 +1815,7 @@
       "codigo": "203898",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "fc6ab126-3a8c-5765-94cf-203bae752b2a",
@@ -1824,7 +1824,7 @@
       "codigo": "7896419728894",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4505f8e1-ce18-5969-ac0a-ec364e85a114",
@@ -1833,7 +1833,7 @@
       "codigo": "17896419728891",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "548a0e5e-5a8a-59b7-aabd-e00c6095bcc1",
@@ -1842,7 +1842,7 @@
       "codigo": "203892",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "0233b7e7-061a-5a51-ad53-aa18b5e2244c",
@@ -1851,7 +1851,7 @@
       "codigo": "7896419727309",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "a0140234-6fcc-5ffd-8cbd-a5a509ec10b9",
@@ -1860,7 +1860,7 @@
       "codigo": "17896419727306",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3335f9ec-4964-57fc-a44f-fdc2a1793d9b",
@@ -1869,7 +1869,7 @@
       "codigo": "163697",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5d7a1866-6ee5-5ce4-9103-433b012ae317",
@@ -1878,7 +1878,7 @@
       "codigo": "7896419728870",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "05cc0440-c9de-5765-b23b-4bf242a25253",
@@ -1887,7 +1887,7 @@
       "codigo": "17896419728877",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d5c1f0ad-056f-5a13-a199-d9863d8696e5",
@@ -1896,7 +1896,7 @@
       "codigo": "203885",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "13c960d8-7013-529d-a3b5-8e9d0897d4a3",
@@ -1905,7 +1905,7 @@
       "codigo": "7896419727316",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4f2b1245-b49a-5411-816c-f56b1a8842f1",
@@ -1914,7 +1914,7 @@
       "codigo": "17896419727313",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "cbebdded-d621-537e-af65-69fee6f3c396",
@@ -1923,7 +1923,7 @@
       "codigo": "163703",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "ef26c7fa-b021-527f-9e8a-a2dcd68a64c5",
@@ -1932,7 +1932,7 @@
       "codigo": "7896419728917",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "30acbfe2-8bc3-53e6-9247-de9a396d7ea7",
@@ -1941,7 +1941,7 @@
       "codigo": "17896419728914",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f4667f98-d175-593c-ae90-38c7975ae8f2",
@@ -1950,7 +1950,7 @@
       "codigo": "203907",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b78f8767-f06b-5fb9-ad4c-28e1abeede35",
@@ -1959,7 +1959,7 @@
       "codigo": "7896419727323",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "8dda3862-aedc-57df-8150-1b760b165a39",
@@ -1968,7 +1968,7 @@
       "codigo": "17896419727320",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "18ddfb84-0564-505c-8978-daac5fec4966",
@@ -1977,7 +1977,7 @@
       "codigo": "163708",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3188bfcc-6815-5fc1-91d7-b925cbd68881",
@@ -1986,7 +1986,7 @@
       "codigo": "7896419727279",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3ee2d0e1-31ca-5c8d-b625-e4190e1d98c2",
@@ -1995,7 +1995,7 @@
       "codigo": "17896419727276",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "62982774-2585-5973-ab7b-f2a282639bd7",
@@ -2004,7 +2004,7 @@
       "codigo": "163683",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "24e978f8-1e48-5134-ab3e-6c09c7b1f745",
@@ -2013,7 +2013,7 @@
       "codigo": "7896419728078",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4ef2138f-9b9a-591b-ac43-45831367f0e8",
@@ -2022,7 +2022,7 @@
       "codigo": "17896419728075",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e9babc28-41d3-516b-8d81-553304740b16",
@@ -2031,7 +2031,7 @@
       "codigo": "179655",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e682dd44-c555-52d6-bb17-71110ed9ea3f",
@@ -2040,7 +2040,7 @@
       "codigo": "7896419728047",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "1f1fb61d-4334-5caf-adad-35dd851d07bc",
@@ -2049,7 +2049,7 @@
       "codigo": "17896419728044",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5f1659df-feb0-5708-86cb-3b46a57599a4",
@@ -2058,7 +2058,7 @@
       "codigo": "178651",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "8b3a4d1b-b598-5ae2-8677-ae9f1ddd762b",
@@ -2067,7 +2067,7 @@
       "codigo": "7896419728023",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bb01e58e-8409-5e93-96fc-fa7051de8752",
@@ -2076,7 +2076,7 @@
       "codigo": "17896419728020",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2de6b27d-ad7b-5623-ad55-47eee0925ef2",
@@ -2085,7 +2085,7 @@
       "codigo": "178580",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "764ad4a3-212e-5271-9935-002a862275fb",
@@ -2094,7 +2094,7 @@
       "codigo": "7896419728085",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b7ad21ce-b26e-575b-8e9e-3cacfa37fdcc",
@@ -2103,7 +2103,7 @@
       "codigo": "17896419728082",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2fd630d3-f73c-5460-966e-726ea74b98d0",
@@ -2112,7 +2112,7 @@
       "codigo": "179706",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2718bb38-d259-555e-be08-1657aeebb487",
@@ -2121,7 +2121,7 @@
       "codigo": "7896419727996",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6cf064e8-94c5-57df-9159-5751262c9a71",
@@ -2130,7 +2130,7 @@
       "codigo": "17896419727993",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2e4626d6-a6ef-52bb-900c-7daef9560e68",
@@ -2139,7 +2139,7 @@
       "codigo": "178554",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "0d11fa2d-90b7-5fca-aeaa-a0a9295d9a38",
@@ -2148,7 +2148,7 @@
       "codigo": "7896419728030",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "aa5c36df-ab65-5c3e-bd02-47bf63949a5d",
@@ -2157,7 +2157,7 @@
       "codigo": "17896419728037",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b42de030-22b7-5543-a3ab-a740f2cec9ff",
@@ -2166,7 +2166,7 @@
       "codigo": "178648",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "edd610ba-60e8-5413-aa3b-55367c949f7f",
@@ -2175,7 +2175,7 @@
       "codigo": "7896419728009",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "76b16005-0072-51a8-8cc6-83380e785fa1",
@@ -2184,7 +2184,7 @@
       "codigo": "17896419728006",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f23f31ad-b811-51ab-b2aa-24e504d17ddd",
@@ -2193,7 +2193,7 @@
       "codigo": "178557",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "af61b413-f933-5488-a9fe-0ac48c547d11",
@@ -2202,7 +2202,7 @@
       "codigo": "7896419731177",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bc64008e-124b-557e-861c-1675b4ef4b3c",
@@ -2211,7 +2211,7 @@
       "codigo": "17896419731174",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "eb4d4ca2-75f1-57f3-bfc2-703c6a54a7df",
@@ -2220,7 +2220,7 @@
       "codigo": "304844",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3ca9f4e5-b2a7-52ec-ac2c-422ff488e358",
@@ -2229,7 +2229,7 @@
       "codigo": "7896419728757",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6446c408-c0b7-548f-af04-f839ed5d8e45",
@@ -2238,7 +2238,7 @@
       "codigo": "27896419728751",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d95c9d6a-4fee-5b32-9864-81d80dd8b4c8",
@@ -2247,7 +2247,7 @@
       "codigo": "200667",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "755387ad-3abf-5e5a-a7e9-d60f308ff791",
@@ -2256,7 +2256,7 @@
       "codigo": "7896419728740",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5d03adde-bfbe-5042-b221-9e6e82afb319",
@@ -2265,7 +2265,7 @@
       "codigo": "27896419728744",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "cb6b8901-8dd8-5309-9003-4102355b9773",
@@ -2274,7 +2274,7 @@
       "codigo": "200653",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "cea78221-d0b4-5767-9a41-76516d7101d8",
@@ -2283,7 +2283,7 @@
       "codigo": "7896419728849",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d07aea56-8091-55cb-9cb1-92c16f203142",
@@ -2292,7 +2292,7 @@
       "codigo": "17896419728846",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b8f0a18f-20b4-5e37-937d-deab12975c1a",
@@ -2301,7 +2301,7 @@
       "codigo": "202951",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6e6f4b92-c9ba-5cdd-b5aa-69afee78f4b9",
@@ -2310,7 +2310,7 @@
       "codigo": "7896419728818",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d8bcb27e-9b48-5b9f-bda4-d6ab65851870",
@@ -2319,7 +2319,7 @@
       "codigo": "17896419728815",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "776b180b-be57-579d-9e06-bdbfe0234c5e",
@@ -2328,7 +2328,7 @@
       "codigo": "7896419728825",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "8e71bf8d-67ef-599f-8b2e-e963b5ad267a",
@@ -2337,7 +2337,7 @@
       "codigo": "17896419728822",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "1dd3b0e2-3443-5445-9b11-b8ef349588d1",
@@ -2346,7 +2346,7 @@
       "codigo": "202924",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6ebde4b7-1ac1-574a-94a6-989a23e31dbe",
@@ -2355,7 +2355,7 @@
       "codigo": "7896419714071",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4184db38-98ae-5591-b4c9-6fb4e0fa1fdd",
@@ -2364,7 +2364,7 @@
       "codigo": "17896419714078",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5cc9d24e-69ba-5229-a033-174690178571",
@@ -2373,7 +2373,7 @@
       "codigo": "852326",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4b5e2522-ea1f-5818-83cd-8cf1876a6bc2",
@@ -2382,7 +2382,7 @@
       "codigo": "7896419725336",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6942c72a-c5cb-5f5f-b690-ac5e68e357b0",
@@ -2391,7 +2391,7 @@
       "codigo": "17896419725333",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c189b9cd-7dd3-5d43-acd6-5cc55cdbadd2",
@@ -2400,7 +2400,7 @@
       "codigo": "134875",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "758c91cb-eda3-5747-8877-cc1001f704f9",
@@ -2409,7 +2409,7 @@
       "codigo": "7896419725480",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6daddffe-2cc6-542b-a742-976d9ae1040f",
@@ -2418,7 +2418,7 @@
       "codigo": "17896419725487",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b0f86438-7018-5cf6-ab3c-1389078d81df",
@@ -2427,7 +2427,7 @@
       "codigo": "134904",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "dcd6b14c-b7aa-59b9-bdb6-407c2ed644cc",
@@ -2436,7 +2436,7 @@
       "codigo": "7896419717560",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4cc4f5b3-e8af-5c3a-8c8d-d0ae09c1ab3a",
@@ -2445,7 +2445,7 @@
       "codigo": "17896419717567",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bdaf4242-0c60-556c-ad9a-65a46cc60b16",
@@ -2454,7 +2454,7 @@
       "codigo": "42309",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "11223bde-5463-541f-aa99-5fc19d0fc3ea",
@@ -2463,7 +2463,7 @@
       "codigo": "7896419725329",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "1891f4d3-39be-506f-b691-415fa007d6ec",
@@ -2472,7 +2472,7 @@
       "codigo": "17896419725326",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "32fe4cea-d56c-5d1e-bc20-f917c42d21fc",
@@ -2481,7 +2481,7 @@
       "codigo": "42308",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "05eea196-382c-50d2-9ee5-c91e2f7c9f7a",
@@ -2490,7 +2490,7 @@
       "codigo": "7896419715566",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7de1ffc2-bfab-5bf5-a5ef-b8f5a8cbc3fe",
@@ -2499,7 +2499,7 @@
       "codigo": "17896419715563",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c114ad24-c438-5e90-bd36-321944ae7f96",
@@ -2508,7 +2508,7 @@
       "codigo": "23882",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b594b8a3-cfff-5363-aad3-90787bbeecde",
@@ -2517,7 +2517,7 @@
       "codigo": "7896419716129",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5746e8f9-9dbd-5731-9323-10be552be819",
@@ -2526,7 +2526,7 @@
       "codigo": "17896419716126",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c6916b08-c2a8-5e8a-b6f6-8df8187ec6ae",
@@ -2535,7 +2535,7 @@
       "codigo": "27191",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "60bdae2f-7d01-5d57-8e02-08ec13a8a1b5",
@@ -2544,7 +2544,7 @@
       "codigo": "7896419730156",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "025b0d1e-c68d-547d-b42e-f372123a8e2f",
@@ -2553,7 +2553,7 @@
       "codigo": "17896419730153",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "09d31fd6-639e-57f5-b41f-3fa73514ee4d",
@@ -2562,7 +2562,7 @@
       "codigo": "250120",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3c9c236c-edba-57c3-8487-a8ee18c0b685",
@@ -2571,7 +2571,7 @@
       "codigo": "7896419725459",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "38c71139-1d03-5eb7-9bb3-bcd7ee193e60",
@@ -2580,7 +2580,7 @@
       "codigo": "17896419725456",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "fc5e5c89-9755-5147-8c02-5fd2452b75aa",
@@ -2589,7 +2589,7 @@
       "codigo": "134903",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "a5159fbc-e6d5-55f9-a4ca-8bfa06e71c3d",
@@ -2598,7 +2598,7 @@
       "codigo": "7896419713852",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "9fbbd1b7-cad6-5273-856f-4f7c7292e807",
@@ -2607,7 +2607,7 @@
       "codigo": "17896419713859",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "519807db-516d-5103-a1c1-96f71cd05860",
@@ -2616,7 +2616,7 @@
       "codigo": "852274",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e28ab12e-5fcc-5101-ada1-86f92292c11a",
@@ -2625,7 +2625,7 @@
       "codigo": "17896419723476",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c9b81b4b-1495-5b17-940b-4965b30acfd6",
@@ -2634,7 +2634,7 @@
       "codigo": "100212",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2a25eaf0-14a6-5927-8d6e-a554229cc212",
@@ -2643,7 +2643,7 @@
       "codigo": "7896419729143",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b21daa13-6953-572c-8219-1cdcafa70b13",
@@ -2652,7 +2652,7 @@
       "codigo": "17896419729140",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c4a6b5a1-1742-5904-91df-4abd3619fad1",
@@ -2661,7 +2661,7 @@
       "codigo": "225974",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "97537b17-ae55-5f15-a6f5-55218ce93997",
@@ -2670,7 +2670,7 @@
       "codigo": "7896419721475",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "488599dd-0084-5b67-8cc0-19f959d584a4",
@@ -2679,7 +2679,7 @@
       "codigo": "17896419721472",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "22be4b9e-e0f0-5139-8120-936c15f4a91a",
@@ -2688,7 +2688,7 @@
       "codigo": "75561",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "71d77efc-8c4f-51fd-ade0-0255c8bf0259",
@@ -2697,7 +2697,7 @@
       "codigo": "7896419720799",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "0e033975-0602-5be0-b178-e6dc97fc8dcd",
@@ -2706,7 +2706,7 @@
       "codigo": "17896419721168",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e3f2f5a5-bdd1-5285-b19c-0bc03fb2b946",
@@ -2715,7 +2715,7 @@
       "codigo": "71707",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d209fd0d-47b3-5efe-a1eb-b299713b44b1",
@@ -2724,7 +2724,7 @@
       "codigo": "7896419719977",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bc312f03-7224-5919-852b-82f485655e46",
@@ -2733,7 +2733,7 @@
       "codigo": "17896419721175",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7f0edde8-4cc1-5c5a-bf81-167fcaf0ab53",
@@ -2742,7 +2742,7 @@
       "codigo": "71710",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f6752ae7-c095-5a46-a252-415c01a5fe78",
@@ -2751,7 +2751,7 @@
       "codigo": "7896419721536",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "8d64a25d-c835-562b-a160-9e0b38bbdb53",
@@ -2760,7 +2760,7 @@
       "codigo": "17896419721533",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "61813410-b9b0-5c8d-9a50-6de05eb7cfba",
@@ -2769,7 +2769,7 @@
       "codigo": "78263",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "68d453fc-c3cb-5afc-aa53-eded7625d2e6",
@@ -2778,7 +2778,7 @@
       "codigo": "7896419720386",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "33c57505-5640-5ef2-9ad3-68b5edb432d5",
@@ -2787,7 +2787,7 @@
       "codigo": "17896419721182",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "0d1540ab-4fcf-5b6a-bc8a-f49fe0f9248b",
@@ -2796,7 +2796,7 @@
       "codigo": "71713",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "31d311c5-ba0a-577a-8665-86f46f9ffe05",
@@ -2805,7 +2805,7 @@
       "codigo": "7896419720447",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "9871c9d0-e572-55d1-ada4-52af0600833a",
@@ -2814,7 +2814,7 @@
       "codigo": "17896419721205",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "40bb1f5b-c764-5f37-9db6-dc03e8ccdd49",
@@ -2823,7 +2823,7 @@
       "codigo": "71719",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "891e863f-576f-5010-957c-0853728a750b",
@@ -2832,7 +2832,7 @@
       "codigo": "7896419720393",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4f22e075-e044-5748-aea8-d1ca76037563",
@@ -2841,7 +2841,7 @@
       "codigo": "17896419720390",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2a34ce91-5de1-595b-ba0c-e49219271f6e",
@@ -2850,7 +2850,7 @@
       "codigo": "61707",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "9edf341d-586d-5dff-b980-f79782baa0fe",
@@ -2859,7 +2859,7 @@
       "codigo": "7896419720997",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "fb2e180b-7b49-584b-974b-af4884453c40",
@@ -2868,7 +2868,7 @@
       "codigo": "17896419721212",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "957d5dc3-a991-5d17-b037-17f06bf98375",
@@ -2877,7 +2877,7 @@
       "codigo": "71722",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5b95bb98-5b93-5101-8025-a0878591356b",
@@ -2886,7 +2886,7 @@
       "codigo": "7896419720676",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "cc374890-40b3-52e4-aad0-c6fb876b84a4",
@@ -2895,7 +2895,7 @@
       "codigo": "17896419721267",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "423682e8-545a-596f-9c90-78733e263cec",
@@ -2904,7 +2904,7 @@
       "codigo": "71711",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "1d40bce5-a08f-5c36-8959-13be26226eff",
@@ -2913,7 +2913,7 @@
       "codigo": "7896419720959",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f3585a4c-8f84-5920-acfc-41b67ed53ad6",
@@ -2922,7 +2922,7 @@
       "codigo": "17896419720956",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "99cd3f0e-cdab-5edc-8baa-65961a7a2f38",
@@ -2931,7 +2931,7 @@
       "codigo": "65763",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "1b6ad564-0838-5655-983a-b26cd2edebd4",
@@ -2940,7 +2940,7 @@
       "codigo": "7896419723424",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f233c38c-f454-54fa-8cb5-d96028221103",
@@ -2949,7 +2949,7 @@
       "codigo": "17896419723421",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bbec40f1-9158-5543-bb0d-55ffa80eac34",
@@ -2958,7 +2958,7 @@
       "codigo": "96367",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "9fbdd910-9360-5234-8128-b7f18d2e5bd4",
@@ -2967,7 +2967,7 @@
       "codigo": "7896419723400",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f865e232-aff7-581f-86f7-90df477c3541",
@@ -2976,7 +2976,7 @@
       "codigo": "17896419723407",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "9c1ec5e3-2d13-571b-aece-b3b0d0987139",
@@ -2985,7 +2985,7 @@
       "codigo": "96366",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "9672be96-e030-5ce0-b5e7-01ba64b1a68d",
@@ -2994,7 +2994,7 @@
       "codigo": "7896419720973",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d87e0468-fdee-5528-b85c-48dbfec46c48",
@@ -3003,7 +3003,7 @@
       "codigo": "17896419720970",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d62e1218-4775-5f66-94b5-f0910d587c98",
@@ -3012,7 +3012,7 @@
       "codigo": "65767",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "8b326421-2951-5fbe-b3f2-c24d32ca9504",
@@ -3021,7 +3021,7 @@
       "codigo": "7896419720966",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3082297e-d3b7-5786-8fdb-b302e003e044",
@@ -3030,7 +3030,7 @@
       "codigo": "17896419720963",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "856b67e1-1c2c-579e-b45d-22653987fbef",
@@ -3039,7 +3039,7 @@
       "codigo": "65765",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3c9bfc32-b7c3-5c54-8827-328d76d31291",
@@ -3048,7 +3048,7 @@
       "codigo": "7896419720980",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f1547f99-0319-52f1-8811-82d61bfdf01a",
@@ -3057,7 +3057,7 @@
       "codigo": "17896419720987",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2de5bd60-b858-5e39-a9e3-0cf017506911",
@@ -3066,7 +3066,7 @@
       "codigo": "65766",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6a62148b-e525-590e-88e6-f5ab6cd1436e",
@@ -3075,7 +3075,7 @@
       "codigo": "7896419714224",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "8f4e935b-9c93-5397-a0d2-1949661ebd77",
@@ -3084,7 +3084,7 @@
       "codigo": "17896419714221",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e6e25500-885b-5d1a-814a-0acce7fb4279",
@@ -3093,7 +3093,7 @@
       "codigo": "1015",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "09d2534e-4e50-562f-a202-f5f6caec4a09",
@@ -3102,7 +3102,7 @@
       "codigo": "7896419727811",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c9f46006-ed16-555d-bc16-ae6a7b957dfa",
@@ -3111,7 +3111,7 @@
       "codigo": "17896419727825",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f4898f91-6744-5460-b988-5140683535e8",
@@ -3120,7 +3120,7 @@
       "codigo": "173809",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f44044b3-abb1-5d26-ba68-06daecbcb4af",
@@ -3129,7 +3129,7 @@
       "codigo": "7896419713784",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "692438c7-6d2b-5fe1-a168-bfb7f07801cc",
@@ -3138,7 +3138,7 @@
       "codigo": "17896419713781",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f4de5372-bf76-5aa7-bc8b-237248c3eadd",
@@ -3147,7 +3147,7 @@
       "codigo": "722841",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5bf3a24b-0d51-5b67-aec4-95105d588369",
@@ -3156,7 +3156,7 @@
       "codigo": "7896419727774",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2ff6ab7e-8c63-50dc-8d7d-c5ff77caeb6b",
@@ -3165,7 +3165,7 @@
       "codigo": "17896419727771",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d603e069-bedd-5ca2-8229-f3dfde58c245",
@@ -3174,7 +3174,7 @@
       "codigo": "173766",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bb93846e-58e5-5687-b2f5-60c7111f164c",
@@ -3183,7 +3183,7 @@
       "codigo": "7896419716273",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "461d3f4e-0d3d-5dbb-a2f2-856ffc6762b0",
@@ -3192,7 +3192,7 @@
       "codigo": "17896419716270",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "fe439b4c-e48f-5193-a917-9b62ff0b5d87",
@@ -3201,7 +3201,7 @@
       "codigo": "29248",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4f6cd4e3-64eb-5b6c-bd3d-976de6dfd9e3",
@@ -3210,7 +3210,7 @@
       "codigo": "7896419727859",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "63adbe85-df16-5935-8bba-a3d402881005",
@@ -3219,7 +3219,7 @@
       "codigo": "17896419727856",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2b0e31e4-c636-55e6-b702-90827c815f78",
@@ -3228,7 +3228,7 @@
       "codigo": "173850",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "1e12edcd-ebd1-587e-bb53-97b87f48ae11",
@@ -3237,7 +3237,7 @@
       "codigo": "7896419727835",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "ec25da5a-6cfc-537b-80de-40e35b7c3ec1",
@@ -3246,7 +3246,7 @@
       "codigo": "17896419727832",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b21b1328-0615-5e23-a44a-62cac7b85831",
@@ -3255,7 +3255,7 @@
       "codigo": "173832",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "0c027334-d83c-5e2e-98cb-2b426e7d65b1",
@@ -3264,7 +3264,7 @@
       "codigo": "7896419701637",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5b24ddb5-62c5-5967-b232-829005e08c15",
@@ -3273,7 +3273,7 @@
       "codigo": "17896419701634",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "1374fc86-57b7-5f3f-94a7-27cb10ee41e5",
@@ -3282,7 +3282,7 @@
       "codigo": "29245",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "081c6a03-8898-539f-a23c-93f684c2a3db",
@@ -3291,7 +3291,7 @@
       "codigo": "7896419716280",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "80dc7d33-995c-592a-93e3-9e49dfcf3c8f",
@@ -3300,7 +3300,7 @@
       "codigo": "17896419716287",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "79ceda4f-17eb-55ce-90b3-113797239d87",
@@ -3309,7 +3309,7 @@
       "codigo": "29244",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "05c3666f-6c14-5e90-96cd-a80c1da2edce",
@@ -3318,7 +3318,7 @@
       "codigo": "7896419727804",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c4213fcd-fc06-5050-bc03-e6a1d16c263a",
@@ -3327,7 +3327,7 @@
       "codigo": "17896419727801",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c5a5f003-5579-57ee-b6b9-6aee151dc2e5",
@@ -3336,7 +3336,7 @@
       "codigo": "173781",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "298fc3d0-b4a9-5fd3-b5cc-100e1b8dabdd",
@@ -3345,7 +3345,7 @@
       "codigo": "7896419714231",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3adf81ad-2e18-5f56-8ddc-4c39e82c013c",
@@ -3354,7 +3354,7 @@
       "codigo": "17896419714238",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2ee9c99d-369a-55b6-90f8-fdd120420d9f",
@@ -3363,7 +3363,7 @@
       "codigo": "1016",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "0051b5b7-507f-5e22-b63f-2d89df7e15d0",
@@ -3372,7 +3372,7 @@
       "codigo": "7896419727798",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "ecfcd1f5-8b2b-5eee-9094-eb12f55e5f7d",
@@ -3381,7 +3381,7 @@
       "codigo": "17896419727795",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7dc88af1-20af-526b-8d80-8c46b5184001",
@@ -3390,7 +3390,7 @@
       "codigo": "173776",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7ed7f676-238e-57f1-9d02-9532cb9a4743",
@@ -3399,7 +3399,7 @@
       "codigo": "7896419715047",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "392e4a72-55cd-58a2-9159-d5f45d8cff3f",
@@ -3408,7 +3408,7 @@
       "codigo": "17896419715044",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6dbc8c4f-2dd1-5e63-8839-43be336388ae",
@@ -3417,7 +3417,7 @@
       "codigo": "18399",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "74886f45-7d91-5e8e-810b-42f7a4a78c88",
@@ -3426,7 +3426,7 @@
       "codigo": "7896419727828",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "94ca3014-9164-5e08-aeac-9ffbd91a3e84",
@@ -3435,7 +3435,7 @@
       "codigo": "173826",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5ac6b1d1-af36-512d-a31a-0fc478aadae2",
@@ -3444,7 +3444,7 @@
       "codigo": "7896419715092",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bfc796a5-dc95-5246-8d1a-4b9737f53b7f",
@@ -3453,7 +3453,7 @@
       "codigo": "17896419715099",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "cbbf4a31-df81-5680-af5b-b1b5bdc91070",
@@ -3462,7 +3462,7 @@
       "codigo": "18441",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bf41fa9c-2c3c-5159-a0d1-9c28a3831308",
@@ -3471,7 +3471,7 @@
       "codigo": "7896419728863",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d008d64d-02e2-548e-872b-c3a385a8cefe",
@@ -3480,7 +3480,7 @@
       "codigo": "17896419728860",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "bca4ecf1-a7f0-5acc-8129-cd9e6024dc4b",
@@ -3489,7 +3489,7 @@
       "codigo": "203714",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "ba56dbe0-b02e-5ba7-91f5-34596a7bc1a2",
@@ -3498,7 +3498,7 @@
       "codigo": "7896419722656",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "29fd1456-1f07-5cc0-8b3a-8aa5502739ba",
@@ -3507,7 +3507,7 @@
       "codigo": "17896419722653",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6f6ea087-dee3-5c15-a345-1d38f6e49b56",
@@ -3516,7 +3516,7 @@
       "codigo": "87787",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "fb8dfed1-080b-501c-8fce-97c238f2c185",
@@ -3525,7 +3525,7 @@
       "codigo": "7896419728108",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5bc1abfc-c662-56d5-9560-29eb06d7e99b",
@@ -3534,7 +3534,7 @@
       "codigo": "17896419728105",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e3f3243b-aa5e-5d55-b609-c46e4f5f65a0",
@@ -3543,7 +3543,7 @@
       "codigo": "179787",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4073b964-2160-5a62-a973-332629b508eb",
@@ -3552,7 +3552,7 @@
       "codigo": "7896419728092",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2e12e789-6b9a-54b2-8b95-c1d3a5df099c",
@@ -3561,7 +3561,7 @@
       "codigo": "17896419728099",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "4949930a-3844-509c-a0c1-839dbe5e0b3c",
@@ -3570,7 +3570,7 @@
       "codigo": "179770",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f405582d-95dd-5ba7-997e-0dec0d82a37e",
@@ -3579,7 +3579,7 @@
       "codigo": "7896419722274",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "a5153f4d-52ce-5155-913c-2cc8730001dd",
@@ -3588,7 +3588,7 @@
       "codigo": "17896419722271",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "770fe91f-39c2-5897-97c8-45b2fbb08769",
@@ -3597,7 +3597,7 @@
       "codigo": "84559",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e7b7f552-0df6-5cdd-b4ee-2fe64b73f4bd",
@@ -3606,7 +3606,7 @@
       "codigo": "7896419722663",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "9f071d68-590d-5e31-a022-1cfb193fcc82",
@@ -3615,7 +3615,7 @@
       "codigo": "17896419722660",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "96b60e12-319c-579f-ad87-c0d0fce159c9",
@@ -3624,7 +3624,7 @@
       "codigo": "87788",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e6508c35-8659-55fb-a6df-7cd5f40b0aff",
@@ -3633,7 +3633,7 @@
       "codigo": "7896419727439",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "51d89e13-516f-59b2-83ef-01115abf2936",
@@ -3642,7 +3642,7 @@
       "codigo": "17896419727436",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "0e5f8aa3-63ac-5353-b1ab-89b48b7d6c1a",
@@ -3651,7 +3651,7 @@
       "codigo": "164035",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6fb7315e-41e6-51b6-aa47-080640025830",
@@ -3660,7 +3660,7 @@
       "codigo": "7896419729211",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "502e94b1-64b0-53bf-b2da-f0ddadd6c17b",
@@ -3669,7 +3669,7 @@
       "codigo": "17896419729218",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "34db7586-a7a6-5898-add9-15876cd86561",
@@ -3678,7 +3678,7 @@
       "codigo": "230041",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "fe4ade8f-857c-55bb-8789-5dffd3b7d4a3",
@@ -3687,7 +3687,7 @@
       "codigo": "7896419724612",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "936bb89c-fbe8-5b76-a273-2b22c359c912",
@@ -3696,7 +3696,7 @@
       "codigo": "17896419724619",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c8493f06-87b0-54c0-b25c-55987500b09e",
@@ -3705,7 +3705,7 @@
       "codigo": "123021",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5a26f02c-8a3e-532b-8962-0d73a7ebd202",
@@ -3714,7 +3714,7 @@
       "codigo": "7896419724582",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "43aa60a2-08c8-51b3-8ee1-84d35344f361",
@@ -3723,7 +3723,7 @@
       "codigo": "17896419724589",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "3b4b3750-e794-5d62-9f21-4dfe4b18487d",
@@ -3732,7 +3732,7 @@
       "codigo": "123025",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "48cd595a-1219-5522-84ab-ca75ca6a25ca",
@@ -3741,7 +3741,7 @@
       "codigo": "7896419724599",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "05bd1d30-6f03-5c4b-a360-962b56df00ff",
@@ -3750,7 +3750,7 @@
       "codigo": "17896419724596",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "0218112b-a524-5341-a544-2ae17c33a2a8",
@@ -3759,7 +3759,7 @@
       "codigo": "123027",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d7ddbb2a-c871-5a6e-83e3-89d80d49b4f3",
@@ -3768,7 +3768,7 @@
       "codigo": "7896419724537",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c5108bbc-d9c3-53b1-867b-4693a4ec4f50",
@@ -3777,7 +3777,7 @@
       "codigo": "17896419724534",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "087b03b2-3155-5d10-8e1c-0db4ac5def9c",
@@ -3786,7 +3786,7 @@
       "codigo": "123040",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7eed5bc3-42cd-57f5-b203-0f8245c75e33",
@@ -3795,7 +3795,7 @@
       "codigo": "7896419724483",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e162c91e-6f5b-5aea-b29a-f22b5c0bda4a",
@@ -3804,7 +3804,7 @@
       "codigo": "17896419724480",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "13fd7772-1222-5c37-b19c-eb91ce2a1270",
@@ -3813,7 +3813,7 @@
       "codigo": "123043",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "672177de-b71c-5eeb-9c1c-a8eda976aa26",
@@ -3822,7 +3822,7 @@
       "codigo": "7896419724490",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "737bca2b-a134-51cf-a19d-e1f83958b9b3",
@@ -3831,7 +3831,7 @@
       "codigo": "17896419724497",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "2247d8a1-5741-59e5-a0e4-1f8e95896b97",
@@ -3840,7 +3840,7 @@
       "codigo": "123045",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "22991714-bd61-5fbf-abc0-b4dab3b532d6",
@@ -3849,7 +3849,7 @@
       "codigo": "7896419714064",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c63fdc6f-c95e-5f3c-b4c5-4f46a87068fb",
@@ -3858,7 +3858,7 @@
       "codigo": "17896419714061",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "73513043-4fa3-5d15-966e-da77c1d33e93",
@@ -3867,7 +3867,7 @@
       "codigo": "852313",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "def125e0-66e5-5ff8-bc7e-491c7b5efdad",
@@ -3876,7 +3876,7 @@
       "codigo": "7896419731160",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "ba536b4c-296b-536d-9516-7c5c8e80f026",
@@ -3885,7 +3885,7 @@
       "codigo": "78964197311671",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "02a368e8-9c9a-5804-bdbc-5fe3327a9038",
@@ -3894,7 +3894,7 @@
       "codigo": "304568",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f44f0c17-a0a7-5da9-bf60-da9811cc0707",
@@ -3903,7 +3903,7 @@
       "codigo": "7896419730194",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6d13a834-196b-555e-920b-8b12e65cdf84",
@@ -3912,7 +3912,7 @@
       "codigo": "17896419730191",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "0d8b6aab-de4a-594a-8331-d6d29c2db295",
@@ -3921,7 +3921,7 @@
       "codigo": "253396",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "9e268d5c-c297-5f4d-b4ee-e81beb16218d",
@@ -3930,7 +3930,7 @@
       "codigo": "7896419730774",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6834dc85-5361-51ce-ac20-4c5ae5da84f1",
@@ -3939,7 +3939,7 @@
       "codigo": "17896419730771",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "92e6e085-7f73-5e34-84f0-5591fc36b842",
@@ -3948,7 +3948,7 @@
       "codigo": "291081",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "350d82f6-df1e-53ca-9172-4bdaa3984c63",
@@ -3957,7 +3957,7 @@
       "codigo": "7896419730200",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "35d7e1f6-71ef-56d3-8bbd-a2163bc503f9",
@@ -3966,7 +3966,7 @@
       "codigo": "17896419730207",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d546512b-0f37-5c5f-b89a-6e4c8e2695d0",
@@ -3975,7 +3975,7 @@
       "codigo": "253411",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "59301e35-cf85-5dc6-ac85-5eea4bba28e0",
@@ -3984,7 +3984,7 @@
       "codigo": "7896419728115",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "1b30eb95-e5ce-5573-9b10-61b88cf11c62",
@@ -3993,7 +3993,7 @@
       "codigo": "17896419728112",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c7b08a19-d755-5f8c-904f-6ab45c388073",
@@ -4002,7 +4002,7 @@
       "codigo": "179824",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "25482392-cb08-569c-bb84-cb09737239c5",
@@ -4011,7 +4011,7 @@
       "codigo": "7896419729198",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "e67f975b-bf60-583a-b3ab-c8c2173d1ff1",
@@ -4020,7 +4020,7 @@
       "codigo": "17896419729195",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c0fa754e-3d2c-5476-b5fb-d27e56f02960",
@@ -4029,7 +4029,7 @@
       "codigo": "230002",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5151b751-98d3-5785-a37e-8ba6b53d8330",
@@ -4038,7 +4038,7 @@
       "codigo": "7896419729204",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "96c854da-7aec-5eab-a427-1882396d63e2",
@@ -4047,7 +4047,7 @@
       "codigo": "17896419729201",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "cf471aec-dbf3-53e4-9709-65300076f7b1",
@@ -4056,7 +4056,7 @@
       "codigo": "230026",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "942c2fe4-fa4f-5cee-8ae7-e48377a3a0e4",
@@ -4065,7 +4065,7 @@
       "codigo": "7896419730224",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "57c38827-8044-5fdf-bac9-2c35159651f8",
@@ -4074,7 +4074,7 @@
       "codigo": "17896419730221",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c774213a-0439-5468-a681-077e585bb9f1",
@@ -4083,7 +4083,7 @@
       "codigo": "253889",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "73ffb6a2-239b-5d61-913b-d1a841a1bb40",
@@ -4092,7 +4092,7 @@
       "codigo": "7896419720010",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f32aa0cd-8869-5f8a-8580-348d969f4ca5",
@@ -4101,7 +4101,7 @@
       "codigo": "17896419720017",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "acbc19f6-4987-5747-8487-8457d209aa88",
@@ -4110,7 +4110,7 @@
       "codigo": "102007",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "76478fa8-941e-519c-a13d-5a2d18031cb1",
@@ -4119,7 +4119,7 @@
       "codigo": "7896419720003",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "578e5993-c356-59af-b43e-2ffd54477dd4",
@@ -4128,7 +4128,7 @@
       "codigo": "17896419720000",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "a8e157c7-fa18-5bca-bfa3-3399e4a46beb",
@@ -4137,7 +4137,7 @@
       "codigo": "123022",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "240f79e2-75e3-58c4-8dd3-129c4bb5d0a5",
@@ -4146,7 +4146,7 @@
       "codigo": "7896419730842",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "702cf3cc-227c-5f49-9818-86017df2741e",
@@ -4155,7 +4155,7 @@
       "codigo": "17896419720146",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7cf22947-21dc-52f2-a0fb-a0e6118d7990",
@@ -4164,7 +4164,7 @@
       "codigo": "249060",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d07ff11c-03b2-5e62-a70e-97c4a9768f8f",
@@ -4173,7 +4173,7 @@
       "codigo": "7896419725343",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "c5715bd6-b435-5ae3-b573-82f9301a486a",
@@ -4182,7 +4182,7 @@
       "codigo": "17896419725340",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "0c77dec1-0d05-5691-9b4b-c871f0f7499f",
@@ -4191,7 +4191,7 @@
       "codigo": "134873",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7cae3f42-4f12-5e50-8842-beffa55e865a",
@@ -4200,7 +4200,7 @@
       "codigo": "7896419721116",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "506b6489-bee2-5eb0-98a9-2f66d5b17867",
@@ -4209,7 +4209,7 @@
       "codigo": "17896419721113",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "26234eef-8ef6-566b-a385-0c7751fe4687",
@@ -4218,7 +4218,7 @@
       "codigo": "71367",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f195c012-5455-5424-8d98-a32f1cadca54",
@@ -4227,7 +4227,7 @@
       "codigo": "7896419723233",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "d307613d-caad-54eb-a628-bf06e5c58240",
@@ -4236,7 +4236,7 @@
       "codigo": "17896419723230",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b33dbacd-1112-5f53-9526-4eb3d3d92d2c",
@@ -4245,7 +4245,7 @@
       "codigo": "94633",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "7d5f3f78-0a6d-594c-b2dd-3c7a65848c3a",
@@ -4254,7 +4254,7 @@
       "codigo": "7896419730187",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "0002d216-5732-5695-979a-7c6a9a69d4d5",
@@ -4263,7 +4263,7 @@
       "codigo": "17896419730184",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "31fe60dc-e3c7-5d2f-9268-d9506e17a047",
@@ -4272,7 +4272,7 @@
       "codigo": "253387",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "17ad3b74-11dc-56a1-a74e-8f6407a9ea00",
@@ -4281,7 +4281,7 @@
       "codigo": "7896419730767",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5e3fa092-6465-556c-9c0f-502ab365e6bd",
@@ -4290,7 +4290,7 @@
       "codigo": "17896419730764",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "710e2228-709b-56bf-be3b-f2436051210c",
@@ -4299,7 +4299,7 @@
       "codigo": "291074",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "13baadec-2589-5a21-aabe-02fc3c2aad5a",
@@ -4308,7 +4308,7 @@
       "codigo": "7896419730217",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "72241dd0-690d-5956-bbeb-19dd2ccfd05d",
@@ -4317,7 +4317,7 @@
       "codigo": "17896419730214",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "5d3bd63f-6151-5910-9bc7-2c98ca65037f",
@@ -4326,7 +4326,7 @@
       "codigo": "253416",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "20b57ebc-b887-5fe5-81ae-71927ef5aa07",
@@ -4335,7 +4335,7 @@
       "codigo": "7896419729181",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "06acedd4-23a9-5b35-a702-9c8b34a27c83",
@@ -4344,7 +4344,7 @@
       "codigo": "17896419729188",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "068e9f03-e5ef-5fc0-a28e-febf089e1400",
@@ -4353,7 +4353,7 @@
       "codigo": "229642",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "6ce99c2f-5d05-5d09-9388-91c152118f19",
@@ -4362,7 +4362,7 @@
       "codigo": "7896419728955",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b8032861-95e8-5d0d-a037-f4a06442088c",
@@ -4371,7 +4371,7 @@
       "codigo": "17896419728952",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "49543793-9f39-5dc7-a476-fa6d5b4d931f",
@@ -4380,7 +4380,7 @@
       "codigo": "206879",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "47ac678e-8c07-5cf4-a9c3-01f95f5184ba",
@@ -4389,7 +4389,7 @@
       "codigo": "7896419728948",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "48684534-24ea-5a34-9f04-69d50930654d",
@@ -4398,7 +4398,7 @@
       "codigo": "17896419728945",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "260cfea4-73ad-549b-a9df-26556a843b53",
@@ -4407,7 +4407,7 @@
       "codigo": "206863",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "f238fbec-8220-54c8-8555-8551f93ea398",
@@ -4416,7 +4416,7 @@
       "codigo": "7896419728931",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b66e4578-07bb-5871-bff4-bd1a392924a5",
@@ -4425,7 +4425,7 @@
       "codigo": "17896419728938",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     },
     {
       "id": "b9b88c3b-45cb-5ccd-bc4d-a728b1a7fee4",
@@ -4434,7 +4434,7 @@
       "codigo": "206854",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-21T12:51:11.755Z"
+      "criado_em": "2026-08-23T06:12:11.848Z"
     }
   ],
   "pending_images_approval": []

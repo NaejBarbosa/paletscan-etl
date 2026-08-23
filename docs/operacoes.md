@@ -48,47 +48,62 @@ etl-pipeline
 
 ▶ [10h 51min 10s] 3. Sanitização PostgreSQL
   Desc: Normalização Title Case & Modulus 10 EAN-13
-✔ [10h 51min 18s] Status: SUCESSO (Duração: 7.82s)
+✔ [10h 51min 18s] Status: SUCESSO (Duração desta etapa: 7.82s)
 
 ▶ [10h 51min 18s] 4. Publicação PWA
   Desc: Geração de produtos.json purificado para o PWA
-✔ [10h 51min 23s] Status: SUCESSO (Duração: 4.91s)
+✔ [10h 51min 23s] Status: SUCESSO (Duração desta etapa: 4.91s)
 
 ▶ [10h 51min 23s] 5. Auditoria de Integridade
   Desc: Auditoria exaustiva contra anomalias e órfãos
-✔ [10h 51min 28s] Status: SUCESSO (Duração: 4.85s)
+✔ [10h 51min 28s] Status: SUCESSO (Duração desta etapa: 4.85s)
 
-────────────────────────────────────
-📋 RELATÓRIO DE EXECUÇÃO DO ETL
-────────────────────────────────────
- 📅 Data:           12/08/2026
- ⏰ Horário Início: 10h 49min 15s
- 🏁 Horário Fim:    10h 51min 28s
- ⏱️  Tempo Total:    2min 13.10s
-────────────────────────────────────
+────────────────────────────────────────────────────────────────────────
+📋 RELATÓRIO CONSOLIDADO DO PROCESSAMENTO ETL
+────────────────────────────────────────────────────────────────────────
+ 📅 Início Geral do Pipeline : 12/08/2026 10:49:15
+ 🏁 Término Geral do Pipeline: 12/08/2026 10:51:28
+ ⏱️  Tempo Total do Pipeline  : 2min 13.10s
+────────────────────────────────────────────────────────────────────────
+
+📊 CRONOGRAMA CONSOLIDADO POR ETAPA:
+
+┌────────────────────────────────────┬──────────────┬──────────────┬──────────────┬────────┐
+│ Etapa                              │ Início       │ Término      │ Duração      │ Status │
+├────────────────────────────────────┼──────────────┼──────────────┼──────────────┼────────┤
+│ 1. Scrapers Multi-Fornecedores     │ 10h 49min 15s│ 10h 50min 35s│  1min 20.12s │  ✔ OK  │
+│ 2. Sincronização Supabase          │ 10h 50min 35s│ 10h 51min 10s│       35.40s │  ✔ OK  │
+│ 3. Sanitização PostgreSQL          │ 10h 51min 10s│ 10h 51min 18s│        7.82s │  ✔ OK  │
+│ 4. Publicação PWA                  │ 10h 51min 18s│ 10h 51min 23s│        4.91s │  ✔ OK  │
+│ 5. Auditoria de Integridade        │ 10h 51min 23s│ 10h 51min 28s│        4.85s │  ✔ OK  │
+├────────────────────────────────────┼──────────────┼──────────────┼──────────────┼────────┤
+│ 🏁 TEMPO TOTAL DO PIPELINE         │ 10h 49min 15s│ 10h 51min 28s│  2min 13.10s │  ✔ OK  │
+└────────────────────────────────────┴──────────────┴──────────────┴──────────────┴────────┘
+
+────────────────────────────────────────────────────────────────────────
 📌 DETALHAMENTO DE CADA ETAPA:
 
 ✅ 1. Scrapers Multi-Fornecedores
-   ├─ Início  : 10h 49min 15s
-   ├─ Término : 10h 50min 35s (Duração: 1min 20.12s)
-   └─ Detalhes: Extração B2B (Friboi, Seara, BRF, Aurora, Lar)
+   ├─ Início desta etapa  : 10h 49min 15s
+   ├─ Término desta etapa : 10h 50min 35s (Duração desta etapa: 1min 20.12s)
+   └─ Detalhes            : Extração B2B (Friboi, Seara, BRF, Aurora, Lar, Copacol)
 ✅ 2. Sincronização Supabase
-   ├─ Início  : 10h 50min 35s
-   ├─ Término : 10h 51min 10s (Duração: 35.40s)
-   └─ Detalhes: Carga relacional UUIDv5 & tratamento de EAN/DUN
+   ├─ Início desta etapa  : 10h 50min 35s
+   ├─ Término desta etapa : 10h 51min 10s (Duração desta etapa: 35.40s)
+   └─ Detalhes            : Carga relacional UUIDv5 & tratamento de EAN/DUN
 ✅ 3. Sanitização PostgreSQL
-   ├─ Início  : 10h 51min 10s
-   ├─ Término : 10h 51min 18s (Duração: 7.82s)
-   └─ Detalhes: Normalização Title Case & Modulus 10 EAN-13
+   ├─ Início desta etapa  : 10h 51min 10s
+   ├─ Término desta etapa : 10h 51min 18s (Duração desta etapa: 7.82s)
+   └─ Detalhes            : Normalização Title Case & Modulus 10 EAN-13
 ✅ 4. Publicação PWA
-   ├─ Início  : 10h 51min 18s
-   ├─ Término : 10h 51min 23s (Duração: 4.91s)
-   └─ Detalhes: Geração de produtos.json purificado para o PWA
+   ├─ Início desta etapa  : 10h 51min 18s
+   ├─ Término desta etapa : 10h 51min 23s (Duração desta etapa: 4.91s)
+   └─ Detalhes            : Geração de produtos.json purificado para o PWA
 ✅ 5. Auditoria de Integridade
-   ├─ Início  : 10h 51min 23s
-   ├─ Término : 10h 51min 28s (Duração: 4.85s)
-   └─ Detalhes: Auditoria exaustiva contra anomalias e órfãos
-────────────────────────────────────
+   ├─ Início desta etapa  : 10h 51min 23s
+   ├─ Término desta etapa : 10h 51min 28s (Duração desta etapa: 4.85s)
+   └─ Detalhes            : Auditoria exaustiva contra anomalias e órfãos
+────────────────────────────────────────────────────────────────────────
 📊 BASE DE DADOS SUPABASE (AO VIVO):
  🏢 Fabricantes:       4
  🏷️  Marcas:            143
@@ -99,9 +114,13 @@ etl-pipeline
    1. AURORA - EAN: 47891164004246 | Linguiça Toscana 800g Cx. de 16kg
    2. FRIBOI - EAN: 17898302298313 | Alcatra com Maminha (3 Partes) - Friboi
    ... e mais 12 novos produtos (etl-novos).
-────────────────────────────────────
+────────────────────────────────────────────────────────────────────────
+ 📅 Início Geral do Pipeline : 12/08/2026 10:49:15
+ 🏁 Término Geral do Pipeline: 12/08/2026 10:51:28
+ ⏱️  Tempo Total Decorrido   : 2min 13.10s
+────────────────────────────────────────────────────────────────────────
 ✔ PIPELINE FINALIZADO COM SUCESSO!
-────────────────────────────────────
+────────────────────────────────────────────────────────────────────────
 ```
 
 ---

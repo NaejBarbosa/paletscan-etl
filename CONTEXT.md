@@ -115,6 +115,10 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
   - Definido no manifesto [`core/manifest/schema_manifest.json`](file:///root/paletscan-etl/core/manifest/schema_manifest.json) e documentado em [`docs/schema-manifesto.md`](file:///root/paletscan-etl/docs/schema-manifesto.md) que apenas produtos com no mínimo **EAN de 13 dígitos numéricos** são exportados para o PWA.
   - Atualizado [`scripts/generate_pwa_produtos_json.ts`](file:///root/paletscan-etl/scripts/generate_pwa_produtos_json.ts) e [`repo_pwa/pages/api/validar.ts`](file:///root/repo_pwa/pages/api/validar.ts) para filtrar categoricamente qualquer produto sem EAN-13.
   - Removido qualquer fallback e exibição de SKU da experiência do usuário no PWA ([`PesquisaProduto.tsx`](file:///root/repo_pwa/components/PesquisaProduto.tsx), [`DetalheProdutoModal.tsx`](file:///root/repo_pwa/components/DetalheProdutoModal.tsx), [`NovosProdutosModal.tsx`](file:///root/repo_pwa/components/NovosProdutosModal.tsx)), restringindo a exibição exclusivamente a **EAN (13 dígitos)** e **DUN (14 dígitos)**.
+- [x] **Unificação e Padronização da Taxonomia Canônica de Classes de Produtos**:
+  - Reestruturado o motor central [`core/heuristics/category_classifier.ts`](file:///root/paletscan-etl/core/heuristics/category_classifier.ts) com decodificação obrigatória de escapes Unicode (`Su\u00ednos` ➔ `Suínos`), eliminação de duplicidades singular/plural (`Bovino` ➔ `Bovinos`, `Vegetal` ➔ `Vegetais & Congelados`, `Industrializado` ➔ `Processados & Embutidos`) e priorização estrita de limites de palavra (`\b`).
+  - Removidos fallbacks hardcoded de `Aves` e `Outros` dos scrapers ([`scrapers/seara/index.ts`](file:///root/paletscan-etl/scrapers/seara/index.ts) e [`scrapers/brf/index.ts`](file:///root/paletscan-etl/scrapers/brf/index.ts)).
+  - Reclassificados 2.522 produtos e consolidadas 30 classes fragmentadas em 11 classes canônicas oficiais no Supabase, nos arquivos de staging de todas as 6 holdings e nos arquivos `produtos.json` de sincronização do PWA.
 
 ---
 
@@ -122,4 +126,5 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
 
 1. **Integração Backend Supabase com Frontend PWA**: Conectar o novo banco relacional PostgreSQL/Supabase à aplicação PWA em produção, substituindo a integração legada via Google Sheets.
 2. **Busca Unificada Fuzzy no PWA**: Implementar busca rápida por SKU, EAN-13, DUN-14 e termos aproximados de produtos diretamente no scanner do operador.
+
 
