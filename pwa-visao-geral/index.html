@@ -1044,20 +1044,20 @@
 <p>O <strong>PaletScan PWA</strong> é a interface operacional de chão de fábrica do ecossistema, projetada para operadores de empilhadeira, conferentes e auditores de estoque atuando no setor de perecíveis (câmaras de congelados e resfriados).</p>
 <hr />
 <h2 id="1-principais-funcionalidades-da-aplicacao">🎯 1. Principais Funcionalidades da Aplicação</h2>
-<pre class="mermaid"><code>graph TD
-    A["PaletScan PWA (Next.js 14)"] --&gt; B["1. Scanner &amp; Crop Óptico"]
+<pre class="mermaid"><code>flowchart TD
+    A["PaletScan PWA (Next.js 14)"] --&gt; B["1. Scanner e Recorte Óptico"]
     A --&gt; C["2. Funil Regex Industrial"]
     A --&gt; D["3. Seletor de Vagas em 4 Caracteres"]
-    A --&gt; E["4. Radar de Validades &amp; Multi-Watchlists"]
+    A --&gt; E["4. Radar de Validades e Multi-Watchlists"]
     A --&gt; F["5. Modo Conferência Física"]
-    A --&gt; G["6. Autenticação Híbrida &amp; Passkeys"]
+    A --&gt; G["6. Autenticação Híbrida e Passkeys"]
 
-    B --&gt; H["Leitura Câmera + Zoom/Pan/Pinch"]
-    C --&gt; I["GS1-128, Data Matrix Lar (+365d), BRF, Pesagem"]
+    B --&gt; H["Leitura de Câmera e Recorte Interativo"]
+    C --&gt; I["GS1-128, Data Matrix Lar (+365d), BRF e Pesagem"]
     D --&gt; J["Bloqueio de Ocupação Duplicada (R1/R2/C1/C2)"]
-    E --&gt; K["Busca Fuzzy (fuzzball) + Celebração com Confetes 🎉"]
-    F --&gt; L["Checklist Tátil + Expurgo em Massa + PDF/CSV"]
-    G --&gt; M["Biometria FIDO2 + Cache ps_auth_session"]</code></pre>
+    E --&gt; K["Busca Fuzzy e Celebração com Confetes"]
+    F --&gt; L["Checklist Tátil, Expurgo em Massa e Relatórios"]
+    G --&gt; M["Biometria FIDO2 e Cache de Sessão Offline"]</code></pre>
 <hr />
 <h2 id="2-diferenciais-do-pwa-no-ambiente-frigorifico">⚡ 2. Diferenciais do PWA no Ambiente Frigorífico</h2>
 <ol>

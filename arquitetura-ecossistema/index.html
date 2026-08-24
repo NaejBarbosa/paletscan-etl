@@ -1145,27 +1145,27 @@
 <hr />
 <h2 id="1-o-circuito-fechado-de-dados-closed-loop-data-flow">🔄 1. O Circuito Fechado de Dados (Closed-Loop Data Flow)</h2>
 <p>O ecossistema opera através de um circuito fechado de dados bidirecional:</p>
-<pre class="mermaid"><code>graph TD
-    subgraph Nuvem ["1. Nuvem &amp; Fornecedores"]
-        A["Portais B2B / APIs dos Frigoríficos"] --&gt; B["Pipeline ETL (paletscan-etl)"]
-        B --&gt;|1. Carga Limpa com Modulus 10 &amp; Imagens IA| C[("Supabase PostgreSQL (Master Catalog)")]
+<pre class="mermaid"><code>flowchart TD
+    subgraph Nuvem ["1. Nuvem e Fornecedores"]
+        A["Portais B2B e APIs dos Frigoríficos"] --&gt; B["Pipeline ETL (paletscan-etl)"]
+        B --&gt;|1. Carga Limpa com Modulus 10 e Imagens IA| C["Supabase PostgreSQL - Catálogo Mestre"]
     end
 
     subgraph Sync ["2. Sincronização Sob Demanda"]
-        C --&gt;|2. Hash Check &lt; 30ms (ps_pwa_db_hash)| D["Motor de Sync (sync.ts)"]
+        C --&gt;|2. Hash Check Rápido (ps_pwa_db_hash)| D["Motor de Sync (sync.ts)"]
         D --&gt;|3. Delta Sync| E["WatermelonDB Local (IndexedDB / Schema v11)"]
     end
 
-    subgraph ChaoDeFabrica ["3. Chão de Fábrica &amp; Câmaras Frigoríficas"]
-        E --&gt; F["Leitura Óptica &amp; Regex Industrial (&lt; 5ms)"]
-        F --&gt; G["Validação de Vaga &amp; Registro de Palete"]
-        G --&gt; H["Vínculo Manual de DUN-14 / Código de Pesar"]
+    subgraph ChaoDeFabrica ["3. Chão de Fábrica e Câmaras Frigoríficas"]
+        E --&gt; F["Leitura Óptica e Regex Industrial Imediata"]
+        F --&gt; G["Validação de Vaga e Registro de Palete"]
+        G --&gt; H["Vínculo Manual de DUN-14 e Código de Pesar"]
         H --&gt;|4. Gravação Imediata Offline| E
     end
 
-    subgraph Feedback ["4. Realimentação &amp; Imunidade"]
+    subgraph Feedback ["4. Realimentação e Imunidade"]
         H --&gt;|5. Fila pending_sync ao Reconectar| I["API Serverless /api/cadastrar-produto"]
-        I --&gt;|6. UPSERT Protegido| J[("Tabela produtos_atributos_manuais")]
+        I --&gt;|6. UPSERT Protegido| J["Tabela produtos_atributos_manuais"]
         J --&gt;|7. Precedência Absoluta sobre ETL| C
     end</code></pre>
 <hr />
@@ -1206,10 +1206,10 @@
 </span></code></pre></div>
 <hr />
 <h2 id="3-instant-sync-em-menos-de-30ms-status-hash">⚡ 3. Instant Sync em Menos de 30ms (Status Hash)</h2>
-<p>Para não sobrecarregar a franquia de dados móveis e garantir velocidade instantânea de inicialização no coletor, o motor de sincronização (<a href="file:///root/repo_pwa/lib/database/sync.ts"><code>lib/database/sync.ts</code></a>) utiliza um algoritmo de comparação de integridade baseado em hashes:</p>
+<p>Para não sobrecarregar a franquia de dados móveis e garantir velocidade instantânea de inicialização no coletor, o motor de sincronização utiliza um algoritmo de comparação de integridade baseado em hashes:</p>
 <ol>
 <li><strong>Consulta Leve de Hash</strong>: O PWA dispara uma requisição ultra-rápida (<code>GET /api/status-hash</code>) que retorna a contagem de registros e o timestamp da última mutação no Supabase.</li>
-<li><strong>Comparação com Cache Local</strong>: Se os hashes <code>ps_pwa_db_hash</code> e <code>ps_pwa_paletes_hash</code> coincidirem com os valores locais salvos no <code>localStorage</code>, a sincronização é <strong>finalizada em &lt; 30ms</strong> sem transferir nenhuma linha do catálogo.</li>
+<li><strong>Comparação com Cache Local</strong>: Se os hashes <code>ps_pwa_db_hash</code> e <code>ps_pwa_paletes_hash</code> coincidirem com os valores locais salvos no <code>localStorage</code>, a sincronização é <strong>finalizada em menos de 30ms</strong> sem transferir nenhuma linha do catálogo.</li>
 <li><strong>Delta Download</strong>: Se houver divergência, o sistema baixa exclusivamente os registros adicionados ou modificados desde o último timestamp, atualizando atomicamente o WatermelonDB local.</li>
 </ol>
 <hr />

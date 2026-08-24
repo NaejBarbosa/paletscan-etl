@@ -1044,16 +1044,16 @@
 <p>O <strong>PaletScan PWA</strong> dispõe de um sistema de segurança multicamadas que combina autenticação tradicional, biometria via Passkeys e controle de acesso baseado em papéis (RBAC), projetado para manter a operação segura mesmo durante blackouts offline.</p>
 <hr />
 <h2 id="1-autenticacao-multi-fator-hibrida">🔐 1. Autenticação Multi-Fator Híbrida</h2>
-<pre class="mermaid"><code>graph TD
+<pre class="mermaid"><code>flowchart TD
     A["Tela de Login (pages/login.tsx)"] --&gt; B{"Método de Acesso"}
     B --&gt;|1. Credenciais| C["Usuário e Senha"]
-    B --&gt;|2. Biometria / Passkey| D["WebAuthn FIDO2 (@simplewebauthn)"]
+    B --&gt;|2. Biometria / Passkey| D["WebAuthn FIDO2 (Biometria)"]
     B --&gt;|3. QR Code| E["Leitura de Token Móvel"]
 
     C --&gt; F["Validação em lib/authDb.ts"]
     D --&gt; F
     E --&gt; F
-    F --&gt; G["Geração de Sessão JWT &amp; Cache ps_auth_session"]
+    F --&gt; G["Geração de Sessão JWT e Cache Offline"]
     G --&gt; H["Acesso Offline Garantido no Interior das Câmaras"]</code></pre>
 <ul>
 <li><strong>Passkeys / Biometria (WebAuthn)</strong>: Permite login por impressão digital ou reconhecimento facial sem necessidade de digitar senhas com luvas térmicas no frio.</li>

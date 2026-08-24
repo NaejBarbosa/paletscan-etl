@@ -1135,19 +1135,19 @@
 <hr />
 <h2 id="1-infraestrutura-linux-no-smartphone-termux-proot-ubuntu">🛠️ 1. Infraestrutura Linux no Smartphone (Termux + PRoot Ubuntu)</h2>
 <p>Sem a utilização de computadores tradicionais, o ambiente de desenvolvimento completo foi estruturado no celular via <strong>Termux</strong> rodando uma distribuição Linux containerizada (<strong>PRoot Ubuntu ARM64</strong>):</p>
-<pre class="mermaid"><code>graph TD
+<pre class="mermaid"><code>flowchart TD
     subgraph Hardware ["Hardware Smartphone Android (ARM64)"]
-        A["Processador ARM64 &amp; Armazenamento Interno"] --&gt; B["Emulador de Terminal Termux"]
+        A["Processador ARM64 e Armazenamento Interno"] --&gt; B["Emulador de Terminal Termux"]
         B --&gt; C["Ambiente Containerizado PRoot Ubuntu"]
 
-        C --&gt; D["Node.js 20 &amp; TypeScript Core (ETL)"]
-        C --&gt; E["Python 3.11, rembg, Pillow &amp; PyTorch (IA de Imagens)"]
-        C --&gt; F["Next.js 14 Server &amp; Serwist Compiler (PWA)"]
-        C --&gt; G["Git, OpenSSH &amp; MkDocs Material (Documentação)"]
+        C --&gt; D["Node.js 20 e TypeScript Core (ETL)"]
+        C --&gt; E["Python 3.11, rembg, Pillow e PyTorch (IA de Imagens)"]
+        C --&gt; F["Next.js 14 Server e Compilador Serwist (PWA)"]
+        C --&gt; G["Git, OpenSSH e MkDocs Material (Documentação)"]
         C --&gt; H["Agente Antigravity AI (Google DeepMind)"]
     end
 
-    F --&gt;|localhost:3000| I["Navegador Chrome / Coletor Móvel"]
+    F --&gt;|Porta 3000| I["Navegador Chrome / Coletor Móvel"]
     G --&gt;|mkdocs gh-deploy| J["GitHub Pages (paletscan-etl)"]
     D --&gt;|db_sync| K["Supabase Cloud"]</code></pre>
 <h3 id="componentes-do-ambiente-movel">Componentes do Ambiente Móvel:</h3>

@@ -1103,11 +1103,11 @@
 <pre class="mermaid"><code>flowchart TD
     A["Operador Inicia o Scanner no PWA"] --&gt; B{"Método de Entrada"}
 
-    B --&gt;|Câmera Traseira em Tempo Real| C["@zxing/library + BarcodeDetector API"]
+    B --&gt;|Câmera Traseira em Tempo Real| C["Biblioteca ZXing e BarcodeDetector API"]
     B --&gt;|Upload de Foto da Galeria| D["Recorte Interativo (react-zoom-pan-pinch)"]
 
-    C --&gt; E["Mira Laser Animada &amp; Lanterna LED"]
-    D --&gt; F["Zoom Tátil para Isolar Rótulos com Reflexo / Névoa"]
+    C --&gt; E["Mira Laser Animada e Lanterna LED"]
+    D --&gt; F["Zoom Tátil para Isolar Rótulos com Reflexo ou Névoa"]
 
     E --&gt; G["Decodificação Óptica Bruta"]
     F --&gt; G

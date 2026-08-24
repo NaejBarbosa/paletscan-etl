@@ -1077,13 +1077,13 @@
     A["Operador Inicia Conferência Física"] --&gt; B["Ativa Checklist Tátil no Palete"]
     B --&gt; C{"Método de Verificação"}
 
-    C --&gt;|Bipagem com Scanner| D["Marcação Automática do Item 🟢"]
+    C --&gt;|Bipagem com Scanner| D["Marcação Automática do Item Confirmado"]
     C --&gt;|Toque Tátil na Tela| D
 
     D --&gt; E{"Palete Completo?"}
     E --&gt;|Sim| F["Palete Confirmado em Estoque"]
-    E --&gt;|Não (Item Faltante)| G["Destaque em Vermelho / Alerta de Ausência"]
-    G --&gt; H["Ação de Expurgo em Massa (/api/excluir-paletes-massa)"]</code></pre>
+    E --&gt;|Não (Item Faltante)| G["Destaque em Vermelho e Alerta de Ausência"]
+    G --&gt; H["Ação de Expurgo em Massa (API Serverless)"]</code></pre>
 <hr />
 <h2 id="3-exportacao-de-relatorios-csv-cp1252-pdf-executivo">📄 3. Exportação de Relatórios (CSV CP1252 &amp; PDF Executivo)</h2>
 <ul>
