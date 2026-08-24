@@ -12,13 +12,13 @@
         <meta name="author" content="Jean Barbosa & Antigravity Data Engineering Team">
       
       
-        <link rel="canonical" href="https://NaejBarbosa.github.io/paletscan-etl/schema-manifesto/">
+        <link rel="canonical" href="https://NaejBarbosa.github.io/paletscan-etl/arquitetura-ecossistema/">
       
       
-        <link rel="prev" href="../processamento-imagens/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../supabase/">
+        <link rel="next" href="../desenvolvimento-termux/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Governança de Schema & Manifesto - PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)</title>
+        <title>Arquitetura Ponta a Ponta - PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#governanca-de-dados-e-manifesto-de-schema" class="md-skip">
+        <a href="#arquitetura-integrada-ponta-a-ponta" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Governança de Schema & Manifesto
+              Arquitetura Ponta a Ponta
             
           </span>
         </div>
@@ -239,20 +239,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -273,7 +273,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -316,10 +316,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../arquitetura-ecossistema/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura Ponta a Ponta
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -335,6 +362,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-o-circuito-fechado-de-dados-closed-loop-data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 1. O Circuito Fechado de Dados (Closed-Loop Data Flow)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-modelo-de-convivencia-e-imunidade-de-dados-manuais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 2. Modelo de Convivência e Imunidade de Dados Manuais
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ 2. Modelo de Convivência e Imunidade de Dados Manuais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-tabela-de-overrides-produtos_atributos_manuais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Tabela de Overrides (produtos_atributos_manuais)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-views-relacionais-consolidadas-vw_produtos_com_marcas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Views Relacionais Consolidadas (vw_produtos_com_marcas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-instant-sync-em-menos-de-30ms-status-hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ 3. Instant Sync em Menos de 30ms (Status Hash)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-contratos-de-dados-e-tipagens-compartilhadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 4. Contratos de Dados e Tipagens Compartilhadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -631,20 +750,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -665,7 +784,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -820,37 +939,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Governança de Schema & Manifesto
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../schema-manifesto/" class="md-nav__link">
         
   
   
@@ -866,109 +958,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-relacao-atual-de-metricas-e-volumes-no-banco-de-dados" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📊 1. Relação Atual de Métricas e Volumes no Banco de Dados
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-modelo-relacional-anti-redundancia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏛️ 2. Modelo Relacional Anti-Redundância
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-manifesto-json-schema-e-compatibilidade-dinamica-schema_manifestjson" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📑 3. Manifesto JSON Schema e Compatibilidade Dinâmica (schema_manifest.json)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📑 3. Manifesto JSON Schema e Compatibilidade Dinâmica (schema_manifest.json)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-registro-dinamico-de-holdings-marcas-e-aliases-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A. Registro Dinâmico de Holdings, Marcas e Aliases CLI:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-identificadores-deterministicos-via-uuidv5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔑 4. Identificadores Determinísticos via UUIDv5
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-higienizacao-sql-em-nivel-de-banco-validar_e_corrigir_eanssql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛢️ 5. Higienização SQL em Nível de Banco (validar_e_corrigir_eans.sql)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-diretrizes-estritas-de-exportacao-ao-pwa-regras-de-negocio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📱 6. Diretrizes Estritas de Exportação ao PWA (Regras de Negócio)
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1063,10 +1052,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-relacao-atual-de-metricas-e-volumes-no-banco-de-dados" class="md-nav__link">
+  <a href="#1-o-circuito-fechado-de-dados-closed-loop-data-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📊 1. Relação Atual de Métricas e Volumes no Banco de Dados
+        🔄 1. O Circuito Fechado de Dados (Closed-Loop Data Flow)
       
     </span>
   </a>
@@ -1074,33 +1063,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-modelo-relacional-anti-redundancia" class="md-nav__link">
+  <a href="#2-modelo-de-convivencia-e-imunidade-de-dados-manuais" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏛️ 2. Modelo Relacional Anti-Redundância
+        🛡️ 2. Modelo de Convivência e Imunidade de Dados Manuais
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-manifesto-json-schema-e-compatibilidade-dinamica-schema_manifestjson" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📑 3. Manifesto JSON Schema e Compatibilidade Dinâmica (schema_manifest.json)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📑 3. Manifesto JSON Schema e Compatibilidade Dinâmica (schema_manifest.json)">
+    <nav class="md-nav" aria-label="🛡️ 2. Modelo de Convivência e Imunidade de Dados Manuais">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-registro-dinamico-de-holdings-marcas-e-aliases-cli" class="md-nav__link">
+  <a href="#a-tabela-de-overrides-produtos_atributos_manuais" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A. Registro Dinâmico de Holdings, Marcas e Aliases CLI:
+        A. Tabela de Overrides (produtos_atributos_manuais)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-views-relacionais-consolidadas-vw_produtos_com_marcas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Views Relacionais Consolidadas (vw_produtos_com_marcas)
       
     </span>
   </a>
@@ -1113,10 +1102,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-identificadores-deterministicos-via-uuidv5" class="md-nav__link">
+  <a href="#3-instant-sync-em-menos-de-30ms-status-hash" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔑 4. Identificadores Determinísticos via UUIDv5
+        ⚡ 3. Instant Sync em Menos de 30ms (Status Hash)
       
     </span>
   </a>
@@ -1124,21 +1113,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-higienizacao-sql-em-nivel-de-banco-validar_e_corrigir_eanssql" class="md-nav__link">
+  <a href="#4-contratos-de-dados-e-tipagens-compartilhadas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛢️ 5. Higienização SQL em Nível de Banco (validar_e_corrigir_eans.sql)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-diretrizes-estritas-de-exportacao-ao-pwa-regras-de-negocio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📱 6. Diretrizes Estritas de Exportação ao PWA (Regras de Negócio)
+        📦 4. Contratos de Dados e Tipagens Compartilhadas
       
     </span>
   </a>
@@ -1162,126 +1140,147 @@
 
 
 
-<h1 id="governanca-de-dados-e-manifesto-de-schema">📜 Governança de Dados e Manifesto de Schema</h1>
-<p>O módulo de governança do <strong>PaletScan ETL</strong> assegura que nenhum dado corrompido, órfão ou fora de contrato seja inserido no banco de dados relacional. Ele combina contratos formais em JSON Schema (<a href="file:///root/paletscan-etl/core/manifest/schema_manifest.json"><code>schema_manifest.json</code></a>) com identificadores determinísticos UUIDv5, sincronização dinâmica de marcas/aliases e funções de sanitização em PL/pgSQL no PostgreSQL / Supabase.</p>
+<h1 id="arquitetura-integrada-ponta-a-ponta">🏗️ Arquitetura Integrada Ponta a Ponta</h1>
+<p>A simbiose entre o <strong>Pipeline ETL</strong> e o <strong>PaletScan PWA</strong> foi desenhada para resolver um clássico dilema da engenharia de software industrial: <strong>como manter um catálogo corporativo massivo atualizado sem comprometer a autonomia, a velocidade e a resiliência offline da operação de campo?</strong></p>
 <hr />
-<h2 id="1-relacao-atual-de-metricas-e-volumes-no-banco-de-dados">📊 1. Relação Atual de Métricas e Volumes no Banco de Dados</h2>
-<p>Após a execução do pipeline de ingestão e sanitização estrita, a base de dados relacional encontra-se auditada e 100% íntegra, apresentando a seguinte relação de volumes:</p>
+<h2 id="1-o-circuito-fechado-de-dados-closed-loop-data-flow">🔄 1. O Circuito Fechado de Dados (Closed-Loop Data Flow)</h2>
+<p>O ecossistema opera através de um circuito fechado de dados bidirecional:</p>
+<pre class="mermaid"><code>graph TD
+    subgraph Nuvem ["1. Nuvem &amp; Fornecedores"]
+        A["Portais B2B / APIs dos Frigoríficos"] --&gt; B["Pipeline ETL (paletscan-etl)"]
+        B --&gt;|1. Carga Limpa com Modulus 10 &amp; Imagens IA| C[("Supabase PostgreSQL (Master Catalog)")]
+    end
+
+    subgraph Sync ["2. Sincronização Sob Demanda"]
+        C --&gt;|2. Hash Check &lt; 30ms (ps_pwa_db_hash)| D["Motor de Sync (sync.ts)"]
+        D --&gt;|3. Delta Sync| E["WatermelonDB Local (IndexedDB / Schema v11)"]
+    end
+
+    subgraph ChaoDeFabrica ["3. Chão de Fábrica &amp; Câmaras Frigoríficas"]
+        E --&gt; F["Leitura Óptica &amp; Regex Industrial (&lt; 5ms)"]
+        F --&gt; G["Validação de Vaga &amp; Registro de Palete"]
+        G --&gt; H["Vínculo Manual de DUN-14 / Código de Pesar"]
+        H --&gt;|4. Gravação Imediata Offline| E
+    end
+
+    subgraph Feedback ["4. Realimentação &amp; Imunidade"]
+        H --&gt;|5. Fila pending_sync ao Reconectar| I["API Serverless /api/cadastrar-produto"]
+        I --&gt;|6. UPSERT Protegido| J[("Tabela produtos_atributos_manuais")]
+        J --&gt;|7. Precedência Absoluta sobre ETL| C
+    end</code></pre>
+<hr />
+<h2 id="2-modelo-de-convivencia-e-imunidade-de-dados-manuais">🛡️ 2. Modelo de Convivência e Imunidade de Dados Manuais</h2>
+<p>Um dos problemas mais comuns em pipelines ETL corporativos é a sobreescrita acidental de dados refinados manualmente por operadores de campo durante as cargas automatizadas de fornecedores.</p>
+<p>Para solucionar isso, o PaletScan implementa o padrão <strong>Dual-Layer Persistence</strong>:</p>
+<h3 id="a-tabela-de-overrides-produtos_atributos_manuais">A. Tabela de Overrides (<code>produtos_atributos_manuais</code>)</h3>
+<p>Quando um operador de empilhadeira vincula uma caixa master (DUN-14) ou um código de pesagem de balança através do modal <a href="file:///root/repo_pwa/components/GerenciarCodigosModal.tsx"><code>GerenciarCodigosModal.tsx</code></a>, esse dado é gravado na tabela <code>produtos_atributos_manuais</code>:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">-- Estrutura da tabela de blindagem contra sobrescritas do ETL</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">produtos_atributos_manuais</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">gen_random_uuid</span><span class="p">(),</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">produto_ean</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">dun_14</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">pesar_cod</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">classe_manual</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">conservacao_manual</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">atualizado_por</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">updated_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">TIME</span><span class="w"> </span><span class="k">ZONE</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">NOW</span><span class="p">()</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="b-views-relacionais-consolidadas-vw_produtos_com_marcas">B. Views Relacionais Consolidadas (<code>vw_produtos_com_marcas</code>)</h3>
+<p>O catálogo mestre consumido pelo PWA é servido através de Views SQL que utilizam a cláusula <code>COALESCE</code> para priorizar rigorosamente o dado manual inserido pelo operador:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">vw_produtos_com_marcas</span><span class="w"> </span><span class="k">AS</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">ean</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">COALESCE</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">dun_14</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">dun</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">dun</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">marca_id</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">pr_marca</span><span class="p">.</span><span class="n">nome</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">marca_nome</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">COALESCE</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">classe_manual</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">classe</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">classe</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">COALESCE</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">conservacao_manual</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">conservacao</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">conservacao</span><span class="p">,</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">descricao</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">COALESCE</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">pesar_cod</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">pesar_cod</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">pesar_cod</span><span class="p">,</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">imagem_url</span><span class="p">,</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">updated_at</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="k">FROM</span><span class="w"> </span><span class="n">produtos</span><span class="w"> </span><span class="n">p</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">marcas</span><span class="w"> </span><span class="n">pr_marca</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">marca_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pr_marca</span><span class="p">.</span><span class="n">id</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">produtos_atributos_manuais</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">ean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">produto_ean</span><span class="p">;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="3-instant-sync-em-menos-de-30ms-status-hash">⚡ 3. Instant Sync em Menos de 30ms (Status Hash)</h2>
+<p>Para não sobrecarregar a franquia de dados móveis e garantir velocidade instantânea de inicialização no coletor, o motor de sincronização (<a href="file:///root/repo_pwa/lib/database/sync.ts"><code>lib/database/sync.ts</code></a>) utiliza um algoritmo de comparação de integridade baseado em hashes:</p>
+<ol>
+<li><strong>Consulta Leve de Hash</strong>: O PWA dispara uma requisição ultra-rápida (<code>GET /api/status-hash</code>) que retorna a contagem de registros e o timestamp da última mutação no Supabase.</li>
+<li><strong>Comparação com Cache Local</strong>: Se os hashes <code>ps_pwa_db_hash</code> e <code>ps_pwa_paletes_hash</code> coincidirem com os valores locais salvos no <code>localStorage</code>, a sincronização é <strong>finalizada em &lt; 30ms</strong> sem transferir nenhuma linha do catálogo.</li>
+<li><strong>Delta Download</strong>: Se houver divergência, o sistema baixa exclusivamente os registros adicionados ou modificados desde o último timestamp, atualizando atomicamente o WatermelonDB local.</li>
+</ol>
+<hr />
+<h2 id="4-contratos-de-dados-e-tipagens-compartilhadas">📦 4. Contratos de Dados e Tipagens Compartilhadas</h2>
+<p>Ambos os projetos compartilham as mesmas convenções de tipagem TypeScript para SKUs, conservação e códigos de barras:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Entidade Relacional</th>
-<th style="text-align: left;">Quantidade Auditada</th>
-<th style="text-align: left;">Descrição / Regra de Negócio</th>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Tipo TypeScript</th>
+<th style="text-align: left;">Validação / Padrão</th>
+<th style="text-align: left;">Origem Principal</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Fabricantes (Holdings)</strong></td>
-<td style="text-align: left;"><strong>4</strong></td>
-<td style="text-align: left;">JBS S.A., Seara Alimentos LTDA, BRF S.A. e Cooperativa Agroindustrial Lar.</td>
+<td style="text-align: left;"><code>ean</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">13 dígitos numéricos (Modulus 10 GS1)</td>
+<td style="text-align: left;">ETL B2B / Cadastro PWA</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Marcas Comerciais</strong></td>
-<td style="text-align: left;"><strong>143</strong></td>
-<td style="text-align: left;">Marcas ativas associadas (ex: Friboi, Seara, Sadia, Perdigão, Lar, Maturatta, 1953).</td>
+<td style="text-align: left;"><code>dun</code></td>
+<td style="text-align: left;"><code>string \| null</code></td>
+<td style="text-align: left;">14 dígitos numéricos (Modulus 10 GS1)</td>
+<td style="text-align: left;">Scraper B2B / Vínculo Manual PWA</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Produtos Validados</strong></td>
-<td style="text-align: left;"><strong>3.386</strong></td>
-<td style="text-align: left;">Todos 100% respaldados por EAN numérico único (0 produtos órfãos ou sem EAN).</td>
+<td style="text-align: left;"><code>marca_nome</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">Title Case (ex: <em>Friboi</em>, <em>Sadia</em>, <em>Lar</em>)</td>
+<td style="text-align: left;">Classificador Heurístico ETL</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Códigos de Barras</strong></td>
-<td style="text-align: left;"><strong>9.310</strong></td>
-<td style="text-align: left;">Registros catalogados e normalizados nas tipagens estritas <code>EAN</code> e <code>DUN</code>.</td>
+<td style="text-align: left;"><code>classe</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">10 Classes Canônicas</td>
+<td style="text-align: left;">Heurística ETL / Override Manual</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>conservacao</code></td>
+<td style="text-align: left;"><code>'Congelado' \| 'Resfriado'</code></td>
+<td style="text-align: left;">Restrição estrita de câmara fria</td>
+<td style="text-align: left;">Classificador Heurístico ETL</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesar_cod</code></td>
+<td style="text-align: left;"><code>string \| null</code></td>
+<td style="text-align: left;">1 a 6 dígitos numéricos</td>
+<td style="text-align: left;">Detecção <code>(pesar)</code> / Balança PWA</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>validade</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">Formato <code>DD/MM/AAAA</code></td>
+<td style="text-align: left;">Decodificador Regex PWA (AI 17/11)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>camara</code></td>
+<td style="text-align: left;"><code>'R1' \| 'R2' \| 'C1' \| 'C2'</code></td>
+<td style="text-align: left;">Chave de endereçamento de câmara</td>
+<td style="text-align: left;">Seletor de Vagas PWA</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>vaga</code></td>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">4 caracteres contínuos (ex: <code>A10D</code>)</td>
+<td style="text-align: left;">Seletor de Vagas PWA</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="2-modelo-relacional-anti-redundancia">🏛️ 2. Modelo Relacional Anti-Redundância</h2>
-<p>O modelo de dados do PaletScan foi desenhado para eliminar duplicidades e garantir a integridade entre fornecedores, marcas, SKUs e variações logísticas de código de barras:</p>
-<pre class="mermaid"><code>erDiagram
-    FABRICANTES ||--o{ MARCAS : "possui"
-    MARCAS ||--o{ PRODUTOS : "categoriza"
-    PRODUTOS ||--o{ CODIGOS_BARRAS : "associa"
-
-    FABRICANTES {
-        uuid id PK "UUIDv5 Deterministico"
-        string nome "Razao Social / Holding"
-        string cnpj "CNPJ do Fabricante"
-    }
-
-    MARCAS {
-        uuid id PK "UUIDv5 Deterministico"
-        uuid fabricante_id FK
-        string nome "Nome Comercial da Marca"
-    }
-
-    PRODUTOS {
-        uuid id PK "UUIDv5 Deterministico"
-        uuid marca_id FK
-        string nome "Nome Normalizado (Title Case)"
-        string categoria "Categoria Logistica"
-        string conservacao "Tipo de Conservacao"
-        integer peso_gramas "Peso Fixo em Gramas"
-        boolean peso_variavel "Flag de Corte por Pesagem"
-        string imagem_url "URL CDN Supabase Storage"
-        string imagem_status "aprovado | sem_imagem | pendente"
-    }
-
-    CODIGOS_BARRAS {
-        uuid id PK "UUIDv5 Deterministico"
-        uuid produto_id FK
-        string codigo UK "EAN / DUN / SKU (VARCHAR Estrito)"
-        string tipo "EAN | DUN | SKU (Tipagem Normalizada)"
-        integer quantidade_embalagem "Fator de Embalagem"
-    }</code></pre>
-<hr />
-<h2 id="3-manifesto-json-schema-e-compatibilidade-dinamica-schema_manifestjson">📑 3. Manifesto JSON Schema e Compatibilidade Dinâmica (<code>schema_manifest.json</code>)</h2>
-<p>O arquivo <a href="file:///root/paletscan-etl/core/manifest/schema_manifest.json"><code>core/manifest/schema_manifest.json</code></a> define o contrato formal (JSON Schema Draft-07) e o catálogo mestre do projeto.</p>
-<h3 id="a-registro-dinamico-de-holdings-marcas-e-aliases-cli">A. Registro Dinâmico de Holdings, Marcas e Aliases CLI:</h3>
-<p>Para garantir que a inclusão ou remoção de marcas e fornecedores seja refletida automaticamente nos aliases do terminal e na central de ajuda (<code>paletscan</code> / <code>etl-help</code>), o arquivo de manifesto inclui as seções:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"manifesto_holdings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fab_friboi_jbs"</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">"nome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JBS S.A."</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">"divisoes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Friboi"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Seara Alimentos"</span><span class="p">],</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">"marcas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Friboi"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Maturatta"</span><span class="p">,</span><span class="w"> </span><span class="s2">"1953"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Swift"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Seara"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Gourmet"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Incrível!"</span><span class="p">],</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">"scrapers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"scrapers/friboi/index.ts"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scrapers/seara/index.ts"</span><span class="p">],</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">"aliases_scraper"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"etl-friboi"</span><span class="p">,</span><span class="w"> </span><span class="s2">"etl-seara"</span><span class="p">]</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="p">],</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">"manifesto_aliases"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">"etl-run"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Executa o pipeline completo e exibe o relatório de timestamps na CLI."</span><span class="p">,</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nt">"etl-friboi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Extrai catálogo B2B Friboi/JBS."</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
-</span></code></pre></div>
-<blockquote>
-<p>🔄 <strong>Dinamicidade Garantida:</strong> O script <code>scripts/render_help_from_manifest.ts</code> lê este manifesto em tempo de execução. Se uma marca entrar ou sair do projeto, a CLI atualiza seu menu mobile sem requerer alteração de código.</p>
-</blockquote>
-<hr />
-<h2 id="4-identificadores-deterministicos-via-uuidv5">🔑 4. Identificadores Determinísticos via UUIDv5</h2>
-<p>Para garantir que reexecuções do pipeline ETL não gerem registros duplicados ou IDs aleatórios a cada sincronização, todos os identificadores primários são gerados via <strong>UUIDv5</strong> a partir de um namespace estático:</p>
-<div class="arithmatex">\[\text{UUID} = \text{UUIDv5}(\text{PALETSCAN\_NAMESPACE}, \text{Chave\_Natural})\]</div>
-<p>Exemplo de chaves naturais utilizadas:
-- <strong>Fabricante ID</strong>: <code>UUIDv5(NAMESPACE, "jbs-friboi")</code>
-- <strong>Marca ID</strong>: <code>UUIDv5(NAMESPACE, "friboi-reserva")</code>
-- <strong>Produto ID</strong>: <code>UUIDv5(NAMESPACE, "sku-109403")</code>
-- <strong>Código de Barras ID</strong>: <code>UUIDv5(NAMESPACE, "ean-7891515432101")</code></p>
-<hr />
-<h2 id="5-higienizacao-sql-em-nivel-de-banco-validar_e_corrigir_eanssql">🛢️ 5. Higienização SQL em Nível de Banco (<code>validar_e_corrigir_eans.sql</code>)</h2>
-<p>Como camada adicional de proteção e governança, o arquivo <a href="file:///root/paletscan-etl/db_sync/validar_e_corrigir_eans.sql"><code>db_sync/validar_e_corrigir_eans.sql</code></a> instala a função <code>fn_calculate_mod10_ean13</code> diretamente no banco Supabase em PL/pgSQL.</p>
-<hr />
-<h2 id="6-diretrizes-estritas-de-exportacao-ao-pwa-regras-de-negocio">📱 6. Diretrizes Estritas de Exportação ao PWA (Regras de Negócio)</h2>
-<p>Para preservar a excelência da experiência do usuário e a precisão operacional nos coletores/smartphones:</p>
-<ol>
-<li><strong>Requisito Mínimo de EAN-13:</strong> Apenas produtos com código <strong>EAN numérico de 13 dígitos</strong> válido são exportados para os arquivos <code>produtos.json</code> e servidos ao PWA.</li>
-<li><strong>Eliminação de SKUs na Interface do Usuário:</strong> O PWA não exibe códigos SKU ou referências internas de fabricante. A experiência de usuário restringe-se exclusivamente aos identificadores <strong>EAN (13 dígitos)</strong> e <strong>DUN (14 dígitos)</strong>.</li>
-<li><strong>Isolamento Relacional de Produtos sem EAN:</strong> Produtos provenientes de canais B2B que contenham apenas SKU interno ou DUN são preservados no Supabase para auditoria e rastreabilidade, mas são categoricamente descartados da publicação no catálogo do PWA.</li>
-</ol>
 
 
 
@@ -1317,7 +1316,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
           
-          <a href="../processamento-imagens/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Pipeline de IA de Imagens">
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Anterior: Visão Geral &amp; Simbiose">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1327,20 +1326,20 @@
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Pipeline de IA de Imagens
+                Visão Geral & Simbiose
               </div>
             </div>
           </a>
         
         
           
-          <a href="../supabase/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Sincronização com Supabase">
+          <a href="../desenvolvimento-termux/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Dev Móvel no Smartphone &amp; Termux">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Sincronização com Supabase
+                Dev Móvel no Smartphone & Termux
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Documentação técnica oficial do pipeline de dados, scrapers B2B, IA de imagem e sincronização Supabase do PaletScan.">
+        <meta name="description" content="Documentação técnica e operacional completa do ecossistema PaletScan: pipelines de engenharia de dados (ETL), inteligência de catálogo B2B, IA de visão computacional e Progressive Web App (PWA) Local-First para controle de validades em câmaras frias.">
       
       
         <meta name="author" content="Jean Barbosa & Antigravity Data Engineering Team">
@@ -16,7 +16,7 @@
       
       
       
-        <link rel="next" href="operacoes/">
+        <link rel="next" href="arquitetura-ecossistema/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>PaletScan ETL - Documentação Técnica</title>
+        <title>Visão Geral & Simbiose - PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#paletscan-etl-visao-geral-da-arquitetura" class="md-skip">
+        <a href="#ecossistema-paletscan-simbiose-entre-engenharia-de-dados-pwa" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -96,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="." title="PaletScan ETL - Documentação Técnica" class="md-header__button md-logo" aria-label="PaletScan ETL - Documentação Técnica" data-md-component="logo">
+    <a href="." title="PaletScan - Documentação Unificada do Ecossistema (ETL &amp; PWA)" class="md-header__button md-logo" aria-label="PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,13 +110,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            PaletScan ETL - Documentação Técnica
+            PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Início
+              Visão Geral & Simbiose
             
           </span>
         </div>
@@ -222,19 +222,68 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="PaletScan ETL - Documentação Técnica" class="md-nav__button md-logo" aria-label="PaletScan ETL - Documentação Técnica" data-md-component="logo">
+    <a href="." title="PaletScan - Documentação Unificada do Ecossistema (ETL &amp; PWA)" class="md-nav__button md-logo" aria-label="PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    PaletScan ETL - Documentação Técnica
+    PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
       
       
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ecossistema & Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ecossistema & Arquitetura
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
     
@@ -256,7 +305,7 @@
   <span class="md-ellipsis">
     
   
-    Início
+    Visão Geral & Simbiose
   
 
     
@@ -274,7 +323,7 @@
   <span class="md-ellipsis">
     
   
-    Início
+    Visão Geral & Simbiose
   
 
     
@@ -300,10 +349,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-contexto-e-engenharia-de-origem" class="md-nav__link">
+  <a href="#1-a-simbiose-perfeita-do-b2b-ao-chao-de-fabrica" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💡 1. Contexto e Engenharia de Origem
+        🧬 1. A Simbiose Perfeita: Do B2B ao Chão de Fábrica
       
     </span>
   </a>
@@ -311,10 +360,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-fluxo-geral-de-dados-data-pipeline" class="md-nav__link">
+  <a href="#2-autoria-e-origem-operacional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔄 2. Fluxo Geral de Dados (Data Pipeline)
+        🎯 2. Autoria e Origem Operacional
       
     </span>
   </a>
@@ -322,10 +371,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-stack-tecnologica" class="md-nav__link">
+  <a href="#3-ciclo-de-vida-da-informacao-ponta-a-ponta" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛠️ 3. Stack Tecnológica
+        🔄 3. Ciclo de Vida da Informação Ponta a Ponta
       
     </span>
   </a>
@@ -333,13 +382,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-estrutura-do-repositorio" class="md-nav__link">
+  <a href="#4-sumario-da-stack-tecnologica-unificada" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏛️ 4. Estrutura do Repositório
+        🛠️ 4. Sumário da Stack Tecnológica Unificada
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-guia-de-navegacao-na-documentacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 5. Guia de Navegação na Documentação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 5. Guia de Navegação na Documentação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecossistema-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏛️ Ecossistema &amp; Arquitetura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacao-pwa-local-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📱 Aplicação PWA Local-First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engenharia-de-dados-etl-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚙️ Engenharia de Dados (ETL &amp; Pipeline)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -350,9 +449,374 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="arquitetura-ecossistema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura Ponta a Ponta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="desenvolvimento-termux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev Móvel no Smartphone & Termux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicação PWA Local-First
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aplicação PWA Local-First
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pwa-visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral & Conceito PWA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pwa-service-worker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Worker & Resiliência Offline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pwa-scanner-regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leitor Câmera & Regex Industrial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pwa-vagas-zoneamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Endereçamento & Vagas de Câmaras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pwa-pesquisa-watchlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pesquisa, Consulta & Radar Watchlist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pwa-relatorios-auditoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios, Conferência & Auditoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pwa-auth-permissoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autenticação, Passkeys & Permissões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Engenharia de Dados (ETL & Pipeline)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Engenharia de Dados (ETL & Pipeline)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
@@ -365,7 +829,7 @@
   <span class="md-ellipsis">
     
   
-    Guia de Operações e CLI
+    Guia de Operações & CLI
   
 
     
@@ -377,9 +841,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -404,9 +869,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -431,9 +897,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -446,7 +913,7 @@
   <span class="md-ellipsis">
     
   
-    Normalizadores e Heurísticas
+    Normalizadores & Heurísticas
   
 
     
@@ -458,9 +925,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -485,9 +953,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -500,7 +969,7 @@
   <span class="md-ellipsis">
     
   
-    Governança e Schema
+    Governança de Schema & Manifesto
   
 
     
@@ -512,9 +981,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -539,6 +1009,14 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -554,7 +1032,7 @@
   <span class="md-ellipsis">
     
   
-    Glossário de Termos Técnicos
+    Glossário & Referências
   
 
     
@@ -594,10 +1072,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-contexto-e-engenharia-de-origem" class="md-nav__link">
+  <a href="#1-a-simbiose-perfeita-do-b2b-ao-chao-de-fabrica" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💡 1. Contexto e Engenharia de Origem
+        🧬 1. A Simbiose Perfeita: Do B2B ao Chão de Fábrica
       
     </span>
   </a>
@@ -605,10 +1083,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-fluxo-geral-de-dados-data-pipeline" class="md-nav__link">
+  <a href="#2-autoria-e-origem-operacional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔄 2. Fluxo Geral de Dados (Data Pipeline)
+        🎯 2. Autoria e Origem Operacional
       
     </span>
   </a>
@@ -616,10 +1094,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-stack-tecnologica" class="md-nav__link">
+  <a href="#3-ciclo-de-vida-da-informacao-ponta-a-ponta" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛠️ 3. Stack Tecnológica
+        🔄 3. Ciclo de Vida da Informação Ponta a Ponta
       
     </span>
   </a>
@@ -627,13 +1105,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-estrutura-do-repositorio" class="md-nav__link">
+  <a href="#4-sumario-da-stack-tecnologica-unificada" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏛️ 4. Estrutura do Repositório
+        🛠️ 4. Sumário da Stack Tecnológica Unificada
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-guia-de-navegacao-na-documentacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 5. Guia de Navegação na Documentação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 5. Guia de Navegação na Documentação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecossistema-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏛️ Ecossistema &amp; Arquitetura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacao-pwa-local-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📱 Aplicação PWA Local-First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engenharia-de-dados-etl-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚙️ Engenharia de Dados (ETL &amp; Pipeline)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -654,90 +1182,175 @@
 
 
 
-<h1 id="paletscan-etl-visao-geral-da-arquitetura">📦 PaletScan ETL - Visão Geral da Arquitetura</h1>
+<h1 id="ecossistema-paletscan-simbiose-entre-engenharia-de-dados-pwa">🌐 Ecossistema PaletScan - Simbiose entre Engenharia de Dados &amp; PWA</h1>
+<p><a href="https://NaejBarbosa.github.io/paletscan-etl/"><img alt="Ecosystem" src="https://img.shields.io/badge/Ecosystem-Data_ETL_%2B_PWA_Mobile-indigo.svg" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"><img alt="PWA" src="https://img.shields.io/badge/PWA-Local--First_Offline-brightgreen.svg" /></a>
+<a href="https://supabase.com/"><img alt="Database" src="https://img.shields.io/badge/Database-WatermelonDB_%2B_Supabase-orange.svg" /></a>
+<a href="https://github.com/danielgatis/rembg"><img alt="AI Vision" src="https://img.shields.io/badge/AI_Vision-rembg_U2Net-blue.svg" /></a></p>
 <blockquote>
-<p><strong>PaletScan</strong> é uma solução de alto desempenho para escaneamento de códigos de barras (<code>EAN</code> / <code>DUN</code>), controle de validades e endereçamento dinâmico de paletes em câmaras frias da indústria alimentícia (congelados e resfriados).</p>
+<p>O <strong>Ecossistema PaletScan</strong> é uma solução industrial completa e integrada, projetada para eliminar perdas financeiras por vencimento, acelerar o giro de mercadorias perecíveis (FEFO / PVPS) e garantir precisão cirúrgica no endereçamento de paletes em câmaras frigoríficas industriais (congelados e resfriados).</p>
 </blockquote>
 <hr />
-<h2 id="1-contexto-e-engenharia-de-origem">💡 1. Contexto e Engenharia de Origem</h2>
-<p>O <strong>PaletScan ETL</strong> foi idealizado e construído por <strong>Jean Barbosa (Operador de Empilhadeira)</strong>, desenvolvido originalmente a partir de um smartphone Android rodando um ambiente containerizado Linux (Ubuntu no Termux). O projeto une o conhecimento prático de chão de fábrica e movimentação logística de câmaras frias à engenharia de software e arquitetura de dados profissional.</p>
-<p>O pipeline de ETL (<em>Extract, Transform, Load</em>) é responsável por extrair dados ao vivo de portais B2B fornecedores, higienizar descrições, validar com acurácia códigos de barras tratados com algoritmos matemáticos <strong>Modulus 10 (GS1)</strong>, processar imagens de produtos via Inteligência Artificial local e alimentar o banco de dados relacional no <strong>Supabase</strong>.</p>
+<h2 id="1-a-simbiose-perfeita-do-b2b-ao-chao-de-fabrica">🧬 1. A Simbiose Perfeita: Do B2B ao Chão de Fábrica</h2>
+<p>O PaletScan une duas frentes de tecnologia que operam em harmonia contínua:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>+---------------------------------------------------------------------------------------+
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>|                               ECOSSISTEMA INTEGRADO PALETSCAN                         |
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>+---------------------------------------------------------------------------------------+
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>|                                                                                       |
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>|   +---------------------------------------+   +-----------------------------------+   |
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>|   |    CAMADA 1: INTELIGÊNCIA &amp; ETL       |   |    CAMADA 2: PWA LOCAL-FIRST      |   |
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>|   |                                       |   |                                   |   |
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>|   |  * Scrapers B2B Multi-Fornecedores    |   |  * Service Worker (@serwist/next) |   |
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>|   |  * Normalização &amp; Heurísticas         |   |  * Banco Local WatermelonDB       |   |
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>|   |  * Pipeline IA de Imagens (U2Net)     |   |  * Leitor Câmera &amp; Crop Óptico    |   |
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>|   |  * Validação Matemática Modulus 10    |   |  * Funil de Regex Industrial      |   |
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>|   +---------------------------------------+   +-----------------------------------+   |
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>|                       │                                         │                     |
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>|                       ▼                                         ▼                     |
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>|   +-------------------------------------------------------------------------------+   |
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>|   |                      SUPABASE POSTGRESQL (NÚCLEO RELACIONAL)                   |   |
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>|   |                                                                               |   |
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>|   |   * Catálogo Master de Produtos e Marcas (Single Source of Truth)             |   |
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>|   |   * Tabela Imutável de Atributos Manuais (produtos_atributos_manuais)         |   |
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>|   |   * Views Relacionais Otimizadas (vw_produtos_com_marcas, paletes_com_marca)  |   |
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>|   |   * Instant Sync em &lt; 30ms via Hash Check &amp; Fila pending_sync                 |   |
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>|   +-------------------------------------------------------------------------------+   |
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>+---------------------------------------------------------------------------------------+
+</span></code></pre></div>
+<ol>
+<li><strong>Camada de Inteligência de Dados (ETL &amp; Pipelines)</strong>:</li>
+<li>Extrai e higieniza continuamente catálogos industriais B2B dos maiores frigoríficos e indústrias alimentícias (<strong>Friboi, JBS, BRF Sadia/Perdigão, Seara, Aurora, Copacol, Lar Cooperativa</strong>).</li>
+<li>Aplica validação matemática estrita de <strong>Modulus 10 (GS1)</strong> para códigos EAN-13 e DUN-14.</li>
+<li>Processa fotos de produtos através de redes neurais artificiais (<strong>U2Net / ONNX / rembg</strong>), gerando assets transparentes otimizados em WebP.</li>
+<li>
+<p>Alimenta o banco de dados mestre no <strong>Supabase PostgreSQL</strong>.</p>
+</li>
+<li>
+<p><strong>Camada de Operação de Campo (PWA Local-First)</strong>:</p>
+</li>
+<li>Progressive Web App instalável que consome a base mestre e opera <strong>100% offline</strong> dentro de câmaras frias através do <strong>WatermelonDB (IndexedDB / LokiJS)</strong>.</li>
+<li>Decodifica códigos complexos (GS1-128, Data Matrix 2D, regra Lar <code>+365 dias</code>, BRF, pesagem dinâmica) com tempo de resposta inferior a <strong>5 milissegundos</strong>.</li>
+<li>Gerencia alocação de vagas em coordenadas de 4 dígitos (<code>A10D</code> a <code>B53E</code>), controle de inventário físico, listas prioritárias (Watchlist com confetes) e exportação de relatórios executivos.</li>
+</ol>
 <hr />
-<h2 id="2-fluxo-geral-de-dados-data-pipeline">🔄 2. Fluxo Geral de Dados (Data Pipeline)</h2>
-<p>O diagrama abaixo sintetiza o ciclo de vida completo do dado, desde a extração B2B até a disponibilidade no aplicativo PWA:</p>
-<pre class="mermaid"><code>graph TD
-    A["Sitemap XML B2B e APIs REST"] --&gt;|Fetch URLs| B["Scraper Concurrent Engine - TS"]
-    B --&gt;|APIs Oracle / B2B| C{"Validação Exaustiva e Acurácia"}
-    C --&gt;|Filtro SKU e Imagem| D["Raw Data Staging JSON"]
-    D --&gt; E["Core Engine: Normalização e Heurísticas"]
-    E --&gt;|Modulus 10 GS1| F["EAN e DUN Higienizados"]
-    E --&gt;|Title Case PT-BR e Pesos| G["Descrições Padronizadas"]
-    D --&gt;|Download Imagens Reais| H["Pipeline de IA Local - Python"]
-    H --&gt;|rembg - U2Net| I["Remoção de Fundo"]
-    I --&gt;|Fundo Branco e Otimização WebP| J["Assets Processados (Menos de 150KB)"]
-    J --&gt;|Upload CDN| M["Supabase Storage Bucket"]
-    F --&gt; K["Supabase Sync Engine"]
-    G --&gt; K
-    J --&gt; K
-    K --&gt;|Fallback Conflict 23505| L[("Supabase PostgreSQL")]
-    L --&gt; N["PaletScan PWA Frontend"]
-    M --&gt; N</code></pre>
+<h2 id="2-autoria-e-origem-operacional">🎯 2. Autoria e Origem Operacional</h2>
+<p>O projeto foi integralmente idealizado, desenhado e desenvolvido por <strong>Jean Barbosa</strong>, Operador de Empilhadeira do setor de Perecíveis na <strong>Loja 410 do Fort Atacadista no Rio Tavares (Florianópolis - SC)</strong>, em parceria estratégica com o <strong>Agente Antigravity</strong> (IA da Google DeepMind).</p>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>Engenharia Autônoma 100% Mobile</strong>:<br />
+Todo o ecossistema — desde os scrapers em TypeScript, pipelines de visão computacional em Python, banco de dados relacional e a aplicação PWA em React/Next.js — foi <strong>codificado e mantido a partir de um smartphone pessoal</strong>, utilizando o emulador de terminal <strong>Termux</strong> com distribuição Linux containerizada (<strong>PRoot Ubuntu</strong>).</p>
+</blockquote>
 <hr />
-<h2 id="3-stack-tecnologica">🛠️ 3. Stack Tecnológica</h2>
+<h2 id="3-ciclo-de-vida-da-informacao-ponta-a-ponta">🔄 3. Ciclo de Vida da Informação Ponta a Ponta</h2>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    participant Fornecedor as Portais B2B (Friboi, BRF, Seara...)
+    participant ETL as Pipeline ETL (TypeScript + Python IA)
+    participant Cloud as Supabase PostgreSQL &amp; Storage
+    participant PWA as PaletScan PWA (WatermelonDB)
+    participant Operador as Operador de Empilhadeira
+
+    Fornecedor-&gt;&gt;ETL: Extração de Sitemaps, APIs &amp; Catálogos
+    ETL-&gt;&gt;ETL: Modulus 10 GS1 + IA de Imagem U2Net
+    ETL-&gt;&gt;Cloud: Carga Relacional Sanitizada &amp; Assets WebP
+    Cloud--&gt;&gt;PWA: Instant Sync Delta (&lt; 30ms via Hash Check)
+    PWA-&gt;&gt;Operador: Catálogo Offline Imediato no Coletor
+    Operador-&gt;&gt;PWA: Bipagem de Palete na Câmara Frigorífica (Blackout)
+    PWA-&gt;&gt;PWA: Gravação Local Reativa (&lt; 5ms)
+    Operador-&gt;&gt;PWA: Vínculo Manual de DUN-14 / Código de Balança
+    PWA-&gt;&gt;Cloud: Persistência em produtos_atributos_manuais (Imunidade ETL)</code></pre>
+<hr />
+<h2 id="4-sumario-da-stack-tecnologica-unificada">🛠️ 4. Sumário da Stack Tecnológica Unificada</h2>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Camada</th>
 <th style="text-align: left;">Tecnologia</th>
-<th style="text-align: left;">Função no Projeto</th>
+<th style="text-align: left;">Função no Ecossistema</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Scraping &amp; Core</strong></td>
-<td style="text-align: left;"><code>TypeScript</code> / <code>Node.js</code></td>
-<td style="text-align: left;">Concorrência de requisições, parsing de sitemaps XML, validações Modulus 10 e execução do pipeline.</td>
+<td style="text-align: left;"><strong>Pipeline ETL &amp; Core</strong></td>
+<td style="text-align: left;"><code>TypeScript 5</code> / <code>Node.js 20</code></td>
+<td style="text-align: left;">Scrapers concorrentes, parsing XML/JSON, heurísticas e validação Modulus 10.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Processamento Visual (IA)</strong></td>
-<td style="text-align: left;"><code>Python 3</code> / <code>rembg</code> / <code>Pillow</code></td>
-<td style="text-align: left;">Remoção de fundo via redes neurais (U2Net/ONNX), achatamento Alpha e otimização WebP.</td>
+<td style="text-align: left;"><strong>Visão Computacional (IA)</strong></td>
+<td style="text-align: left;"><code>Python 3</code> / <code>rembg (U2Net)</code> / <code>Pillow</code></td>
+<td style="text-align: left;">Remoção de fundo via redes neurais, recorte automático e compressão WebP.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Banco de Dados &amp; Storage</strong></td>
-<td style="text-align: left;"><code>PostgreSQL</code> / <code>Supabase</code></td>
-<td style="text-align: left;">Modelo relacional resiliente, IDs determinísticos UUIDv5, Storage Bucket para imagens.</td>
+<td style="text-align: left;"><strong>Banco Nuvem &amp; Storage</strong></td>
+<td style="text-align: left;"><code>Supabase</code> (PostgreSQL 15)</td>
+<td style="text-align: left;">Banco relacional master, Row Level Security (RLS) e Storage Buckets.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Governança &amp; Staging</strong></td>
-<td style="text-align: left;"><code>JSON Schema (Draft-07)</code></td>
-<td style="text-align: left;">Validação estrita de contratos de dados em staging antes do carregamento final.</td>
+<td style="text-align: left;"><strong>Frontend PWA</strong></td>
+<td style="text-align: left;"><code>Next.js 14</code> (Pages Router)</td>
+<td style="text-align: left;">Framework React para aplicação PWA industrial Touch-First.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>CI/CD &amp; Documentação</strong></td>
-<td style="text-align: left;"><code>MkDocs Material</code> / <code>GitHub Actions</code></td>
-<td style="text-align: left;">Geração automática da documentação técnica e deploy contínuo no GitHub Pages.</td>
+<td style="text-align: left;"><strong>Service Worker &amp; Cache</strong></td>
+<td style="text-align: left;"><code>@serwist/next</code> &amp; Serwist</td>
+<td style="text-align: left;">App Shell precaching, navegação offline e cache inteligente de imagens.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Banco Reativo Local</strong></td>
+<td style="text-align: left;"><code>WatermelonDB v11</code> (IndexedDB / LokiJS)</td>
+<td style="text-align: left;">Operação offline de alta performance com tempos de resposta &lt; 5ms.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Leitor Óptico &amp; Scanner</strong></td>
+<td style="text-align: left;"><code>@zxing/library</code> &amp; <code>BarcodeDetector API</code></td>
+<td style="text-align: left;">Leitura em tempo real pela câmera e upload com recorte interativo (<code>react-zoom-pan-pinch</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Autenticação &amp; Segurança</strong></td>
+<td style="text-align: left;"><code>NextAuth.js</code> &amp; <code>@simplewebauthn</code></td>
+<td style="text-align: left;">Login por senha, QR Code móvel e biometria/Passkeys FIDO2.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Busca &amp; Gamificação</strong></td>
+<td style="text-align: left;"><code>fuzzball</code> &amp; <code>canvas-confetti</code></td>
+<td style="text-align: left;">Busca fonética por aproximação e celebração visual no Radar Watchlist.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Exportação de Dados</strong></td>
+<td style="text-align: left;"><code>jspdf</code> &amp; <code>jspdf-autotable</code></td>
+<td style="text-align: left;">Geração client-side de relatórios tabulares em PDF e CSV (CP1252) com Android MediaScan.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="4-estrutura-do-repositorio">🏛️ 4. Estrutura do Repositório</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>paletscan-etl/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── core/
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   ├── heuristics/         # Classificadores de marcas, categorias e conservação
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   ├── manifest/           # Contrato de dados (schema_manifest.json)
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   └── normalizers/        # Parser de texto, pesos e geradores EAN-13/DUN-14 Modulus 10
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── db_sync/                # Scripts de sincronização relacional e de mídias no Supabase
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── docs/                   # Documentação técnica em Markdown (MkDocs)
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── images/
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│   ├── ai_pipeline/        # Script Python com rembg e Pillow para tratamento de imagens
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│   ├── raw/                # Imagens brutas baixadas
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│   ├── processed/          # Imagens tratadas com fundo branco em WebP
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│   └── archived/           # Imagens sincronizadas com o Supabase Storage
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── scrapers/               # Scrapers concorrentes em tempo real (ex: Friboi)
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>├── staging/                # Arquivos JSON sanitizados prontos para sync
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>└── mkdocs.yml              # Arquivo de configuração da documentação
-</span></code></pre></div>
+<h2 id="5-guia-de-navegacao-na-documentacao">📚 5. Guia de Navegação na Documentação</h2>
+<p>Explore os módulos completos do ecossistema organizados por área:</p>
+<h3 id="ecossistema-arquitetura">🏛️ Ecossistema &amp; Arquitetura</h3>
+<ul>
+<li><a href="arquitetura-ecossistema/">Arquitetura Integrada Ponta a Ponta</a>: Detalhamento dos contratos de dados, resolução de conflitos e isolamento de overrides manuais.</li>
+<li><a href="desenvolvimento-termux/">Dev Móvel no Smartphone &amp; Termux</a>: Ambiente Linux no celular, compilação de assets, automação e desenvolvimento assistido por IA.</li>
+</ul>
+<h3 id="aplicacao-pwa-local-first">📱 Aplicação PWA Local-First</h3>
+<ul>
+<li><a href="pwa-visao-geral/">Visão Geral &amp; Conceito PWA</a>: Funcionalidades operacionais, interface Touch-First e métricas de chão de fábrica.</li>
+<li><a href="pwa-service-worker/">Service Worker &amp; Resiliência Offline</a>: Estratégias de cache Serwist, ciclo de vida do Service Worker e operação em câmaras frigoríficas.</li>
+<li><a href="pwa-scanner-regex/">Leitor Câmera &amp; Regex Industrial</a>: Motores de câmera, decodificação GS1-128, Data Matrix 2D, regra Lar (+365 dias) e pesagem dinâmica.</li>
+<li><a href="pwa-vagas-zoneamento/">Endereçamento &amp; Vagas de Câmaras</a>: Coordenadas de 4 caracteres, zoneamento R1/R2/C1/C2 e prevenção de vagas duplicadas.</li>
+<li><a href="pwa-pesquisa-watchlist/">Pesquisa, Consulta &amp; Radar Watchlist</a>: Busca Fuzzy, múltiplas Watchlists, celebração com confetes e vínculos de caixas DUN-14.</li>
+<li><a href="pwa-relatorios-auditoria/">Relatórios, Conferência &amp; Auditoria</a>: Modo conferência física com checklist, expurgo em massa e relatórios CSV/PDF com MediaScan.</li>
+<li><a href="pwa-auth-permissoes/">Autenticação, Passkeys &amp; Permissões</a>: Sessões híbridas offline, biometria WebAuthn FIDO2, matriz de permissões RBAC e APIs serverless.</li>
+</ul>
+<h3 id="engenharia-de-dados-etl-pipeline">⚙️ Engenharia de Dados (ETL &amp; Pipeline)</h3>
+<ul>
+<li><a href="operacoes/">Guia de Operações &amp; CLI</a>: Comandos da interface de linha de comando, modos de execução e fluxos do pipeline.</li>
+<li><a href="scrapers-multi-fornecedores/">Scrapers Multi-Fornecedores</a>: Engenharia reversa e extração B2B de Aurora, BRF, Copacol, Friboi, Lar e Seara.</li>
+<li><a href="pipeline-friboi/">Pipeline Friboi / JBS</a>: Pipeline especializado com APIs Oracle, sessões e paginação concorrente.</li>
+<li><a href="heuristicas-normalizadores/">Normalizadores &amp; Heurísticas</a>: Classificação taxonômica, padronização de pesos e algoritmos Modulus 10.</li>
+<li><a href="processamento-imagens/">Pipeline de IA de Imagens</a>: Arquitetura de processamento visual com U2Net e otimização WebP.</li>
+<li><a href="schema-manifesto/">Governança de Schema &amp; Manifesto</a>: Validação Draft-07 e integridade de dados em staging.</li>
+<li><a href="supabase/">Sincronização com Supabase</a>: Scripts de conciliação relacional, tratamento de duplicidades e Storage CDN.</li>
+<li><a href="glossario/">Glossário &amp; Referências</a>: Dicionário de termos técnicos de logística, GS1, PWA e banco de dados.</li>
+</ul>
 
 
 
@@ -774,13 +1387,13 @@
         
         
           
-          <a href="operacoes/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Guia de Operações e CLI">
+          <a href="arquitetura-ecossistema/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Arquitetura Ponta a Ponta">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Guia de Operações e CLI
+                Arquitetura Ponta a Ponta
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -12,13 +12,13 @@
         <meta name="author" content="Jean Barbosa & Antigravity Data Engineering Team">
       
       
-        <link rel="canonical" href="https://NaejBarbosa.github.io/paletscan-etl/schema-manifesto/">
+        <link rel="canonical" href="https://NaejBarbosa.github.io/paletscan-etl/pwa-pesquisa-watchlist/">
       
       
-        <link rel="prev" href="../processamento-imagens/">
+        <link rel="prev" href="../pwa-vagas-zoneamento/">
       
       
-        <link rel="next" href="../supabase/">
+        <link rel="next" href="../pwa-relatorios-auditoria/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Governança de Schema & Manifesto - PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)</title>
+        <title>Pesquisa, Consulta & Radar Watchlist - PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#governanca-de-dados-e-manifesto-de-schema" class="md-skip">
+        <a href="#pesquisa-consulta-radar-watchlist" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Governança de Schema & Manifesto
+              Pesquisa, Consulta & Radar Watchlist
             
           </span>
         </div>
@@ -379,20 +379,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -413,7 +413,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -540,10 +540,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../pwa-pesquisa-watchlist/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pesquisa, Consulta & Radar Watchlist
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -559,6 +586,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-busca-avancada-por-aproximacao-fuzzy-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 1. Busca Avançada por Aproximação (Fuzzy Matching)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-radar-de-produtos-procurados-multi-watchlists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 2. Radar de Produtos Procurados (Multi-Watchlists)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gerenciamento-e-vinculo-de-codigos-gerenciarcodigosmodaltsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏷️ 3. Gerenciamento e Vínculo de Códigos (GerenciarCodigosModal.tsx)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -631,20 +711,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -665,7 +745,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -820,37 +900,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Governança de Schema & Manifesto
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../schema-manifesto/" class="md-nav__link">
         
   
   
@@ -866,109 +919,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-relacao-atual-de-metricas-e-volumes-no-banco-de-dados" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📊 1. Relação Atual de Métricas e Volumes no Banco de Dados
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-modelo-relacional-anti-redundancia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏛️ 2. Modelo Relacional Anti-Redundância
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-manifesto-json-schema-e-compatibilidade-dinamica-schema_manifestjson" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📑 3. Manifesto JSON Schema e Compatibilidade Dinâmica (schema_manifest.json)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📑 3. Manifesto JSON Schema e Compatibilidade Dinâmica (schema_manifest.json)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-registro-dinamico-de-holdings-marcas-e-aliases-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A. Registro Dinâmico de Holdings, Marcas e Aliases CLI:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-identificadores-deterministicos-via-uuidv5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔑 4. Identificadores Determinísticos via UUIDv5
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-higienizacao-sql-em-nivel-de-banco-validar_e_corrigir_eanssql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛢️ 5. Higienização SQL em Nível de Banco (validar_e_corrigir_eans.sql)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-diretrizes-estritas-de-exportacao-ao-pwa-regras-de-negocio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📱 6. Diretrizes Estritas de Exportação ao PWA (Regras de Negócio)
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1063,10 +1013,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-relacao-atual-de-metricas-e-volumes-no-banco-de-dados" class="md-nav__link">
+  <a href="#1-busca-avancada-por-aproximacao-fuzzy-matching" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📊 1. Relação Atual de Métricas e Volumes no Banco de Dados
+        🔍 1. Busca Avançada por Aproximação (Fuzzy Matching)
       
     </span>
   </a>
@@ -1074,10 +1024,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-modelo-relacional-anti-redundancia" class="md-nav__link">
+  <a href="#2-radar-de-produtos-procurados-multi-watchlists" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏛️ 2. Modelo Relacional Anti-Redundância
+        🎯 2. Radar de Produtos Procurados (Multi-Watchlists)
       
     </span>
   </a>
@@ -1085,60 +1035,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-manifesto-json-schema-e-compatibilidade-dinamica-schema_manifestjson" class="md-nav__link">
+  <a href="#3-gerenciamento-e-vinculo-de-codigos-gerenciarcodigosmodaltsx" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📑 3. Manifesto JSON Schema e Compatibilidade Dinâmica (schema_manifest.json)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📑 3. Manifesto JSON Schema e Compatibilidade Dinâmica (schema_manifest.json)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-registro-dinamico-de-holdings-marcas-e-aliases-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A. Registro Dinâmico de Holdings, Marcas e Aliases CLI:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-identificadores-deterministicos-via-uuidv5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔑 4. Identificadores Determinísticos via UUIDv5
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-higienizacao-sql-em-nivel-de-banco-validar_e_corrigir_eanssql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛢️ 5. Higienização SQL em Nível de Banco (validar_e_corrigir_eans.sql)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-diretrizes-estritas-de-exportacao-ao-pwa-regras-de-negocio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📱 6. Diretrizes Estritas de Exportação ao PWA (Regras de Negócio)
+        🏷️ 3. Gerenciamento e Vínculo de Códigos (GerenciarCodigosModal.tsx)
       
     </span>
   </a>
@@ -1162,126 +1062,31 @@
 
 
 
-<h1 id="governanca-de-dados-e-manifesto-de-schema">📜 Governança de Dados e Manifesto de Schema</h1>
-<p>O módulo de governança do <strong>PaletScan ETL</strong> assegura que nenhum dado corrompido, órfão ou fora de contrato seja inserido no banco de dados relacional. Ele combina contratos formais em JSON Schema (<a href="file:///root/paletscan-etl/core/manifest/schema_manifest.json"><code>schema_manifest.json</code></a>) com identificadores determinísticos UUIDv5, sincronização dinâmica de marcas/aliases e funções de sanitização em PL/pgSQL no PostgreSQL / Supabase.</p>
+<h1 id="pesquisa-consulta-radar-watchlist">🔎 Pesquisa, Consulta &amp; Radar Watchlist</h1>
+<p>O módulo de <strong>Pesquisa e Consulta</strong> (<a href="file:///root/repo_pwa/components/PesquisaProduto.tsx"><code>PesquisaProduto.tsx</code></a>) é a central de consulta técnica de SKUs, busca inteligente por aproximação textual e monitoramento prioritário de validades (Watchlist) no <strong>PaletScan PWA</strong>.</p>
 <hr />
-<h2 id="1-relacao-atual-de-metricas-e-volumes-no-banco-de-dados">📊 1. Relação Atual de Métricas e Volumes no Banco de Dados</h2>
-<p>Após a execução do pipeline de ingestão e sanitização estrita, a base de dados relacional encontra-se auditada e 100% íntegra, apresentando a seguinte relação de volumes:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Entidade Relacional</th>
-<th style="text-align: left;">Quantidade Auditada</th>
-<th style="text-align: left;">Descrição / Regra de Negócio</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Fabricantes (Holdings)</strong></td>
-<td style="text-align: left;"><strong>4</strong></td>
-<td style="text-align: left;">JBS S.A., Seara Alimentos LTDA, BRF S.A. e Cooperativa Agroindustrial Lar.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Marcas Comerciais</strong></td>
-<td style="text-align: left;"><strong>143</strong></td>
-<td style="text-align: left;">Marcas ativas associadas (ex: Friboi, Seara, Sadia, Perdigão, Lar, Maturatta, 1953).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Produtos Validados</strong></td>
-<td style="text-align: left;"><strong>3.386</strong></td>
-<td style="text-align: left;">Todos 100% respaldados por EAN numérico único (0 produtos órfãos ou sem EAN).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Códigos de Barras</strong></td>
-<td style="text-align: left;"><strong>9.310</strong></td>
-<td style="text-align: left;">Registros catalogados e normalizados nas tipagens estritas <code>EAN</code> e <code>DUN</code>.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="1-busca-avancada-por-aproximacao-fuzzy-matching">🔍 1. Busca Avançada por Aproximação (Fuzzy Matching)</h2>
+<ul>
+<li><strong>Biblioteca <code>fuzzball</code></strong>: Algoritmo <code>token_set_ratio</code> que tolera erros de digitação e acentuação cometidos no teclado do smartphone.</li>
+<li><strong>Consulta Local Imediata</strong>: Busca reativa sobre o catálogo mestre sincronizado no WatermelonDB, sem depender de conexão de rede.</li>
+</ul>
 <hr />
-<h2 id="2-modelo-relacional-anti-redundancia">🏛️ 2. Modelo Relacional Anti-Redundância</h2>
-<p>O modelo de dados do PaletScan foi desenhado para eliminar duplicidades e garantir a integridade entre fornecedores, marcas, SKUs e variações logísticas de código de barras:</p>
-<pre class="mermaid"><code>erDiagram
-    FABRICANTES ||--o{ MARCAS : "possui"
-    MARCAS ||--o{ PRODUTOS : "categoriza"
-    PRODUTOS ||--o{ CODIGOS_BARRAS : "associa"
+<h2 id="2-radar-de-produtos-procurados-multi-watchlists">🎯 2. Radar de Produtos Procurados (Multi-Watchlists)</h2>
+<pre class="mermaid"><code>graph TD
+    A["Módulo Radar Watchlist"] --&gt; B["Gestor de Múltiplas Listas"]
+    A --&gt; C["Relatório de Localização em Estoque"]
+    A --&gt; D["Alerta &amp; Gamificação"]
 
-    FABRICANTES {
-        uuid id PK "UUIDv5 Deterministico"
-        string nome "Razao Social / Holding"
-        string cnpj "CNPJ do Fabricante"
-    }
-
-    MARCAS {
-        uuid id PK "UUIDv5 Deterministico"
-        uuid fabricante_id FK
-        string nome "Nome Comercial da Marca"
-    }
-
-    PRODUTOS {
-        uuid id PK "UUIDv5 Deterministico"
-        uuid marca_id FK
-        string nome "Nome Normalizado (Title Case)"
-        string categoria "Categoria Logistica"
-        string conservacao "Tipo de Conservacao"
-        integer peso_gramas "Peso Fixo em Gramas"
-        boolean peso_variavel "Flag de Corte por Pesagem"
-        string imagem_url "URL CDN Supabase Storage"
-        string imagem_status "aprovado | sem_imagem | pendente"
-    }
-
-    CODIGOS_BARRAS {
-        uuid id PK "UUIDv5 Deterministico"
-        uuid produto_id FK
-        string codigo UK "EAN / DUN / SKU (VARCHAR Estrito)"
-        string tipo "EAN | DUN | SKU (Tipagem Normalizada)"
-        integer quantidade_embalagem "Fator de Embalagem"
-    }</code></pre>
+    B --&gt; B1["Listas Segmentadas (ex: Validades Críticas, Friboi, Fim de Semana)"]
+    C --&gt; C1["Cruzamento Automático com Vagas Ocupadas (ex: R1 · B21E)"]
+    D --&gt; D1["Feedback Sonoro + Efeito de Confetes (canvas-confetti) 🎉"]</code></pre>
 <hr />
-<h2 id="3-manifesto-json-schema-e-compatibilidade-dinamica-schema_manifestjson">📑 3. Manifesto JSON Schema e Compatibilidade Dinâmica (<code>schema_manifest.json</code>)</h2>
-<p>O arquivo <a href="file:///root/paletscan-etl/core/manifest/schema_manifest.json"><code>core/manifest/schema_manifest.json</code></a> define o contrato formal (JSON Schema Draft-07) e o catálogo mestre do projeto.</p>
-<h3 id="a-registro-dinamico-de-holdings-marcas-e-aliases-cli">A. Registro Dinâmico de Holdings, Marcas e Aliases CLI:</h3>
-<p>Para garantir que a inclusão ou remoção de marcas e fornecedores seja refletida automaticamente nos aliases do terminal e na central de ajuda (<code>paletscan</code> / <code>etl-help</code>), o arquivo de manifesto inclui as seções:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"manifesto_holdings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fab_friboi_jbs"</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">"nome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JBS S.A."</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">"divisoes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Friboi"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Seara Alimentos"</span><span class="p">],</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">"marcas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Friboi"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Maturatta"</span><span class="p">,</span><span class="w"> </span><span class="s2">"1953"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Swift"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Seara"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Gourmet"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Incrível!"</span><span class="p">],</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">"scrapers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"scrapers/friboi/index.ts"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scrapers/seara/index.ts"</span><span class="p">],</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">"aliases_scraper"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"etl-friboi"</span><span class="p">,</span><span class="w"> </span><span class="s2">"etl-seara"</span><span class="p">]</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="p">],</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">"manifesto_aliases"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">"etl-run"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Executa o pipeline completo e exibe o relatório de timestamps na CLI."</span><span class="p">,</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nt">"etl-friboi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Extrai catálogo B2B Friboi/JBS."</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
-</span></code></pre></div>
-<blockquote>
-<p>🔄 <strong>Dinamicidade Garantida:</strong> O script <code>scripts/render_help_from_manifest.ts</code> lê este manifesto em tempo de execução. Se uma marca entrar ou sair do projeto, a CLI atualiza seu menu mobile sem requerer alteração de código.</p>
-</blockquote>
-<hr />
-<h2 id="4-identificadores-deterministicos-via-uuidv5">🔑 4. Identificadores Determinísticos via UUIDv5</h2>
-<p>Para garantir que reexecuções do pipeline ETL não gerem registros duplicados ou IDs aleatórios a cada sincronização, todos os identificadores primários são gerados via <strong>UUIDv5</strong> a partir de um namespace estático:</p>
-<div class="arithmatex">\[\text{UUID} = \text{UUIDv5}(\text{PALETSCAN\_NAMESPACE}, \text{Chave\_Natural})\]</div>
-<p>Exemplo de chaves naturais utilizadas:
-- <strong>Fabricante ID</strong>: <code>UUIDv5(NAMESPACE, "jbs-friboi")</code>
-- <strong>Marca ID</strong>: <code>UUIDv5(NAMESPACE, "friboi-reserva")</code>
-- <strong>Produto ID</strong>: <code>UUIDv5(NAMESPACE, "sku-109403")</code>
-- <strong>Código de Barras ID</strong>: <code>UUIDv5(NAMESPACE, "ean-7891515432101")</code></p>
-<hr />
-<h2 id="5-higienizacao-sql-em-nivel-de-banco-validar_e_corrigir_eanssql">🛢️ 5. Higienização SQL em Nível de Banco (<code>validar_e_corrigir_eans.sql</code>)</h2>
-<p>Como camada adicional de proteção e governança, o arquivo <a href="file:///root/paletscan-etl/db_sync/validar_e_corrigir_eans.sql"><code>db_sync/validar_e_corrigir_eans.sql</code></a> instala a função <code>fn_calculate_mod10_ean13</code> diretamente no banco Supabase em PL/pgSQL.</p>
-<hr />
-<h2 id="6-diretrizes-estritas-de-exportacao-ao-pwa-regras-de-negocio">📱 6. Diretrizes Estritas de Exportação ao PWA (Regras de Negócio)</h2>
-<p>Para preservar a excelência da experiência do usuário e a precisão operacional nos coletores/smartphones:</p>
-<ol>
-<li><strong>Requisito Mínimo de EAN-13:</strong> Apenas produtos com código <strong>EAN numérico de 13 dígitos</strong> válido são exportados para os arquivos <code>produtos.json</code> e servidos ao PWA.</li>
-<li><strong>Eliminação de SKUs na Interface do Usuário:</strong> O PWA não exibe códigos SKU ou referências internas de fabricante. A experiência de usuário restringe-se exclusivamente aos identificadores <strong>EAN (13 dígitos)</strong> e <strong>DUN (14 dígitos)</strong>.</li>
-<li><strong>Isolamento Relacional de Produtos sem EAN:</strong> Produtos provenientes de canais B2B que contenham apenas SKU interno ou DUN são preservados no Supabase para auditoria e rastreabilidade, mas são categoricamente descartados da publicação no catálogo do PWA.</li>
-</ol>
+<h2 id="3-gerenciamento-e-vinculo-de-codigos-gerenciarcodigosmodaltsx">🏷️ 3. Gerenciamento e Vínculo de Códigos (<code>GerenciarCodigosModal.tsx</code>)</h2>
+<ul>
+<li><strong>Vínculo de Caixas (DUN-14)</strong>: Permite associar códigos de caixa máster de 14 dígitos a produtos EAN consumidores.</li>
+<li><strong>Código de Pesagem / Balança</strong>: Restrito estritamente a produtos fracionados de peso variável.</li>
+<li><strong>Gravação Segura</strong>: Persistido com prioridade na tabela <code>produtos_atributos_manuais</code>, garantindo imunidade contra rotinas automáticas de ETL.</li>
+</ul>
 
 
 
@@ -1317,7 +1122,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
           
-          <a href="../processamento-imagens/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Pipeline de IA de Imagens">
+          <a href="../pwa-vagas-zoneamento/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Endereçamento &amp; Vagas de Câmaras">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1327,20 +1132,20 @@
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Pipeline de IA de Imagens
+                Endereçamento & Vagas de Câmaras
               </div>
             </div>
           </a>
         
         
           
-          <a href="../supabase/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Sincronização com Supabase">
+          <a href="../pwa-relatorios-auditoria/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Relatórios, Conferência &amp; Auditoria">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Sincronização com Supabase
+                Relatórios, Conferência & Auditoria
               </div>
             </div>
             <div class="md-footer__button md-icon">
