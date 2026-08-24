@@ -1134,22 +1134,31 @@
 <p>Um dos pilares mais singulares do <strong>Ecossistema PaletScan</strong> é a sua origem e ciclo de vida inteiramente móveis: tanto o pipeline de engenharia de dados (ETL) quanto a aplicação cliente (PWA) foram idealizados, desenvolvidos, testados e documentados diretamente a partir de um smartphone Android.</p>
 <hr />
 <h2 id="1-infraestrutura-linux-no-smartphone-termux-proot-ubuntu">🛠️ 1. Infraestrutura Linux no Smartphone (Termux + PRoot Ubuntu)</h2>
-<p>Sem a utilização de computadores tradicionais, o ambiente de desenvolvimento completo foi estruturado no celular via <strong>Termux</strong> rodando uma distribuição Linux containerizada (<strong>PRoot Ubuntu ARM64</strong>):</p>
+<p>Sem a utilização de computadores tradicionais, o ambiente de desenvolvimento completo foi estruturado no celular via <strong>Termux</strong> rodando uma distribuição Linux containerizada (<strong>PRoot Ubuntu ARM64</strong>), estruturado em uma árvore vertical de camadas:</p>
 <pre class="mermaid"><code>flowchart TD
-    subgraph Hardware ["Hardware Smartphone Android (ARM64)"]
-        A["Processador ARM64 e Armazenamento Interno"] --&gt; B["Emulador de Terminal Termux"]
-        B --&gt; C["Ambiente Containerizado PRoot Ubuntu"]
+    HW["📱 Smartphone Android (Processador ARM64)"]
+    HW --&gt; TM["💻 Emulador de Terminal Termux"]
+    TM --&gt; UB["🐧 Linux Containerizado PRoot Ubuntu"]
 
-        C --&gt; D["Node.js 20 e TypeScript Core (ETL)"]
-        C --&gt; E["Python 3.11, rembg, Pillow e PyTorch (IA de Imagens)"]
-        C --&gt; F["Next.js 14 Server e Compilador Serwist (PWA)"]
-        C --&gt; G["Git, OpenSSH e MkDocs Material (Documentação)"]
-        C --&gt; H["Agente Antigravity AI (Google DeepMind)"]
-    end
+    UB --&gt; L1["📦 Camada de Engenharia de Dados"]
+    L1 --&gt; D1["Node.js 20 &amp; TypeScript Core (Pipelines ETL)"]
+    D1 --&gt; K1["☁️ Carga Direta no Supabase PostgreSQL"]
 
-    F --&gt;|Porta 3000| I["Navegador Chrome / Coletor Móvel"]
-    G --&gt;|mkdocs gh-deploy| J["GitHub Pages (paletscan-etl)"]
-    D --&gt;|db_sync| K["Supabase Cloud"]</code></pre>
+    UB --&gt; L2["🐍 Camada de Visão Computacional"]
+    L2 --&gt; D2["Python 3.11 &amp; rembg U2Net (IA de Imagens)"]
+    D2 --&gt; K2["🖼️ Geração e Upload de WebP Otimizado"]
+
+    UB --&gt; L3["⚡ Camada de Aplicação Frontend"]
+    L3 --&gt; D3["Servidor Next.js 14 &amp; Serwist (PWA)"]
+    D3 --&gt; K3["📱 Execução Localhost no Navegador e Coletor"]
+
+    UB --&gt; L4["📚 Camada de Documentação &amp; CI/CD"]
+    L4 --&gt; D4["Git, OpenSSH &amp; MkDocs Material"]
+    D4 --&gt; K4["🌐 Deploy Automático no GitHub Pages"]
+
+    UB --&gt; L5["🤖 Agente Inteligente"]
+    L5 --&gt; D5["Agente Antigravity AI (Google DeepMind)"]
+    D5 --&gt; K5["🛠️ Auditoria, Refatoração e Diagnóstico ao Vivo"]</code></pre>
 <h3 id="componentes-do-ambiente-movel">Componentes do Ambiente Móvel:</h3>
 <ul>
 <li><strong>Node.js 20 &amp; npm</strong>: Compilação de scrapers, execução de validações Modulus 10 e compilação do Service Worker Serwist.</li>

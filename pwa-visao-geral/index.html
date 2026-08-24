@@ -1044,20 +1044,27 @@
 <p>O <strong>PaletScan PWA</strong> é a interface operacional de chão de fábrica do ecossistema, projetada para operadores de empilhadeira, conferentes e auditores de estoque atuando no setor de perecíveis (câmaras de congelados e resfriados).</p>
 <hr />
 <h2 id="1-principais-funcionalidades-da-aplicacao">🎯 1. Principais Funcionalidades da Aplicação</h2>
+<p>A arquitetura de recursos do PWA está estruturada em módulos verticais especializados:</p>
 <pre class="mermaid"><code>flowchart TD
-    A["PaletScan PWA (Next.js 14)"] --&gt; B["1. Scanner e Recorte Óptico"]
-    A --&gt; C["2. Funil Regex Industrial"]
-    A --&gt; D["3. Seletor de Vagas em 4 Caracteres"]
-    A --&gt; E["4. Radar de Validades e Multi-Watchlists"]
-    A --&gt; F["5. Modo Conferência Física"]
-    A --&gt; G["6. Autenticação Híbrida e Passkeys"]
+    APP["📱 PaletScan PWA (Next.js 14 Local-First)"]
 
-    B --&gt; H["Leitura de Câmera e Recorte Interativo"]
-    C --&gt; I["GS1-128, Data Matrix Lar (+365d), BRF e Pesagem"]
-    D --&gt; J["Bloqueio de Ocupação Duplicada (R1/R2/C1/C2)"]
-    E --&gt; K["Busca Fuzzy e Celebração com Confetes"]
-    F --&gt; L["Checklist Tátil, Expurgo em Massa e Relatórios"]
-    G --&gt; M["Biometria FIDO2 e Cache de Sessão Offline"]</code></pre>
+    APP --&gt; M1["🔍 1. Módulo de Leitura e Scanner"]
+    M1 --&gt; D1["Leitura de Câmera em Tempo Real &amp; Recorte Manual de Rótulos"]
+
+    APP --&gt; M2["⚙️ 2. Módulo de Regex Industrial"]
+    M2 --&gt; D2["Decodificação GS1-128, Data Matrix Lar (+365d), BRF &amp; Balança"]
+
+    APP --&gt; M3["🏢 3. Módulo de Endereçamento Rígido"]
+    M3 --&gt; D3["Zoneamento em 4 Caracteres &amp; Bloqueio Ativo de Vaga Ocupada"]
+
+    APP --&gt; M4["🎯 4. Módulo de Radar Watchlist"]
+    M4 --&gt; D4["Busca Fuzzy Fonética &amp; Celebração Visual de Localização com Confetes"]
+
+    APP --&gt; M5["📋 5. Módulo de Conferência &amp; Auditoria"]
+    M5 --&gt; D5["Checklist Físico Tátil, Expurgo em Massa &amp; Relatórios PDF/CSV"]
+
+    APP --&gt; M6["🔒 6. Módulo de Autenticação &amp; Segurança"]
+    M6 --&gt; D6["Biometria WebAuthn (Passkeys) &amp; Cache Seguro de Sessão Offline"]</code></pre>
 <hr />
 <h2 id="2-diferenciais-do-pwa-no-ambiente-frigorifico">⚡ 2. Diferenciais do PWA no Ambiente Frigorífico</h2>
 <ol>

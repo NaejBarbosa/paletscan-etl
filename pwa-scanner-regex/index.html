@@ -1101,19 +1101,21 @@
 <hr />
 <h2 id="1-componente-leitor-optico-scannertsx">📷 1. Componente Leitor Óptico (<code>Scanner.tsx</code>)</h2>
 <pre class="mermaid"><code>flowchart TD
-    A["Operador Inicia o Scanner no PWA"] --&gt; B{"Método de Entrada"}
+    START["📷 Operador Inicia o Scanner no PWA"]
 
-    B --&gt;|Câmera Traseira em Tempo Real| C["Biblioteca ZXing e BarcodeDetector API"]
-    B --&gt;|Upload de Foto da Galeria| D["Recorte Interativo (react-zoom-pan-pinch)"]
+    START --&gt; CAM["1. Leitura de Câmera em Tempo Real"]
+    CAM --&gt; C1["Biblioteca ZXing e BarcodeDetector API"]
+    C1 --&gt; C2["Mira Laser Animada e Lanterna LED"]
 
-    C --&gt; E["Mira Laser Animada e Lanterna LED"]
-    D --&gt; F["Zoom Tátil para Isolar Rótulos com Reflexo ou Névoa"]
+    START --&gt; UPL["2. Upload de Foto com Recorte"]
+    UPL --&gt; U1["Recorte Interativo (react-zoom-pan-pinch)"]
+    U1 --&gt; U2["Zoom Tátil para Isolar Rótulos com Reflexo ou Névoa"]
 
-    E --&gt; G["Decodificação Óptica Bruta"]
-    F --&gt; G
+    C2 --&gt; DEC["🔍 Decodificação Óptica Bruta"]
+    U2 --&gt; DEC
 
-    G --&gt; H["Funil de Regex Industrial (lib/regex.ts)"]
-    H --&gt; I["Preenchimento Automático: EAN, Validade, Lote e Peso"]</code></pre>
+    DEC --&gt; REG["⚙️ Funil de Regex Industrial (lib/regex.ts)"]
+    REG --&gt; AUTO["✅ Preenchimento Automático (EAN, Validade, Lote e Peso)"]</code></pre>
 <hr />
 <h2 id="2-motor-de-regex-industrial-libregexts">🧩 2. Motor de Regex Industrial (<code>lib/regex.ts</code>)</h2>
 <h3 id="a-tabela-de-identificadores-gs1-e-regras-especiais">A. Tabela de Identificadores GS1 e Regras Especiais</h3>

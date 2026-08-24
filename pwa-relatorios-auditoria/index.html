@@ -1073,17 +1073,22 @@
 </ul>
 <hr />
 <h2 id="2-modo-de-conferencia-fisica-de-paletes-checklist">📋 2. Modo de Conferência Física de Paletes &amp; Checklist</h2>
+<p>O fluxo de auditoria física de estoque opera com checklist reativo e ações em massa:</p>
 <pre class="mermaid"><code>flowchart TD
-    A["Operador Inicia Conferência Física"] --&gt; B["Ativa Checklist Tátil no Palete"]
-    B --&gt; C{"Método de Verificação"}
+    AUDIT["📋 Operador Inicia Conferência Física"]
 
-    C --&gt;|Bipagem com Scanner| D["Marcação Automática do Item Confirmado"]
-    C --&gt;|Toque Tátil na Tela| D
+    AUDIT --&gt; CHK["1. Ativa Checklist Tátil no Palete"]
 
-    D --&gt; E{"Palete Completo?"}
-    E --&gt;|Sim| F["Palete Confirmado em Estoque"]
-    E --&gt;|Não (Item Faltante)| G["Destaque em Vermelho e Alerta de Ausência"]
-    G --&gt; H["Ação de Expurgo em Massa (API Serverless)"]</code></pre>
+    CHK --&gt; V1["Entrada via Bipagem com Scanner"]
+    CHK --&gt; V2["Entrada via Toque Tátil na Tela"]
+
+    V1 --&gt; CONF["✅ Marcação Automática do Item Confirmado"]
+    V2 --&gt; CONF
+
+    CONF --&gt; RES1["Palete 100% Conferido: Mantido em Estoque"]
+    CONF --&gt; RES2["Divergência ou Item Ausente: Destaque em Vermelho"]
+
+    RES2 --&gt; EXP["🗑️ Ação de Expurgo em Massa (API Serverless)"]</code></pre>
 <hr />
 <h2 id="3-exportacao-de-relatorios-csv-cp1252-pdf-executivo">📄 3. Exportação de Relatórios (CSV CP1252 &amp; PDF Executivo)</h2>
 <ul>

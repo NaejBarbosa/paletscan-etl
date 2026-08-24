@@ -915,73 +915,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-classificadores-e-heuristicas-de-dominio-coreheuristics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏷️ 3. Classificadores e Heurísticas de Domínio (core/heuristics/)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🏷️ 3. Classificadores e Heurísticas de Domínio (core/heuristics/)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-classificacao-de-marcas-brand_classifierts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A. Classificação de Marcas (brand_classifier.ts)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b-classificacao-de-categorias-e-conservacao-category_classifierts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B. Classificação de Categorias e Conservação (category_classifier.ts)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="B. Classificação de Categorias e Conservação (category_classifier.ts)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#regras-e-recursos-do-motor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛡️ Regras e Recursos do Motor:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#as-10-classes-canonicas-oficiais" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏷️ As 10 Classes Canônicas Oficiais:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1224,73 +1157,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-classificadores-e-heuristicas-de-dominio-coreheuristics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏷️ 3. Classificadores e Heurísticas de Domínio (core/heuristics/)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🏷️ 3. Classificadores e Heurísticas de Domínio (core/heuristics/)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-classificacao-de-marcas-brand_classifierts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A. Classificação de Marcas (brand_classifier.ts)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b-classificacao-de-categorias-e-conservacao-category_classifierts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B. Classificação de Categorias e Conservação (category_classifier.ts)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="B. Classificação de Categorias e Conservação (category_classifier.ts)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#regras-e-recursos-do-motor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛡️ Regras e Recursos do Motor:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#as-10-classes-canonicas-oficiais" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏷️ As 10 Classes Canônicas Oficiais:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1328,21 +1194,27 @@
 <h2 id="2-algoritmos-matematicos-modulus-10-gs1-ean-13-dun-14">🔢 2. Algoritmos Matemáticos Modulus 10 (GS1 EAN-13 &amp; DUN-14)</h2>
 <p>A validação de códigos de barras é uma das etapas mais críticas do PaletScan. Códigos mal formatados ou com zeros truncados inviabilizam a leitura no scanner do operador.</p>
 <pre class="mermaid"><code>flowchart TD
-    A["Código Bruto de Entrada"] --&gt; B{"Tipagem de Dado?"}
-    B --&gt;|Integer ou Number| C["ERRO: Risco de Truncamento de Zeros"]
-    B --&gt;|String Estrita| D["Inspeciona Tamanho da String"]
-    D --&gt;|12 Dígitos| E["Adiciona Prefixo e Calcula 13º Dígito Mod10"]
-    D --&gt;|13 Dígitos com 0789...| F["Remove 0 Espúrio e Recalcula Mod10"]
-    D --&gt;|13 Dígitos Válidos| G["EAN-13 Confirmado"]
-    G --&gt; H{"DUN-14 Existe?"}
-    H --&gt;|Sim| I["Valida ou Recalcula Mod10 para 14 Dígitos"]
-    H --&gt;|Não| J["Deriva DUN-14: 1 + EAN12 + Mod10"]
-    E --&gt; K["EAN-13 (13 dig) e DUN-14 (14 dig) Sanitizados"]
-    F --&gt; K
-    I --&gt; K
-    J --&gt; K</code></pre>
+    IN["🔢 Código de Barras Bruto de Entrada"]
+
+    IN --&gt; T1["1. Validação de Tipagem: String Estrita (Impede perda de zero à esquerda)"]
+    T1 --&gt; T2["2. Inspeção de Tamanho e Dígitos"]
+
+    T2 --&gt; E1["Caso 12 Dígitos: Cálculo Matemático do 13º Dígito Mod10"]
+    T2 --&gt; E2["Caso Zeros Espúrios: Remoção do 0 Inicial e Recálculo Mod10"]
+    T2 --&gt; E3["Caso 13 Dígitos: Confirmação de EAN-13 Válido"]
+
+    E1 --&gt; EAN["✅ Código EAN-13 Sanitizado e Auditado"]
+    E2 --&gt; EAN
+    E3 --&gt; EAN
+
+    EAN --&gt; D1["3. Resolução da Caixa Master (DUN-14)"]
+    D1 --&gt; D2["DUN-14 Fornecido: Validação direta de 14 Dígitos Mod10"]
+    D1 --&gt; D3["DUN-14 Ausente: Derivação Logística (Prefixo 1 + EAN12 + Mod10)"]
+
+    D2 --&gt; OUT["📦 Par EAN-13 / DUN-14 Pronto para Carga Relacional"]
+    D3 --&gt; OUT</code></pre>
 <h3 id="a-tipagem-estrita-como-string">🛡️ A. Tipagem Estrita como String</h3>
-<p>Todas as funções de código de barras trabalham <strong>exclusivamente com o tipo <code>string</code></strong>. Isso impede que compiladores ou bibliotecas convertam códigos iniciados em zero (como <code>07891515...</code>) em números inteiros, o que causaria a perda irreparable de zeros à esquerda.</p>
+<p>Todas as funções de código de barras trabalham <strong>exclusivamente com o tipo <code>string</code></strong>. Isso impede que compiladores ou bibliotecas convertam códigos iniciados em zero (como <code>07891515...</code>) em números inteiros, o que causaria a perda irreparável de zeros à esquerda.</p>
 <h3 id="b-funcao-normalizeean13-gs1-modulus-10">📐 B. Função <code>normalizeEAN13</code> (GS1 Modulus 10)</h3>
 <ul>
 <li><strong>Sanitização de Zeros Espúrios</strong>: Detecta sequências de 13 dígitos iniciadas com zero indevido (<code>0789...</code> ou <code>0790...</code>), limpa o zero inicial e recalcula o dígito verificador real.</li>
@@ -1356,87 +1228,6 @@
 <li><strong>Derivação Automática a partir do EAN-13</strong>: Quando o fornecedor B2B não disponibiliza o DUN-14 da caixa, o PaletScan constrói o DUN-14 determinístico utilizando a regra logística internacional:</li>
 </ul>
 <div class="arithmatex">\[\text{DUN-14 Derivado} = \text{'1'} + \text{EAN13}_{[1..12]} + \text{Modulus10}(\text{'1'} + \text{EAN13}_{[1..12]})\]</div>
-<hr />
-<h2 id="3-classificadores-e-heuristicas-de-dominio-coreheuristics">🏷️ 3. Classificadores e Heurísticas de Domínio (<code>core/heuristics/</code>)</h2>
-<h3 id="a-classificacao-de-marcas-brand_classifierts">A. Classificação de Marcas (<code>brand_classifier.ts</code>)</h3>
-<p>O módulo <a href="file:///root/paletscan-etl/core/heuristics/brand_classifier.ts"><code>brand_classifier.ts</code></a> identifica a marca do produto através da análise de padrões de texto e fallback para holdings de fabricantes:
-- <strong>Padrões Regex</strong>: Detecta variações comerciais como <em>Friboi Reserva, Maturatta Friboi, Swift, Seara Gourmet, Mataboi, Minerva Prime, 1953 Friboi</em>.
-- <strong>Mapeamento de Fabricante</strong>: Associa automaticamente a marca à Holding correspondente (ex: <em>Friboi</em> ➔ <em>JBS S.A.</em>).</p>
-<h3 id="b-classificacao-de-categorias-e-conservacao-category_classifierts">B. Classificação de Categorias e Conservação (<code>category_classifier.ts</code>)</h3>
-<p>O módulo <a href="file:///root/paletscan-etl/core/heuristics/category_classifier.ts"><code>category_classifier.ts</code></a> implementa a <strong>Taxonomia Canônica Oficial do PaletScan</strong>, eliminando fragmentações, duplicidades de singular/plural e corrigindo escapes Unicode (como <code>\u00ed</code> ➔ <code>í</code>):</p>
-<h4 id="regras-e-recursos-do-motor">🛡️ Regras e Recursos do Motor:</h4>
-<ol>
-<li><strong>Decodificação Automática de Unicode (<code>decodeUnicodeEscapes</code>)</strong>: Normaliza strings ruidosas de fontes web (ex: <code>Su\u00ednos</code> ➔ <code>Suínos</code>).</li>
-<li><strong>Delimitação Estrita de Palavra (<code>\b</code>)</strong>: Impede sobreposições semânticas (ex: <em>Peito Brisket Bovino</em> não vira <em>Aves</em>; <em>Polvo Tenderizado</em> não vira <em>Suínos</em> por causa de <code>tender</code>).</li>
-<li><strong>Priorização Hierárquica</strong>: Itens <em>Plant-Based</em>, <em>Vegetais Puros</em>, <em>Sobremesas</em> e <em>Laticínios</em> são avaliados antes de cair em categorias de carnes ou embutidos.</li>
-<li><strong>Desambiguação de Cortes de Aves vs. Processados</strong>:</li>
-<li><strong>Cortes de Aves In Natura e Temperados</strong> (<em>Coxa, Coxas, Sobrecoxa, Sobrecoxas, Peito com Osso/sem Osso, Filé de Peito, Sassami, Coxinha da Asa / Drumet, Meio da Asa / Tulipa, Asas</em>) são classificados como <strong>Aves</strong>, mesmo quando temperados ou embalados a vácuo/interfolhados.</li>
-<li><strong>Lookahead Negativo de Salgados</strong>: O termo <code>coxinha</code> utiliza regex negativo <code>\bcoxinhas?(?!(\s+(d[aeo]s?|de)?\s*(asas?|chester)|\s+asas?))</code> para não capturar cortes de drumette/asa.</li>
-<li><strong>Proteção de Steaks e Brisket Bovinos</strong>: Cortes nobres bovinos (<em>Chorizo Steak, Denver Steak, Ancho Steak, Peito Brisket, Ponta de Peito, Peito Friboi/1953/Maturatta/Bassi</em>) são protegidos na classe <strong>Bovinos</strong> e não conflitam com steaks empanados ou peito de ave.</li>
-<li><strong>Processados de Frango/Peru Autênticos</strong>: Embutidos e empanados (<em>Linguiça de Frango, Salsicha de Frango, Mortadela de Frango, Presunto de Peru, Peito de Peru Defumado (frios), Hambúrguer de Frango, Nuggets, Tekitos, Empanados, Lasanhas de Frango</em>) permanecem categorizados como <strong>Processados &amp; Embutidos</strong>.</li>
-</ol>
-<h4 id="as-10-classes-canonicas-oficiais">🏷️ As 10 Classes Canônicas Oficiais:</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Classe Canônica</th>
-<th style="text-align: left;">Descrição e Abrangência</th>
-<th style="text-align: left;">Principais Termos / Exemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Bovinos</strong></td>
-<td style="text-align: left;">Cortes bovinos in natura, maturados, miúdos bovinos, steaks nobres e jerked beef.</td>
-<td style="text-align: left;"><em>Alcatra, Contrafilé, Picanha, Mignon, Costela Bovina, Acém, Brisket, Chorizo Steak, Cupim</em></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Suínos</strong></td>
-<td style="text-align: left;">Cortes suínos in natura, temperados, pernil, lombo, costela e banha suína.</td>
-<td style="text-align: left;"><em>Bisteca Suína, Costelinha, Lombo Suíno, Pernil, Panceta, Toucinho, Bacon</em></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Aves</strong></td>
-<td style="text-align: left;">Cortes de frango, galinha, peru, chester, cortes IQF, cortes temperados e miúdos de aves.</td>
-<td style="text-align: left;"><em>Filé de Peito, Peito com Osso, Coxa e Sobrecoxa, Coxinha da Asa (Drumet), Meio da Asa (Tulipa), Sassami, Coração de Frango</em></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Pescados</strong></td>
-<td style="text-align: left;">Peixes inteiros, postas, filés congelados, frutos do mar e crustáceos.</td>
-<td style="text-align: left;"><em>Tilápia, Salmão, Bacalhau, Merluza, Polaca, Camarão, Polvo, Panga, Kani Kama</em></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Ovinos &amp; Caprinos</strong></td>
-<td style="text-align: left;">Cortes de cordeiro, carneiro e caprinos.</td>
-<td style="text-align: left;"><em>Paleta Ovina, Cordeiro, Espinazo, Hasta, Nirea</em></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Processados &amp; Embutidos</strong></td>
-<td style="text-align: left;">Embutidos cárneos, hambúrgueres, empanados, linguiças, salsichas, pizzas, lasanhas, cestas e kits natalinos.</td>
-<td style="text-align: left;"><em>Linguiça Toscana, Salsicha, Mortadela, Presunto, Hambúrguer, Nugget, Empanado, Pizza, Lasanha, Cestas</em></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Vegetais &amp; Congelados</strong></td>
-<td style="text-align: left;">Legumes, seletas mistas, ervilhas, milho, batatas pré-fritas, mandiocas e polpas.</td>
-<td style="text-align: left;"><em>Seleta Mista, Brócolis, Couve-Flor, Ervilha, Batata Palito/Rústica, Mandioca</em></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Plant-Based &amp; Vegetarianos</strong></td>
-<td style="text-align: left;">Produtos 100% vegetais análogos de carnes (substitutos vegetais).</td>
-<td style="text-align: left;"><em>Linha Incrível!, Sadia Veg&amp;Tal, Plantplus, Hambúrguer 100% Vegetal</em></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Laticínios, Margarinas &amp; Gorduras</strong></td>
-<td style="text-align: left;">Margarinas, queijos fatiados/peça, manteigas, requeijões, bebidas lácteas e gorduras.</td>
-<td style="text-align: left;"><em>Margarina Doriana, Queijo Prato, Queijo Mussarela Soltíssimo, Requeijão</em></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Sobremesas &amp; Panificação</strong></td>
-<td style="text-align: left;">Tortas doces congeladas, mousses, sobremesas, pães de queijo, panetones e bolos.</td>
-<td style="text-align: left;"><em>Torta Mousse Miss Daisy, Torta Holandesa, Pão de Queijo Qualy/Perdigão</em></td>
-</tr>
-</tbody>
-</table>
 
 
 
