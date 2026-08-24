@@ -14,18 +14,24 @@ Os módulos de relatórios e auditoria do **PaletScan PWA** centralizam o contro
 
 ## 📋 2. Modo de Conferência Física de Paletes & Checklist
 
+O fluxo de auditoria física de estoque opera com checklist reativo e ações em massa:
+
 ```mermaid
 flowchart TD
-    A["Operador Inicia Conferência Física"] --> B["Ativa Checklist Tátil no Palete"]
-    B --> C{"Método de Verificação"}
+    AUDIT["📋 Operador Inicia Conferência Física"]
     
-    C -->|Bipagem com Scanner| D["Marcação Automática do Item Confirmado"]
-    C -->|Toque Tátil na Tela| D
+    AUDIT --> CHK["1. Ativa Checklist Tátil no Palete"]
     
-    D --> E{"Palete Completo?"}
-    E -->|Sim| F["Palete Confirmado em Estoque"]
-    E -->|Não (Item Faltante)| G["Destaque em Vermelho e Alerta de Ausência"]
-    G --> H["Ação de Expurgo em Massa (API Serverless)"]
+    CHK --> V1["Entrada via Bipagem com Scanner"]
+    CHK --> V2["Entrada via Toque Tátil na Tela"]
+    
+    V1 --> CONF["✅ Marcação Automática do Item Confirmado"]
+    V2 --> CONF
+    
+    CONF --> RES1["Palete 100% Conferido: Mantido em Estoque"]
+    CONF --> RES2["Divergência ou Item Ausente: Destaque em Vermelho"]
+    
+    RES2 --> EXP["🗑️ Ação de Expurgo em Massa (API Serverless)"]
 ```
 
 ---

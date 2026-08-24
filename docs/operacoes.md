@@ -133,7 +133,7 @@ Para evitar inconsistências caso uma marca ou holding entre ou saia do projeto,
 
 | Alias Linux | Comando NPM Subjacente | Descrição Operacional |
 | :--- | :--- | :--- |
-| `etl-run` | `npm run full` | Executa o pipeline completo (Scrape All $\rightarrow$ Sync $\rightarrow$ Sanitize $\rightarrow$ Export PWA $\rightarrow$ Audit) com relatório de timestamps. |
+| `etl-run` | `npm run full` | Executa o pipeline completo (Scrape All ➔ Sync ➔ Sanitize ➔ Export PWA ➔ Audit) com relatório de timestamps. |
 | `etl-pipeline` | `npm run full` | Atalho idêntico ao `etl-run`. |
 | `etl-friboi` | `npm run scrape:friboi` | Extrai catálogo B2B Friboi / JBS (Friboi, Maturatta, 1953, Swift, Do Chef). |
 | `etl-seara` | `npm run scrape:seara` | Extrai catálogo B2B Seara Alimentos (Seara, Gourmet, Incrível!). |
@@ -296,7 +296,7 @@ Para agendamentos executados no **Termux (Android)**, garanta as seguintes diret
    *(Cria uma notificação persistente na barra do Android mantendo a CPU desperta no horário agendado).*
 
 2. **Remover Otimização de Bateria do Android**:
-   - Vá em **Configurações do Android** $\rightarrow$ **Aplicativos** $\rightarrow$ **Termux** $\rightarrow$ **Bateria**.
+   - Vá em **Configurações do Android** ➔ **Aplicativos** ➔ **Termux** ➔ **Bateria**.
    - Altere para a opção **Sem Restrições** (*Unrestricted*).
 
 3. **Início do Serviço Daemon Pós-Reboot**:

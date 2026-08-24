@@ -6,18 +6,23 @@ O **PaletScan PWA** dispõe de um sistema de segurança multicamadas que combina
 
 ## 🔐 1. Autenticação Multi-Fator Híbrida
 
+O fluxo de autenticação suporta múltiplos métodos de entrada com garantia de sessão offline:
+
 ```mermaid
 flowchart TD
-    A["Tela de Login (pages/login.tsx)"] --> B{"Método de Acesso"}
-    B -->|1. Credenciais| C["Usuário e Senha"]
-    B -->|2. Biometria / Passkey| D["WebAuthn FIDO2 (Biometria)"]
-    B -->|3. QR Code| E["Leitura de Token Móvel"]
+    LOGIN["🔐 Tela de Login do PWA"]
     
-    C --> F["Validação em lib/authDb.ts"]
-    D --> F
-    E --> F
-    F --> G["Geração de Sessão JWT e Cache Offline"]
-    G --> H["Acesso Offline Garantido no Interior das Câmaras"]
+    LOGIN --> M1["1. Credenciais Tradicionais (Usuário e Senha)"]
+    LOGIN --> M2["2. Biometria WebAuthn FIDO2 (Passkeys)"]
+    LOGIN --> M3["3. Token QR Code Móvel"]
+    
+    M1 --> AUTH["🛡️ Validação no Motor de Autenticação"]
+    M2 --> AUTH
+    M3 --> AUTH
+    
+    AUTH --> JWT["🎫 Emissão de Sessão JWT"]
+    JWT --> CACHE["💾 Armazenamento em Cache Offline (ps_auth_session)"]
+    CACHE --> OK["✅ Acesso Seguro Garantido no Interior das Câmaras Frias"]
 ```
 
 * **Passkeys / Biometria (WebAuthn)**: Permite login por impressão digital ou reconhecimento facial sem necessidade de digitar senhas com luvas térmicas no frio.

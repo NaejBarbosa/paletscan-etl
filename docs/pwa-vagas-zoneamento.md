@@ -6,12 +6,23 @@ O sistema de endereçamento do **PaletScan PWA** organiza espacialmente as câma
 
 ## 📌 1. Composição da Coordenada de Vaga (4 Caracteres)
 
+A coordenada física é decomposta em 4 níveis hierárquicos verticais:
+
 ```mermaid
 flowchart TD
-    A["Coordenada Física de 4 Caracteres (ex: A10D)"] --> B["1º Caractere: Rack (A = Direita, B = Esquerda)"]
-    A --> C["2º Caractere: Módulo / Coluna (1 a 5 da entrada ao fundo)"]
-    A --> D["3º Caractere: Gaveta / Nível (0 = Chão, 1 a 3 = Prateleiras)"]
-    A --> E["4º Caractere: Vaga / Posição (D = Direita, E = Esquerda)"]
+    COORD["🏷️ Coordenada Física de 4 Dígitos (ex: A10D)"]
+    
+    COORD --> P1["1º Caractere: Rack (Corredor)"]
+    P1 --> D1["Lado da Estrutura (A = Direita, B = Esquerda)"]
+    
+    COORD --> P2["2º Caractere: Módulo (Coluna)"]
+    P2 --> D2["Posição Horizontal (1 a 5 da entrada ao fundo)"]
+    
+    COORD --> P3["3º Caractere: Gaveta (Nível de Altura)"]
+    P3 --> D3["Plano Vertical (0 = Solo, 1 a 3 = Prateleiras Suspensas)"]
+    
+    COORD --> P4["4º Caractere: Vaga (Posição Lateral)"]
+    P4 --> D4["Alocação no Plano (D = Direita, E = Esquerda)"]
 ```
 
 | Elemento | Significado | Valores | Descrição Operacional |
@@ -27,20 +38,15 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    subgraph Resfriados ["Câmaras de Resfriados (0°C a 4°C)"]
-        R1["Resfriados 1 (R1)"]
-        R2["Resfriados 2 (R2)"]
-    end
-
-    subgraph Congelados ["Câmaras de Congelados (-18°C)"]
-        C1["Congelados 1 (C1)"]
-        C2["Congelados 2 (C2)"]
-    end
-
-    R1 --> V1["Coordenadas A10D a B53E"]
-    R2 --> V1
-    C1 --> V2["Coordenadas A10D a B53E"]
-    C2 --> V2
+    ZONE["❄️ Zoneamento Industrial de Câmaras Frias"]
+    
+    ZONE --> R["🥩 Câmaras de Resfriados (0°C a 4°C)"]
+    R --> R1["Câmara R1 e Câmara R2"]
+    R1 --> VR["Grade Completa de Vagas A10D a B53E"]
+    
+    ZONE --> C["🧊 Câmaras de Congelados (-18°C)"]
+    C --> C1["Câmara C1 e Câmara C2"]
+    C1 --> VC["Grade Completa de Vagas A10D a B53E"]
 ```
 
 * **Resfriados (`R1` / `R2`)**: Produtos lácteos, embutidos, margarinas e carnes resfriadas (0°C a 4°C).

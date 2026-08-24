@@ -25,23 +25,29 @@ A validação de códigos de barras é uma das etapas mais críticas do PaletSca
 
 ```mermaid
 flowchart TD
-    A["Código Bruto de Entrada"] --> B{"Tipagem de Dado?"}
-    B -->|Integer ou Number| C["ERRO: Risco de Truncamento de Zeros"]
-    B -->|String Estrita| D["Inspeciona Tamanho da String"]
-    D -->|12 Dígitos| E["Adiciona Prefixo e Calcula 13º Dígito Mod10"]
-    D -->|13 Dígitos com 0789...| F["Remove 0 Espúrio e Recalcula Mod10"]
-    D -->|13 Dígitos Válidos| G["EAN-13 Confirmado"]
-    G --> H{"DUN-14 Existe?"}
-    H -->|Sim| I["Valida ou Recalcula Mod10 para 14 Dígitos"]
-    H -->|Não| J["Deriva DUN-14: 1 + EAN12 + Mod10"]
-    E --> K["EAN-13 (13 dig) e DUN-14 (14 dig) Sanitizados"]
-    F --> K
-    I --> K
-    J --> K
+    IN["🔢 Código de Barras Bruto de Entrada"]
+    
+    IN --> T1["1. Validação de Tipagem: String Estrita (Impede perda de zero à esquerda)"]
+    T1 --> T2["2. Inspeção de Tamanho e Dígitos"]
+    
+    T2 --> E1["Caso 12 Dígitos: Cálculo Matemático do 13º Dígito Mod10"]
+    T2 --> E2["Caso Zeros Espúrios: Remoção do 0 Inicial e Recálculo Mod10"]
+    T2 --> E3["Caso 13 Dígitos: Confirmação de EAN-13 Válido"]
+    
+    E1 --> EAN["✅ Código EAN-13 Sanitizado e Auditado"]
+    E2 --> EAN
+    E3 --> EAN
+    
+    EAN --> D1["3. Resolução da Caixa Master (DUN-14)"]
+    D1 --> D2["DUN-14 Fornecido: Validação direta de 14 Dígitos Mod10"]
+    D1 --> D3["DUN-14 Ausente: Derivação Logística (Prefixo 1 + EAN12 + Mod10)"]
+    
+    D2 --> OUT["📦 Par EAN-13 / DUN-14 Pronto para Carga Relacional"]
+    D3 --> OUT
 ```
 
 ### 🛡️ A. Tipagem Estrita como String
-Todas as funções de código de barras trabalham **exclusivamente com o tipo `string`**. Isso impede que compiladores ou bibliotecas convertam códigos iniciados em zero (como `07891515...`) em números inteiros, o que causaria a perda irreparable de zeros à esquerda.
+Todas as funções de código de barras trabalham **exclusivamente com o tipo `string`**. Isso impede que compiladores ou bibliotecas convertam códigos iniciados em zero (como `07891515...`) em números inteiros, o que causaria a perda irreparável de zeros à esquerda.
 
 ### 📐 B. Função `normalizeEAN13` (GS1 Modulus 10)
 - **Sanitização de Zeros Espúrios**: Detecta sequências de 13 dígitos iniciadas com zero indevido (`0789...` ou `0790...`), limpa o zero inicial e recalcula o dígito verificador real.
@@ -56,40 +62,3 @@ $$\text{Dígito Verificador} = (10 - (\text{Soma} \bmod 10)) \bmod 10$$
 - **Derivação Automática a partir do EAN-13**: Quando o fornecedor B2B não disponibiliza o DUN-14 da caixa, o PaletScan constrói o DUN-14 determinístico utilizando a regra logística internacional:
 
 $$\text{DUN-14 Derivado} = \text{'1'} + \text{EAN13}_{[1..12]} + \text{Modulus10}(\text{'1'} + \text{EAN13}_{[1..12]})$$
-
----
-
-## 🏷️ 3. Classificadores e Heurísticas de Domínio (`core/heuristics/`)
-
-### A. Classificação de Marcas (`brand_classifier.ts`)
-O módulo [`brand_classifier.ts`](file:///root/paletscan-etl/core/heuristics/brand_classifier.ts) identifica a marca do produto através da análise de padrões de texto e fallback para holdings de fabricantes:
-- **Padrões Regex**: Detecta variações comerciais como *Friboi Reserva, Maturatta Friboi, Swift, Seara Gourmet, Mataboi, Minerva Prime, 1953 Friboi*.
-- **Mapeamento de Fabricante**: Associa automaticamente a marca à Holding correspondente (ex: *Friboi* ➔ *JBS S.A.*).
-
-### B. Classificação de Categorias e Conservação (`category_classifier.ts`)
-O módulo [`category_classifier.ts`](file:///root/paletscan-etl/core/heuristics/category_classifier.ts) implementa a **Taxonomia Canônica Oficial do PaletScan**, eliminando fragmentações, duplicidades de singular/plural e corrigindo escapes Unicode (como `\u00ed` ➔ `í`):
-
-#### 🛡️ Regras e Recursos do Motor:
-1. **Decodificação Automática de Unicode (`decodeUnicodeEscapes`)**: Normaliza strings ruidosas de fontes web (ex: `Su\u00ednos` ➔ `Suínos`).
-2. **Delimitação Estrita de Palavra (`\b`)**: Impede sobreposições semânticas (ex: *Peito Brisket Bovino* não vira *Aves*; *Polvo Tenderizado* não vira *Suínos* por causa de `tender`).
-3. **Priorização Hierárquica**: Itens *Plant-Based*, *Vegetais Puros*, *Sobremesas* e *Laticínios* são avaliados antes de cair em categorias de carnes ou embutidos.
-4. **Desambiguação de Cortes de Aves vs. Processados**:
-   - **Cortes de Aves In Natura e Temperados** (*Coxa, Coxas, Sobrecoxa, Sobrecoxas, Peito com Osso/sem Osso, Filé de Peito, Sassami, Coxinha da Asa / Drumet, Meio da Asa / Tulipa, Asas*) são classificados como **Aves**, mesmo quando temperados ou embalados a vácuo/interfolhados.
-   - **Lookahead Negativo de Salgados**: O termo `coxinha` utiliza regex negativo `\bcoxinhas?(?!(\s+(d[aeo]s?|de)?\s*(asas?|chester)|\s+asas?))` para não capturar cortes de drumette/asa.
-   - **Proteção de Steaks e Brisket Bovinos**: Cortes nobres bovinos (*Chorizo Steak, Denver Steak, Ancho Steak, Peito Brisket, Ponta de Peito, Peito Friboi/1953/Maturatta/Bassi*) são protegidos na classe **Bovinos** e não conflitam com steaks empanados ou peito de ave.
-   - **Processados de Frango/Peru Autênticos**: Embutidos e empanados (*Linguiça de Frango, Salsicha de Frango, Mortadela de Frango, Presunto de Peru, Peito de Peru Defumado (frios), Hambúrguer de Frango, Nuggets, Tekitos, Empanados, Lasanhas de Frango*) permanecem categorizados como **Processados & Embutidos**.
-
-#### 🏷️ As 10 Classes Canônicas Oficiais:
-
-| Classe Canônica | Descrição e Abrangência | Principais Termos / Exemplo |
-| :--- | :--- | :--- |
-| **Bovinos** | Cortes bovinos in natura, maturados, miúdos bovinos, steaks nobres e jerked beef. | *Alcatra, Contrafilé, Picanha, Mignon, Costela Bovina, Acém, Brisket, Chorizo Steak, Cupim* |
-| **Suínos** | Cortes suínos in natura, temperados, pernil, lombo, costela e banha suína. | *Bisteca Suína, Costelinha, Lombo Suíno, Pernil, Panceta, Toucinho, Bacon* |
-| **Aves** | Cortes de frango, galinha, peru, chester, cortes IQF, cortes temperados e miúdos de aves. | *Filé de Peito, Peito com Osso, Coxa e Sobrecoxa, Coxinha da Asa (Drumet), Meio da Asa (Tulipa), Sassami, Coração de Frango* |
-| **Pescados** | Peixes inteiros, postas, filés congelados, frutos do mar e crustáceos. | *Tilápia, Salmão, Bacalhau, Merluza, Polaca, Camarão, Polvo, Panga, Kani Kama* |
-| **Ovinos & Caprinos** | Cortes de cordeiro, carneiro e caprinos. | *Paleta Ovina, Cordeiro, Espinazo, Hasta, Nirea* |
-| **Processados & Embutidos** | Embutidos cárneos, hambúrgueres, empanados, linguiças, salsichas, pizzas, lasanhas, cestas e kits natalinos. | *Linguiça Toscana, Salsicha, Mortadela, Presunto, Hambúrguer, Nugget, Empanado, Pizza, Lasanha, Cestas* |
-| **Vegetais & Congelados** | Legumes, seletas mistas, ervilhas, milho, batatas pré-fritas, mandiocas e polpas. | *Seleta Mista, Brócolis, Couve-Flor, Ervilha, Batata Palito/Rústica, Mandioca* |
-| **Plant-Based & Vegetarianos** | Produtos 100% vegetais análogos de carnes (substitutos vegetais). | *Linha Incrível!, Sadia Veg&Tal, Plantplus, Hambúrguer 100% Vegetal* |
-| **Laticínios, Margarinas & Gorduras** | Margarinas, queijos fatiados/peça, manteigas, requeijões, bebidas lácteas e gorduras. | *Margarina Doriana, Queijo Prato, Queijo Mussarela Soltíssimo, Requeijão* |
-| **Sobremesas & Panificação** | Tortas doces congeladas, mousses, sobremesas, pães de queijo, panetones e bolos. | *Torta Mousse Miss Daisy, Torta Holandesa, Pão de Queijo Qualy/Perdigão* |

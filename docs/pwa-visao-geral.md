@@ -6,21 +6,29 @@ O **PaletScan PWA** é a interface operacional de chão de fábrica do ecossiste
 
 ## 🎯 1. Principais Funcionalidades da Aplicação
 
+A arquitetura de recursos do PWA está estruturada em módulos verticais especializados:
+
 ```mermaid
 flowchart TD
-    A["PaletScan PWA (Next.js 14)"] --> B["1. Scanner e Recorte Óptico"]
-    A --> C["2. Funil Regex Industrial"]
-    A --> D["3. Seletor de Vagas em 4 Caracteres"]
-    A --> E["4. Radar de Validades e Multi-Watchlists"]
-    A --> F["5. Modo Conferência Física"]
-    A --> G["6. Autenticação Híbrida e Passkeys"]
-    
-    B --> H["Leitura de Câmera e Recorte Interativo"]
-    C --> I["GS1-128, Data Matrix Lar (+365d), BRF e Pesagem"]
-    D --> J["Bloqueio de Ocupação Duplicada (R1/R2/C1/C2)"]
-    E --> K["Busca Fuzzy e Celebração com Confetes"]
-    F --> L["Checklist Tátil, Expurgo em Massa e Relatórios"]
-    G --> M["Biometria FIDO2 e Cache de Sessão Offline"]
+    APP["📱 PaletScan PWA (Next.js 14 Local-First)"]
+
+    APP --> M1["🔍 1. Módulo de Leitura e Scanner"]
+    M1 --> D1["Leitura de Câmera em Tempo Real & Recorte Manual de Rótulos"]
+
+    APP --> M2["⚙️ 2. Módulo de Regex Industrial"]
+    M2 --> D2["Decodificação GS1-128, Data Matrix Lar (+365d), BRF & Balança"]
+
+    APP --> M3["🏢 3. Módulo de Endereçamento Rígido"]
+    M3 --> D3["Zoneamento em 4 Caracteres & Bloqueio Ativo de Vaga Ocupada"]
+
+    APP --> M4["🎯 4. Módulo de Radar Watchlist"]
+    M4 --> D4["Busca Fuzzy Fonética & Celebração Visual de Localização com Confetes"]
+
+    APP --> M5["📋 5. Módulo de Conferência & Auditoria"]
+    M5 --> D5["Checklist Físico Tátil, Expurgo em Massa & Relatórios PDF/CSV"]
+
+    APP --> M6["🔒 6. Módulo de Autenticação & Segurança"]
+    M6 --> D6["Biometria WebAuthn (Passkeys) & Cache Seguro de Sessão Offline"]
 ```
 
 ---

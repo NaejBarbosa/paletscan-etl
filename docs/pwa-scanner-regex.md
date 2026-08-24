@@ -8,19 +8,21 @@ O módulo de leitura visual e decodificação do **PaletScan PWA** combina o lei
 
 ```mermaid
 flowchart TD
-    A["Operador Inicia o Scanner no PWA"] --> B{"Método de Entrada"}
-    
-    B -->|Câmera Traseira em Tempo Real| C["Biblioteca ZXing e BarcodeDetector API"]
-    B -->|Upload de Foto da Galeria| D["Recorte Interativo (react-zoom-pan-pinch)"]
-    
-    C --> E["Mira Laser Animada e Lanterna LED"]
-    D --> F["Zoom Tátil para Isolar Rótulos com Reflexo ou Névoa"]
-    
-    E --> G["Decodificação Óptica Bruta"]
-    F --> G
-    
-    G --> H["Funil de Regex Industrial (lib/regex.ts)"]
-    H --> I["Preenchimento Automático: EAN, Validade, Lote e Peso"]
+    START["📷 Operador Inicia o Scanner no PWA"]
+
+    START --> CAM["1. Leitura de Câmera em Tempo Real"]
+    CAM --> C1["Biblioteca ZXing e BarcodeDetector API"]
+    C1 --> C2["Mira Laser Animada e Lanterna LED"]
+
+    START --> UPL["2. Upload de Foto com Recorte"]
+    UPL --> U1["Recorte Interativo (react-zoom-pan-pinch)"]
+    U1 --> U2["Zoom Tátil para Isolar Rótulos com Reflexo ou Névoa"]
+
+    C2 --> DEC["🔍 Decodificação Óptica Bruta"]
+    U2 --> DEC
+
+    DEC --> REG["⚙️ Funil de Regex Industrial (lib/regex.ts)"]
+    REG --> AUTO["✅ Preenchimento Automático (EAN, Validade, Lote e Peso)"]
 ```
 
 ---
