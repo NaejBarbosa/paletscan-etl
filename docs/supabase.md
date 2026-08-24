@@ -6,29 +6,19 @@ O módulo de integração ([`db_sync/sync.ts`](file:///root/paletscan-etl/db_syn
 
 ## 🔄 1. Pipeline de Sincronização Relacional (`db_sync/sync.ts`)
 
-O script `sync.ts` lê o staging sanitizado, gera as chaves determinísticas UUIDv5 e executa as chamadas de gravação relacional no Supabase.
+O script `sync.ts` lê o staging sanitizado, gera as chaves determinísticas UUIDv5 e executa as chamadas de gravação relacional no Supabase em um fluxo vertical de alta resiliência:
 
 ```mermaid
-sequenceDiagram
-    autonumber
-    participant Staging as Staging Storer
-    participant SyncEngine as Sync Engine (sync.ts)
-    participant PostgreSQL as Supabase DB
-    participant ConflictLog as staging/conflicts_log.json
-
-    SyncEngine->>Staging: Lê dados limpos (JSON)
-    SyncEngine->>SyncEngine: Gera UUIDv5 para Fabricantes, Marcas e Produtos
-    SyncEngine->>PostgreSQL: UPSERT em Fabricantes, Marcas e Produtos
-    loop Para cada Código de Barras (EAN / DUN / SKU)
-        SyncEngine->>PostgreSQL: INSERT em codigos_barras
-        alt Sucesso
-            PostgreSQL-->>SyncEngine: 201 Created / OK
-        else Conflito de EAN ou DUN (Erro PostgreSQL 23505)
-            PostgreSQL-->>SyncEngine: 409 Conflict (unique_violation)
-            SyncEngine->>SyncEngine: Executa Fallback Item-por-Item
-            SyncEngine->>ConflictLog: Registra detalhes do conflito em conflicts_log.json
-        end
-    end
+flowchart TD
+    S1["1. Leitura do Staging JSON\n(staging/*_staging.json)"] --> S2["2. Geração Determinística de UUIDv5\n(Fabricantes, Marcas e Produtos)"]
+    S2 --> S3["3. UPSERT em Lote no Supabase\n(Tabelas fabricantes, marcas e produtos)"]
+    S3 --> S4{"4. Inserção em codigos_barras\n(EAN, DUN e SKU)"}
+    
+    S4 -->|Sucesso| S5["Gravação Confirmada no Banco"]
+    S4 -->|Conflito de Chave Única (Erro 23505)| S6["Ativa Fallback Item-por-Item"]
+    
+    S6 --> S7["Isola Código Conflitante e Continua o Lote"]
+    S7 --> S8["Registra Detalhes em staging/conflicts_log.json"]
 ```
 
 ---
@@ -59,80 +49,25 @@ Todas as tentativas de inserção duplicada são registradas no arquivo `staging
 
 ## 🖼️ 3. Sincronização de Mídias e Upload CDN (`db_sync/sync_images.ts`)
 
-O script `sync_images.ts` lida com o envio de ativos visuais otimizados (`.webp`) para o bucket do Supabase Storage:
+O script [`db_sync/sync_images.ts`](file:///root/paletscan-etl/db_sync/sync_images.ts) gerencia o upload das imagens WebP tratadas para o bucket público do Supabase Storage:
 
-1. **Varredura em `images/processed/`**: Localiza arquivos `.webp` prontos para publicação.
-2. **Upload para o Bucket `produtos-imagens`**: Envia os arquivos via API Supabase Storage com os cabeçalhos de cache apropriados (`cacheControl: '3600'`).
-3. **Atualização de Status na Tabela `produtos`**:
+1. **Leitura dos Arquivos Processados**: Lê os ativos WebP em `images/processed/`.
+2. **Upload para o Storage Bucket**:
+   - Bucket: `produtos-imagens`
+   - Parâmetro: `upsert: true` (permite atualizar fotos quando a indústria muda o layout da embalagem).
+3. **Atualização da Tabela de Produtos**:
    - `imagem_url`: Define a URL pública do CDN Supabase (`https://<project-ref>.supabase.co/storage/v1/object/public/produtos-imagens/<sku>.webp`).
-   - `imagem_status`: Atualiza o status para `aprovado`.
-4. **Arquivamento Seguro**: Move a imagem tratada de `images/processed/` para `images/archived/`.
+   - `status_imagem`: Atualiza para `aprovado`.
+   - `updated_at`: Atualiza o timestamp da última mutação para orientar a sincronização delta do PWA.
 
 ---
 
-## 📱 4. Consumo no Frontend PWA
+## 💻 4. Comandos de Sincronização
 
-A infraestrutura Supabase comunica-se diretamente com a aplicação PWA em produção:
+```bash
+# Sincronizar dados relacionais de todas as indústrias para o Supabase
+npm run sync:supabase
 
-- **Componente `ProdutoAvatar.tsx`**: Exibe o avatar do produto respeitando o status `imagem_status`. Quando o status é `sem_imagem`, renderiza automaticamente um placeholder limpo em SVG sem dependências residuais de imagens estáticas locais.
-- **Redução do TTL de Cache**: O endpoint `/api/validar` opera com TTL de 1 minuto e consulta direta em tempo real ao Supabase, garantindo que novos EANs cadastrados fiquem disponíveis para escaneamento no coletor em poucos segundos.
-
----
-
-## 🆕 5. Rastreamento e Log de Novos Produtos Incluídos
-
-Durante a execução da carga relacional, o `sync.ts` compara as chaves primárias dos produtos recebidos em staging com as chaves já existentes no Supabase através de consultas paginadas:
-
-1. **Regra de Status de Novo Produto**: Um produto ganha o status de **NOVO** única e exclusivamente na **primeira execução em que é incluído no Supabase**.
-2. **Ciclo de Vida Automático**: Na execução subsequente, por já constar na base do Supabase, o produto perde automaticamente o status de novo e passa a constar como produto pré-existente (`0 novos produtos`).
-3. **Log de Novos Produtos (`staging/novos_produtos_log.json`)**: Armazena a lista de produtos inseridos na execução mais recente.
-4. **Comando CLI (`etl-novos`)**: Permite consultar via terminal Linux a relação detalhada dos produtos incluídos na última carga (`npx tsx scripts/show_new_products.ts`).
-5. **Sinalização Exclusiva em Log (ETL)**: A sinalização visual e modais de novos produtos foram removidos da interface PWA, mantendo o rastreamento concentrado nos relatórios operacionais do pipeline ETL.
-
----
-
-## 📝 6. Rastreamento e Log de Produtos Alterados / Atualizados
-
-Qualquer alteração ou atualização nos atributos de um produto pré-existente no Supabase é detectada automaticamente durante a sincronização relacional:
-
-1. **Diffing em Nível de Campo**: O `sync.ts` compara campo por campo do produto pré-existente com os dados novos do staging:
-   - `imagem_url` / `status_imagem`
-   - `descricao_padronizada`
-   - `classe`
-   - `conservacao`
-   - `peso_gramas` / `fracionado`
-   - `marca_id`
-2. **Log de Alterações (`staging/produtos_atualizados_log.json`)**: Quando uma mudança é detectada, o arquivo armazena os valores anteriores (`anterior`) e os valores atualizados (`atualizado`).
-3. **Comando CLI (`etl-atualizados`)**: O utilitário `scripts/show_updated_products.ts` permite inspecionar quais produtos sofreram alteração na última execução do pipeline.
-
----
-
-## 🛡️ 7. Governança de Atributos Manuais Imutáveis (`produtos_atributos_manuais`)
-
-Para garantir que intervenções operacionais de chão de fábrica (como vinculação manual de caixas DUN-14 ou definição de códigos de balança/pesar) nunca sejam sobrescritas pelas execuções automáticas periódicas do pipeline ETL:
-
-1. **Tabela de Overrides Imutáveis**: Criada a tabela `produtos_atributos_manuais` com chave primária `produto_ean`.
-2. **Precedência na View e Sincronização**: Tanto a view `vw_produtos_com_marcas` quanto o motor de sincronização do PWA (`lib/database/sync.ts`) e o endpoint `/api/validar` aplicam a regra de precedência:
-   $$\text{DUN Exibido} = \text{Override Manual} \succ \text{codigos\_barras (ETL)} \succ \text{Catálogo Base}$$
-3. **Imutabilidade contra Cargas B2B**: Mesmo que um scraper colete dados divergentes de embalagem, o vínculo validado pelo operador no PWA permanece preservado.
-
----
-
-## 🔐 8. Políticas de Segurança e Multi-Tenancy (RLS)
-
-O esquema do banco de dados no Supabase implementa Row Level Security (RLS) para isolamento corporativo de dados:
-
-- **Script de Migração**: [`01_migration_multi_tenant_rls.sql`](file:///root/paletscan-etl/db_sync/01_migration_multi_tenant_rls.sql).
-- **Coluna `empresa_id`**: Presente em tabelas operacionais (`paletes_armazenados`, `produtos_atributos_manuais`, `auditorias`).
-- **Políticas RLS**: Garantem que operadores e sessões acessem estritamente os paletes e registros vinculados à sua respectiva organização ou filial.
-
----
-
-## 📦 9. Exportação Estrita para Catálogo PWA (`export_pwa_catalog.ts`)
-
-O pipeline inclui a ferramenta de exportação e auditoria pré-deploy do catálogo mestre para o PWA:
-
-- **EAN Obrigatório de 13 Dígitos**: Filtro estrito que elimina SKUs sem código EAN-13 numérico válido (`/^\d{13}$/`), impedindo a poluição do catálogo mobile com códigos internos ou provisórios.
-- **Sanitização de Mídias**: Descarte rigoroso de placeholders, banners e URLs inválidas, garantindo carregamento instantâneo no cliente offline (WatermelonDB).
-
-
+# Sincronizar apenas imagens tratadas para o Supabase Storage
+npm run sync:images
+```

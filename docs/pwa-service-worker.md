@@ -12,15 +12,15 @@ flowchart TD
         A1["Coletor / Smartphone Android em Modo Offline"]
         A2["App Shell Servido Instantaneamente via Serwist"]
         A3["Catálogo Mestre Lido do WatermelonDB Local"]
-        A4["Bipagem & Gravação Reativa Local em < 5ms"]
+        A4["Bipagem e Gravação Reativa Local em menos de 5ms"]
         A5["Fila pending_sync Enfileira Mutações no localStorage"]
         
         A1 --> A2 --> A3 --> A4 --> A5
     end
 
-    subgraph Reconexao ["2. Saída da Câmara & Retorno da Conectividade"]
-        B1["Reconexão com Wi-Fi / Rede Móvel 4G/5G"]
-        B2["Instant Sync com Supabase Cloud (< 30ms via Hash Check)"]
+    subgraph Reconexao ["2. Saída da Câmara e Retorno da Conectividade"]
+        B1["Reconexão com Wi-Fi ou Rede Móvel 4G/5G"]
+        B2["Instant Sync com Supabase Cloud em menos de 30ms"]
         B3["Despacho Automático das Mutações da Fila pending_sync"]
         
         B1 --> B2 --> B3

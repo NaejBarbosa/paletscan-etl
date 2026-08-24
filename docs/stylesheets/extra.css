@@ -9,17 +9,20 @@
   table-layout: fixed !important;
   word-break: break-word !important;
   overflow-wrap: break-word !important;
-  font-size: 0.775rem !important;
-  margin: 1em 0 !important;
+  font-size: 0.8rem !important;
+  margin: 1.75rem 0 !important;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .md-typeset table:not([class]) th,
 .md-typeset table:not([class]) td {
-  padding: 0.45rem 0.35rem !important;
+  padding: 0.6rem 0.5rem !important;
   word-wrap: break-word !important;
   white-space: normal !important;
-  vertical-align: top !important;
-  line-height: 1.35 !important;
+  vertical-align: middle !important;
+  line-height: 1.4 !important;
 }
 
 .md-typeset table:not([class]) th {
@@ -32,44 +35,76 @@
 .md-typeset table:not([class]) a {
   word-break: break-all !important;
   white-space: normal !important;
-  font-size: 0.75rem !important;
+  font-size: 0.775rem !important;
 }
 
-/* 3. Ajuste de Diagramas Mermaid para Visualização Mobile */
+/* 3. Ajuste e Espaçamento de Respiro para Diagramas Mermaid (Vertical Mobile) */
 .md-typeset .mermaid {
   overflow-x: auto !important;
   max-width: 100% !important;
-  padding: 0.5rem 0 !important;
+  margin: 2.25rem 0 !important;
+  padding: 1.5rem 1rem !important;
+  background-color: var(--md-code-bg-color);
+  border-radius: 0.75rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .md-typeset .mermaid svg {
   max-width: 100% !important;
   height: auto !important;
+  font-family: inherit !important;
 }
 
-/* 4. Cartões de Alerta (Admonitions) Responsivos */
+/* 4. Cartões de Alerta (Admonitions) com Respiro Generoso */
 .md-typeset .admonition,
 .md-typeset details {
-  border-radius: 0.5rem !important;
-  margin: 1em 0 !important;
-  font-size: 0.825rem !important;
+  border-radius: 0.6rem !important;
+  margin: 1.75rem 0 !important;
+  padding: 0.8rem 1rem !important;
+  font-size: 0.85rem !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 /* 5. Alvos Táteis Ergonômicos para Navegação Mobile */
 .md-nav__link {
-  min-height: 2.25rem !important;
+  min-height: 2.5rem !important;
   display: flex !important;
   align-items: center !important;
-  padding: 0.25rem 0.5rem !important;
+  padding: 0.35rem 0.6rem !important;
 }
 
 .md-header__button {
   padding: 0.5rem !important;
 }
 
-/* 6. Blocos de Código Limpos */
+/* 6. Espaçamento de Parágrafos, Títulos e Seções */
+.md-typeset h2 {
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.25rem !important;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset h3 {
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.85rem !important;
+}
+
+.md-typeset p {
+  line-height: 1.65 !important;
+  margin-bottom: 1.25rem !important;
+}
+
+/* 7. Blocos de Código Limpos e Arejados */
+.md-typeset pre {
+  margin: 1.5rem 0 !important;
+  border-radius: 0.6rem !important;
+}
+
 .md-typeset pre > code {
-  font-size: 0.775rem !important;
-  line-height: 1.4 !important;
+  font-size: 0.8rem !important;
+  line-height: 1.45 !important;
+  padding: 1rem !important;
 }

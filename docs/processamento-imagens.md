@@ -14,7 +14,7 @@ flowchart TD
     B --> C["3. Máscara Transparente (Canal Alpha RGBA)"]
     C --> D["4. Achatamento sobre Fundo Branco Sólido (#FFFFFF)"]
     D --> E["5. Redimensionamento Proporcional (Pillow Resampling)"]
-    E --> F["6. Arquivo Otimizado .webp (< 150KB)"]
+    E --> F["6. Arquivo Otimizado .webp (Menos de 150KB)"]
 ```
 
 ---
@@ -61,7 +61,7 @@ Quando um fornecedor atualiza o visual da embalagem ou lança um novo layout no 
 flowchart TD
     A["1. Scraper detecta nova URL/Layout"] --> B["2. Download da Imagem Bruta em images/raw/"]
     B --> C["3. IA Local (rembg / U2Net)\nRemoção de Fundo"]
-    C --> D["4. Composição com Fundo Branco Sólido RGB\ne Compressão WebP (< 150KB)"]
+    C --> D["4. Composição com Fundo Branco Sólido RGB\ne Compressão WebP (Menos de 150KB)"]
     D --> E["5. Upload para Supabase Storage\nBucket 'produtos-imagens' (upsert: true)"]
     E --> F["6. UPDATE na tabela 'produtos'\n(imagem_url + status_imagem = 'aprovado')"]
     F --> G["7. Regeração do produtos.json PWA\ne Pré-carregamento no Coletor"]

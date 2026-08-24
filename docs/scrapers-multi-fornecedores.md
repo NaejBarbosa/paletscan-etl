@@ -19,25 +19,14 @@ O módulo de extração do **PaletScan ETL** ([`scrapers/`](file:///root/paletsc
 
 ## 🏗️ 2. Arquitetura Geral de Extração Concorrente
 
-Os scrapers do PaletScan não dependem de varreduras HTML lentas via navegadores automatizados (Selenium/Puppeteer). Em vez disso, utilizam um fluxo em duas etapas otimizado para requisições HTTP diretas e concorrência controlada via `p-limit`:
+Os scrapers do PaletScan não dependem de varreduras HTML lentas via navegadores automatizados (Selenium/Puppeteer). Em vez disso, utilizam um fluxo vertical otimizado para requisições HTTP diretas e concorrência controlada via `p-limit`:
 
 ```mermaid
-sequenceDiagram
-    autonumber
-    participant Portais as Portais B2B / Sitemaps / APIs
-    participant Engine as Scraper Engine (Node.js/TS)
-    participant Core as Core Normalizer & GS1 Mod10
-    participant Staging as Staging JSON (staging/*_staging.json)
-
-    Engine->>Portais: Extrai lista de URLs e SKUs da origem
-    Portais-->>Engine: Retorna payloads JSON / Estrutura de dados
-    loop Para cada lote de SKUs (Pool Concorrente)
-        Engine->>Engine: Executa Algoritmo de Seleção e Acurácia de Imagens
-        Engine->>Engine: Extrai SKUs, EANs e DUNs
-        Engine->>Core: Normaliza Textos, Pesos e Códigos de Barras
-        Core-->>Engine: Retorna Dados Higienizados
-        Engine->>Staging: Salva arquivo em staging/*_staging.json
-    end
+flowchart TD
+    P1["1. Portais B2B, Sitemaps XML e APIs REST\n(Friboi, BRF, Seara, Aurora, Copacol, Lar)"] --> P2["2. Motor de Scraping em TypeScript / Node.js 20\n(Pool Concorrente com p-limit)"]
+    P2 --> P3["3. Algoritmo de Seleção e Acurácia de Imagens\n(Filtro de URLs de Alta Resolução)"]
+    P3 --> P4["4. Normalizador de Texto e GS1 Modulus 10\n(Title Case PT-BR, Pesos e Validação EAN/DUN)"]
+    P4 --> P5["5. Geração de Datasets Sanitizados em Staging\n(staging/*_staging.json)"]
 ```
 
 ---
@@ -59,87 +48,15 @@ sequenceDiagram
 - **Estratégia**: Varredura multi-site ao vivo cobrindo os portais institucionais B2B, B2C e e-commerce oficial da Seara.
 - **Diferencial**: Tratamento de cortes fracionados por pesagem dinâmica e linha completa de industrializados.
 
-### D. Pipeline Copacol (`scrapers/copacol/`)
-- **Marcas Mapeadas**: Copacol (Aves, Peixes, Tilápia, Suínos, Pratos Prontos).
-- **Estratégia**: Ingestão concorrente de produtos com extração estrita de EANs primários (13 dígitos) e DUNs logísticos (14 dígitos).
-- **Diferencial**: Alta precisão no isolamento de pesos fixos vs. variáveis e classificação taxonômica de pescados.
+### D. Pipeline Cooperativa Lar (`scrapers/lar/`)
+- **Marcas Mapeadas**: Lar, Lar Pratos Prontos, Cortes Lar.
+- **Estratégia**: Varredura de páginas de produtos no portal institucional Lar Alimentos.
+- **Diferencial**: Regra de negócio especializada para decodificação GS1 onde a ausência do AI 17 dispara cálculo automático de validade de **+365 dias** sobre o AI 11.
 
-### E. Pipeline Cooperativa Lar (`scrapers/lar/`)
-- **Marcas Mapeadas**: Lar Alimentos (Aves, Suínos, Cortes Especiais).
-- **Estratégia**: Ingestão automatizada do catálogo oficial de produtos da Cooperativa Agroindustrial Lar.
-- **Diferencial**: 100% dos produtos validados possuem EAN e DUN cadastrados e higienizados.
+### E. Pipeline Copacol (`scrapers/copacol/`)
+- **Marcas Mapeadas**: Copacol, Tilápia Copacol, Aves Copacol.
+- **Estratégia**: Extração estruturada do catálogo institucional e fichas técnicas de pescados e frangos.
 
 ### F. Pipeline Cooperativa Aurora (`scrapers/aurora/`)
-- **Marcas Mapeadas**: Aurora Coop, Aurora Premium, Peperi.
-- **Estratégia**: Extração estruturada do portfólio de cortes suínos, embutidos e lácteos.
-- **Diferencial**: Classificação automatizada de conservação e identificação de caixas máster.
-
----
-
-## 🎯 4. Algoritmo de Acurácia de Imagens e Filtro Anti-Ruído
-
-Para evitar a exibição de imagens incorretas (como fotos de receitas, pratos prontos ou marcas d'água de distribuidores), todos os scrapers aplicam o algoritmo de filtragem heurística `extractBestProductImage`:
-
-### 🔍 A. Regras de Rejeição Automatizadas:
-
-| Indicador no Nome do Arquivo / URL | Motivo do Descarte |
-| :--- | :--- |
-| `_02`, `_03`, `_04`, `_05` | Fotos de pratos prontos, receitas preparadas ou embalagens de despacho. |
-| `_50` | Logotipos institucionais e marcas d'água de distribuidores. |
-| `receita`, `prato`, `banner` | Imagens publicitárias ou sugestões de consumo. |
-| `tabela`, `nutricional`, `selo` | Tabelas de informação nutricional ou selos de certificação. |
-| `placeholder`, `no-image` | Imagens padrão quando o produto não possui foto real. |
-
----
-
-## 📄 5. Formato Unificado de Saída em Staging
-
-Após a extração e sanitização estrita, todos os scrapers salvam os dados brutos consolidados na pasta `staging/` seguindo a estrutura de contrato padronizada (`*_staging.json`):
-
-```json
-{
-  "fabricantes": [
-    {
-      "id": "fab_jbs",
-      "nome": "JBS S.A.",
-      "cnpj": "10000000000000"
-    }
-  ],
-  "marcas": [
-    {
-      "id": "marca_friboi",
-      "fabricante_id": "fab_jbs",
-      "nome": "Friboi"
-    }
-  ],
-  "produtos": [
-    {
-      "id": "prod_109403",
-      "marca_id": "marca_friboi",
-      "nome": "Corte Dianteiro Bovino Friboi Peito (pesar)",
-      "categoria": "Bovinos - Resfriados",
-      "conservacao": "Resfriado",
-      "peso_gramas": null,
-      "peso_variavel": true,
-      "imagem_url": "https://www.friboionline.com.br/ccstore/v1/images/?source=/file/v123/products/109403_00.jpg",
-      "imagem_status": "aprovado"
-    }
-  ],
-  "codigos_barras": [
-    {
-      "id": "cb_ean_7891515432101",
-      "produto_id": "prod_109403",
-      "codigo": "7891515432101",
-      "tipo": "EAN",
-      "quantidade_embalagem": 1
-    },
-    {
-      "id": "cb_dun_17891515432108",
-      "produto_id": "prod_109403",
-      "codigo": "17891515432108",
-      "tipo": "DUN",
-      "quantidade_embalagem": 6
-    }
-  ]
-}
-```
+- **Marcas Mapeadas**: Aurora, Aurora Premium, Nobre.
+- **Estratégia**: Ingestão dos cortes suínos, lácteos e embutidos através do catálogo institucional Aurora Coop.

@@ -1,9 +1,40 @@
 # 🌐 Ecossistema PaletScan - Simbiose entre Engenharia de Dados & PWA
 
-[![Ecosystem](https://img.shields.io/badge/Ecosystem-Data_ETL_%2B_PWA_Mobile-indigo.svg)](index.md)
-[![PWA](https://img.shields.io/badge/PWA-Local--First_Offline-brightgreen.svg)](pwa-visao-geral.md)
-[![Database](https://img.shields.io/badge/Database-WatermelonDB_%2B_Supabase-orange.svg)](supabase.md)
-[![AI Vision](https://img.shields.io/badge/AI_Vision-rembg_U2Net-blue.svg)](processamento-imagens.md)
+<div class="badges-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0 2rem 0;">
+  <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js 14">
+  </a>
+  <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/TypeScript_5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript 5">
+  </a>
+  <a href="https://serwist.pages.dev/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Serwist_Service_Worker-FF6B6B?style=for-the-badge&logo=pwa&logoColor=white" alt="Serwist Service Worker">
+  </a>
+  <a href="https://watermelondb.dev/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/WatermelonDB-FF4154?style=for-the-badge&logo=watermelon&logoColor=white" alt="WatermelonDB">
+  </a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/IndexedDB-336791?style=for-the-badge&logo=database&logoColor=white" alt="IndexedDB API">
+  </a>
+  <a href="https://supabase.com/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Supabase_PostgreSQL-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase PostgreSQL">
+  </a>
+  <a href="https://github.com/danielgatis/rembg" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/IA_Vision_rembg_U2Net-009688?style=for-the-badge&logo=openai&logoColor=white" alt="rembg U2Net">
+  </a>
+  <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Python_3.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.11">
+  </a>
+  <a href="https://github.com/zxing-js/library" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/ZXing_Barcode_Reader-FFA000?style=for-the-badge&logo=google&logoColor=white" alt="ZXing Barcode">
+  </a>
+  <a href="https://simplewebauthn.dev/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/WebAuthn_Passkeys-4285F4?style=for-the-badge&logo=fido&logoColor=white" alt="WebAuthn Passkeys">
+  </a>
+  <a href="https://termux.dev/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Termux_ARM64_Linux-000000?style=for-the-badge&logo=linux&logoColor=white" alt="Termux Linux">
+  </a>
+</div>
 
 > O **Ecossistema PaletScan** é uma solução industrial completa e integrada, projetada para eliminar perdas financeiras por vencimento, acelerar o giro de mercadorias perecíveis (**FEFO / PVPS**) e garantir precisão cirúrgica no endereçamento de paletes em câmaras frigoríficas industriais (congelados e resfriados).
 
@@ -71,46 +102,98 @@ O projeto foi integralmente idealizado, desenhado e desenvolvido por **Jean Barb
 
 ## 🔄 3. Ciclo de Vida da Informação Ponta a Ponta
 
-```mermaid
-sequenceDiagram
-    autonumber
-    participant Fornecedor as Portais B2B (Friboi, BRF, Seara...)
-    participant ETL as Pipeline ETL (TypeScript e Python IA)
-    participant Cloud as Supabase PostgreSQL e Storage
-    participant PWA as PaletScan PWA (WatermelonDB)
-    participant Operador as Operador de Empilhadeira
+Abaixo, o fluxo de dados industrial é apresentado em formato vertical para leitura clara em smartphones e coletores móveis:
 
-    Fornecedor->>ETL: Extração de Sitemaps, APIs e Catálogos
-    ETL->>ETL: Modulus 10 GS1 e IA de Imagem U2Net
-    ETL->>Cloud: Carga Relacional Sanitizada e Assets WebP
-    Cloud-->>PWA: Instant Sync Delta em menos de 30ms
-    PWA->>Operador: Catálogo Offline Imediato no Coletor
-    Operador->>PWA: Bipagem de Palete na Câmara Frigorífica (Blackout)
-    PWA->>PWA: Gravação Local Reativa em menos de 5ms
-    Operador->>PWA: Vínculo Manual de DUN-14 ou Código de Balança
-    PWA->>Cloud: Persistência em produtos_atributos_manuais (Imunidade ETL)
+```mermaid
+flowchart TD
+    E1["1. Extração B2B Automatizada\nPortais Friboi, BRF, Seara, Aurora, Copacol e Lar"] --> E2["2. Higienização e IA Local\nModulus 10 GS1, Title Case e Remoção de Fundo U2Net"]
+    E2 --> E3["3. Carga Relacional no Supabase\nPersistência em PostgreSQL e CDN de Imagens WebP"]
+    E3 --> E4["4. Instant Sync com o Coletor\nComparação de hash em menos de 30ms"]
+    E4 --> E5["5. Operação Offline na Câmara Frigorífica\nLeitura óptica e gravação local no WatermelonDB em menos de 5ms"]
+    E5 --> E6["6. Vínculo Manual e Expurgo\nAssociação de DUN-14 e conferência física em campo"]
+    E6 --> E7["7. Sincronização Segura de Retorno\nEnvio para produtos_atributos_manuais (Imunidade ETL)"]
 ```
 
 ---
 
-## 🛠️ 4. Sumário da Stack Tecnológica Unificada
+## 🧩 4. A Simbiose Tecnológica: Como as Tecnologias se Relacionam
 
-| Camada | Tecnologia | Função no Ecossistema |
-| :--- | :--- | :--- |
-| **Pipeline ETL & Core** | `TypeScript 5` / `Node.js 20` | Scrapers concorrentes, parsing XML/JSON, heurísticas e validação Modulus 10. |
-| **Visão Computacional (IA)** | `Python 3` / `rembg (U2Net)` / `Pillow` | Remoção de fundo via redes neurais, recorte automático e compressão WebP. |
-| **Banco Nuvem & Storage** | `Supabase` (PostgreSQL 15) | Banco relacional master, Row Level Security (RLS) e Storage Buckets. |
-| **Frontend PWA** | `Next.js 14` (Pages Router) | Framework React para aplicação PWA industrial Touch-First. |
-| **Service Worker & Cache** | `@serwist/next` & Serwist | App Shell precaching, navegação offline e cache inteligente de imagens. |
-| **Banco Reativo Local** | `WatermelonDB v11` (IndexedDB / LokiJS) | Operação offline de alta performance com tempos de resposta rápidos. |
-| **Leitor Óptico & Scanner** | `@zxing/library` & `BarcodeDetector API` | Leitura em tempo real pela câmera e upload com recorte interativo (`react-zoom-pan-pinch`). |
-| **Autenticação & Segurança** | `NextAuth.js` & `@simplewebauthn` | Login por senha, QR Code móvel e biometria/Passkeys FIDO2. |
-| **Busca & Gamificação** | `fuzzball` & `canvas-confetti` | Busca fonética por aproximação e celebração visual no Radar Watchlist. |
-| **Exportação de Dados** | `jspdf` & `jspdf-autotable` | Geração client-side de relatórios tabulares em PDF e CSV (CP1252) com Android MediaScan. |
+A arquitetura do PaletScan foi desenhada para que cada tecnologia complemente a outra de forma sinérgica e eficiente:
+
+```mermaid
+flowchart TD
+    subgraph FrontendLocal ["Camada Cliente: PWA Local-First"]
+        SW["Serwist e Service Worker\nPrecaching de App Shell e Imagens"]
+        WDB["WatermelonDB\nCamada Reativa ORM (Consultas Ultra-Rápidas)"]
+        IDB["IndexedDB API\nArmazenamento Local Persistente"]
+        ZX["ZXing e Recorte Óptico\nLeitura de Códigos de Barras e QR"]
+        WA["SimpleWebAuthn\nAutenticação Biométrica e Passkeys"]
+
+        SW --> WDB
+        WDB --> IDB
+        ZX --> WDB
+        WA --> WDB
+    end
+
+    subgraph NuvemCloud ["Camada Nuvem: Persistência e CDN"]
+        SUPA["Supabase PostgreSQL\nCatálogo Mestre e Overrides Manuais"]
+        BUCKET["Supabase Storage CDN\nAtivos de Imagens WebP Otimizados"]
+    end
+
+    subgraph PipelineBackend ["Camada Pipeline: Inteligência e IA"]
+        SCRAP["TypeScript e Node.js 20\nScrapers Concorrentes com p-limit"]
+        AI["Python 3 e rembg U2Net\nRemoção de Fundo e Otimização WebP"]
+
+        SCRAP --> AI
+        AI --> BUCKET
+        SCRAP --> SUPA
+    end
+
+    IDB -->|Instant Sync Delta| SUPA
+    SUPA -->|Atualização de Catálogo| IDB
+    BUCKET -->|CacheFirst Offline| SW
+```
+
+### Detalhamento das Integrações:
+
+1. **[Serwist (Service Worker)](https://serwist.pages.dev/) & [Next.js 14](https://nextjs.org/)**:
+   - O Serwist compila e orquestra o Service Worker (`sw.ts`), interceptando requisições de rede. Ele faz o *precaching* de todo o App Shell do Next.js e aplica a estratégia `CacheFirst` nas imagens dos produtos, garantindo que o operador nunca veja uma tela em branco no interior das câmaras frias.
+
+2. **[WatermelonDB](https://watermelondb.dev/) & [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)**:
+   - Em vez de leituras diretas e lentas no IndexedDB ou uso do limitado `localStorage`, o PaletScan utiliza o WatermelonDB como camada de abstração reativa. Ele gerencia índices em memória e persiste no IndexedDB/LokiJS, permitindo buscas fonéticas instantâneas e mutações em **menos de 5 milissegundos**.
+
+3. **[Supabase PostgreSQL](https://supabase.com/) & Sincronização Delta**:
+   - O Supabase atua como a *Single Source of Truth* do ecossistema. O motor de sincronização (`sync.ts`) compara o hash do banco local com a nuvem em menos de 30ms. Mutações offline acumuladas são salvas na fila `pending_sync` e despachadas para o Supabase assim que o coletor detecta sinal de rede.
+
+4. **[rembg (U2Net)](https://github.com/danielgatis/rembg) & [Python 3](https://www.python.org/)**:
+   - O pipeline em Python processa localmente as fotos brutas baixadas pelos scrapers em TypeScript. A rede neural U2Net isola a embalagem do produto, aplica fundo branco puro `#FFFFFF` e converte para WebP de até 150KB. Esses ativos são armazenados no Supabase Storage e cacheados pelo Service Worker no coletor.
+
+5. **[SimpleWebAuthn](https://simplewebauthn.dev/) & Biometria FIDO2**:
+   - Elimina a necessidade de digitação de senhas com luvas térmicas no frio extremo através de autenticação por impressão digital ou reconhecimento facial (Passkeys), com suporte a cache de sessão offline (`ps_auth_session`).
+
+6. **[Termux](https://termux.dev/) & [PRoot Ubuntu Linux](https://wiki.termux.com/wiki/PRoot)**:
+   - Toda a esteira de engenharia de software — do desenvolvimento dos scrapers, treinamento de heurísticas, testes unitários até a publicação automatizada do MkDocs — é operada diretamente no smartphone do autor.
 
 ---
 
-## 📚 5. Guia de Navegação na Documentação
+## 🛠️ 5. Sumário da Stack Tecnológica Unificada
+
+| Camada | Tecnologia | Função no Ecossistema |
+| :--- | :--- | :--- |
+| **Pipeline ETL & Core** | [TypeScript 5](https://www.typescriptlang.org/) / [Node.js 20](https://nodejs.org/) | Scrapers concorrentes, parsing XML/JSON, heurísticas e validação Modulus 10. |
+| **Visão Computacional (IA)** | [Python 3](https://www.python.org/) / [rembg (U2Net)](https://github.com/danielgatis/rembg) / [Pillow](https://python-pillow.org/) | Remoção de fundo via redes neurais, recorte automático e compressão WebP. |
+| **Banco Nuvem & Storage** | [Supabase](https://supabase.com/) (PostgreSQL 15) | Banco relacional master, Row Level Security (RLS) e Storage Buckets. |
+| **Frontend PWA** | [Next.js 14](https://nextjs.org/) (Pages Router) | Framework React para aplicação PWA industrial Touch-First. |
+| **Service Worker & Cache** | [@serwist/next](https://serwist.pages.dev/) & Serwist | App Shell precaching, navegação offline e cache inteligente de imagens. |
+| **Banco Reativo Local** | [WatermelonDB v11](https://watermelondb.dev/) ([IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)) | Operação offline de alta performance com tempos de resposta rápidos (< 5ms). |
+| **Leitor Óptico & Scanner** | [@zxing/library](https://github.com/zxing-js/library) & [BarcodeDetector API](https://developer.mozilla.org/en-US/docs/Web/API/Barcode_Detection_API) | Leitura em tempo real pela câmera e upload com recorte interativo (`react-zoom-pan-pinch`). |
+| **Autenticação & Segurança** | [NextAuth.js](https://next-auth.js.org/) & [SimpleWebAuthn](https://simplewebauthn.dev/) | Login por senha, QR Code móvel e biometria/Passkeys FIDO2. |
+| **Busca & Gamificação** | [fuzzball](https://github.com/wsorenson/fuzzball.js) & [canvas-confetti](https://www.kirilv.com/canvas-confetti/) | Busca fonética por aproximação e celebração visual no Radar Watchlist. |
+| **Exportação de Dados** | [jspdf](https://github.com/parallax/jsPDF) & [jspdf-autotable](https://github.com/simonbengtsson/jsPDF-AutoTable) | Geração client-side de relatórios tabulares em PDF e CSV (CP1252) com Android MediaScan. |
+
+---
+
+## 📚 6. Guia de Navegação na Documentação
 
 Explore os módulos completos do ecossistema organizados por área:
 
