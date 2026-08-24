@@ -1194,27 +1194,35 @@
 <h2 id="1-a-simbiose-perfeita-do-b2b-ao-chao-de-fabrica">🧬 1. A Simbiose Perfeita: Do B2B ao Chão de Fábrica</h2>
 <p>O PaletScan une duas frentes de tecnologia que operam em harmonia contínua:</p>
 <pre class="mermaid"><code>flowchart TD
-    subgraph CamadaETL ["1. Camada de Inteligência &amp; ETL"]
-        A1["Scrapers B2B Multi-Fornecedores"] --&gt; A2["Normalização &amp; Heurísticas"]
-        A2 --&gt; A3["Pipeline de IA de Imagens (U2Net)"]
-        A3 --&gt; A4["Validação Matemática Modulus 10 (GS1)"]
+    subgraph CamadaETL ["1. Camada de Inteligência e ETL"]
+        A1["Scrapers B2B Multi-Fornecedores"]
+        A2["Normalização e Heurísticas"]
+        A3["Pipeline de IA de Imagens U2Net"]
+        A4["Validação Matemática Modulus 10 GS1"]
+        A1 --&gt; A2
+        A2 --&gt; A3
+        A3 --&gt; A4
     end
 
     subgraph NuvemDB ["2. Núcleo Relacional Supabase PostgreSQL"]
-        B1[("Catálogo Mestre de Produtos e Marcas")]
-        B2[("Tabela Imutável produtos_atributos_manuais")]
-        B3[("Views Relacionais Otimizadas (vw_produtos_com_marcas)")]
+        B1["Catálogo Mestre de Produtos e Marcas"]
+        B2["Tabela Imutável produtos_atributos_manuais"]
+        B3["Views Relacionais Otimizadas"]
     end
 
     subgraph CamadaPWA ["3. Camada Operacional PWA Local-First"]
-        C1["Service Worker Serwist (sw.ts) &amp; App Shell"] --&gt; C2["Banco Local Reativo WatermelonDB (&lt; 5ms)"]
-        C2 --&gt; C3["Leitor de Câmera &amp; Recorte Óptico Interativo"]
-        C3 --&gt; C4["Funil de Regex Industrial (GS1 / Data Matrix / Lar +365d)"]
+        C1["Service Worker Serwist e App Shell"]
+        C2["Banco Local Reativo WatermelonDB"]
+        C3["Leitor de Câmera e Recorte Óptico"]
+        C4["Funil de Regex Industrial"]
+        C1 --&gt; C2
+        C2 --&gt; C3
+        C3 --&gt; C4
     end
 
-    CamadaETL --&gt;|Carga de Dados Master| NuvemDB
-    NuvemDB --&gt;|Instant Sync &lt; 30ms| CamadaPWA
-    CamadaPWA --&gt;|Fila pending_sync (Reconexão)| NuvemDB</code></pre>
+    A4 --&gt;|Carga de Dados Mestre| B1
+    B1 --&gt;|Instant Sync em Menos de 30ms| C1
+    C4 --&gt;|Fila pending_sync na Reconexão| B2</code></pre>
 <ol>
 <li><strong>Camada de Inteligência de Dados (ETL &amp; Pipelines)</strong>:</li>
 <li>Extrai e higieniza continuamente catálogos industriais B2B dos maiores frigoríficos e indústrias alimentícias (<strong>Friboi, JBS, BRF Sadia/Perdigão, Seara, Aurora, Copacol, Lar Cooperativa</strong>).</li>
@@ -1243,19 +1251,19 @@ Todo o ecossistema — desde os scrapers em TypeScript, pipelines de visão comp
 <pre class="mermaid"><code>sequenceDiagram
     autonumber
     participant Fornecedor as Portais B2B (Friboi, BRF, Seara...)
-    participant ETL as Pipeline ETL (TypeScript + Python IA)
-    participant Cloud as Supabase PostgreSQL &amp; Storage
+    participant ETL as Pipeline ETL (TypeScript e Python IA)
+    participant Cloud as Supabase PostgreSQL e Storage
     participant PWA as PaletScan PWA (WatermelonDB)
     participant Operador as Operador de Empilhadeira
 
-    Fornecedor-&gt;&gt;ETL: Extração de Sitemaps, APIs &amp; Catálogos
-    ETL-&gt;&gt;ETL: Modulus 10 GS1 + IA de Imagem U2Net
-    ETL-&gt;&gt;Cloud: Carga Relacional Sanitizada &amp; Assets WebP
-    Cloud--&gt;&gt;PWA: Instant Sync Delta (&lt; 30ms via Hash Check)
+    Fornecedor-&gt;&gt;ETL: Extração de Sitemaps, APIs e Catálogos
+    ETL-&gt;&gt;ETL: Modulus 10 GS1 e IA de Imagem U2Net
+    ETL-&gt;&gt;Cloud: Carga Relacional Sanitizada e Assets WebP
+    Cloud--&gt;&gt;PWA: Instant Sync Delta em menos de 30ms
     PWA-&gt;&gt;Operador: Catálogo Offline Imediato no Coletor
     Operador-&gt;&gt;PWA: Bipagem de Palete na Câmara Frigorífica (Blackout)
-    PWA-&gt;&gt;PWA: Gravação Local Reativa (&lt; 5ms)
-    Operador-&gt;&gt;PWA: Vínculo Manual de DUN-14 / Código de Balança
+    PWA-&gt;&gt;PWA: Gravação Local Reativa em menos de 5ms
+    Operador-&gt;&gt;PWA: Vínculo Manual de DUN-14 ou Código de Balança
     PWA-&gt;&gt;Cloud: Persistência em produtos_atributos_manuais (Imunidade ETL)</code></pre>
 <hr />
 <h2 id="4-sumario-da-stack-tecnologica-unificada">🛠️ 4. Sumário da Stack Tecnológica Unificada</h2>
@@ -1296,7 +1304,7 @@ Todo o ecossistema — desde os scrapers em TypeScript, pipelines de visão comp
 <tr>
 <td style="text-align: left;"><strong>Banco Reativo Local</strong></td>
 <td style="text-align: left;"><code>WatermelonDB v11</code> (IndexedDB / LokiJS)</td>
-<td style="text-align: left;">Operação offline de alta performance com tempos de resposta &lt; 5ms.</td>
+<td style="text-align: left;">Operação offline de alta performance com tempos de resposta rápidos.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Leitor Óptico &amp; Scanner</strong></td>

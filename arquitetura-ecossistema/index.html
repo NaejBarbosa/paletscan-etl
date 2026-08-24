@@ -1147,27 +1147,38 @@
 <p>O ecossistema opera através de um circuito fechado de dados bidirecional:</p>
 <pre class="mermaid"><code>flowchart TD
     subgraph Nuvem ["1. Nuvem e Fornecedores"]
-        A["Portais B2B e APIs dos Frigoríficos"] --&gt; B["Pipeline ETL (paletscan-etl)"]
-        B --&gt;|1. Carga Limpa com Modulus 10 e Imagens IA| C["Supabase PostgreSQL - Catálogo Mestre"]
+        A["Portais B2B e APIs dos Frigoríficos"]
+        B["Pipeline ETL (paletscan-etl)"]
+        C["Supabase PostgreSQL - Catálogo Mestre"]
+        A --&gt; B
+        B --&gt; C
     end
 
     subgraph Sync ["2. Sincronização Sob Demanda"]
-        C --&gt;|2. Hash Check Rápido (ps_pwa_db_hash)| D["Motor de Sync (sync.ts)"]
-        D --&gt;|3. Delta Sync| E["WatermelonDB Local (IndexedDB / Schema v11)"]
+        D["Motor de Sincronização (sync.ts)"]
+        E["WatermelonDB Local (Schema v11)"]
+        D --&gt; E
     end
 
     subgraph ChaoDeFabrica ["3. Chão de Fábrica e Câmaras Frigoríficas"]
-        E --&gt; F["Leitura Óptica e Regex Industrial Imediata"]
-        F --&gt; G["Validação de Vaga e Registro de Palete"]
-        G --&gt; H["Vínculo Manual de DUN-14 e Código de Pesar"]
-        H --&gt;|4. Gravação Imediata Offline| E
+        F["Leitura Óptica e Scanner"]
+        G["Validação e Registro de Vaga"]
+        H["Vínculo Manual de DUN-14 e Pesagem"]
+        F --&gt; G
+        G --&gt; H
     end
 
     subgraph Feedback ["4. Realimentação e Imunidade"]
-        H --&gt;|5. Fila pending_sync ao Reconectar| I["API Serverless /api/cadastrar-produto"]
-        I --&gt;|6. UPSERT Protegido| J["Tabela produtos_atributos_manuais"]
-        J --&gt;|7. Precedência Absoluta sobre ETL| C
-    end</code></pre>
+        I["API de Cadastro e Sincronização"]
+        J["Tabela produtos_atributos_manuais"]
+        I --&gt; J
+    end
+
+    C --&gt;|1. Hash Check e Delta Sync| D
+    E --&gt;|2. Consulta Reativa Imediata| F
+    H --&gt;|3. Gravação Offline Imediata| E
+    H --&gt;|4. Fila pending_sync ao Reconectar| I
+    J --&gt;|5. Precedência Absoluta sobre ETL| C</code></pre>
 <hr />
 <h2 id="2-modelo-de-convivencia-e-imunidade-de-dados-manuais">🛡️ 2. Modelo de Convivência e Imunidade de Dados Manuais</h2>
 <p>Um dos problemas mais comuns em pipelines ETL corporativos é a sobreescrita acidental de dados refinados manualmente por operadores de campo durante as cargas automatizadas de fornecedores.</p>
