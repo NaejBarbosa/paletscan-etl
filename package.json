@@ -20,6 +20,7 @@
     "status": "npx tsx scripts/check_status.ts",
     "help:manifest": "npx tsx scripts/render_help_from_manifest.ts",
     "wipe": "npx tsx db_sync/wipe_db_only.ts",
+    "validate:mermaid": "node scripts/validate_mermaid.js",
     "full": "npx tsx scripts/run_full_pipeline.ts",
     "build": "tsc"
   },

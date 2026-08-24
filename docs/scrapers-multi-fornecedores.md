@@ -19,14 +19,14 @@ O módulo de extração do **PaletScan ETL** ([`scrapers/`](file:///root/paletsc
 
 ## 🏗️ 2. Arquitetura Geral de Extração Concorrente
 
-Os scrapers do PaletScan não dependem de varreduras HTML lentas via navegadores automatizados (Selenium/Puppeteer). Em vez disso, utilizam um fluxo vertical otimizado para requisições HTTP diretas e concorrência controlada via `p-limit`:
+Os scrapers do PaletScan utilizam um fluxo vertical otimizado para requisições HTTP diretas e concorrência controlada via `p-limit`:
 
 ```mermaid
 flowchart TD
-    P1["1. Portais B2B, Sitemaps XML e APIs REST\n(Friboi, BRF, Seara, Aurora, Copacol, Lar)"] --> P2["2. Motor de Scraping em TypeScript / Node.js 20\n(Pool Concorrente com p-limit)"]
-    P2 --> P3["3. Algoritmo de Seleção e Acurácia de Imagens\n(Filtro de URLs de Alta Resolução)"]
-    P3 --> P4["4. Normalizador de Texto e GS1 Modulus 10\n(Title Case PT-BR, Pesos e Validação EAN/DUN)"]
-    P4 --> P5["5. Geração de Datasets Sanitizados em Staging\n(staging/*_staging.json)"]
+    P1["1. Portais B2B, Sitemaps XML e APIs REST"] --> P2["2. Motor de Scraping em TypeScript e Node.js 20"]
+    P2 --> P3["3. Algoritmo de Seleção e Acurácia de Imagens"]
+    P3 --> P4["4. Normalizador de Texto e GS1 Modulus 10"]
+    P4 --> P5["5. Geração de Datasets Sanitizados em Staging"]
 ```
 
 ---

@@ -10,15 +10,17 @@ O script `sync.ts` lê o staging sanitizado, gera as chaves determinísticas UUI
 
 ```mermaid
 flowchart TD
-    S1["1. Leitura do Staging JSON\n(staging/*_staging.json)"] --> S2["2. Geração Determinística de UUIDv5\n(Fabricantes, Marcas e Produtos)"]
-    S2 --> S3["3. UPSERT em Lote no Supabase\n(Tabelas fabricantes, marcas e produtos)"]
-    S3 --> S4{"4. Inserção em codigos_barras\n(EAN, DUN e SKU)"}
+    S1["1. Leitura do Staging JSON dos Fornecedores"] --> S2["2. Geração Determinística de UUIDv5"]
+    S2 --> S3["3. UPSERT em Lote nas Tabelas Mestres"]
     
-    S4 -->|Sucesso| S5["Gravação Confirmada no Banco"]
-    S4 -->|Conflito de Chave Única (Erro 23505)| S6["Ativa Fallback Item-por-Item"]
+    S3 --> S4["4. Inserção Relacional em Códigos de Barras"]
     
-    S6 --> S7["Isola Código Conflitante e Continua o Lote"]
-    S7 --> S8["Registra Detalhes em staging/conflicts_log.json"]
+    S4 --> OK["Gravação Normal Concluída"]
+    S4 --> ERR["Detecção de Conflito de Chave Única"]
+    
+    ERR --> S6["Ativa Fallback Item por Item"]
+    S6 --> S7["Isola Código Conflitante e Mantém o Lote"]
+    S7 --> S8["Registra Detalhes em Log de Auditoria"]
 ```
 
 ---
@@ -56,7 +58,7 @@ O script [`db_sync/sync_images.ts`](file:///root/paletscan-etl/db_sync/sync_imag
    - Bucket: `produtos-imagens`
    - Parâmetro: `upsert: true` (permite atualizar fotos quando a indústria muda o layout da embalagem).
 3. **Atualização da Tabela de Produtos**:
-   - `imagem_url`: Define a URL pública do CDN Supabase (`https://<project-ref>.supabase.co/storage/v1/object/public/produtos-imagens/<sku>.webp`).
+   - `imagem_url`: Define a URL pública do CDN Supabase.
    - `status_imagem`: Atualiza para `aprovado`.
    - `updated_at`: Atualiza o timestamp da última mutação para orientar a sincronização delta do PWA.
 
