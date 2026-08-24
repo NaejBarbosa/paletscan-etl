@@ -1274,12 +1274,12 @@
 </table>
 <hr />
 <h2 id="2-arquitetura-geral-de-extracao-concorrente">🏗️ 2. Arquitetura Geral de Extração Concorrente</h2>
-<p>Os scrapers do PaletScan não dependem de varreduras HTML lentas via navegadores automatizados (Selenium/Puppeteer). Em vez disso, utilizam um fluxo vertical otimizado para requisições HTTP diretas e concorrência controlada via <code>p-limit</code>:</p>
+<p>Os scrapers do PaletScan utilizam um fluxo vertical otimizado para requisições HTTP diretas e concorrência controlada via <code>p-limit</code>:</p>
 <pre class="mermaid"><code>flowchart TD
-    P1["1. Portais B2B, Sitemaps XML e APIs REST\n(Friboi, BRF, Seara, Aurora, Copacol, Lar)"] --&gt; P2["2. Motor de Scraping em TypeScript / Node.js 20\n(Pool Concorrente com p-limit)"]
-    P2 --&gt; P3["3. Algoritmo de Seleção e Acurácia de Imagens\n(Filtro de URLs de Alta Resolução)"]
-    P3 --&gt; P4["4. Normalizador de Texto e GS1 Modulus 10\n(Title Case PT-BR, Pesos e Validação EAN/DUN)"]
-    P4 --&gt; P5["5. Geração de Datasets Sanitizados em Staging\n(staging/*_staging.json)"]</code></pre>
+    P1["1. Portais B2B, Sitemaps XML e APIs REST"] --&gt; P2["2. Motor de Scraping em TypeScript e Node.js 20"]
+    P2 --&gt; P3["3. Algoritmo de Seleção e Acurácia de Imagens"]
+    P3 --&gt; P4["4. Normalizador de Texto e GS1 Modulus 10"]
+    P4 --&gt; P5["5. Geração de Datasets Sanitizados em Staging"]</code></pre>
 <hr />
 <h2 id="3-detalhamento-dos-pipelines-de-ingestao-por-fornecedor">🏭 3. Detalhamento dos Pipelines de Ingestão por Fornecedor</h2>
 <h3 id="a-pipeline-jbs-friboi-scrapersfriboi">A. Pipeline JBS / Friboi (<code>scrapers/friboi/</code>)</h3>

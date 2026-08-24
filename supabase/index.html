@@ -1146,15 +1146,17 @@
 <h2 id="1-pipeline-de-sincronizacao-relacional-db_syncsyncts">🔄 1. Pipeline de Sincronização Relacional (<code>db_sync/sync.ts</code>)</h2>
 <p>O script <code>sync.ts</code> lê o staging sanitizado, gera as chaves determinísticas UUIDv5 e executa as chamadas de gravação relacional no Supabase em um fluxo vertical de alta resiliência:</p>
 <pre class="mermaid"><code>flowchart TD
-    S1["1. Leitura do Staging JSON\n(staging/*_staging.json)"] --&gt; S2["2. Geração Determinística de UUIDv5\n(Fabricantes, Marcas e Produtos)"]
-    S2 --&gt; S3["3. UPSERT em Lote no Supabase\n(Tabelas fabricantes, marcas e produtos)"]
-    S3 --&gt; S4{"4. Inserção em codigos_barras\n(EAN, DUN e SKU)"}
+    S1["1. Leitura do Staging JSON dos Fornecedores"] --&gt; S2["2. Geração Determinística de UUIDv5"]
+    S2 --&gt; S3["3. UPSERT em Lote nas Tabelas Mestres"]
 
-    S4 --&gt;|Sucesso| S5["Gravação Confirmada no Banco"]
-    S4 --&gt;|Conflito de Chave Única (Erro 23505)| S6["Ativa Fallback Item-por-Item"]
+    S3 --&gt; S4["4. Inserção Relacional em Códigos de Barras"]
 
-    S6 --&gt; S7["Isola Código Conflitante e Continua o Lote"]
-    S7 --&gt; S8["Registra Detalhes em staging/conflicts_log.json"]</code></pre>
+    S4 --&gt; OK["Gravação Normal Concluída"]
+    S4 --&gt; ERR["Detecção de Conflito de Chave Única"]
+
+    ERR --&gt; S6["Ativa Fallback Item por Item"]
+    S6 --&gt; S7["Isola Código Conflitante e Mantém o Lote"]
+    S7 --&gt; S8["Registra Detalhes em Log de Auditoria"]</code></pre>
 <hr />
 <h2 id="2-tratamento-resiliente-de-conflitos-de-ean-erro-23505">🛡️ 2. Tratamento Resiliente de Conflitos de EAN (<code>Erro 23505</code>)</h2>
 <p>Como fornecedores diferentes podem comercializar o mesmo produto com o mesmo EAN-13, a tentativa de inserção pode disparar uma exceção de violação de chave única no PostgreSQL (<code>error code 23505</code> - <code>unique_violation</code>).</p>
@@ -1181,7 +1183,7 @@
 <li>Bucket: <code>produtos-imagens</code></li>
 <li>Parâmetro: <code>upsert: true</code> (permite atualizar fotos quando a indústria muda o layout da embalagem).</li>
 <li><strong>Atualização da Tabela de Produtos</strong>:</li>
-<li><code>imagem_url</code>: Define a URL pública do CDN Supabase (<code>https://&lt;project-ref&gt;.supabase.co/storage/v1/object/public/produtos-imagens/&lt;sku&gt;.webp</code>).</li>
+<li><code>imagem_url</code>: Define a URL pública do CDN Supabase.</li>
 <li><code>status_imagem</code>: Atualiza para <code>aprovado</code>.</li>
 <li><code>updated_at</code>: Atualiza o timestamp da última mutação para orientar a sincronização delta do PWA.</li>
 </ol>
