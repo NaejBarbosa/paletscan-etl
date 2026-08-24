@@ -1134,29 +1134,29 @@
 <p>Um dos pilares mais singulares do <strong>Ecossistema PaletScan</strong> é a sua origem e ciclo de vida inteiramente móveis: tanto o pipeline de engenharia de dados (ETL) quanto a aplicação cliente (PWA) foram idealizados, desenvolvidos, testados e documentados diretamente a partir de um smartphone Android.</p>
 <hr />
 <h2 id="1-infraestrutura-linux-no-smartphone-termux-proot-ubuntu">🛠️ 1. Infraestrutura Linux no Smartphone (Termux + PRoot Ubuntu)</h2>
-<p>Sem a utilização de computadores tradicionais, o ambiente de desenvolvimento completo foi estruturado no celular via <strong>Termux</strong> rodando uma distribuição Linux containerizada (<strong>PRoot Ubuntu ARM64</strong>), estruturado em uma árvore vertical de camadas:</p>
+<p>Sem a utilização de computadores tradicionais, o ambiente de desenvolvimento completo foi estruturado no celular via <strong>Termux</strong> rodando uma distribuição Linux containerizada (<strong>PRoot Ubuntu ARM64</strong>), encadeada em uma esteira 100% vertical:</p>
 <pre class="mermaid"><code>flowchart TD
     HW["📱 Smartphone Android (Processador ARM64)"]
     HW --&gt; TM["💻 Emulador de Terminal Termux"]
     TM --&gt; UB["🐧 Linux Containerizado PRoot Ubuntu"]
 
-    UB --&gt; L1["📦 Camada de Engenharia de Dados"]
+    UB --&gt; L1["📦 1. Camada de Engenharia de Dados"]
     L1 --&gt; D1["Node.js 20 &amp; TypeScript Core (Pipelines ETL)"]
     D1 --&gt; K1["☁️ Carga Direta no Supabase PostgreSQL"]
 
-    UB --&gt; L2["🐍 Camada de Visão Computacional"]
+    K1 --&gt; L2["🐍 2. Camada de Visão Computacional"]
     L2 --&gt; D2["Python 3.11 &amp; rembg U2Net (IA de Imagens)"]
     D2 --&gt; K2["🖼️ Geração e Upload de WebP Otimizado"]
 
-    UB --&gt; L3["⚡ Camada de Aplicação Frontend"]
+    K2 --&gt; L3["⚡ 3. Camada de Aplicação Frontend"]
     L3 --&gt; D3["Servidor Next.js 14 &amp; Serwist (PWA)"]
     D3 --&gt; K3["📱 Execução Localhost no Navegador e Coletor"]
 
-    UB --&gt; L4["📚 Camada de Documentação &amp; CI/CD"]
+    K3 --&gt; L4["📚 4. Camada de Documentação &amp; CI/CD"]
     L4 --&gt; D4["Git, OpenSSH &amp; MkDocs Material"]
     D4 --&gt; K4["🌐 Deploy Automático no GitHub Pages"]
 
-    UB --&gt; L5["🤖 Agente Inteligente"]
+    K4 --&gt; L5["🤖 5. Agente Inteligente"]
     L5 --&gt; D5["Agente Antigravity AI (Google DeepMind)"]
     D5 --&gt; K5["🛠️ Auditoria, Refatoração e Diagnóstico ao Vivo"]</code></pre>
 <h3 id="componentes-do-ambiente-movel">Componentes do Ambiente Móvel:</h3>

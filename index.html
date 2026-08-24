@@ -1280,37 +1280,14 @@
 </blockquote>
 <hr />
 <h2 id="1-a-simbiose-perfeita-do-b2b-ao-chao-de-fabrica">🧬 1. A Simbiose Perfeita: Do B2B ao Chão de Fábrica</h2>
-<p>O PaletScan une duas frentes de tecnologia que operam em harmonia contínua:</p>
+<p>O PaletScan une duas frentes de tecnologia que operam em harmonia contínua através de uma esteira vertical integrada:</p>
 <pre class="mermaid"><code>flowchart TD
-    subgraph CamadaETL ["1. Camada de Inteligência e ETL"]
-        A1["Scrapers B2B Multi-Fornecedores"]
-        A2["Normalização e Heurísticas"]
-        A3["Pipeline de IA de Imagens U2Net"]
-        A4["Validação Matemática Modulus 10 GS1"]
-        A1 --&gt; A2
-        A2 --&gt; A3
-        A3 --&gt; A4
-    end
-
-    subgraph NuvemDB ["2. Núcleo Relacional Supabase PostgreSQL"]
-        B1["Catálogo Mestre de Produtos e Marcas"]
-        B2["Tabela Imutável produtos_atributos_manuais"]
-        B3["Views Relacionais Otimizadas"]
-    end
-
-    subgraph CamadaPWA ["3. Camada Operacional PWA Local-First"]
-        C1["Service Worker Serwist e App Shell"]
-        C2["Banco Local Reativo WatermelonDB"]
-        C3["Leitor de Câmera e Recorte Óptico"]
-        C4["Funil de Regex Industrial"]
-        C1 --&gt; C2
-        C2 --&gt; C3
-        C3 --&gt; C4
-    end
-
-    A4 --&gt;|Carga de Dados Mestre| B1
-    B1 --&gt;|Instant Sync em Menos de 30ms| C1
-    C4 --&gt;|Fila pending_sync na Reconexão| B2</code></pre>
+    C1["1. Camada de Inteligência e ETL\nScrapers B2B, Normalização e IA de Imagens U2Net"]
+    C1 --&gt; C2["2. Núcleo Relacional Supabase\nCatálogo Mestre e Tabela Imutável de Overrides"]
+    C2 --&gt; C3["3. Sincronização Sob Demanda\nInstant Sync Delta em menos de 30ms"]
+    C3 --&gt; C4["4. Camada Operacional PWA Local-First\nService Worker Serwist e WatermelonDB (em menos de 5ms)"]
+    C4 --&gt; C5["5. Execução em Campo no Smartphone\nScanner, Endereçamento Rígido e Radar Watchlist"]
+    C5 --&gt;|Fila pending_sync na Reconexão| C2</code></pre>
 <ol>
 <li><strong>Camada de Inteligência de Dados (ETL &amp; Pipelines)</strong>:</li>
 <li>Extrai e higieniza continuamente catálogos industriais B2B dos maiores frigoríficos e indústrias alimentícias (<strong>Friboi, JBS, BRF Sadia/Perdigão, Seara, Aurora, Copacol, Lar Cooperativa</strong>).</li>
@@ -1346,38 +1323,17 @@ Todo o ecossistema — desde os scrapers em TypeScript, pipelines de visão comp
     E6 --&gt; E7["7. Sincronização Segura de Retorno\nEnvio para produtos_atributos_manuais (Imunidade ETL)"]</code></pre>
 <hr />
 <h2 id="4-a-simbiose-tecnologica-como-as-tecnologias-se-relacionam">🧩 4. A Simbiose Tecnológica: Como as Tecnologias se Relacionam</h2>
-<p>A arquitetura do PaletScan foi desenhada para que cada tecnologia complemente a outra de forma sinérgica e eficiente:</p>
+<p>A arquitetura do PaletScan foi desenhada para que cada tecnologia complemente a outra de forma sinérgica e estritamente vertical:</p>
 <pre class="mermaid"><code>flowchart TD
-    subgraph FrontendLocal ["Camada Cliente: PWA Local-First"]
-        SW["Serwist e Service Worker\nPrecaching de App Shell e Imagens"]
-        WDB["WatermelonDB\nCamada Reativa ORM (Consultas Ultra-Rápidas)"]
-        IDB["IndexedDB API\nArmazenamento Local Persistente"]
-        ZX["ZXing e Recorte Óptico\nLeitura de Códigos de Barras e QR"]
-        WA["SimpleWebAuthn\nAutenticação Biométrica e Passkeys"]
-
-        SW --&gt; WDB
-        WDB --&gt; IDB
-        ZX --&gt; WDB
-        WA --&gt; WDB
-    end
-
-    subgraph NuvemCloud ["Camada Nuvem: Persistência e CDN"]
-        SUPA["Supabase PostgreSQL\nCatálogo Mestre e Overrides Manuais"]
-        BUCKET["Supabase Storage CDN\nAtivos de Imagens WebP Otimizados"]
-    end
-
-    subgraph PipelineBackend ["Camada Pipeline: Inteligência e IA"]
-        SCRAP["TypeScript e Node.js 20\nScrapers Concorrentes com p-limit"]
-        AI["Python 3 e rembg U2Net\nRemoção de Fundo e Otimização WebP"]
-
-        SCRAP --&gt; AI
-        AI --&gt; BUCKET
-        SCRAP --&gt; SUPA
-    end
-
-    IDB --&gt;|Instant Sync Delta| SUPA
-    SUPA --&gt;|Atualização de Catálogo| IDB
-    BUCKET --&gt;|CacheFirst Offline| SW</code></pre>
+    ETL["⚙️ 1. Pipelines de Ingestão ETL (TypeScript e Node.js 20)"]
+    ETL --&gt; AI["🖼️ 2. Pipeline de Visão Computacional (Python e rembg U2Net)"]
+    AI --&gt; SUPA["☁️ 3. Núcleo Relacional e Storage CDN (Supabase Cloud)"]
+    SUPA --&gt; SYNC["🔄 4. Motor de Instant Sync Delta (Hash Check em menos de 30ms)"]
+    SYNC --&gt; WDB["💾 5. Banco de Dados Local-First (WatermelonDB e IndexedDB)"]
+    WDB --&gt; PWA["📱 6. Aplicação PWA Touch-First (Next.js 14 e Serwist)"]
+    PWA --&gt; AUTH["🔑 7. Segurança e Biometria (WebAuthn Passkeys e Sessão Offline)"]
+    AUTH --&gt; RTN["🛒 8. Operação de Campo e Retorno de Dados"]
+    RTN --&gt;|Fila pending_sync na Reconexão| SUPA</code></pre>
 <h3 id="detalhamento-das-integracoes">Detalhamento das Integrações:</h3>
 <ol>
 <li><strong><a href="https://serwist.pages.dev/">Serwist (Service Worker)</a> &amp; <a href="https://nextjs.org/">Next.js 14</a></strong>:</li>

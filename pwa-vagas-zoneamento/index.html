@@ -1088,20 +1088,20 @@
 <p>O sistema de endereçamento do <strong>PaletScan PWA</strong> organiza espacialmente as câmaras frias através de coordenadas de 4 caracteres, prevenindo perdas de tempo na localização de lotes por operadores de empilhadeira.</p>
 <hr />
 <h2 id="1-composicao-da-coordenada-de-vaga-4-caracteres">📌 1. Composição da Coordenada de Vaga (4 Caracteres)</h2>
-<p>A coordenada física é decomposta em 4 níveis hierárquicos verticais:</p>
+<p>A coordenada física é decomposta em 4 níveis sequenciais estritamente verticais:</p>
 <pre class="mermaid"><code>flowchart TD
     COORD["🏷️ Coordenada Física de 4 Dígitos (ex: A10D)"]
 
     COORD --&gt; P1["1º Caractere: Rack (Corredor)"]
     P1 --&gt; D1["Lado da Estrutura (A = Direita, B = Esquerda)"]
 
-    COORD --&gt; P2["2º Caractere: Módulo (Coluna)"]
+    D1 --&gt; P2["2º Caractere: Módulo (Coluna)"]
     P2 --&gt; D2["Posição Horizontal (1 a 5 da entrada ao fundo)"]
 
-    COORD --&gt; P3["3º Caractere: Gaveta (Nível de Altura)"]
+    D2 --&gt; P3["3º Caractere: Gaveta (Nível de Altura)"]
     P3 --&gt; D3["Plano Vertical (0 = Solo, 1 a 3 = Prateleiras Suspensas)"]
 
-    COORD --&gt; P4["4º Caractere: Vaga (Posição Lateral)"]
+    D3 --&gt; P4["4º Caractere: Vaga (Posição Lateral)"]
     P4 --&gt; D4["Alocação no Plano (D = Direita, E = Esquerda)"]</code></pre>
 <table>
 <thead>
@@ -1148,7 +1148,7 @@
     R --&gt; R1["Câmara R1 e Câmara R2"]
     R1 --&gt; VR["Grade Completa de Vagas A10D a B53E"]
 
-    ZONE --&gt; C["🧊 Câmaras de Congelados (-18°C)"]
+    VR --&gt; C["🧊 Câmaras de Congelados (-18°C)"]
     C --&gt; C1["Câmara C1 e Câmara C2"]
     C1 --&gt; VC["Grade Completa de Vagas A10D a B53E"]</code></pre>
 <ul>
