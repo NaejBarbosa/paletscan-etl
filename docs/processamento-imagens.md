@@ -6,15 +6,15 @@ O módulo de visão computacional do **PaletScan ETL** ([`images/ai_pipeline/pro
 
 ## 🤖 1. Pipeline de Inteligência Artificial Local (`process_image.py`)
 
-Em vez de dependências de APIs de terceiros pagas, o PaletScan utiliza um pipeline de IA **100% local e privado** construído em Python com `rembg` (baseado em modelos de redes neurais U2Net/ONNX) e `Pillow`.
+Em vez de depender de APIs de terceiros pagas, o PaletScan utiliza um pipeline de IA **100% local e privado** construído em Python com `rembg` (baseado em modelos de redes neurais U2Net/ONNX) e `Pillow`.
 
 ```mermaid
-graph LR
-    A["Imagem Bruta / Raw"] -->|process_image.py| B["Rede Neural rembg U2Net"]
-    B -->|Máscara Transparente| C["Canal Alpha RGBA"]
-    C -->|Achatamento Alpha| D["Fundo Branco Sólido #FFFFFF"]
-    D -->|Resize max-dim 1000| E["Pillow Resampling"]
-    E -->|Compressão WebP| F["Arquivo Otimizado .webp (Menos de 150KB)"]
+flowchart TD
+    A["1. Imagem Bruta / Raw"] --> B["2. Rede Neural rembg (U2Net)"]
+    B --> C["3. Máscara Transparente (Canal Alpha RGBA)"]
+    C --> D["4. Achatamento sobre Fundo Branco Sólido (#FFFFFF)"]
+    D --> E["5. Redimensionamento Proporcional (Pillow Resampling)"]
+    E --> F["6. Arquivo Otimizado .webp (< 150KB)"]
 ```
 
 ---
@@ -48,14 +48,14 @@ images/
 ├── raw/         # Recebe as fotos brutas baixadas pelos scrapers
 ├── processed/   # Armazena as imagens tratadas prontas para upload
 ├── archived/    # Imagens que já foram enviadas com sucesso para o Supabase Storage
-└── ai_pipeline/ # Código fonte Python (process_image.py)
+└── ai_pipeline/ # Código-fonte Python (process_image.py)
 ```
 
 ---
 
 ## 🔄 4. Detecção de Novos Layouts de Embalagem e Ciclo de Atualização
 
-Quando um fornecedor atualiza o visual da embalagem ou lança um novo layout no mercado, o PaletScan detecta a alteração e executa o re-processamento automático:
+Quando um fornecedor atualiza o visual da embalagem ou lança um novo layout no mercado, o PaletScan detecta a alteração e executa o reprocessamento automático:
 
 ```mermaid
 flowchart TD
@@ -64,15 +64,15 @@ flowchart TD
     C --> D["4. Composição com Fundo Branco Sólido RGB\ne Compressão WebP (< 150KB)"]
     D --> E["5. Upload para Supabase Storage\nBucket 'produtos-imagens' (upsert: true)"]
     E --> F["6. UPDATE na tabela 'produtos'\n(imagem_url + status_imagem = 'aprovado')"]
-    F --> G["7. Re-geração do produtos.json PWA\ne Pré-carregamento no Coletor"]
+    F --> G["7. Regeração do produtos.json PWA\ne Pré-carregamento no Coletor"]
 ```
 
-### A. Como o ETL Identifica Alteraçoes de Layout:
+### A. Como o ETL Identifica Alterações de Layout:
 1. **Detecção de URL e Token de Versão na Origem B2B**:
    - Os scrapers de extração (`scrapers/friboi`, `seara`, `brf`, `lar`) inspecionam as URLs de mídias das APIs dos fabricantes. Quando a indústria altera o layout de uma embalagem, a URL de origem da foto muda na CDN do fabricante (ex: alteração de token de versão `/v8734254.../products/393432_01.JPG` ou novo sufixo de arquivo).
    - O algoritmo de acurácia `extractBestProductImage` compara a nova URL com o registro de staging pré-existente.
 2. **Comparação de Hash MD5 da Imagem Bruta**:
-   - Quando o arquivo é baixado para `images/raw/`, o sistema calcula e compara o hash MD5 da imagem. Caso divirja da versão em cache, a imagem é sinalizada para re-processamento por Inteligência Artificial.
+   - Quando o arquivo é baixado para `images/raw/`, o sistema calcula e compara o hash MD5 da imagem. Caso divirja da versão em cache, a imagem é sinalizada para reprocessamento por Inteligência Artificial.
 
 ### B. Etapas de Processamento e Propagação para o PWA:
 1. **Tratamento Neural de IA (`process_image.py`)**: A nova imagem da embalagem passa pelo modelo neural `rembg` (U2Net), recebe o fundo branco sólido RGB e é exportada em `.webp` otimizado para `images/processed/`.

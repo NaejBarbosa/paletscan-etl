@@ -6,28 +6,27 @@ O **PaletScan PWA** foi concebido para resolver o problema clássico de conectiv
 
 ## ❄️ 1. O Desafio da Câmara Frigorífica
 
-```
- +-------------------------------------------------------------------------------+
- |                       CÂMARA FRIGORÍFICA (PAINÉIS METÁLICOS)                  |
- |                                                                               |
- |   [Sinal Wi-Fi / 4G Bloqueado] ➔ 🚫 (Zona Cega)                               |
- |                                                                               |
- |   +-----------------------------------------------------------------------+   |
- |   |                      COLETOR / SMARTPHONE ANDROID                     |   |
- |   |                                                                       |   |
- |   |   1. App Shell Servido Instantaneamente do Service Worker (Serwist)   |   |
- |   |   2. Catálogo Master Lido do WatermelonDB Local (IndexedDB)           |   |
- |   |   3. Bipagem & Gravação Local em < 5ms                                |   |
- |   |   4. Fila pending_sync Enfileira Mutações sem Conexão                |   |
- |   +-----------------------------------------------------------------------+   |
- +-------------------------------------------------------------------------------+
-                                          │
-                         Ao sair da câmara (Reconexão com Wi-Fi/4G)
-                                          ▼
- +-------------------------------------------------------------------------------+
- |                     SINCRONIZAÇÃO AUTOMÁTICA COM SUPABASE CLOUD              |
- |                     (Instant Sync em < 30ms via Hash Check)                   |
- +-------------------------------------------------------------------------------+
+```mermaid
+flowchart TD
+    subgraph CamaraFria ["1. Interior da Câmara Frigorífica (Blackout de Sinal)"]
+        A1["Coletor / Smartphone Android em Modo Offline"]
+        A2["App Shell Servido Instantaneamente via Serwist"]
+        A3["Catálogo Mestre Lido do WatermelonDB Local"]
+        A4["Bipagem & Gravação Reativa Local em < 5ms"]
+        A5["Fila pending_sync Enfileira Mutações no localStorage"]
+        
+        A1 --> A2 --> A3 --> A4 --> A5
+    end
+
+    subgraph Reconexao ["2. Saída da Câmara & Retorno da Conectividade"]
+        B1["Reconexão com Wi-Fi / Rede Móvel 4G/5G"]
+        B2["Instant Sync com Supabase Cloud (< 30ms via Hash Check)"]
+        B3["Despacho Automático das Mutações da Fila pending_sync"]
+        
+        B1 --> B2 --> B3
+    end
+
+    A5 -->|Ao Detectar Conexão| B1
 ```
 
 ---

@@ -1,11 +1,11 @@
 # 🌐 Ecossistema PaletScan - Simbiose entre Engenharia de Dados & PWA
 
-[![Ecosystem](https://img.shields.io/badge/Ecosystem-Data_ETL_%2B_PWA_Mobile-indigo.svg)](https://NaejBarbosa.github.io/paletscan-etl/)
-[![PWA](https://img.shields.io/badge/PWA-Local--First_Offline-brightgreen.svg)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
-[![Database](https://img.shields.io/badge/Database-WatermelonDB_%2B_Supabase-orange.svg)](https://supabase.com/)
-[![AI Vision](https://img.shields.io/badge/AI_Vision-rembg_U2Net-blue.svg)](https://github.com/danielgatis/rembg)
+[![Ecosystem](https://img.shields.io/badge/Ecosystem-Data_ETL_%2B_PWA_Mobile-indigo.svg)](index.md)
+[![PWA](https://img.shields.io/badge/PWA-Local--First_Offline-brightgreen.svg)](pwa-visao-geral.md)
+[![Database](https://img.shields.io/badge/Database-WatermelonDB_%2B_Supabase-orange.svg)](supabase.md)
+[![AI Vision](https://img.shields.io/badge/AI_Vision-rembg_U2Net-blue.svg)](processamento-imagens.md)
 
-> O **Ecossistema PaletScan** é uma solução industrial completa e integrada, projetada para eliminar perdas financeiras por vencimento, acelerar o giro de mercadorias perecíveis (FEFO / PVPS) e garantir precisão cirúrgica no endereçamento de paletes em câmaras frigoríficas industriais (congelados e resfriados).
+> O **Ecossistema PaletScan** é uma solução industrial completa e integrada, projetada para eliminar perdas financeiras por vencimento, acelerar o giro de mercadorias perecíveis (**FEFO / PVPS**) e garantir precisão cirúrgica no endereçamento de paletes em câmaras frigoríficas industriais (congelados e resfriados).
 
 ---
 
@@ -13,30 +13,29 @@
 
 O PaletScan une duas frentes de tecnologia que operam em harmonia contínua:
 
-```
-+---------------------------------------------------------------------------------------+
-|                               ECOSSISTEMA INTEGRADO PALETSCAN                         |
-+---------------------------------------------------------------------------------------+
-|                                                                                       |
-|   +---------------------------------------+   +-----------------------------------+   |
-|   |    CAMADA 1: INTELIGÊNCIA & ETL       |   |    CAMADA 2: PWA LOCAL-FIRST      |   |
-|   |                                       |   |                                   |   |
-|   |  * Scrapers B2B Multi-Fornecedores    |   |  * Service Worker (@serwist/next) |   |
-|   |  * Normalização & Heurísticas         |   |  * Banco Local WatermelonDB       |   |
-|   |  * Pipeline IA de Imagens (U2Net)     |   |  * Leitor Câmera & Crop Óptico    |   |
-|   |  * Validação Matemática Modulus 10    |   |  * Funil de Regex Industrial      |   |
-|   +---------------------------------------+   +-----------------------------------+   |
-|                       │                                         │                     |
-|                       ▼                                         ▼                     |
-|   +-------------------------------------------------------------------------------+   |
-|   |                      SUPABASE POSTGRESQL (NÚCLEO RELACIONAL)                   |   |
-|   |                                                                               |   |
-|   |   * Catálogo Master de Produtos e Marcas (Single Source of Truth)             |   |
-|   |   * Tabela Imutável de Atributos Manuais (produtos_atributos_manuais)         |   |
-|   |   * Views Relacionais Otimizadas (vw_produtos_com_marcas, paletes_com_marca)  |   |
-|   |   * Instant Sync em < 30ms via Hash Check & Fila pending_sync                 |   |
-|   +-------------------------------------------------------------------------------+   |
-+---------------------------------------------------------------------------------------+
+```mermaid
+flowchart TD
+    subgraph CamadaETL ["1. Camada de Inteligência & ETL"]
+        A1["Scrapers B2B Multi-Fornecedores"] --> A2["Normalização & Heurísticas"]
+        A2 --> A3["Pipeline de IA de Imagens (U2Net)"]
+        A3 --> A4["Validação Matemática Modulus 10 (GS1)"]
+    end
+
+    subgraph NuvemDB ["2. Núcleo Relacional Supabase PostgreSQL"]
+        B1[("Catálogo Mestre de Produtos e Marcas")]
+        B2[("Tabela Imutável produtos_atributos_manuais")]
+        B3[("Views Relacionais Otimizadas (vw_produtos_com_marcas)")]
+    end
+
+    subgraph CamadaPWA ["3. Camada Operacional PWA Local-First"]
+        C1["Service Worker Serwist (sw.ts) & App Shell"] --> C2["Banco Local Reativo WatermelonDB (< 5ms)"]
+        C2 --> C3["Leitor de Câmera & Recorte Óptico Interativo"]
+        C3 --> C4["Funil de Regex Industrial (GS1 / Data Matrix / Lar +365d)"]
+    end
+
+    CamadaETL -->|Carga de Dados Master| NuvemDB
+    NuvemDB -->|Instant Sync < 30ms| CamadaPWA
+    CamadaPWA -->|Fila pending_sync (Reconexão)| NuvemDB
 ```
 
 1. **Camada de Inteligência de Dados (ETL & Pipelines)**:
