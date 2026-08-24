@@ -14,14 +14,14 @@ O módulo de **Pesquisa e Consulta** ([`PesquisaProduto.tsx`](file:///root/repo_
 ## 🎯 2. Radar de Produtos Procurados (Multi-Watchlists)
 
 ```mermaid
-graph TD
+flowchart TD
     A["Módulo Radar Watchlist"] --> B["Gestor de Múltiplas Listas"]
     A --> C["Relatório de Localização em Estoque"]
-    A --> D["Alerta & Gamificação"]
+    A --> D["Alerta e Gamificação"]
 
     B --> B1["Listas Segmentadas (ex: Validades Críticas, Friboi, Fim de Semana)"]
-    C --> C1["Cruzamento Automático com Vagas Ocupadas (ex: R1 · B21E)"]
-    D --> D1["Feedback Sonoro + Efeito de Confetes (canvas-confetti) 🎉"]
+    C --> C1["Cruzamento Automático com Vagas Ocupadas (ex: R1 - B21E)"]
+    D --> D1["Feedback Sonoro e Efeito de Confetes"]
 ```
 
 ---

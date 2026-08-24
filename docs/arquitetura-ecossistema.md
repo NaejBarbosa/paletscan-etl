@@ -9,27 +9,27 @@ A simbiose entre o **Pipeline ETL** e o **PaletScan PWA** foi desenhada para res
 O ecossistema opera através de um circuito fechado de dados bidirecional:
 
 ```mermaid
-graph TD
-    subgraph Nuvem ["1. Nuvem & Fornecedores"]
-        A["Portais B2B / APIs dos Frigoríficos"] --> B["Pipeline ETL (paletscan-etl)"]
-        B -->|1. Carga Limpa com Modulus 10 & Imagens IA| C[("Supabase PostgreSQL (Master Catalog)")]
+flowchart TD
+    subgraph Nuvem ["1. Nuvem e Fornecedores"]
+        A["Portais B2B e APIs dos Frigoríficos"] --> B["Pipeline ETL (paletscan-etl)"]
+        B -->|1. Carga Limpa com Modulus 10 e Imagens IA| C["Supabase PostgreSQL - Catálogo Mestre"]
     end
 
     subgraph Sync ["2. Sincronização Sob Demanda"]
-        C -->|2. Hash Check < 30ms (ps_pwa_db_hash)| D["Motor de Sync (sync.ts)"]
+        C -->|2. Hash Check Rápido (ps_pwa_db_hash)| D["Motor de Sync (sync.ts)"]
         D -->|3. Delta Sync| E["WatermelonDB Local (IndexedDB / Schema v11)"]
     end
 
-    subgraph ChaoDeFabrica ["3. Chão de Fábrica & Câmaras Frigoríficas"]
-        E --> F["Leitura Óptica & Regex Industrial (< 5ms)"]
-        F --> G["Validação de Vaga & Registro de Palete"]
-        G --> H["Vínculo Manual de DUN-14 / Código de Pesar"]
+    subgraph ChaoDeFabrica ["3. Chão de Fábrica e Câmaras Frigoríficas"]
+        E --> F["Leitura Óptica e Regex Industrial Imediata"]
+        F --> G["Validação de Vaga e Registro de Palete"]
+        G --> H["Vínculo Manual de DUN-14 e Código de Pesar"]
         H -->|4. Gravação Imediata Offline| E
     end
 
-    subgraph Feedback ["4. Realimentação & Imunidade"]
+    subgraph Feedback ["4. Realimentação e Imunidade"]
         H -->|5. Fila pending_sync ao Reconectar| I["API Serverless /api/cadastrar-produto"]
-        I -->|6. UPSERT Protegido| J[("Tabela produtos_atributos_manuais")]
+        I -->|6. UPSERT Protegido| J["Tabela produtos_atributos_manuais"]
         J -->|7. Precedência Absoluta sobre ETL| C
     end
 ```
@@ -84,10 +84,10 @@ LEFT JOIN produtos_atributos_manuais m ON p.ean = m.produto_ean;
 
 ## ⚡ 3. Instant Sync em Menos de 30ms (Status Hash)
 
-Para não sobrecarregar a franquia de dados móveis e garantir velocidade instantânea de inicialização no coletor, o motor de sincronização ([`lib/database/sync.ts`](file:///root/repo_pwa/lib/database/sync.ts)) utiliza um algoritmo de comparação de integridade baseado em hashes:
+Para não sobrecarregar a franquia de dados móveis e garantir velocidade instantânea de inicialização no coletor, o motor de sincronização utiliza um algoritmo de comparação de integridade baseado em hashes:
 
 1. **Consulta Leve de Hash**: O PWA dispara uma requisição ultra-rápida (`GET /api/status-hash`) que retorna a contagem de registros e o timestamp da última mutação no Supabase.
-2. **Comparação com Cache Local**: Se os hashes `ps_pwa_db_hash` e `ps_pwa_paletes_hash` coincidirem com os valores locais salvos no `localStorage`, a sincronização é **finalizada em < 30ms** sem transferir nenhuma linha do catálogo.
+2. **Comparação com Cache Local**: Se os hashes `ps_pwa_db_hash` e `ps_pwa_paletes_hash` coincidirem com os valores locais salvos no `localStorage`, a sincronização é **finalizada em menos de 30ms** sem transferir nenhuma linha do catálogo.
 3. **Delta Download**: Se houver divergência, o sistema baixa exclusivamente os registros adicionados ou modificados desde o último timestamp, atualizando atomicamente o WatermelonDB local.
 
 ---

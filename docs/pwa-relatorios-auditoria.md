@@ -19,13 +19,13 @@ flowchart TD
     A["Operador Inicia Conferência Física"] --> B["Ativa Checklist Tátil no Palete"]
     B --> C{"Método de Verificação"}
     
-    C -->|Bipagem com Scanner| D["Marcação Automática do Item 🟢"]
+    C -->|Bipagem com Scanner| D["Marcação Automática do Item Confirmado"]
     C -->|Toque Tátil na Tela| D
     
     D --> E{"Palete Completo?"}
     E -->|Sim| F["Palete Confirmado em Estoque"]
-    E -->|Não (Item Faltante)| G["Destaque em Vermelho / Alerta de Ausência"]
-    G --> H["Ação de Expurgo em Massa (/api/excluir-paletes-massa)"]
+    E -->|Não (Item Faltante)| G["Destaque em Vermelho e Alerta de Ausência"]
+    G --> H["Ação de Expurgo em Massa (API Serverless)"]
 ```
 
 ---

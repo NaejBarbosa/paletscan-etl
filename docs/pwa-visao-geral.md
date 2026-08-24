@@ -7,20 +7,20 @@ O **PaletScan PWA** é a interface operacional de chão de fábrica do ecossiste
 ## 🎯 1. Principais Funcionalidades da Aplicação
 
 ```mermaid
-graph TD
-    A["PaletScan PWA (Next.js 14)"] --> B["1. Scanner & Crop Óptico"]
+flowchart TD
+    A["PaletScan PWA (Next.js 14)"] --> B["1. Scanner e Recorte Óptico"]
     A --> C["2. Funil Regex Industrial"]
     A --> D["3. Seletor de Vagas em 4 Caracteres"]
-    A --> E["4. Radar de Validades & Multi-Watchlists"]
+    A --> E["4. Radar de Validades e Multi-Watchlists"]
     A --> F["5. Modo Conferência Física"]
-    A --> G["6. Autenticação Híbrida & Passkeys"]
+    A --> G["6. Autenticação Híbrida e Passkeys"]
     
-    B --> H["Leitura Câmera + Zoom/Pan/Pinch"]
-    C --> I["GS1-128, Data Matrix Lar (+365d), BRF, Pesagem"]
+    B --> H["Leitura de Câmera e Recorte Interativo"]
+    C --> I["GS1-128, Data Matrix Lar (+365d), BRF e Pesagem"]
     D --> J["Bloqueio de Ocupação Duplicada (R1/R2/C1/C2)"]
-    E --> K["Busca Fuzzy (fuzzball) + Celebração com Confetes 🎉"]
-    F --> L["Checklist Tátil + Expurgo em Massa + PDF/CSV"]
-    G --> M["Biometria FIDO2 + Cache ps_auth_session"]
+    E --> K["Busca Fuzzy e Celebração com Confetes"]
+    F --> L["Checklist Tátil, Expurgo em Massa e Relatórios"]
+    G --> M["Biometria FIDO2 e Cache de Sessão Offline"]
 ```
 
 ---

@@ -9,19 +9,19 @@ Um dos pilares mais singulares do **Ecossistema PaletScan** é a sua origem e ci
 Sem a utilização de computadores tradicionais, o ambiente de desenvolvimento completo foi estruturado no celular via **Termux** rodando uma distribuição Linux containerizada (**PRoot Ubuntu ARM64**):
 
 ```mermaid
-graph TD
+flowchart TD
     subgraph Hardware ["Hardware Smartphone Android (ARM64)"]
-        A["Processador ARM64 & Armazenamento Interno"] --> B["Emulador de Terminal Termux"]
+        A["Processador ARM64 e Armazenamento Interno"] --> B["Emulador de Terminal Termux"]
         B --> C["Ambiente Containerizado PRoot Ubuntu"]
         
-        C --> D["Node.js 20 & TypeScript Core (ETL)"]
-        C --> E["Python 3.11, rembg, Pillow & PyTorch (IA de Imagens)"]
-        C --> F["Next.js 14 Server & Serwist Compiler (PWA)"]
-        C --> G["Git, OpenSSH & MkDocs Material (Documentação)"]
+        C --> D["Node.js 20 e TypeScript Core (ETL)"]
+        C --> E["Python 3.11, rembg, Pillow e PyTorch (IA de Imagens)"]
+        C --> F["Next.js 14 Server e Compilador Serwist (PWA)"]
+        C --> G["Git, OpenSSH e MkDocs Material (Documentação)"]
         C --> H["Agente Antigravity AI (Google DeepMind)"]
     end
     
-    F -->|localhost:3000| I["Navegador Chrome / Coletor Móvel"]
+    F -->|Porta 3000| I["Navegador Chrome / Coletor Móvel"]
     G -->|mkdocs gh-deploy| J["GitHub Pages (paletscan-etl)"]
     D -->|db_sync| K["Supabase Cloud"]
 ```
