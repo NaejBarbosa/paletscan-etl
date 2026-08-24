@@ -1183,40 +1183,38 @@
 
 
 <h1 id="ecossistema-paletscan-simbiose-entre-engenharia-de-dados-pwa">🌐 Ecossistema PaletScan - Simbiose entre Engenharia de Dados &amp; PWA</h1>
-<p><a href="https://NaejBarbosa.github.io/paletscan-etl/"><img alt="Ecosystem" src="https://img.shields.io/badge/Ecosystem-Data_ETL_%2B_PWA_Mobile-indigo.svg" /></a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"><img alt="PWA" src="https://img.shields.io/badge/PWA-Local--First_Offline-brightgreen.svg" /></a>
-<a href="https://supabase.com/"><img alt="Database" src="https://img.shields.io/badge/Database-WatermelonDB_%2B_Supabase-orange.svg" /></a>
-<a href="https://github.com/danielgatis/rembg"><img alt="AI Vision" src="https://img.shields.io/badge/AI_Vision-rembg_U2Net-blue.svg" /></a></p>
+<p><a href="./"><img alt="Ecosystem" src="https://img.shields.io/badge/Ecosystem-Data_ETL_%2B_PWA_Mobile-indigo.svg" /></a>
+<a href="pwa-visao-geral/"><img alt="PWA" src="https://img.shields.io/badge/PWA-Local--First_Offline-brightgreen.svg" /></a>
+<a href="supabase/"><img alt="Database" src="https://img.shields.io/badge/Database-WatermelonDB_%2B_Supabase-orange.svg" /></a>
+<a href="processamento-imagens/"><img alt="AI Vision" src="https://img.shields.io/badge/AI_Vision-rembg_U2Net-blue.svg" /></a></p>
 <blockquote>
-<p>O <strong>Ecossistema PaletScan</strong> é uma solução industrial completa e integrada, projetada para eliminar perdas financeiras por vencimento, acelerar o giro de mercadorias perecíveis (FEFO / PVPS) e garantir precisão cirúrgica no endereçamento de paletes em câmaras frigoríficas industriais (congelados e resfriados).</p>
+<p>O <strong>Ecossistema PaletScan</strong> é uma solução industrial completa e integrada, projetada para eliminar perdas financeiras por vencimento, acelerar o giro de mercadorias perecíveis (<strong>FEFO / PVPS</strong>) e garantir precisão cirúrgica no endereçamento de paletes em câmaras frigoríficas industriais (congelados e resfriados).</p>
 </blockquote>
 <hr />
 <h2 id="1-a-simbiose-perfeita-do-b2b-ao-chao-de-fabrica">🧬 1. A Simbiose Perfeita: Do B2B ao Chão de Fábrica</h2>
 <p>O PaletScan une duas frentes de tecnologia que operam em harmonia contínua:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>+---------------------------------------------------------------------------------------+
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>|                               ECOSSISTEMA INTEGRADO PALETSCAN                         |
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>+---------------------------------------------------------------------------------------+
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>|                                                                                       |
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>|   +---------------------------------------+   +-----------------------------------+   |
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>|   |    CAMADA 1: INTELIGÊNCIA &amp; ETL       |   |    CAMADA 2: PWA LOCAL-FIRST      |   |
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>|   |                                       |   |                                   |   |
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>|   |  * Scrapers B2B Multi-Fornecedores    |   |  * Service Worker (@serwist/next) |   |
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>|   |  * Normalização &amp; Heurísticas         |   |  * Banco Local WatermelonDB       |   |
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>|   |  * Pipeline IA de Imagens (U2Net)     |   |  * Leitor Câmera &amp; Crop Óptico    |   |
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>|   |  * Validação Matemática Modulus 10    |   |  * Funil de Regex Industrial      |   |
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>|   +---------------------------------------+   +-----------------------------------+   |
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>|                       │                                         │                     |
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>|                       ▼                                         ▼                     |
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>|   +-------------------------------------------------------------------------------+   |
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>|   |                      SUPABASE POSTGRESQL (NÚCLEO RELACIONAL)                   |   |
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>|   |                                                                               |   |
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>|   |   * Catálogo Master de Produtos e Marcas (Single Source of Truth)             |   |
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>|   |   * Tabela Imutável de Atributos Manuais (produtos_atributos_manuais)         |   |
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>|   |   * Views Relacionais Otimizadas (vw_produtos_com_marcas, paletes_com_marca)  |   |
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>|   |   * Instant Sync em &lt; 30ms via Hash Check &amp; Fila pending_sync                 |   |
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>|   +-------------------------------------------------------------------------------+   |
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>+---------------------------------------------------------------------------------------+
-</span></code></pre></div>
+<pre class="mermaid"><code>flowchart TD
+    subgraph CamadaETL ["1. Camada de Inteligência &amp; ETL"]
+        A1["Scrapers B2B Multi-Fornecedores"] --&gt; A2["Normalização &amp; Heurísticas"]
+        A2 --&gt; A3["Pipeline de IA de Imagens (U2Net)"]
+        A3 --&gt; A4["Validação Matemática Modulus 10 (GS1)"]
+    end
+
+    subgraph NuvemDB ["2. Núcleo Relacional Supabase PostgreSQL"]
+        B1[("Catálogo Mestre de Produtos e Marcas")]
+        B2[("Tabela Imutável produtos_atributos_manuais")]
+        B3[("Views Relacionais Otimizadas (vw_produtos_com_marcas)")]
+    end
+
+    subgraph CamadaPWA ["3. Camada Operacional PWA Local-First"]
+        C1["Service Worker Serwist (sw.ts) &amp; App Shell"] --&gt; C2["Banco Local Reativo WatermelonDB (&lt; 5ms)"]
+        C2 --&gt; C3["Leitor de Câmera &amp; Recorte Óptico Interativo"]
+        C3 --&gt; C4["Funil de Regex Industrial (GS1 / Data Matrix / Lar +365d)"]
+    end
+
+    CamadaETL --&gt;|Carga de Dados Master| NuvemDB
+    NuvemDB --&gt;|Instant Sync &lt; 30ms| CamadaPWA
+    CamadaPWA --&gt;|Fila pending_sync (Reconexão)| NuvemDB</code></pre>
 <ol>
 <li><strong>Camada de Inteligência de Dados (ETL &amp; Pipelines)</strong>:</li>
 <li>Extrai e higieniza continuamente catálogos industriais B2B dos maiores frigoríficos e indústrias alimentícias (<strong>Friboi, JBS, BRF Sadia/Perdigão, Seara, Aurora, Copacol, Lar Cooperativa</strong>).</li>

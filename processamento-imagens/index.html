@@ -942,7 +942,7 @@
   <a href="#a-como-o-etl-identifica-alteracoes-de-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A. Como o ETL Identifica Alteraçoes de Layout:
+        A. Como o ETL Identifica Alterações de Layout:
       
     </span>
   </a>
@@ -1189,7 +1189,7 @@
   <a href="#a-como-o-etl-identifica-alteracoes-de-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A. Como o ETL Identifica Alteraçoes de Layout:
+        A. Como o ETL Identifica Alterações de Layout:
       
     </span>
   </a>
@@ -1244,13 +1244,13 @@
 <p>O módulo de visão computacional do <strong>PaletScan ETL</strong> (<a href="file:///root/paletscan-etl/images/ai_pipeline/process_image.py"><code>images/ai_pipeline/process_image.py</code></a>) é responsável pela remoção de fundo por inteligência artificial, padronização em fundo branco sólido, detecção de atualizações de layout de embalagens e otimização para o formato WebP ultra-leve.</p>
 <hr />
 <h2 id="1-pipeline-de-inteligencia-artificial-local-process_imagepy">🤖 1. Pipeline de Inteligência Artificial Local (<code>process_image.py</code>)</h2>
-<p>Em vez de dependências de APIs de terceiros pagas, o PaletScan utiliza um pipeline de IA <strong>100% local e privado</strong> construído em Python com <code>rembg</code> (baseado em modelos de redes neurais U2Net/ONNX) e <code>Pillow</code>.</p>
-<pre class="mermaid"><code>graph LR
-    A["Imagem Bruta / Raw"] --&gt;|process_image.py| B["Rede Neural rembg U2Net"]
-    B --&gt;|Máscara Transparente| C["Canal Alpha RGBA"]
-    C --&gt;|Achatamento Alpha| D["Fundo Branco Sólido #FFFFFF"]
-    D --&gt;|Resize max-dim 1000| E["Pillow Resampling"]
-    E --&gt;|Compressão WebP| F["Arquivo Otimizado .webp (Menos de 150KB)"]</code></pre>
+<p>Em vez de depender de APIs de terceiros pagas, o PaletScan utiliza um pipeline de IA <strong>100% local e privado</strong> construído em Python com <code>rembg</code> (baseado em modelos de redes neurais U2Net/ONNX) e <code>Pillow</code>.</p>
+<pre class="mermaid"><code>flowchart TD
+    A["1. Imagem Bruta / Raw"] --&gt; B["2. Rede Neural rembg (U2Net)"]
+    B --&gt; C["3. Máscara Transparente (Canal Alpha RGBA)"]
+    C --&gt; D["4. Achatamento sobre Fundo Branco Sólido (#FFFFFF)"]
+    D --&gt; E["5. Redimensionamento Proporcional (Pillow Resampling)"]
+    E --&gt; F["6. Arquivo Otimizado .webp (&lt; 150KB)"]</code></pre>
 <hr />
 <h2 id="2-etapas-do-processamento-visual">⚙️ 2. Etapas do Processamento Visual</h2>
 <h3 id="a-remocao-de-fundo-via-ia-rembg">A. Remoção de Fundo via IA (<code>rembg</code>)</h3>
@@ -1273,25 +1273,25 @@
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── raw/         # Recebe as fotos brutas baixadas pelos scrapers
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── processed/   # Armazena as imagens tratadas prontas para upload
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├── archived/    # Imagens que já foram enviadas com sucesso para o Supabase Storage
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>└── ai_pipeline/ # Código fonte Python (process_image.py)
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>└── ai_pipeline/ # Código-fonte Python (process_image.py)
 </span></code></pre></div>
 <hr />
 <h2 id="4-deteccao-de-novos-layouts-de-embalagem-e-ciclo-de-atualizacao">🔄 4. Detecção de Novos Layouts de Embalagem e Ciclo de Atualização</h2>
-<p>Quando um fornecedor atualiza o visual da embalagem ou lança um novo layout no mercado, o PaletScan detecta a alteração e executa o re-processamento automático:</p>
+<p>Quando um fornecedor atualiza o visual da embalagem ou lança um novo layout no mercado, o PaletScan detecta a alteração e executa o reprocessamento automático:</p>
 <pre class="mermaid"><code>flowchart TD
     A["1. Scraper detecta nova URL/Layout"] --&gt; B["2. Download da Imagem Bruta em images/raw/"]
     B --&gt; C["3. IA Local (rembg / U2Net)\nRemoção de Fundo"]
     C --&gt; D["4. Composição com Fundo Branco Sólido RGB\ne Compressão WebP (&lt; 150KB)"]
     D --&gt; E["5. Upload para Supabase Storage\nBucket 'produtos-imagens' (upsert: true)"]
     E --&gt; F["6. UPDATE na tabela 'produtos'\n(imagem_url + status_imagem = 'aprovado')"]
-    F --&gt; G["7. Re-geração do produtos.json PWA\ne Pré-carregamento no Coletor"]</code></pre>
-<h3 id="a-como-o-etl-identifica-alteracoes-de-layout">A. Como o ETL Identifica Alteraçoes de Layout:</h3>
+    F --&gt; G["7. Regeração do produtos.json PWA\ne Pré-carregamento no Coletor"]</code></pre>
+<h3 id="a-como-o-etl-identifica-alteracoes-de-layout">A. Como o ETL Identifica Alterações de Layout:</h3>
 <ol>
 <li><strong>Detecção de URL e Token de Versão na Origem B2B</strong>:</li>
 <li>Os scrapers de extração (<code>scrapers/friboi</code>, <code>seara</code>, <code>brf</code>, <code>lar</code>) inspecionam as URLs de mídias das APIs dos fabricantes. Quando a indústria altera o layout de uma embalagem, a URL de origem da foto muda na CDN do fabricante (ex: alteração de token de versão <code>/v8734254.../products/393432_01.JPG</code> ou novo sufixo de arquivo).</li>
 <li>O algoritmo de acurácia <code>extractBestProductImage</code> compara a nova URL com o registro de staging pré-existente.</li>
 <li><strong>Comparação de Hash MD5 da Imagem Bruta</strong>:</li>
-<li>Quando o arquivo é baixado para <code>images/raw/</code>, o sistema calcula e compara o hash MD5 da imagem. Caso divirja da versão em cache, a imagem é sinalizada para re-processamento por Inteligência Artificial.</li>
+<li>Quando o arquivo é baixado para <code>images/raw/</code>, o sistema calcula e compara o hash MD5 da imagem. Caso divirja da versão em cache, a imagem é sinalizada para reprocessamento por Inteligência Artificial.</li>
 </ol>
 <h3 id="b-etapas-de-processamento-e-propagacao-para-o-pwa">B. Etapas de Processamento e Propagação para o PWA:</h3>
 <ol>
