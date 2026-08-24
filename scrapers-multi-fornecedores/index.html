@@ -1,0 +1,1169 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica oficial do pipeline de dados, scrapers B2B, IA de imagem e sincronização Supabase do PaletScan.">
+      
+      
+        <meta name="author" content="Jean Barbosa & Antigravity Data Engineering Team">
+      
+      
+        <link rel="canonical" href="https://NaejBarbosa.github.io/paletscan-etl/scrapers-multi-fornecedores/">
+      
+      
+        <link rel="prev" href="../operacoes/">
+      
+      
+        <link rel="next" href="../pipeline-friboi/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Scrapers Multi-Fornecedores - PaletScan ETL - Documentação Técnica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#scrapers-e-pipelines-de-extracao-multi-fornecedores" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="PaletScan ETL - Documentação Técnica" class="md-header__button md-logo" aria-label="PaletScan ETL - Documentação Técnica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PaletScan ETL - Documentação Técnica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Scrapers Multi-Fornecedores
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Alternar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Alternar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PaletScan ETL - Documentação Técnica" class="md-nav__button md-logo" aria-label="PaletScan ETL - Documentação Técnica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    PaletScan ETL - Documentação Técnica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Operações e CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scrapers Multi-Fornecedores
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scrapers Multi-Fornecedores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-matriz-comparativa-dos-scrapers-b2b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 1. Matriz Comparativa dos Scrapers B2B
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-arquitetura-geral-de-extracao-concorrente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ 2. Arquitetura Geral de Extração Concorrente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-detalhamento-dos-pipelines-de-ingestao-por-fornecedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏭 3. Detalhamento dos Pipelines de Ingestão por Fornecedor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏭 3. Detalhamento dos Pipelines de Ingestão por Fornecedor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-pipeline-jbs-friboi-scrapersfriboi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Pipeline JBS / Friboi (scrapers/friboi/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-pipeline-brf-sa-scrapersbrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Pipeline BRF S.A. (scrapers/brf/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-pipeline-seara-alimentos-scrapersseara" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Pipeline Seara Alimentos (scrapers/seara/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-pipeline-copacol-scraperscopacol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Pipeline Copacol (scrapers/copacol/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-pipeline-cooperativa-lar-scraperslar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Pipeline Cooperativa Lar (scrapers/lar/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-pipeline-cooperativa-aurora-scrapersaurora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        F. Pipeline Cooperativa Aurora (scrapers/aurora/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-algoritmo-de-acuracia-de-imagens-e-filtro-anti-ruido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 4. Algoritmo de Acurácia de Imagens e Filtro Anti-Ruído
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 4. Algoritmo de Acurácia de Imagens e Filtro Anti-Ruído">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-regras-de-rejeicao-automatizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 A. Regras de Rejeição Automatizadas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-formato-unificado-de-saida-em-staging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 5. Formato Unificado de Saída em Staging
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline-friboi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Friboi / JBS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heuristicas-normalizadores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normalizadores e Heurísticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processamento-imagens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de IA de Imagens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema-manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governança e Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supabase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sincronização com Supabase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossário de Termos Técnicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-matriz-comparativa-dos-scrapers-b2b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 1. Matriz Comparativa dos Scrapers B2B
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-arquitetura-geral-de-extracao-concorrente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ 2. Arquitetura Geral de Extração Concorrente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-detalhamento-dos-pipelines-de-ingestao-por-fornecedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏭 3. Detalhamento dos Pipelines de Ingestão por Fornecedor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏭 3. Detalhamento dos Pipelines de Ingestão por Fornecedor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-pipeline-jbs-friboi-scrapersfriboi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Pipeline JBS / Friboi (scrapers/friboi/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-pipeline-brf-sa-scrapersbrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Pipeline BRF S.A. (scrapers/brf/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-pipeline-seara-alimentos-scrapersseara" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Pipeline Seara Alimentos (scrapers/seara/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-pipeline-copacol-scraperscopacol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Pipeline Copacol (scrapers/copacol/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-pipeline-cooperativa-lar-scraperslar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Pipeline Cooperativa Lar (scrapers/lar/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-pipeline-cooperativa-aurora-scrapersaurora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        F. Pipeline Cooperativa Aurora (scrapers/aurora/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-algoritmo-de-acuracia-de-imagens-e-filtro-anti-ruido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 4. Algoritmo de Acurácia de Imagens e Filtro Anti-Ruído
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 4. Algoritmo de Acurácia de Imagens e Filtro Anti-Ruído">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-regras-de-rejeicao-automatizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 A. Regras de Rejeição Automatizadas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-formato-unificado-de-saida-em-staging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 5. Formato Unificado de Saída em Staging
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="scrapers-e-pipelines-de-extracao-multi-fornecedores">🛒 Scrapers e Pipelines de Extração Multi-Fornecedores</h1>
+<p>O módulo de extração do <strong>PaletScan ETL</strong> (<a href="file:///root/paletscan-etl/scrapers/"><code>scrapers/</code></a>) é composto por pipelines de web scraping de alta concorrência projetados para coletar catalogação atualizada, dados nutricionais, códigos logísticos e mídias de produtos diretamente dos portais institucionais e APIs B2B dos maiores grupos frigoríficos e alimentícios parceiros: <strong>JBS / Friboi</strong>, <strong>BRF S.A.</strong>, <strong>Seara Alimentos</strong>, <strong>Cooperativa Lar</strong>, <strong>Copacol</strong> e <strong>Cooperativa Aurora</strong>.</p>
+<hr />
+<h2 id="1-matriz-comparativa-dos-scrapers-b2b">📊 1. Matriz Comparativa dos Scrapers B2B</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Fabricante (Holding)</th>
+<th style="text-align: left;">Diretório do Scraper</th>
+<th style="text-align: left;">Estratégia de Captura</th>
+<th style="text-align: left;">Produtos Brutos</th>
+<th style="text-align: left;">Produtos Validados (com EAN)</th>
+<th style="text-align: left;">Tempo Médio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>JBS S.A. (Friboi)</strong></td>
+<td style="text-align: left;"><a href="file:///root/paletscan-etl/scrapers/friboi/index.ts"><code>scrapers/friboi/</code></a></td>
+<td style="text-align: left;">Sitemap XML + API REST Oracle CCStore</td>
+<td style="text-align: left;">~1.812</td>
+<td style="text-align: left;"><strong>1.501</strong></td>
+<td style="text-align: left;"><strong>35s a 45s</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>BRF S.A.</strong></td>
+<td style="text-align: left;"><a href="file:///root/paletscan-etl/scrapers/brf/index.ts"><code>scrapers/brf/</code></a></td>
+<td style="text-align: left;">Catálogo PDF + Central MBRF REST</td>
+<td style="text-align: left;">~1.120</td>
+<td style="text-align: left;"><strong>1.025</strong></td>
+<td style="text-align: left;"><strong>25s a 35s</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Seara Alimentos</strong></td>
+<td style="text-align: left;"><a href="file:///root/paletscan-etl/scrapers/seara/index.ts"><code>scrapers/seara/</code></a></td>
+<td style="text-align: left;">Multi-site B2B/B2C + E-Commerce Live</td>
+<td style="text-align: left;">~621</td>
+<td style="text-align: left;"><strong>365</strong></td>
+<td style="text-align: left;"><strong>20s a 30s</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Copacol</strong></td>
+<td style="text-align: left;"><a href="file:///root/paletscan-etl/scrapers/copacol/index.ts"><code>scrapers/copacol/</code></a></td>
+<td style="text-align: left;">Portal Institucional B2B + Catálogo Digital</td>
+<td style="text-align: left;">~280</td>
+<td style="text-align: left;"><strong>215</strong></td>
+<td style="text-align: left;"><strong>15s a 25s</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cooperativa Lar</strong></td>
+<td style="text-align: left;"><a href="file:///root/paletscan-etl/scrapers/lar/index.ts"><code>scrapers/lar/</code></a></td>
+<td style="text-align: left;">Portal Institucional Lar Alimentos</td>
+<td style="text-align: left;">~111</td>
+<td style="text-align: left;"><strong>110</strong></td>
+<td style="text-align: left;"><strong>5s a 10s</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cooperativa Aurora</strong></td>
+<td style="text-align: left;"><a href="file:///root/paletscan-etl/scrapers/aurora/index.ts"><code>scrapers/aurora/</code></a></td>
+<td style="text-align: left;">Catálogo Institucional Aurora Coop</td>
+<td style="text-align: left;">~350</td>
+<td style="text-align: left;"><strong>310</strong></td>
+<td style="text-align: left;"><strong>10s a 20s</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-arquitetura-geral-de-extracao-concorrente">🏗️ 2. Arquitetura Geral de Extração Concorrente</h2>
+<p>Os scrapers do PaletScan não dependem de varreduras HTML lentas via navegadores automatizados (Selenium/Puppeteer). Em vez disso, utilizam um fluxo em duas etapas otimizado para requisições HTTP diretas e concorrência controlada via <code>p-limit</code>:</p>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    participant Portais as Portais B2B / Sitemaps / APIs
+    participant Engine as Scraper Engine (Node.js/TS)
+    participant Core as Core Normalizer &amp; GS1 Mod10
+    participant Staging as Staging JSON (staging/*_staging.json)
+
+    Engine-&gt;&gt;Portais: Extrai lista de URLs e SKUs da origem
+    Portais--&gt;&gt;Engine: Retorna payloads JSON / Estrutura de dados
+    loop Para cada lote de SKUs (Pool Concorrente)
+        Engine-&gt;&gt;Engine: Executa Algoritmo de Seleção e Acurácia de Imagens
+        Engine-&gt;&gt;Engine: Extrai SKUs, EANs e DUNs
+        Engine-&gt;&gt;Core: Normaliza Textos, Pesos e Códigos de Barras
+        Core--&gt;&gt;Engine: Retorna Dados Higienizados
+        Engine-&gt;&gt;Staging: Salva arquivo em staging/*_staging.json
+    end</code></pre>
+<hr />
+<h2 id="3-detalhamento-dos-pipelines-de-ingestao-por-fornecedor">🏭 3. Detalhamento dos Pipelines de Ingestão por Fornecedor</h2>
+<h3 id="a-pipeline-jbs-friboi-scrapersfriboi">A. Pipeline JBS / Friboi (<code>scrapers/friboi/</code>)</h3>
+<ul>
+<li><strong>Marcas Mapeadas</strong>: Friboi, Reserva, Maturatta Friboi, 1953 Friboi, Swift, Do Chef, Black Friboi.</li>
+<li><strong>Estratégia</strong>: Varredura inicial no endpoint XML <code>https://www.friboionline.com.br/productSitemap.xml</code>, seguida de requisições concorrentes paralelas à API REST <code>ccstoreui/v1/products/</code> da Oracle Commerce Cloud.</li>
+<li><strong>Diferencial</strong>: Captura detalhada de tabelas nutricionais, peças por caixa, peso médio e DUN-14 da caixa de despacho.</li>
+</ul>
+<h3 id="b-pipeline-brf-sa-scrapersbrf">B. Pipeline BRF S.A. (<code>scrapers/brf/</code>)</h3>
+<ul>
+<li><strong>Marcas Mapeadas</strong>: Sadia, Perdigão, Qualy, Chester, Central MBRF.</li>
+<li><strong>Estratégia</strong>: Ingestão combinada de APIs REST da Central MBRF com parsing estruturado do catálogo oficial de produtos em PDF.</li>
+<li><strong>Diferencial</strong>: Resolução exata de códigos EAN primários de cortes congelados e de produtos processados para exportação.</li>
+</ul>
+<h3 id="c-pipeline-seara-alimentos-scrapersseara">C. Pipeline Seara Alimentos (<code>scrapers/seara/</code>)</h3>
+<ul>
+<li><strong>Marcas Mapeadas</strong>: Seara, Seara Gourmet, Incrível (Plant-Based), Rezende, Wilson.</li>
+<li><strong>Estratégia</strong>: Varredura multi-site ao vivo cobrindo os portais institucionais B2B, B2C e e-commerce oficial da Seara.</li>
+<li><strong>Diferencial</strong>: Tratamento de cortes fracionados por pesagem dinâmica e linha completa de industrializados.</li>
+</ul>
+<h3 id="d-pipeline-copacol-scraperscopacol">D. Pipeline Copacol (<code>scrapers/copacol/</code>)</h3>
+<ul>
+<li><strong>Marcas Mapeadas</strong>: Copacol (Aves, Peixes, Tilápia, Suínos, Pratos Prontos).</li>
+<li><strong>Estratégia</strong>: Ingestão concorrente de produtos com extração estrita de EANs primários (13 dígitos) e DUNs logísticos (14 dígitos).</li>
+<li><strong>Diferencial</strong>: Alta precisão no isolamento de pesos fixos vs. variáveis e classificação taxonômica de pescados.</li>
+</ul>
+<h3 id="e-pipeline-cooperativa-lar-scraperslar">E. Pipeline Cooperativa Lar (<code>scrapers/lar/</code>)</h3>
+<ul>
+<li><strong>Marcas Mapeadas</strong>: Lar Alimentos (Aves, Suínos, Cortes Especiais).</li>
+<li><strong>Estratégia</strong>: Ingestão automatizada do catálogo oficial de produtos da Cooperativa Agroindustrial Lar.</li>
+<li><strong>Diferencial</strong>: 100% dos produtos validados possuem EAN e DUN cadastrados e higienizados.</li>
+</ul>
+<h3 id="f-pipeline-cooperativa-aurora-scrapersaurora">F. Pipeline Cooperativa Aurora (<code>scrapers/aurora/</code>)</h3>
+<ul>
+<li><strong>Marcas Mapeadas</strong>: Aurora Coop, Aurora Premium, Peperi.</li>
+<li><strong>Estratégia</strong>: Extração estruturada do portfólio de cortes suínos, embutidos e lácteos.</li>
+<li><strong>Diferencial</strong>: Classificação automatizada de conservação e identificação de caixas máster.</li>
+</ul>
+<hr />
+<h2 id="4-algoritmo-de-acuracia-de-imagens-e-filtro-anti-ruido">🎯 4. Algoritmo de Acurácia de Imagens e Filtro Anti-Ruído</h2>
+<p>Para evitar a exibição de imagens incorretas (como fotos de receitas, pratos prontos ou marcas d'água de distribuidores), todos os scrapers aplicam o algoritmo de filtragem heurística <code>extractBestProductImage</code>:</p>
+<h3 id="a-regras-de-rejeicao-automatizadas">🔍 A. Regras de Rejeição Automatizadas:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Indicador no Nome do Arquivo / URL</th>
+<th style="text-align: left;">Motivo do Descarte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>_02</code>, <code>_03</code>, <code>_04</code>, <code>_05</code></td>
+<td style="text-align: left;">Fotos de pratos prontos, receitas preparadas ou embalagens de despacho.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>_50</code></td>
+<td style="text-align: left;">Logotipos institucionais e marcas d'água de distribuidores.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>receita</code>, <code>prato</code>, <code>banner</code></td>
+<td style="text-align: left;">Imagens publicitárias ou sugestões de consumo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tabela</code>, <code>nutricional</code>, <code>selo</code></td>
+<td style="text-align: left;">Tabelas de informação nutricional ou selos de certificação.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>placeholder</code>, <code>no-image</code></td>
+<td style="text-align: left;">Imagens padrão quando o produto não possui foto real.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-formato-unificado-de-saida-em-staging">📄 5. Formato Unificado de Saída em Staging</h2>
+<p>Após a extração e sanitização estrita, todos os scrapers salvam os dados brutos consolidados na pasta <code>staging/</code> seguindo a estrutura de contrato padronizada (<code>*_staging.json</code>):</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"fabricantes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fab_jbs"</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">"nome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JBS S.A."</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">"cnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000000000000"</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">"marcas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"marca_friboi"</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="nt">"fabricante_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fab_jbs"</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="nt">"nome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Friboi"</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="nt">"produtos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prod_109403"</span><span class="p">,</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="nt">"marca_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"marca_friboi"</span><span class="p">,</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">      </span><span class="nt">"nome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Corte Dianteiro Bovino Friboi Peito (pesar)"</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">      </span><span class="nt">"categoria"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bovinos - Resfriados"</span><span class="p">,</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">      </span><span class="nt">"conservacao"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Resfriado"</span><span class="p">,</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">      </span><span class="nt">"peso_gramas"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">      </span><span class="nt">"peso_variavel"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">      </span><span class="nt">"imagem_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.friboionline.com.br/ccstore/v1/images/?source=/file/v123/products/109403_00.jpg"</span><span class="p">,</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">      </span><span class="nt">"imagem_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aprovado"</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="nt">"codigos_barras"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cb_ean_7891515432101"</span><span class="p">,</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">      </span><span class="nt">"produto_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prod_109403"</span><span class="p">,</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">      </span><span class="nt">"codigo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7891515432101"</span><span class="p">,</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">      </span><span class="nt">"tipo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EAN"</span><span class="p">,</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">      </span><span class="nt">"quantidade_embalagem"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cb_dun_17891515432108"</span><span class="p">,</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">      </span><span class="nt">"produto_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prod_109403"</span><span class="p">,</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">      </span><span class="nt">"codigo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17891515432108"</span><span class="p">,</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">      </span><span class="nt">"tipo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DUN"</span><span class="p">,</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">      </span><span class="nt">"quantidade_embalagem"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="p">}</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../operacoes/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Guia de Operações e CLI">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Guia de Operações e CLI
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../pipeline-friboi/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Pipeline Friboi / JBS">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Pipeline Friboi / JBS
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.expand", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
