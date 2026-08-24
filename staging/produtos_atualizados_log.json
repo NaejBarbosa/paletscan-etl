@@ -1,125 +1,5 @@
 [
   {
-    "id": "efe3bd8a-154d-57a1-b381-69ecb01d2178",
-    "marca": "Aurora",
-    "ean": "17891164004078",
-    "dun": "17891164004078",
-    "descricao": "Sobrepaleta Recheada Cx. de 10kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:15.828Z"
-  },
-  {
-    "id": "9ac2f64e-111c-5af4-85c3-66ab53ed3f3c",
-    "marca": "Aurora",
-    "ean": "17891164002432",
-    "dun": "17891164002432",
-    "descricao": "Pé Porcionado Cx. de 10kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:15.829Z"
-  },
-  {
-    "id": "260ec32e-3e0f-5ef2-b6f8-7bf544cb1bf2",
-    "marca": "Aurora",
-    "ean": "17891164002470",
-    "dun": "17891164002470",
-    "descricao": "Joelhinho Porcionado Cx. de 10kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:15.829Z"
-  },
-  {
-    "id": "366ddb58-1733-54fb-9c3b-74555b0f7483",
-    "marca": "Aurora",
-    "ean": "17891164002029",
-    "dun": "17891164002029",
-    "descricao": "Pé Cx. de 10kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:15.829Z"
-  },
-  {
-    "id": "6b400f71-6b90-54fe-bbbb-15ba419bc8be",
-    "marca": "Aurora",
-    "ean": "17891164002050",
-    "dun": "17891164002050",
-    "descricao": "Pele Cx. de 10kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:15.829Z"
-  },
-  {
-    "id": "a9085919-bbad-521d-bfc2-628c84f44dac",
-    "marca": "Aurora",
-    "ean": "17891164002296",
-    "dun": "17891164002296",
-    "descricao": "Língua Cx. de 10kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:15.829Z"
-  },
-  {
-    "id": "5adf97fc-84ed-5bb4-8606-51cf0d201094",
-    "marca": "Aurora",
-    "ean": "17891164011441",
-    "dun": "17891164011441",
-    "descricao": "Joelhinho Cx. de 10kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:15.829Z"
-  },
-  {
-    "id": "8f894e64-5179-5c21-b884-faf7be88f022",
-    "marca": "Aurora",
-    "ean": "17891164008106",
-    "dun": "17891164008106",
-    "descricao": "Pururuca Saco de 10kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:15.829Z"
-  },
-  {
     "id": "7a446fa0-7afd-52de-9d08-711ab7d5f289",
     "marca": "Sadia",
     "ean": "17893000444901",
@@ -132,1282 +12,7 @@
         "para": "https://www.sadia.com.br/assets/images/_/products/d0a231518cf027345f7b1ab457d034300e6c2b91.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:26.539Z"
-  },
-  {
-    "id": "1881b38a-74e8-508f-bcc2-92c355315a02",
-    "marca": "Sadia",
-    "ean": "17891515890695",
-    "dun": "17891515890695",
-    "descricao": "Pernil Suíno Temperado Sadia Assa Fácil Caixa 6kg",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/39de69434e0f40cb888240678a9a657575810530.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/6d43061cd0d1f259702755d30aad1461d7190ca0.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.539Z"
-  },
-  {
-    "id": "450a7dba-eebb-5b0f-b1cc-3432a5825d19",
-    "marca": "Sadia",
-    "ean": "17891515795587",
-    "dun": "17891515795587",
-    "descricao": "Snack Salamitos Sabor Pepperoni Sadia 36g -caixa C/50",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.539Z"
-  },
-  {
-    "id": "ece089be-3a53-549d-9710-225a0ecc8aec",
-    "marca": "Sadia",
-    "ean": "17891515795419",
-    "dun": "17891515795419",
-    "descricao": "Snack Salamitos Sabor Limão Sadia 36g -caixa C/50",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.539Z"
-  },
-  {
-    "id": "637de546-981a-5050-905c-5173e9154901",
-    "marca": "Sadia",
-    "ean": "17891515470156",
-    "dun": "17891515470156",
-    "descricao": "Snack Salamitos Tradicional Sadia 36g -caixa C/50",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.539Z"
-  },
-  {
-    "id": "1983c647-e1c7-5c1e-9015-97718274115b",
-    "marca": "Sadia",
-    "ean": "17893000072739",
-    "dun": "17893000072739",
-    "descricao": "Supreme Sadia 2,7 Kg a 5 Kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "86846dd0-525a-5f8f-a22a-67f9f452e466",
-    "marca": "Sadia",
-    "ean": "17893000093673",
-    "dun": "17893000093673",
-    "descricao": "Linguiça Mista Defumada Fininha Sadia 2,5kg -caixa C/8",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/e2cac2a0925c1efbeeca6ea70124bf5ee217c273.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/cff1e3c22b787df74a0753a02dee550b6d2a3af5.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "1c0a37a6-1b97-5a1c-99a5-461731850ae6",
-    "marca": "Sadia",
-    "ean": "17893000081588",
-    "dun": "17893000081588",
-    "descricao": "Coxa de Frango Temperada Frango Fácil Sadia 800g -caixa C/8",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/ae02d5b55ce864831bfc503630928d649f686383.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/8ac3816e25c1ff7b76b9c76bff0bd9b665b925b3.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "b16daf30-9e5c-5b50-998e-17d6987ab080",
-    "marca": "Sadia",
-    "ean": "17891515631816",
-    "dun": "17891515631816",
-    "descricao": "Peito de Peru Rechado Sadia (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/3362b93e58d8f5d076188e5298f141fcb1e53a74.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/f8c841089eaaced67b0c0f1b74dce50ab3c6e787.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "e6866ff1-031b-5ecb-8ade-3e497658d930",
-    "marca": "Sadia",
-    "ean": "17891515625150",
-    "dun": "17891515625150",
-    "descricao": "Torta Mousse de Maracuja 470g CX C/6",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/5c28abae3630398f1c8fc8fde236ad20aaf9fa66.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/e6be16dd8ab6013b56402d71e821903f1c287d9f.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "d3f97d5e-9245-5fda-9174-1871cf1cf1d5",
-    "marca": "Perdigão",
-    "ean": "17899638334348",
-    "dun": "17899638334348",
-    "descricao": "Rabo Miúdos Perdigão Na Brasa - 0,8 a 1,1kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "1d7cb4ad-47e9-55b7-ae23-c91d1265b0d6",
-    "marca": "Sadia",
-    "ean": "17891515622630",
-    "dun": "17891515622630",
-    "descricao": "Frio de Filé Mignon Cozido Fatiado Resfriado 180 G- CX C/ 16",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/32965bd671a809b265ebc086a6e3eff270b70cd9.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/91a7d0aa9b22f559743efb1455a09e810eff3b67.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "6cd1f712-bce1-5718-815c-f97529b45abc",
-    "marca": "Perdigão",
-    "ean": "17899638366325",
-    "dun": "17899638366325",
-    "descricao": "Contra - Filé Red Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "31450326-f10c-5305-99f5-c28b52e396d7",
-    "marca": "Perdigão",
-    "ean": "17899638366523",
-    "dun": "17899638366523",
-    "descricao": "Contra - Filé Perdigão Na Brasa - 4,1kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "b1c8777c-aaf0-5964-986c-273cac141eee",
-    "marca": "Perdigão",
-    "ean": "17899638366530",
-    "dun": "17899638366530",
-    "descricao": "Contra - Filé com Gordura Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "e5369f89-f888-5914-a561-a20ce7103d71",
-    "marca": "Perdigão",
-    "ean": "17899638366332",
-    "dun": "17899638366332",
-    "descricao": "Contra - Filé sem Cordão Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "2fa8a4d9-5a61-5f48-9302-03e8691e1fab",
-    "marca": "Perdigão",
-    "ean": "17899638366226",
-    "dun": "17899638366226",
-    "descricao": "Contra - Filé Congelado Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "9a8ab2d1-67b4-5f6e-b574-e46c03e3592e",
-    "marca": "Sadia",
-    "ean": "17899638364895",
-    "dun": "17899638364895",
-    "descricao": "Filé de Costela Bife Ancho Resfriado Sadia Bassi - 0,8 a 1,4kg",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/6bcfe7b3cfdbe15b25f6103b829741f5a03a7799.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/105c4ba226d5070d32b668b70ab58bfb1bf0950f.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "3cbe7d61-137d-5878-816d-22336f2b1863",
-    "marca": "Perdigão",
-    "ean": "17899638366745",
-    "dun": "17899638366745",
-    "descricao": "Raquete Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "896b0456-6e91-5d90-b403-eda118e32efe",
-    "marca": "BRF",
-    "ean": "17899638356708",
-    "dun": "17899638356708",
-    "descricao": "Peito com Gordura Importado Wagyu Tacuarembó - 4,8kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "25bb2338-773d-51dc-8a95-b02e5e80aad9",
-    "marca": "Sadia",
-    "ean": "17899638365038",
-    "dun": "17899638365038",
-    "descricao": "Peito Brisket Sadia Bassi (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "9dcc1684-b9ed-50bf-b0c6-c0aa7cf324c8",
-    "marca": "Sadia",
-    "ean": "17899638365557",
-    "dun": "17899638365557",
-    "descricao": "Peito Brisket Maturado Sadia Bassi Angus (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "7d80de9d-636b-59cc-b045-38d7dca6e378",
-    "marca": "Sadia",
-    "ean": "17899638365724",
-    "dun": "17899638365724",
-    "descricao": "Peito Brisket Sadia Bassi Angus (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "e7492c69-7c33-5331-bfb9-3d78f97a0519",
-    "marca": "Sadia",
-    "ean": "5800263",
-    "dun": "",
-    "descricao": "Peito Sadia Bassi Angus (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "302664b3-e302-57c0-9921-83bef3934c1b",
-    "marca": "Perdigão",
-    "ean": "17899638366448",
-    "dun": "17899638366448",
-    "descricao": "Peixinho Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "a4c562a1-f498-510c-81c1-9445f1c14f00",
-    "marca": "Perdigão",
-    "ean": "17899638366417",
-    "dun": "17899638366417",
-    "descricao": "Músculo Duro Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "245776a7-1936-5e43-9238-35dcd897d6e1",
-    "marca": "Perdigão",
-    "ean": "17899638366684",
-    "dun": "17899638366684",
-    "descricao": "Lagarto com Gordura Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "2e345718-f363-55a6-b960-3915b7ddb893",
-    "marca": "Perdigão",
-    "ean": "17899638366424",
-    "dun": "17899638366424",
-    "descricao": "Músculo Mole Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "d4312d8c-2fbd-50e7-bb89-599b312f671b",
-    "marca": "Perdigão",
-    "ean": "17899638366691",
-    "dun": "17899638366691",
-    "descricao": "Músculo Duro e Músculo Mole Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "9863003e-195c-5ee9-9fc4-851d6b063cc0",
-    "marca": "Sadia",
-    "ean": "17899638364901",
-    "dun": "17899638364901",
-    "descricao": "Fralda Red Sadia Bassi - 0,7 a 1,2kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "1aaaa17c-81eb-5406-8ae3-bd17d08272a5",
-    "marca": "Sadia",
-    "ean": "17899638364918",
-    "dun": "17899638364918",
-    "descricao": "Fralda Sadia Bassi (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "35b409da-1413-571d-ac25-d8943e53ea40",
-    "marca": "Sadia",
-    "ean": "17899638364987",
-    "dun": "17899638364987",
-    "descricao": "Fralda Sadia Bassi (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "52cd8283-3997-5988-bc65-81e7c4d95f74",
-    "marca": "Perdigão",
-    "ean": "17899638367162",
-    "dun": "17899638367162",
-    "descricao": "Fralda Perdigão Montana (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Bovinos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "867e1783-c508-551f-bed7-dc452d724dcb",
-    "marca": "Perdigão",
-    "ean": "17899638367650",
-    "dun": "17899638367650",
-    "descricao": "Fralda Perdigão Montana - 0,6 a 1,6kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Bovinos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "67d7446e-f093-5018-9401-021bd0172e68",
-    "marca": "Perdigão",
-    "ean": "17899638366486",
-    "dun": "17899638366486",
-    "descricao": "Fralda Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "ffc2025f-6687-5c54-b0c4-7812e8351a22",
-    "marca": "Perdigão",
-    "ean": "17899638366196",
-    "dun": "17899638366196",
-    "descricao": "Fralda Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.540Z"
-  },
-  {
-    "id": "70c99ea6-dc23-5111-a56c-acaa55d98b34",
-    "marca": "Perdigão",
-    "ean": "17899638366394",
-    "dun": "17899638366394",
-    "descricao": "Fralda com Gordura Perdigão Na Brasa - 0,7 a 1,5kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "d64277c8-4ef8-541c-b3bc-95cc2753d735",
-    "marca": "BRF",
-    "ean": "17899638349137",
-    "dun": "17899638349137",
-    "descricao": "Maminha Wagyu Importado Tacuarembó (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "d862a895-b0d9-5828-b36e-8a8c907cb41c",
-    "marca": "Perdigão",
-    "ean": "17899638366592",
-    "dun": "17899638366592",
-    "descricao": "Coxão Duro Perdigão Na Brasa - 2,5 a 3kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "6fde60f8-6fde-53e0-a2d3-bc36bfe58f63",
-    "marca": "Perdigão",
-    "ean": "17899638366608",
-    "dun": "17899638366608",
-    "descricao": "Coxão Duro com Gordura Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "d4e25d5c-23b6-5349-a28a-3e670e5273ae",
-    "marca": "Sadia",
-    "ean": "17891515587793",
-    "dun": "17891515587793",
-    "descricao": "Camarão Vannamei 80/100pcs Sadia 400g -caixa C/25",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/381d26273089795e7bab8574f584270acfcb54b8.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/f3d3b99aa89a4f0a8a23869a4f6d5851b8d5a641.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "dd3457d0-6abf-58de-8684-928a2a928c12",
-    "marca": "Sadia",
-    "ean": "17891515575530",
-    "dun": "17891515575530",
-    "descricao": "Almondega Bovina Sadia 0,9kg -caixa C/4",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/1d0d47af48ce414a59fa42017460025b4d561c5f.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/083f7d453d72c7d8aec46cedb9720ac8e6accd48.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "22141f75-50e2-5d2b-a202-f15914989d09",
-    "marca": "Sadia",
-    "ean": "17891515562851",
-    "dun": "17891515562851",
-    "descricao": "Coxinhas da Asa Empanada Apimentada Sadia 400g -caixa C/14",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/8c45a5c3db59829bc5f6452ffca3fcce9c6b5b5c.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/4bb6333f9927930a0afeba928ebebcf80c472f8a.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "dec58b51-4689-5c3e-b3d5-10a542c72781",
-    "marca": "Sadia",
-    "ean": "17891515554917",
-    "dun": "17891515554917",
-    "descricao": "Supreme Fácil Sadia 2,7 Kg a 3,7 Kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "de2f0453-6ead-5b5a-9562-03ffd1a7cf8d",
-    "marca": "Sadia",
-    "ean": "17891515549524",
-    "dun": "17891515549524",
-    "descricao": "Snack Salamitos Sweet Chilli Sadia 36g -caixa C/50",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "ae877e2c-6007-5481-b5dc-371232064bff",
-    "marca": "Perdigão",
-    "ean": "17899638366622",
-    "dun": "17899638366622",
-    "descricao": "Coxão Mole com Gordura Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "5952ac61-001a-5887-ab30-2b2d51d5f2a6",
-    "marca": "Perdigão",
-    "ean": "17899638366776",
-    "dun": "17899638366776",
-    "descricao": "Contra - Filé Bife Perdigão Na Brasa - 80 a 100g",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "015da9ab-be4d-54cc-8e39-bb5160b2140a",
-    "marca": "Perdigão",
-    "ean": "17899638366868",
-    "dun": "17899638366868",
-    "descricao": "Contra - Filé Iscas Perdigão Na Brasa - 1,4 a 1,6kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "98e9ace6-7ca8-5706-a663-91a163626c26",
-    "marca": "Perdigão",
-    "ean": "17899638366615",
-    "dun": "17899638366615",
-    "descricao": "Coxão Mole Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "3f8dd918-7712-5819-968b-1cbe4185a43c",
-    "marca": "Sadia",
-    "ean": "5801036",
-    "dun": "",
-    "descricao": "Peito Sadia Bassi Stars (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.541Z"
-  },
-  {
-    "id": "51648c26-7f5e-5064-88e3-d5f082d11823",
-    "marca": "Perdigão",
-    "ean": "17899638366912",
-    "dun": "17899638366912",
-    "descricao": "Fraldão Congelado Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.542Z"
-  },
-  {
-    "id": "702a1577-ae27-5c69-b91e-774f4b5b9897",
-    "marca": "Sadia",
-    "ean": "5801018",
-    "dun": "",
-    "descricao": "Peito Maturado Sadia Bassi Stars (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.542Z"
-  },
-  {
-    "id": "14527db0-ba69-53ba-8dfe-d0abe24f935f",
-    "marca": "Perdigão",
-    "ean": "17899638366929",
-    "dun": "17899638366929",
-    "descricao": "Gordura Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.542Z"
-  },
-  {
-    "id": "ee2328e2-d2f7-5437-9a71-d1f289de1d35",
-    "marca": "Perdigão",
-    "ean": "17899638366516",
-    "dun": "17899638366516",
-    "descricao": "Capa de Filé com Gordura Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.542Z"
-  },
-  {
-    "id": "aee3c81b-b55f-503a-b8c8-07f4d347028e",
-    "marca": "Perdigão",
-    "ean": "17899638366806",
-    "dun": "17899638366806",
-    "descricao": "Fraldão Resfriado Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.542Z"
-  },
-  {
-    "id": "d5969d41-5d5d-56f7-ac70-fc70ded14faa",
-    "marca": "Perdigão",
-    "ean": "17899638366363",
-    "dun": "17899638366363",
-    "descricao": "Capa de Filé Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.542Z"
-  },
-  {
-    "id": "609c0146-4d94-5f9a-8755-ffa3b910e771",
-    "marca": "Perdigão",
-    "ean": "17899638366813",
-    "dun": "17899638366813",
-    "descricao": "Paleta Perdigão Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.542Z"
-  },
-  {
-    "id": "9a810b34-879e-5a23-b049-fa4516419372",
-    "marca": "BRF",
-    "ean": "17899638366677",
-    "dun": "17899638366677",
-    "descricao": "Lagarto Rf Vc Mi Montana Steakhouse Na Brasa (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.542Z"
-  },
-  {
-    "id": "6d953eb4-e2e6-5d76-997b-44a66bd26e04",
-    "marca": "Sadia",
-    "ean": "17891515620988",
-    "dun": "17891515620988",
-    "descricao": "Ling. Calabresa Sadia 400g CX 4,8kg",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.542Z"
-  },
-  {
-    "id": "40da2bb9-83f4-5f18-8f03-7df4a1172969",
-    "marca": "Sadia",
-    "ean": "17891515593459",
-    "dun": "17891515593459",
-    "descricao": "Salsicha Hot Dog Sadia 3kg - Caixa C/12",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/2f9f9f5942a72266f20fdd8bd723bd3e65448fa8.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/78fbd706cb4bb39d594037ffe0815c10e489d6ca.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.542Z"
-  },
-  {
-    "id": "c2d91086-4f13-562a-9759-6d4caedc5d19",
-    "marca": "Sadia",
-    "ean": "17891515609280",
-    "dun": "17891515609280",
-    "descricao": "Mandioca Congelada Sadia Veg&tal 900g - Caixa C/ 12",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/dca974f6f4be28deeda644c8ddc617e76c52bcf1.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/02bb14cd4aedd07c9b39d0bce805f00a21c9e35f.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.542Z"
-  },
-  {
-    "id": "b5668bf5-f4b9-5c98-ad1d-b25143acdcba",
-    "marca": "Sadia",
-    "ean": "17891515647060",
-    "dun": "17891515647060",
-    "descricao": "Batata Palito Pop Pré Frita Sadia 400g C/25",
-    "alteracoes": [
-      {
-        "campo": "Imagem (URL)",
-        "de": "https://www.sadia.com.br/assets/images/_/products/7d24a10829c505402169089b0da31fb46e532fe7.webp",
-        "para": "https://www.sadia.com.br/assets/images/_/products/91075fc544e15ec840d77e384a9aa03b301472e3.webp"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.542Z"
-  },
-  {
-    "id": "b50988ae-3279-5eb9-bfc2-14a474ce2df1",
-    "marca": "Perdigão",
-    "ean": "17891515591745",
-    "dun": "17891515591745",
-    "descricao": "Fraldinha Bovina Congelada S/ Osso Perdigão Na Brasa - Peso Variável (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Aves"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:26.543Z"
-  },
-  {
-    "id": "3a2806d2-bbd3-53a8-a7bf-13526c47aca0",
-    "marca": "Do Chef",
-    "ean": "17898302283326",
-    "dun": "17898302283326",
-    "descricao": "Fralda (Acima de 1,5kg) - do Chef",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Bovinos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.739Z"
-  },
-  {
-    "id": "ae900408-3488-5d86-beae-15a80f932656",
-    "marca": "Do Chef",
-    "ean": "17894351473275",
-    "dun": "17894351473275",
-    "descricao": "Fralda Red - do Chef (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Bovinos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.740Z"
-  },
-  {
-    "id": "18f73407-7d98-5140-b7a5-00eb879d05ca",
-    "marca": "Do Chef",
-    "ean": "17898503319039",
-    "dun": "17898503319039",
-    "descricao": "Ponta de Agulha sem Osso - do Chef (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Bovinos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.740Z"
-  },
-  {
-    "id": "78be9bcc-21d6-5f36-a6bb-63c4fda786a8",
-    "marca": "Do Chef",
-    "ean": "17894351103967",
-    "dun": "17894351103967",
-    "descricao": "Fralda (Acima de 1,5kg) - do Chef",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Bovinos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.740Z"
-  },
-  {
-    "id": "17f7d754-2c2e-5d34-89c8-fa2435d752fa",
-    "marca": "PLANALTO",
-    "ean": "17898929331943",
-    "dun": "17898929331943",
-    "descricao": "Filé de Pangasius Premium Pacote (800g) - Planalto",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Pescados"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.741Z"
-  },
-  {
-    "id": "3cbe81b2-e486-5e95-9a97-729e418685a6",
-    "marca": "Seara",
-    "ean": "17894904586513",
-    "dun": "17894904586513",
-    "descricao": "Barriga sem Osso e com Pele - Seara (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.742Z"
-  },
-  {
-    "id": "790a55a3-a1de-5d8a-b502-0117de3db3b9",
-    "marca": "PANDO",
-    "ean": "377278",
-    "dun": "",
-    "descricao": "Fralda Red Maturada Uruguaia - Pando (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Bovinos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.742Z"
-  },
-  {
-    "id": "0d340390-478b-5ffa-9349-817dac79be68",
-    "marca": "Do Chef",
-    "ean": "17899567274258",
-    "dun": "17899567274258",
-    "descricao": "Fralda (Red) - do Chef (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Bovinos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.743Z"
-  },
-  {
-    "id": "729507ce-a8ca-5d62-8435-5f593148e58a",
-    "marca": "EASYCHEF",
-    "ean": "17896807410124",
-    "dun": "17896807410124",
-    "descricao": "Anel de Cebola Empanada Pacote (1,1kg) - Easychef",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Vegetais & Congelados"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.743Z"
-  },
-  {
-    "id": "09ca15b5-14c6-5078-b84e-0e918b801187",
-    "marca": "Do Chef",
-    "ean": "17894611147335",
-    "dun": "17894611147335",
-    "descricao": "Belly Ribs com Pele - do Chef (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Suínos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.744Z"
-  },
-  {
-    "id": "babfd412-edf8-5a26-a1a0-8950e6d4024a",
-    "marca": "PLANALTO",
-    "ean": "386939",
-    "dun": "",
-    "descricao": "Filé de Pangasius Semiaparado IQF Granel (10kg) - Planalto",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Pescados"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.744Z"
-  },
-  {
-    "id": "9e5e1040-083b-5a98-82c3-5aeb4c3362d7",
-    "marca": "SOMAVE",
-    "ean": "17894904271327",
-    "dun": "17894904271327",
-    "descricao": "Maionese Pacote (3kg) - Soya",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Laticínios, Margarinas & Gorduras",
-        "para": "Vegetais & Congelados"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.744Z"
-  },
-  {
-    "id": "a8a4dd41-ffed-5722-9e02-9e6b27f54981",
-    "marca": "Do Chef",
-    "ean": "17896031214611",
-    "dun": "17896031214611",
-    "descricao": "Fralda Porcionada - do Chef (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Bovinos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.744Z"
-  },
-  {
-    "id": "7f0a7bc6-6e3f-58cb-8ac1-bafcd016391c",
-    "marca": "1953 Friboi",
-    "ean": "17896031214277",
-    "dun": "17896031214277",
-    "descricao": "Stinco (370 a 440g) - 1953",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Bovinos",
-        "para": "Ovinos & Caprinos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.744Z"
-  },
-  {
-    "id": "d379d907-53d3-5304-8a38-66004f9f5cdc",
-    "marca": "TAJÁ",
-    "ean": "17898967047035",
-    "dun": "17898967047035",
-    "descricao": "Alho Inteiro Descascado Pacote (1,02kg) - Tajá",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Vegetais & Congelados"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.745Z"
-  },
-  {
-    "id": "770f56c4-ffff-541a-a6c1-1de78501709d",
-    "marca": "EASYCHEF",
-    "ean": "392019",
-    "dun": "",
-    "descricao": "Anel de Cebola Empanada Turquia Pacote (1,1kg) - Easychef",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Vegetais & Congelados"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.745Z"
-  },
-  {
-    "id": "632f3d6f-b904-5bab-a4a5-73fd53dd945d",
-    "marca": "EASYCHEF",
-    "ean": "17898970370021",
-    "dun": "17898970370021",
-    "descricao": "Alho Inteiro Descascado Pacote (1,1kg) - Easychef",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Vegetais & Congelados"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.745Z"
-  },
-  {
-    "id": "6ff6d3a1-90be-5a04-a974-a72c8a443b57",
-    "marca": "Do Chef",
-    "ean": "17896031201628",
-    "dun": "17896031201628",
-    "descricao": "Espetinho de Kafta (900g) - do Chef",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Pescados"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.745Z"
-  },
-  {
-    "id": "f52bb280-d688-5511-8b26-491868c937e4",
-    "marca": "EASYCHEF",
-    "ean": "17898970370052",
-    "dun": "17898970370052",
-    "descricao": "Alho Inteiro Descascado Pacote (300g) - Easychef",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Vegetais & Congelados"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.745Z"
-  },
-  {
-    "id": "aa709ca9-275e-5976-ada4-085844491735",
-    "marca": "GRANO",
-    "ean": "17898268723669",
-    "dun": "17898268723669",
-    "descricao": "Alho Inteiro Descascado Pacote (1,1kg) - Grano",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Vegetais & Congelados"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.745Z"
-  },
-  {
-    "id": "76a1e9e1-1313-56f7-8ba6-c696dad49fb9",
-    "marca": "Do Chef",
-    "ean": "17896031246636",
-    "dun": "17896031246636",
-    "descricao": "Gordura - do Chef (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Bovinos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.746Z"
-  },
-  {
-    "id": "d6140096-5e70-5ad0-8559-5a0354b81247",
-    "marca": "LAS MORAS",
-    "ean": "397670",
-    "dun": "",
-    "descricao": "Fralda (Red) Uruguaia - Las Moras (Pesar)",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Bovinos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:47.747Z"
-  },
-  {
-    "id": "27cd9cc3-0acf-565f-b564-1e5821ea137f",
-    "marca": "Ricca",
-    "ean": "624",
-    "dun": "",
-    "descricao": "Creme Chantilly 1,05kg - Ricca",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Laticínios, Margarinas & Gorduras",
-        "para": "Plant-Based & Vegetarianos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:07.255Z"
   },
   {
     "id": "c1bcdb5b-edbe-56f9-8c11-f74b5a75cf19",
@@ -1422,22 +27,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/998542-lombo-canadense-fatiado-seara-gourmet-150g-min.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
-  },
-  {
-    "id": "fff4afd4-ced5-5d3d-98ca-cdea9b5c492e",
-    "marca": "Seara Gourmet",
-    "ean": "566",
-    "dun": "",
-    "descricao": "Mix Cogumelos Burger 320g - Seara Gourmet",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Plant-Based & Vegetarianos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "0993e9ff-4b56-5715-baa2-9fa31011ee8d",
@@ -1452,7 +42,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-652-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "c1936e07-b063-5a09-8d25-8d410c6dd3b6",
@@ -1467,7 +57,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-182-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "6646cd1a-36fd-50dd-88c0-ab7837bf0503",
@@ -1482,7 +72,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/45164-AF03-Beauty-Pescados-Camarao-Desc-80-100-TD-231220_mockup.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "e64d0de2-da4f-5a19-9948-7e6d8fcc8945",
@@ -1497,7 +87,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/999536_CAMARAO_DESCASCADO-V2.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "834a700e-db18-5488-9129-4e586c2e473c",
@@ -1512,7 +102,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/999537-AF03-Beauty-Pescados-Camarao-S-Cabeca-45-50-TD-231220_MOCKUP.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "a4b6cfd6-c38a-593a-8ab7-64ecbb2e54e7",
@@ -1527,7 +117,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/Finalizado-PIT-9061-Mockups-Seara-Projeto-Beauty-999403-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "8a4953d2-b23a-55d3-a106-66f08d74b156",
@@ -1542,7 +132,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/Visualizar-PIT-9061-Mockups-Seara-Projeto-Beauty-999395-V2.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "ec6ec728-ed46-579d-a8eb-ab281923b1c6",
@@ -1555,14 +145,9 @@
         "campo": "Imagem (URL)",
         "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-16366-500-1.webp",
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/Copia-de-45158_KIT_PAELLA.png"
-      },
-      {
-        "campo": "Classe",
-        "de": "Processados & Embutidos",
-        "para": "Pescados"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "5e4880f5-5cb1-500d-97ea-3838964733c4",
@@ -1577,7 +162,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/Finalizado-PIT-9061-Mockups-Seara-Projeto-Beauty-56058.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "059dffbf-9fd3-5e2c-9192-2a7b2acd9729",
@@ -1592,7 +177,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/Copia-de-Finalizado-PIT-9061-Mockups-Seara-Projeto-Beauty-45159.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "bbcad01b-a6ba-5782-a5a4-72ff75fba7c5",
@@ -1607,7 +192,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/45161-AF01-Beauty-Pescados-File-Salmao-TD-231218_MOCKUP.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "e92e602f-32e8-50be-9122-9050227b745f",
@@ -1622,7 +207,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/45166-AF01-Beauty-Pescados-Camarao-Empanado-TD-231218-CV_MOCKUP.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.204Z"
   },
   {
     "id": "4eef5d19-4aad-5612-9552-ad410f925303",
@@ -1637,7 +222,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-653-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "de5692f7-579e-5455-ab3d-88221a8c23fa",
@@ -1652,7 +237,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-654-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "d22323f4-bfca-502f-8695-2b570790801d",
@@ -1667,7 +252,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-656-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "ab0e71d3-0859-5b79-92bc-5b597587d73b",
@@ -1682,7 +267,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-659-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "11a690a8-929b-551e-9898-dedae6a73eb1",
@@ -1697,7 +282,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/AF03-Beauty-Lombo-Bacalhau-600g-TD-231220.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "5a2d6674-18f5-5c7c-81ad-b456b97ca93a",
@@ -1712,7 +297,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/999898.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "67c81554-d6b9-50d8-8fd1-c2afaafca713",
@@ -1727,22 +312,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/45162-AF04-Beauty-Pescados-Camarao-Desc-30-50-TD-231218-CV_mockup.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
-  },
-  {
-    "id": "5a3cad97-aa31-50cd-95c6-63b6030ea757",
-    "marca": "Seara",
-    "ean": "621",
-    "dun": "",
-    "descricao": "Maionese Balde 3kg - Salada",
-    "alteracoes": [
-      {
-        "campo": "Classe",
-        "de": "Laticínios, Margarinas & Gorduras",
-        "para": "Plant-Based & Vegetarianos"
-      }
-    ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "4efa5f80-affa-50fe-abe7-4459d76fdd6e",
@@ -1757,7 +327,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-619-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "e2663469-0676-5cb9-88da-0eb014b635d0",
@@ -1772,7 +342,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-618-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "184628e2-60b5-50b9-b6c6-ea61878f0df3",
@@ -1787,7 +357,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-604-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "f3de54a4-9a61-5ab9-abc3-6f34d2c1969c",
@@ -1802,7 +372,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-605-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "a4046de1-3d45-5155-b533-3864dd02c850",
@@ -1817,7 +387,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-608-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "34c44161-052a-56fe-aa8a-bb269c366fd2",
@@ -1832,7 +402,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-599-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "5a479770-ee4a-5369-8c6e-bf12321ed714",
@@ -1847,7 +417,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-602-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "016c0160-9fb8-5f3e-9c70-3b632fcf4c32",
@@ -1862,7 +432,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-596-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "956d5ef0-430c-53b2-a098-68020719222e",
@@ -1877,7 +447,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-598-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "12bd3833-13e5-5c93-ad60-e9087cc13ced",
@@ -1892,7 +462,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-554-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "8099de72-1c12-5d95-a706-cfc4dd2ed101",
@@ -1907,7 +477,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-572-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "457fac9e-c095-54c2-b4d2-0c38168ad7ce",
@@ -1922,7 +492,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-580-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "9bd0e73e-332f-565c-aea5-1114e6c3a86c",
@@ -1937,7 +507,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-578-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "767f897f-aa9e-5649-81a1-1a508b40d178",
@@ -1952,7 +522,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-575-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "c68d2022-3968-50e5-a0a9-ca6c4f4381b2",
@@ -1967,7 +537,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-584-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "daeceb08-4380-5fb7-a47a-e59dc8313b2c",
@@ -1982,7 +552,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-582-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "729f3359-1645-500d-83bd-a22a0b3cb619",
@@ -1997,7 +567,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-590-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "661a5575-68a5-5966-b541-7c6edabd1982",
@@ -2012,7 +582,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-586-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.738Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "2e31ca57-4e76-51d4-80d7-0d150a7f5f8b",
@@ -2027,7 +597,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-591-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.205Z"
   },
   {
     "id": "c9e2ec0e-fca9-59fa-86d9-dcc950c883d8",
@@ -2042,7 +612,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-529-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "e8a39137-ea6b-5081-9933-35aab52dfd82",
@@ -2057,7 +627,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-542-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "830c65f7-ccea-580d-8d23-dd5c5c264e42",
@@ -2072,7 +642,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-502-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "1584ab59-4937-5e5e-92b0-37caef19a4af",
@@ -2087,7 +657,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-504-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "3932dccf-b217-518d-b02c-9b02df7d18ce",
@@ -2102,7 +672,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-485-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "69a2713d-5ca5-5744-8fda-d2833ccc792b",
@@ -2117,7 +687,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-482-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "56533eec-8f51-5917-83a2-e9442d677329",
@@ -2132,7 +702,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-478-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "d4b2d010-77f8-50d9-bec0-ce1ac8e7b1f8",
@@ -2147,7 +717,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-468-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "bfb14d20-2244-5908-86f3-0bc2438b8d70",
@@ -2162,7 +732,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-462-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "0fbd4bf1-52d3-54e5-b7c0-40cc3835c7a8",
@@ -2177,7 +747,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-454-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "bc91910e-8abb-5c1a-b461-f929749e40fa",
@@ -2192,7 +762,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-450-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "8e99f2b8-82c6-5dea-a260-e2a3bb78ce3f",
@@ -2207,7 +777,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-438-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "2136af4a-1109-5251-b0f8-b437891a9ac5",
@@ -2222,7 +792,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-430-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "54487452-3146-5e56-b4b0-0552f2a25787",
@@ -2237,7 +807,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-432-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "04eaea7c-be3f-5653-8aab-3a509f8d2c65",
@@ -2252,7 +822,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-524-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "d9344cd9-ef37-549f-a393-ee90e9ecb721",
@@ -2267,7 +837,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-492-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "1391a760-3a65-5c72-9cb8-47fc23f6b884",
@@ -2282,7 +852,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-442-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.206Z"
   },
   {
     "id": "4cbce231-079f-5d99-874b-77060b19b2ac",
@@ -2297,7 +867,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-460-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "1594efa1-d5ea-5cd2-a46a-a3690225ffe6",
@@ -2312,7 +882,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/11/7894904261536_Bacalhau-desfiado-Seara-Pescados-400g_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "33639efe-9e66-534c-8ebc-3e0f75ec611b",
@@ -2327,7 +897,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/11/7894904279876_Posta-de-Tilapia-Seara-Pescados-500g_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "d8976b40-0c34-51e3-914b-358957ae15c3",
@@ -2342,7 +912,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/45167-AF02-Beauty-Pescados-File-Tilapia-NL-20240105_mockup.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "3ed536a1-a093-5ec2-bd44-b70ecf804bf9",
@@ -2357,7 +927,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/11/80-Seara-Pescados-400g_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "025a1152-da24-5c5c-a980-37f0d0b7bd1c",
@@ -2372,7 +942,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2025/07/999907_POSTAS_DE_BACALHAU.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "278bc6ac-95a5-5255-895b-b7db830d31b1",
@@ -2387,7 +957,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-644-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "580f1de8-55fa-52e2-9176-e3426f7085b3",
@@ -2402,7 +972,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-636-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "f60ec1ce-87a7-5c8c-ab02-187359a05ee5",
@@ -2417,7 +987,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904955800_Mandioca-supreme-Seara-Nature-15kg_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "c0eccfc8-90c8-50ec-b5ba-1e06518d5a38",
@@ -2432,7 +1002,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-574-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "871af9a4-d8ee-5b2a-b268-03dd28db0d3e",
@@ -2447,7 +1017,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904691005_Tekitos-tradicional-1kg_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "2565aa73-2807-5dff-88b4-59caa6bad077",
@@ -2462,7 +1032,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-494-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "794763c2-525e-5f15-b1eb-3ce1ad1796ec",
@@ -2477,7 +1047,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-490-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "4fd6c3fb-0844-572e-885b-e8345af4a27e",
@@ -2492,7 +1062,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904002450_Texas-Burger-tradicional-672g_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "d6e4ed0f-0ec4-53b6-baaa-053b62ba4102",
@@ -2507,7 +1077,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904500383_Texas-Burger-tradicional-56g_IMAGEM-PRINCIPAL_1000x1000.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "e64e8a27-25fc-555c-a3ed-4d94bf0c647f",
@@ -2522,7 +1092,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-570-500.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "f104db9f-3b97-590b-871a-1523c33fc736",
@@ -2537,7 +1107,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-527-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "f0a0af23-8028-54f5-ae1b-68fd6c880c97",
@@ -2552,7 +1122,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-531-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "134f372b-0717-57fb-928b-28cab2412d5a",
@@ -2567,7 +1137,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-552-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "21a7ce01-a831-5528-8673-9b6804ee4cdb",
@@ -2582,7 +1152,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-549-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "cbd3995d-d24b-57fa-a985-24cba0d72f40",
@@ -2597,7 +1167,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2023/08/7894904500116_1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "39d0cd3a-d499-5fa7-b34b-8fd98c929368",
@@ -2612,7 +1182,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-484-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "d473655b-8cac-557c-a8ff-acfe4bf51c3d",
@@ -2627,7 +1197,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-472-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "6e43ff7c-2800-5a11-aeb5-7cb93fed6ab5",
@@ -2642,7 +1212,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-470-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "a6ac46bd-0ff3-57e6-97f7-e9073607d99e",
@@ -2657,7 +1227,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-464-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "5bd29e6e-f30a-5178-ad72-9c6d5e61ca05",
@@ -2672,7 +1242,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-466-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "997fb1d7-894c-5b96-bd22-b2f8d9a49680",
@@ -2687,7 +1257,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-458-500-1.jpg"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "7799d45b-60fc-5c57-96a9-6798731d74a1",
@@ -2702,7 +1272,7 @@
         "para": "https://www.searafoodsolutions.com.br/files/2026/06/seara-product-436-500-1.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "b6f3c9ad-4734-5be8-8d3d-8ed20a0e3127",
@@ -2717,7 +1287,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5511-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.207Z"
   },
   {
     "id": "fe7d3b3d-258d-53bd-90cd-5aa6d2a14a6c",
@@ -2732,7 +1302,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2013-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.739Z"
+    "atualizado_em": "2026-08-24T06:13:53.208Z"
   },
   {
     "id": "44d45773-8060-50e9-9ee2-97e23a66d05f",
@@ -2747,7 +1317,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2024/08/Bife-de-File-Mignon-Suino-Seara-Reserva.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.209Z"
   },
   {
     "id": "aaa9f4f9-ee23-56ea-b3ec-d23fe165412d",
@@ -2762,7 +1332,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-1990-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.209Z"
   },
   {
     "id": "ad2ab810-bb43-5345-b900-da5b63f20edc",
@@ -2777,7 +1347,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5770-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.209Z"
   },
   {
     "id": "c9874fbc-b075-5ff6-a730-2e6c4d8cc63e",
@@ -2792,7 +1362,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5140-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.209Z"
   },
   {
     "id": "55737973-3256-57d2-8a32-10f974fccdf9",
@@ -2807,7 +1377,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5740-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.210Z"
   },
   {
     "id": "582538a5-00e1-5066-8486-cefa8f5fb218",
@@ -2822,7 +1392,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-28573-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.210Z"
   },
   {
     "id": "efc0cc20-86fa-5029-9111-a918dd9e0a14",
@@ -2837,7 +1407,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-29837-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.210Z"
   },
   {
     "id": "2188139b-70d3-545e-9a69-186a51339bb4",
@@ -2852,7 +1422,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-2067-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.210Z"
   },
   {
     "id": "7f1f982b-8082-5507-8061-df82a130d58e",
@@ -2867,7 +1437,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-106839-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.210Z"
   },
   {
     "id": "453d90c0-8a1a-51c4-bbbb-5635ece90cd0",
@@ -2882,7 +1452,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-106843-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.210Z"
   },
   {
     "id": "1254ccaf-e510-5608-8cdc-d2503e183070",
@@ -2897,7 +1467,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-28888-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.210Z"
   },
   {
     "id": "e1403727-1460-55c8-834c-0b8f8a8f196a",
@@ -2912,7 +1482,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-116244-500.webp"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.211Z"
   },
   {
     "id": "b4ff14b2-6ead-5e3f-858f-552aa93ce89a",
@@ -2927,7 +1497,7 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2025/12/Adobe-Express-file-9.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.211Z"
   },
   {
     "id": "aeda874e-3d63-560b-9498-d507d52685fd",
@@ -2942,6 +1512,26 @@
         "para": "https://www.seara.com.br/wp-content/uploads/2026/05/HB_BLEND_SEARA_GOURMET_160g-e1779200363880.png"
       }
     ],
-    "atualizado_em": "2026-08-24T01:37:57.740Z"
+    "atualizado_em": "2026-08-24T06:13:53.211Z"
+  },
+  {
+    "id": "c0be24cb-4e16-5384-9c19-a43f05e60a5c",
+    "marca": "Seara",
+    "ean": "7894904070602",
+    "dun": "",
+    "descricao": "Lasanha de Calabresa Seara 600g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/07/seara-product-5743-500.webp",
+        "para": "https://www.seara.com.br/wp-content/uploads/2022/10/Lasanha-de-Calabresa-Seara-600g.webp"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-08-24T06:13:53.211Z"
   }
 ]
