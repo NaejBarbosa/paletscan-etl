@@ -1250,7 +1250,7 @@
     B --&gt; C["3. Máscara Transparente (Canal Alpha RGBA)"]
     C --&gt; D["4. Achatamento sobre Fundo Branco Sólido (#FFFFFF)"]
     D --&gt; E["5. Redimensionamento Proporcional (Pillow Resampling)"]
-    E --&gt; F["6. Arquivo Otimizado .webp (&lt; 150KB)"]</code></pre>
+    E --&gt; F["6. Arquivo Otimizado .webp (Menos de 150KB)"]</code></pre>
 <hr />
 <h2 id="2-etapas-do-processamento-visual">⚙️ 2. Etapas do Processamento Visual</h2>
 <h3 id="a-remocao-de-fundo-via-ia-rembg">A. Remoção de Fundo via IA (<code>rembg</code>)</h3>
@@ -1281,7 +1281,7 @@
 <pre class="mermaid"><code>flowchart TD
     A["1. Scraper detecta nova URL/Layout"] --&gt; B["2. Download da Imagem Bruta em images/raw/"]
     B --&gt; C["3. IA Local (rembg / U2Net)\nRemoção de Fundo"]
-    C --&gt; D["4. Composição com Fundo Branco Sólido RGB\ne Compressão WebP (&lt; 150KB)"]
+    C --&gt; D["4. Composição com Fundo Branco Sólido RGB\ne Compressão WebP (Menos de 150KB)"]
     D --&gt; E["5. Upload para Supabase Storage\nBucket 'produtos-imagens' (upsert: true)"]
     E --&gt; F["6. UPDATE na tabela 'produtos'\n(imagem_url + status_imagem = 'aprovado')"]
     F --&gt; G["7. Regeração do produtos.json PWA\ne Pré-carregamento no Coletor"]</code></pre>
