@@ -11,27 +11,38 @@ O ecossistema opera através de um circuito fechado de dados bidirecional:
 ```mermaid
 flowchart TD
     subgraph Nuvem ["1. Nuvem e Fornecedores"]
-        A["Portais B2B e APIs dos Frigoríficos"] --> B["Pipeline ETL (paletscan-etl)"]
-        B -->|1. Carga Limpa com Modulus 10 e Imagens IA| C["Supabase PostgreSQL - Catálogo Mestre"]
+        A["Portais B2B e APIs dos Frigoríficos"]
+        B["Pipeline ETL (paletscan-etl)"]
+        C["Supabase PostgreSQL - Catálogo Mestre"]
+        A --> B
+        B --> C
     end
 
     subgraph Sync ["2. Sincronização Sob Demanda"]
-        C -->|2. Hash Check Rápido (ps_pwa_db_hash)| D["Motor de Sync (sync.ts)"]
-        D -->|3. Delta Sync| E["WatermelonDB Local (IndexedDB / Schema v11)"]
+        D["Motor de Sincronização (sync.ts)"]
+        E["WatermelonDB Local (Schema v11)"]
+        D --> E
     end
 
     subgraph ChaoDeFabrica ["3. Chão de Fábrica e Câmaras Frigoríficas"]
-        E --> F["Leitura Óptica e Regex Industrial Imediata"]
-        F --> G["Validação de Vaga e Registro de Palete"]
-        G --> H["Vínculo Manual de DUN-14 e Código de Pesar"]
-        H -->|4. Gravação Imediata Offline| E
+        F["Leitura Óptica e Scanner"]
+        G["Validação e Registro de Vaga"]
+        H["Vínculo Manual de DUN-14 e Pesagem"]
+        F --> G
+        G --> H
     end
 
     subgraph Feedback ["4. Realimentação e Imunidade"]
-        H -->|5. Fila pending_sync ao Reconectar| I["API Serverless /api/cadastrar-produto"]
-        I -->|6. UPSERT Protegido| J["Tabela produtos_atributos_manuais"]
-        J -->|7. Precedência Absoluta sobre ETL| C
+        I["API de Cadastro e Sincronização"]
+        J["Tabela produtos_atributos_manuais"]
+        I --> J
     end
+
+    C -->|1. Hash Check e Delta Sync| D
+    E -->|2. Consulta Reativa Imediata| F
+    H -->|3. Gravação Offline Imediata| E
+    H -->|4. Fila pending_sync ao Reconectar| I
+    J -->|5. Precedência Absoluta sobre ETL| C
 ```
 
 ---

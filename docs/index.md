@@ -15,27 +15,35 @@ O PaletScan une duas frentes de tecnologia que operam em harmonia contínua:
 
 ```mermaid
 flowchart TD
-    subgraph CamadaETL ["1. Camada de Inteligência & ETL"]
-        A1["Scrapers B2B Multi-Fornecedores"] --> A2["Normalização & Heurísticas"]
-        A2 --> A3["Pipeline de IA de Imagens (U2Net)"]
-        A3 --> A4["Validação Matemática Modulus 10 (GS1)"]
+    subgraph CamadaETL ["1. Camada de Inteligência e ETL"]
+        A1["Scrapers B2B Multi-Fornecedores"]
+        A2["Normalização e Heurísticas"]
+        A3["Pipeline de IA de Imagens U2Net"]
+        A4["Validação Matemática Modulus 10 GS1"]
+        A1 --> A2
+        A2 --> A3
+        A3 --> A4
     end
 
     subgraph NuvemDB ["2. Núcleo Relacional Supabase PostgreSQL"]
-        B1[("Catálogo Mestre de Produtos e Marcas")]
-        B2[("Tabela Imutável produtos_atributos_manuais")]
-        B3[("Views Relacionais Otimizadas (vw_produtos_com_marcas)")]
+        B1["Catálogo Mestre de Produtos e Marcas"]
+        B2["Tabela Imutável produtos_atributos_manuais"]
+        B3["Views Relacionais Otimizadas"]
     end
 
     subgraph CamadaPWA ["3. Camada Operacional PWA Local-First"]
-        C1["Service Worker Serwist (sw.ts) & App Shell"] --> C2["Banco Local Reativo WatermelonDB (< 5ms)"]
-        C2 --> C3["Leitor de Câmera & Recorte Óptico Interativo"]
-        C3 --> C4["Funil de Regex Industrial (GS1 / Data Matrix / Lar +365d)"]
+        C1["Service Worker Serwist e App Shell"]
+        C2["Banco Local Reativo WatermelonDB"]
+        C3["Leitor de Câmera e Recorte Óptico"]
+        C4["Funil de Regex Industrial"]
+        C1 --> C2
+        C2 --> C3
+        C3 --> C4
     end
 
-    CamadaETL -->|Carga de Dados Master| NuvemDB
-    NuvemDB -->|Instant Sync < 30ms| CamadaPWA
-    CamadaPWA -->|Fila pending_sync (Reconexão)| NuvemDB
+    A4 -->|Carga de Dados Mestre| B1
+    B1 -->|Instant Sync em Menos de 30ms| C1
+    C4 -->|Fila pending_sync na Reconexão| B2
 ```
 
 1. **Camada de Inteligência de Dados (ETL & Pipelines)**:
@@ -67,19 +75,19 @@ O projeto foi integralmente idealizado, desenhado e desenvolvido por **Jean Barb
 sequenceDiagram
     autonumber
     participant Fornecedor as Portais B2B (Friboi, BRF, Seara...)
-    participant ETL as Pipeline ETL (TypeScript + Python IA)
-    participant Cloud as Supabase PostgreSQL & Storage
+    participant ETL as Pipeline ETL (TypeScript e Python IA)
+    participant Cloud as Supabase PostgreSQL e Storage
     participant PWA as PaletScan PWA (WatermelonDB)
     participant Operador as Operador de Empilhadeira
 
-    Fornecedor->>ETL: Extração de Sitemaps, APIs & Catálogos
-    ETL->>ETL: Modulus 10 GS1 + IA de Imagem U2Net
-    ETL->>Cloud: Carga Relacional Sanitizada & Assets WebP
-    Cloud-->>PWA: Instant Sync Delta (< 30ms via Hash Check)
+    Fornecedor->>ETL: Extração de Sitemaps, APIs e Catálogos
+    ETL->>ETL: Modulus 10 GS1 e IA de Imagem U2Net
+    ETL->>Cloud: Carga Relacional Sanitizada e Assets WebP
+    Cloud-->>PWA: Instant Sync Delta em menos de 30ms
     PWA->>Operador: Catálogo Offline Imediato no Coletor
     Operador->>PWA: Bipagem de Palete na Câmara Frigorífica (Blackout)
-    PWA->>PWA: Gravação Local Reativa (< 5ms)
-    Operador->>PWA: Vínculo Manual de DUN-14 / Código de Balança
+    PWA->>PWA: Gravação Local Reativa em menos de 5ms
+    Operador->>PWA: Vínculo Manual de DUN-14 ou Código de Balança
     PWA->>Cloud: Persistência em produtos_atributos_manuais (Imunidade ETL)
 ```
 
@@ -94,7 +102,7 @@ sequenceDiagram
 | **Banco Nuvem & Storage** | `Supabase` (PostgreSQL 15) | Banco relacional master, Row Level Security (RLS) e Storage Buckets. |
 | **Frontend PWA** | `Next.js 14` (Pages Router) | Framework React para aplicação PWA industrial Touch-First. |
 | **Service Worker & Cache** | `@serwist/next` & Serwist | App Shell precaching, navegação offline e cache inteligente de imagens. |
-| **Banco Reativo Local** | `WatermelonDB v11` (IndexedDB / LokiJS) | Operação offline de alta performance com tempos de resposta < 5ms. |
+| **Banco Reativo Local** | `WatermelonDB v11` (IndexedDB / LokiJS) | Operação offline de alta performance com tempos de resposta rápidos. |
 | **Leitor Óptico & Scanner** | `@zxing/library` & `BarcodeDetector API` | Leitura em tempo real pela câmera e upload com recorte interativo (`react-zoom-pan-pinch`). |
 | **Autenticação & Segurança** | `NextAuth.js` & `@simplewebauthn` | Login por senha, QR Code móvel e biometria/Passkeys FIDO2. |
 | **Busca & Gamificação** | `fuzzball` & `canvas-confetti` | Busca fonética por aproximação e celebração visual no Radar Watchlist. |
