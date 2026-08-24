@@ -42,39 +42,16 @@
 
 ## 🧬 1. A Simbiose Perfeita: Do B2B ao Chão de Fábrica
 
-O PaletScan une duas frentes de tecnologia que operam em harmonia contínua:
+O PaletScan une duas frentes de tecnologia que operam em harmonia contínua através de uma esteira vertical integrada:
 
 ```mermaid
 flowchart TD
-    subgraph CamadaETL ["1. Camada de Inteligência e ETL"]
-        A1["Scrapers B2B Multi-Fornecedores"]
-        A2["Normalização e Heurísticas"]
-        A3["Pipeline de IA de Imagens U2Net"]
-        A4["Validação Matemática Modulus 10 GS1"]
-        A1 --> A2
-        A2 --> A3
-        A3 --> A4
-    end
-
-    subgraph NuvemDB ["2. Núcleo Relacional Supabase PostgreSQL"]
-        B1["Catálogo Mestre de Produtos e Marcas"]
-        B2["Tabela Imutável produtos_atributos_manuais"]
-        B3["Views Relacionais Otimizadas"]
-    end
-
-    subgraph CamadaPWA ["3. Camada Operacional PWA Local-First"]
-        C1["Service Worker Serwist e App Shell"]
-        C2["Banco Local Reativo WatermelonDB"]
-        C3["Leitor de Câmera e Recorte Óptico"]
-        C4["Funil de Regex Industrial"]
-        C1 --> C2
-        C2 --> C3
-        C3 --> C4
-    end
-
-    A4 -->|Carga de Dados Mestre| B1
-    B1 -->|Instant Sync em Menos de 30ms| C1
-    C4 -->|Fila pending_sync na Reconexão| B2
+    C1["1. Camada de Inteligência e ETL\nScrapers B2B, Normalização e IA de Imagens U2Net"]
+    C1 --> C2["2. Núcleo Relacional Supabase\nCatálogo Mestre e Tabela Imutável de Overrides"]
+    C2 --> C3["3. Sincronização Sob Demanda\nInstant Sync Delta em menos de 30ms"]
+    C3 --> C4["4. Camada Operacional PWA Local-First\nService Worker Serwist e WatermelonDB (em menos de 5ms)"]
+    C4 --> C5["5. Execução em Campo no Smartphone\nScanner, Endereçamento Rígido e Radar Watchlist"]
+    C5 -->|Fila pending_sync na Reconexão| C2
 ```
 
 1. **Camada de Inteligência de Dados (ETL & Pipelines)**:
@@ -118,40 +95,19 @@ flowchart TD
 
 ## 🧩 4. A Simbiose Tecnológica: Como as Tecnologias se Relacionam
 
-A arquitetura do PaletScan foi desenhada para que cada tecnologia complemente a outra de forma sinérgica e eficiente:
+A arquitetura do PaletScan foi desenhada para que cada tecnologia complemente a outra de forma sinérgica e estritamente vertical:
 
 ```mermaid
 flowchart TD
-    subgraph FrontendLocal ["Camada Cliente: PWA Local-First"]
-        SW["Serwist e Service Worker\nPrecaching de App Shell e Imagens"]
-        WDB["WatermelonDB\nCamada Reativa ORM (Consultas Ultra-Rápidas)"]
-        IDB["IndexedDB API\nArmazenamento Local Persistente"]
-        ZX["ZXing e Recorte Óptico\nLeitura de Códigos de Barras e QR"]
-        WA["SimpleWebAuthn\nAutenticação Biométrica e Passkeys"]
-
-        SW --> WDB
-        WDB --> IDB
-        ZX --> WDB
-        WA --> WDB
-    end
-
-    subgraph NuvemCloud ["Camada Nuvem: Persistência e CDN"]
-        SUPA["Supabase PostgreSQL\nCatálogo Mestre e Overrides Manuais"]
-        BUCKET["Supabase Storage CDN\nAtivos de Imagens WebP Otimizados"]
-    end
-
-    subgraph PipelineBackend ["Camada Pipeline: Inteligência e IA"]
-        SCRAP["TypeScript e Node.js 20\nScrapers Concorrentes com p-limit"]
-        AI["Python 3 e rembg U2Net\nRemoção de Fundo e Otimização WebP"]
-
-        SCRAP --> AI
-        AI --> BUCKET
-        SCRAP --> SUPA
-    end
-
-    IDB -->|Instant Sync Delta| SUPA
-    SUPA -->|Atualização de Catálogo| IDB
-    BUCKET -->|CacheFirst Offline| SW
+    ETL["⚙️ 1. Pipelines de Ingestão ETL (TypeScript e Node.js 20)"]
+    ETL --> AI["🖼️ 2. Pipeline de Visão Computacional (Python e rembg U2Net)"]
+    AI --> SUPA["☁️ 3. Núcleo Relacional e Storage CDN (Supabase Cloud)"]
+    SUPA --> SYNC["🔄 4. Motor de Instant Sync Delta (Hash Check em menos de 30ms)"]
+    SYNC --> WDB["💾 5. Banco de Dados Local-First (WatermelonDB e IndexedDB)"]
+    WDB --> PWA["📱 6. Aplicação PWA Touch-First (Next.js 14 e Serwist)"]
+    PWA --> AUTH["🔑 7. Segurança e Biometria (WebAuthn Passkeys e Sessão Offline)"]
+    AUTH --> RTN["🛒 8. Operação de Campo e Retorno de Dados"]
+    RTN -->|Fila pending_sync na Reconexão| SUPA
 ```
 
 ### Detalhamento das Integrações:

@@ -13,19 +13,19 @@ O módulo de **Pesquisa e Consulta** ([`PesquisaProduto.tsx`](file:///root/repo_
 
 ## 🎯 2. Radar de Produtos Procurados (Multi-Watchlists)
 
-O módulo de radar gerencia listas prioritárias e cruza os dados com o estoque em tempo real:
+O módulo de radar gerencia listas prioritárias e cruza os dados com o estoque em tempo real em um fluxo estritamente vertical:
 
 ```mermaid
 flowchart TD
     RADAR["🎯 Módulo Radar Watchlist"]
     
-    RADAR --> G1["📋 Gestor de Múltiplas Listas"]
+    RADAR --> G1["📋 1. Gestor de Múltiplas Listas"]
     G1 --> D1["Listas Segmentadas (ex: Validades Críticas, Friboi, Fim de Semana)"]
     
-    RADAR --> G2["📍 Localizador Geográfico em Estoque"]
+    D1 --> G2["📍 2. Localizador Geográfico em Estoque"]
     G2 --> D2["Cruzamento Automático com Vagas Físicas (ex: R1 - B21E)"]
     
-    RADAR --> G3["🎉 Alerta Visual e Gamificação"]
+    D2 --> G3["🎉 3. Alerta Visual e Gamificação"]
     G3 --> D3["Feedback Sonoro e Efeito de Confetes ao Bipar Item Monitorado"]
 ```
 

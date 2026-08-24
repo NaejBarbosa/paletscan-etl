@@ -6,7 +6,7 @@ Um dos pilares mais singulares do **Ecossistema PaletScan** é a sua origem e ci
 
 ## 🛠️ 1. Infraestrutura Linux no Smartphone (Termux + PRoot Ubuntu)
 
-Sem a utilização de computadores tradicionais, o ambiente de desenvolvimento completo foi estruturado no celular via **Termux** rodando uma distribuição Linux containerizada (**PRoot Ubuntu ARM64**), estruturado em uma árvore vertical de camadas:
+Sem a utilização de computadores tradicionais, o ambiente de desenvolvimento completo foi estruturado no celular via **Termux** rodando uma distribuição Linux containerizada (**PRoot Ubuntu ARM64**), encadeada em uma esteira 100% vertical:
 
 ```mermaid
 flowchart TD
@@ -14,23 +14,23 @@ flowchart TD
     HW --> TM["💻 Emulador de Terminal Termux"]
     TM --> UB["🐧 Linux Containerizado PRoot Ubuntu"]
 
-    UB --> L1["📦 Camada de Engenharia de Dados"]
+    UB --> L1["📦 1. Camada de Engenharia de Dados"]
     L1 --> D1["Node.js 20 & TypeScript Core (Pipelines ETL)"]
     D1 --> K1["☁️ Carga Direta no Supabase PostgreSQL"]
 
-    UB --> L2["🐍 Camada de Visão Computacional"]
+    K1 --> L2["🐍 2. Camada de Visão Computacional"]
     L2 --> D2["Python 3.11 & rembg U2Net (IA de Imagens)"]
     D2 --> K2["🖼️ Geração e Upload de WebP Otimizado"]
 
-    UB --> L3["⚡ Camada de Aplicação Frontend"]
+    K2 --> L3["⚡ 3. Camada de Aplicação Frontend"]
     L3 --> D3["Servidor Next.js 14 & Serwist (PWA)"]
     D3 --> K3["📱 Execução Localhost no Navegador e Coletor"]
 
-    UB --> L4["📚 Camada de Documentação & CI/CD"]
+    K3 --> L4["📚 4. Camada de Documentação & CI/CD"]
     L4 --> D4["Git, OpenSSH & MkDocs Material"]
     D4 --> K4["🌐 Deploy Automático no GitHub Pages"]
 
-    UB --> L5["🤖 Agente Inteligente"]
+    K4 --> L5["🤖 5. Agente Inteligente"]
     L5 --> D5["Agente Antigravity AI (Google DeepMind)"]
     D5 --> K5["🛠️ Auditoria, Refatoração e Diagnóstico ao Vivo"]
 ```

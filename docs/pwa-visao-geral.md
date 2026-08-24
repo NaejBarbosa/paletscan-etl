@@ -6,7 +6,7 @@ O **PaletScan PWA** é a interface operacional de chão de fábrica do ecossiste
 
 ## 🎯 1. Principais Funcionalidades da Aplicação
 
-A arquitetura de recursos do PWA está estruturada em módulos verticais especializados:
+A esteira de módulos operacionais do aplicativo está estruturada em fluxo sequencial vertical:
 
 ```mermaid
 flowchart TD
@@ -15,19 +15,19 @@ flowchart TD
     APP --> M1["🔍 1. Módulo de Leitura e Scanner"]
     M1 --> D1["Leitura de Câmera em Tempo Real & Recorte Manual de Rótulos"]
 
-    APP --> M2["⚙️ 2. Módulo de Regex Industrial"]
+    D1 --> M2["⚙️ 2. Módulo de Regex Industrial"]
     M2 --> D2["Decodificação GS1-128, Data Matrix Lar (+365d), BRF & Balança"]
 
-    APP --> M3["🏢 3. Módulo de Endereçamento Rígido"]
+    D2 --> M3["🏢 3. Módulo de Endereçamento Rígido"]
     M3 --> D3["Zoneamento em 4 Caracteres & Bloqueio Ativo de Vaga Ocupada"]
 
-    APP --> M4["🎯 4. Módulo de Radar Watchlist"]
-    M4 --> D4["Busca Fuzzy Fonética & Celebração Visual de Localização com Confetes"]
+    D3 --> M4["🎯 4. Módulo de Radar Watchlist"]
+    M4 --> D4["Busca Fuzzy Fonética & Celebração Visual com Confetes"]
 
-    APP --> M5["📋 5. Módulo de Conferência & Auditoria"]
+    D4 --> M5["📋 5. Módulo de Conferência & Auditoria"]
     M5 --> D5["Checklist Físico Tátil, Expurgo em Massa & Relatórios PDF/CSV"]
 
-    APP --> M6["🔒 6. Módulo de Autenticação & Segurança"]
+    D5 --> M6["🔒 6. Módulo de Autenticação & Segurança"]
     M6 --> D6["Biometria WebAuthn (Passkeys) & Cache Seguro de Sessão Offline"]
 ```
 

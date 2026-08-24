@@ -6,7 +6,7 @@ O sistema de endereçamento do **PaletScan PWA** organiza espacialmente as câma
 
 ## 📌 1. Composição da Coordenada de Vaga (4 Caracteres)
 
-A coordenada física é decomposta em 4 níveis hierárquicos verticais:
+A coordenada física é decomposta em 4 níveis sequenciais estritamente verticais:
 
 ```mermaid
 flowchart TD
@@ -15,13 +15,13 @@ flowchart TD
     COORD --> P1["1º Caractere: Rack (Corredor)"]
     P1 --> D1["Lado da Estrutura (A = Direita, B = Esquerda)"]
     
-    COORD --> P2["2º Caractere: Módulo (Coluna)"]
+    D1 --> P2["2º Caractere: Módulo (Coluna)"]
     P2 --> D2["Posição Horizontal (1 a 5 da entrada ao fundo)"]
     
-    COORD --> P3["3º Caractere: Gaveta (Nível de Altura)"]
+    D2 --> P3["3º Caractere: Gaveta (Nível de Altura)"]
     P3 --> D3["Plano Vertical (0 = Solo, 1 a 3 = Prateleiras Suspensas)"]
     
-    COORD --> P4["4º Caractere: Vaga (Posição Lateral)"]
+    D3 --> P4["4º Caractere: Vaga (Posição Lateral)"]
     P4 --> D4["Alocação no Plano (D = Direita, E = Esquerda)"]
 ```
 
@@ -44,7 +44,7 @@ flowchart TD
     R --> R1["Câmara R1 e Câmara R2"]
     R1 --> VR["Grade Completa de Vagas A10D a B53E"]
     
-    ZONE --> C["🧊 Câmaras de Congelados (-18°C)"]
+    VR --> C["🧊 Câmaras de Congelados (-18°C)"]
     C --> C1["Câmara C1 e Câmara C2"]
     C1 --> VC["Grade Completa de Vagas A10D a B53E"]
 ```
