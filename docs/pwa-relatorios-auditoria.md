@@ -1,0 +1,37 @@
+# 📊 Relatórios, Conferência & Auditoria
+
+Os módulos de relatórios e auditoria do **PaletScan PWA** centralizam o controle de estoque, acompanhamento de validades, conferência física de paletes e auditoria de inventário.
+
+---
+
+## 📈 1. Relatório Geral de Paletes ([`Relatorio.tsx`](file:///root/repo_pwa/components/Relatorio.tsx))
+
+* **Cards de Métricas Operacionais**: Total de paletes, SKUs únicos, câmaras em uso e divisão Congelados/Resfriados.
+* **Filtros Avançados**: Busca textual, conservação, câmara, data de recebimento e modo de conferência.
+* **Padronização de Contêiner**: Largura simétrica fixa (`min-w-[92px] sm:min-w-[100px]`) para exibição consistente de contadores de itens em smartphones.
+
+---
+
+## 📋 2. Modo de Conferência Física de Paletes & Checklist
+
+```mermaid
+flowchart TD
+    A["Operador Inicia Conferência Física"] --> B["Ativa Checklist Tátil no Palete"]
+    B --> C{"Método de Verificação"}
+    
+    C -->|Bipagem com Scanner| D["Marcação Automática do Item 🟢"]
+    C -->|Toque Tátil na Tela| D
+    
+    D --> E{"Palete Completo?"}
+    E -->|Sim| F["Palete Confirmado em Estoque"]
+    E -->|Não (Item Faltante)| G["Destaque em Vermelho / Alerta de Ausência"]
+    G --> H["Ação de Expurgo em Massa (/api/excluir-paletes-massa)"]
+```
+
+---
+
+## 📄 3. Exportação de Relatórios (CSV CP1252 & PDF Executivo)
+
+* **CSV Otimizado para Android (`CP1252`)**: Codificação Windows-1252 com delimitador ponto e vírgula (`;`), abrindo diretamente no Excel/Google Sheets do celular sem problemas de acentuação.
+* **PDF Executivo (`jspdf` + `jspdf-autotable`)**: Relatório formatado com cabeçalho corporativo, divisão por câmara/vaga e badges de validade.
+* **Android MediaScan**: Indexação imediata dos arquivos na biblioteca do dispositivo via `termux-media-scan`.

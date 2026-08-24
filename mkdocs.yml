@@ -1,6 +1,6 @@
-site_name: PaletScan ETL - Documentação Técnica
-site_description: Documentação técnica oficial do pipeline de dados, scrapers B2B, IA de imagem e sincronização Supabase do PaletScan.
-site_author: Jean Barbosa & Antigravity Data Engineering Team
+site_name: "PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)"
+site_description: "Documentação técnica e operacional completa do ecossistema PaletScan: pipelines de engenharia de dados (ETL), inteligência de catálogo B2B, IA de visão computacional e Progressive Web App (PWA) Local-First para controle de validades em câmaras frias."
+site_author: "Jean Barbosa & Antigravity Data Engineering Team"
 site_url: https://NaejBarbosa.github.io/paletscan-etl/
 
 theme:
@@ -66,12 +66,24 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - "Início": "index.md"
-  - "Guia de Operações e CLI": "operacoes.md"
-  - "Scrapers Multi-Fornecedores": "scrapers-multi-fornecedores.md"
-  - "Pipeline Friboi / JBS": "pipeline-friboi.md"
-  - "Normalizadores e Heurísticas": "heuristicas-normalizadores.md"
-  - "Pipeline de IA de Imagens": "processamento-imagens.md"
-  - "Governança e Schema": "schema-manifesto.md"
-  - "Sincronização com Supabase": "supabase.md"
-  - "Glossário de Termos Técnicos": "glossario.md"
+  - "Ecossistema & Arquitetura":
+      - "Visão Geral & Simbiose": "index.md"
+      - "Arquitetura Ponta a Ponta": "arquitetura-ecossistema.md"
+      - "Dev Móvel no Smartphone & Termux": "desenvolvimento-termux.md"
+  - "Aplicação PWA Local-First":
+      - "Visão Geral & Conceito PWA": "pwa-visao-geral.md"
+      - "Service Worker & Resiliência Offline": "pwa-service-worker.md"
+      - "Leitor Câmera & Regex Industrial": "pwa-scanner-regex.md"
+      - "Endereçamento & Vagas de Câmaras": "pwa-vagas-zoneamento.md"
+      - "Pesquisa, Consulta & Radar Watchlist": "pwa-pesquisa-watchlist.md"
+      - "Relatórios, Conferência & Auditoria": "pwa-relatorios-auditoria.md"
+      - "Autenticação, Passkeys & Permissões": "pwa-auth-permissoes.md"
+  - "Engenharia de Dados (ETL & Pipeline)":
+      - "Guia de Operações & CLI": "operacoes.md"
+      - "Scrapers Multi-Fornecedores": "scrapers-multi-fornecedores.md"
+      - "Pipeline Friboi / JBS": "pipeline-friboi.md"
+      - "Normalizadores & Heurísticas": "heuristicas-normalizadores.md"
+      - "Pipeline de IA de Imagens": "processamento-imagens.md"
+      - "Governança de Schema & Manifesto": "schema-manifesto.md"
+      - "Sincronização com Supabase": "supabase.md"
+  - "Glossário & Referências": "glossario.md"
