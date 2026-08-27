@@ -119,6 +119,11 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
   - Reestruturado o motor central [`core/heuristics/category_classifier.ts`](file:///root/paletscan-etl/core/heuristics/category_classifier.ts) com decodificação obrigatória de escapes Unicode (`Su\u00ednos` ➔ `Suínos`), eliminação de duplicidades singular/plural (`Bovino` ➔ `Bovinos`, `Vegetal` ➔ `Vegetais & Congelados`, `Industrializado` ➔ `Processados & Embutidos`) e priorização estrita de limites de palavra (`\b`).
   - Corrigida a desambiguação entre cortes de aves in natura/temperados (*peito com osso, coxa, sobrecoxa, asa, coxinha da asa/drumet, meio da asa/tulipa, sassami*) e embutidos/processados (*linguiça, salsicha, mortadela, presunto, nuggets, pizzas, pratos prontos*), com lookahead negativo para `coxinha` (salgado vs drumet), proteção de steaks nobres bovinos (*Chorizo, Denver, Ancho*) e brisket bovino (*Friboi, 1953, Maturatta, Bassi*).
   - Executada a sincronização via [`scripts/reclassify_and_sync_taxonomy.ts`](file:///root/paletscan-etl/scripts/reclassify_and_sync_taxonomy.ts), atualizando 537 produtos no Supabase e todos os arquivos de staging com 888 produtos consolidados em `Aves` e 954 em `Processados & Embutidos`.
+- [x] **Correção da Sincronização Supabase & Reconciliação do Catálogo PWA (3.658 Produtos)**:
+  - **Correção do Payload em `handleLimparBancoLocalESincronizar`**: Removidos os campos não pertencentes à tabela (`marca_id` e `marca_nome`) no envio de `paletesToSend` para a tabela `paletes_armazenados` no Supabase, eliminando o erro PostgREST `PGRST204` que bloqueava a sincronização manual e gerava o erro *"Erro ao enviar registros para o servidor..."*.
+  - **Rastreamento de Exclusões no WatermelonDB (`deletedProdutos`)**: Implementada a detecção e exclusão de produtos obsoletos/desaprovados no array `changes.produtos.deleted` em [`repo_pwa/lib/database/sync.ts`](file:///root/repo_pwa/lib/database/sync.ts), garantindo que a base local IndexedDB/WatermelonDB reflita exatamente o catálogo master aprovado.
+  - **Atualização das Chaves de Purga e Cache (`ps_pwa_reset_v48_catalog_3658` e `banco_valida_data_v48_catalog_3658`)**: Sincronizadas as chaves de reset e cache para forçar a entrega consistente de 3.658 produtos aprovados com EAN-13 tanto no frontend quanto no endpoint `/api/validar`.
+  - **Suíte de Testes Automatizados**: Criado o script [`scripts/test_sync_and_catalog.ts`](file:///root/paletscan-etl/scripts/test_sync_and_catalog.ts) cobrindo upsert de paletes sem anomalias, integridade do `produtos.json` e paridade de 100% dos 3.658 produtos elegíveis com a base do Supabase.
 
 ---
 
@@ -126,5 +131,6 @@ O pipeline de dados é totalmente independente e executa requisições web HTTP 
 
 1. **Integração Backend Supabase com Frontend PWA**: Conectar o novo banco relacional PostgreSQL/Supabase à aplicação PWA em produção, substituindo a integração legada via Google Sheets.
 2. **Busca Unificada Fuzzy no PWA**: Implementar busca rápida por SKU, EAN-13, DUN-14 e termos aproximados de produtos diretamente no scanner do operador.
+
 
 
