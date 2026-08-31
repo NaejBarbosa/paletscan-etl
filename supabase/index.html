@@ -961,10 +961,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-sincronizacao-de-midias-e-upload-cdn-db_syncsync_imagests" class="md-nav__link">
+  <a href="#3-alinhamento-relacional-estrito-politica-zero-data-loss" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🖼️ 3. Sincronização de Mídias e Upload CDN (db_sync/sync_images.ts)
+        🔒 3. Alinhamento Relacional Estrito &amp; Política Zero Data Loss
       
     </span>
   </a>
@@ -972,10 +972,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-comandos-de-sincronizacao" class="md-nav__link">
+  <a href="#4-sincronizacao-de-midias-e-upload-cdn-db_syncsync_imagests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💻 4. Comandos de Sincronização
+        🖼️ 4. Sincronização de Mídias e Upload CDN (db_sync/sync_images.ts)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-comandos-de-sincronizacao-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 5. Comandos de Sincronização &amp; Teste
       
     </span>
   </a>
@@ -1102,10 +1113,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-sincronizacao-de-midias-e-upload-cdn-db_syncsync_imagests" class="md-nav__link">
+  <a href="#3-alinhamento-relacional-estrito-politica-zero-data-loss" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🖼️ 3. Sincronização de Mídias e Upload CDN (db_sync/sync_images.ts)
+        🔒 3. Alinhamento Relacional Estrito &amp; Política Zero Data Loss
       
     </span>
   </a>
@@ -1113,10 +1124,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-comandos-de-sincronizacao" class="md-nav__link">
+  <a href="#4-sincronizacao-de-midias-e-upload-cdn-db_syncsync_imagests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💻 4. Comandos de Sincronização
+        🖼️ 4. Sincronização de Mídias e Upload CDN (db_sync/sync_images.ts)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-comandos-de-sincronizacao-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 5. Comandos de Sincronização &amp; Teste
       
     </span>
   </a>
@@ -1175,7 +1197,19 @@
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">]</span>
 </span></code></pre></div>
 <hr />
-<h2 id="3-sincronizacao-de-midias-e-upload-cdn-db_syncsync_imagests">🖼️ 3. Sincronização de Mídias e Upload CDN (<code>db_sync/sync_images.ts</code>)</h2>
+<h2 id="3-alinhamento-relacional-estrito-politica-zero-data-loss">🔒 3. Alinhamento Relacional Estrito &amp; Política Zero Data Loss</h2>
+<p>Para garantir que nenhuma alteração manual realizada pelo operador no chão de fábrica do PWA seja sobrescrita ou perdida em rotinas automáticas de ETL:</p>
+<ol>
+<li><strong>Separação Canônica de Entidades</strong>:</li>
+<li><code>produtos</code>: ID determinístico UUIDv5, <code>marca_id</code>, <code>descricao_padronizada</code>, <code>descricao_original</code>, <code>classe</code>, <code>conservacao</code>, <code>status_imagem</code>.</li>
+<li><code>codigos_barras</code>: Associação 1:N com <code>produto_id</code> e tipos estritos (<code>EAN</code>, <code>DUN</code>, <code>PESAR</code>).</li>
+<li><code>produtos_atributos_manuais</code>: Armazena com prioridade absoluta qualquer ajuste manual feito no PWA (edição de nome, conservação, classe ou vínculos de DUN).</li>
+<li><code>vw_produtos_com_marcas</code>: View relacional consolidada consumida pelo PWA durante a sincronização delta.</li>
+<li><strong>Suíte de Testes de Imunidade a Perda de Dados</strong>:</li>
+<li>O script <a href="file:///root/paletscan-etl/scripts/test_pwa_crud_and_sync_safety.ts"><code>scripts/test_pwa_crud_and_sync_safety.ts</code></a> valida o ciclo CRUD completo e garante 100% de preservação de dados após operações de wipe ou sincronizações globais.</li>
+</ol>
+<hr />
+<h2 id="4-sincronizacao-de-midias-e-upload-cdn-db_syncsync_imagests">🖼️ 4. Sincronização de Mídias e Upload CDN (<code>db_sync/sync_images.ts</code>)</h2>
 <p>O script <a href="file:///root/paletscan-etl/db_sync/sync_images.ts"><code>db_sync/sync_images.ts</code></a> gerencia o upload das imagens WebP tratadas para o bucket público do Supabase Storage:</p>
 <ol>
 <li><strong>Leitura dos Arquivos Processados</strong>: Lê os ativos WebP em <code>images/processed/</code>.</li>
@@ -1188,12 +1222,15 @@
 <li><code>updated_at</code>: Atualiza o timestamp da última mutação para orientar a sincronização delta do PWA.</li>
 </ol>
 <hr />
-<h2 id="4-comandos-de-sincronizacao">💻 4. Comandos de Sincronização</h2>
+<h2 id="5-comandos-de-sincronizacao-teste">💻 5. Comandos de Sincronização &amp; Teste</h2>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Sincronizar dados relacionais de todas as indústrias para o Supabase</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>npm<span class="w"> </span>run<span class="w"> </span>sync:supabase
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Sincronizar apenas imagens tratadas para o Supabase Storage</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>npm<span class="w"> </span>run<span class="w"> </span>sync:images
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Validar imunidade a perda de dados e integridade relacional do PWA</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>npx<span class="w"> </span>tsx<span class="w"> </span>scripts/test_pwa_crud_and_sync_safety.ts
 </span></code></pre></div>
 
 

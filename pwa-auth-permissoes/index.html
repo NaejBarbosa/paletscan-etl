@@ -659,13 +659,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-autenticacao-multi-fator-hibrida" class="md-nav__link">
+  <a href="#1-autenticacao-multi-fator-hibrida-resiliencia-offline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔐 1. Autenticação Multi-Fator Híbrida
+        🔐 1. Autenticação Multi-Fator Híbrida &amp; Resiliência Offline
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🔐 1. Autenticação Multi-Fator Híbrida &amp; Resiliência Offline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-de-seguranca-e-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes de Segurança e Sessão:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1002,13 +1019,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-autenticacao-multi-fator-hibrida" class="md-nav__link">
+  <a href="#1-autenticacao-multi-fator-hibrida-resiliencia-offline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔐 1. Autenticação Multi-Fator Híbrida
+        🔐 1. Autenticação Multi-Fator Híbrida &amp; Resiliência Offline
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🔐 1. Autenticação Multi-Fator Híbrida &amp; Resiliência Offline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-de-seguranca-e-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes de Segurança e Sessão:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1041,27 +1075,34 @@
 
 
 <h1 id="autenticacao-passkeys-permissoes">🔒 Autenticação, Passkeys &amp; Permissões</h1>
-<p>O <strong>PaletScan PWA</strong> dispõe de um sistema de segurança multicamadas que combina autenticação tradicional, biometria via Passkeys e controle de acesso baseado em papéis (RBAC), projetado para manter a operação segura mesmo durante blackouts offline.</p>
+<p>O <strong>PaletScan PWA</strong> dispõe de um sistema de segurança multicamadas que combina autenticação tradicional, biometria via Passkeys, auto-logout por inatividade e controle de acesso baseado em papéis (RBAC), projetado para manter a operação segura e ágil mesmo durante blackouts offline.</p>
 <hr />
-<h2 id="1-autenticacao-multi-fator-hibrida">🔐 1. Autenticação Multi-Fator Híbrida</h2>
+<h2 id="1-autenticacao-multi-fator-hibrida-resiliencia-offline">🔐 1. Autenticação Multi-Fator Híbrida &amp; Resiliência Offline</h2>
 <p>O fluxo de autenticação suporta múltiplos métodos de entrada com garantia de sessão offline:</p>
 <pre class="mermaid"><code>flowchart TD
-    LOGIN["🔐 Tela de Login do PWA"]
+    LOGIN["🔐 Tela de Login do PWA (Pré-Cacheada no Service Worker)"]
 
     LOGIN --&gt; M1["1. Credenciais Tradicionais (Usuário e Senha)"]
     LOGIN --&gt; M2["2. Biometria WebAuthn FIDO2 (Passkeys)"]
     LOGIN --&gt; M3["3. Token QR Code Móvel"]
 
-    M1 --&gt; AUTH["🛡️ Validação no Motor de Autenticação"]
+    M1 --&gt; AUTH["🛡️ Validação com Cache em Memória"]
     M2 --&gt; AUTH
     M3 --&gt; AUTH
 
     AUTH --&gt; JWT["🎫 Emissão de Sessão JWT"]
     JWT --&gt; CACHE["💾 Armazenamento em Cache Offline (ps_auth_session)"]
-    CACHE --&gt; OK["✅ Acesso Seguro Garantido no Interior das Câmaras Frias"]</code></pre>
+    CACHE --&gt; OK["✅ Acesso Seguro Garantido no Interior das Câmaras Frias"]
+
+    OK --&gt; INACT["⏱️ Monitor de Inatividade (5 Minutos)"]
+    INACT --&gt;|Sem Interação| LOGOUT["🔒 Auto-Logout &amp; Bloqueio Automático"]</code></pre>
+<h3 id="componentes-de-seguranca-e-sessao">Componentes de Segurança e Sessão:</h3>
 <ul>
 <li><strong>Passkeys / Biometria (WebAuthn)</strong>: Permite login por impressão digital ou reconhecimento facial sem necessidade de digitar senhas com luvas térmicas no frio.</li>
-<li><strong>Cache de Sessão Offline (<code>ps_auth_session</code>)</strong>: Mantém a sessão do operador ativa e segura mesmo ao fechar e reabrir o PWA offline no fundo da câmara fria.</li>
+<li><strong>Pré-Cache da Tela de Login</strong>: A página de autenticação é precacheada pelo Service Worker, garantindo abertura instantânea mesmo sem sinal de rede.</li>
+<li><strong>Auto-Logout por Inatividade (5 Minutos)</strong>: Temporizador reativo que encerra a sessão ativa caso o dispositivo fique sem interação no chão de fábrica, evitando registros inadvertidos em coletores compartilhados.</li>
+<li><strong>Cache em Memória e Resiliência de Variáveis</strong>: O motor de autenticação unifica o suporte a <code>REDIS_URL</code> e <code>VISITOR_PASSWORD</code>, eliminando latências de autenticação via cache em memória com timeout estrito.</li>
+<li><strong>Isenção de Expiração para Operadores Fixos</strong>: As credenciais operacionais de administração (como <code>JeanBfreitas_</code>) possuem política de não-expiração forçada de senha, prevenindo travamento do turno de trabalho.</li>
 </ul>
 <hr />
 <h2 id="2-matriz-de-controle-de-acesso-rbac">🛡️ 2. Matriz de Controle de Acesso (RBAC)</h2>

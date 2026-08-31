@@ -1058,20 +1058,24 @@
     M3 --&gt; D3["Zoneamento em 4 Caracteres &amp; Bloqueio Ativo de Vaga Ocupada"]
 
     D3 --&gt; M4["🎯 4. Módulo de Radar Watchlist"]
-    M4 --&gt; D4["Busca Fuzzy Fonética &amp; Celebração Visual com Confetes"]
+    M4 --&gt; D4["Busca Estrita EAN/DUN, Fuzzy Fonética &amp; Sincronização BroadcastChannel"]
 
     D4 --&gt; M5["📋 5. Módulo de Conferência &amp; Auditoria"]
     M5 --&gt; D5["Checklist Físico Tátil, Expurgo em Massa &amp; Relatórios PDF/CSV"]
 
     D5 --&gt; M6["🔒 6. Módulo de Autenticação &amp; Segurança"]
-    M6 --&gt; D6["Biometria WebAuthn (Passkeys) &amp; Cache Seguro de Sessão Offline"]</code></pre>
+    M6 --&gt; D6["Biometria Passkeys, Auto-Logout por Inatividade &amp; Cache Offline"]</code></pre>
 <hr />
 <h2 id="2-diferenciais-do-pwa-no-ambiente-frigorifico">⚡ 2. Diferenciais do PWA no Ambiente Frigorífico</h2>
 <ol>
-<li><strong>Instalável e Sem Distrações (<em>Standalone Mode</em>)</strong>:</li>
-<li>Funciona como um app nativo no Android, ocultando barras de endereço do navegador para maximizar o espaço útil da tela e evitar toques acidentais.</li>
+<li><strong>Fullscreen Edge-to-Edge &amp; Safe Area Insets</strong>:</li>
+<li>Funciona em tela cheia com respeito às variáveis de ambiente CSS <code>env(safe-area-inset-top)</code> e <code>env(safe-area-inset-bottom)</code>, garantindo visualização desimpedida em celulares com entalhes (<em>notch</em>), ilhas dinâmicas ou botões virtuais de navegação.</li>
+<li><strong>Barra Superior Minimalista &amp; Ergonomia</strong>:</li>
+<li>Cabeçalho limpo com identificação visual do app e versão, mantendo detalhes de login organizados na área de configurações.</li>
+<li><strong>Alerta Flutuante de Modo Offline em Alto Contraste</strong>:</li>
+<li>Indicador de status de rede calibrado com paleta luminosa para câmaras escuras, posicionado estrategicamente para não cobrir botões de ação e leitura.</li>
 <li><strong>Design Ergonômico de Alta Densidade (<em>Touch-First</em>)</strong>:</li>
-<li>Botões ampliados e layout em contraste elevado (paletas <em>Slate/Dark</em>) adequados para operação com luvas térmicas em ambientes escuros.</li>
+<li>Botões ampliados e layout em contraste elevado (paletas <em>Slate/Dark</em>) adequados para operação com luvas térmicas em temperaturas negativas (-18°C a -25°C).</li>
 <li><strong>Leitura Resiliente a Condensação e Reflexos</strong>:</li>
 <li>Ferramenta integrada de recorte manual (<code>react-zoom-pan-pinch</code>) para leitura de códigos em paletes com filme stretch embaçado ou amassado.</li>
 <li><strong>Alocação Rígida sem Duplicidades</strong>:</li>

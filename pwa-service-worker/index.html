@@ -541,10 +541,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-banco-de-dados-local-first-watermelondb-schema-v11" class="md-nav__link">
+  <a href="#3-banco-de-dados-local-first-watermelondb-indexeddb" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🗄️ 3. Banco de Dados Local-First (WatermelonDB Schema v11)
+        🗄️ 3. Banco de Dados Local-First (WatermelonDB &amp; IndexedDB)
       
     </span>
   </a>
@@ -1035,10 +1035,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-banco-de-dados-local-first-watermelondb-schema-v11" class="md-nav__link">
+  <a href="#3-banco-de-dados-local-first-watermelondb-indexeddb" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🗄️ 3. Banco de Dados Local-First (WatermelonDB Schema v11)
+        🗄️ 3. Banco de Dados Local-First (WatermelonDB &amp; IndexedDB)
       
     </span>
   </a>
@@ -1068,8 +1068,8 @@
 <h2 id="1-o-desafio-da-camara-frigorifica">❄️ 1. O Desafio da Câmara Frigorífica</h2>
 <pre class="mermaid"><code>flowchart TD
     subgraph CamaraFria ["1. Interior da Câmara Frigorífica (Blackout de Sinal)"]
-        A1["Coletor / Smartphone Android em Modo Offline"]
-        A2["App Shell Servido Instantaneamente via Serwist"]
+        A1["Coletor ou Smartphone Android em Modo Offline"]
+        A2["App Shell e Tela de Login Servidos pelo Serwist"]
         A3["Catálogo Mestre Lido do WatermelonDB Local"]
         A4["Bipagem e Gravação Reativa Local em menos de 5ms"]
         A5["Fila pending_sync Enfileira Mutações no localStorage"]
@@ -1119,8 +1119,8 @@
 </span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">      </span><span class="nx">handler</span><span class="o">:</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span><span class="nx">NetworkOnly</span><span class="p">(),</span>
 </span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="p">},</span>
 </span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">      </span><span class="c1">// 2. Navegação suave do App Shell com fallback offline</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">      </span><span class="nx">matcher</span><span class="o">:</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">request</span><span class="p">.</span><span class="nx">mode</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'navigate'</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">url</span><span class="p">.</span><span class="nx">pathname</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'/'</span><span class="p">,</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">      </span><span class="c1">// 2. Navegação suave do App Shell e Login com fallback offline</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">      </span><span class="nx">matcher</span><span class="o">:</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">request</span><span class="p">.</span><span class="nx">mode</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'navigate'</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">url</span><span class="p">.</span><span class="nx">pathname</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'/'</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">url</span><span class="p">.</span><span class="nx">pathname</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'/login'</span><span class="p">,</span>
 </span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">      </span><span class="nx">handler</span><span class="o">:</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span><span class="nx">NetworkFirst</span><span class="p">({</span>
 </span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">        </span><span class="nx">cacheName</span><span class="o">:</span><span class="w"> </span><span class="s1">'offline-pages'</span><span class="p">,</span>
 </span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">        </span><span class="nx">networkTimeoutSeconds</span><span class="o">:</span><span class="w"> </span><span class="kt">3</span><span class="p">,</span>
@@ -1144,11 +1144,11 @@
 </span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="nx">serwist</span><span class="p">.</span><span class="nx">addEventListeners</span><span class="p">();</span>
 </span></code></pre></div>
 <hr />
-<h2 id="3-banco-de-dados-local-first-watermelondb-schema-v11">🗄️ 3. Banco de Dados Local-First (WatermelonDB Schema v11)</h2>
+<h2 id="3-banco-de-dados-local-first-watermelondb-indexeddb">🗄️ 3. Banco de Dados Local-First (WatermelonDB &amp; IndexedDB)</h2>
 <p>Diferente de soluções convencionais que utilizam apenas o <code>localStorage</code> (limitado a 5MB e síncrono), o PaletScan utiliza o <strong>WatermelonDB</strong> construído sobre adaptadores <strong>IndexedDB / LokiJS</strong>:</p>
 <ul>
 <li><strong>Zero Latência</strong>: Leitura e escrita completas em menos de 5 milissegundos.</li>
-<li><strong>Escala para Grandes Volumes</strong>: Suporte comprovado para mais de 100.000 SKUs armazenados no cliente.</li>
+<li><strong>Invalidação de Hash e Propagação de DUNs</strong>: O sincronizador compara a assinatura de hash do catálogo remoto e invalida o cache local somente quando há mutações reais, forçando a propagação imediata de vínculos de DUN-14 para o IndexedDB móvel.</li>
 <li><strong>Fila de Contingência <code>pending_sync</code></strong>: Caso ocorra instabilidade de rede no envio para o Supabase, as mutações são preservadas localmente e despachadas automaticamente ao restabelecer o sinal.</li>
 </ul>
 

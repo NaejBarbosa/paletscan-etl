@@ -435,15 +435,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-indexacao-nativa-de-arquivos-no-android-media-scan" class="md-nav__link">
+  <a href="#2-persistencia-de-rotinas-noturnas-no-android-crontab-wake-lock" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📲 2. Indexação Nativa de Arquivos no Android (Media Scan)
+        ⏰ 2. Persistência de Rotinas Noturnas no Android (Crontab &amp; Wake-Lock)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📲 2. Indexação Nativa de Arquivos no Android (Media Scan)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-indexacao-nativa-de-arquivos-no-android-media-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📲 3. Indexação Nativa de Arquivos no Android (Media Scan)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📲 3. Indexação Nativa de Arquivos no Android (Media Scan)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -463,10 +474,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-guia-de-execucao-local-unificado" class="md-nav__link">
+  <a href="#4-guia-de-execucao-local-unificado" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 3. Guia de Execução Local Unificado
+        🚀 4. Guia de Execução Local Unificado
       
     </span>
   </a>
@@ -1075,15 +1086,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-indexacao-nativa-de-arquivos-no-android-media-scan" class="md-nav__link">
+  <a href="#2-persistencia-de-rotinas-noturnas-no-android-crontab-wake-lock" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📲 2. Indexação Nativa de Arquivos no Android (Media Scan)
+        ⏰ 2. Persistência de Rotinas Noturnas no Android (Crontab &amp; Wake-Lock)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📲 2. Indexação Nativa de Arquivos no Android (Media Scan)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-indexacao-nativa-de-arquivos-no-android-media-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📲 3. Indexação Nativa de Arquivos no Android (Media Scan)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📲 3. Indexação Nativa de Arquivos no Android (Media Scan)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1103,10 +1125,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-guia-de-execucao-local-unificado" class="md-nav__link">
+  <a href="#4-guia-de-execucao-local-unificado" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 3. Guia de Execução Local Unificado
+        🚀 4. Guia de Execução Local Unificado
       
     </span>
   </a>
@@ -1162,16 +1184,29 @@
 <h3 id="componentes-do-ambiente-movel">Componentes do Ambiente Móvel:</h3>
 <ul>
 <li><strong>Node.js 20 &amp; npm</strong>: Compilação de scrapers, execução de validações Modulus 10 e compilação do Service Worker Serwist.</li>
-<li><strong>Python 3 &amp; rembg (U2Net/ONNX)</strong>: Execução local de modelos de aprendizado profundo (Deep Learning) para remoção de fundo e tratamento de imagens em CPU ARM64 móvel.</li>
+<li><strong>Python 3 &amp; rembg (U2Net/ONNX)</strong>: Execução local de modelos de aprendizado profundo (<em>Deep Learning</em>) para remoção de fundo e tratamento de imagens em CPU ARM64 móvel.</li>
 <li><strong>MkDocs Material</strong>: Compilação e publicação automatizada do site de documentação unificado via GitHub Actions.</li>
 <li><strong>Agente Antigravity (Google DeepMind)</strong>: Assistente IA que opera como copiloto avançado diretamente no terminal móvel, realizando diagnóstico em tempo real, refatorações complexas e auditoria de código.</li>
 </ul>
 <hr />
-<h2 id="2-indexacao-nativa-de-arquivos-no-android-media-scan">📲 2. Indexação Nativa de Arquivos no Android (Media Scan)</h2>
+<h2 id="2-persistencia-de-rotinas-noturnas-no-android-crontab-wake-lock">⏰ 2. Persistência de Rotinas Noturnas no Android (Crontab &amp; Wake-Lock)</h2>
+<p>Para permitir que o pipeline ETL (<code>etl-run</code>) seja executado automaticamente de madrugada (ex: 03:00) com a tela do celular apagada:</p>
+<ol>
+<li><strong>Ativação do Wake-Lock</strong>:
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>termux-wake-lock
+</span></code></pre></div>
+   <em>Impede que a CPU do smartphone entre em modo de suspensão profunda (Deep Sleep).</em></li>
+<li><strong>Bateria Irrestrita</strong>:
+   <em>Configurar a gestão de bateria do aplicativo Termux no Android como </em><em>Sem Restrições</em><em>.</em></li>
+<li><strong>Monitoramento e Autocura</strong>:
+   <em>Utilizar <code>etl-cron-status</code> para verificar a integridade do daemon e acompanhar os logs.</em></li>
+</ol>
+<hr />
+<h2 id="3-indexacao-nativa-de-arquivos-no-android-media-scan">📲 3. Indexação Nativa de Arquivos no Android (Media Scan)</h2>
 <p>Ao exportar relatórios para a memória interna do celular (<code>/sdcard/Download/</code>), o sistema invoca utilitários nativos do Termux para indexar imediatamente tanto planilhas <strong>CSV</strong> quanto documentos <strong>PDF</strong>:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Indexação nativa de relatórios CSV e PDF no Android</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>termux-media-scan<span class="w"> </span>/sdcard/Download/relatorio_paletes.csv
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>termux-media-scan<span class="w"> </span>/sdcard/Download/relatorio_paletes.pdf
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Indexação nativa de relatórios CSV e PDF no Android</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>termux-media-scan<span class="w"> </span>/sdcard/Download/relatorio_paletes.csv
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>termux-media-scan<span class="w"> </span>/sdcard/Download/relatorio_paletes.pdf
 </span></code></pre></div>
 <h3 id="por-que-o-mediascan-e-crucial-no-chao-de-fabrica">Por que o MediaScan é Crucial no Chão de Fábrica?</h3>
 <ul>
@@ -1179,22 +1214,20 @@
 <li><strong>Agilidade no Compartilhamento</strong>: O operador de empilhadeira gera o relatório PDF ou CSV e pode anexá-lo instantaneamente no WhatsApp corporativo ou e-mail.</li>
 </ul>
 <hr />
-<h2 id="3-guia-de-execucao-local-unificado">🚀 3. Guia de Execução Local Unificado</h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 1. Clonar o repositório ETL</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/NaejBarbosa/paletscan-etl.git
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">cd</span><span class="w"> </span>paletscan-etl
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># 2. Instalar dependências Node.js e Python</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>npm<span class="w"> </span>install
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># 3. Executar o pipeline de extração e tratamento</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>npm<span class="w"> </span>run<span class="w"> </span>scrape:all
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>npm<span class="w"> </span>run<span class="w"> </span>images:process
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>npm<span class="w"> </span>run<span class="w"> </span>sync:supabase
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1"># 4. Compilar e testar a documentação unificada</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>mkdocs<span class="w"> </span>serve
+<h2 id="4-guia-de-execucao-local-unificado">🚀 4. Guia de Execução Local Unificado</h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 1. Clonar o repositório ETL</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/NaejBarbosa/paletscan-etl.git
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">cd</span><span class="w"> </span>paletscan-etl
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># 2. Instalar dependências Node.js e Python</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>npm<span class="w"> </span>install
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># 3. Executar o pipeline de extração e tratamento</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>npm<span class="w"> </span>run<span class="w"> </span>full
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1"># 4. Compilar e testar a documentação unificada</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>mkdocs<span class="w"> </span>serve
 </span></code></pre></div>
 
 
