@@ -155,7 +155,8 @@ Para evitar inconsistências caso uma marca ou holding entre ou saia do projeto,
 | `etl-conflicts` | `cat staging/conflicts_log.json` | Exibe conflitos de códigos de barras EAN/DUN em staging. |
 | `etl-status` | `npm run status` | Exibe contagem de registros no Supabase ao vivo em formato 36 colunas. |
 | `etl-schedule` | CLI Interativo | Menu para cadastrar agendamentos no Crontab do Linux. |
-| `etl-cron-list` | `crontab -l` | Lista os agendamentos ativos do PaletScan no Crontab. |
+| `etl-cron-status` | CLI Status | Exibe status ao vivo do daemon cron, fuso horário e agendamento. |
+| `etl-cron-list` | `etl-cron-status` | Lista e audita o agendamento ativo e integridade do cron. |
 | `etl-cron-remove`| `crontab -r` | Remove os agendamentos do PaletScan no Crontab. |
 
 ---
@@ -244,15 +245,23 @@ $$\begin{matrix} \text{Minuto} & \text{Hora} & \text{Dia-do-Mês} & \text{Mês} 
 
 ---
 
-### C. Listar e Auditar Agendamentos Ativos
+### C. Inspecionar Status ao Vivo e Daemon (`etl-cron-status` / `etl-cron-list`)
 
-Para inspecionar as tarefas agendadas e verificar se a suíte PaletScan está ativa no sistema:
+Para inspecionar o agendador, verificar a saúde do daemon Linux em tempo real e consultar o último log gerado:
 
-#### 1. Via Alias PaletScan (Recomendado):
+#### 1. Via Alias PaletScan com Autocura (Recomendado):
 ```bash
+etl-cron-status
+# ou o atalho equivalente:
 etl-cron-list
 ```
-*Retorna a linha exata do comando agendado com os parâmetros de diretório e arquivo de log.*
+
+O comando realiza um diagnóstico em 5 etapas:
+1. **Status do Daemon (`pgrep cron`):** Verifica se o processo do cron está ativo. Caso esteja inativo, aciona a autocura inicializando o daemon (`service cron start`).
+2. **Horário e Fuso do Sistema:** Confirma o relógio e fuso oficial do ambiente para garantir a precisão dos disparos.
+3. **Agendamento no Crontab:** Localiza e valida a linha de agendamento `PALETSCAN_ETL_FULL_JOB`.
+4. **Último Log Registrado:** Localiza e identifica o arquivo de log mais recente (`logs/etl_full_cron_*.log`).
+5. **Dica de Persistência:** Recomendações de `wake-lock` para execução contínua em segundo plano no Android/Termux.
 
 #### 2. Via Comando Nativo Linux:
 ```bash
@@ -323,3 +332,31 @@ echo "[]" > /root/repo_pwa/public/produtos.json
 ```sql
 TRUNCATE TABLE codigos_barras, paletes_armazenados, produtos, marcas, fabricantes CASCADE;
 ```
+
+---
+
+## 🧪 10. Suíte de Testes Automatizados & Integridade Relacional
+
+O ecossistema conta com rotinas de testes contínuos para garantir a integridade dos dados e prevenir regressões arquiteturais:
+
+### A. Teste de Imunidade a Perda de Dados (Zero Data Loss)
+Valida o ciclo completo de cadastro, edição de atributos manuais e vínculos de códigos de barras no PWA, confirmando que os dados persistem no PostgreSQL e sobrevivem a sincronizações:
+
+```bash
+npx tsx scripts/test_pwa_crud_and_sync_safety.ts
+```
+
+### B. Teste de Consistência de Sincronização & Catálogo
+Audita a higienização de EANs/DUNs, integridade relacional de marcas e fabricantes, e conformidade com o schema oficial:
+
+```bash
+npx tsx scripts/test_sync_and_catalog.ts
+```
+
+### C. Validador de Sintaxe Mermaid para MkDocs
+Verifica se todos os diagramas Mermaid na documentação cumprem as regras de esteiras estritamente verticais e compatibilidade mobile:
+
+```bash
+npm run validate:mermaid
+```
+

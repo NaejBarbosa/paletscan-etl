@@ -22,24 +22,28 @@ flowchart TD
     M3 --> D3["Zoneamento em 4 Caracteres & Bloqueio Ativo de Vaga Ocupada"]
 
     D3 --> M4["🎯 4. Módulo de Radar Watchlist"]
-    M4 --> D4["Busca Fuzzy Fonética & Celebração Visual com Confetes"]
+    M4 --> D4["Busca Estrita EAN/DUN, Fuzzy Fonética & Sincronização BroadcastChannel"]
 
     D4 --> M5["📋 5. Módulo de Conferência & Auditoria"]
     M5 --> D5["Checklist Físico Tátil, Expurgo em Massa & Relatórios PDF/CSV"]
 
     D5 --> M6["🔒 6. Módulo de Autenticação & Segurança"]
-    M6 --> D6["Biometria WebAuthn (Passkeys) & Cache Seguro de Sessão Offline"]
+    M6 --> D6["Biometria Passkeys, Auto-Logout por Inatividade & Cache Offline"]
 ```
 
 ---
 
 ## ⚡ 2. Diferenciais do PWA no Ambiente Frigorífico
 
-1. **Instalável e Sem Distrações (*Standalone Mode*)**:
-   - Funciona como um app nativo no Android, ocultando barras de endereço do navegador para maximizar o espaço útil da tela e evitar toques acidentais.
-2. **Design Ergonômico de Alta Densidade (*Touch-First*)**:
-   - Botões ampliados e layout em contraste elevado (paletas *Slate/Dark*) adequados para operação com luvas térmicas em ambientes escuros.
-3. **Leitura Resiliente a Condensação e Reflexos**:
+1. **Fullscreen Edge-to-Edge & Safe Area Insets**:
+   - Funciona em tela cheia com respeito às variáveis de ambiente CSS `env(safe-area-inset-top)` e `env(safe-area-inset-bottom)`, garantindo visualização desimpedida em celulares com entalhes (*notch*), ilhas dinâmicas ou botões virtuais de navegação.
+2. **Barra Superior Minimalista & Ergonomia**:
+   - Cabeçalho limpo com identificação visual do app e versão, mantendo detalhes de login organizados na área de configurações.
+3. **Alerta Flutuante de Modo Offline em Alto Contraste**:
+   - Indicador de status de rede calibrado com paleta luminosa para câmaras escuras, posicionado estrategicamente para não cobrir botões de ação e leitura.
+4. **Design Ergonômico de Alta Densidade (*Touch-First*)**:
+   - Botões ampliados e layout em contraste elevado (paletas *Slate/Dark*) adequados para operação com luvas térmicas em temperaturas negativas (-18°C a -25°C).
+5. **Leitura Resiliente a Condensação e Reflexos**:
    - Ferramenta integrada de recorte manual (`react-zoom-pan-pinch`) para leitura de códigos em paletes com filme stretch embaçado ou amassado.
-4. **Alocação Rígida sem Duplicidades**:
+6. **Alocação Rígida sem Duplicidades**:
    - Bloqueio ativo de confirmação caso o operador tente alocar um novo palete em uma coordenada física já ocupada por outra carga.

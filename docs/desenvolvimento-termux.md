@@ -36,14 +36,30 @@ flowchart TD
 ```
 
 ### Componentes do Ambiente Móvel:
-- **Node.js 20 & npm**: Compilação de scrapers, execução de validações Modulus 10 e compilação do Service Worker Serwist.
-- **Python 3 & rembg (U2Net/ONNX)**: Execução local de modelos de aprendizado profundo (Deep Learning) para remoção de fundo e tratamento de imagens em CPU ARM64 móvel.
-- **MkDocs Material**: Compilação e publicação automatizada do site de documentação unificado via GitHub Actions.
-- **Agente Antigravity (Google DeepMind)**: Assistente IA que opera como copiloto avançado diretamente no terminal móvel, realizando diagnóstico em tempo real, refatorações complexas e auditoria de código.
+* **Node.js 20 & npm**: Compilação de scrapers, execução de validações Modulus 10 e compilação do Service Worker Serwist.
+* **Python 3 & rembg (U2Net/ONNX)**: Execução local de modelos de aprendizado profundo (*Deep Learning*) para remoção de fundo e tratamento de imagens em CPU ARM64 móvel.
+* **MkDocs Material**: Compilação e publicação automatizada do site de documentação unificado via GitHub Actions.
+* **Agente Antigravity (Google DeepMind)**: Assistente IA que opera como copiloto avançado diretamente no terminal móvel, realizando diagnóstico em tempo real, refatorações complexas e auditoria de código.
 
 ---
 
-## 📲 2. Indexação Nativa de Arquivos no Android (Media Scan)
+## ⏰ 2. Persistência de Rotinas Noturnas no Android (Crontab & Wake-Lock)
+
+Para permitir que o pipeline ETL (`etl-run`) seja executado automaticamente de madrugada (ex: 03:00) com a tela do celular apagada:
+
+1. **Ativação do Wake-Lock**:
+   ```bash
+   termux-wake-lock
+   ```
+   *Impede que a CPU do smartphone entre em modo de suspensão profunda (Deep Sleep).*
+2. **Bateria Irrestrita**:
+   *Configurar a gestão de bateria do aplicativo Termux no Android como **Sem Restrições**.*
+3. **Monitoramento e Autocura**:
+   *Utilizar `etl-cron-status` para verificar a integridade do daemon e acompanhar os logs.*
+
+---
+
+## 📲 3. Indexação Nativa de Arquivos no Android (Media Scan)
 
 Ao exportar relatórios para a memória interna do celular (`/sdcard/Download/`), o sistema invoca utilitários nativos do Termux para indexar imediatamente tanto planilhas **CSV** quanto documentos **PDF**:
 
@@ -54,12 +70,12 @@ termux-media-scan /sdcard/Download/relatorio_paletes.pdf
 ```
 
 ### Por que o MediaScan é Crucial no Chão de Fábrica?
-- **Atualização Imediata do MediaStore**: Elimina a necessidade de reiniciar o smartphone ou conectar via USB para localizar arquivos baixados.
-- **Agilidade no Compartilhamento**: O operador de empilhadeira gera o relatório PDF ou CSV e pode anexá-lo instantaneamente no WhatsApp corporativo ou e-mail.
+* **Atualização Imediata do MediaStore**: Elimina a necessidade de reiniciar o smartphone ou conectar via USB para localizar arquivos baixados.
+* **Agilidade no Compartilhamento**: O operador de empilhadeira gera o relatório PDF ou CSV e pode anexá-lo instantaneamente no WhatsApp corporativo ou e-mail.
 
 ---
 
-## 🚀 3. Guia de Execução Local Unificado
+## 🚀 4. Guia de Execução Local Unificado
 
 ```bash
 # 1. Clonar o repositório ETL
@@ -71,9 +87,7 @@ npm install
 pip install -r requirements.txt
 
 # 3. Executar o pipeline de extração e tratamento
-npm run scrape:all
-npm run images:process
-npm run sync:supabase
+npm run full
 
 # 4. Compilar e testar a documentação unificada
 mkdocs serve

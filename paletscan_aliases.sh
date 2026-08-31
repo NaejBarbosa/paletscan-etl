@@ -24,6 +24,9 @@ PALETSCAN_LOG_DIR="${PALETSCAN_ETL_DIR}/logs"
 # Garante que a pasta de logs existe
 mkdir -p "$PALETSCAN_LOG_DIR"
 
+# Garante que o daemon do cron está rodando
+pgrep -x cron >/dev/null || service cron start >/dev/null 2>&1
+
 # Core Runner Helper: Executa o comando com log automático
 _paletscan_run() {
   local cmd_name="$1"
@@ -193,10 +196,58 @@ etl-schedule() {
   fi
 }
 
-etl-cron-list() {
-  echo -e "\033[1;34m[PaletScan Crontab]\033[0m Agendamento ativo:"
+etl-cron-status() {
   echo -e "\033[1;36m────────────────────────────────────\033[0m"
-  crontab -l 2>/dev/null | grep "PALETSCAN_ETL_FULL_JOB" || echo "Nenhum agendamento ativo."
+  echo -e "\033[1;32m⏰ STATUS DO AGENDADOR (CRON / PALETSCAN)\033[0m"
+  echo -e "\033[1;36m────────────────────────────────────\033[0m"
+  
+  # 1. Status do Daemon
+  if pgrep -x cron >/dev/null; then
+    local cron_pid
+    cron_pid=$(pgrep -x cron | head -n 1)
+    echo -e " 🟢 Daemon Cron:       \033[1;32mEM EXECUÇÃO\033[0m (PID: ${cron_pid})"
+  else
+    echo -e " 🔴 Daemon Cron:       \033[1;31mPARADO\033[0m (Iniciando...)"
+    service cron start >/dev/null 2>&1
+    if pgrep -x cron >/dev/null; then
+      echo -e " 🟢 Daemon Cron:       \033[1;32mINICIADO COM SUCESSO\033[0m"
+    else
+      echo -e " ⚠️ Daemon Cron:       \033[1;33mFalha ao iniciar cron daemon\033[0m"
+    fi
+  fi
+
+  # 2. Horário do Sistema e Fuso
+  echo -e " 🕒 Horário Atual:     $(date '+%d/%m/%Y %H:%M:%S %Z')"
+  
+  # 3. Tarefa Agendada no Crontab
+  local job
+  job=$(crontab -l 2>/dev/null | grep "PALETSCAN_ETL_FULL_JOB")
+  if [ -n "$job" ]; then
+    echo -e " 📋 Agendamento:       \033[1;33m${job}\033[0m"
+  else
+    echo -e " 📋 Agendamento:       \033[1;31mNenhum job cadastrado (Use etl-schedule)\033[0m"
+  fi
+
+  # 4. Última execução via cron
+  local last_cron_log
+  last_cron_log=$(ls -t "${PALETSCAN_LOG_DIR}"/etl_full_cron_*.log 2>/dev/null | head -n 1)
+  if [ -n "$last_cron_log" ]; then
+    local log_base
+    log_base=$(basename "$last_cron_log")
+    echo -e " 📄 Último Log Cron:   ${log_base}"
+  fi
+  
+  # 5. Dica de Persistência no Termux / Android
+  echo -e "\033[1;36m────────────────────────────────────\033[0m"
+  echo -e " 💡 \033[1;34mDica Android/Termux:\033[0m Para o job das 03:00 rodar"
+  echo -e "    com a tela do smartphone apagada:"
+  echo -e "    1. Ative o wake-lock: \033[1;33mtermux-wake-lock\033[0m"
+  echo -e "    2. Defina Bateria do Termux como \033[1;33mSem Restrições\033[0m."
+  echo -e "\033[1;36m────────────────────────────────────\033[0m"
+}
+
+etl-cron-list() {
+  etl-cron-status
 }
 
 etl-cron-remove() {

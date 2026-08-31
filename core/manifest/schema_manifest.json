@@ -270,7 +270,10 @@
     "etl-logs": "Exibe logs em tempo real via tail -f.",
     "etl-conflicts": "Exibe log de conflitos EAN/DUN em staging.",
     "etl-status": "Consulta status e contagem de registros no Supabase ao vivo.",
-    "etl-schedule": "Menu interativo de agendamento no Crontab Linux."
+    "etl-schedule": "Menu interativo de agendamento no Crontab Linux.",
+    "etl-cron-status": "Exibe status ao vivo do daemon cron, fuso horário e agendamento.",
+    "etl-cron-list": "Atalho idêntico ao etl-cron-status.",
+    "etl-cron-remove": "Remove os agendamentos do PaletScan no Crontab."
   },
   "regras_exportacao_pwa": {
     "requisito_minimo_ean13": "Apenas produtos com código EAN de 13 dígitos numéricos válido (EAN-13) são elegíveis para exportação e sincronização com o PWA.",

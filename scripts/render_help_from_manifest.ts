@@ -88,8 +88,9 @@ export function renderHelpFromManifest() {
   console.log("  \x1b[1;32metl-status\x1b[0m     Status Supabase ao vivo");
   console.log("");
   console.log("\x1b[1;33m⏰ AGENDAMENTO (CRONTAB)\x1b[0m");
-  console.log("  \x1b[1;32metl-schedule\x1b[0m   Agendar no Linux");
-  console.log("  \x1b[1;32metl-cron-list\x1b[0m  Ver agendamentos");
+  console.log("  \x1b[1;32metl-schedule\x1b[0m    Agendar no Linux");
+  console.log("  \x1b[1;32metl-cron-status\x1b[0m Status do Daemon/Job");
+  console.log("  \x1b[1;32metl-cron-list\x1b[0m   Ver agendamentos");
   console.log("  \x1b[1;32metl-cron-remove\x1b[0m Rem. agendamento");
   console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
 }
