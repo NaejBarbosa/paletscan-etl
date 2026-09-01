@@ -15,6 +15,24 @@ if (!SUPABASE_SERVICE_ROLE_KEY) {
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
+function calcDvGs1(str: string): number {
+  let soma = 0;
+  const reverso = str.split('').reverse();
+  for (let i = 0; i < reverso.length; i++) {
+    const peso = (i % 2 === 0) ? 3 : 1;
+    soma += parseInt(reverso[i], 10) * peso;
+  }
+  const resto = soma % 10;
+  return resto === 0 ? 0 : 10 - resto;
+}
+
+function derivarEanDeDun(dun: string): string | null {
+  if (!/^\d{14}$/.test(dun)) return null;
+  const ean12 = dun.substring(1, 13);
+  const dv = calcDvGs1(ean12);
+  return ean12 + dv;
+}
+
 async function generatePwaProdutosJson() {
   console.log('🔄 Gerando produtos.json 100% padronizado para o repositório PWA...');
 
@@ -50,6 +68,7 @@ async function generatePwaProdutosJson() {
   const eanMap = new Map<string, string>();
   const dunMap = new Map<string, string>();
   const skuMap = new Map<string, string>();
+  const dunByDerivedEan = new Map<string, string>(); // EAN-13 -> DUN-14 derivado GS1
   page = 0;
   hasMore = true;
   while (hasMore) {
@@ -73,6 +92,10 @@ async function generatePwaProdutosJson() {
         if (/^\d{14}$/.test(cleanCode) || (tipoUpper.includes('DUN') && /^\d+$/.test(cleanCode))) {
           if (/^\d{14}$/.test(cleanCode)) {
             dunMap.set(c.produto_id, cleanCode);
+            const eanDerivado = derivarEanDeDun(cleanCode);
+            if (eanDerivado) {
+              dunByDerivedEan.set(eanDerivado, cleanCode);
+            }
           }
         }
         // 2. EAN-13: estritamente 13 dígitos numéricos
@@ -148,8 +171,8 @@ async function generatePwaProdutosJson() {
     // Produtos que possuem apenas SKU interno ou apenas DUN são descartados da exportação ao PWA.
     if (!eanVal) return;
 
-    // DUN estritamente 14 dígitos numéricos
-    const candDun = dunMap.get(prodId) || rawDun;
+    // DUN estritamente 14 dígitos numéricos (com fallback automático via GS1 Módulo 10)
+    const candDun = dunMap.get(prodId) || dunByDerivedEan.get(eanVal) || rawDun;
     const dunVal = /^\d{14}$/.test(candDun) ? candDun : '';
 
     // Identificador principal é estritamente o EAN-13
