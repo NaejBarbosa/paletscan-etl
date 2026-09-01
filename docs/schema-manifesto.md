@@ -26,6 +26,10 @@ erDiagram
     FABRICANTES ||--o{ MARCAS : "possui"
     MARCAS ||--o{ PRODUTOS : "categoriza"
     PRODUTOS ||--o{ CODIGOS_BARRAS : "associa"
+    FILIAIS ||--o{ PESAR_COD_FILIAL : "configura"
+    PRODUTOS ||--o{ PESAR_COD_FILIAL : "possui_balanca"
+    FILIAIS ||--o{ REPORTES_PRODUTOS : "emite"
+    PRODUTOS ||--o{ REPORTES_PRODUTOS : "alvo_divergencia"
 
     FABRICANTES {
         uuid id PK "UUIDv5 Deterministico"
@@ -57,6 +61,30 @@ erDiagram
         string codigo UK "EAN / DUN / SKU (VARCHAR Estrito)"
         string tipo "EAN | DUN | SKU (Tipagem Normalizada)"
         integer quantidade_embalagem "Fator de Embalagem"
+    }
+
+    FILIAIS {
+        string codigo_filial PK "Ex: 410, 411"
+        string nome "Nome Fantasia da Loja"
+        string cidade "Cidade"
+        string uf "UF"
+        boolean ativo "Status Operacional"
+    }
+
+    PESAR_COD_FILIAL {
+        string filial_id FK "Codigo da Filial"
+        string ean FK "EAN do Produto"
+        string pesar_cod "PLU Local de Pesagem"
+        string empresa_id "CNPJ da Empresa"
+    }
+
+    REPORTES_PRODUTOS {
+        string id PK "rep_timestamp_hash"
+        string filial_id FK "Filial Remetente"
+        string produto_ean FK "EAN do Produto"
+        string tipo_divergencia "imagem | descricao | conservacao | peso | outro"
+        string observacao "Descricao da Divergencia"
+        string status "pendente | resolvido | rejeitado"
     }
 ```
 

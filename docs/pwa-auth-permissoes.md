@@ -37,15 +37,35 @@ flowchart TD
 
 ---
 
-## 🛡️ 2. Matriz de Controle de Acesso (RBAC)
+## 🛡️ 2. Matriz de Controle de Acesso (RBAC) & Multi-Tenant
 
-| Permissão | Flag | Administrador (`operador`) | Visitante (`visitante`) |
-| :--- | :--- | :---: | :---: |
-| **Painel Administrativo** | `isAdmin` | ✅ | ❌ |
-| **Bipar e Consultar** | N/A | ✅ | ✅ (Leitura) |
-| **Cadastrar Paletes** | `podeCadastrarPalete` | ✅ | ❌ |
-| **Cadastrar SKUs Master** | `podeCadastrarProduto` | ✅ | ❌ |
-| **Vincular DUN-14** | `podeVincularDun` | ✅ | ❌ |
-| **Editar Vaga de Palete** | `podeEditarVaga` | ✅ | ❌ |
-| **Exportar Relatórios** | `podeExportarRelatorio` | ✅ | ❌ |
-| **Gerenciar Watchlist** | `podeAdicionarRadar` | ✅ | ❌ |
+| Permissão / Atributo | Flag no Perfil | Administrador (`operador`) | Operador Setorial | Visitante (`visitante`) |
+| :--- | :--- | :---: | :---: | :---: |
+| **Painel Administrativo** | `isAdmin` | ✅ | ❌ | ❌ |
+| **Bipar e Consultar** | N/A | ✅ | ✅ | ✅ (Leitura) |
+| **Cadastrar Paletes** | `podeCadastrarPalete` | ✅ | ✅ (Se atribuído) | ❌ |
+| **Cadastrar SKUs Master** | `podeCadastrarProduto` | ✅ | ❌ (Restrito Central) | ❌ |
+| **Vincular DUN-14** | `podeVincularDun` | ✅ | ✅ (Com validação GS1) | ❌ |
+| **Editar Vaga de Palete** | `podeEditarVaga` | ✅ | ✅ | ❌ |
+| **Exportar Relatórios** | `podeExportarRelatorio` | ✅ | ✅ (Se atribuído) | ❌ |
+| **Gerenciar Watchlist** | `podeAdicionarRadar` | ✅ | ✅ | ❌ |
+| **Filial de Atuação** | `filialId` / `filialNome` | 410 (Matriz) | Filial da Loja | 410 |
+| **Escopo de Marcas** | `marcasPermitidas` | Todas (`acessoTodasMarcas: true`) | Restrito à Marca | Apenas Leitura |
+
+---
+
+## 🏬 3. Barreira de Segurança de Marcas (Brand Guardrail)
+
+Para assegurar que promotores de vendas ou operadores de chão de fábrica vinculados a uma determinada marca não modifiquem dados de outras marcas concorrentes:
+
+```mermaid
+flowchart LR
+    OP["👤 Operador Tenta Ação\n(Cadastro ou Vínculo DUN)"] --> CHECK{"Usuário tem\nacessoTodasMarcas?"}
+    CHECK -->|Sim| LIB["✅ Ação Liberada"]
+    CHECK -->|Não| MARCA{"Marca do Produto está em\nmarcasPermitidas?"}
+    MARCA -->|Sim| LIB
+    MARCA -->|Não| BARRADO["🚫 BLOQUEADO (403 Forbidden)\nOperação restrita às marcas permitidas"]
+```
+
+* **Validação em Dupla Camada**: A verificação ocorre tanto no formulário do PWA quanto no backend (`pages/api/produtos/gerenciar-codigos.ts` e `pages/api/cadastrar-produto.ts`) via [`lib/gs1Validator.ts`](file:///root/repo_pwa/lib/gs1Validator.ts).
+* **Imutabilidade de Permissões**: Apenas administradores com a flag `isAdmin: true` podem alterar o escopo de filiais e marcas dos operadores através do painel `/admin`.

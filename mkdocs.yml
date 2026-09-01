@@ -78,6 +78,7 @@ nav:
       - "Pesquisa, Consulta & Radar Watchlist": "pwa-pesquisa-watchlist.md"
       - "Relatórios, Conferência & Auditoria": "pwa-relatorios-auditoria.md"
       - "Autenticação, Passkeys & Permissões": "pwa-auth-permissoes.md"
+      - "Multi-Filiais & Governança de Catálogo": "pwa-filiais-catalogo.md"
   - "Engenharia de Dados (ETL & Pipeline)":
       - "Guia de Operações & CLI": "operacoes.md"
       - "Scrapers Multi-Fornecedores": "scrapers-multi-fornecedores.md"
