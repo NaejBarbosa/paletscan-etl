@@ -6,7 +6,7 @@
       "cnpj": "76.092.736/0001-38",
       "site_oficial": "https://www.copacol.com.br",
       "ativo": true,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     }
   ],
   "marcas": [
@@ -17,7 +17,7 @@
       "slug": "copacol",
       "descricao": "Produtos da Copacol Cooperativa Agroindustrial Consolata",
       "ativo": true,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     }
   ],
   "produtos": [
@@ -32,7 +32,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527039351.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6299",
@@ -45,7 +45,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527062991.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_3940",
@@ -58,7 +58,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527039405.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6809",
@@ -71,7 +71,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527068092.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6936",
@@ -84,7 +84,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069365.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6996",
@@ -97,7 +97,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069969.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_7014",
@@ -110,7 +110,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527070149.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_7015",
@@ -123,7 +123,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527070156.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6495",
@@ -136,7 +136,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6691",
@@ -149,7 +149,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5519",
@@ -162,7 +162,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527055191.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6922",
@@ -175,7 +175,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069228.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6935",
@@ -188,7 +188,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069358.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_7149",
@@ -201,7 +201,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527071498.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_7151",
@@ -214,7 +214,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527071511.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5507",
@@ -227,7 +227,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527055078.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6962",
@@ -240,7 +240,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5513",
@@ -253,7 +253,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6915",
@@ -266,7 +266,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069150.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6916",
@@ -279,7 +279,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069167.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6917",
@@ -292,7 +292,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_7156",
@@ -305,7 +305,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6585",
@@ -318,7 +318,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527065855.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5514",
@@ -331,7 +331,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527055146.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5512",
@@ -344,7 +344,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6565",
@@ -357,7 +357,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6775",
@@ -370,7 +370,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_7001",
@@ -383,7 +383,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_7002",
@@ -396,7 +396,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6538",
@@ -409,7 +409,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527065381.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6539",
@@ -422,7 +422,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527065398.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6540",
@@ -435,7 +435,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527065404.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6443",
@@ -448,7 +448,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064438.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6492",
@@ -461,7 +461,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064926.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6488",
@@ -474,7 +474,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064889.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5417",
@@ -487,7 +487,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527054170.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6378",
@@ -500,7 +500,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527063783.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6377",
@@ -513,7 +513,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527063776.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6491",
@@ -526,7 +526,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064919.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6490",
@@ -539,7 +539,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064902.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6380",
@@ -552,7 +552,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527063806.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_97819",
@@ -565,7 +565,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527978193.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_4493",
@@ -578,7 +578,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527044935.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_4494",
@@ -591,7 +591,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527044942.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_672",
@@ -604,7 +604,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527006728.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6797",
@@ -617,7 +617,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527067972.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_96235",
@@ -630,7 +630,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962352.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_96225",
@@ -643,7 +643,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962253.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_96231",
@@ -656,7 +656,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962314.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6372",
@@ -669,7 +669,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527063721.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_96233",
@@ -682,7 +682,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962338.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_96237",
@@ -695,7 +695,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962376.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_96227",
@@ -708,7 +708,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962277.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6933",
@@ -721,7 +721,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069334.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6796",
@@ -734,7 +734,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527067965.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6784",
@@ -747,7 +747,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527067842.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_96236",
@@ -760,7 +760,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527962369.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6931",
@@ -773,7 +773,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069310.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_1907",
@@ -786,7 +786,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527019070.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6497",
@@ -799,7 +799,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064971.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5791",
@@ -812,7 +812,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527057911.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6433",
@@ -825,7 +825,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064339.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5792",
@@ -838,7 +838,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527057928.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6911",
@@ -851,7 +851,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069112.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_3167",
@@ -864,7 +864,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527031676.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5793",
@@ -877,7 +877,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527057935.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_1917",
@@ -890,7 +890,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527019179.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_1919",
@@ -903,7 +903,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527019193.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_1913",
@@ -916,7 +916,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527019131.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_1903",
@@ -929,7 +929,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527019032.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_81",
@@ -942,7 +942,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000818.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_83",
@@ -955,7 +955,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000832.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_85",
@@ -968,7 +968,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000856.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_46",
@@ -981,7 +981,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000467.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_51",
@@ -994,7 +994,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000511.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_53",
@@ -1007,7 +1007,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000535.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_55",
@@ -1020,7 +1020,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000559.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_49",
@@ -1033,7 +1033,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000498.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_277",
@@ -1046,7 +1046,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527002775.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_66",
@@ -1059,7 +1059,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000665.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_77",
@@ -1072,7 +1072,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000771.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6662",
@@ -1085,7 +1085,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066623.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6663",
@@ -1098,7 +1098,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066630.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6664",
@@ -1111,7 +1111,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066647.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6659",
@@ -1124,7 +1124,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066593.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6633",
@@ -1137,7 +1137,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066333.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6626",
@@ -1150,7 +1150,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066265.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6649",
@@ -1163,7 +1163,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066494.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6657",
@@ -1176,7 +1176,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066579.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6646",
@@ -1189,7 +1189,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527066463.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_80",
@@ -1202,7 +1202,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000801.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_84",
@@ -1215,7 +1215,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000849.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_45",
@@ -1228,7 +1228,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000450.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_50",
@@ -1241,7 +1241,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000504.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_52",
@@ -1254,7 +1254,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000528.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_54",
@@ -1267,7 +1267,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000542.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_47",
@@ -1280,7 +1280,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000474.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_57",
@@ -1293,7 +1293,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000573.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_61",
@@ -1306,7 +1306,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000610.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_79",
@@ -1319,7 +1319,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527000795.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_86",
@@ -1332,7 +1332,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000863.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_64",
@@ -1345,7 +1345,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000641.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_76",
@@ -1358,7 +1358,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000764.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5",
@@ -1371,7 +1371,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000054.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_8",
@@ -1384,7 +1384,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000085.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_271",
@@ -1397,7 +1397,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527002713.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6494",
@@ -1410,7 +1410,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527064940.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5439",
@@ -1423,7 +1423,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527054392.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_280",
@@ -1436,7 +1436,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527002805.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_13",
@@ -1449,7 +1449,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000139.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_268",
@@ -1462,7 +1462,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527002683.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6964",
@@ -1475,7 +1475,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527069648.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_2",
@@ -1488,7 +1488,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000023.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_37",
@@ -1501,7 +1501,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527000375.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_967",
@@ -1514,7 +1514,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527009675.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5024",
@@ -1527,7 +1527,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527050240.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_447",
@@ -1540,7 +1540,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527004472.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6115",
@@ -1553,7 +1553,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527061154.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_98223",
@@ -1566,7 +1566,7 @@
       "fracionado": true,
       "imagem_url": "/imagens_produtos/7891527982237.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_7045",
@@ -1579,7 +1579,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527070453.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5496",
@@ -1592,7 +1592,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527054965.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5499",
@@ -1605,7 +1605,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527054996.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5498",
@@ -1618,7 +1618,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527054989.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_5500",
@@ -1631,7 +1631,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527055009.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6904",
@@ -1644,7 +1644,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069044.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6902",
@@ -1657,7 +1657,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527069020.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6898",
@@ -1670,7 +1670,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527068986.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_4488",
@@ -1683,7 +1683,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527044881.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_3781",
@@ -1696,7 +1696,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527037814.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6897",
@@ -1709,7 +1709,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527068979.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_4487",
@@ -1722,7 +1722,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527044874.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_3778",
@@ -1735,7 +1735,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527037784.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_6439",
@@ -1748,7 +1748,7 @@
       "fracionado": false,
       "imagem_url": "/imagens_produtos/7891527064391.webp",
       "status_imagem": "aprovado",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "prod_copacol_7017",
@@ -1761,7 +1761,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     }
   ],
   "codigos_barras": [
@@ -1772,7 +1772,7 @@
       "codigo": "7891527039351",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527039358",
@@ -1781,7 +1781,7 @@
       "codigo": "17891527039358",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527062991",
@@ -1790,7 +1790,7 @@
       "codigo": "7891527062991",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527062998",
@@ -1799,7 +1799,7 @@
       "codigo": "17891527062998",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527039405",
@@ -1808,7 +1808,7 @@
       "codigo": "7891527039405",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527039402",
@@ -1817,7 +1817,7 @@
       "codigo": "17891527039402",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527068092",
@@ -1826,7 +1826,7 @@
       "codigo": "7891527068092",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527068099",
@@ -1835,7 +1835,7 @@
       "codigo": "17891527068099",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069365",
@@ -1844,7 +1844,7 @@
       "codigo": "7891527069365",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069362",
@@ -1853,7 +1853,7 @@
       "codigo": "17891527069362",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069969",
@@ -1862,7 +1862,7 @@
       "codigo": "7891527069969",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069966",
@@ -1871,7 +1871,7 @@
       "codigo": "17891527069966",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527070149",
@@ -1880,7 +1880,7 @@
       "codigo": "7891527070149",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527070146",
@@ -1889,7 +1889,7 @@
       "codigo": "17891527070146",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527070156",
@@ -1898,7 +1898,7 @@
       "codigo": "7891527070156",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527070153",
@@ -1907,7 +1907,7 @@
       "codigo": "17891527070153",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527064957",
@@ -1916,7 +1916,7 @@
       "codigo": "7891527064957",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527064954",
@@ -1925,7 +1925,7 @@
       "codigo": "17891527064954",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527066913",
@@ -1934,7 +1934,7 @@
       "codigo": "7891527066913",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527066910",
@@ -1943,7 +1943,7 @@
       "codigo": "17891527066910",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527055191",
@@ -1952,7 +1952,7 @@
       "codigo": "7891527055191",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527055198",
@@ -1961,7 +1961,7 @@
       "codigo": "17891527055198",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069228",
@@ -1970,7 +1970,7 @@
       "codigo": "7891527069228",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069225",
@@ -1979,7 +1979,7 @@
       "codigo": "17891527069225",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069358",
@@ -1988,7 +1988,7 @@
       "codigo": "7891527069358",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069355",
@@ -1997,7 +1997,7 @@
       "codigo": "17891527069355",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527071498",
@@ -2006,7 +2006,7 @@
       "codigo": "7891527071498",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527071495",
@@ -2015,7 +2015,7 @@
       "codigo": "17891527071495",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527071511",
@@ -2024,7 +2024,7 @@
       "codigo": "7891527071511",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527071518",
@@ -2033,7 +2033,7 @@
       "codigo": "17891527071518",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527055078",
@@ -2042,7 +2042,7 @@
       "codigo": "7891527055078",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527055075",
@@ -2051,7 +2051,7 @@
       "codigo": "17891527055075",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069624",
@@ -2060,7 +2060,7 @@
       "codigo": "7891527069624",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069621",
@@ -2069,7 +2069,7 @@
       "codigo": "17891527069621",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527055139",
@@ -2078,7 +2078,7 @@
       "codigo": "7891527055139",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527055136",
@@ -2087,7 +2087,7 @@
       "codigo": "17891527055136",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069150",
@@ -2096,7 +2096,7 @@
       "codigo": "7891527069150",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069157",
@@ -2105,7 +2105,7 @@
       "codigo": "17891527069157",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069167",
@@ -2114,7 +2114,7 @@
       "codigo": "7891527069167",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069164",
@@ -2123,7 +2123,7 @@
       "codigo": "17891527069164",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069174",
@@ -2132,7 +2132,7 @@
       "codigo": "7891527069174",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069171",
@@ -2141,7 +2141,7 @@
       "codigo": "17891527069171",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527071566",
@@ -2150,7 +2150,7 @@
       "codigo": "7891527071566",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527071563",
@@ -2159,7 +2159,7 @@
       "codigo": "17891527071563",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527065855",
@@ -2168,7 +2168,7 @@
       "codigo": "7891527065855",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527065852",
@@ -2177,7 +2177,7 @@
       "codigo": "17891527065852",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527055146",
@@ -2186,7 +2186,7 @@
       "codigo": "7891527055146",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527055143",
@@ -2195,7 +2195,7 @@
       "codigo": "17891527055143",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527055122",
@@ -2204,7 +2204,7 @@
       "codigo": "7891527055122",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527055129",
@@ -2213,7 +2213,7 @@
       "codigo": "17891527055129",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527065657",
@@ -2222,7 +2222,7 @@
       "codigo": "7891527065657",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527065654",
@@ -2231,7 +2231,7 @@
       "codigo": "17891527065654",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527067750",
@@ -2240,7 +2240,7 @@
       "codigo": "7891527067750",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527067757",
@@ -2249,7 +2249,7 @@
       "codigo": "17891527067757",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527070019",
@@ -2258,7 +2258,7 @@
       "codigo": "7891527070019",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527070016",
@@ -2267,7 +2267,7 @@
       "codigo": "17891527070016",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527070026",
@@ -2276,7 +2276,7 @@
       "codigo": "7891527070026",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527070023",
@@ -2285,7 +2285,7 @@
       "codigo": "17891527070023",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527065381",
@@ -2294,7 +2294,7 @@
       "codigo": "7891527065381",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527065388",
@@ -2303,7 +2303,7 @@
       "codigo": "17891527065388",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527065398",
@@ -2312,7 +2312,7 @@
       "codigo": "7891527065398",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527065395",
@@ -2321,7 +2321,7 @@
       "codigo": "17891527065395",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527065404",
@@ -2330,7 +2330,7 @@
       "codigo": "7891527065404",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527065401",
@@ -2339,7 +2339,7 @@
       "codigo": "17891527065401",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527064438",
@@ -2348,7 +2348,7 @@
       "codigo": "7891527064438",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527064435",
@@ -2357,7 +2357,7 @@
       "codigo": "17891527064435",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527064926",
@@ -2366,7 +2366,7 @@
       "codigo": "7891527064926",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527064923",
@@ -2375,7 +2375,7 @@
       "codigo": "17891527064923",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527064889",
@@ -2384,7 +2384,7 @@
       "codigo": "7891527064889",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527064886",
@@ -2393,7 +2393,7 @@
       "codigo": "17891527064886",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527054170",
@@ -2402,7 +2402,7 @@
       "codigo": "7891527054170",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527054177",
@@ -2411,7 +2411,7 @@
       "codigo": "17891527054177",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527063783",
@@ -2420,7 +2420,7 @@
       "codigo": "7891527063783",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527063780",
@@ -2429,7 +2429,7 @@
       "codigo": "17891527063780",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527063776",
@@ -2438,7 +2438,7 @@
       "codigo": "7891527063776",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527063773",
@@ -2447,7 +2447,7 @@
       "codigo": "17891527063773",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527064919",
@@ -2456,7 +2456,7 @@
       "codigo": "7891527064919",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527064916",
@@ -2465,7 +2465,7 @@
       "codigo": "17891527064916",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527064902",
@@ -2474,7 +2474,7 @@
       "codigo": "7891527064902",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527064909",
@@ -2483,7 +2483,7 @@
       "codigo": "17891527064909",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527063806",
@@ -2492,7 +2492,7 @@
       "codigo": "7891527063806",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527063803",
@@ -2501,7 +2501,7 @@
       "codigo": "17891527063803",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527978193",
@@ -2510,7 +2510,7 @@
       "codigo": "7891527978193",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527978190",
@@ -2519,7 +2519,7 @@
       "codigo": "17891527978190",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527044935",
@@ -2528,7 +2528,7 @@
       "codigo": "7891527044935",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527044932",
@@ -2537,7 +2537,7 @@
       "codigo": "17891527044932",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527044942",
@@ -2546,7 +2546,7 @@
       "codigo": "7891527044942",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527044949",
@@ -2555,7 +2555,7 @@
       "codigo": "17891527044949",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527006728",
@@ -2564,7 +2564,7 @@
       "codigo": "7891527006728",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527006725",
@@ -2573,7 +2573,7 @@
       "codigo": "17891527006725",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527067972",
@@ -2582,7 +2582,7 @@
       "codigo": "7891527067972",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527067979",
@@ -2591,7 +2591,7 @@
       "codigo": "17891527067979",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527962352",
@@ -2600,7 +2600,7 @@
       "codigo": "7891527962352",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527962359",
@@ -2609,7 +2609,7 @@
       "codigo": "17891527962359",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527962253",
@@ -2618,7 +2618,7 @@
       "codigo": "7891527962253",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527962250",
@@ -2627,7 +2627,7 @@
       "codigo": "17891527962250",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527962314",
@@ -2636,7 +2636,7 @@
       "codigo": "7891527962314",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527962311",
@@ -2645,7 +2645,7 @@
       "codigo": "17891527962311",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527063721",
@@ -2654,7 +2654,7 @@
       "codigo": "7891527063721",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527063728",
@@ -2663,7 +2663,7 @@
       "codigo": "17891527063728",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527962338",
@@ -2672,7 +2672,7 @@
       "codigo": "7891527962338",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527962335",
@@ -2681,7 +2681,7 @@
       "codigo": "17891527962335",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527962376",
@@ -2690,7 +2690,7 @@
       "codigo": "7891527962376",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527962373",
@@ -2699,7 +2699,7 @@
       "codigo": "17891527962373",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527962277",
@@ -2708,7 +2708,7 @@
       "codigo": "7891527962277",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527962274",
@@ -2717,7 +2717,7 @@
       "codigo": "17891527962274",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069334",
@@ -2726,7 +2726,7 @@
       "codigo": "7891527069334",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069331",
@@ -2735,7 +2735,7 @@
       "codigo": "17891527069331",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527067965",
@@ -2744,7 +2744,7 @@
       "codigo": "7891527067965",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527067962",
@@ -2753,7 +2753,7 @@
       "codigo": "17891527067962",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527067842",
@@ -2762,7 +2762,7 @@
       "codigo": "7891527067842",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527067849",
@@ -2771,7 +2771,7 @@
       "codigo": "17891527067849",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527962369",
@@ -2780,7 +2780,7 @@
       "codigo": "7891527962369",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527962366",
@@ -2789,7 +2789,7 @@
       "codigo": "17891527962366",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069310",
@@ -2798,7 +2798,7 @@
       "codigo": "7891527069310",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069317",
@@ -2807,7 +2807,7 @@
       "codigo": "17891527069317",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527019070",
@@ -2816,7 +2816,7 @@
       "codigo": "7891527019070",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_27891527019074",
@@ -2825,7 +2825,7 @@
       "codigo": "27891527019074",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527064971",
@@ -2834,7 +2834,7 @@
       "codigo": "7891527064971",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527064978",
@@ -2843,7 +2843,7 @@
       "codigo": "17891527064978",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527057911",
@@ -2852,7 +2852,7 @@
       "codigo": "7891527057911",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527057918",
@@ -2861,7 +2861,7 @@
       "codigo": "17891527057918",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527064339",
@@ -2870,7 +2870,7 @@
       "codigo": "7891527064339",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527064336",
@@ -2879,7 +2879,7 @@
       "codigo": "17891527064336",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527057928",
@@ -2888,7 +2888,7 @@
       "codigo": "7891527057928",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527057925",
@@ -2897,7 +2897,7 @@
       "codigo": "17891527057925",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069112",
@@ -2906,7 +2906,7 @@
       "codigo": "7891527069112",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069119",
@@ -2915,7 +2915,7 @@
       "codigo": "17891527069119",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527031676",
@@ -2924,7 +2924,7 @@
       "codigo": "7891527031676",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527031673",
@@ -2933,7 +2933,7 @@
       "codigo": "17891527031673",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527057935",
@@ -2942,7 +2942,7 @@
       "codigo": "7891527057935",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527057932",
@@ -2951,7 +2951,7 @@
       "codigo": "17891527057932",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527019179",
@@ -2960,7 +2960,7 @@
       "codigo": "7891527019179",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527019176",
@@ -2969,7 +2969,7 @@
       "codigo": "17891527019176",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527019193",
@@ -2978,7 +2978,7 @@
       "codigo": "7891527019193",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527019190",
@@ -2987,7 +2987,7 @@
       "codigo": "17891527019190",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527019131",
@@ -2996,7 +2996,7 @@
       "codigo": "7891527019131",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527019138",
@@ -3005,7 +3005,7 @@
       "codigo": "17891527019138",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527019032",
@@ -3014,7 +3014,7 @@
       "codigo": "7891527019032",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527019039",
@@ -3023,7 +3023,7 @@
       "codigo": "17891527019039",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000818",
@@ -3032,7 +3032,7 @@
       "codigo": "7891527000818",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000815",
@@ -3041,7 +3041,7 @@
       "codigo": "17891527000815",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000832",
@@ -3050,7 +3050,7 @@
       "codigo": "7891527000832",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000839",
@@ -3059,7 +3059,7 @@
       "codigo": "17891527000839",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000856",
@@ -3068,7 +3068,7 @@
       "codigo": "7891527000856",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000853",
@@ -3077,7 +3077,7 @@
       "codigo": "17891527000853",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000467",
@@ -3086,7 +3086,7 @@
       "codigo": "7891527000467",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000464",
@@ -3095,7 +3095,7 @@
       "codigo": "17891527000464",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000511",
@@ -3104,7 +3104,7 @@
       "codigo": "7891527000511",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000518",
@@ -3113,7 +3113,7 @@
       "codigo": "17891527000518",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000535",
@@ -3122,7 +3122,7 @@
       "codigo": "7891527000535",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000532",
@@ -3131,7 +3131,7 @@
       "codigo": "17891527000532",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000559",
@@ -3140,7 +3140,7 @@
       "codigo": "7891527000559",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000556",
@@ -3149,7 +3149,7 @@
       "codigo": "17891527000556",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000498",
@@ -3158,7 +3158,7 @@
       "codigo": "7891527000498",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000495",
@@ -3167,7 +3167,7 @@
       "codigo": "17891527000495",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527002775",
@@ -3176,7 +3176,7 @@
       "codigo": "7891527002775",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527002772",
@@ -3185,7 +3185,7 @@
       "codigo": "17891527002772",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000665",
@@ -3194,7 +3194,7 @@
       "codigo": "7891527000665",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000662",
@@ -3203,7 +3203,7 @@
       "codigo": "17891527000662",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000771",
@@ -3212,7 +3212,7 @@
       "codigo": "7891527000771",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000778",
@@ -3221,7 +3221,7 @@
       "codigo": "17891527000778",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527066623",
@@ -3230,7 +3230,7 @@
       "codigo": "7891527066623",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527066620",
@@ -3239,7 +3239,7 @@
       "codigo": "17891527066620",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527066630",
@@ -3248,7 +3248,7 @@
       "codigo": "7891527066630",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527066637",
@@ -3257,7 +3257,7 @@
       "codigo": "17891527066637",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527066647",
@@ -3266,7 +3266,7 @@
       "codigo": "7891527066647",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527066644",
@@ -3275,7 +3275,7 @@
       "codigo": "17891527066644",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527066593",
@@ -3284,7 +3284,7 @@
       "codigo": "7891527066593",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527066590",
@@ -3293,7 +3293,7 @@
       "codigo": "17891527066590",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527066333",
@@ -3302,7 +3302,7 @@
       "codigo": "7891527066333",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527066330",
@@ -3311,7 +3311,7 @@
       "codigo": "17891527066330",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527066265",
@@ -3320,7 +3320,7 @@
       "codigo": "7891527066265",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527066262",
@@ -3329,7 +3329,7 @@
       "codigo": "17891527066262",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527066494",
@@ -3338,7 +3338,7 @@
       "codigo": "7891527066494",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527066491",
@@ -3347,7 +3347,7 @@
       "codigo": "17891527066491",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527066579",
@@ -3356,7 +3356,7 @@
       "codigo": "7891527066579",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527066576",
@@ -3365,7 +3365,7 @@
       "codigo": "17891527066576",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527066463",
@@ -3374,7 +3374,7 @@
       "codigo": "7891527066463",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527066460",
@@ -3383,7 +3383,7 @@
       "codigo": "17891527066460",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000801",
@@ -3392,7 +3392,7 @@
       "codigo": "7891527000801",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000808",
@@ -3401,7 +3401,7 @@
       "codigo": "17891527000808",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000849",
@@ -3410,7 +3410,7 @@
       "codigo": "7891527000849",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000846",
@@ -3419,7 +3419,7 @@
       "codigo": "17891527000846",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000450",
@@ -3428,7 +3428,7 @@
       "codigo": "7891527000450",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000457",
@@ -3437,7 +3437,7 @@
       "codigo": "17891527000457",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000504",
@@ -3446,7 +3446,7 @@
       "codigo": "7891527000504",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000501",
@@ -3455,7 +3455,7 @@
       "codigo": "17891527000501",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000528",
@@ -3464,7 +3464,7 @@
       "codigo": "7891527000528",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000525",
@@ -3473,7 +3473,7 @@
       "codigo": "17891527000525",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000542",
@@ -3482,7 +3482,7 @@
       "codigo": "7891527000542",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000549",
@@ -3491,7 +3491,7 @@
       "codigo": "17891527000549",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000474",
@@ -3500,7 +3500,7 @@
       "codigo": "7891527000474",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000471",
@@ -3509,7 +3509,7 @@
       "codigo": "17891527000471",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000573",
@@ -3518,7 +3518,7 @@
       "codigo": "7891527000573",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000570",
@@ -3527,7 +3527,7 @@
       "codigo": "17891527000570",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000610",
@@ -3536,7 +3536,7 @@
       "codigo": "7891527000610",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000617",
@@ -3545,7 +3545,7 @@
       "codigo": "17891527000617",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000795",
@@ -3554,7 +3554,7 @@
       "codigo": "7891527000795",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000792",
@@ -3563,7 +3563,7 @@
       "codigo": "17891527000792",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000863",
@@ -3572,7 +3572,7 @@
       "codigo": "7891527000863",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000860",
@@ -3581,7 +3581,7 @@
       "codigo": "17891527000860",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000641",
@@ -3590,7 +3590,7 @@
       "codigo": "7891527000641",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000648",
@@ -3599,7 +3599,7 @@
       "codigo": "17891527000648",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000764",
@@ -3608,7 +3608,7 @@
       "codigo": "7891527000764",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000761",
@@ -3617,7 +3617,7 @@
       "codigo": "17891527000761",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000054",
@@ -3626,7 +3626,7 @@
       "codigo": "7891527000054",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000051",
@@ -3635,7 +3635,7 @@
       "codigo": "17891527000051",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000085",
@@ -3644,7 +3644,7 @@
       "codigo": "7891527000085",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000082",
@@ -3653,7 +3653,7 @@
       "codigo": "17891527000082",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527002713",
@@ -3662,7 +3662,7 @@
       "codigo": "7891527002713",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527002710",
@@ -3671,7 +3671,7 @@
       "codigo": "17891527002710",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527064940",
@@ -3680,7 +3680,7 @@
       "codigo": "7891527064940",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527064947",
@@ -3689,7 +3689,7 @@
       "codigo": "17891527064947",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527054392",
@@ -3698,7 +3698,7 @@
       "codigo": "7891527054392",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527054399",
@@ -3707,7 +3707,7 @@
       "codigo": "17891527054399",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527002805",
@@ -3716,7 +3716,7 @@
       "codigo": "7891527002805",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527002802",
@@ -3725,7 +3725,7 @@
       "codigo": "17891527002802",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000139",
@@ -3734,7 +3734,7 @@
       "codigo": "7891527000139",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000136",
@@ -3743,7 +3743,7 @@
       "codigo": "17891527000136",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527002683",
@@ -3752,7 +3752,7 @@
       "codigo": "7891527002683",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527002680",
@@ -3761,7 +3761,7 @@
       "codigo": "17891527002680",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069648",
@@ -3770,7 +3770,7 @@
       "codigo": "7891527069648",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069645",
@@ -3779,7 +3779,7 @@
       "codigo": "17891527069645",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000023",
@@ -3788,7 +3788,7 @@
       "codigo": "7891527000023",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000020",
@@ -3797,7 +3797,7 @@
       "codigo": "17891527000020",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527000375",
@@ -3806,7 +3806,7 @@
       "codigo": "7891527000375",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527000372",
@@ -3815,7 +3815,7 @@
       "codigo": "17891527000372",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527009675",
@@ -3824,7 +3824,7 @@
       "codigo": "7891527009675",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527009672",
@@ -3833,7 +3833,7 @@
       "codigo": "17891527009672",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527050240",
@@ -3842,7 +3842,7 @@
       "codigo": "7891527050240",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527050247",
@@ -3851,7 +3851,7 @@
       "codigo": "17891527050247",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527004472",
@@ -3860,7 +3860,7 @@
       "codigo": "7891527004472",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527004479",
@@ -3869,7 +3869,7 @@
       "codigo": "17891527004479",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527061154",
@@ -3878,7 +3878,7 @@
       "codigo": "7891527061154",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527061151",
@@ -3887,7 +3887,7 @@
       "codigo": "17891527061151",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527982237",
@@ -3896,7 +3896,7 @@
       "codigo": "7891527982237",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527982234",
@@ -3905,7 +3905,7 @@
       "codigo": "17891527982234",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527070453",
@@ -3914,7 +3914,7 @@
       "codigo": "7891527070453",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527070450",
@@ -3923,7 +3923,7 @@
       "codigo": "17891527070450",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527054965",
@@ -3932,7 +3932,7 @@
       "codigo": "7891527054965",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527054962",
@@ -3941,7 +3941,7 @@
       "codigo": "17891527054962",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527054996",
@@ -3950,7 +3950,7 @@
       "codigo": "7891527054996",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527054993",
@@ -3959,7 +3959,7 @@
       "codigo": "17891527054993",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527054989",
@@ -3968,7 +3968,7 @@
       "codigo": "7891527054989",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527054986",
@@ -3977,7 +3977,7 @@
       "codigo": "17891527054986",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527055009",
@@ -3986,7 +3986,7 @@
       "codigo": "7891527055009",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527055006",
@@ -3995,7 +3995,7 @@
       "codigo": "17891527055006",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069044",
@@ -4004,7 +4004,7 @@
       "codigo": "7891527069044",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069041",
@@ -4013,7 +4013,7 @@
       "codigo": "17891527069041",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527069020",
@@ -4022,7 +4022,7 @@
       "codigo": "7891527069020",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527069027",
@@ -4031,7 +4031,7 @@
       "codigo": "17891527069027",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527068986",
@@ -4040,7 +4040,7 @@
       "codigo": "7891527068986",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527068983",
@@ -4049,7 +4049,7 @@
       "codigo": "17891527068983",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527044881",
@@ -4058,7 +4058,7 @@
       "codigo": "7891527044881",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527044888",
@@ -4067,7 +4067,7 @@
       "codigo": "17891527044888",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527037814",
@@ -4076,7 +4076,7 @@
       "codigo": "7891527037814",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527037811",
@@ -4085,7 +4085,7 @@
       "codigo": "17891527037811",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527068979",
@@ -4094,7 +4094,7 @@
       "codigo": "7891527068979",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527068976",
@@ -4103,7 +4103,7 @@
       "codigo": "17891527068976",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527044874",
@@ -4112,7 +4112,7 @@
       "codigo": "7891527044874",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527044871",
@@ -4121,7 +4121,7 @@
       "codigo": "17891527044871",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527037784",
@@ -4130,7 +4130,7 @@
       "codigo": "7891527037784",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527037781",
@@ -4139,7 +4139,7 @@
       "codigo": "17891527037781",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527064391",
@@ -4148,7 +4148,7 @@
       "codigo": "7891527064391",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527064398",
@@ -4157,7 +4157,7 @@
       "codigo": "17891527064398",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_ean_7891527070170",
@@ -4166,7 +4166,7 @@
       "codigo": "7891527070170",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     },
     {
       "id": "cb_dun_17891527070177",
@@ -4175,7 +4175,7 @@
       "codigo": "17891527070177",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-08-31T11:55:10.299Z"
+      "criado_em": "2026-09-01T06:12:17.336Z"
     }
   ],
   "pending_images_approval": [
