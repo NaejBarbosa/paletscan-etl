@@ -18,7 +18,7 @@
         <link rel="prev" href="../pwa-relatorios-auditoria/">
       
       
-        <link rel="next" href="../operacoes/">
+        <link rel="next" href="../pwa-filiais-catalogo/">
       
       
         
@@ -687,10 +687,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-matriz-de-controle-de-acesso-rbac" class="md-nav__link">
+  <a href="#2-matriz-de-controle-de-acesso-rbac-multi-tenant" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛡️ 2. Matriz de Controle de Acesso (RBAC)
+        🛡️ 2. Matriz de Controle de Acesso (RBAC) &amp; Multi-Tenant
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-barreira-de-seguranca-de-marcas-brand-guardrail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏬 3. Barreira de Segurança de Marcas (Brand Guardrail)
       
     </span>
   </a>
@@ -701,6 +712,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwa-filiais-catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-Filiais & Governança de Catálogo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1047,10 +1086,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-matriz-de-controle-de-acesso-rbac" class="md-nav__link">
+  <a href="#2-matriz-de-controle-de-acesso-rbac-multi-tenant" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛡️ 2. Matriz de Controle de Acesso (RBAC)
+        🛡️ 2. Matriz de Controle de Acesso (RBAC) &amp; Multi-Tenant
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-barreira-de-seguranca-de-marcas-brand-guardrail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏬 3. Barreira de Segurança de Marcas (Brand Guardrail)
       
     </span>
   </a>
@@ -1105,13 +1155,14 @@
 <li><strong>Isenção de Expiração para Operadores Fixos</strong>: As credenciais operacionais de administração (como <code>JeanBfreitas_</code>) possuem política de não-expiração forçada de senha, prevenindo travamento do turno de trabalho.</li>
 </ul>
 <hr />
-<h2 id="2-matriz-de-controle-de-acesso-rbac">🛡️ 2. Matriz de Controle de Acesso (RBAC)</h2>
+<h2 id="2-matriz-de-controle-de-acesso-rbac-multi-tenant">🛡️ 2. Matriz de Controle de Acesso (RBAC) &amp; Multi-Tenant</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Permissão</th>
-<th style="text-align: left;">Flag</th>
+<th style="text-align: left;">Permissão / Atributo</th>
+<th style="text-align: left;">Flag no Perfil</th>
 <th style="text-align: center;">Administrador (<code>operador</code>)</th>
+<th style="text-align: center;">Operador Setorial</th>
 <th style="text-align: center;">Visitante (<code>visitante</code>)</th>
 </tr>
 </thead>
@@ -1121,10 +1172,12 @@
 <td style="text-align: left;"><code>isAdmin</code></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Bipar e Consultar</strong></td>
 <td style="text-align: left;">N/A</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅ (Leitura)</td>
 </tr>
@@ -1132,23 +1185,27 @@
 <td style="text-align: left;"><strong>Cadastrar Paletes</strong></td>
 <td style="text-align: left;"><code>podeCadastrarPalete</code></td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ (Se atribuído)</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Cadastrar SKUs Master</strong></td>
 <td style="text-align: left;"><code>podeCadastrarProduto</code></td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌ (Restrito Central)</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Vincular DUN-14</strong></td>
 <td style="text-align: left;"><code>podeVincularDun</code></td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ (Com validação GS1)</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Editar Vaga de Palete</strong></td>
 <td style="text-align: left;"><code>podeEditarVaga</code></td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 </tr>
@@ -1156,16 +1213,45 @@
 <td style="text-align: left;"><strong>Exportar Relatórios</strong></td>
 <td style="text-align: left;"><code>podeExportarRelatorio</code></td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ (Se atribuído)</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Gerenciar Watchlist</strong></td>
 <td style="text-align: left;"><code>podeAdicionarRadar</code></td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Filial de Atuação</strong></td>
+<td style="text-align: left;"><code>filialId</code> / <code>filialNome</code></td>
+<td style="text-align: center;">410 (Matriz)</td>
+<td style="text-align: center;">Filial da Loja</td>
+<td style="text-align: center;">410</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Escopo de Marcas</strong></td>
+<td style="text-align: left;"><code>marcasPermitidas</code></td>
+<td style="text-align: center;">Todas (<code>acessoTodasMarcas: true</code>)</td>
+<td style="text-align: center;">Restrito à Marca</td>
+<td style="text-align: center;">Apenas Leitura</td>
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="3-barreira-de-seguranca-de-marcas-brand-guardrail">🏬 3. Barreira de Segurança de Marcas (Brand Guardrail)</h2>
+<p>Para assegurar que promotores de vendas ou operadores de chão de fábrica vinculados a uma determinada marca não modifiquem dados de outras marcas concorrentes:</p>
+<pre class="mermaid"><code>flowchart LR
+    OP["👤 Operador Tenta Ação\n(Cadastro ou Vínculo DUN)"] --&gt; CHECK{"Usuário tem\nacessoTodasMarcas?"}
+    CHECK --&gt;|Sim| LIB["✅ Ação Liberada"]
+    CHECK --&gt;|Não| MARCA{"Marca do Produto está em\nmarcasPermitidas?"}
+    MARCA --&gt;|Sim| LIB
+    MARCA --&gt;|Não| BARRADO["🚫 BLOQUEADO (403 Forbidden)\nOperação restrita às marcas permitidas"]</code></pre>
+<ul>
+<li><strong>Validação em Dupla Camada</strong>: A verificação ocorre tanto no formulário do PWA quanto no backend (<code>pages/api/produtos/gerenciar-codigos.ts</code> e <code>pages/api/cadastrar-produto.ts</code>) via <a href="file:///root/repo_pwa/lib/gs1Validator.ts"><code>lib/gs1Validator.ts</code></a>.</li>
+<li><strong>Imutabilidade de Permissões</strong>: Apenas administradores com a flag <code>isAdmin: true</code> podem alterar o escopo de filiais e marcas dos operadores através do painel <code>/admin</code>.</li>
+</ul>
 
 
 
@@ -1218,13 +1304,13 @@
         
         
           
-          <a href="../operacoes/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Guia de Operações &amp; CLI">
+          <a href="../pwa-filiais-catalogo/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Multi-Filiais &amp; Governança de Catálogo">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Guia de Operações & CLI
+                Multi-Filiais & Governança de Catálogo
               </div>
             </div>
             <div class="md-footer__button md-icon">

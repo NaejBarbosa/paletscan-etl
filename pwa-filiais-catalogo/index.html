@@ -12,13 +12,13 @@
         <meta name="author" content="Jean Barbosa & Antigravity Data Engineering Team">
       
       
-        <link rel="canonical" href="https://NaejBarbosa.github.io/paletscan-etl/pwa-scanner-regex/">
+        <link rel="canonical" href="https://NaejBarbosa.github.io/paletscan-etl/pwa-filiais-catalogo/">
       
       
-        <link rel="prev" href="../pwa-service-worker/">
+        <link rel="prev" href="../pwa-auth-permissoes/">
       
       
-        <link rel="next" href="../pwa-vagas-zoneamento/">
+        <link rel="next" href="../operacoes/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Leitor Câmera & Regex Industrial - PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)</title>
+        <title>Multi-Filiais & Governança de Catálogo - PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#leitor-optico-funil-de-regex-industrial" class="md-skip">
+        <a href="#multi-filiais-governanca-de-catalogo-gs1-modulo-10" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Leitor Câmera & Regex Industrial
+              Multi-Filiais & Governança de Catálogo
             
           </span>
         </div>
@@ -484,37 +484,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Leitor Câmera & Regex Industrial
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../pwa-scanner-regex/" class="md-nav__link">
         
   
   
@@ -530,87 +503,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-componente-leitor-optico-scannertsx" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📷 1. Componente Leitor Óptico (Scanner.tsx)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-motor-de-regex-industrial-libregexts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🧩 2. Motor de Regex Industrial (lib/regex.ts)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧩 2. Motor de Regex Industrial (lib/regex.ts)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-tabela-de-identificadores-gs1-e-regras-especiais" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A. Tabela de Identificadores GS1 e Regras Especiais
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b-normalizacao-de-zeros-a-esquerda" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B. Normalização de Zeros à Esquerda
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-validacao-matematica-gs1-modulo-10-libgs1validatorts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📐 3. Validação Matemática GS1 Módulo 10 (lib/gs1Validator.ts)
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -732,10 +624,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../pwa-filiais-catalogo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-Filiais & Governança de Catálogo
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -751,6 +670,154 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-arquitetura-multi-filial-governanca-de-catalogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏛️ 1. Arquitetura Multi-Filial &amp; Governança de Catálogo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏛️ 1. Arquitetura Multi-Filial &amp; Governança de Catálogo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-fundamentais-de-governanca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Princípios Fundamentais de Governança:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-modulo-de-gestao-de-filiais-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏬 2. Módulo de Gestão de Filiais (/admin)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-autonomia-do-codigo-de-balanca-plu-por-filial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚖️ 3. Autonomia do Código de Balança (PLU) por Filial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-validacao-matematica-gs1-modulo-10-correlacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 4. Validação Matemática GS1 (Módulo 10) &amp; Correlação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📐 4. Validação Matemática GS1 (Módulo 10) &amp; Correlação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-algoritmo-de-digito-verificador-gs1-modulo-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Algoritmo de Dígito Verificador GS1 Módulo 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-correlacao-matematica-ean-13-x-dun-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Correlação Matemática EAN-13 x DUN-14
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-barreira-de-seguranca-de-marcas-permitidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Barreira de Segurança de Marcas Permitidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-canal-de-crowdsourcing-moderacao-de-reportes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💬 5. Canal de Crowdsourcing &amp; Moderação de Reportes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💬 5. Canal de Crowdsourcing &amp; Moderação de Reportes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-operacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo Operacional:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1069,44 +1136,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-componente-leitor-optico-scannertsx" class="md-nav__link">
+  <a href="#1-arquitetura-multi-filial-governanca-de-catalogo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📷 1. Componente Leitor Óptico (Scanner.tsx)
+        🏛️ 1. Arquitetura Multi-Filial &amp; Governança de Catálogo
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-motor-de-regex-industrial-libregexts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🧩 2. Motor de Regex Industrial (lib/regex.ts)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧩 2. Motor de Regex Industrial (lib/regex.ts)">
+    <nav class="md-nav" aria-label="🏛️ 1. Arquitetura Multi-Filial &amp; Governança de Catálogo">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-tabela-de-identificadores-gs1-e-regras-especiais" class="md-nav__link">
+  <a href="#principios-fundamentais-de-governanca" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A. Tabela de Identificadores GS1 e Regras Especiais
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b-normalizacao-de-zeros-a-esquerda" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B. Normalização de Zeros à Esquerda
+        Princípios Fundamentais de Governança:
       
     </span>
   </a>
@@ -1119,13 +1164,102 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-validacao-matematica-gs1-modulo-10-libgs1validatorts" class="md-nav__link">
+  <a href="#2-modulo-de-gestao-de-filiais-admin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📐 3. Validação Matemática GS1 Módulo 10 (lib/gs1Validator.ts)
+        🏬 2. Módulo de Gestão de Filiais (/admin)
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-autonomia-do-codigo-de-balanca-plu-por-filial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚖️ 3. Autonomia do Código de Balança (PLU) por Filial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-validacao-matematica-gs1-modulo-10-correlacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 4. Validação Matemática GS1 (Módulo 10) &amp; Correlação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📐 4. Validação Matemática GS1 (Módulo 10) &amp; Correlação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-algoritmo-de-digito-verificador-gs1-modulo-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Algoritmo de Dígito Verificador GS1 Módulo 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-correlacao-matematica-ean-13-x-dun-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Correlação Matemática EAN-13 x DUN-14
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-barreira-de-seguranca-de-marcas-permitidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Barreira de Segurança de Marcas Permitidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-canal-de-crowdsourcing-moderacao-de-reportes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💬 5. Canal de Crowdsourcing &amp; Moderação de Reportes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💬 5. Canal de Crowdsourcing &amp; Moderação de Reportes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-operacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo Operacional:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1146,81 +1280,125 @@
 
 
 
-<h1 id="leitor-optico-funil-de-regex-industrial">🔍 Leitor Óptico &amp; Funil de Regex Industrial</h1>
-<p>O módulo de leitura visual e decodificação do <strong>PaletScan PWA</strong> combina o leitor de câmera com um funil de expressões regulares industriais especializado nas normas internacionais GS1 e particularidades de fornecedores alimentícios.</p>
+<h1 id="multi-filiais-governanca-de-catalogo-gs1-modulo-10">🏬 Multi-Filiais, Governança de Catálogo &amp; GS1 Módulo 10</h1>
+<p>Com a expansão da operação do <strong>PaletScan PWA</strong> para redes de atacarejo e distribuição alimentícia (como a rede Fort Atacadista), o ecossistema implementa uma arquitetura robusta de <strong>Multi-Filiais (Multi-Tenant)</strong>, combinando governança estrita do <strong>Catálogo Mestre</strong>, autonomia operacional local para balanças de pesagem, validações matemáticas oficiais GS1 e canal colaborativo (crowdsourcing) de reportes.</p>
 <hr />
-<h2 id="1-componente-leitor-optico-scannertsx">📷 1. Componente Leitor Óptico (<code>Scanner.tsx</code>)</h2>
+<h2 id="1-arquitetura-multi-filial-governanca-de-catalogo">🏛️ 1. Arquitetura Multi-Filial &amp; Governança de Catálogo</h2>
+<p>No modelo de atacarejo, produtos industriais compartilham as mesmas características de catálogo em todo o país (fotos, descrições, conservação térmica e códigos EAN/DUN), mas cada filial possui sua própria realidade física de recebimento, equipes de operadores e balanças de pesagem locais.</p>
 <pre class="mermaid"><code>flowchart TD
-    START["📷 Operador Inicia o Scanner no PWA"]
+    subgraph CENTRAL["🏛️ Central Administrativa (Catálogo Mestre)"]
+        CAT_MESTRE["📦 Catálogo Mestre Centralizado\n(Fotos HD, Descrições Fiscais, Classes, DUN-14)"]
+        MOD_REPORTES["🛡️ Painel de Moderação de Reportes\n(/admin - Aba Reportes das Filiais)"]
+        GEST_FILIAIS["🏬 Módulo de Gestão de Filiais\n(CRUD de Lojas, Status Ativo/Inativo)"]
+    end
 
-    START --&gt; CAM["1. Leitura de Câmera em Tempo Real"]
-    CAM --&gt; C1["Biblioteca ZXing e BarcodeDetector API"]
-    C1 --&gt; C2["Mira Laser Animada e Lanterna LED"]
+    subgraph FILIAL_410["🏬 Filial 410 (Rio Tavares)"]
+        OP_410["👤 Operador Loja 410"]
+        BAL_410["⚖️ PLU Balança Local: 1234"]
+        REP_410["💬 Envio de Sugestões / Divergências"]
+    end
 
-    START --&gt; UPL["2. Upload de Foto com Recorte"]
-    UPL --&gt; U1["Recorte Interativo (react-zoom-pan-pinch)"]
-    U1 --&gt; U2["Zoom Tátil para Isolar Rótulos com Reflexo ou Névoa"]
+    subgraph FILIAL_411["🏬 Filial 411 (Campeche)"]
+        OP_411["👤 Operador Loja 411"]
+        BAL_411["⚖️ PLU Balança Local: 5678"]
+        REP_411["💬 Envio de Sugestões / Divergências"]
+    end
 
-    C2 --&gt; DEC["🔍 Decodificação Óptica Bruta"]
-    U2 --&gt; DEC
+    CAT_MESTRE ==&gt;|Espelha Dados Oficiais| OP_410
+    CAT_MESTRE ==&gt;|Espelha Dados Oficiais| OP_411
 
-    DEC --&gt; REG["⚙️ Funil de Regex Industrial (lib/regex.ts)"]
-    REG --&gt; AUTO["✅ Preenchimento Automático (EAN, Validade, Lote e Peso)"]</code></pre>
+    OP_410 --&gt;|Grava com Autonomia Local| BAL_410
+    OP_411 --&gt;|Grava com Autonomia Local| BAL_411
+
+    REP_410 -.-&gt;|Feedback Loop| MOD_REPORTES
+    REP_411 -.-&gt;|Feedback Loop| MOD_REPORTES</code></pre>
+<h3 id="principios-fundamentais-de-governanca">Princípios Fundamentais de Governança:</h3>
+<ol>
+<li><strong>Catálogo Mestre Centralizado</strong>:</li>
+<li>Fotos oficiais tratadas por IA (U2-Net / WebP 1000px), descrições padronizadas, conservação e classes fiscais são restritas à central administrativa.</li>
+<li>Operadores de lojas locais não podem corromper as fotos ou alterar descrições globais de outros estabelecimentos.</li>
+<li><strong>Autonomia Local de Pesagem (PLU)</strong>:</li>
+<li>Códigos de balança para pesagem fracionada/açougue variam de filial para filial. O sistema isola o código de pesagem por loja, impedindo que a Loja 410 altere a configuração da Loja 411.</li>
+<li><strong>Crowdsourcing Inteligente via Modal de Detalhes</strong>:</li>
+<li>Qualquer operador de chão de fábrica pode reportar de forma simples divergências observadas (ex: nova embalagem na indústria, divergência de peso), alimentando o painel de pendências da central.</li>
+</ol>
 <hr />
-<h2 id="2-motor-de-regex-industrial-libregexts">🧩 2. Motor de Regex Industrial (<code>lib/regex.ts</code>)</h2>
-<h3 id="a-tabela-de-identificadores-gs1-e-regras-especiais">A. Tabela de Identificadores GS1 e Regras Especiais</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Identificador (AI)</th>
-<th style="text-align: left;">Significado</th>
-<th style="text-align: left;">Exemplo de Leitura</th>
-<th style="text-align: left;">Ação Executada pelo Sistema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>(01)</code> ou <code>01</code></td>
-<td style="text-align: left;">GTIN-14 / DUN-14</td>
-<td style="text-align: left;"><code>0107891000123456</code></td>
-<td style="text-align: left;">Identifica a caixa máster ou produto de 14 dígitos.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>(17)</code> ou <code>17</code></td>
-<td style="text-align: left;">Data de Vencimento</td>
-<td style="text-align: left;"><code>17260830</code></td>
-<td style="text-align: left;">Converte <code>260830</code> em validade formatada <code>30/08/2026</code>.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>(10)</code> ou <code>10</code></td>
-<td style="text-align: left;">Lote de Fabricação</td>
-<td style="text-align: left;"><code>10L2026A</code></td>
-<td style="text-align: left;">Associa a string ao campo de lote do palete.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>(11)</code> ou <code>11</code></td>
-<td style="text-align: left;">Data de Fabricação (Marca Lar)</td>
-<td style="text-align: left;"><code>11250830</code></td>
-<td style="text-align: left;">Quando o AI 17 está ausente, o sistema calcula automaticamente a validade sugerida de <strong>+365 dias</strong>.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>(310X)</code> / <code>(pesar)</code></td>
-<td style="text-align: left;">Pesagem Variável</td>
-<td style="text-align: left;"><code>3102001550</code></td>
-<td style="text-align: left;">Detecta peso em balança e abre o campo de quilos no formulário.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="b-normalizacao-de-zeros-a-esquerda">B. Normalização de Zeros à Esquerda</h3>
-<p>O motor padroniza variações de formatação de códigos EAN/DUN de indústrias como <strong>Friboi / JBS</strong>, permitindo a correspondência perfeita com o catálogo master gerado pelo pipeline ETL.</p>
-<hr />
-<h2 id="3-validacao-matematica-gs1-modulo-10-libgs1validatorts">📐 3. Validação Matemática GS1 Módulo 10 (<code>lib/gs1Validator.ts</code>)</h2>
-<p>Além de extrair códigos por padrões regex, o sistema executa a validação matemática estrita da norma <strong>GS1 Módulo 10</strong> em tempo de digitação e bipagem:</p>
+<h2 id="2-modulo-de-gestao-de-filiais-admin">🏬 2. Módulo de Gestão de Filiais (<code>/admin</code>)</h2>
+<p>O painel administrativo dispõe do módulo completo de <strong>Gestão de Filiais</strong>:</p>
 <ul>
-<li><strong>Validação de DUN-14</strong>: Exige 14 dígitos numéricos estritos e calcula o dígito verificador ponderado. Códigos digitados incorretamente recebem alerta visual imediato (vermelho) prevenindo gravações incorretas.</li>
-<li><strong>Validação de EAN-13</strong>: Garante que o dígito de controle do produto comercial seja matematicamente válido antes de permitir a associação de novos SKUs.</li>
-<li><strong>Detecção de Correlação EAN x DUN</strong>: Avalia matematicamente se um código DUN-14 é uma variante direta (<code>variante_direta</code>) ou agrupamento logístico (<code>caixa_distribuicao</code>) do EAN base, evitando associações de produtos diferentes.</li>
+<li><strong>Cadastro e Edição de Lojas</strong>: Permite registrar o código da filial (ex: <code>410</code>), nome fantasia (ex: <code>Fort Atacadista - Loja 410 (Rio Tavares)</code>), cidade e estado federativo.</li>
+<li><strong>Ativação e Desativação de Lojas</strong>: Filiais inativas têm o acesso de seus operadores restrito temporariamente.</li>
+<li><strong>Proteção de Integridade da Matriz</strong>: A filial matriz (<code>410</code>) possui trava de proteção contra exclusão inadvertida no banco relacional.</li>
+<li><strong>Vínculo Dinâmico de Usuários</strong>: No formulário de cadastro de operadores, a seleção de filial é realizada via <code>&lt;select&gt;</code> dinâmico populado a partir das lojas ativas.</li>
 </ul>
+<hr />
+<h2 id="3-autonomia-do-codigo-de-balanca-plu-por-filial">⚖️ 3. Autonomia do Código de Balança (PLU) por Filial</h2>
+<p>No setor de carnes, aves e congelados, balanças como Toledo Prix ou Filizola exigem códigos PLU específicos de cada filial.</p>
+<ul>
+<li><strong>Armazenamento Híbrido</strong>: Persistência isolada na entidade <code>pesar_cod_filial</code> indexada pela chave tripla <code>(empresa_id, filial_id, ean)</code>.</li>
+<li><strong>Resiliência Offline</strong>: Espelhamento local em cache JSON (<code>lib/pesar_cod_filial_db.json</code>) sincronizado em segundo plano com o Supabase quando há sinal de rede.</li>
+<li><strong>Interface Clara com Badge da Loja</strong>: No modal <a href="file:///root/repo_pwa/components/GerenciarCodigosModal.tsx"><code>GerenciarCodigosModal.tsx</code></a>, o campo de código de pesar apresenta o badge da loja do operador (<code>Loja 410</code>) e a mensagem de apoio:<blockquote>
+<p><em>"Código PLU local exclusivo desta filial. Não afeta as outras lojas."</em></p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h2 id="4-validacao-matematica-gs1-modulo-10-correlacao">📐 4. Validação Matemática GS1 (Módulo 10) &amp; Correlação</h2>
+<p>Para eliminar erros de digitação de operadores em ambiente industrial, o PWA integra o motor matemático oficial GS1 (<a href="file:///root/repo_pwa/lib/gs1Validator.ts"><code>lib/gs1Validator.ts</code></a>).</p>
+<h3 id="a-algoritmo-de-digito-verificador-gs1-modulo-10">A. Algoritmo de Dígito Verificador GS1 Módulo 10</h3>
+<p>Para um código de barras de <span class="arithmatex">\(N\)</span> dígitos (onde o último dígito <span class="arithmatex">\(D_N\)</span> é o Dígito Verificador):
+1. Percorre-se os dígitos da direita para a esquerda (excluindo o dígito verificador), multiplicando alternadamente pelos pesos <strong>3</strong> e <strong>1</strong>.
+2. Soma-se todos os produtos ponderados:
+   $<span class="arithmatex">\(\text{Soma} = \sum_{i=1}^{N-1} (d_i \times p_i)\)</span>$
+3. O dígito verificador calculado é a diferença para a próxima dezena:
+   $<span class="arithmatex">\(DV = (10 - (\text{Soma} \pmod{10})) \pmod{10}\)</span>$</p>
+<pre class="mermaid"><code>flowchart LR
+    INPUT["Entrada do Operador\n(Ex: 17891000100100)"] --&gt; VAL{"Verificação de Formato\n(14 dígitos numéricos estritos)"}
+    VAL --&gt;|Inválido| ERR1["❌ Formato Inválido (Tamanho ou Não-numérico)"]
+    VAL --&gt;|Válido| MOD10["Cálculo GS1 Módulo 10\n(Pesos Ponderados 3 e 1)"]
+    MOD10 --&gt; COMP{"DV Calculado == DV Informado?"}
+    COMP --&gt;|Não| ERR2["❌ Dígito Verificador Inválido (GS1 Rejeitado)"]
+    COMP --&gt;|Sim| OK["✅ Código Válido e Aprovado"]</code></pre>
+<h3 id="b-correlacao-matematica-ean-13-x-dun-14">B. Correlação Matemática EAN-13 x DUN-14</h3>
+<p>O validador correlaciona a raiz do GTIN-13 com o DUN-14:
+* <strong>Variante Direta</strong>: O DUN-14 possui a mesma raiz de 12 dígitos do EAN-13, precedido pelo indicador logístico <code>1..8</code>.
+* <strong>Caixa de Distribuição Agrupada</strong>: O prefixo GS1 da empresa coincide, identificando fardos e caixas industriais da mesma linha de produto.</p>
+<h3 id="c-barreira-de-seguranca-de-marcas-permitidas">C. Barreira de Segurança de Marcas Permitidas</h3>
+<p>Quando um operador tem permissão de acesso restrita (ex: usuário alocado exclusivamente para a marca <code>Sadia</code>):
+* Qualquer tentativa de cadastrar novos itens ou vincular códigos da marca <code>Perdigão</code> ou outras marcas é sumariamente <strong>bloqueada</strong> no cliente e no servidor.
+* A API responde com status <code>403 Forbidden</code>:</p>
+<blockquote>
+<p><em>"Operação bloqueada: Seu usuário tem acesso restrito às marcas [Sadia] e não tem autorização para manipular produtos da marca 'Perdigão'."</em></p>
+</blockquote>
+<hr />
+<h2 id="5-canal-de-crowdsourcing-moderacao-de-reportes">💬 5. Canal de Crowdsourcing &amp; Moderação de Reportes</h2>
+<p>Para garantir que o catálogo mestre permaneça atualizado sem abrir brechas de integridade, foi implementado o canal de reporte colaborativo:</p>
+<h3 id="fluxo-operacional">Fluxo Operacional:</h3>
+<ol>
+<li><strong>Ponto de Contato Sutil no Modal de Produto</strong>:</li>
+<li>Dentro do modal <a href="file:///root/repo_pwa/components/DetalheProdutoModal.tsx"><code>DetalheProdutoModal.tsx</code></a>, há o botão estilizado:
+     &gt; <strong>💬 Sugerir correção ou informar à Central</strong></li>
+<li><strong>Modal de Apontamento (<a href="file:///root/repo_pwa/components/ReportarDivergenciaModal.tsx"><code>ReportarDivergenciaModal.tsx</code></a>)</strong>:</li>
+<li>O operador seleciona o tipo de divergência:<ul>
+<li>📷 <strong>Foto Incorreta / Embalagem Antiga</strong></li>
+<li>🏷️ <strong>Descrição / Nome</strong></li>
+<li>❄️ <strong>Conservação Térmica</strong></li>
+<li>⚖️ <strong>Peso / Balança</strong></li>
+<li>💬 <strong>Outro Assunto</strong></li>
+</ul>
+</li>
+<li>Redige a observação e envia à central.</li>
+<li><strong>Painel de Moderação no <code>/admin</code></strong>:</li>
+<li>Na aba <strong>Reportes das Filiais</strong> do componente <a href="file:///root/repo_pwa/components/ValidacaoPendenciasAdmin.tsx"><code>ValidacaoPendenciasAdmin.tsx</code></a>, o administrador visualiza:<ul>
+<li>Badge da Loja remetente (ex: <code>Loja 410</code>, <code>Loja 411</code>);</li>
+<li>Nome e login do operador;</li>
+<li>SKU em foco (EAN e descrição);</li>
+<li>Data e hora do envio;</li>
+<li>Observação textual completa;</li>
+<li>Botões rápidos: <code>[✓ Marcar Resolvido]</code> e <code>[✕ Descartar]</code>.</li>
+</ul>
+</li>
+</ol>
 
 
 
@@ -1256,7 +1434,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
           
-          <a href="../pwa-service-worker/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Service Worker &amp; Resiliência Offline">
+          <a href="../pwa-auth-permissoes/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Autenticação, Passkeys &amp; Permissões">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1266,20 +1444,20 @@
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Service Worker & Resiliência Offline
+                Autenticação, Passkeys & Permissões
               </div>
             </div>
           </a>
         
         
           
-          <a href="../pwa-vagas-zoneamento/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Endereçamento &amp; Vagas de Câmaras">
+          <a href="../operacoes/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Guia de Operações &amp; CLI">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Endereçamento & Vagas de Câmaras
+                Guia de Operações & CLI
               </div>
             </div>
             <div class="md-footer__button md-icon">
