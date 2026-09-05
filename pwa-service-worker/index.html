@@ -551,6 +551,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-fila-offline-pending_criacoes-expurgo-imediato-anti-duplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 4. Fila Offline pending_criacoes &amp; Expurgo Imediato Anti-Duplicação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ 4. Fila Offline pending_criacoes &amp; Expurgo Imediato Anti-Duplicação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-cenario-de-corrida-race-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O Cenário de Corrida (Race Condition):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-solucao-expurgo-atomico-imediato-removercriacoespendentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Solução: Expurgo Atômico Imediato (removerCriacoesPendentes):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-barreira-de-idempotencia-no-backend-paletelifecyclets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 5. Barreira de Idempotência no Backend (paleteLifecycle.ts)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-invariantes-estritos-de-schema-do-watermelondb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 6. Invariantes Estritos de Schema do WatermelonDB
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1073,6 +1134,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-fila-offline-pending_criacoes-expurgo-imediato-anti-duplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 4. Fila Offline pending_criacoes &amp; Expurgo Imediato Anti-Duplicação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ 4. Fila Offline pending_criacoes &amp; Expurgo Imediato Anti-Duplicação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-cenario-de-corrida-race-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O Cenário de Corrida (Race Condition):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-solucao-expurgo-atomico-imediato-removercriacoespendentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Solução: Expurgo Atômico Imediato (removerCriacoesPendentes):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-barreira-de-idempotencia-no-backend-paletelifecyclets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 5. Barreira de Idempotência no Backend (paleteLifecycle.ts)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-invariantes-estritos-de-schema-do-watermelondb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 6. Invariantes Estritos de Schema do WatermelonDB
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1095,25 +1217,19 @@
 <hr />
 <h2 id="1-o-desafio-da-camara-frigorifica">❄️ 1. O Desafio da Câmara Frigorífica</h2>
 <pre class="mermaid"><code>flowchart TD
-    subgraph CamaraFria ["1. Interior da Câmara Frigorífica (Blackout de Sinal)"]
-        A1["Coletor ou Smartphone Android em Modo Offline"]
-        A2["App Shell e Tela de Login Servidos pelo Serwist"]
-        A3["Catálogo Mestre Lido do WatermelonDB Local"]
-        A4["Bipagem e Gravação Reativa Local em menos de 5ms"]
-        A5["Fila pending_sync Enfileira Mutações no localStorage"]
+    A1["❄️ 1. Interior da Câmara Frigorífica (Blackout de Sinal)\nColetor ou Smartphone Android em Modo Offline"]
 
-        A1 --&gt; A2 --&gt; A3 --&gt; A4 --&gt; A5
-    end
+    A1 --&gt; A2["📱 2. App Shell e Login Servidos pelo Serwist Cache\nAbertura instantânea da interface sem sinal de rede"]
 
-    subgraph Reconexao ["2. Saída da Câmara e Retorno da Conectividade"]
-        B1["Reconexão com Wi-Fi ou Rede Móvel 4G/5G"]
-        B2["Instant Sync com Supabase Cloud em menos de 30ms"]
-        B3["Despacho Automático das Mutações da Fila pending_sync"]
+    A2 --&gt; A3["💾 3. Catálogo e Validação no WatermelonDB Local\nBipagem e gravação reativa em menos de 5 milissegundos"]
 
-        B1 --&gt; B2 --&gt; B3
-    end
+    A3 --&gt; A4["📥 4. Enfileiramento na Fila de Contingência Local\nPersistência em pending_criacoes e pending_sync"]
 
-    A5 --&gt;|Ao Detectar Conexão| B1</code></pre>
+    A4 --&gt; B1["🚪 5. Saída da Câmara e Retomada de Sinal\nReconexão detectada com Wi-Fi ou rede 4G e 5G"]
+
+    B1 --&gt; B2["⚡ 6. Instant Sync Delta com Supabase Cloud\nSincronização bidirecional em menos de 30 milissegundos"]
+
+    B2 --&gt; B3["🧹 7. Despacho e Expurgo Atômico da Fila Local\nEvita qualquer envio duplicado de paletes"]</code></pre>
 <hr />
 <h2 id="2-motor-de-service-worker-swts-serwistnext">🛠️ 2. Motor de Service Worker (<code>sw.ts</code> / <code>@serwist/next</code>)</h2>
 <p>O gerenciamento de cache é orquestrado pelo <strong>Serwist</strong>, compilado em tempo de build:</p>
@@ -1179,6 +1295,54 @@
 <li><strong>Invalidação de Hash e Propagação de DUNs</strong>: O sincronizador compara a assinatura de hash do catálogo remoto e invalida o cache local somente quando há mutações reais, forçando a propagação imediata de vínculos de DUN-14 para o IndexedDB móvel.</li>
 <li><strong>Fila de Contingência <code>pending_sync</code></strong>: Caso ocorra instabilidade de rede no envio para o Supabase, as mutações são preservadas localmente e despachadas automaticamente ao restabelecer o sinal.</li>
 </ul>
+<hr />
+<h2 id="4-fila-offline-pending_criacoes-expurgo-imediato-anti-duplicacao">🛡️ 4. Fila Offline <code>pending_criacoes</code> &amp; Expurgo Imediato Anti-Duplicação</h2>
+<p>Um dos desafios mais sutis em aplicações móveis industriais é a <strong>duplicação de registros por sincronização concorrente</strong>.</p>
+<h3 id="o-cenario-de-corrida-race-condition">O Cenário de Corrida (Race Condition):</h3>
+<ol>
+<li>O operador bipa e salva um palete com a rede online.</li>
+<li>Como salvaguarda contra quedas imprevistas de Wi-Fi, o aplicativo imediatamente coloca o palete na fila IndexedDB <code>pending_criacoes</code> via <a href="file:///root/repo_pwa/lib/paleteOfflineHistorico.ts"><code>lib/paleteOfflineHistorico.ts</code></a>.</li>
+<li>A requisição HTTP para a API <code>/api/paletes-historico</code> completa com sucesso em ~200ms.</li>
+<li>Ao receber o retorno positivo, o fluxo chamava a sincronização de pendências em segundo plano.</li>
+<li>Se o item ainda residisse na fila local, o sincronizador o enviava uma segunda vez ao Supabase com diferença de poucas centenas de milissegundos!</li>
+</ol>
+<h3 id="a-solucao-expurgo-atomico-imediato-removercriacoespendentes">A Solução: Expurgo Atômico Imediato (<code>removerCriacoesPendentes</code>):</h3>
+<p>Para eliminar essa brecha, foi implementada a rotina de expurgo imediato:</p>
+<pre class="mermaid"><code>flowchart TD
+    SAVE["💾 Operador Clica em Salvar Palete"]
+
+    SAVE --&gt; ENQUEUE["1. Enfileira na fila local de contingência pending_criacoes\nGarante sobrevivência da carga caso a rede caia no milissegundo seguinte"]
+
+    ENQUEUE --&gt; HTTP["2. Dispara POST para a API de historico"]
+
+    HTTP --&gt; RES{"Resposta HTTP 200 OK?"}
+
+    RES --&gt;|Sim| PURGE["3. Invoca removerCriacoesPendentes(paleteId)\nItem é EXPURGADO do IndexedDB antes de qualquer sync concorrente"]
+
+    PURGE --&gt; SYNC_SAFE["4. Sincronizador de fundo não encontra duplicatas\nNenhum duplo envio ocorre no Supabase"]
+
+    RES --&gt;|Não ou Falha de Rede| KEEP["5. Item Permanece na Fila Local\nSerá sincronizado automaticamente na reconexão física"]</code></pre>
+<hr />
+<h2 id="5-barreira-de-idempotencia-no-backend-paletelifecyclets">⏱️ 5. Barreira de Idempotência no Backend (<code>paleteLifecycle.ts</code>)</h2>
+<p>Como rede industrial em galpões de alvenaria e câmaras frigoríficas pode reenviar pacotes TCP ou o operador pode dar duplo clique rápido no botão tátil do smartphone, o backend implementa uma <strong>Barreira de Idempotência Temporal de 30 Segundos</strong>:</p>
+<pre class="mermaid"><code>flowchart TD
+    REQ["📥 Requisição de Registro de Evento\n(CRIACAO_PALETE, CRIACAO ou ADICAO_PRODUTO)"]
+
+    REQ --&gt; MEM{"Existe evento com mesmo palete_id, câmara e vaga\ngravado nos últimos 30 segundos?"}
+
+    MEM --&gt;|Sim| DUP["⚠️ Evento Duplicado Detectado\nDescarta a requisição silenciosamente sem erro e sem poluir o histórico"]
+
+    MEM --&gt;|Não| WRITE["💾 Grava Evento em paletes_historico e logs_sessao\nAtualiza o cache temporal de idempotência"]</code></pre>
+<ul>
+<li><strong>Escopo da Proteção</strong>: Eventos de criação inicial e adições de produtos ficam blindados contra reenvios acidentais.</li>
+<li><strong>Janela Temporal Calibrada</strong>: O período de 30 segundos cobre confortavelmente oscilações de conexão e retentativas automáticas de Service Workers e navegadores.</li>
+</ul>
+<hr />
+<h2 id="6-invariantes-estritos-de-schema-do-watermelondb">📐 6. Invariantes Estritos de Schema do WatermelonDB</h2>
+<p>Para evitar travamentos silenciosos no motor de banco local no smartphone:
+* Colunas de carimbo de tempo gerenciadas pelo motor (como <code>updated_at</code> e <code>created_at</code>) devem ser estritamente do tipo <code>number</code> e <strong>não opcionais</strong> (<code>isOptional: false</code>).
+* Qualquer migração ou schema que marque <code>updated_at</code> como opcional dispara erro de invariante no WatermelonDB (<code>Diagnostic error: updated_at must be of type number and not optional</code>).
+* A arquitetura garante que todos os schemas e migrações sigam rigorosamente a tipagem numérica invariante.</p>
 
 
 

@@ -1174,39 +1174,23 @@
 <h2 id="1-o-circuito-fechado-de-dados-closed-loop-data-flow">🔄 1. O Circuito Fechado de Dados (Closed-Loop Data Flow)</h2>
 <p>O ecossistema opera através de um circuito fechado de dados bidirecional:</p>
 <pre class="mermaid"><code>flowchart TD
-    subgraph Nuvem ["1. Nuvem e Fornecedores"]
-        A["Portais B2B e APIs dos Frigoríficos"]
-        B["Pipeline ETL (paletscan-etl)"]
-        C["Supabase PostgreSQL - Catálogo Mestre"]
-        A --&gt; B
-        B --&gt; C
-    end
+    A["1. Portais B2B &amp; APIs de Fornecedores\n(Friboi, BRF, Seara, Aurora, Lar, Copacol)"]
 
-    subgraph Sync ["2. Sincronização Sob Demanda"]
-        D["Motor de Sincronização (sync.ts)"]
-        E["WatermelonDB Local (Schema v11)"]
-        D --&gt; E
-    end
+    A --&gt; B["2. Pipeline ETL &amp; IA de Visão\n(Normalização GS1 Mod10, Remoção de Fundo U2Net e WebP)"]
 
-    subgraph ChaoDeFabrica ["3. Chão de Fábrica e Câmaras Frigoríficas"]
-        F["Leitura Óptica e Scanner"]
-        G["Validação e Registro de Vaga"]
-        H["Vínculo Manual de DUN-14 e Pesagem"]
-        F --&gt; G
-        G --&gt; H
-    end
+    B --&gt; C["3. Catálogo Mestre no Supabase PostgreSQL\n(Tabelas relacionais e CDN de Mídias)"]
 
-    subgraph Feedback ["4. Realimentação e Imunidade"]
-        I["API de Cadastro e Sincronização"]
-        J["Tabela produtos_atributos_manuais"]
-        I --&gt; J
-    end
+    C --&gt; D["4. Motor de Instant Sync Delta (em menos de 30ms)\n(Comparação de hash e validação de versão)"]
 
-    C --&gt;|1. Hash Check e Delta Sync| D
-    E --&gt;|2. Consulta Reativa Imediata| F
-    H --&gt;|3. Gravação Offline Imediata| E
-    H --&gt;|4. Fila pending_sync ao Reconectar| I
-    J --&gt;|5. Precedência Absoluta sobre ETL| C</code></pre>
+    D --&gt; E["5. Banco Local-First WatermelonDB\n(Schema v14 com suporte offline em menos de 5ms)"]
+
+    E --&gt; F["6. Operação de Campo nas Câmaras Frigoríficas\n(Leitura óptica, endereçamento rígido e watchlist ao vivo)"]
+
+    F --&gt; G["7. Fila de Contingência Local com Expurgo Imediato\n(Garante zero duplo envio de paletes ao reconectar)"]
+
+    G --&gt; H["8. Tabela de Overrides produtos_atributos_manuais\n(Imunidade absoluta do operador sobre cargas automáticas de ETL)"]
+
+    H --&gt;|Realimenta com Precedência Máxima| C</code></pre>
 <hr />
 <h2 id="2-modelo-de-convivencia-e-imunidade-de-dados-manuais">🛡️ 2. Modelo de Convivência e Imunidade de Dados Manuais</h2>
 <p>Um dos problemas mais comuns em pipelines ETL corporativos é a sobreescrita acidental de dados refinados manualmente por operadores de campo durante as cargas automatizadas de fornecedores.</p>

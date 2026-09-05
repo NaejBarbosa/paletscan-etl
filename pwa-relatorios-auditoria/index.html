@@ -653,10 +653,66 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-exportacao-de-relatorios-csv-cp1252-pdf-executivo" class="md-nav__link">
+  <a href="#3-motor-de-historico-ciclos-de-vida-paletehistoricoenginets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📄 3. Exportação de Relatórios (CSV CP1252 &amp; PDF Executivo)
+        🧬 3. Motor de Histórico &amp; Ciclos de Vida (paleteHistoricoEngine.ts)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧬 3. Motor de Histórico &amp; Ciclos de Vida (paleteHistoricoEngine.ts)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-canonicos-de-eventos-de-ciclo-de-vida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos Canônicos de Eventos de Ciclo de Vida:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-telemetria-de-sessao-e-devtools-remoto-eruda-logs_sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📡 4. Telemetria de Sessão e DevTools Remoto (Eruda &amp; logs_sessao)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📡 4. Telemetria de Sessão e DevTools Remoto (Eruda &amp; logs_sessao)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursos-de-telemetria-operacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos de Telemetria Operacional:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exportacao-de-relatorios-csv-cp1252-pdf-executivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 5. Exportação de Relatórios (CSV CP1252 &amp; PDF Executivo)
       
     </span>
   </a>
@@ -1063,10 +1119,66 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-exportacao-de-relatorios-csv-cp1252-pdf-executivo" class="md-nav__link">
+  <a href="#3-motor-de-historico-ciclos-de-vida-paletehistoricoenginets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📄 3. Exportação de Relatórios (CSV CP1252 &amp; PDF Executivo)
+        🧬 3. Motor de Histórico &amp; Ciclos de Vida (paleteHistoricoEngine.ts)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧬 3. Motor de Histórico &amp; Ciclos de Vida (paleteHistoricoEngine.ts)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-canonicos-de-eventos-de-ciclo-de-vida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos Canônicos de Eventos de Ciclo de Vida:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-telemetria-de-sessao-e-devtools-remoto-eruda-logs_sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📡 4. Telemetria de Sessão e DevTools Remoto (Eruda &amp; logs_sessao)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📡 4. Telemetria de Sessão e DevTools Remoto (Eruda &amp; logs_sessao)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursos-de-telemetria-operacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos de Telemetria Operacional:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exportacao-de-relatorios-csv-cp1252-pdf-executivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 5. Exportação de Relatórios (CSV CP1252 &amp; PDF Executivo)
       
     </span>
   </a>
@@ -1121,7 +1233,60 @@
 
     RES2 --&gt; EXP["🗑️ Ação de Expurgo em Massa (API Serverless)"]</code></pre>
 <hr />
-<h2 id="3-exportacao-de-relatorios-csv-cp1252-pdf-executivo">📄 3. Exportação de Relatórios (CSV CP1252 &amp; PDF Executivo)</h2>
+<h2 id="3-motor-de-historico-ciclos-de-vida-paletehistoricoenginets">🧬 3. Motor de Histórico &amp; Ciclos de Vida (<code>paleteHistoricoEngine.ts</code>)</h2>
+<p>Para garantir rastreabilidade total sem poluir a interface do usuário com dezenas de linhas individuais para o mesmo palete, o componente de histórico processa os eventos brutos em <strong>Grupos Semânticos e Ciclos de Vida</strong>:</p>
+<pre class="mermaid"><code>flowchart TD
+    RAW["📜 Leitura de Eventos Brutos do Supabase\n(Tabela paletes_historico)"]
+
+    RAW --&gt; SORT["1. Ordenação Cronológica Estrita\n(Mais recente para o mais antigo)"]
+
+    SORT --&gt; SPLIT["2. Segmentação de Ciclos de Vida\n(Novo ciclo a cada mudança de palete_id ou intervalo superior a 5 minutos)"]
+
+    SPLIT --&gt; C_ATIVO["Ciclo 0: Palete Ativo Atual\n(status: ativo - Carga física presente na vaga)"]
+    SPLIT --&gt; C_HIST["Ciclos 1..N: Paletes Históricos\n(status: excluido - Cargas passadas já expedidas)"]
+
+    C_ATIVO --&gt; GROUP["3. Agrupamento Semântico de Ações"]
+    C_HIST --&gt; GROUP
+
+    GROUP --&gt; G1["Criação Consolidada (N itens agrupados)"]
+    GROUP --&gt; G2["Conferência Física (Confirmados vs Removidos)"]
+    GROUP --&gt; G3["Edição de Validades e Dados"]
+    GROUP --&gt; G4["Exclusão ou Baixa Total"]
+    GROUP --&gt; G5["Restauração de Palete"]</code></pre>
+<h3 id="tipos-canonicos-de-eventos-de-ciclo-de-vida">Tipos Canônicos de Eventos de Ciclo de Vida:</h3>
+<ul>
+<li><code>CRIACAO_PALETE</code> / <code>CRIACAO</code>: Criação de um novo palete físico na vaga. Eventos ocorridos na mesma janela temporal são agrupados sob um único card visual (<em>"Criação do Palete: X itens"</em>).</li>
+<li><code>ADICAO_PRODUTO</code>: Adição de novo SKU a um palete já existente na câmara fria.</li>
+<li><code>CONFERENCIA_ITEM_CONFIRMADO</code>: Validação física de que a caixa/fardo está presente na câmara.</li>
+<li><code>CONFERENCIA_AUSENTE_REMOVIDO</code>: Baixa de produto ausente durante o checklist.</li>
+<li><code>EDICAO_VALIDADE</code>: Ajuste manual na data de validade de um produto já alocado.</li>
+<li><code>EXCLUSAO_TOTAL_PALETE</code>: Baixa completa do palete da vaga, selando o ciclo de vida.</li>
+<li><code>RESTAURACAO_PALETE</code>: Recuperação de palete ou produto excluído acidentalmente.</li>
+</ul>
+<hr />
+<h2 id="4-telemetria-de-sessao-e-devtools-remoto-eruda-logs_sessao">📡 4. Telemetria de Sessão e DevTools Remoto (Eruda &amp; <code>logs_sessao</code>)</h2>
+<p>O chão de fábrica apresenta variáveis incontroláveis de rede e hardware (temperaturas extremas, lentes de câmera embaçadas por condensação térmica e dispositivos de diferentes marcas). </p>
+<p>Para permitir diagnósticos em tempo real sem necessidade de conectar cabos USB no interior das câmaras:</p>
+<pre class="mermaid"><code>flowchart TD
+    CONSOLE["📱 Evento no Cliente PWA ou Console Eruda\n(Log, Erro de Leitura ou Reporte ADM)"]
+
+    CONSOLE --&gt; BATCH["1. Fila de Telemetria em Memória\n(Agrupa mensagens e captura snapshot de viewport e rota)"]
+
+    BATCH --&gt; POST["2. Disparo Assíncrono para a rota de logs"]
+
+    POST --&gt; BD["3. Persistência em logs_sessao no Supabase\nIndexado por usuario_id, data e severidade"]
+
+    POST --&gt; FILE["4. Arquivo de Auditoria Local logs client.log\nAcessível imediatamente no backend para análise"]
+
+    BD --&gt; ADMIN["5. Painel Administrativo (/admin)\nVisualização instantânea de anomalias em tempo real"]</code></pre>
+<h3 id="recursos-de-telemetria-operacional">Recursos de Telemetria Operacional:</h3>
+<ul>
+<li><strong>Snapshot de Ambiente do Dispositivo</strong>: Resolução de tela (ex: <code>1600x765</code> para Desktop vs <code>390x844</code> para mobile), User-Agent, rota ativa e tempo de resposta da rede.</li>
+<li><strong>Eruda DevTools Móvel</strong>: Console flutuante integrado acionável em campo por administradores para ver logs locais do browser no celular.</li>
+<li><strong>Histórico de Auditoria</strong>: Qualquer alteração em paletes, exclusões em massa ou bloqueios de marcas é auditada com o login do operador.</li>
+</ul>
+<hr />
+<h2 id="5-exportacao-de-relatorios-csv-cp1252-pdf-executivo">📄 5. Exportação de Relatórios (CSV CP1252 &amp; PDF Executivo)</h2>
 <ul>
 <li><strong>CSV Otimizado para Android (<code>CP1252</code>)</strong>: Codificação Windows-1252 com delimitador ponto e vírgula (<code>;</code>), abrindo diretamente no Excel/Google Sheets do celular sem problemas de acentuação.</li>
 <li><strong>PDF Executivo (<code>jspdf</code> + <code>jspdf-autotable</code>)</strong>: Relatório formatado com cabeçalho corporativo, divisão por câmara/vaga e badges de validade.</li>

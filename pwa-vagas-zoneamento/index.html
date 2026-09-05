@@ -597,21 +597,66 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-bloqueio-ativo-de-vaga-duplicada" class="md-nav__link">
+  <a href="#3-prevencao-ativa-de-colisao-de-vagas-deteccao-de-concorrencia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛑 3. Bloqueio Ativo de Vaga Duplicada
+        🛑 3. Prevenção Ativa de Colisão de Vagas &amp; Detecção de Concorrência
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛑 3. Prevenção Ativa de Colisão de Vagas &amp; Detecção de Concorrência">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mecanismos-de-protecao-concorrente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mecanismos de Proteção Concorrente:
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#4-protocolo-de-sinalizacao-fisica" class="md-nav__link">
+  <a href="#4-motor-de-isolamento-de-ciclos-de-vida-paletehistoricoenginets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏷️ 4. Protocolo de Sinalização Física
+        🔄 4. Motor de Isolamento de Ciclos de Vida (paleteHistoricoEngine.ts)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 4. Motor de Isolamento de Ciclos de Vida (paleteHistoricoEngine.ts)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diretrizes-do-motor-de-ciclos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diretrizes do Motor de Ciclos:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-protocolo-de-sinalizacao-fisica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏷️ 5. Protocolo de Sinalização Física
       
     </span>
   </a>
@@ -1074,21 +1119,66 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-bloqueio-ativo-de-vaga-duplicada" class="md-nav__link">
+  <a href="#3-prevencao-ativa-de-colisao-de-vagas-deteccao-de-concorrencia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛑 3. Bloqueio Ativo de Vaga Duplicada
+        🛑 3. Prevenção Ativa de Colisão de Vagas &amp; Detecção de Concorrência
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛑 3. Prevenção Ativa de Colisão de Vagas &amp; Detecção de Concorrência">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mecanismos-de-protecao-concorrente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mecanismos de Proteção Concorrente:
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#4-protocolo-de-sinalizacao-fisica" class="md-nav__link">
+  <a href="#4-motor-de-isolamento-de-ciclos-de-vida-paletehistoricoenginets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏷️ 4. Protocolo de Sinalização Física
+        🔄 4. Motor de Isolamento de Ciclos de Vida (paleteHistoricoEngine.ts)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 4. Motor de Isolamento de Ciclos de Vida (paleteHistoricoEngine.ts)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diretrizes-do-motor-de-ciclos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diretrizes do Motor de Ciclos:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-protocolo-de-sinalizacao-fisica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏷️ 5. Protocolo de Sinalização Física
       
     </span>
   </a>
@@ -1184,12 +1274,66 @@
 <li><strong>Congelados (<code>C1</code> / <code>C2</code>)</strong>: Vegetais, pratos prontos, polpas e aves/cortes congelados (-18°C).</li>
 </ul>
 <hr />
-<h2 id="3-bloqueio-ativo-de-vaga-duplicada">🛑 3. Bloqueio Ativo de Vaga Duplicada</h2>
-<p>Durante a seleção de vaga no componente <code>VagaSelector.tsx</code>, o sistema consulta em milissegundos o banco local WatermelonDB:
-- 🟢 <strong>Vaga Livre</strong>: Permite o salvamento imediato.
-- 🔴 <strong>Vaga Ocupada</strong>: Trava o botão de confirmação e exibe os dados da carga já alocada, impedindo sobreposição e divergência de inventário.</p>
+<h2 id="3-prevencao-ativa-de-colisao-de-vagas-deteccao-de-concorrencia">🛑 3. Prevenção Ativa de Colisão de Vagas &amp; Detecção de Concorrência</h2>
+<p>Em operações com múltiplos operadores trabalhando simultaneamente — como conferentes com smartphones/coletores no interior das câmaras frias e supervisores de expedição operando terminais Desktop —, o risco de <strong>dupla alocação concorrente</strong> em uma mesma vaga física é crítico.</p>
+<p>Para eliminar colisões e inconsistências de inventário, o <strong>PaletScan PWA</strong> emprega uma arquitetura de prevenção em 4 camadas concorrentes:</p>
+<pre class="mermaid"><code>flowchart TD
+    INIT["📱 Operador Abre o Seletor de Vagas\n(VagaSelector.tsx)"]
+
+    INIT --&gt; L1["1. Carga Inicial do Mapa de Vagas\n(WatermelonDB local + API vagas-ocupadas)"]
+
+    L1 --&gt; L2["2. Subscrição Supabase Realtime\n(Canal paletes_armazenados escuta INSERT/DELETE)"]
+
+    L2 --&gt; L3["3. Polling Reativo Ativo (Intervalo de 4 segundos)\n(Varredura periódica leve enquanto o modal estiver aberto)"]
+
+    L3 --&gt; SELECT["📍 Operador Clica em uma Vaga (ex: A10E)"]
+
+    SELECT --&gt; CONFIRM["👆 Operador Clica em Confirmar Vaga"]
+
+    CONFIRM --&gt; L4{"4. Double-Check Atômico na API\n(Verificação no ato do clique)"}
+
+    L4 --&gt;|Vaga Ocupada por Outro Dispositivo| BLOCKED["🚫 BLOQUEIO IMEDIATO DE COLISÃO\nExibe card vermelho com operador concorrente"]
+
+    L4 --&gt;|Vaga 100% Livre e Desimpedida| SUCCESS["✅ ALOCAÇÃO AUTORIZADA\nPalete vinculado à vaga com sucesso"]</code></pre>
+<h3 id="mecanismos-de-protecao-concorrente">Mecanismos de Proteção Concorrente:</h3>
+<ol>
+<li><strong>Supabase Realtime Channel (<code>paletes_armazenados</code>)</strong>:</li>
+<li>Assim que o modal <a href="file:///root/repo_pwa/components/VagaSelector.tsx"><code>VagaSelector.tsx</code></a> é aberto, ele estabelece uma subscrição WebSocket no canal <code>paletes_armazenados</code> do Supabase.</li>
+<li>Qualquer palete salvo ou desalocado em outro terminal dispara um evento broadcast que atualiza instantaneamente a matriz de vagas visíveis.</li>
+<li><strong>Polling de Resguardo (4 Segundos)</strong>:</li>
+<li>Em caso de oscilação momentânea do canal WebSocket (comum em redes Wi-Fi industriais), um temporizador de 4 segundos consulta a rota <code>/api/vagas-ocupadas</code> em segundo plano para garantir consistência visual contínua.</li>
+<li><strong>Double-Check Atômico na Confirmação (<code>handleConfirmar</code>)</strong>:</li>
+<li>No momento exato em que o operador pressiona o botão de confirmação, o componente efetua uma requisição direta ao endpoint de validação. Se outro operador confirmou a mesma coordenada nos últimos segundos, a transação local é abortada e uma notificação de colisão é exibida.</li>
+<li><strong>Deduplicação Estrita no Servidor (<code>pages/api/vagas-ocupadas.ts</code>)</strong>:</li>
+<li>O backend deduplica estritamente as posições ocupadas através da chave canônica normalizada <code>${camara}|||${vaga}</code>, prevenindo que múltiplos registros de produtos em uma mesma vaga física sejam retornados como posições duplicadas.</li>
+</ol>
 <hr />
-<h2 id="4-protocolo-de-sinalizacao-fisica">🏷️ 4. Protocolo de Sinalização Física</h2>
+<h2 id="4-motor-de-isolamento-de-ciclos-de-vida-paletehistoricoenginets">🔄 4. Motor de Isolamento de Ciclos de Vida (<code>paleteHistoricoEngine.ts</code>)</h2>
+<p>Uma mesma vaga física (ex: <code>A10E</code> na câmara <em>Congelados 2</em>) é um recurso estático reutilizável: hoje ela pode abrigar uma carga de <em>Sobrecoxa Sadia</em>, amanhã ser esvaziada e, no dia seguinte, receber um lote de <em>Peito de Frango Lar</em>.</p>
+<p>No motor de histórico do PaletScan, os eventos físicos de uma vaga são agrupados em <strong>Ciclos de Vida Independentes</strong>:</p>
+<pre class="mermaid"><code>flowchart TD
+    EV["📥 Novo Evento de Histórico\n(CRIACAO_PALETE na Vaga A10E)"]
+
+    EV --&gt; CHECK1{"Existe Ciclo Anterior\nAberto para a Mesma Vaga?"}
+
+    CHECK1 --&gt;|Não| NEW_CYCLE["🌱 Inicia Ciclo 0 (Ativo)\nContém apenas o palete recém-criado"]
+
+    CHECK1 --&gt;|Sim| CHECK2{"palete_id do Evento é Diferente OU\nIntervalo Temporal superior a 5 Minutos?"}
+
+    CHECK2 --&gt;|Sim: Novo Palete na Mesma Vaga| CLOSE_OLD["🔒 Fecha o Ciclo Anterior (status: excluido)\nPreserva o histórico do palete passado intacto"]
+    CLOSE_OLD --&gt; NEW_CYCLE
+
+    CHECK2 --&gt;|Não: Mesmo Palete Sendo Montado| MERGE["📦 Agrupa no Ciclo Ativo Atual\n(Ex: Bipagem de múltiplos itens do mesmo palete)"]</code></pre>
+<h3 id="diretrizes-do-motor-de-ciclos">Diretrizes do Motor de Ciclos:</h3>
+<ul>
+<li><strong>Fim da Fusão Indevida de Paletes</strong>: Impede que a criação de um palete hoje seja fundida no grupo de criação de um palete antigo de ontem que já foi expedido.</li>
+<li><strong>Sintetização de <code>EXCLUSAO_TOTAL_PALETE</code></strong>: Quando uma vaga é esvaziada sem emissão de evento explícito pelo coletor (ex: limpeza direta no banco), o endpoint <code>/api/paletes-historico</code> sintetiza o evento de exclusão total, demarcando de forma definitiva a fronteira do ciclo.</li>
+<li><strong>Status do Ciclo</strong>:</li>
+<li><code>ativo</code>: Representa a carga física presente na câmara neste instante.</li>
+<li><code>excluido</code>: Representa cargas passadas já baixadas do estoque, acessíveis exclusivamente para conferência de auditoria e rastreabilidade.</li>
+</ul>
+<hr />
+<h2 id="5-protocolo-de-sinalizacao-fisica">🏷️ 5. Protocolo de Sinalização Física</h2>
 <ol>
 <li><strong>Etiquetas Adesivas</strong>: Duas etiquetas impressas na balança e coladas no primeiro lastro de caixas.</li>
 <li><strong>Marcador Vermelho</strong>: Escrita manual da identificação (ex: <code>R1-A32E</code> ou <code>C2-B20D</code>).</li>

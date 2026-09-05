@@ -1242,15 +1242,18 @@
 <hr />
 <h2 id="3-barreira-de-seguranca-de-marcas-brand-guardrail">🏬 3. Barreira de Segurança de Marcas (Brand Guardrail)</h2>
 <p>Para assegurar que promotores de vendas ou operadores de chão de fábrica vinculados a uma determinada marca não modifiquem dados de outras marcas concorrentes:</p>
-<pre class="mermaid"><code>flowchart LR
-    OP["👤 Operador Tenta Ação\n(Cadastro ou Vínculo DUN)"] --&gt; CHECK{"Usuário tem\nacessoTodasMarcas?"}
-    CHECK --&gt;|Sim| LIB["✅ Ação Liberada"]
-    CHECK --&gt;|Não| MARCA{"Marca do Produto está em\nmarcasPermitidas?"}
+<pre class="mermaid"><code>flowchart TD
+    OP["👤 Operador Tenta Ação\n(Cadastro de Palete ou Vínculo DUN)"]
+    OP --&gt; CHECK{"Usuário possui\nacessoTodasMarcas?"}
+    CHECK --&gt;|Sim| LIB["✅ Ação Liberada Imediatamente"]
+    CHECK --&gt;|Não| MARCA{"Marca do Produto está em\nmarcasPermitidas do Perfil?"}
     MARCA --&gt;|Sim| LIB
     MARCA --&gt;|Não| BARRADO["🚫 BLOQUEADO (403 Forbidden)\nOperação restrita às marcas permitidas"]</code></pre>
 <ul>
-<li><strong>Validação em Dupla Camada</strong>: A verificação ocorre tanto no formulário do PWA quanto no backend (<code>pages/api/produtos/gerenciar-codigos.ts</code> e <code>pages/api/cadastrar-produto.ts</code>) via <a href="file:///root/repo_pwa/lib/gs1Validator.ts"><code>lib/gs1Validator.ts</code></a>.</li>
-<li><strong>Imutabilidade de Permissões</strong>: Apenas administradores com a flag <code>isAdmin: true</code> podem alterar o escopo de filiais e marcas dos operadores através do painel <code>/admin</code>.</li>
+<li><strong>Validação em Dupla Camada (Client + Server)</strong>: A verificação ocorre tanto nos formulários e modais do PWA quanto nas rotas de API do backend (<code>/api/produtos/gerenciar-codigos</code>, <code>/api/cadastrar-produto</code> e <code>/api/cadastrar</code>) via <a href="file:///root/repo_pwa/lib/gs1Validator.ts"><code>lib/gs1Validator.ts</code></a>.</li>
+<li><strong>Mensagens Transparentes e Amigáveis</strong>: Quando o operador é barrado, o PWA apresenta toast claro indicando quais marcas seu usuário tem permissão para manipular.</li>
+<li><strong>Imutabilidade e Segurança</strong>: Apenas administradores com a flag <code>isAdmin: true</code> podem alterar o escopo de filiais e marcas dos operadores através do painel <code>/admin</code>.</li>
+<li><strong>Login Móvel via QR Code Multi-Sessão</strong>: Operadores podem autenticar terminais e coletores escaneando um QR Code gerado por uma sessão autenticada, sem necessidade de digitação repetitiva de senhas em teclados virtuais.</li>
 </ul>
 
 

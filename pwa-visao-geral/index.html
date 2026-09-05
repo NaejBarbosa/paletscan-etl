@@ -1077,22 +1077,22 @@
     APP["📱 PaletScan PWA (Next.js 14 Local-First)"]
 
     APP --&gt; M1["🔍 1. Módulo de Leitura e Scanner"]
-    M1 --&gt; D1["Leitura de Câmera em Tempo Real &amp; Recorte Manual de Rótulos"]
+    M1 --&gt; D1["Leitura ao Vivo (ZXing) &amp; Recorte Tátil com Zoom Anti-Névoa"]
 
     D1 --&gt; M2["⚙️ 2. Módulo de Regex Industrial"]
     M2 --&gt; D2["Decodificação GS1-128, Data Matrix Lar (+365d), BRF &amp; Balança"]
 
     D2 --&gt; M3["🏢 3. Módulo de Endereçamento Rígido"]
-    M3 --&gt; D3["Zoneamento em 4 Caracteres &amp; Bloqueio Ativo de Vaga Ocupada"]
+    M3 --&gt; D3["Zoneamento 4 Caracteres &amp; Prevenção Ativa de Colisão Realtime"]
 
     D3 --&gt; M4["🎯 4. Módulo de Radar Watchlist"]
-    M4 --&gt; D4["Busca Estrita EAN/DUN, Fuzzy Fonética &amp; Sincronização BroadcastChannel"]
+    M4 --&gt; D4["Busca Estrita EAN/DUN, Sincronização Cross-Session e Proteção Canônica"]
 
-    D4 --&gt; M5["📋 5. Módulo de Conferência &amp; Auditoria"]
-    M5 --&gt; D5["Checklist Físico Tátil, Expurgo em Massa &amp; Relatórios PDF/CSV"]
+    D4 --&gt; M5["📋 5. Módulo de Conferência &amp; Ciclos de Vida"]
+    M5 --&gt; D5["Motor de Histórico por Vaga, Checklist Físico e Relatórios PDF/CSV"]
 
-    D5 --&gt; M6["🔒 6. Módulo de Autenticação &amp; Segurança"]
-    M6 --&gt; D6["Biometria Passkeys, Auto-Logout por Inatividade &amp; Cache Offline"]</code></pre>
+    D5 --&gt; M6["🔒 6. Módulo de Autenticação &amp; Telemetria"]
+    M6 --&gt; D6["Passkeys, Barreira de Marcas, Eruda DevTools Móvel e logs_sessao"]</code></pre>
 <hr />
 <h2 id="2-diferenciais-do-pwa-no-ambiente-frigorifico">⚡ 2. Diferenciais do PWA no Ambiente Frigorífico</h2>
 <ol>
@@ -1106,8 +1106,10 @@
 <li>Botões ampliados e layout em contraste elevado (paletas <em>Slate/Dark</em>) adequados para operação com luvas térmicas em temperaturas negativas (-18°C a -25°C).</li>
 <li><strong>Leitura Resiliente a Condensação e Reflexos</strong>:</li>
 <li>Ferramenta integrada de recorte manual (<code>react-zoom-pan-pinch</code>) para leitura de códigos em paletes com filme stretch embaçado ou amassado.</li>
-<li><strong>Alocação Rígida sem Duplicidades</strong>:</li>
-<li>Bloqueio ativo de confirmação caso o operador tente alocar um novo palete em uma coordenada física já ocupada por outra carga.</li>
+<li><strong>Alocação Rígida sem Duplicidades &amp; Prevenção de Colisão</strong>:</li>
+<li>Bloqueio ativo de confirmação via polling (4s) e escuta WebSocket no Supabase Realtime, impedindo que múltiplos operadores (coletor vs desktop) sobreponham cargas na mesma coordenada física.</li>
+<li><strong>Isolamento de Ciclos de Vida por Vaga</strong>:</li>
+<li>O histórico de paletes antigos que já deixaram a câmara não contamina o palete recém-alocado, eliminando registros duplicados no histórico e no desktop.</li>
 </ol>
 
 

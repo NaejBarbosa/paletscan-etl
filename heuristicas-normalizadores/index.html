@@ -1224,22 +1224,22 @@
 <pre class="mermaid"><code>flowchart TD
     IN["🔢 Código de Barras Bruto de Entrada"]
 
-    IN --&gt; T1["1. Validação de Tipagem: String Estrita (Impede perda de zero à esquerda)"]
+    IN --&gt; T1["1. Validação de Tipagem: String Estrita\n(Impede perda de zero à esquerda)"]
     T1 --&gt; T2["2. Inspeção de Tamanho e Dígitos"]
 
-    T2 --&gt; E1["Caso 12 Dígitos: Cálculo Matemático do 13º Dígito Mod10"]
-    T2 --&gt; E2["Caso Zeros Espúrios: Remoção do 0 Inicial e Recálculo Mod10"]
-    T2 --&gt; E3["Caso 13 Dígitos: Confirmação de EAN-13 Válido"]
+    T2 --&gt; E1["Caso 12 Dígitos:\nCálculo do 13º Dígito Mod10"]
+    T2 --&gt; E2["Caso Zeros Espúrios:\nRemoção do 0 Inicial e Recálculo"]
+    T2 --&gt; E3["Caso 13 Dígitos:\nConfirmação de EAN-13 Válido"]
 
-    E1 --&gt; EAN["✅ Código EAN-13 Sanitizado e Auditado"]
+    E1 --&gt; EAN["✅ Código EAN-13 Sanitizado"]
     E2 --&gt; EAN
     E3 --&gt; EAN
 
     EAN --&gt; D1["3. Resolução da Caixa Master (DUN-14)"]
-    D1 --&gt; D2["DUN-14 Fornecido: Validação direta de 14 Dígitos Mod10"]
-    D1 --&gt; D3["DUN-14 Ausente: Derivação Logística (Prefixo 1 + EAN12 + Mod10)"]
+    D1 --&gt; D2["DUN-14 Fornecido:\nValidação direta 14 Dígitos Mod10"]
+    D1 --&gt; D3["DUN-14 Ausente:\nDerivação (Prefixo 1 + EAN12 + Mod10)"]
 
-    D2 --&gt; OUT["📦 Par EAN-13 / DUN-14 Pronto para Carga Relacional"]
+    D2 --&gt; OUT["📦 Par EAN-13 e DUN-14 Pronto para o Catálogo"]
     D3 --&gt; OUT</code></pre>
 <h3 id="a-tipagem-estrita-como-string">🛡️ A. Tipagem Estrita como String</h3>
 <p>Todas as funções de código de barras trabalham <strong>exclusivamente com o tipo <code>string</code></strong>. Isso impede que compiladores ou bibliotecas convertam códigos iniciados em zero (como <code>07891515...</code>) em números inteiros, o que causaria a perda irreparável de zeros à esquerda.</p>

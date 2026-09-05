@@ -642,10 +642,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-gerenciamento-e-vinculo-de-codigos-gerenciarcodigosmodaltsx" class="md-nav__link">
+  <a href="#3-sincronizacao-multi-sessao-ao-vivo-cross-session-realtime" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏷️ 3. Gerenciamento e Vínculo de Códigos (GerenciarCodigosModal.tsx)
+        ⚡ 3. Sincronização Multi-Sessão ao Vivo (Cross-Session Realtime)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ 3. Sincronização Multi-Sessão ao Vivo (Cross-Session Realtime)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocolo-de-mensagens-e-acoes-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocolo de Mensagens e Ações Broadcast:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gerenciamento-e-vinculo-de-codigos-gerenciarcodigosmodaltsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏷️ 4. Gerenciamento e Vínculo de Códigos (GerenciarCodigosModal.tsx)
       
     </span>
   </a>
@@ -1097,10 +1125,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-gerenciamento-e-vinculo-de-codigos-gerenciarcodigosmodaltsx" class="md-nav__link">
+  <a href="#3-sincronizacao-multi-sessao-ao-vivo-cross-session-realtime" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏷️ 3. Gerenciamento e Vínculo de Códigos (GerenciarCodigosModal.tsx)
+        ⚡ 3. Sincronização Multi-Sessão ao Vivo (Cross-Session Realtime)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ 3. Sincronização Multi-Sessão ao Vivo (Cross-Session Realtime)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocolo-de-mensagens-e-acoes-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocolo de Mensagens e Ações Broadcast:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gerenciamento-e-vinculo-de-codigos-gerenciarcodigosmodaltsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏷️ 4. Gerenciamento e Vínculo de Códigos (GerenciarCodigosModal.tsx)
       
     </span>
   </a>
@@ -1176,7 +1232,31 @@
 <li><strong>Barra de Progresso e Filtros de Status</strong>: Acompanhamento visual da taxa de localização de itens (Localizados vs Pendentes) nas câmaras frias.</li>
 </ul>
 <hr />
-<h2 id="3-gerenciamento-e-vinculo-de-codigos-gerenciarcodigosmodaltsx">🏷️ 3. Gerenciamento e Vínculo de Códigos (<code>GerenciarCodigosModal.tsx</code>)</h2>
+<h2 id="3-sincronizacao-multi-sessao-ao-vivo-cross-session-realtime">⚡ 3. Sincronização Multi-Sessão ao Vivo (Cross-Session Realtime)</h2>
+<p>Além da propagação local intra-dispositivo via <code>BroadcastChannel</code>, o ecossistema disponibiliza sincronização <strong>Cross-Session em tempo real</strong> através de canais WebSocket do Supabase:</p>
+<pre class="mermaid"><code>flowchart TD
+    SESSAO_A["📱 Sessão A (Operador no Smartphone 1)\nLocaliza produto ou adiciona novo SKU"]
+
+    SESSAO_A --&gt; BROADCAST["⚡ Canal Supabase Realtime watchlist-sync\nDisparo de evento de broadcast em nuvem"]
+
+    BROADCAST --&gt; SESSAO_B["📱 Sessão B (Conferente no Smartphone 2 ou Desktop)\nRecepção do payload em menos de 50ms"]
+
+    SESSAO_B --&gt; REFRESH["🔄 Atualização Automática de Estado\n(Sem recarregar a tela e com zero lag visual)"]
+
+    REFRESH --&gt; A1["Marcação imediata de produto como Localizado"]
+    REFRESH --&gt; A2["Reflexo instantâneo de novos itens adicionados"]
+    REFRESH --&gt; A3["Atualização dinâmica de exclusões de itens e listas"]</code></pre>
+<h3 id="protocolo-de-mensagens-e-acoes-broadcast">Protocolo de Mensagens e Ações Broadcast:</h3>
+<ul>
+<li><code>toggle_located</code>: Atualiza em tempo real o status de conferência de um SKU monitorado.</li>
+<li><code>add_product</code>: Adiciona novos produtos de interesse diretamente à lista remota de outros operadores.</li>
+<li><code>remove_product</code> e <code>delete_list</code>: Propaga exclusões de produtos e listas instantaneamente.</li>
+<li><strong>Proteção Canônica da Lista Principal</strong>:</li>
+<li>A Lista Principal possui identificador canônico protegido (<code>DEFAULT_WATCHLIST_ID = 'watchlist_principal'</code>).</li>
+<li>Funções de checagem (<code>isListaPrincipal</code>) impedem que a lista base seja deletada ou tenha seu nome corrompido durante transmissões remotas concorrentes.</li>
+</ul>
+<hr />
+<h2 id="4-gerenciamento-e-vinculo-de-codigos-gerenciarcodigosmodaltsx">🏷️ 4. Gerenciamento e Vínculo de Códigos (<code>GerenciarCodigosModal.tsx</code>)</h2>
 <ul>
 <li><strong>Isolamento Estrito de Códigos</strong>:</li>
 <li><strong>EAN-13</strong>: Código consumidor exclusivo de 13 dígitos numéricos.</li>

@@ -1174,7 +1174,8 @@
 <h2 id="1-arquitetura-de-ingestao-em-duas-etapas">🏗️ 1. Arquitetura de Ingestão em Duas Etapas</h2>
 <p>Em vez de scraping de páginas HTML, o pipeline Friboi conecta-se diretamente às APIs da plataforma <strong>Oracle Commerce Cloud (CCStore)</strong> da JBS:</p>
 <pre class="mermaid"><code>flowchart TD
-    SITEMAP["1. Leitura do Sitemap XML Oficial\n(productSitemap.xml)"] --&gt; PARSE["2. Extração de Slugs e Identificadores de SKUs"]
+    SITEMAP["1. Leitura do Sitemap XML Oficial\n(productSitemap.xml)"]
+    SITEMAP --&gt; PARSE["2. Extração de Slugs e Identificadores de SKUs"]
     PARSE --&gt; POOL["3. Pool de Concorrência Paralela\n(p-limit: 10 requisições simultâneas)"]
     POOL --&gt; API["4. Chamadas REST à API Oracle CCStore\n(ccstoreui/v1/products)"]
     API --&gt; STRUCT["5. Parser Estrutural: Peso, DUN-14,\nTabela Nutricional e Imagens HD"]

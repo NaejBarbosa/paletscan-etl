@@ -1286,32 +1286,16 @@
 <h2 id="1-arquitetura-multi-filial-governanca-de-catalogo">🏛️ 1. Arquitetura Multi-Filial &amp; Governança de Catálogo</h2>
 <p>No modelo de atacarejo, produtos industriais compartilham as mesmas características de catálogo em todo o país (fotos, descrições, conservação térmica e códigos EAN/DUN), mas cada filial possui sua própria realidade física de recebimento, equipes de operadores e balanças de pesagem locais.</p>
 <pre class="mermaid"><code>flowchart TD
-    subgraph CENTRAL["🏛️ Central Administrativa (Catálogo Mestre)"]
-        CAT_MESTRE["📦 Catálogo Mestre Centralizado\n(Fotos HD, Descrições Fiscais, Classes, DUN-14)"]
-        MOD_REPORTES["🛡️ Painel de Moderação de Reportes\n(/admin - Aba Reportes das Filiais)"]
-        GEST_FILIAIS["🏬 Módulo de Gestão de Filiais\n(CRUD de Lojas, Status Ativo/Inativo)"]
-    end
+    CAT_MESTRE["🏛️ Catálogo Mestre Centralizado\n(Fotos HD U2Net, Descrições, Classes e DUNs)"]
 
-    subgraph FILIAL_410["🏬 Filial 410 (Rio Tavares)"]
-        OP_410["👤 Operador Loja 410"]
-        BAL_410["⚖️ PLU Balança Local: 1234"]
-        REP_410["💬 Envio de Sugestões / Divergências"]
-    end
+    CAT_MESTRE ==&gt;|Espelha Dados Oficiais| L410["🏬 Filial 410 - Rio Tavares\n(Operadores de Campo)"]
+    CAT_MESTRE ==&gt;|Espelha Dados Oficiais| L411["🏬 Filial 411 - Campeche\n(Operadores de Campo)"]
 
-    subgraph FILIAL_411["🏬 Filial 411 (Campeche)"]
-        OP_411["👤 Operador Loja 411"]
-        BAL_411["⚖️ PLU Balança Local: 5678"]
-        REP_411["💬 Envio de Sugestões / Divergências"]
-    end
+    L410 --&gt; BAL410["⚖️ PLU Balança Local 410: 1234\n(Isolado sem colisão)"]
+    L411 --&gt; BAL411["⚖️ PLU Balança Local 411: 5678\n(Isolado sem colisão)"]
 
-    CAT_MESTRE ==&gt;|Espelha Dados Oficiais| OP_410
-    CAT_MESTRE ==&gt;|Espelha Dados Oficiais| OP_411
-
-    OP_410 --&gt;|Grava com Autonomia Local| BAL_410
-    OP_411 --&gt;|Grava com Autonomia Local| BAL_411
-
-    REP_410 -.-&gt;|Feedback Loop| MOD_REPORTES
-    REP_411 -.-&gt;|Feedback Loop| MOD_REPORTES</code></pre>
+    L410 -.-&gt;|Reporte de Divergência| MOD["🛡️ Central de Moderação ADM\n(Aba Reportes das Filiais)"]
+    L411 -.-&gt;|Reporte de Divergência| MOD</code></pre>
 <h3 id="principios-fundamentais-de-governanca">Princípios Fundamentais de Governança:</h3>
 <ol>
 <li><strong>Catálogo Mestre Centralizado</strong>:</li>
@@ -1352,13 +1336,14 @@
    $<span class="arithmatex">\(\text{Soma} = \sum_{i=1}^{N-1} (d_i \times p_i)\)</span>$
 3. O dígito verificador calculado é a diferença para a próxima dezena:
    $<span class="arithmatex">\(DV = (10 - (\text{Soma} \pmod{10})) \pmod{10}\)</span>$</p>
-<pre class="mermaid"><code>flowchart LR
-    INPUT["Entrada do Operador\n(Ex: 17891000100100)"] --&gt; VAL{"Verificação de Formato\n(14 dígitos numéricos estritos)"}
-    VAL --&gt;|Inválido| ERR1["❌ Formato Inválido (Tamanho ou Não-numérico)"]
-    VAL --&gt;|Válido| MOD10["Cálculo GS1 Módulo 10\n(Pesos Ponderados 3 e 1)"]
-    MOD10 --&gt; COMP{"DV Calculado == DV Informado?"}
-    COMP --&gt;|Não| ERR2["❌ Dígito Verificador Inválido (GS1 Rejeitado)"]
-    COMP --&gt;|Sim| OK["✅ Código Válido e Aprovado"]</code></pre>
+<pre class="mermaid"><code>flowchart TD
+    INPUT["📥 Entrada do Operador\n(Ex: 17891000100100)"]
+    INPUT --&gt; VAL{"Verificação de Formato\n(14 dígitos numéricos estritos)"}
+    VAL --&gt;|Inválido| ERR1["❌ Formato Inválido\n(Tamanho ou caractere não-numérico)"]
+    VAL --&gt;|Válido| MOD10["⚙️ Cálculo GS1 Módulo 10\n(Pesos alternados 3 e 1 invertidos)"]
+    MOD10 --&gt; COMP{"Dígito Calculado ==\nDígito Informado?"}
+    COMP --&gt;|Não| ERR2["❌ Dígito Verificador Inválido\n(Código Rejeitado na Bipagem)"]
+    COMP --&gt;|Sim| OK["✅ Código Válido e Aprovado\n(Vínculo ou Cadastro Liberado)"]</code></pre>
 <h3 id="b-correlacao-matematica-ean-13-x-dun-14">B. Correlação Matemática EAN-13 x DUN-14</h3>
 <p>O validador correlaciona a raiz do GTIN-13 com o DUN-14:
 * <strong>Variante Direta</strong>: O DUN-14 possui a mesma raiz de 12 dígitos do EAN-13, precedido pelo indicador logístico <code>1..8</code>.

@@ -1153,21 +1153,39 @@
 <pre class="mermaid"><code>flowchart TD
     START["📷 Operador Inicia o Scanner no PWA"]
 
-    START --&gt; CAM["1. Leitura de Câmera em Tempo Real"]
-    CAM --&gt; C1["Biblioteca ZXing e BarcodeDetector API"]
-    C1 --&gt; C2["Mira Laser Animada e Lanterna LED"]
+    START --&gt; CAPTURE["1. Captura Visual (Câmera ao Vivo ou Foto com Recorte)\nZXing BarcodeDetector + Zoom tátil anti-névoa"]
 
-    START --&gt; UPL["2. Upload de Foto com Recorte"]
-    UPL --&gt; U1["Recorte Interativo (react-zoom-pan-pinch)"]
-    U1 --&gt; U2["Zoom Tátil para Isolar Rótulos com Reflexo ou Névoa"]
+    CAPTURE --&gt; RAW_DEC["2. Decodificação Óptica da String Bruta\n(Ex: '01078910001234561726083010L2026A')"]
 
-    C2 --&gt; DEC["🔍 Decodificação Óptica Bruta"]
-    U2 --&gt; DEC
+    RAW_DEC --&gt; FUNNEL["3. Funil de Regex Industrial (lib/regex.ts)\nExtração dos identificadores de aplicação GS1 (AI)"]
 
-    DEC --&gt; REG["⚙️ Funil de Regex Industrial (lib/regex.ts)"]
-    REG --&gt; AUTO["✅ Preenchimento Automático (EAN, Validade, Lote e Peso)"]</code></pre>
+    FUNNEL --&gt; VAL_MATH["4. Validação Matemática GS1 Módulo 10\nCálculo do dígito verificador para EAN-13 e DUN-14"]
+
+    VAL_MATH --&gt; AUTOFILL["✅ 5. Preenchimento Automático do Formulário\nEAN, Validade, Lote, Peso e Vaga preenchidos em menos de 5ms"]</code></pre>
 <hr />
 <h2 id="2-motor-de-regex-industrial-libregexts">🧩 2. Motor de Regex Industrial (<code>lib/regex.ts</code>)</h2>
+<p>O motor de expressões regulares atua em pipeline sequencial, tratando diferentes padrões de mercado sem gerar falso positivo:</p>
+<pre class="mermaid"><code>flowchart TD
+    INPUT_STR["📥 String Bruta Decodificada do Código"]
+
+    INPUT_STR --&gt; D1{"Contém Identificadores GS1\n(AI 01, 17, 10, 310X)?"}
+
+    D1 --&gt;|Sim| P_GS1["Extrai GTIN (01), Validade (17) e Lote (10)"]
+
+    D1 --&gt;|Não| D2{"Padrão Cooperativa Lar\n(Data Matrix com AI 11 sem 17)?"}
+
+    D2 --&gt;|Sim| P_LAR["Calcula Data de Validade:\nData de Fabricação + 365 Dias"]
+
+    D2 --&gt;|Não| D3{"Padrão Frigorífico Friboi ou JBS\n(Zeros à esquerda ou código emendado)?"}
+
+    D3 --&gt;|Sim| P_FRIBOI["Normaliza zeros e isola EAN-13 e DUN-14"]
+
+    D3 --&gt;|Não| P_DIRECT["Extrai Código Numérico Puro\n(EAN-13 comercial padrão)"]
+
+    P_GS1 --&gt; MERGE_REGEX["⚙️ Consolidação dos Dados Estruturados"]
+    P_LAR --&gt; MERGE_REGEX
+    P_FRIBOI --&gt; MERGE_REGEX
+    P_DIRECT --&gt; MERGE_REGEX</code></pre>
 <h3 id="a-tabela-de-identificadores-gs1-e-regras-especiais">A. Tabela de Identificadores GS1 e Regras Especiais</h3>
 <table>
 <thead>
