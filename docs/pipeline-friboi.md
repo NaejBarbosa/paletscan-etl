@@ -10,7 +10,8 @@ Em vez de scraping de páginas HTML, o pipeline Friboi conecta-se diretamente à
 
 ```mermaid
 flowchart TD
-    SITEMAP["1. Leitura do Sitemap XML Oficial\n(productSitemap.xml)"] --> PARSE["2. Extração de Slugs e Identificadores de SKUs"]
+    SITEMAP["1. Leitura do Sitemap XML Oficial\n(productSitemap.xml)"]
+    SITEMAP --> PARSE["2. Extração de Slugs e Identificadores de SKUs"]
     PARSE --> POOL["3. Pool de Concorrência Paralela\n(p-limit: 10 requisições simultâneas)"]
     POOL --> API["4. Chamadas REST à API Oracle CCStore\n(ccstoreui/v1/products)"]
     API --> STRUCT["5. Parser Estrutural: Peso, DUN-14,\nTabela Nutricional e Imagens HD"]

@@ -10,39 +10,23 @@ O ecossistema opera através de um circuito fechado de dados bidirecional:
 
 ```mermaid
 flowchart TD
-    subgraph Nuvem ["1. Nuvem e Fornecedores"]
-        A["Portais B2B e APIs dos Frigoríficos"]
-        B["Pipeline ETL (paletscan-etl)"]
-        C["Supabase PostgreSQL - Catálogo Mestre"]
-        A --> B
-        B --> C
-    end
-
-    subgraph Sync ["2. Sincronização Sob Demanda"]
-        D["Motor de Sincronização (sync.ts)"]
-        E["WatermelonDB Local (Schema v11)"]
-        D --> E
-    end
-
-    subgraph ChaoDeFabrica ["3. Chão de Fábrica e Câmaras Frigoríficas"]
-        F["Leitura Óptica e Scanner"]
-        G["Validação e Registro de Vaga"]
-        H["Vínculo Manual de DUN-14 e Pesagem"]
-        F --> G
-        G --> H
-    end
-
-    subgraph Feedback ["4. Realimentação e Imunidade"]
-        I["API de Cadastro e Sincronização"]
-        J["Tabela produtos_atributos_manuais"]
-        I --> J
-    end
-
-    C -->|1. Hash Check e Delta Sync| D
-    E -->|2. Consulta Reativa Imediata| F
-    H -->|3. Gravação Offline Imediata| E
-    H -->|4. Fila pending_sync ao Reconectar| I
-    J -->|5. Precedência Absoluta sobre ETL| C
+    A["1. Portais B2B & APIs de Fornecedores\n(Friboi, BRF, Seara, Aurora, Lar, Copacol)"]
+    
+    A --> B["2. Pipeline ETL & IA de Visão\n(Normalização GS1 Mod10, Remoção de Fundo U2Net e WebP)"]
+    
+    B --> C["3. Catálogo Mestre no Supabase PostgreSQL\n(Tabelas relacionais e CDN de Mídias)"]
+    
+    C --> D["4. Motor de Instant Sync Delta (em menos de 30ms)\n(Comparação de hash e validação de versão)"]
+    
+    D --> E["5. Banco Local-First WatermelonDB\n(Schema v14 com suporte offline em menos de 5ms)"]
+    
+    E --> F["6. Operação de Campo nas Câmaras Frigoríficas\n(Leitura óptica, endereçamento rígido e watchlist ao vivo)"]
+    
+    F --> G["7. Fila de Contingência Local com Expurgo Imediato\n(Garante zero duplo envio de paletes ao reconectar)"]
+    
+    G --> H["8. Tabela de Overrides produtos_atributos_manuais\n(Imunidade absoluta do operador sobre cargas automáticas de ETL)"]
+    
+    H -->|Realimenta com Precedência Máxima| C
 ```
 
 ---

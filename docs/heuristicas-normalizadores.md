@@ -27,22 +27,22 @@ A validação de códigos de barras é uma das etapas mais críticas do PaletSca
 flowchart TD
     IN["🔢 Código de Barras Bruto de Entrada"]
     
-    IN --> T1["1. Validação de Tipagem: String Estrita (Impede perda de zero à esquerda)"]
+    IN --> T1["1. Validação de Tipagem: String Estrita\n(Impede perda de zero à esquerda)"]
     T1 --> T2["2. Inspeção de Tamanho e Dígitos"]
     
-    T2 --> E1["Caso 12 Dígitos: Cálculo Matemático do 13º Dígito Mod10"]
-    T2 --> E2["Caso Zeros Espúrios: Remoção do 0 Inicial e Recálculo Mod10"]
-    T2 --> E3["Caso 13 Dígitos: Confirmação de EAN-13 Válido"]
+    T2 --> E1["Caso 12 Dígitos:\nCálculo do 13º Dígito Mod10"]
+    T2 --> E2["Caso Zeros Espúrios:\nRemoção do 0 Inicial e Recálculo"]
+    T2 --> E3["Caso 13 Dígitos:\nConfirmação de EAN-13 Válido"]
     
-    E1 --> EAN["✅ Código EAN-13 Sanitizado e Auditado"]
+    E1 --> EAN["✅ Código EAN-13 Sanitizado"]
     E2 --> EAN
     E3 --> EAN
     
     EAN --> D1["3. Resolução da Caixa Master (DUN-14)"]
-    D1 --> D2["DUN-14 Fornecido: Validação direta de 14 Dígitos Mod10"]
-    D1 --> D3["DUN-14 Ausente: Derivação Logística (Prefixo 1 + EAN12 + Mod10)"]
+    D1 --> D2["DUN-14 Fornecido:\nValidação direta 14 Dígitos Mod10"]
+    D1 --> D3["DUN-14 Ausente:\nDerivação (Prefixo 1 + EAN12 + Mod10)"]
     
-    D2 --> OUT["📦 Par EAN-13 / DUN-14 Pronto para Carga Relacional"]
+    D2 --> OUT["📦 Par EAN-13 e DUN-14 Pronto para o Catálogo"]
     D3 --> OUT
 ```
 

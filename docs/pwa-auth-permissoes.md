@@ -59,13 +59,17 @@ flowchart TD
 Para assegurar que promotores de vendas ou operadores de chão de fábrica vinculados a uma determinada marca não modifiquem dados de outras marcas concorrentes:
 
 ```mermaid
-flowchart LR
-    OP["👤 Operador Tenta Ação\n(Cadastro ou Vínculo DUN)"] --> CHECK{"Usuário tem\nacessoTodasMarcas?"}
-    CHECK -->|Sim| LIB["✅ Ação Liberada"]
-    CHECK -->|Não| MARCA{"Marca do Produto está em\nmarcasPermitidas?"}
+flowchart TD
+    OP["👤 Operador Tenta Ação\n(Cadastro de Palete ou Vínculo DUN)"]
+    OP --> CHECK{"Usuário possui\nacessoTodasMarcas?"}
+    CHECK -->|Sim| LIB["✅ Ação Liberada Imediatamente"]
+    CHECK -->|Não| MARCA{"Marca do Produto está em\nmarcasPermitidas do Perfil?"}
     MARCA -->|Sim| LIB
     MARCA -->|Não| BARRADO["🚫 BLOQUEADO (403 Forbidden)\nOperação restrita às marcas permitidas"]
 ```
 
-* **Validação em Dupla Camada**: A verificação ocorre tanto no formulário do PWA quanto no backend (`pages/api/produtos/gerenciar-codigos.ts` e `pages/api/cadastrar-produto.ts`) via [`lib/gs1Validator.ts`](file:///root/repo_pwa/lib/gs1Validator.ts).
-* **Imutabilidade de Permissões**: Apenas administradores com a flag `isAdmin: true` podem alterar o escopo de filiais e marcas dos operadores através do painel `/admin`.
+* **Validação em Dupla Camada (Client + Server)**: A verificação ocorre tanto nos formulários e modais do PWA quanto nas rotas de API do backend (`/api/produtos/gerenciar-codigos`, `/api/cadastrar-produto` e `/api/cadastrar`) via [`lib/gs1Validator.ts`](file:///root/repo_pwa/lib/gs1Validator.ts).
+* **Mensagens Transparentes e Amigáveis**: Quando o operador é barrado, o PWA apresenta toast claro indicando quais marcas seu usuário tem permissão para manipular.
+* **Imutabilidade e Segurança**: Apenas administradores com a flag `isAdmin: true` podem alterar o escopo de filiais e marcas dos operadores através do painel `/admin`.
+* **Login Móvel via QR Code Multi-Sessão**: Operadores podem autenticar terminais e coletores escaneando um QR Code gerado por uma sessão autenticada, sem necessidade de digitação repetitiva de senhas em teclados virtuais.
+

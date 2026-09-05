@@ -63,7 +63,36 @@ flowchart TD
 
 ---
 
-## 🏷️ 3. Gerenciamento e Vínculo de Códigos (`GerenciarCodigosModal.tsx`)
+## ⚡ 3. Sincronização Multi-Sessão ao Vivo (Cross-Session Realtime)
+
+Além da propagação local intra-dispositivo via `BroadcastChannel`, o ecossistema disponibiliza sincronização **Cross-Session em tempo real** através de canais WebSocket do Supabase:
+
+```mermaid
+flowchart TD
+    SESSAO_A["📱 Sessão A (Operador no Smartphone 1)\nLocaliza produto ou adiciona novo SKU"]
+    
+    SESSAO_A --> BROADCAST["⚡ Canal Supabase Realtime watchlist-sync\nDisparo de evento de broadcast em nuvem"]
+    
+    BROADCAST --> SESSAO_B["📱 Sessão B (Conferente no Smartphone 2 ou Desktop)\nRecepção do payload em menos de 50ms"]
+    
+    SESSAO_B --> REFRESH["🔄 Atualização Automática de Estado\n(Sem recarregar a tela e com zero lag visual)"]
+    
+    REFRESH --> A1["Marcação imediata de produto como Localizado"]
+    REFRESH --> A2["Reflexo instantâneo de novos itens adicionados"]
+    REFRESH --> A3["Atualização dinâmica de exclusões de itens e listas"]
+```
+
+### Protocolo de Mensagens e Ações Broadcast:
+* `toggle_located`: Atualiza em tempo real o status de conferência de um SKU monitorado.
+* `add_product`: Adiciona novos produtos de interesse diretamente à lista remota de outros operadores.
+* `remove_product` e `delete_list`: Propaga exclusões de produtos e listas instantaneamente.
+* **Proteção Canônica da Lista Principal**:
+  - A Lista Principal possui identificador canônico protegido (`DEFAULT_WATCHLIST_ID = 'watchlist_principal'`).
+  - Funções de checagem (`isListaPrincipal`) impedem que a lista base seja deletada ou tenha seu nome corrompido durante transmissões remotas concorrentes.
+
+---
+
+## 🏷️ 4. Gerenciamento e Vínculo de Códigos (`GerenciarCodigosModal.tsx`)
 
 * **Isolamento Estrito de Códigos**:
   - **EAN-13**: Código consumidor exclusivo de 13 dígitos numéricos.
@@ -71,3 +100,4 @@ flowchart TD
   - **Código de Pesar / Balança**: Identificador de balança de corte variável, restrito estritamente a produtos fracionados.
 * **Desduplicação no IndexedDB**: Rotina que consolida registros com múltiplos DUNs e garante a persistência do vínculo ativo sem duplicação visual de cards.
 * **Persistência Segura**: Vínculos manuais realizados pelo operador são enviados com prioridade para a tabela `produtos_atributos_manuais`, ficando 100% imunes a rotinas automáticas de scrapers e sincronizações de ETL.
+

@@ -46,12 +46,12 @@ O PaletScan une duas frentes de tecnologia que operam em harmonia contínua atra
 
 ```mermaid
 flowchart TD
-    C1["1. Camada de Inteligência e ETL\nScrapers B2B, Normalização e IA de Imagens U2Net"]
-    C1 --> C2["2. Núcleo Relacional Supabase\nCatálogo Mestre e Tabela Imutável de Overrides"]
-    C2 --> C3["3. Sincronização Sob Demanda\nInstant Sync Delta em menos de 30ms"]
-    C3 --> C4["4. Camada Operacional PWA Local-First\nService Worker Serwist e WatermelonDB (em menos de 5ms)"]
-    C4 --> C5["5. Execução em Campo no Smartphone\nScanner, Endereçamento Rígido e Radar Watchlist"]
-    C5 -->|Fila pending_sync na Reconexão| C2
+    C1["⚙️ 1. Camada de Inteligência e ETL\nScrapers B2B, Normalização GS1 e IA de Imagens U2Net"]
+    C1 --> C2["☁️ 2. Núcleo Relacional Supabase\nCatálogo Mestre, Realtime e Tabela de Overrides"]
+    C2 --> C3["⚡ 3. Sincronização Sob Demanda\nInstant Sync Delta em menos de 30 milissegundos"]
+    C3 --> C4["📱 4. Camada Operacional PWA Local-First\nService Worker Serwist e WatermelonDB em menos de 5ms"]
+    C4 --> C5["🛒 5. Execução em Campo no Smartphone\nScanner, Prevenção de Colisão e Radar Watchlist"]
+    C5 -->|Fila com Expurgo Atômico na Reconexão| C2
 ```
 
 1. **Camada de Inteligência de Dados (ETL & Pipelines)**:
@@ -63,7 +63,7 @@ flowchart TD
 2. **Camada de Operação de Campo (PWA Local-First)**:
    - Progressive Web App instalável que consome a base mestre e opera **100% offline** dentro de câmaras frias através do **WatermelonDB (IndexedDB / LokiJS)**.
    - Decodifica códigos complexos (GS1-128, Data Matrix 2D, regra Lar `+365 dias`, BRF, pesagem dinâmica) com tempo de resposta inferior a **5 milissegundos**.
-   - Gerencia alocação de vagas em coordenadas de 4 dígitos (`A10D` a `B53E`), controle de inventário físico, listas prioritárias (Watchlist com confetes) e exportação de relatórios executivos.
+   - Gerencia alocação de vagas em coordenadas de 4 dígitos (`A10D` a `B53E`) com **prevenção ativa de colisão via Supabase Realtime**, controle de inventário físico, listas prioritárias (Watchlist com confetes) e exportação de relatórios executivos.
 
 ---
 
@@ -79,16 +79,17 @@ O projeto foi integralmente idealizado, desenhado e desenvolvido por **Jean Barb
 
 ## 🔄 3. Ciclo de Vida da Informação Ponta a Ponta
 
-Abaixo, o fluxo de dados industrial é apresentado em formato vertical para leitura clara em smartphones e coletores móveis:
+Abaixo, o fluxo de dados industrial é apresentado em formato estritamente vertical para leitura perfeita em smartphones e coletores móveis:
 
 ```mermaid
 flowchart TD
-    E1["1. Extração B2B Automatizada\nPortais Friboi, BRF, Seara, Aurora, Copacol e Lar"] --> E2["2. Higienização e IA Local\nModulus 10 GS1, Title Case e Remoção de Fundo U2Net"]
+    E1["1. Extração B2B Automatizada\nPortais Friboi, BRF, Seara, Aurora, Copacol e Lar"]
+    E1 --> E2["2. Higienização e IA Local\nModulus 10 GS1, Title Case e Remoção de Fundo U2Net"]
     E2 --> E3["3. Carga Relacional no Supabase\nPersistência em PostgreSQL e CDN de Imagens WebP"]
     E3 --> E4["4. Instant Sync com o Coletor\nComparação de hash em menos de 30ms"]
-    E4 --> E5["5. Operação Offline na Câmara Frigorífica\nLeitura óptica e gravação local no WatermelonDB em menos de 5ms"]
-    E5 --> E6["6. Vínculo Manual e Expurgo\nAssociação de DUN-14 e conferência física em campo"]
-    E6 --> E7["7. Sincronização Segura de Retorno\nEnvio para produtos_atributos_manuais (Imunidade ETL)"]
+    E4 --> E5["5. Operação Offline na Câmara Frigorífica\nLeitura óptica e gravação no WatermelonDB em menos de 5ms"]
+    E5 --> E6["6. Vínculo Manual e Conferência\nPrevenção de colisão de vagas e auditoria física"]
+    E6 --> E7["7. Retorno com Expurgo Atômico e Idempotência\nZero duplo envio e precedência sobre o ETL"]
 ```
 
 ---
@@ -101,13 +102,13 @@ A arquitetura do PaletScan foi desenhada para que cada tecnologia complemente a 
 flowchart TD
     ETL["⚙️ 1. Pipelines de Ingestão ETL (TypeScript e Node.js 20)"]
     ETL --> AI["🖼️ 2. Pipeline de Visão Computacional (Python e rembg U2Net)"]
-    AI --> SUPA["☁️ 3. Núcleo Relacional e Storage CDN (Supabase Cloud)"]
+    AI --> SUPA["☁️ 3. Núcleo Relacional e Realtime (Supabase Cloud)"]
     SUPA --> SYNC["🔄 4. Motor de Instant Sync Delta (Hash Check em menos de 30ms)"]
-    SYNC --> WDB["💾 5. Banco de Dados Local-First (WatermelonDB e IndexedDB)"]
+    SYNC --> WDB["💾 5. Banco Local-First WatermelonDB (Schema v14 em menos de 5ms)"]
     WDB --> PWA["📱 6. Aplicação PWA Touch-First (Next.js 14 e Serwist)"]
-    PWA --> AUTH["🔑 7. Segurança e Biometria (WebAuthn Passkeys e Sessão Offline)"]
+    PWA --> AUTH["🔑 7. Segurança, Passkeys e Telemetria (Eruda e logs_sessao)"]
     AUTH --> RTN["🛒 8. Operação de Campo e Retorno de Dados"]
-    RTN -->|Fila pending_sync na Reconexão| SUPA
+    RTN -->|Fila com Expurgo Atômico na Reconexão| SUPA
 ```
 
 ### Detalhamento das Integrações:

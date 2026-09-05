@@ -353,10 +353,19 @@ Audita a higienização de EANs/DUNs, integridade relacional de marcas e fabrica
 npx tsx scripts/test_sync_and_catalog.ts
 ```
 
-### C. Validador de Sintaxe Mermaid para MkDocs
+### C. Bateria Completa de Testes de Ponta a Ponta do PWA (8 Etapas)
+Executa a validação exaustiva do fluxo completo de usuário, permissões multi-tenant, barreiras de marcas, GS1 Módulo 10, telemetria/Eruda, watchlists em tempo real e prevenção de colisão de vagas:
+
+```bash
+# Executado a partir do repositório do PWA (/root/repo_pwa)
+npx tsx scripts/test_user_flow.ts
+```
+
+### D. Validador de Sintaxe Mermaid para MkDocs
 Verifica se todos os diagramas Mermaid na documentação cumprem as regras de esteiras estritamente verticais e compatibilidade mobile:
 
 ```bash
 npm run validate:mermaid
 ```
+
 

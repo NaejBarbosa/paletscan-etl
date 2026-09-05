@@ -13,22 +13,22 @@ flowchart TD
     APP["📱 PaletScan PWA (Next.js 14 Local-First)"]
 
     APP --> M1["🔍 1. Módulo de Leitura e Scanner"]
-    M1 --> D1["Leitura de Câmera em Tempo Real & Recorte Manual de Rótulos"]
+    M1 --> D1["Leitura ao Vivo (ZXing) & Recorte Tátil com Zoom Anti-Névoa"]
 
     D1 --> M2["⚙️ 2. Módulo de Regex Industrial"]
     M2 --> D2["Decodificação GS1-128, Data Matrix Lar (+365d), BRF & Balança"]
 
     D2 --> M3["🏢 3. Módulo de Endereçamento Rígido"]
-    M3 --> D3["Zoneamento em 4 Caracteres & Bloqueio Ativo de Vaga Ocupada"]
+    M3 --> D3["Zoneamento 4 Caracteres & Prevenção Ativa de Colisão Realtime"]
 
     D3 --> M4["🎯 4. Módulo de Radar Watchlist"]
-    M4 --> D4["Busca Estrita EAN/DUN, Fuzzy Fonética & Sincronização BroadcastChannel"]
+    M4 --> D4["Busca Estrita EAN/DUN, Sincronização Cross-Session e Proteção Canônica"]
 
-    D4 --> M5["📋 5. Módulo de Conferência & Auditoria"]
-    M5 --> D5["Checklist Físico Tátil, Expurgo em Massa & Relatórios PDF/CSV"]
+    D4 --> M5["📋 5. Módulo de Conferência & Ciclos de Vida"]
+    M5 --> D5["Motor de Histórico por Vaga, Checklist Físico e Relatórios PDF/CSV"]
 
-    D5 --> M6["🔒 6. Módulo de Autenticação & Segurança"]
-    M6 --> D6["Biometria Passkeys, Auto-Logout por Inatividade & Cache Offline"]
+    D5 --> M6["🔒 6. Módulo de Autenticação & Telemetria"]
+    M6 --> D6["Passkeys, Barreira de Marcas, Eruda DevTools Móvel e logs_sessao"]
 ```
 
 ---
@@ -45,5 +45,8 @@ flowchart TD
    - Botões ampliados e layout em contraste elevado (paletas *Slate/Dark*) adequados para operação com luvas térmicas em temperaturas negativas (-18°C a -25°C).
 5. **Leitura Resiliente a Condensação e Reflexos**:
    - Ferramenta integrada de recorte manual (`react-zoom-pan-pinch`) para leitura de códigos em paletes com filme stretch embaçado ou amassado.
-6. **Alocação Rígida sem Duplicidades**:
-   - Bloqueio ativo de confirmação caso o operador tente alocar um novo palete em uma coordenada física já ocupada por outra carga.
+6. **Alocação Rígida sem Duplicidades & Prevenção de Colisão**:
+   - Bloqueio ativo de confirmação via polling (4s) e escuta WebSocket no Supabase Realtime, impedindo que múltiplos operadores (coletor vs desktop) sobreponham cargas na mesma coordenada física.
+7. **Isolamento de Ciclos de Vida por Vaga**:
+   - O histórico de paletes antigos que já deixaram a câmara não contamina o palete recém-alocado, eliminando registros duplicados no histórico e no desktop.
+

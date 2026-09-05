@@ -39,8 +39,73 @@ flowchart TD
 
 ---
 
-## 📄 3. Exportação de Relatórios (CSV CP1252 & PDF Executivo)
+## 🧬 3. Motor de Histórico & Ciclos de Vida (`paleteHistoricoEngine.ts`)
+
+Para garantir rastreabilidade total sem poluir a interface do usuário com dezenas de linhas individuais para o mesmo palete, o componente de histórico processa os eventos brutos em **Grupos Semânticos e Ciclos de Vida**:
+
+```mermaid
+flowchart TD
+    RAW["📜 Leitura de Eventos Brutos do Supabase\n(Tabela paletes_historico)"]
+    
+    RAW --> SORT["1. Ordenação Cronológica Estrita\n(Mais recente para o mais antigo)"]
+    
+    SORT --> SPLIT["2. Segmentação de Ciclos de Vida\n(Novo ciclo a cada mudança de palete_id ou intervalo superior a 5 minutos)"]
+    
+    SPLIT --> C_ATIVO["Ciclo 0: Palete Ativo Atual\n(status: ativo - Carga física presente na vaga)"]
+    SPLIT --> C_HIST["Ciclos 1..N: Paletes Históricos\n(status: excluido - Cargas passadas já expedidas)"]
+    
+    C_ATIVO --> GROUP["3. Agrupamento Semântico de Ações"]
+    C_HIST --> GROUP
+    
+    GROUP --> G1["Criação Consolidada (N itens agrupados)"]
+    GROUP --> G2["Conferência Física (Confirmados vs Removidos)"]
+    GROUP --> G3["Edição de Validades e Dados"]
+    GROUP --> G4["Exclusão ou Baixa Total"]
+    GROUP --> G5["Restauração de Palete"]
+```
+
+### Tipos Canônicos de Eventos de Ciclo de Vida:
+* `CRIACAO_PALETE` / `CRIACAO`: Criação de um novo palete físico na vaga. Eventos ocorridos na mesma janela temporal são agrupados sob um único card visual (*"Criação do Palete: X itens"*).
+* `ADICAO_PRODUTO`: Adição de novo SKU a um palete já existente na câmara fria.
+* `CONFERENCIA_ITEM_CONFIRMADO`: Validação física de que a caixa/fardo está presente na câmara.
+* `CONFERENCIA_AUSENTE_REMOVIDO`: Baixa de produto ausente durante o checklist.
+* `EDICAO_VALIDADE`: Ajuste manual na data de validade de um produto já alocado.
+* `EXCLUSAO_TOTAL_PALETE`: Baixa completa do palete da vaga, selando o ciclo de vida.
+* `RESTAURACAO_PALETE`: Recuperação de palete ou produto excluído acidentalmente.
+
+---
+
+## 📡 4. Telemetria de Sessão e DevTools Remoto (Eruda & `logs_sessao`)
+
+O chão de fábrica apresenta variáveis incontroláveis de rede e hardware (temperaturas extremas, lentes de câmera embaçadas por condensação térmica e dispositivos de diferentes marcas). 
+
+Para permitir diagnósticos em tempo real sem necessidade de conectar cabos USB no interior das câmaras:
+
+```mermaid
+flowchart TD
+    CONSOLE["📱 Evento no Cliente PWA ou Console Eruda\n(Log, Erro de Leitura ou Reporte ADM)"]
+    
+    CONSOLE --> BATCH["1. Fila de Telemetria em Memória\n(Agrupa mensagens e captura snapshot de viewport e rota)"]
+    
+    BATCH --> POST["2. Disparo Assíncrono para a rota de logs"]
+    
+    POST --> BD["3. Persistência em logs_sessao no Supabase\nIndexado por usuario_id, data e severidade"]
+    
+    POST --> FILE["4. Arquivo de Auditoria Local logs client.log\nAcessível imediatamente no backend para análise"]
+    
+    BD --> ADMIN["5. Painel Administrativo (/admin)\nVisualização instantânea de anomalias em tempo real"]
+```
+
+### Recursos de Telemetria Operacional:
+* **Snapshot de Ambiente do Dispositivo**: Resolução de tela (ex: `1600x765` para Desktop vs `390x844` para mobile), User-Agent, rota ativa e tempo de resposta da rede.
+* **Eruda DevTools Móvel**: Console flutuante integrado acionável em campo por administradores para ver logs locais do browser no celular.
+* **Histórico de Auditoria**: Qualquer alteração em paletes, exclusões em massa ou bloqueios de marcas é auditada com o login do operador.
+
+---
+
+## 📄 5. Exportação de Relatórios (CSV CP1252 & PDF Executivo)
 
 * **CSV Otimizado para Android (`CP1252`)**: Codificação Windows-1252 com delimitador ponto e vírgula (`;`), abrindo diretamente no Excel/Google Sheets do celular sem problemas de acentuação.
 * **PDF Executivo (`jspdf` + `jspdf-autotable`)**: Relatório formatado com cabeçalho corporativo, divisão por câmara/vaga e badges de validade.
 * **Android MediaScan**: Indexação imediata dos arquivos na biblioteca do dispositivo via `termux-media-scan`.
+

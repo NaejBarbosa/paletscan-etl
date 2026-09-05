@@ -10,32 +10,16 @@ No modelo de atacarejo, produtos industriais compartilham as mesmas característ
 
 ```mermaid
 flowchart TD
-    subgraph CENTRAL["🏛️ Central Administrativa (Catálogo Mestre)"]
-        CAT_MESTRE["📦 Catálogo Mestre Centralizado\n(Fotos HD, Descrições Fiscais, Classes, DUN-14)"]
-        MOD_REPORTES["🛡️ Painel de Moderação de Reportes\n(/admin - Aba Reportes das Filiais)"]
-        GEST_FILIAIS["🏬 Módulo de Gestão de Filiais\n(CRUD de Lojas, Status Ativo/Inativo)"]
-    end
+    CAT_MESTRE["🏛️ Catálogo Mestre Centralizado\n(Fotos HD U2Net, Descrições, Classes e DUNs)"]
+    
+    CAT_MESTRE ==>|Espelha Dados Oficiais| L410["🏬 Filial 410 - Rio Tavares\n(Operadores de Campo)"]
+    CAT_MESTRE ==>|Espelha Dados Oficiais| L411["🏬 Filial 411 - Campeche\n(Operadores de Campo)"]
 
-    subgraph FILIAL_410["🏬 Filial 410 (Rio Tavares)"]
-        OP_410["👤 Operador Loja 410"]
-        BAL_410["⚖️ PLU Balança Local: 1234"]
-        REP_410["💬 Envio de Sugestões / Divergências"]
-    end
+    L410 --> BAL410["⚖️ PLU Balança Local 410: 1234\n(Isolado sem colisão)"]
+    L411 --> BAL411["⚖️ PLU Balança Local 411: 5678\n(Isolado sem colisão)"]
 
-    subgraph FILIAL_411["🏬 Filial 411 (Campeche)"]
-        OP_411["👤 Operador Loja 411"]
-        BAL_411["⚖️ PLU Balança Local: 5678"]
-        REP_411["💬 Envio de Sugestões / Divergências"]
-    end
-
-    CAT_MESTRE ==>|Espelha Dados Oficiais| OP_410
-    CAT_MESTRE ==>|Espelha Dados Oficiais| OP_411
-
-    OP_410 -->|Grava com Autonomia Local| BAL_410
-    OP_411 -->|Grava com Autonomia Local| BAL_411
-
-    REP_410 -.->|Feedback Loop| MOD_REPORTES
-    REP_411 -.->|Feedback Loop| MOD_REPORTES
+    L410 -.->|Reporte de Divergência| MOD["🛡️ Central de Moderação ADM\n(Aba Reportes das Filiais)"]
+    L411 -.->|Reporte de Divergência| MOD
 ```
 
 ### Princípios Fundamentais de Governança:
@@ -85,13 +69,14 @@ Para um código de barras de $N$ dígitos (onde o último dígito $D_N$ é o Dí
    $$DV = (10 - (\text{Soma} \pmod{10})) \pmod{10}$$
 
 ```mermaid
-flowchart LR
-    INPUT["Entrada do Operador\n(Ex: 17891000100100)"] --> VAL{"Verificação de Formato\n(14 dígitos numéricos estritos)"}
-    VAL -->|Inválido| ERR1["❌ Formato Inválido (Tamanho ou Não-numérico)"]
-    VAL -->|Válido| MOD10["Cálculo GS1 Módulo 10\n(Pesos Ponderados 3 e 1)"]
-    MOD10 --> COMP{"DV Calculado == DV Informado?"}
-    COMP -->|Não| ERR2["❌ Dígito Verificador Inválido (GS1 Rejeitado)"]
-    COMP -->|Sim| OK["✅ Código Válido e Aprovado"]
+flowchart TD
+    INPUT["📥 Entrada do Operador\n(Ex: 17891000100100)"]
+    INPUT --> VAL{"Verificação de Formato\n(14 dígitos numéricos estritos)"}
+    VAL -->|Inválido| ERR1["❌ Formato Inválido\n(Tamanho ou caractere não-numérico)"]
+    VAL -->|Válido| MOD10["⚙️ Cálculo GS1 Módulo 10\n(Pesos alternados 3 e 1 invertidos)"]
+    MOD10 --> COMP{"Dígito Calculado ==\nDígito Informado?"}
+    COMP -->|Não| ERR2["❌ Dígito Verificador Inválido\n(Código Rejeitado na Bipagem)"]
+    COMP -->|Sim| OK["✅ Código Válido e Aprovado\n(Vínculo ou Cadastro Liberado)"]
 ```
 
 ### B. Correlação Matemática EAN-13 x DUN-14

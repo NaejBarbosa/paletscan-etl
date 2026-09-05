@@ -9,25 +9,47 @@ O módulo de leitura visual e decodificação do **PaletScan PWA** combina o lei
 ```mermaid
 flowchart TD
     START["📷 Operador Inicia o Scanner no PWA"]
-
-    START --> CAM["1. Leitura de Câmera em Tempo Real"]
-    CAM --> C1["Biblioteca ZXing e BarcodeDetector API"]
-    C1 --> C2["Mira Laser Animada e Lanterna LED"]
-
-    START --> UPL["2. Upload de Foto com Recorte"]
-    UPL --> U1["Recorte Interativo (react-zoom-pan-pinch)"]
-    U1 --> U2["Zoom Tátil para Isolar Rótulos com Reflexo ou Névoa"]
-
-    C2 --> DEC["🔍 Decodificação Óptica Bruta"]
-    U2 --> DEC
-
-    DEC --> REG["⚙️ Funil de Regex Industrial (lib/regex.ts)"]
-    REG --> AUTO["✅ Preenchimento Automático (EAN, Validade, Lote e Peso)"]
+    
+    START --> CAPTURE["1. Captura Visual (Câmera ao Vivo ou Foto com Recorte)\nZXing BarcodeDetector + Zoom tátil anti-névoa"]
+    
+    CAPTURE --> RAW_DEC["2. Decodificação Óptica da String Bruta\n(Ex: '01078910001234561726083010L2026A')"]
+    
+    RAW_DEC --> FUNNEL["3. Funil de Regex Industrial (lib/regex.ts)\nExtração dos identificadores de aplicação GS1 (AI)"]
+    
+    FUNNEL --> VAL_MATH["4. Validação Matemática GS1 Módulo 10\nCálculo do dígito verificador para EAN-13 e DUN-14"]
+    
+    VAL_MATH --> AUTOFILL["✅ 5. Preenchimento Automático do Formulário\nEAN, Validade, Lote, Peso e Vaga preenchidos em menos de 5ms"]
 ```
 
 ---
 
 ## 🧩 2. Motor de Regex Industrial (`lib/regex.ts`)
+
+O motor de expressões regulares atua em pipeline sequencial, tratando diferentes padrões de mercado sem gerar falso positivo:
+
+```mermaid
+flowchart TD
+    INPUT_STR["📥 String Bruta Decodificada do Código"]
+    
+    INPUT_STR --> D1{"Contém Identificadores GS1\n(AI 01, 17, 10, 310X)?"}
+    
+    D1 -->|Sim| P_GS1["Extrai GTIN (01), Validade (17) e Lote (10)"]
+    
+    D1 -->|Não| D2{"Padrão Cooperativa Lar\n(Data Matrix com AI 11 sem 17)?"}
+    
+    D2 -->|Sim| P_LAR["Calcula Data de Validade:\nData de Fabricação + 365 Dias"]
+    
+    D2 -->|Não| D3{"Padrão Frigorífico Friboi ou JBS\n(Zeros à esquerda ou código emendado)?"}
+    
+    D3 -->|Sim| P_FRIBOI["Normaliza zeros e isola EAN-13 e DUN-14"]
+    
+    D3 -->|Não| P_DIRECT["Extrai Código Numérico Puro\n(EAN-13 comercial padrão)"]
+    
+    P_GS1 --> MERGE_REGEX["⚙️ Consolidação dos Dados Estruturados"]
+    P_LAR --> MERGE_REGEX
+    P_FRIBOI --> MERGE_REGEX
+    P_DIRECT --> MERGE_REGEX
+```
 
 ### A. Tabela de Identificadores GS1 e Regras Especiais
 
@@ -41,6 +63,7 @@ flowchart TD
 
 ### B. Normalização de Zeros à Esquerda
 O motor padroniza variações de formatação de códigos EAN/DUN de indústrias como **Friboi / JBS**, permitindo a correspondência perfeita com o catálogo master gerado pelo pipeline ETL.
+
 
 ---
 

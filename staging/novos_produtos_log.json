@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "29a10b03-2f7f-5aff-a8ac-69149d92e433",
+    "marca": "Seara",
+    "ean": "7894904614684",
+    "dun": "",
+    "descricao": "Pernil Suíno Porcionado Seara (Pesar)",
+    "classe": "Suínos",
+    "conservacao": "Resfriado",
+    "criado_em": "2026-09-04T06:04:16.235Z"
+  },
+  {
+    "id": "8e8e2ce2-c5a5-593a-b046-47b9c59a4b5d",
+    "marca": "Seara",
+    "ean": "7894904614363",
+    "dun": "",
+    "descricao": "Filé de Panga 800g",
+    "classe": "Pescados",
+    "conservacao": "Resfriado",
+    "criado_em": "2026-09-04T06:04:16.235Z"
+  }
+]
