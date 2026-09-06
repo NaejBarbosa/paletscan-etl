@@ -723,6 +723,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="🏬 2. Módulo de Gestão de Filiais (/admin)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-filial-999-sandbox-ambiente-de-homologacao-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 2.1. Filial 999 - Sandbox (Ambiente de Homologação &amp; Testes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1172,6 +1189,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="🏬 2. Módulo de Gestão de Filiais (/admin)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-filial-999-sandbox-ambiente-de-homologacao-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 2.1. Filial 999 - Sandbox (Ambiente de Homologação &amp; Testes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1314,6 +1348,23 @@
 <li><strong>Ativação e Desativação de Lojas</strong>: Filiais inativas têm o acesso de seus operadores restrito temporariamente.</li>
 <li><strong>Proteção de Integridade da Matriz</strong>: A filial matriz (<code>410</code>) possui trava de proteção contra exclusão inadvertida no banco relacional.</li>
 <li><strong>Vínculo Dinâmico de Usuários</strong>: No formulário de cadastro de operadores, a seleção de filial é realizada via <code>&lt;select&gt;</code> dinâmico populado a partir das lojas ativas.</li>
+</ul>
+<h3 id="21-filial-999-sandbox-ambiente-de-homologacao-testes">🧪 2.1. Filial 999 - Sandbox (Ambiente de Homologação &amp; Testes)</h3>
+<p>Para permitir que operadores e desenvolvedores validem novas funcionalidades, bipagens, cadastros de produtos e simulação de conflitos de vaga diretamente em coletores ou celulares sem tocar na base real da <strong>Loja 410 (Produção)</strong>, foi projetada a <strong>Filial 999 - Sandbox</strong>:</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Ambientes Isolados
+        direction TB
+        F410["🟢 PRODUÇÃO: Filial 410\nFort Atacadista - Rio Tavares\n(Paletes Reais nas Câmaras Frias)"]
+        F999["🧪 HOMOLOGAÇÃO: Filial 999\nSandbox &amp; Testes Livres\n(Conflitos, Bipagens e Experimentos)"]
+    end
+
+    ADM["🛡️ Administrador / Operador"] --&gt;|Alternância com 1 Toque| SW["API /api/admin/switch-filial\n(com lib/serverAuth.ts)"]
+    SW --&gt;|Contexto Ativo| F410
+    SW --&gt;|Contexto Ativo| F999</code></pre>
+<ul>
+<li><strong>Segregação Estrita de Dados</strong>: Consultas, relatórios, ocupação de vagas e exclusões são filtrados pela coluna <code>empresa_id</code> / <code>filial_id</code>. Uma exclusão em massa ou conflito gerado na filial 999 <strong>nunca</strong> afeta o inventário da filial 410.</li>
+<li><strong>Blindagem de Sessão Concorrente (<code>lib/serverAuth.ts</code>)</strong>: Elimina condições de corrida na hidratação de sessão do NextAuth, permitindo alternância instantânea entre Produção e Homologação sem bloqueios de permissão indevidos.</li>
+<li><strong>Pílula de Status Reativa no Header</strong>: Quando em homologação, o topo da aplicação exibe o badge de advertência <code>[🧪 HOMOLOGAÇÃO / SANDBOX]</code>, garantindo que o usuário tenha clareza total do ambiente em que está operando.</li>
 </ul>
 <hr />
 <h2 id="3-autonomia-do-codigo-de-balanca-plu-por-filial">⚖️ 3. Autonomia do Código de Balança (PLU) por Filial</h2>

@@ -708,6 +708,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-blindagem-de-sessao-em-alta-concorrencia-libserverauthts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 4. Blindagem de Sessão em Alta Concorrência (lib/serverAuth.ts)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1107,6 +1118,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-blindagem-de-sessao-em-alta-concorrencia-libserverauthts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 4. Blindagem de Sessão em Alta Concorrência (lib/serverAuth.ts)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1254,6 +1276,16 @@
 <li><strong>Mensagens Transparentes e Amigáveis</strong>: Quando o operador é barrado, o PWA apresenta toast claro indicando quais marcas seu usuário tem permissão para manipular.</li>
 <li><strong>Imutabilidade e Segurança</strong>: Apenas administradores com a flag <code>isAdmin: true</code> podem alterar o escopo de filiais e marcas dos operadores através do painel <code>/admin</code>.</li>
 <li><strong>Login Móvel via QR Code Multi-Sessão</strong>: Operadores podem autenticar terminais e coletores escaneando um QR Code gerado por uma sessão autenticada, sem necessidade de digitação repetitiva de senhas em teclados virtuais.</li>
+</ul>
+<hr />
+<h2 id="4-blindagem-de-sessao-em-alta-concorrencia-libserverauthts">🛡️ 4. Blindagem de Sessão em Alta Concorrência (<code>lib/serverAuth.ts</code>)</h2>
+<p>Durante a alternância dinâmica de filial entre Produção (410) e Homologação (999), requisições de API (<code>switch-filial</code>, <code>filiais</code>, <code>usuarios</code>, <code>logs</code>, <code>pendencias</code>) utilizam o helper centralizado <a href="file:///root/repo_pwa/lib/serverAuth.ts"><code>lib/serverAuth.ts</code></a>:</p>
+<ul>
+<li><strong>Validação Resiliente em Duas Etapas</strong>:</li>
+<li>Tenta obter a sessão autenticada via <code>getServerSession(req, res, authOptions)</code>.</li>
+<li>Em caso de latência de hidratação de cookies no SSR, extrai o usuário a partir do token/cookie e valida as permissões de administrador diretamente no banco de credenciais (<code>lib/authDb.ts</code>).</li>
+<li><strong>Eliminação de Condições de Corrida</strong>: Previne bloqueios indevidos ("você não tem permissão para trocar de filial") ao alternar de ambiente.</li>
+<li><strong>Auditoria Imediata no Supabase</strong>: Cada alternância de filial grava um evento de auditoria em <code>logs_sessao</code> informando o operador e o ambiente de destino.</li>
 </ul>
 
 
