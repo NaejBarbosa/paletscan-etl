@@ -1100,10 +1100,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-bateria-completa-de-testes-de-ponta-a-ponta-do-pwa-8-etapas" class="md-nav__link">
+  <a href="#c-bateria-completa-de-testes-de-ponta-a-ponta-do-pwa-9-etapas-125-testes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        C. Bateria Completa de Testes de Ponta a Ponta do PWA (8 Etapas)
+        C. Bateria Completa de Testes de Ponta a Ponta do PWA (9 Etapas — 125 Testes)
       
     </span>
   </a>
@@ -1693,10 +1693,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-bateria-completa-de-testes-de-ponta-a-ponta-do-pwa-8-etapas" class="md-nav__link">
+  <a href="#c-bateria-completa-de-testes-de-ponta-a-ponta-do-pwa-9-etapas-125-testes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        C. Bateria Completa de Testes de Ponta a Ponta do PWA (8 Etapas)
+        C. Bateria Completa de Testes de Ponta a Ponta do PWA (9 Etapas — 125 Testes)
       
     </span>
   </a>
@@ -2162,11 +2162,70 @@
 <p>Audita a higienização de EANs/DUNs, integridade relacional de marcas e fabricantes, e conformidade com o schema oficial:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>npx<span class="w"> </span>tsx<span class="w"> </span>scripts/test_sync_and_catalog.ts
 </span></code></pre></div>
-<h3 id="c-bateria-completa-de-testes-de-ponta-a-ponta-do-pwa-8-etapas">C. Bateria Completa de Testes de Ponta a Ponta do PWA (8 Etapas)</h3>
-<p>Executa a validação exaustiva do fluxo completo de usuário, permissões multi-tenant, barreiras de marcas, GS1 Módulo 10, telemetria/Eruda, watchlists em tempo real e prevenção de colisão de vagas:</p>
+<h3 id="c-bateria-completa-de-testes-de-ponta-a-ponta-do-pwa-9-etapas-125-testes">C. Bateria Completa de Testes de Ponta a Ponta do PWA (9 Etapas — 125 Testes)</h3>
+<p>Executa a validação exaustiva do fluxo completo do usuário, regras industriais, segurança multi-tenant e resiliência crítica de alocação de paletes no chão de fábrica:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Executado a partir do repositório do PWA (/root/repo_pwa)</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>npx<span class="w"> </span>tsx<span class="w"> </span>scripts/test_user_flow.ts
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>npm<span class="w"> </span><span class="nb">test</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="c1"># ou diretamente via ts-node:</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>npx<span class="w"> </span>ts-node<span class="w"> </span>--compiler-options<span class="w"> </span><span class="s1">'{"module":"commonjs"}'</span><span class="w"> </span>scripts/test_user_flow.ts
 </span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Etapa</th>
+<th style="text-align: left;">Escopo Técnico &amp; Regras de Negócio Testadas</th>
+<th style="text-align: center;">Quantidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Usuários &amp; Multi-Tenant</strong></td>
+<td style="text-align: left;">Operador padrão e visitante vinculados à Filial 410 (Rio Tavares), segregação de escopos por CNPJ, validação PBKDF2 de senhas e bloqueio de privilégios não autorizados.</td>
+<td style="text-align: center;">17 testes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Ciclo de Vida de Operadores</strong></td>
+<td style="text-align: left;">Criação dinâmica de operadores, concessão/revogação de permissões granulares, filtro de marcas permitidas e deleção segura.</td>
+<td style="text-align: center;">8 testes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Funil de Regex Industrial</strong></td>
+<td style="text-align: left;">Decodificação de Data Matrix da Lar com soma automática de validade (+365 dias), códigos GS1-128 e isolamento estrito de EAN-13 e DUN-14.</td>
+<td style="text-align: center;">6 testes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4. Gestão de Filiais</strong></td>
+<td style="text-align: left;">Isolamento de tenants, verificação de dados de matriz/filiais e prevenção de contaminação cruzada entre unidades.</td>
+<td style="text-align: center;">7 testes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5. Regras Avançadas &amp; GS1</strong></td>
+<td style="text-align: left;">Validação matemática de dígito verificador GS1 (Módulo 10), barreiras ativas contra inclusão de marcas não permitidas, códigos de pesar independentes por filial e moderação de reportes.</td>
+<td style="text-align: center;">21 testes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>6. Telemetria de Logs &amp; Eruda</strong></td>
+<td style="text-align: left;">Captura de snapshots do console mobile e erros de câmera em arquivo (<code>logs/client.log</code>), empacotamento com metadados do dispositivo e transmissão para o backend.</td>
+<td style="text-align: center;">11 testes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>7. Watchlist Realtime Multi-Sessão</strong></td>
+<td style="text-align: left;">Sincronização ao vivo entre sessões simultâneas via canais WebSocket do Supabase: criação, adição, conferência e exclusão de listas com celebração visual (<code>confetti</code>).</td>
+<td style="text-align: center;">9 testes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>8. Isolamento de Ciclos &amp; Idempotência</strong></td>
+<td style="text-align: left;">Segmentação temporal de histórico em ciclos independentes por vaga (5 minutos), prevenção de contaminação entre paletes antigos e novos, deduplicação de posições e bloqueio contra chamadas repetidas.</td>
+<td style="text-align: center;">10 testes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>9. Conflitos de Vagas, Sugestão 3D &amp; Bloqueio Mandatório</strong></td>
+<td style="text-align: left;">Decomposição física de coordenadas, cálculo de distância ponderada, recomendação da vaga mais próxima em 1 clique, desempate por timestamp (mais recente vence), ativação de interlock total do app para o criador do palete em conflito e reativação no banco.</td>
+<td style="text-align: center;">36 testes</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h3 id="d-validador-de-sintaxe-mermaid-para-mkdocs">D. Validador de Sintaxe Mermaid para MkDocs</h3>
 <p>Verifica se todos os diagramas Mermaid na documentação cumprem as regras de esteiras estritamente verticais e compatibilidade mobile:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>npm<span class="w"> </span>run<span class="w"> </span>validate:mermaid

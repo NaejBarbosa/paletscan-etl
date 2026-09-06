@@ -663,6 +663,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-resolucao-inteligente-de-conflitos-offline-bloqueio-mandatorio-interlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧮 6. Resolução Inteligente de Conflitos Offline &amp; Bloqueio Mandatório (Interlock)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧮 6. Resolução Inteligente de Conflitos Offline &amp; Bloqueio Mandatório (Interlock)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-regra-de-desempate-estrita-por-timestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Regra de Desempate Estrita por Timestamp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-algoritmo-de-decomposicao-3d-distancia-fisica-ponderada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Algoritmo de Decomposição 3D &amp; Distância Física Ponderada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-motor-de-sugestao-inteligente-obtervagamaisproxima" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Motor de Sugestão Inteligente (obterVagaMaisProxima)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-bloqueio-mandatorio-de-tela-interlock-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Bloqueio Mandatório de Tela (Interlock Mobile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-transacao-de-realocacao-e-desbloqueio-apipaletesrealocar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Transação de Realocação e Desbloqueio (/api/paletes/realocar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1185,6 +1257,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-resolucao-inteligente-de-conflitos-offline-bloqueio-mandatorio-interlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧮 6. Resolução Inteligente de Conflitos Offline &amp; Bloqueio Mandatório (Interlock)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧮 6. Resolução Inteligente de Conflitos Offline &amp; Bloqueio Mandatório (Interlock)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-regra-de-desempate-estrita-por-timestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Regra de Desempate Estrita por Timestamp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-algoritmo-de-decomposicao-3d-distancia-fisica-ponderada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Algoritmo de Decomposição 3D &amp; Distância Física Ponderada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-motor-de-sugestao-inteligente-obtervagamaisproxima" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Motor de Sugestão Inteligente (obterVagaMaisProxima)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-bloqueio-mandatorio-de-tela-interlock-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Bloqueio Mandatório de Tela (Interlock Mobile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-transacao-de-realocacao-e-desbloqueio-apipaletesrealocar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Transação de Realocação e Desbloqueio (/api/paletes/realocar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1339,6 +1483,115 @@
 <li><strong>Marcador Vermelho</strong>: Escrita manual da identificação (ex: <code>R1-A32E</code> ou <code>C2-B20D</code>).</li>
 <li><strong>Frente e Verso</strong>: Visibilidade garantida para o operador de empilhadeira em qualquer sentido de circulação.</li>
 </ol>
+<hr />
+<h2 id="6-resolucao-inteligente-de-conflitos-offline-bloqueio-mandatorio-interlock">🧮 6. Resolução Inteligente de Conflitos Offline &amp; Bloqueio Mandatório (Interlock)</h2>
+<p>Em operações de câmara frigorífica com conectividade intermitente, pode ocorrer um <strong>conflito offline de ocupação</strong>: dois operadores em dispositivos distintos (ou um operador e um terminal desktop) cadastram paletes diferentes atribuindo a mesmíssima coordenada de vaga (ex: <code>A10D</code> na câmara <em>Congelados 2</em>) enquanto um dos dispositivos estava fora de rede.</p>
+<p>Ao restabelecer a conectividade e acionar a sincronização em lote (<code>pushChanges</code> / <code>syncLocalDB</code>), o sistema não descarta nenhuma carga e não transfere a sobrecarga decisória para a gerência. Em vez disso, executa uma <strong>resolução determinística automatizada com interlock mandatório no cliente</strong>:</p>
+<pre class="mermaid"><code>flowchart TD
+    SYNC["🔄 Dispositivo Reconecta e Inicia Sincronização\n(pushChanges em lib/database/sync.ts)"]
+
+    SYNC --&gt; DETECT{"Detecção de Conflito de Ocupação:\nDois Paletes Ativos na Mesma Câmara e Vaga?"}
+
+    DETECT --&gt;|Não| OK["✅ Sincronização Normal Concluída"]
+
+    DETECT --&gt;|Sim: Conflito Detectado| TIEBREAK["⚖️ Desempate Determinístico por Timestamp\n(resolverConflitosOcupacaoVaga)"]
+
+    TIEBREAK --&gt; VENCEDOR["🏆 Palete Mais Recente (Maior Timestamp)\nRetém a vaga original e permanece 100% ativo"]
+
+    TIEBREAK --&gt; PERDEDOR["⚠️ Palete Mais Antigo Perde o Desempate\nMarcado como AGUARDANDO_REALOCACAO"]
+
+    PERDEDOR --&gt; LOCAL["📱 Dispositivo Local Salva ID do Conflito\n(localStorage ps_meus_paletes_conflito)"]
+
+    LOCAL --&gt; LOCK["🚫 INTERLOCK MANDATÓRIO DO PWA\n(ModalBloqueioRealocacaoObrigatoria z-[99999])\nTodos os módulos, scanner e menus ficam bloqueados"]
+
+    LOCK --&gt; CALC["📐 Algoritmo de Proximidade Física 3D\n(obterVagaMaisProxima calcula menor esforço)"]
+
+    CALC --&gt; CHOICE{"Operador Decide Nova Vaga"}
+
+    CHOICE --&gt;|1 Clique na Sugestão Inteligente| CONFIRM_SUGG["⚡ Aceita Vaga Recomendada (ex: A10E)\n(Menor esforço de manobra da empilhadeira)"]
+
+    CHOICE --&gt;|Escolha Manual Ordenada| CONFIRM_MAN["🔍 Seleciona Outra Vaga Livre\n(Grade pré-ordenada por distância física)"]
+
+    CONFIRM_SUGG --&gt; API_CALL["📡 Chamada à API de Realocação\n(POST /api/paletes/realocar)"]
+    CONFIRM_MAN --&gt; API_CALL
+
+    API_CALL --&gt; DB_UPDATE["💾 Banco de Dados Atualizado (Supabase)\nvaga = novaVaga, deleted_at = null, deleted_by = null"]
+
+    DB_UPDATE --&gt; AUDIT["📝 Registro Imutável em paletes_historico\nEvento EDICAO_PALETE / REALOCACAO_CONFLITO"]
+
+    AUDIT --&gt; UNLOCK["🔓 Desbloqueio Imediato do PWA\nFila limpa e acesso completo restaurado"]</code></pre>
+<h3 id="a-regra-de-desempate-estrita-por-timestamp">A. Regra de Desempate Estrita por Timestamp</h3>
+<p>Quando a rotina <a href="file:///root/repo_pwa/lib/conflitosPaletes.ts"><code>resolverConflitosOcupacaoVaga</code></a> identifica múltiplos paletes ativos na mesma câmara e vaga:
+1. <strong>O Palete com Maior Timestamp Vence</strong>: Aquele registrado mais recentemente pelo operador (ou sincronizado por último com timestamp de bipagem superior) é mantido ativo e em posse da vaga disputada.
+2. <strong>O Palete Perdedor é Desalocado</strong>: O registro mais antigo recebe exclusão lógica no Supabase (<code>deleted_at = NOW()</code>) com motivo padronizado:
+   <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>AGUARDANDO_REALOCACAO:vaga_original=A10D:vencedor=1788646072439-0-456
+</span></code></pre></div>
+3. <strong>Registro Local no Dispositivo</strong>: O cliente que originou o palete desalocado armazena o ID no <code>localStorage</code> sob a chave <code>ps_meus_paletes_conflito</code>, garantindo o bloqueio da tela mesmo antes da próxima sincronização remota.</p>
+<h3 id="b-algoritmo-de-decomposicao-3d-distancia-fisica-ponderada">B. Algoritmo de Decomposição 3D &amp; Distância Física Ponderada</h3>
+<p>Para evitar que o operador de empilhadeira tenha que percorrer a câmara inteira procurando uma vaga livre aleatória, o módulo calcula a distância física métrica entre a vaga original e todas as vagas livres da câmara:</p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">CoordenadasVaga</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nx">rua</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w">    </span><span class="c1">// "A" (Direita) ou "B" (Esquerda)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nx">nivel</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1 a 5 (Altura vertical)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nx">coluna</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="c1">// 0 a 3 (Profundidade longitudinal)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nx">lado</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w">   </span><span class="c1">// "D" (Direita) ou "E" (Esquerda do módulo)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>A distância física ponderada leva em consideração o <strong>custo operacional real de manobra e elevação de carga</strong> da empilhadeira industrial:</p>
+<div class="arithmatex">\[\text{Distância} = (\Delta\text{Rua} \times 100) + (\Delta\text{Nível} \times 15) + (\Delta\text{Coluna} \times 10) + (\Delta\text{Lado} \times 2)\]</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variável</th>
+<th style="text-align: center;">Delta (<span class="arithmatex">\(\Delta\)</span>)</th>
+<th style="text-align: center;">Peso</th>
+<th style="text-align: left;">Racional Operacional no Chão de Fábrica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Rua</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vert \text{Rua}_1 - \text{Rua}_2 \vert\)</span></td>
+<td style="text-align: center;"><strong>100</strong></td>
+<td style="text-align: left;">Trocar de corredor exige manobra completa de giro de 180° e deslocamento com carga pesada. Maior custo de tempo e risco.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nível</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vert \text{Nível}_1 - \text{Nível}_2 \vert\)</span></td>
+<td style="text-align: center;"><strong>15</strong></td>
+<td style="text-align: left;">Subir ou descer a torre da empilhadeira exige parada total e operação hidráulica vertical lenta.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Coluna</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vert \text{Coluna}_1 - \text{Coluna}_2 \vert\)</span></td>
+<td style="text-align: center;"><strong>10</strong></td>
+<td style="text-align: left;">Andar pelo mesmo corredor exige apenas deslocamento linear em linha reta na mesma rua.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lado</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{Lado}_1 \neq \text{Lado}_2\)</span></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">No mesmo vão estrutural, mudar do lado <code>D</code> para o lado <code>E</code> exige apenas giro milimétrico dos garfos. É a melhor vaga substituta possível.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c-motor-de-sugestao-inteligente-obtervagamaisproxima">C. Motor de Sugestão Inteligente (<code>obterVagaMaisProxima</code>)</h3>
+<p>O algoritmo avalia as vagas livres e seleciona atomicamente a melhor coordenada disponível, gerando a justificativa técnica contextual:
+* <strong>Distância = 2</strong>: <em>"Mesmo vão, lado oposto"</em> (ex: de <code>A10D</code> para <code>A10E</code>).
+* <strong>Distância = 10</strong>: <em>"Mesmo nível, coluna ao lado"</em> (ex: de <code>A10D</code> para <code>A11D</code>).
+* <strong>Distância = 15</strong>: <em>"Mesma rua, nível adjacente"</em> (ex: de <code>A10D</code> para <code>A20D</code>).</p>
+<h3 id="d-bloqueio-mandatorio-de-tela-interlock-mobile">D. Bloqueio Mandatório de Tela (Interlock Mobile)</h3>
+<p>O componente <a href="file:///root/repo_pwa/components/ModalBloqueioRealocacaoObrigatoria.tsx"><code>ModalBloqueioRealocacaoObrigatoria.tsx</code></a> impõe uma barreira física e visual inegociável:
+* <strong>Overlay com <code>z-[99999]</code></strong>: Cobre totalmente a viewport móvel, sem botão de fechar (X), sem fechamento por clique fora e sem cancelamento por tecla <code>Escape</code>.
+* <strong>Amarração ao Usuário Criador</strong>: O bloqueio é ativado se o usuário logado for o criador do palete (<code>created_by === currentUserName</code>), se o ID do palete estiver no <code>localStorage</code> do dispositivo ou se for um operador comum com pendências na câmara.
+* <strong>Bloqueio Total de Módulos</strong>: O leitor de código de barras (câmera), consulta de estoque, relatórios e menus permanecem inoperantes até a definição da vaga.
+* <strong>Resolução em 1 Clique</strong>: Um card destacado exibe a vaga sugerida com botão de toque largo: <code>[ ✓ Confirmar e Alocar na Vaga {vagaSugerida} → ]</code>.
+* <strong>Opção de Escolha Manual Ordenada</strong>: Permite ao operador alternar para uma grade de botões com todas as outras vagas livres da câmara, automaticamente pré-ordenadas da mais próxima para a mais distante.</p>
+<h3 id="e-transacao-de-realocacao-e-desbloqueio-apipaletesrealocar">E. Transação de Realocação e Desbloqueio (<code>/api/paletes/realocar</code>)</h3>
+<p>Ao pressionar o botão de confirmação:
+1. <strong>Validação de Destino</strong>: O backend verifica atomicamente se a nova vaga não foi ocupada nesse intervalo.
+2. <strong>Reativação do Palete</strong>: Remove <code>deleted_at</code> e <code>motivo_exclusao</code>, atualiza <code>vaga</code> para a nova coordenada e registra o operador em <code>updated_by</code>.
+3. <strong>Auditoria Imutável</strong>: Grava na tabela <code>paletes_historico</code> o evento <code>EDICAO_PALETE</code> com detalhes <code>tipo: 'REALOCACAO_CONFLITO'</code>, salvando a vaga anterior e a nova vaga para rastreabilidade de inventário.
+4. <strong>Purga de Cache &amp; Liberação</strong>: O <code>localStorage.ps_meus_paletes_conflito</code> é expurgado no cliente, o cache das câmaras no servidor é limpo e a aplicação é desbloqueada instantaneamente.</p>
 
 
 

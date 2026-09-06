@@ -450,6 +450,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5-mapeamento-da-persistencia-de-dados-topologia-de-armazenamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💾 5. Mapeamento da Persistência de Dados &amp; Topologia de Armazenamento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💾 5. Mapeamento da Persistência de Dados &amp; Topologia de Armazenamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matriz-completa-de-persistencia-por-camada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matriz Completa de Persistência por Camada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isolamento-e-seguranca-entre-camadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Isolamento e Segurança entre Camadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1151,6 +1190,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5-mapeamento-da-persistencia-de-dados-topologia-de-armazenamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💾 5. Mapeamento da Persistência de Dados &amp; Topologia de Armazenamento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💾 5. Mapeamento da Persistência de Dados &amp; Topologia de Armazenamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matriz-completa-de-persistencia-por-camada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matriz Completa de Persistência por Camada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isolamento-e-seguranca-entre-camadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Isolamento e Segurança entre Camadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1304,6 +1382,121 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="5-mapeamento-da-persistencia-de-dados-topologia-de-armazenamento">💾 5. Mapeamento da Persistência de Dados &amp; Topologia de Armazenamento</h2>
+<p>Para viabilizar a arquitetura <strong>Local-First</strong> com alta tolerância a blackouts de rede dentro de câmaras frias blindadas, o ecossistema PaletScan distribui a persistência dos dados em <strong>6 camadas complementares</strong>, desde a memória volátil do smartphone até o cluster PostgreSQL em nuvem:</p>
+<pre class="mermaid"><code>flowchart TD
+    CLIENT["📱 DISPOSITIVO MÓVEL (CLIENTE PWA)"]
+
+    CLIENT --&gt; C_RAM["1. Memória RAM do Navegador\n(React State / Hooks / ZXing Buffer)"]
+    C_RAM --&gt; C_STORAGE["2. LocalStorage do PWA\n(Sessões, Fila Offline e Hash de Cache)"]
+    C_STORAGE --&gt; C_SW["3. Cache API do Service Worker\n(Assets Estáticos, CSS, JS e Sons)"]
+    C_STORAGE --&gt; C_WMDB["4. WatermelonDB Local (IndexedDB)\n(Catálogo Master 3684 SKUs e Paletes Locais)"]
+
+    C_WMDB --&gt; EDGE["☁️ CAMADA DE BORDA &amp; SERVERLESS (VERCEL)"]
+
+    EDGE --&gt; E_MEM["5. Memória RAM da Lambda (global._appCache)\n(Cache efêmero Node.js por instância serverless)"]
+    E_MEM --&gt; E_REDIS["6. Vercel KV / Upstash Redis\n(Cache Global Distribuído, WebAuthn e Users)"]
+
+    E_REDIS --&gt; CLOUD["🗄️ BANCO DE DADOS CENTRAL (SUPABASE)"]
+
+    CLOUD --&gt; S_PG["7. PostgreSQL Relacional\n(Single Source of Truth, Histórico e RLS)"]
+    CLOUD --&gt; S_RT["8. Supabase Realtime (WebSockets)\n(pg_notify e replicação lógica ao vivo)"]
+    CLOUD --&gt; S_CDN["9. Supabase Storage CDN\n(Imagens WebP tratadas com IA U2Net)"]</code></pre>
+<h3 id="matriz-completa-de-persistencia-por-camada">Matriz Completa de Persistência por Camada</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Camada / Tecnologia</th>
+<th style="text-align: left;">Onde Reside</th>
+<th style="text-align: center;">Volatilidade</th>
+<th style="text-align: left;">O Que Armazena</th>
+<th style="text-align: center;">Tempo de Acesso</th>
+<th style="text-align: left;">Estratégia de Invalidação / Purga</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Memória RAM do Cliente</strong> <em>(React Context / Hooks)</em></td>
+<td style="text-align: left;">Smartphone / Coletor</td>
+<td style="text-align: center;"><strong>Altamente Volátil</strong> <em>(Zera ao fechar aba)</em></td>
+<td style="text-align: left;">Estados momentâneos de UI, flags de modal aberto, buffer de vídeo da câmera ZXing, instâncias WebSocket do Realtime.</td>
+<td style="text-align: center;"><code>&lt; 1ms</code></td>
+<td style="text-align: left;">Automática ao desmontar componentes ou recarregar página.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LocalStorage</strong> <em>(Browser Web Storage)</em></td>
+<td style="text-align: left;">Smartphone / Coletor</td>
+<td style="text-align: center;"><strong>Persistente</strong> <em>(Sobrevive a reinícios)</em></td>
+<td style="text-align: left;">• <code>ps_auth_session</code>: Sessão offline de usuário.<br>• <code>ps_meus_paletes_conflito</code>: IDs que bloqueiam o app.<br>• <code>pending_sync</code>: Fila de contingência de paletes.<br>• <code>ps_pwa_paletes_hash</code>: Hash MD5 do catálogo.<br>• <code>ps_filial_ativa</code>: Loja multi-tenant ativa.</td>
+<td style="text-align: center;"><code>&lt; 2ms</code></td>
+<td style="text-align: left;">• Expurgado após resolução de conflitos.<br>• Limpo via <code>Reset Database</code> no menu.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Service Worker Cache</strong> <em>(Serwist / Cache API)</em></td>
+<td style="text-align: left;">Smartphone / Coletor</td>
+<td style="text-align: center;"><strong>Persistente</strong> <em>(Cache de App Shell)</em></td>
+<td style="text-align: left;">HTML estático prerenderizado, bundles JS do Next.js, folhas CSS Tailwind, fontes, ícones do manifesto e áudios de bip.</td>
+<td style="text-align: center;"><code>&lt; 5ms</code></td>
+<td style="text-align: left;">Invalidação automática por hash de revisão a cada novo deploy em produção.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>WatermelonDB</strong> <em>(IndexedDB / LokiJS)</em></td>
+<td style="text-align: left;">Smartphone / Coletor</td>
+<td style="text-align: center;"><strong>Persistente</strong> <em>(Banco Local-First)</em></td>
+<td style="text-align: left;">• <code>produtos</code>: 3.684 SKUs do catálogo mestre higienizado.<br>• <code>paletes</code>: Cargas ativas e baixadas na filial.<br>• <code>codigos_barras</code>: Variantes de DUN-14 e pesagem.</td>
+<td style="text-align: center;"><code>&lt; 5ms</code></td>
+<td style="text-align: left;">Atualização delta via <code>syncLocalDB</code> ou <code>unsafeResetDatabase()</code> forçado.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vercel Serverless RAM</strong> <em>(Node.js <code>global._appCache</code>)</em></td>
+<td style="text-align: left;">Borda em Nuvem <em>(Vercel Lambdas)</em></td>
+<td style="text-align: center;"><strong>Efêmera</strong> <em>(Desliga ao congelar container)</em></td>
+<td style="text-align: left;">Cache em memória de respostas das rotas <code>/api/vagas-ocupadas</code> e catálogo para amortecer rajadas repetidas.</td>
+<td style="text-align: center;"><code>&lt; 2ms</code></td>
+<td style="text-align: left;">TTL configurado (ex: 5 a 60 seg) ou purga manual no <code>clearCache()</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vercel KV / Upstash Redis</strong> <em>(Redis REST API)</em></td>
+<td style="text-align: left;">Nuvem Global <em>(Edge KV)</em></td>
+<td style="text-align: center;"><strong>Persistente em Memória Distribuída</strong></td>
+<td style="text-align: left;">• <code>banco_valida_data_v50_catalog_3684</code>: Catálogo compilado compartilhado entre lambdas.<br>• <code>paletscan:users</code>: Sincronização de credenciais e operadores.<br>• <em>FIDO2 Challenges</em>: Desafios WebAuthn/Passkeys.</td>
+<td style="text-align: center;"><code>&lt; 25ms</code></td>
+<td style="text-align: left;">Invalidação explícita via comando <code>DEL</code> emitido pela função <code>clearCache(key)</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Supabase PostgreSQL</strong> <em>(Database Central)</em></td>
+<td style="text-align: left;">Nuvem <em>(AWS / Supabase)</em></td>
+<td style="text-align: center;"><strong>Persistente Permanente</strong> <em>(ACID)</em></td>
+<td style="text-align: left;"><strong>Fonte Única da Verdade</strong>: Tabelas <code>produtos</code>, <code>marcas</code>, <code>paletes_armazenados</code>, <code>paletes_historico</code>, <code>filiais</code>, <code>usuarios</code>, <code>reportes</code>, <code>watchlists</code> e <code>logs_sessao</code>.</td>
+<td style="text-align: center;"><code>&lt; 80ms</code></td>
+<td style="text-align: left;">Atualizações atômicas transacionais, backups diários e soft deletes (<code>deleted_at</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Supabase Realtime</strong> <em>(WebSocket / Postgres CDC)</em></td>
+<td style="text-align: left;">Nuvem <em>(pg_notify)</em></td>
+<td style="text-align: center;"><strong>Canal Efêmero de Transporte</strong></td>
+<td style="text-align: left;">Eventos <code>INSERT</code>, <code>UPDATE</code> e <code>DELETE</code> em tempo real disparados para todas as sessões ativas da filial.</td>
+<td style="text-align: center;"><code>&lt; 50ms</code></td>
+<td style="text-align: left;">Desconexão / reconexão resiliente com fallback para polling a cada 4 segundos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Supabase Storage</strong> <em>(S3-Compatible CDN)</em></td>
+<td style="text-align: left;">Nuvem <em>(Storage Bucket)</em></td>
+<td style="text-align: center;"><strong>Persistente Permanente</strong></td>
+<td style="text-align: left;">Imagens WebP tratadas e otimizadas dos produtos alimentícios (bucket <code>produtos-imagens</code>).</td>
+<td style="text-align: center;">CDN Edge</td>
+<td style="text-align: left;">Substituição atômica de imagens via <code>upsert: true</code> no pipeline de scraping/ETL.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="isolamento-e-seguranca-entre-camadas">Isolamento e Segurança entre Camadas</h3>
+<ol>
+<li><strong>Blackout Total de Conectividade</strong>: O operador consegue trabalhar sem interrupção porque o <strong>WatermelonDB</strong> e o <strong>LocalStorage</strong> fornecem autonomia de leitura e escrita a 100% dos recursos críticos.</li>
+<li><strong>Reconexão e Tolerância a Falhas</strong>: Dados acumulados offline sobem em lote via <code>pending_sync</code> e sofrem desempate atômico no backend em caso de disputa de vagas.</li>
+<li><strong>Escala Serverless sem Perda de Estado</strong>: O uso do <strong>Redis KV</strong> desacopla a autenticação e o cache do catálogo das instâncias efêmeras da Vercel, impedindo inconsistências entre múltiplas requisições simultâneas.</li>
+</ol>
 
 
 
