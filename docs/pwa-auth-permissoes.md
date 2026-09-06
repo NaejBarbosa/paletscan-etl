@@ -73,3 +73,15 @@ flowchart TD
 * **Imutabilidade e Segurança**: Apenas administradores com a flag `isAdmin: true` podem alterar o escopo de filiais e marcas dos operadores através do painel `/admin`.
 * **Login Móvel via QR Code Multi-Sessão**: Operadores podem autenticar terminais e coletores escaneando um QR Code gerado por uma sessão autenticada, sem necessidade de digitação repetitiva de senhas em teclados virtuais.
 
+---
+
+## 🛡️ 4. Blindagem de Sessão em Alta Concorrência (`lib/serverAuth.ts`)
+
+Durante a alternância dinâmica de filial entre Produção (410) e Homologação (999), requisições de API (`switch-filial`, `filiais`, `usuarios`, `logs`, `pendencias`) utilizam o helper centralizado [`lib/serverAuth.ts`](file:///root/repo_pwa/lib/serverAuth.ts):
+
+* **Validação Resiliente em Duas Etapas**:
+  1. Tenta obter a sessão autenticada via `getServerSession(req, res, authOptions)`.
+  2. Em caso de latência de hidratação de cookies no SSR, extrai o usuário a partir do token/cookie e valida as permissões de administrador diretamente no banco de credenciais (`lib/authDb.ts`).
+* **Eliminação de Condições de Corrida**: Previne bloqueios indevidos ("você não tem permissão para trocar de filial") ao alternar de ambiente.
+* **Auditoria Imediata no Supabase**: Cada alternância de filial grava um evento de auditoria em `logs_sessao` informando o operador e o ambiente de destino.
+

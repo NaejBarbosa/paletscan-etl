@@ -42,6 +42,27 @@ O painel administrativo dispõe do módulo completo de **Gestão de Filiais**:
 * **Proteção de Integridade da Matriz**: A filial matriz (`410`) possui trava de proteção contra exclusão inadvertida no banco relacional.
 * **Vínculo Dinâmico de Usuários**: No formulário de cadastro de operadores, a seleção de filial é realizada via `<select>` dinâmico populado a partir das lojas ativas.
 
+### 🧪 2.1. Filial 999 - Sandbox (Ambiente de Homologação & Testes)
+
+Para permitir que operadores e desenvolvedores validem novas funcionalidades, bipagens, cadastros de produtos e simulação de conflitos de vaga diretamente em coletores ou celulares sem tocar na base real da **Loja 410 (Produção)**, foi projetada a **Filial 999 - Sandbox**:
+
+```mermaid
+flowchart LR
+    subgraph Ambientes Isolados
+        direction TB
+        F410["🟢 PRODUÇÃO: Filial 410\nFort Atacadista - Rio Tavares\n(Paletes Reais nas Câmaras Frias)"]
+        F999["🧪 HOMOLOGAÇÃO: Filial 999\nSandbox & Testes Livres\n(Conflitos, Bipagens e Experimentos)"]
+    end
+
+    ADM["🛡️ Administrador / Operador"] -->|Alternância com 1 Toque| SW["API /api/admin/switch-filial\n(com lib/serverAuth.ts)"]
+    SW -->|Contexto Ativo| F410
+    SW -->|Contexto Ativo| F999
+```
+
+* **Segregação Estrita de Dados**: Consultas, relatórios, ocupação de vagas e exclusões são filtrados pela coluna `empresa_id` / `filial_id`. Uma exclusão em massa ou conflito gerado na filial 999 **nunca** afeta o inventário da filial 410.
+* **Blindagem de Sessão Concorrente (`lib/serverAuth.ts`)**: Elimina condições de corrida na hidratação de sessão do NextAuth, permitindo alternância instantânea entre Produção e Homologação sem bloqueios de permissão indevidos.
+* **Pílula de Status Reativa no Header**: Quando em homologação, o topo da aplicação exibe o badge de advertência `[🧪 HOMOLOGAÇÃO / SANDBOX]`, garantindo que o usuário tenha clareza total do ambiente em que está operando.
+
 ---
 
 ## ⚖️ 3. Autonomia do Código de Balança (PLU) por Filial
