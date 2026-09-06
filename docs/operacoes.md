@@ -353,13 +353,29 @@ Audita a higienização de EANs/DUNs, integridade relacional de marcas e fabrica
 npx tsx scripts/test_sync_and_catalog.ts
 ```
 
-### C. Bateria Completa de Testes de Ponta a Ponta do PWA (8 Etapas)
-Executa a validação exaustiva do fluxo completo de usuário, permissões multi-tenant, barreiras de marcas, GS1 Módulo 10, telemetria/Eruda, watchlists em tempo real e prevenção de colisão de vagas:
+### C. Bateria Completa de Testes de Ponta a Ponta do PWA (9 Etapas — 125 Testes)
+Executa a validação exaustiva do fluxo completo do usuário, regras industriais, segurança multi-tenant e resiliência crítica de alocação de paletes no chão de fábrica:
 
 ```bash
 # Executado a partir do repositório do PWA (/root/repo_pwa)
-npx tsx scripts/test_user_flow.ts
+npm test
+# ou diretamente via ts-node:
+npx ts-node --compiler-options '{"module":"commonjs"}' scripts/test_user_flow.ts
 ```
+
+| Etapa | Escopo Técnico & Regras de Negócio Testadas | Quantidade |
+| :--- | :--- | :---: |
+| **1. Usuários & Multi-Tenant** | Operador padrão e visitante vinculados à Filial 410 (Rio Tavares), segregação de escopos por CNPJ, validação PBKDF2 de senhas e bloqueio de privilégios não autorizados. | 17 testes |
+| **2. Ciclo de Vida de Operadores** | Criação dinâmica de operadores, concessão/revogação de permissões granulares, filtro de marcas permitidas e deleção segura. | 8 testes |
+| **3. Funil de Regex Industrial** | Decodificação de Data Matrix da Lar com soma automática de validade (+365 dias), códigos GS1-128 e isolamento estrito de EAN-13 e DUN-14. | 6 testes |
+| **4. Gestão de Filiais** | Isolamento de tenants, verificação de dados de matriz/filiais e prevenção de contaminação cruzada entre unidades. | 7 testes |
+| **5. Regras Avançadas & GS1** | Validação matemática de dígito verificador GS1 (Módulo 10), barreiras ativas contra inclusão de marcas não permitidas, códigos de pesar independentes por filial e moderação de reportes. | 21 testes |
+| **6. Telemetria de Logs & Eruda** | Captura de snapshots do console mobile e erros de câmera em arquivo (`logs/client.log`), empacotamento com metadados do dispositivo e transmissão para o backend. | 11 testes |
+| **7. Watchlist Realtime Multi-Sessão** | Sincronização ao vivo entre sessões simultâneas via canais WebSocket do Supabase: criação, adição, conferência e exclusão de listas com celebração visual (`confetti`). | 9 testes |
+| **8. Isolamento de Ciclos & Idempotência** | Segmentação temporal de histórico em ciclos independentes por vaga (5 minutos), prevenção de contaminação entre paletes antigos e novos, deduplicação de posições e bloqueio contra chamadas repetidas. | 10 testes |
+| **9. Conflitos de Vagas, Sugestão 3D & Bloqueio Mandatório** | Decomposição física de coordenadas, cálculo de distância ponderada, recomendação da vaga mais próxima em 1 clique, desempate por timestamp (mais recente vence), ativação de interlock total do app para o criador do palete em conflito e reativação no banco. | 36 testes |
+
+---
 
 ### D. Validador de Sintaxe Mermaid para MkDocs
 Verifica se todos os diagramas Mermaid na documentação cumprem as regras de esteiras estritamente verticais e compatibilidade mobile:
@@ -367,5 +383,6 @@ Verifica se todos os diagramas Mermaid na documentação cumprem as regras de es
 ```bash
 npm run validate:mermaid
 ```
+
 
 
