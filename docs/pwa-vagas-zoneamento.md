@@ -227,4 +227,104 @@ Ao pressionar o botão de confirmação:
 3. **Auditoria Imutável**: Grava na tabela `paletes_historico` o evento `EDICAO_PALETE` com detalhes `tipo: 'REALOCACAO_CONFLITO'`, salvando a vaga anterior e a nova vaga para rastreabilidade de inventário.
 4. **Purga de Cache & Liberação**: O `localStorage.ps_meus_paletes_conflito` é expurgado no cliente, o cache das câmaras no servidor é limpo e a aplicação é desbloqueada instantaneamente.
 
+---
+
+## 🧬 7. Código de Vínculo Estrito por Câmara, Vaga e Filial
+
+Para garantir que nenhum produto cadastrado no armazém possa ser associado indevidamente a outra câmara, vaga ou filial, o **PaletScan PWA** adota uma arquitetura de identificadores autocontidos gerada e validada pelo módulo [`lib/codigoVinculo.ts`](file:///root/repo_pwa/lib/codigoVinculo.ts).
+
+O produto não necessita de uma tabela externa intermediária para amarrar a câmara/vaga: seu próprio código de registro carrega o DNA espacial e temporal completo do palete.
+
+### A. Decomposição Anatômica Vertical do Código
+
+O identificador do produto é estruturado em 6 segmentos integrados:
+
+$$\mathbf{f\{\text{filial}\}}-\mathbf{\{\text{câmaraSlug}\}}-\mathbf{\{\text{vagaSlug}\}}-\mathbf{\{\text{timestamp}\}}-\mathbf{\{\text{ean}\}}-\mathbf{\{\text{salt}\}}$$
+
+```mermaid
+flowchart TD
+    ROOT["🏷️ Código de Vínculo do Produto\n<b>f410-CAMARA01-B12D-1787938989868-7891527977035-a1b2c</b>"]
+
+    ROOT --> S1["🏢 1. Filial (f410)\nIsolamento Multi-tenant contra vazamento entre lojas"]
+    
+    S1 --> S2["❄️ 2. Câmara Frigorífica (CAMARA01)\nBlindagem de conservação (Resfriados vs Congelados)"]
+    
+    S2 --> S3["📍 3. Coordenada da Vaga (B12D)\nEndereço físico tridimensional na estante"]
+    
+    S3 --> S3_DET["📐 Decomposição Espacial da Vaga:\n• Rua: B (Corredor)\n• Nível: 1 (Altura Solo)\n• Coluna: 2 (Módulo da Estante)\n• Lado: D (Lado Direito)"]
+    
+    S3_DET --> S4["⏱️ 4. Timestamp do Ciclo (1787938989868)\nData/hora da sessão do palete (Resolução LWW)"]
+    
+    S4 --> S5["📦 5. EAN-13 do Produto (7891527977035)\nIdentidade comercial única do item dentro do lote"]
+    
+    S5 --> S6["🛡️ 6. Sal Criptográfico (a1b2c)\nGarante idempotência e anti-colisão em bipagem rápida"]
+```
+
+| Segmento | Exemplo | Tipo | Finalidade Operacional |
+| :--- | :---: | :---: | :--- |
+| **Filial** | `f410` | Tenant | Impede cruzamento de dados entre filiais (ex.: Loja 410 vs. Sandbox 999). |
+| **Câmara** | `CAMARA01` | Ambiente | Impede que o produto seja alocado em câmara incompatível com sua conservação térmica. |
+| **Vaga** | `B12D` | Posição 3D | Coordenada física direta do palete no armazém (Rua B, Nível 1, Coluna 2, Lado Direito). |
+| **Timestamp** | `1787938989868` | Sessão | Identificador do ciclo de armazenagem. Todos os produtos bipados no mesmo palete compartilham este valor. |
+| **EAN** | `7891527977035` | Produto | Código de barras comercial do SKU individual. |
+| **Sal** | `a1b2c` | Sufixo | Aleatoriedade determinística para suportar múltiplos lotes no mesmo milissegundo. |
+
+---
+
+### B. Relação de Integridade: A Chave Mestra do Palete Misto
+
+Quando um palete é composto por **múltiplos produtos distintos** (palete misto), todos os itens recebem a mesma **Assinatura Canônica da Câmara/Vaga na Sessão**:
+
+$$\text{Chave Mestra da Vaga} = \mathbf{f410-CAMARA01-B12D-1787938989868}$$
+
+```mermaid
+flowchart TD
+    VAGA["🔑 Chave Mestra da Câmara/Vaga no Ciclo\n<b>f410-CAMARA01-B12D-1787938989868</b>\n(Compartilhada por todos os produtos do mesmo palete)"]
+    
+    VAGA --> P1["📦 Produto A: Presunto Sadia\nEAN: 7891164163600 | Val: 2026-11-30\nID: f410-CAMARA01-B12D-1787938989868-7891164163600-k9x2a"]
+    
+    VAGA --> P2["📦 Produto B: Mortadela Perdigão\nEAN: 7891527977035 | Val: 2026-12-15\nID: f410-CAMARA01-B12D-1787938989868-7891527977035-m3p7b"]
+    
+    P1 --> REGRAS["🛡️ Regras Mandatórias de Integridade"]
+    P2 --> REGRAS
+    
+    REGRAS --> R_OK["✅ Palete Misto Autorizado:\nProdutos com EANs distintos coexistem na mesma vaga"]
+    
+    REGRAS --> R_BLOCK_DUP["🚫 Anti-Duplicação Estrita:\nO mesmo EAN duplicado na mesma vaga é proibido"]
+    
+    REGRAS --> R_BLOCK_CROSS["🚫 Bloqueio Cruzado:\nCódigo rejeitado se a câmara, vaga ou filial enviada diferir do código"]
+```
+
+---
+
+### C. Fluxo Vertical de Validação de Vínculo na API
+
+Antes de qualquer inserção ou atualização no Supabase, o endpoint [`pages/api/cadastrar.ts`](file:///root/repo_pwa/pages/api/cadastrar.ts) valida a compatibilidade do código através da rotina `validarCompatibilidadeVinculo`:
+
+```mermaid
+flowchart TD
+    REQ["📡 Requisição de Cadastro de Produto Recebida\n(POST /api/cadastrar)"]
+    
+    REQ --> EXTRACT["1. Extrai Filial, Câmara e Vaga do Payload"]
+    
+    EXTRACT --> HAS_ID{"Código do Produto já foi enviado?"}
+    
+    HAS_ID -->|Não: Primeira Geração| GEN["⚙️ gerarCodigoVinculoPalete\nMonta f{filial}-{camara}-{vaga}-{ts}-{ean}-{salt}"]
+    
+    HAS_ID -->|Sim: Código Existente| VAL["2. Executa validarCompatibilidadeVinculo"]
+    
+    VAL --> CHK_FILIAL{"Filial do Código == Filial Ativa?"}
+    CHK_FILIAL -->|Divergente| ERR_F["❌ 400 Bad Request:\n'Código pertence à filial X, incompatível com Y'"]
+    
+    CHK_FILIAL -->|Compatível| CHK_CAM{"Câmara do Código == Câmara Alvo?"}
+    CHK_CAM -->|Divergente| ERR_C["❌ 400 Bad Request:\n'Código pertence à câmara X, incompatível com Y'"]
+    
+    CHK_CAM -->|Compatível| CHK_VAG{"Vaga do Código == Vaga Alvo?"}
+    CHK_VAG -->|Divergente| ERR_V["❌ 400 Bad Request:\n'Código pertence à vaga X, incompatível com Y'"]
+    
+    CHK_VAG -->|Compatível| SAVE["💾 Inserção no Supabase (paletes_armazenados)\nRegistro salvo com integridade relacional total"]
+    GEN --> SAVE
+```
+
+
 

@@ -109,3 +109,39 @@ flowchart TD
 * **PDF Executivo (`jspdf` + `jspdf-autotable`)**: Relatório formatado com cabeçalho corporativo, divisão por câmara/vaga e badges de validade.
 * **Android MediaScan**: Indexação imediata dos arquivos na biblioteca do dispositivo via `termux-media-scan`.
 
+---
+
+## 🔄 6. Restauração Segura de Vagas Excluídas no Painel do Administrador
+
+Quando uma câmara/vaga inteira com produtos vinculados é excluída no [Relatório Geral](file:///root/repo_pwa/components/Relatorio.tsx), todos os seus produtos sofrem soft-delete e a vaga desaparece das listagens ativas dos operadores.
+
+Para garantir a reversibilidade segura sem risco de colisão física de estoque, o [Painel do Administrador (`/admin`)](file:///root/repo_pwa/pages/admin.tsx) e o endpoint [`/api/admin/restaurar-vaga`](file:///root/repo_pwa/pages/api/admin/restaurar-vaga.ts) implementam um fluxo de restauração protegido com verificação atômica de disponibilidade:
+
+```mermaid
+flowchart TD
+    EV_EXCL["🗑️ Operador Exclui Vaga Inteira via Relatório Geral\n(paletes_armazenados: deleted_at = NOW)"]
+    
+    EV_EXCL --> LOG["📝 Log de Auditoria Gravado em logs_sessao\n'Exclusão: Operador João liberou a vaga B12D da Câmara 01'"]
+    
+    LOG --> ADM_VIEW["👨‍💼 Administrador Acessa o Painel de Logs (/admin)\nCard exibe botão [ 🔄 Restaurar Vaga ]"]
+    
+    ADM_VIEW --> ADM_CLICK["👆 Administrador Clica em 'Restaurar Vaga'"]
+    
+    ADM_CLICK --> API_CALL["📡 Requisição POST /api/admin/restaurar-vaga\n(Envia câmara, vaga e filialId ativa)"]
+    
+    API_CALL --> CHECK_AVAIL{"🔍 Verificação Atômica de Disponibilidade:\nA vaga B12D na Câmara 01 possui algum palete ativo?"}
+    
+    CHECK_AVAIL -->|Sim: Vaga já está ocupada| BLOCK_409["🚫 409 CONFLICT: RESTAURAÇÃO BLOQUEADA\n'Não é possível restaurar: a vaga já está ocupada por outro palete ativo.'\nEvita colisão física de estoque no armazém"]
+    
+    CHECK_AVAIL -->|Não: Vaga 100% Livre| RESTORE["✅ Vaga Disponível: Executa Restauração em Bloco"]
+    
+    RESTORE --> REACTIVATE["1. Reativação no Supabase (deleted_at = NULL)\nTodos os produtos pertencentes àquele ciclo retornam à vaga"]
+    
+    REACTIVATE --> HIST["2. Registro Imutável em paletes_historico\nEvento: RESTAURACAO_PALETE assinado com nome completo do ADM"]
+    
+    HIST --> PURGE["3. Invalidação Imediata de Cache do Catálogo\nclearCache(banco_cadastro_data)"]
+    
+    PURGE --> DONE["🎉 Sucesso: Vaga e produtos voltam ao Relatório Geral"]
+```
+
+
