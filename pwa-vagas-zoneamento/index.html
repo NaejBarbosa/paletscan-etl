@@ -735,6 +735,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#7-codigo-de-vinculo-estrito-por-camara-vaga-e-filial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧬 7. Código de Vínculo Estrito por Câmara, Vaga e Filial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧬 7. Código de Vínculo Estrito por Câmara, Vaga e Filial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-decomposicao-anatomica-vertical-do-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Decomposição Anatômica Vertical do Código
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-relacao-de-integridade-a-chave-mestra-do-palete-misto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Relação de Integridade: A Chave Mestra do Palete Misto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-fluxo-vertical-de-validacao-de-vinculo-na-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Fluxo Vertical de Validação de Vínculo na API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1329,6 +1379,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#7-codigo-de-vinculo-estrito-por-camara-vaga-e-filial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧬 7. Código de Vínculo Estrito por Câmara, Vaga e Filial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧬 7. Código de Vínculo Estrito por Câmara, Vaga e Filial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-decomposicao-anatomica-vertical-do-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Decomposição Anatômica Vertical do Código
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-relacao-de-integridade-a-chave-mestra-do-palete-misto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Relação de Integridade: A Chave Mestra do Palete Misto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-fluxo-vertical-de-validacao-de-vinculo-na-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Fluxo Vertical de Validação de Vínculo na API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1592,6 +1692,121 @@
 2. <strong>Reativação do Palete</strong>: Remove <code>deleted_at</code> e <code>motivo_exclusao</code>, atualiza <code>vaga</code> para a nova coordenada e registra o operador em <code>updated_by</code>.
 3. <strong>Auditoria Imutável</strong>: Grava na tabela <code>paletes_historico</code> o evento <code>EDICAO_PALETE</code> com detalhes <code>tipo: 'REALOCACAO_CONFLITO'</code>, salvando a vaga anterior e a nova vaga para rastreabilidade de inventário.
 4. <strong>Purga de Cache &amp; Liberação</strong>: O <code>localStorage.ps_meus_paletes_conflito</code> é expurgado no cliente, o cache das câmaras no servidor é limpo e a aplicação é desbloqueada instantaneamente.</p>
+<hr />
+<h2 id="7-codigo-de-vinculo-estrito-por-camara-vaga-e-filial">🧬 7. Código de Vínculo Estrito por Câmara, Vaga e Filial</h2>
+<p>Para garantir que nenhum produto cadastrado no armazém possa ser associado indevidamente a outra câmara, vaga ou filial, o <strong>PaletScan PWA</strong> adota uma arquitetura de identificadores autocontidos gerada e validada pelo módulo <a href="file:///root/repo_pwa/lib/codigoVinculo.ts"><code>lib/codigoVinculo.ts</code></a>.</p>
+<p>O produto não necessita de uma tabela externa intermediária para amarrar a câmara/vaga: seu próprio código de registro carrega o DNA espacial e temporal completo do palete.</p>
+<h3 id="a-decomposicao-anatomica-vertical-do-codigo">A. Decomposição Anatômica Vertical do Código</h3>
+<p>O identificador do produto é estruturado em 6 segmentos integrados:</p>
+<div class="arithmatex">\[\mathbf{f\{\text{filial}\}}-\mathbf{\{\text{câmaraSlug}\}}-\mathbf{\{\text{vagaSlug}\}}-\mathbf{\{\text{timestamp}\}}-\mathbf{\{\text{ean}\}}-\mathbf{\{\text{salt}\}}\]</div>
+<pre class="mermaid"><code>flowchart TD
+    ROOT["🏷️ Código de Vínculo do Produto\n&lt;b&gt;f410-CAMARA01-B12D-1787938989868-7891527977035-a1b2c&lt;/b&gt;"]
+
+    ROOT --&gt; S1["🏢 1. Filial (f410)\nIsolamento Multi-tenant contra vazamento entre lojas"]
+
+    S1 --&gt; S2["❄️ 2. Câmara Frigorífica (CAMARA01)\nBlindagem de conservação (Resfriados vs Congelados)"]
+
+    S2 --&gt; S3["📍 3. Coordenada da Vaga (B12D)\nEndereço físico tridimensional na estante"]
+
+    S3 --&gt; S3_DET["📐 Decomposição Espacial da Vaga:\n• Rua: B (Corredor)\n• Nível: 1 (Altura Solo)\n• Coluna: 2 (Módulo da Estante)\n• Lado: D (Lado Direito)"]
+
+    S3_DET --&gt; S4["⏱️ 4. Timestamp do Ciclo (1787938989868)\nData/hora da sessão do palete (Resolução LWW)"]
+
+    S4 --&gt; S5["📦 5. EAN-13 do Produto (7891527977035)\nIdentidade comercial única do item dentro do lote"]
+
+    S5 --&gt; S6["🛡️ 6. Sal Criptográfico (a1b2c)\nGarante idempotência e anti-colisão em bipagem rápida"]</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Segmento</th>
+<th style="text-align: center;">Exemplo</th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: left;">Finalidade Operacional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Filial</strong></td>
+<td style="text-align: center;"><code>f410</code></td>
+<td style="text-align: center;">Tenant</td>
+<td style="text-align: left;">Impede cruzamento de dados entre filiais (ex.: Loja 410 vs. Sandbox 999).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Câmara</strong></td>
+<td style="text-align: center;"><code>CAMARA01</code></td>
+<td style="text-align: center;">Ambiente</td>
+<td style="text-align: left;">Impede que o produto seja alocado em câmara incompatível com sua conservação térmica.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vaga</strong></td>
+<td style="text-align: center;"><code>B12D</code></td>
+<td style="text-align: center;">Posição 3D</td>
+<td style="text-align: left;">Coordenada física direta do palete no armazém (Rua B, Nível 1, Coluna 2, Lado Direito).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Timestamp</strong></td>
+<td style="text-align: center;"><code>1787938989868</code></td>
+<td style="text-align: center;">Sessão</td>
+<td style="text-align: left;">Identificador do ciclo de armazenagem. Todos os produtos bipados no mesmo palete compartilham este valor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EAN</strong></td>
+<td style="text-align: center;"><code>7891527977035</code></td>
+<td style="text-align: center;">Produto</td>
+<td style="text-align: left;">Código de barras comercial do SKU individual.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sal</strong></td>
+<td style="text-align: center;"><code>a1b2c</code></td>
+<td style="text-align: center;">Sufixo</td>
+<td style="text-align: left;">Aleatoriedade determinística para suportar múltiplos lotes no mesmo milissegundo.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="b-relacao-de-integridade-a-chave-mestra-do-palete-misto">B. Relação de Integridade: A Chave Mestra do Palete Misto</h3>
+<p>Quando um palete é composto por <strong>múltiplos produtos distintos</strong> (palete misto), todos os itens recebem a mesma <strong>Assinatura Canônica da Câmara/Vaga na Sessão</strong>:</p>
+<div class="arithmatex">\[\text{Chave Mestra da Vaga} = \mathbf{f410-CAMARA01-B12D-1787938989868}\]</div>
+<pre class="mermaid"><code>flowchart TD
+    VAGA["🔑 Chave Mestra da Câmara/Vaga no Ciclo\n&lt;b&gt;f410-CAMARA01-B12D-1787938989868&lt;/b&gt;\n(Compartilhada por todos os produtos do mesmo palete)"]
+
+    VAGA --&gt; P1["📦 Produto A: Presunto Sadia\nEAN: 7891164163600 | Val: 2026-11-30\nID: f410-CAMARA01-B12D-1787938989868-7891164163600-k9x2a"]
+
+    VAGA --&gt; P2["📦 Produto B: Mortadela Perdigão\nEAN: 7891527977035 | Val: 2026-12-15\nID: f410-CAMARA01-B12D-1787938989868-7891527977035-m3p7b"]
+
+    P1 --&gt; REGRAS["🛡️ Regras Mandatórias de Integridade"]
+    P2 --&gt; REGRAS
+
+    REGRAS --&gt; R_OK["✅ Palete Misto Autorizado:\nProdutos com EANs distintos coexistem na mesma vaga"]
+
+    REGRAS --&gt; R_BLOCK_DUP["🚫 Anti-Duplicação Estrita:\nO mesmo EAN duplicado na mesma vaga é proibido"]
+
+    REGRAS --&gt; R_BLOCK_CROSS["🚫 Bloqueio Cruzado:\nCódigo rejeitado se a câmara, vaga ou filial enviada diferir do código"]</code></pre>
+<hr />
+<h3 id="c-fluxo-vertical-de-validacao-de-vinculo-na-api">C. Fluxo Vertical de Validação de Vínculo na API</h3>
+<p>Antes de qualquer inserção ou atualização no Supabase, o endpoint <a href="file:///root/repo_pwa/pages/api/cadastrar.ts"><code>pages/api/cadastrar.ts</code></a> valida a compatibilidade do código através da rotina <code>validarCompatibilidadeVinculo</code>:</p>
+<pre class="mermaid"><code>flowchart TD
+    REQ["📡 Requisição de Cadastro de Produto Recebida\n(POST /api/cadastrar)"]
+
+    REQ --&gt; EXTRACT["1. Extrai Filial, Câmara e Vaga do Payload"]
+
+    EXTRACT --&gt; HAS_ID{"Código do Produto já foi enviado?"}
+
+    HAS_ID --&gt;|Não: Primeira Geração| GEN["⚙️ gerarCodigoVinculoPalete\nMonta f{filial}-{camara}-{vaga}-{ts}-{ean}-{salt}"]
+
+    HAS_ID --&gt;|Sim: Código Existente| VAL["2. Executa validarCompatibilidadeVinculo"]
+
+    VAL --&gt; CHK_FILIAL{"Filial do Código == Filial Ativa?"}
+    CHK_FILIAL --&gt;|Divergente| ERR_F["❌ 400 Bad Request:\n'Código pertence à filial X, incompatível com Y'"]
+
+    CHK_FILIAL --&gt;|Compatível| CHK_CAM{"Câmara do Código == Câmara Alvo?"}
+    CHK_CAM --&gt;|Divergente| ERR_C["❌ 400 Bad Request:\n'Código pertence à câmara X, incompatível com Y'"]
+
+    CHK_CAM --&gt;|Compatível| CHK_VAG{"Vaga do Código == Vaga Alvo?"}
+    CHK_VAG --&gt;|Divergente| ERR_V["❌ 400 Bad Request:\n'Código pertence à vaga X, incompatível com Y'"]
+
+    CHK_VAG --&gt;|Compatível| SAVE["💾 Inserção no Supabase (paletes_armazenados)\nRegistro salvo com integridade relacional total"]
+    GEN --&gt; SAVE</code></pre>
 
 
 
