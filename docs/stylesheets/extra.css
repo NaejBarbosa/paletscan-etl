@@ -58,15 +58,22 @@
   width: 100% !important;
   max-width: 100% !important;
   overflow-x: auto !important;
+  overflow-y: visible !important;
   -webkit-overflow-scrolling: touch !important;
-  touch-action: pan-x !important;
+  touch-action: pan-x pan-y !important;
   overscroll-behavior-x: contain !important;
+  overscroll-behavior-y: auto !important;
   border-radius: 0.65rem !important;
   border: 1px solid var(--md-default-fg-color--lightest) !important;
   background-color: var(--md-default-bg-color) !important;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05) !important;
   scrollbar-width: thin !important;
   scrollbar-color: var(--md-primary-fg-color, #4f46e5) rgba(148, 163, 184, 0.15) !important;
+}
+
+.table-scroll-container.is-dragging {
+  cursor: grabbing !important;
+  user-select: none !important;
 }
 
 /* Barra de rolagem horizontal sempre visível, elegante e ergonômica para touch */
@@ -109,9 +116,11 @@
   max-width: 100% !important;
   min-width: 100% !important;
   overflow-x: auto !important;
+  overflow-y: visible !important;
   -webkit-overflow-scrolling: touch !important;
-  touch-action: pan-x !important;
+  touch-action: pan-x pan-y !important;
   overscroll-behavior-x: contain !important;
+  overscroll-behavior-y: auto !important;
   border-collapse: collapse !important;
   font-size: 0.825rem !important;
   margin: 1.75rem 0 !important;
