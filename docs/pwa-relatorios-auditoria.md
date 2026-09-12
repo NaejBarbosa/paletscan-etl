@@ -1,6 +1,6 @@
-# 📊 Relatórios, Conferência & Auditoria
+# 📊 Relatórios, Auditoria Mobile-First, Ciclos de Vida & Telemetria
 
-Os módulos de relatórios e auditoria do **PaletScan PWA** centralizam o controle de estoque, acompanhamento de validades, conferência física de paletes e auditoria de inventário.
+Os módulos de relatórios e auditoria do **PaletScan PWA** centralizam o controle de estoque em câmaras frigoríficas, acompanhamento de validades, conferência física de paletes, layout mobile-first para auditoria administrativa, motor semântico de ciclos de vida e telemetria remota de erros via Eruda DevTools.
 
 ---
 
@@ -9,37 +9,65 @@ Os módulos de relatórios e auditoria do **PaletScan PWA** centralizam o contro
 * **Cards de Métricas Operacionais**: Total de paletes, SKUs únicos, câmaras em uso e divisão Congelados/Resfriados.
 * **Filtro Multi-Seleção de Marcas em Estoque Físico**: O seletor de marcas calcula dinamicamente as opções disponíveis a partir dos paletes reais armazenados nas câmaras frias, permitindo seleção múltipla sem poluir a lista com marcas sem estoque.
 * **Cabeçalho Adaptativo e Responsivo**:
-  - **Desktop / Tablet**: Exibição completa de colunas (Recebimento, Código, Descrição, Marca, Vaga, Validade e Dias Restantes).
+  - **Desktop / Tablet**: Exibição tabular completa (Recebimento, Código, Descrição, Marca, Vaga, Validade e Dias Restantes).
   - **Smartphone**: Layout compacto e verticalizado, otimizando o espaço da tela para visualização rápida da posição física da carga.
 * **Padronização de Contêiner**: Largura simétrica fixa (`min-w-[92px] sm:min-w-[100px]`) para exibição consistente de contadores de itens em smartphones.
 
 ---
 
-## 📋 2. Modo de Conferência Física de Paletes & Checklist
+## 📱 2. Painel de Auditoria Mobile-First ([`pages/admin.tsx`](file:///root/repo_pwa/pages/admin.tsx))
 
-O fluxo de auditoria física de estoque opera com checklist reativo e ações em massa:
+Para conferentes e auditores que utilizam smartphones ou coletores Android estreitos (ex: largura de 360px a 390px), o painel de auditoria foi totalmente refatorado com ergonomia móvel:
 
 ```mermaid
 flowchart TD
-    AUDIT["📋 Operador Inicia Conferência Física"]
+    AUDIT_EVENT["📜 Evento de Auditoria / Expurgo Capturado"]
+    
+    AUDIT_EVENT --> CARD_LAYOUT["📱 Card Mobile-First (flex-col com gap-3)\nFundo escuro de alto contraste (Slate-800/900)"]
+    
+    CARD_LAYOUT --> WRAP_TEXT["Quebra Inteligente de Texto: [overflow-wrap:anywhere] break-words\nEvita que códigos EAN longos ou descrições quebrem caracteres ao meio"]
+    
+    CARD_LAYOUT --> PILL_VAGA["📍 Pílula de Localização Física: Vaga B12D | Câmara 01\nIndicação clara da coordenada física sem ambiguidade"]
+    
+    CARD_LAYOUT --> BTN_RESTORE["Botão 'Restaurar Vaga' em Largura Total (w-full sm:w-auto)\nToque ergonômico facilitado para operadores com luvas térmicas"]
+```
 
-    AUDIT --> CHK["1. Ativa Checklist Tátil no Palete"]
+### Características de Usabilidade:
+* **Prevenção de Truncamento de Palavras**: Uso da classe `[overflow-wrap:anywhere] break-words`, permitindo leitura limpa de termos técnicos e códigos sem extrapolar a largura do visor.
+* **Ação Rápida de Restauração**: O botão *"Restaurar Vaga"* ocupa a largura total da tela no smartphone (`w-full`), oferecendo área de toque confortável.
+* **Fallback Seguro de Câmara**: Caso o log histórico não traga a câmara explicitada, o sistema aplica fallback seguro para `CAMARA 01`.
 
-    CHK --> V1["Entrada via Bipagem com Scanner"]
-    CHK --> V2["Entrada via Toque Tátil na Tela"]
+---
 
-    V1 --> CONF["✅ Marcação Automática do Item Confirmado"]
-    V2 --> CONF
+## 🛡️ 3. Blindagem de Expurgo Offline & Prevenção de Flash de Tela Vazia
 
-    CONF --> RES1["Palete 100% Conferido: Mantido em Estoque"]
-    CONF --> RES2["Divergência ou Item Ausente: Destaque em Vermelho"]
+Um problema comum em aplicações reativas é o **efeito de "ressurreição" visual ou flash de tela vazia** durante transições assíncronas entre o banco local e a nuvem. O PaletScan implementa uma blindagem de três camadas:
 
-    RES2 --> EXP["🗑️ Ação de Expurgo em Massa (API Serverless)"]
+```mermaid
+flowchart TD
+    DEL_ACTION["🗑️ Operador Executa Expurgo / Baixa de Palete (Offline ou Online)"]
+    
+    DEL_ACTION --> REGISTER_PENDING["1. Registro em obterPendingDeletions()\nGrava ID do palete e Vaga na lista volátil de exclusões pendentes"]
+    
+    REGISTER_PENDING --> OBSERVER["2. Observador Reativo do WatermelonDB (paletes_armazenados)\nDispara atualização de estado no React"]
+    
+    OBSERVER --> FILTER_CLEAN["3. Filtragem da cleanList contra obterPendingDeletions()\nRemove imediatamente paletes e vagas marcadas para exclusão"]
+    
+    FILTER_CLEAN --> CHECK_EMPTY{"cleanList.length == 0?"}
+    
+    CHECK_EMPTY -->|Sim| PREVENT_WIPE["🛡️ Previne Wipe Cego: NÃO executa setTodosRegistros([])\nPreserva o estado visual anterior evitando tela em branco"]
+    
+    CHECK_EMPTY -->|Não| UPDATE_UI["4. Atualiza Interface Suavemente sem Piscar"]
+    
+    PREVENT_WIPE --> SYNC_PULL["5. Sincronizador de Fundo Conclui PULL com o Supabase"]
+    UPDATE_UI --> SYNC_PULL
+    
+    SYNC_PULL --> IMMUNITY["🔒 Proteção optimisticPending:\nImpede que itens deletados localmente ressuscitem na tela antes da nuvem processar"]
 ```
 
 ---
 
-## 🧬 3. Motor de Histórico & Ciclos de Vida (`paleteHistoricoEngine.ts`)
+## 🧬 4. Motor de Histórico & Ciclos de Vida (`paleteHistoricoEngine.ts`)
 
 Para garantir rastreabilidade total sem poluir a interface do usuário com dezenas de linhas individuais para o mesmo palete, o componente de histórico processa os eventos brutos em **Grupos Semânticos e Ciclos de Vida**:
 
@@ -65,83 +93,43 @@ flowchart TD
 ```
 
 ### Tipos Canônicos de Eventos de Ciclo de Vida:
-* `CRIACAO_PALETE` / `CRIACAO`: Criação de um novo palete físico na vaga. Eventos ocorridos na mesma janela temporal são agrupados sob um único card visual (*"Criação do Palete: X itens"*).
+* `CRIACAO_PALETE` / `CRIACAO`: Criação de novo palete na vaga. Eventos na mesma janela temporal são agrupados (*"Criação do Palete: X itens"*).
 * `ADICAO_PRODUTO`: Adição de novo SKU a um palete já existente na câmara fria.
 * `CONFERENCIA_ITEM_CONFIRMADO`: Validação física de que a caixa/fardo está presente na câmara.
 * `CONFERENCIA_AUSENTE_REMOVIDO`: Baixa de produto ausente durante o checklist.
-* `EDICAO_VALIDADE`: Ajuste manual na data de validade de um produto já alocado.
+* `EDICAO_VALIDADE`: Ajuste manual na data de validade de um produto alocado.
 * `EXCLUSAO_TOTAL_PALETE`: Baixa completa do palete da vaga, selando o ciclo de vida.
 * `RESTAURACAO_PALETE`: Recuperação de palete ou produto excluído acidentalmente.
 
 ---
 
-## 📡 4. Telemetria de Sessão e DevTools Remoto (Eruda & `logs_sessao`)
+## 📡 5. Telemetria de Sessão e DevTools Remoto (Eruda & `logs_sessao`)
 
-O chão de fábrica apresenta variáveis incontroláveis de rede e hardware (temperaturas extremas, lentes de câmera embaçadas por condensação térmica e dispositivos de diferentes marcas). 
+O chão de fábrica apresenta variáveis incontroláveis de hardware e rede (temperaturas extremas, lentes de câmera embaçadas por condensação térmica e dispositivos de diferentes marcas). 
 
-Para permitir diagnósticos em tempo real sem necessidade de conectar cabos USB no interior das câmaras:
+Para permitir diagnósticos em tempo real sem necessidade de conectar cabos USB no interior das câmaras frias:
 
 ```mermaid
 flowchart TD
-    CONSOLE["📱 Evento no Cliente PWA ou Console Eruda\n(Log, Erro de Leitura ou Reporte ADM)"]
+    CONSOLE["📱 Evento no Cliente PWA ou Console Eruda\n(Log, Erro de Leitura ou Reporte Administrativo)"]
     
-    CONSOLE --> BATCH["1. Fila de Telemetria em Memória\n(Agrupa mensagens e captura snapshot de viewport e rota)"]
+    CONSOLE --> PERM_CHECK{"Usuário possui podeDevTools == true?"}
     
-    BATCH --> POST["2. Disparo Assíncrono para a rota de logs"]
+    PERM_CHECK -->|Sim| SHOW_ERUDA["Revela Botão Flutuante do Console Eruda no Canto da Tela"]
+    PERM_CHECK -->|Não| SILENT_QUEUE["Mantém Telemetria Ativa em Segundo Plano"]
+    
+    SHOW_ERUDA --> BATCH["1. Fila de Telemetria em Memória\n(Captura logs, viewport 390x844 e rota ativa)"]
+    SILENT_QUEUE --> BATCH
+    
+    BATCH --> POST["2. Disparo Assíncrono para a Rota /api/logs-sessao"]
     
     POST --> BD["3. Persistência em logs_sessao no Supabase\nIndexado por usuario_id, data e severidade"]
     
-    POST --> FILE["4. Arquivo de Auditoria Local logs client.log\nAcessível imediatamente no backend para análise"]
+    POST --> FILE["4. Arquivo de Auditoria Local logs/client.log\nAcessível imediatamente para o time de engenharia"]
     
-    BD --> ADMIN["5. Painel Administrativo (/admin)\nVisualização instantânea de anomalias em tempo real"]
+    BD --> ADMIN["5. Painel Administrativo (/admin)\nVisualização de anomalias operacionais em tempo real"]
 ```
 
 ### Recursos de Telemetria Operacional:
-* **Snapshot de Ambiente do Dispositivo**: Resolução de tela (ex: `1600x765` para Desktop vs `390x844` para mobile), User-Agent, rota ativa e tempo de resposta da rede.
-* **Eruda DevTools Móvel**: Console flutuante integrado acionável em campo por administradores para ver logs locais do browser no celular.
-* **Histórico de Auditoria**: Qualquer alteração em paletes, exclusões em massa ou bloqueios de marcas é auditada com o login do operador.
-
----
-
-## 📄 5. Exportação de Relatórios (CSV CP1252 & PDF Executivo)
-
-* **CSV Otimizado para Android (`CP1252`)**: Codificação Windows-1252 com delimitador ponto e vírgula (`;`), abrindo diretamente no Excel/Google Sheets do celular sem problemas de acentuação.
-* **PDF Executivo (`jspdf` + `jspdf-autotable`)**: Relatório formatado com cabeçalho corporativo, divisão por câmara/vaga e badges de validade.
-* **Android MediaScan**: Indexação imediata dos arquivos na biblioteca do dispositivo via `termux-media-scan`.
-
----
-
-## 🔄 6. Restauração Segura de Vagas Excluídas no Painel do Administrador
-
-Quando uma câmara/vaga inteira com produtos vinculados é excluída no [Relatório Geral](file:///root/repo_pwa/components/Relatorio.tsx), todos os seus produtos sofrem soft-delete e a vaga desaparece das listagens ativas dos operadores.
-
-Para garantir a reversibilidade segura sem risco de colisão física de estoque, o [Painel do Administrador (`/admin`)](file:///root/repo_pwa/pages/admin.tsx) e o endpoint [`/api/admin/restaurar-vaga`](file:///root/repo_pwa/pages/api/admin/restaurar-vaga.ts) implementam um fluxo de restauração protegido com verificação atômica de disponibilidade:
-
-```mermaid
-flowchart TD
-    EV_EXCL["🗑️ Operador Exclui Vaga Inteira via Relatório Geral\n(paletes_armazenados: deleted_at = NOW)"]
-    
-    EV_EXCL --> LOG["📝 Log de Auditoria Gravado em logs_sessao\n'Exclusão: Operador João liberou a vaga B12D da Câmara 01'"]
-    
-    LOG --> ADM_VIEW["👨‍💼 Administrador Acessa o Painel de Logs (/admin)\nCard exibe botão [ 🔄 Restaurar Vaga ]"]
-    
-    ADM_VIEW --> ADM_CLICK["👆 Administrador Clica em 'Restaurar Vaga'"]
-    
-    ADM_CLICK --> API_CALL["📡 Requisição POST /api/admin/restaurar-vaga\n(Envia câmara, vaga e filialId ativa)"]
-    
-    API_CALL --> CHECK_AVAIL{"🔍 Verificação Atômica de Disponibilidade:\nA vaga B12D na Câmara 01 possui algum palete ativo?"}
-    
-    CHECK_AVAIL -->|Sim: Vaga já está ocupada| BLOCK_409["🚫 409 CONFLICT: RESTAURAÇÃO BLOQUEADA\n'Não é possível restaurar: a vaga já está ocupada por outro palete ativo.'\nEvita colisão física de estoque no armazém"]
-    
-    CHECK_AVAIL -->|Não: Vaga 100% Livre| RESTORE["✅ Vaga Disponível: Executa Restauração em Bloco"]
-    
-    RESTORE --> REACTIVATE["1. Reativação no Supabase (deleted_at = NULL)\nTodos os produtos pertencentes àquele ciclo retornam à vaga"]
-    
-    REACTIVATE --> HIST["2. Registro Imutável em paletes_historico\nEvento: RESTAURACAO_PALETE assinado com nome completo do ADM"]
-    
-    HIST --> PURGE["3. Invalidação Imediata de Cache do Catálogo\nclearCache(banco_cadastro_data)"]
-    
-    PURGE --> DONE["🎉 Sucesso: Vaga e produtos voltam ao Relatório Geral"]
-```
-
-
+* **Snapshot de Ambiente do Dispositivo**: Resolução de tela (ex: `390x844` para iPhone / Android vs `1600x765` para desktop), User-Agent, status online/offline e rota ativa.
+* **Integração com Reportes de Divergência**: Quando o operador reporta uma embalagem divergente em [`ReportarDivergenciaModal.tsx`](file:///root/repo_pwa/components/ReportarDivergenciaModal.tsx), o snapshot dos últimos logs do console do Eruda é anexado automaticamente para análise remota.
