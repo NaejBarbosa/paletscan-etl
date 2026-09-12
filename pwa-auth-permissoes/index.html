@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#autenticacao-passkeys-permissoes" class="md-skip">
+        <a href="#autenticacao-passkeys-permissoes-granulares-supabase-rls" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -659,15 +659,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-autenticacao-multi-fator-hibrida-resiliencia-offline" class="md-nav__link">
+  <a href="#1-fluxo-de-autenticacao-em-etapas-passkeys-resiliencia-offline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔐 1. Autenticação Multi-Fator Híbrida &amp; Resiliência Offline
+        🔐 1. Fluxo de Autenticação em Etapas, Passkeys &amp; Resiliência Offline
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔐 1. Autenticação Multi-Fator Híbrida &amp; Resiliência Offline">
+    <nav class="md-nav" aria-label="🔐 1. Fluxo de Autenticação em Etapas, Passkeys &amp; Resiliência Offline">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -687,32 +687,105 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-matriz-de-controle-de-acesso-rbac-multi-tenant" class="md-nav__link">
+  <a href="#2-matriz-de-controle-de-acesso-rbac-granular-por-filial" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛡️ 2. Matriz de Controle de Acesso (RBAC) &amp; Multi-Tenant
+        🛡️ 2. Matriz de Controle de Acesso (RBAC) Granular por Filial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ 2. Matriz de Controle de Acesso (RBAC) Granular por Filial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matriz-comparativa-de-papeis-operacionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matriz Comparativa de Papéis Operacionais:
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#3-barreira-de-seguranca-de-marcas-brand-guardrail" class="md-nav__link">
+  <a href="#3-restricao-total-de-acesso-a-marcas-brand-guardrail-absoluto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏬 3. Barreira de Segurança de Marcas (Brand Guardrail)
+        🏬 3. Restrição Total de Acesso a Marcas (Brand Guardrail Absoluto)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏬 3. Restrição Total de Acesso a Marcas (Brand Guardrail Absoluto)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pontos-de-aplicacao-da-restricao-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pontos de Aplicação da Restrição Total:
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#4-blindagem-de-sessao-em-alta-concorrencia-libserverauthts" class="md-nav__link">
+  <a href="#4-supabase-postgresql-row-level-security-rls-nativo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛡️ 4. Blindagem de Sessão em Alta Concorrência (lib/serverAuth.ts)
+        🔒 4. Supabase PostgreSQL Row Level Security (RLS) Nativo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔒 4. Supabase PostgreSQL Row Level Security (RLS) Nativo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-do-jwt-supabase-customizado-libsupabasejwtts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrutura do JWT Supabase Customizado (lib/supabaseJwt.ts):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#politicas-rls-aplicadas-no-postgresql-scriptsaplicar_rls_marcas_supabasesql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Políticas RLS Aplicadas no PostgreSQL (scripts/aplicar_rls_marcas_supabase.sql):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-blindagem-de-sessao-em-alta-concorrencia-libserverauthts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 5. Blindagem de Sessão em Alta Concorrência (lib/serverAuth.ts)
       
     </span>
   </a>
@@ -1069,15 +1142,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-autenticacao-multi-fator-hibrida-resiliencia-offline" class="md-nav__link">
+  <a href="#1-fluxo-de-autenticacao-em-etapas-passkeys-resiliencia-offline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔐 1. Autenticação Multi-Fator Híbrida &amp; Resiliência Offline
+        🔐 1. Fluxo de Autenticação em Etapas, Passkeys &amp; Resiliência Offline
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔐 1. Autenticação Multi-Fator Híbrida &amp; Resiliência Offline">
+    <nav class="md-nav" aria-label="🔐 1. Fluxo de Autenticação em Etapas, Passkeys &amp; Resiliência Offline">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1097,32 +1170,105 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-matriz-de-controle-de-acesso-rbac-multi-tenant" class="md-nav__link">
+  <a href="#2-matriz-de-controle-de-acesso-rbac-granular-por-filial" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛡️ 2. Matriz de Controle de Acesso (RBAC) &amp; Multi-Tenant
+        🛡️ 2. Matriz de Controle de Acesso (RBAC) Granular por Filial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ 2. Matriz de Controle de Acesso (RBAC) Granular por Filial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matriz-comparativa-de-papeis-operacionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matriz Comparativa de Papéis Operacionais:
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#3-barreira-de-seguranca-de-marcas-brand-guardrail" class="md-nav__link">
+  <a href="#3-restricao-total-de-acesso-a-marcas-brand-guardrail-absoluto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏬 3. Barreira de Segurança de Marcas (Brand Guardrail)
+        🏬 3. Restrição Total de Acesso a Marcas (Brand Guardrail Absoluto)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏬 3. Restrição Total de Acesso a Marcas (Brand Guardrail Absoluto)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pontos-de-aplicacao-da-restricao-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pontos de Aplicação da Restrição Total:
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#4-blindagem-de-sessao-em-alta-concorrencia-libserverauthts" class="md-nav__link">
+  <a href="#4-supabase-postgresql-row-level-security-rls-nativo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛡️ 4. Blindagem de Sessão em Alta Concorrência (lib/serverAuth.ts)
+        🔒 4. Supabase PostgreSQL Row Level Security (RLS) Nativo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔒 4. Supabase PostgreSQL Row Level Security (RLS) Nativo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-do-jwt-supabase-customizado-libsupabasejwtts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrutura do JWT Supabase Customizado (lib/supabaseJwt.ts):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#politicas-rls-aplicadas-no-postgresql-scriptsaplicar_rls_marcas_supabasesql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Políticas RLS Aplicadas no PostgreSQL (scripts/aplicar_rls_marcas_supabase.sql):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-blindagem-de-sessao-em-alta-concorrencia-libserverauthts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 5. Blindagem de Sessão em Alta Concorrência (lib/serverAuth.ts)
       
     </span>
   </a>
@@ -1146,45 +1292,72 @@
 
 
 
-<h1 id="autenticacao-passkeys-permissoes">🔒 Autenticação, Passkeys &amp; Permissões</h1>
-<p>O <strong>PaletScan PWA</strong> dispõe de um sistema de segurança multicamadas que combina autenticação tradicional, biometria via Passkeys, auto-logout por inatividade e controle de acesso baseado em papéis (RBAC), projetado para manter a operação segura e ágil mesmo durante blackouts offline.</p>
+<h1 id="autenticacao-passkeys-permissoes-granulares-supabase-rls">🔒 Autenticação, Passkeys, Permissões Granulares &amp; Supabase RLS</h1>
+<p>O <strong>PaletScan PWA</strong> dispõe de uma arquitetura de segurança multicamadas de nível corporativo que combina autenticação tradicional, biometria via Passkeys (WebAuthn FIDO2), fluxo de seleção de filiais em etapas com credenciais protegidas, controle de acesso baseado em papéis (RBAC) com suporte a matriz de privilégios independentes por filial (<code>privilegiosPorFilial</code>), restrição total de acesso a marcas e governança nativa no PostgreSQL do Supabase via <strong>Row Level Security (RLS)</strong> alimentado por tokens JWT customizados.</p>
 <hr />
-<h2 id="1-autenticacao-multi-fator-hibrida-resiliencia-offline">🔐 1. Autenticação Multi-Fator Híbrida &amp; Resiliência Offline</h2>
-<p>O fluxo de autenticação suporta múltiplos métodos de entrada com garantia de sessão offline:</p>
+<h2 id="1-fluxo-de-autenticacao-em-etapas-passkeys-resiliencia-offline">🔐 1. Fluxo de Autenticação em Etapas, Passkeys &amp; Resiliência Offline</h2>
+<p>O acesso à aplicação adota um padrão de segurança em etapas (<em>Step-Up Authentication</em>), projetado para proteger a topologia de lojas da rede contra vazamento de metadados e oferecer alta ergonomia operacional para conferentes usando luvas térmicas no frio.</p>
 <pre class="mermaid"><code>flowchart TD
-    LOGIN["🔐 Tela de Login do PWA (Pré-Cacheada no Service Worker)"]
+    START["📱 Operador Acessa a Tela de Login\n(Pré-cacheada no Service Worker / Serwist)"]
 
-    LOGIN --&gt; M1["1. Credenciais Tradicionais (Usuário e Senha)"]
-    LOGIN --&gt; M2["2. Biometria WebAuthn FIDO2 (Passkeys)"]
-    LOGIN --&gt; M3["3. Token QR Code Móvel"]
+    START --&gt; STEP1["Etapa 1: Inserção de Credenciais\n(Usuário e Senha) OU Biometria Passkey (WebAuthn)"]
 
-    M1 --&gt; AUTH["🛡️ Validação com Cache em Memória"]
-    M2 --&gt; AUTH
-    M3 --&gt; AUTH
+    STEP1 --&gt; VAL_CREDS["POST /api/auth/filiais-usuario\nValidação Estrita de Senha / Hash Argon2"]
 
-    AUTH --&gt; JWT["🎫 Emissão de Sessão JWT"]
-    JWT --&gt; CACHE["💾 Armazenamento em Cache Offline (ps_auth_session)"]
-    CACHE --&gt; OK["✅ Acesso Seguro Garantido no Interior das Câmaras Frias"]
+    VAL_CREDS --&gt; PASS_CHECK{"Credenciais Válidas?"}
 
-    OK --&gt; INACT["⏱️ Monitor de Inatividade (5 Minutos)"]
-    INACT --&gt;|Sem Interação| LOGOUT["🔒 Auto-Logout &amp; Bloqueio Automático"]</code></pre>
+    PASS_CHECK --&gt;|Não| ERR_AUTH["❌ Retorna HTTP 401 Unauthorized\n(Sem revelar lojas ou privilégios)"]
+
+    PASS_CHECK --&gt;|Sim| BRANCH_CHECK{"Usuário Habilitado em\nMais de uma Filial?"}
+
+    BRANCH_CHECK --&gt;|Filial Única| AUTO_BRANCH["🏢 Fixa Automaticamente a Filial Autorizada\n(Sem exibir dropdown desnecessário)"]
+
+    BRANCH_CHECK --&gt;|Multi-Filiais| SHOW_BRANCH["🏢 Etapa 2: Revela Dropdown Estilizado de Filiais\n(Design customizado, sem estilos nativos e com overlay seguro)"]
+
+    SHOW_BRANCH --&gt; USER_SELECT["Operador Escolhe a Loja de Atuação\n(Ex: Loja 410 - Rio Tavares)"]
+
+    AUTO_BRANCH --&gt; SIGN_NEXTAUTH["Autenticação Concluída no NextAuth (Credentials Provider)"]
+    USER_SELECT --&gt; SIGN_NEXTAUTH
+
+    SIGN_NEXTAUTH --&gt; GEN_JWT["🔑 Emissão do Supabase JWT Nativo (lib/supabaseJwt.ts)\nAssinado com SUPABASE_JWT_SECRET (HS256)"]
+
+    GEN_JWT --&gt; SAVE_STORAGE["💾 Persistência Segura no Cliente:\n1. ps_auth_session (Sessão do Operador)\n2. ps_supabase_token (Bearer Token para RLS)\n3. ps_active_filial (Filial Selecionada)"]
+
+    SAVE_STORAGE --&gt; PURGE_LOCAL["🧹 Purga Automática de Dados Concorrentes\n(purgeAlienProdutos e clearLocalPaletes se mudou de filial)"]
+
+    PURGE_LOCAL --&gt; INACT_TIMER["⏱️ Ativação do Monitor de Inatividade (5 Minutos)\nAuto-Logout atômico e expurgo de tokens em timeout"]</code></pre>
 <h3 id="componentes-de-seguranca-e-sessao">Componentes de Segurança e Sessão:</h3>
 <ul>
-<li><strong>Passkeys / Biometria (WebAuthn)</strong>: Permite login por impressão digital ou reconhecimento facial sem necessidade de digitar senhas com luvas térmicas no frio.</li>
-<li><strong>Pré-Cache da Tela de Login</strong>: A página de autenticação é precacheada pelo Service Worker, garantindo abertura instantânea mesmo sem sinal de rede.</li>
-<li><strong>Auto-Logout por Inatividade (5 Minutos)</strong>: Temporizador reativo que encerra a sessão ativa caso o dispositivo fique sem interação no chão de fábrica, evitando registros inadvertidos em coletores compartilhados.</li>
-<li><strong>Cache em Memória e Resiliência de Variáveis</strong>: O motor de autenticação unifica o suporte a <code>REDIS_URL</code> e <code>VISITOR_PASSWORD</code>, eliminando latências de autenticação via cache em memória com timeout estrito.</li>
-<li><strong>Isenção de Expiração para Operadores Fixos</strong>: As credenciais operacionais de administração (como <code>JeanBfreitas_</code>) possuem política de não-expiração forçada de senha, prevenindo travamento do turno de trabalho.</li>
+<li><strong>Dropdown de Filiais Revelado sob Demanda</strong>: O seletor de lojas <strong>nunca</strong> é exibido para visitantes anônimos. Apenas após a confirmação criptográfica da senha ou biometria o sistema consulta <code>/api/auth/filiais-usuario</code> e renderiza as lojas autorizadas para aquele operador específico.</li>
+<li><strong>Passkeys / Biometria (WebAuthn FIDO2)</strong>: Permite login por impressão digital ou reconhecimento facial sem necessidade de digitar senhas alfanuméricas com luvas térmicas no frio.</li>
+<li><strong>Auto-Logout por Inatividade (5 Minutos)</strong>: Temporizador reativo que encerra a sessão ativa caso o dispositivo fique sem interação física no chão de fábrica, evitando registros inadvertidos em coletores compartilhados. No logout, <code>ps_auth_session</code>, <code>ps_supabase_token</code> e <code>ps_active_filial</code> são limpos atômica e simultaneamente.</li>
+<li><strong>Isenção de Expiração para Operadores Fixos</strong>: Credenciais operacionais de administração (como <code>JeanBfreitas_</code>) contam com política de não-expiração forçada de senha (<code>senhaNuncaExpira: true</code>), prevenindo travamento do turno de trabalho.</li>
 </ul>
 <hr />
-<h2 id="2-matriz-de-controle-de-acesso-rbac-multi-tenant">🛡️ 2. Matriz de Controle de Acesso (RBAC) &amp; Multi-Tenant</h2>
+<h2 id="2-matriz-de-controle-de-acesso-rbac-granular-por-filial">🛡️ 2. Matriz de Controle de Acesso (RBAC) Granular por Filial</h2>
+<p>O modelo de segurança do PaletScan PWA evoluiu de privilégios estáticos globais para uma <strong>matriz dinâmica de privilégios e marcas independentes por filial</strong> (<code>privilegiosPorFilial</code>). O mesmo usuário pode ser um operador pleno na Filial 410 e atuar como promotor restrito na Filial 411:</p>
+<pre class="mermaid"><code>flowchart TD
+    USER_OBJ["👤 Objeto do Usuário Autenticado (Sessão)"]
+
+    USER_OBJ --&gt; ACTIVE_F["Contexto da Filial Ativa: ps_active_filial (Ex: 410)"]
+
+    ACTIVE_F --&gt; CHECK_OVERRIDE{"Existe registro em\nprivilegiosPorFilial['410']?"}
+
+    CHECK_OVERRIDE --&gt;|Sim| APPLY_LOCAL["Aplica Privilégios Específicos da Loja 410:\n- marcasPermitidas locais\n- podeCadastrarProduto local\n- podeEditarVaga local"]
+
+    CHECK_OVERRIDE --&gt;|Não| APPLY_GLOBAL["Aplica Privilégios Globais Padrão do Perfil"]
+
+    APPLY_LOCAL --&gt; CONTEXT["Contexto de Operação Ativo no PWA &amp; Supabase Token"]
+    APPLY_GLOBAL --&gt; CONTEXT</code></pre>
+<h3 id="matriz-comparativa-de-papeis-operacionais">Matriz Comparativa de Papéis Operacionais:</h3>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Permissão / Atributo</th>
-<th style="text-align: left;">Flag no Perfil</th>
+<th style="text-align: left;">Flag de Perfil / Filial</th>
 <th style="text-align: center;">Administrador (<code>operador</code>)</th>
-<th style="text-align: center;">Operador Setorial</th>
+<th style="text-align: center;">Promotor Dedicado (Ex: Seara)</th>
+<th style="text-align: center;">Conferente de Loja</th>
 <th style="text-align: center;">Visitante (<code>visitante</code>)</th>
 </tr>
 </thead>
@@ -1192,100 +1365,237 @@
 <tr>
 <td style="text-align: left;"><strong>Painel Administrativo</strong></td>
 <td style="text-align: left;"><code>isAdmin</code></td>
-<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ Total</td>
+<td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Bipar e Consultar</strong></td>
+<td style="text-align: left;"><strong>Bipar e Consultar no Scanner</strong></td>
 <td style="text-align: left;">N/A</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅ (Leitura)</td>
+<td style="text-align: center;">✅ Todos os SKUs</td>
+<td style="text-align: center;">🔒 <strong>Apenas marcas autorizadas</strong></td>
+<td style="text-align: center;">✅ Todos os SKUs</td>
+<td style="text-align: center;">✅ Todos (Leitura)</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Cadastrar Paletes</strong></td>
+<td style="text-align: left;"><strong>Pesquisa e Consulta de Produtos</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: center;">✅ Todo o Catálogo</td>
+<td style="text-align: center;">🔒 <strong>Apenas marcas autorizadas</strong></td>
+<td style="text-align: center;">✅ Todo o Catálogo</td>
+<td style="text-align: center;">✅ Catálogo</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Visualizar Detalhes do Produto</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: center;">✅ Liberado</td>
+<td style="text-align: center;">🔒 <strong>Apenas marcas autorizadas</strong></td>
+<td style="text-align: center;">✅ Liberado</td>
+<td style="text-align: center;">✅ Liberado</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cadastrar Novos Paletes</strong></td>
 <td style="text-align: left;"><code>podeCadastrarPalete</code></td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅ (Se atribuído)</td>
+<td style="text-align: center;">🔒 Se autorizado (sua marca)</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Cadastrar SKUs Master</strong></td>
+<td style="text-align: left;"><strong>Cadastrar SKUs no Catálogo</strong></td>
 <td style="text-align: left;"><code>podeCadastrarProduto</code></td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌ (Restrito Central)</td>
+<td style="text-align: center;">❌ (Geralmente falso)</td>
+<td style="text-align: center;">❌ (Central)</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Vincular DUN-14</strong></td>
+<td style="text-align: left;"><strong>Vincular DUN-14 / Pesar</strong></td>
 <td style="text-align: left;"><code>podeVincularDun</code></td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅ (Com validação GS1)</td>
+<td style="text-align: center;">🔒 Se autorizado (sua marca)</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Editar Vaga de Palete</strong></td>
 <td style="text-align: left;"><code>podeEditarVaga</code></td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Editar Atributos de Produtos</strong></td>
+<td style="text-align: left;"><code>podeEditarDescricaoProduto</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">🔒 Se autorizado (sua marca)</td>
+<td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Exportar Relatórios</strong></td>
 <td style="text-align: left;"><code>podeExportarRelatorio</code></td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅ (Se atribuído)</td>
+<td style="text-align: center;">🔒 Se atribuído</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Gerenciar Watchlist</strong></td>
+<td style="text-align: left;"><strong>Gerenciar Watchlist / Radar</strong></td>
 <td style="text-align: left;"><code>podeAdicionarRadar</code></td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">🔒 Apenas sua marca</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Filial de Atuação</strong></td>
-<td style="text-align: left;"><code>filialId</code> / <code>filialNome</code></td>
-<td style="text-align: center;">410 (Matriz)</td>
-<td style="text-align: center;">Filial da Loja</td>
-<td style="text-align: center;">410</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Escopo de Marcas</strong></td>
-<td style="text-align: left;"><code>marcasPermitidas</code></td>
-<td style="text-align: center;">Todas (<code>acessoTodasMarcas: true</code>)</td>
-<td style="text-align: center;">Restrito à Marca</td>
-<td style="text-align: center;">Apenas Leitura</td>
+<td style="text-align: left;"><strong>Acesso a Marcas</strong></td>
+<td style="text-align: left;"><code>acessoTodasMarcas</code></td>
+<td style="text-align: center;"><code>true</code> (Universal)</td>
+<td style="text-align: center;"><code>false</code> (<code>marcasPermitidas: [...]</code>)</td>
+<td style="text-align: center;"><code>true</code> (Loja)</td>
+<td style="text-align: center;"><code>true</code> (Consulta)</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="3-barreira-de-seguranca-de-marcas-brand-guardrail">🏬 3. Barreira de Segurança de Marcas (Brand Guardrail)</h2>
-<p>Para assegurar que promotores de vendas ou operadores de chão de fábrica vinculados a uma determinada marca não modifiquem dados de outras marcas concorrentes:</p>
+<h2 id="3-restricao-total-de-acesso-a-marcas-brand-guardrail-absoluto">🏬 3. Restrição Total de Acesso a Marcas (Brand Guardrail Absoluto)</h2>
+<p>Em redes varejistas e atacarejos, promotores de vendas terceirizados (ex: <strong>BRF - Sadia/Perdigão</strong> ou <strong>JBS - Seara</strong>) utilizam coletores para auditar validades. Para garantir o sigilo concorrencial e a governança de estoque:</p>
+<blockquote>
+<p>⚠️ <strong>Princípio da Restrição Total:</strong> Promotores e operadores restritos <strong>não possuem acesso a dados de concorrentes nem mesmo para mera consulta</strong>. O bloqueio é absoluto em toda a esteira do sistema.</p>
+</blockquote>
 <pre class="mermaid"><code>flowchart TD
-    OP["👤 Operador Tenta Ação\n(Cadastro de Palete ou Vínculo DUN)"]
-    OP --&gt; CHECK{"Usuário possui\nacessoTodasMarcas?"}
-    CHECK --&gt;|Sim| LIB["✅ Ação Liberada Imediatamente"]
-    CHECK --&gt;|Não| MARCA{"Marca do Produto está em\nmarcasPermitidas do Perfil?"}
-    MARCA --&gt;|Sim| LIB
-    MARCA --&gt;|Não| BARRADO["🚫 BLOQUEADO (403 Forbidden)\nOperação restrita às marcas permitidas"]</code></pre>
-<ul>
-<li><strong>Validação em Dupla Camada (Client + Server)</strong>: A verificação ocorre tanto nos formulários e modais do PWA quanto nas rotas de API do backend (<code>/api/produtos/gerenciar-codigos</code>, <code>/api/cadastrar-produto</code> e <code>/api/cadastrar</code>) via <a href="file:///root/repo_pwa/lib/gs1Validator.ts"><code>lib/gs1Validator.ts</code></a>.</li>
-<li><strong>Mensagens Transparentes e Amigáveis</strong>: Quando o operador é barrado, o PWA apresenta toast claro indicando quais marcas seu usuário tem permissão para manipular.</li>
-<li><strong>Imutabilidade e Segurança</strong>: Apenas administradores com a flag <code>isAdmin: true</code> podem alterar o escopo de filiais e marcas dos operadores através do painel <code>/admin</code>.</li>
-<li><strong>Login Móvel via QR Code Multi-Sessão</strong>: Operadores podem autenticar terminais e coletores escaneando um QR Code gerado por uma sessão autenticada, sem necessidade de digitação repetitiva de senhas em teclados virtuais.</li>
-</ul>
+    SCAN["📷 Operador Bipa ou Consulta um Código de Barras\n(EAN-13, DUN-14 ou Código de Balança)"]
+
+    SCAN --&gt; RESOLVE["Resolução do SKU no Banco Local (WatermelonDB)\nou no Backend Next.js (/api/validar e /api/produtos/buscar)"]
+
+    RESOLVE --&gt; AUTH_CHECK{"Usuário possui\nacessoTodasMarcas == true?"}
+
+    AUTH_CHECK --&gt;|Sim (Admin / Geral)| ALLOW["✅ Acesso Total Concedido\nExibe Detalhes, Permite Cadastro e Bipagem"]
+
+    AUTH_CHECK --&gt;|Não| BRAND_CHECK{"Marca do Produto está em\nmarcasPermitidas do Operador?"}
+
+    BRAND_CHECK --&gt;|Sim (Marca Autorizada)| ALLOW
+
+    BRAND_CHECK --&gt;|Não (Marca Concorrente)| BLOCK["🚫 BLOQUEIO IMEDIATO &amp; IRREVERSÍVEL\nStatus: unauthorized_brand"]
+
+    BLOCK --&gt; UI_ALERT["📱 Interface PWA:\nAlerta Vermelho: 'Produto de marca não autorizada.\nSeu acesso nesta filial está restrito a: [Marcas]'"]
+
+    BLOCK --&gt; PREVENT_FORM["Trava de Scanner: Não abre formulário de palete\nTrava de Busca: Oculta item dos resultados\nTrava de Modal: Rejeita abertura do DetalheProdutoModal"]</code></pre>
+<h3 id="pontos-de-aplicacao-da-restricao-total">Pontos de Aplicação da Restrição Total:</h3>
+<ol>
+<li><strong>Scanner Óptico (<a href="file:///root/repo_pwa/components/Scanner.tsx"><code>Scanner.tsx</code></a>)</strong>:</li>
+<li>Ao decodificar o código de barras, cruza imediatamente com <code>marcasPermitidas</code>. Caso o item pertença a uma marca concorrente, emite o status <code>unauthorized_brand</code>, toca aviso sonoro/háptico de rejeição e bloqueia a abertura do formulário de palete.</li>
+<li><strong>Mecanismo de Pesquisa (<a href="file:///root/repo_pwa/components/PesquisaProduto.tsx"><code>PesquisaProduto.tsx</code></a>)</strong>:</li>
+<li>As consultas textuais e de código de barras filtram previamente o conjunto de busca, impedindo que itens alienígenas sejam exibidos no dropdown de resultados ou no catálogo pesquisável.</li>
+<li><strong>Modal de Detalhes (<a href="file:///root/repo_pwa/components/DetalheProdutoModal.tsx"><code>DetalheProdutoModal.tsx</code></a>)</strong>:</li>
+<li>Se um operador tentar abrir diretamente os detalhes de um produto de outra marca, o modal é imediatamente abortado.</li>
+<li><strong>Edição Rápida de Atributos de Catálogo</strong>:</li>
+<li>Todas as rotas de backend (<code>/api/atualizar-descricao</code>, <code>/api/atualizar-classe</code>, <code>/api/atualizar-conservacao</code>, <code>/api/atualizar-marca</code> e <code>/api/atualizar-pesar-cod</code>) recuperam o registro atual da base e validam <code>verificarAutorizacaoMarca</code> antes de executar qualquer <code>UPDATE</code>. Se o operador não tiver direito sobre a marca do produto, a API retorna <code>HTTP 403 Forbidden</code>.</li>
+</ol>
 <hr />
-<h2 id="4-blindagem-de-sessao-em-alta-concorrencia-libserverauthts">🛡️ 4. Blindagem de Sessão em Alta Concorrência (<code>lib/serverAuth.ts</code>)</h2>
-<p>Durante a alternância dinâmica de filial entre Produção (410) e Homologação (999), requisições de API (<code>switch-filial</code>, <code>filiais</code>, <code>usuarios</code>, <code>logs</code>, <code>pendencias</code>) utilizam o helper centralizado <a href="file:///root/repo_pwa/lib/serverAuth.ts"><code>lib/serverAuth.ts</code></a>:</p>
+<h2 id="4-supabase-postgresql-row-level-security-rls-nativo">🔒 4. Supabase PostgreSQL Row Level Security (RLS) Nativo</h2>
+<p>Para atingir a arquitetura <strong>Zero-Trust</strong> (na qual nem mesmo ataques forjados via console de navegador ou ferramentas como <code>curl</code> consigam contornar a segurança), a restrição de marcas opera de forma nativa diretamente no motor relacional do PostgreSQL através de <strong>Row Level Security (RLS)</strong>.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor Promotor as 👤 Promotor (Sadia/Perdigão)
+    participant PWA as 📱 PaletScan PWA (Cliente)
+    participant NextAuth as 🛡️ NextAuth (Backend)
+    participant Supabase as 🐘 Supabase PostgreSQL (RLS)
+
+    Promotor-&gt;&gt;PWA: Login com Usuário e Senha
+    PWA-&gt;&gt;NextAuth: POST /api/auth/callback/credentials
+    NextAuth-&gt;&gt;NextAuth: gerarSupabaseJwt(user) assinado com SUPABASE_JWT_SECRET
+    NextAuth--&gt;&gt;PWA: Retorna Sessão com supabaseAccessToken
+    PWA-&gt;&gt;PWA: Armazena token em localStorage (ps_supabase_token)
+    PWA-&gt;&gt;Supabase: Query REST (vw_produtos_com_marcas / codigos_barras)
+    Note over PWA,Supabase: Interceptador customFetch injeta cabeçalho:&lt;br/&gt;Authorization: Bearer &lt;ps_supabase_token&gt;
+    Note over Supabase: PostgreSQL extrai claims:&lt;br/&gt;auth.jwt()-&gt;'app_metadata'-&gt;'marcas_permitidas'&lt;br/&gt;Executa: produtos_select_policy
+    Supabase--&gt;&gt;PWA: Retorna exclusivamente os produtos autorizados (~250 SKUs)</code></pre>
+<h3 id="estrutura-do-jwt-supabase-customizado-libsupabasejwtts">Estrutura do JWT Supabase Customizado (<a href="file:///root/repo_pwa/lib/supabaseJwt.ts"><code>lib/supabaseJwt.ts</code></a>):</h3>
+<p>O token é assinado no algoritmo <code>HS256</code> utilizando a chave secreta oficial do projeto (<code>SUPABASE_JWT_SECRET</code>) e transporta as credenciais necessárias para as políticas de banco:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"aud"</span><span class="p">:</span><span class="w"> </span><span class="s2">"authenticated"</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"authenticated"</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">"sub"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b2c1d4e5-9a8f-4a3b-b2c1-d4e59a8f4a3b"</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"promotor.seara"</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">"app_metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paletscan_nextauth"</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">"is_admin"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">"acesso_todas_marcas"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">"marcas_permitidas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"seara"</span><span class="p">,</span><span class="w"> </span><span class="s2">"rezende"</span><span class="p">],</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">"pode_cadastrar_produto"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">"filial_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"410"</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">"empresa_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09.477.652/0178-38"</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="nt">"user_metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Promotor Seara"</span><span class="p">,</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"promotor_seara"</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="politicas-rls-aplicadas-no-postgresql-scriptsaplicar_rls_marcas_supabasesql">Políticas RLS Aplicadas no PostgreSQL (<a href="file:///root/repo_pwa/scripts/aplicar_rls_marcas_supabase.sql"><code>scripts/aplicar_rls_marcas_supabase.sql</code></a>):</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- 1. Extração determinística de marcas autorizadas do JWT</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">auth</span><span class="p">.</span><span class="n">get_user_marcas</span><span class="p">()</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">RETURNS</span><span class="w"> </span><span class="nb">text</span><span class="p">[]</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="w"> </span><span class="k">STABLE</span><span class="w"> </span><span class="k">SECURITY</span><span class="w"> </span><span class="k">DEFINER</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">BEGIN</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="k">RETURN</span><span class="w"> </span><span class="k">COALESCE</span><span class="p">(</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nb">ARRAY</span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">lower</span><span class="p">(</span><span class="n">jsonb_array_elements_text</span><span class="p">(</span><span class="n">auth</span><span class="p">.</span><span class="n">jwt</span><span class="p">()</span><span class="o">-&gt;</span><span class="s1">'app_metadata'</span><span class="o">-&gt;</span><span class="s1">'marcas_permitidas'</span><span class="p">))),</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nb">ARRAY</span><span class="p">[]::</span><span class="nb">text</span><span class="p">[]</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="k">END</span><span class="p">;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="err">$$</span><span class="p">;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1">-- 2. Política de Leitura Estrita de Produtos</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">POLICY</span><span class="w"> </span><span class="ss">"produtos_select_policy"</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">produtos</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">FOR</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">authenticated</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="k">USING</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="n">auth</span><span class="p">.</span><span class="n">has_full_brand_access</span><span class="p">()</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="k">OR</span><span class="w"> </span><span class="n">marca_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">marcas</span><span class="w"> </span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="k">lower</span><span class="p">(</span><span class="n">nome</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">ANY</span><span class="p">(</span><span class="n">auth</span><span class="p">.</span><span class="n">get_user_marcas</span><span class="p">())</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">  </span><span class="p">)</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">);</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="c1">-- 3. Política de Leitura Estrita de Códigos de Barras vinculados</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">POLICY</span><span class="w"> </span><span class="ss">"codigos_barras_select_policy"</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">codigos_barras</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="k">FOR</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">authenticated</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="k">USING</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">  </span><span class="n">auth</span><span class="p">.</span><span class="n">has_full_brand_access</span><span class="p">()</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">  </span><span class="k">OR</span><span class="w"> </span><span class="n">produto_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">produtos</span><span class="w"> </span><span class="n">p</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">marcas</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">marca_id</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="k">lower</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">nome</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">ANY</span><span class="p">(</span><span class="n">auth</span><span class="p">.</span><span class="n">get_user_marcas</span><span class="p">())</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">  </span><span class="p">)</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="p">);</span>
+</span></code></pre></div>
+<hr />
+<h2 id="5-blindagem-de-sessao-em-alta-concorrencia-libserverauthts">🛡️ 5. Blindagem de Sessão em Alta Concorrência (<code>lib/serverAuth.ts</code>)</h2>
+<p>Durante a alternância dinâmica de filial entre Produção (<code>410</code>) e Homologação (<code>999</code>), requisições de API (<code>switch-filial</code>, <code>filiais</code>, <code>usuarios</code>, <code>logs</code>, <code>pendencias</code>) utilizam o helper centralizado <a href="file:///root/repo_pwa/lib/serverAuth.ts"><code>lib/serverAuth.ts</code></a>:</p>
+<pre class="mermaid"><code>flowchart TD
+    REQ["📥 Requisição para API de Administração\n(Ex: /api/admin/switch-filial)"]
+
+    REQ --&gt; ATTEMPT1["Tentativa 1: getServerSession(req, res, authOptions)"]
+
+    ATTEMPT1 --&gt; SESS_OK{"Sessão SSR Válida e Hidratada?"}
+
+    SESS_OK --&gt;|Sim| AUTH_USER["Valida se o usuário tem privilégio isAdmin == true"]
+
+    SESS_OK --&gt;|Não (Latência SSR)| ATTEMPT2["Tentativa 2: Extrai cookie/token bruto da requisição"]
+
+    ATTEMPT2 --&gt; DB_LOOKUP["Consulta Direta no Repositório de Credenciais (lib/authDb.ts)"]
+
+    DB_LOOKUP --&gt; DB_OK{"Usuário Encontrado e isAdmin?"}
+
+    DB_OK --&gt;|Sim| AUTH_USER
+    DB_OK --&gt;|Não| REJECT["❌ HTTP 403 Forbidden: Acesso exclusivo para administradores"]
+
+    AUTH_USER --&gt; EXEC["✅ Executa a Operação com Auditoria em logs_sessao"]</code></pre>
 <ul>
-<li><strong>Validação Resiliente em Duas Etapas</strong>:</li>
-<li>Tenta obter a sessão autenticada via <code>getServerSession(req, res, authOptions)</code>.</li>
-<li>Em caso de latência de hidratação de cookies no SSR, extrai o usuário a partir do token/cookie e valida as permissões de administrador diretamente no banco de credenciais (<code>lib/authDb.ts</code>).</li>
-<li><strong>Eliminação de Condições de Corrida</strong>: Previne bloqueios indevidos ("você não tem permissão para trocar de filial") ao alternar de ambiente.</li>
-<li><strong>Auditoria Imediata no Supabase</strong>: Cada alternância de filial grava um evento de auditoria em <code>logs_sessao</code> informando o operador e o ambiente de destino.</li>
+<li><strong>Eliminação de Condições de Corrida</strong>: Previne o falso bloqueio de permissão ("você não tem permissão para trocar de filial") ao alternar de ambiente em dispositivos móveis sob latência de rede.</li>
+<li><strong>Auditoria Contínua</strong>: Cada alternância de filial grava um evento rastreável em <code>logs_sessao</code> no Supabase com data, identificador do operador e ambientes de origem e destino.</li>
 </ul>
 
 

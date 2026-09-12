@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#service-worker-resiliencia-offline" class="md-skip">
+        <a href="#service-worker-resiliencia-offline-motor-local-first-watermelondb" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -541,13 +541,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-banco-de-dados-local-first-watermelondb-indexeddb" class="md-nav__link">
+  <a href="#3-sincronizacao-seletiva-invalidacao-de-hash-purga-de-alienigenas-libdatabasesyncts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🗄️ 3. Banco de Dados Local-First (WatermelonDB &amp; IndexedDB)
+        🗄️ 3. Sincronização Seletiva, Invalidação de Hash &amp; Purga de Alienígenas (lib/database/sync.ts)
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🗄️ 3. Sincronização Seletiva, Invalidação de Hash &amp; Purga de Alienígenas (lib/database/sync.ts)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principais-pilares-da-sincronizacao-local-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principais Pilares da Sincronização Local-First:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -591,10 +608,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-barreira-de-idempotencia-no-backend-paletelifecyclets" class="md-nav__link">
+  <a href="#5-barreira-de-idempotencia-temporal-no-backend-paletelifecyclets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⏱️ 5. Barreira de Idempotência no Backend (paleteLifecycle.ts)
+        ⏱️ 5. Barreira de Idempotência Temporal no Backend (paleteLifecycle.ts)
       
     </span>
   </a>
@@ -1124,13 +1141,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-banco-de-dados-local-first-watermelondb-indexeddb" class="md-nav__link">
+  <a href="#3-sincronizacao-seletiva-invalidacao-de-hash-purga-de-alienigenas-libdatabasesyncts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🗄️ 3. Banco de Dados Local-First (WatermelonDB &amp; IndexedDB)
+        🗄️ 3. Sincronização Seletiva, Invalidação de Hash &amp; Purga de Alienígenas (lib/database/sync.ts)
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🗄️ 3. Sincronização Seletiva, Invalidação de Hash &amp; Purga de Alienígenas (lib/database/sync.ts)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principais-pilares-da-sincronizacao-local-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principais Pilares da Sincronização Local-First:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1174,10 +1208,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-barreira-de-idempotencia-no-backend-paletelifecyclets" class="md-nav__link">
+  <a href="#5-barreira-de-idempotencia-temporal-no-backend-paletelifecyclets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⏱️ 5. Barreira de Idempotência no Backend (paleteLifecycle.ts)
+        ⏱️ 5. Barreira de Idempotência Temporal no Backend (paleteLifecycle.ts)
       
     </span>
   </a>
@@ -1212,24 +1246,25 @@
 
 
 
-<h1 id="service-worker-resiliencia-offline">⚡ Service Worker &amp; Resiliência Offline</h1>
+<h1 id="service-worker-resiliencia-offline-motor-local-first-watermelondb">⚡ Service Worker, Resiliência Offline &amp; Motor Local-First (WatermelonDB)</h1>
 <p>O <strong>PaletScan PWA</strong> foi concebido para resolver o problema clássico de conectividade em depósitos industriais: <strong>o isolamento térmico das câmaras frigoríficas atua fisicamente como uma Gaiola de Faraday</strong>, bloqueando sinais Wi-Fi e redes móveis (4G/5G).</p>
+<p>Para operar sem interrupções nesse ambiente hostil, o sistema emprega uma arquitetura <strong>Local-First</strong> com Service Worker inteligente (<a href="https://github.com/serwist/serwist">Serwist</a>), banco de dados reativo de alta performance (<strong>WatermelonDB / IndexedDB</strong>), sincronização delta seletiva por escopo de marcas e purga automática de dados alienígenas.</p>
 <hr />
 <h2 id="1-o-desafio-da-camara-frigorifica">❄️ 1. O Desafio da Câmara Frigorífica</h2>
 <pre class="mermaid"><code>flowchart TD
-    A1["❄️ 1. Interior da Câmara Frigorífica (Blackout de Sinal)\nColetor ou Smartphone Android em Modo Offline"]
+    A1["❄️ 1. Interior da Câmara Frigorífica (Blackout Total de Rede)\nColetor ou Smartphone em Modo 100% Offline (-18°C a -25°C)"]
 
-    A1 --&gt; A2["📱 2. App Shell e Login Servidos pelo Serwist Cache\nAbertura instantânea da interface sem sinal de rede"]
+    A1 --&gt; A2["📱 2. App Shell e Login Servidos pelo Serwist Cache\nAbertura instantânea da interface sem sinal de rede (&lt; 100ms)"]
 
     A2 --&gt; A3["💾 3. Catálogo e Validação no WatermelonDB Local\nBipagem e gravação reativa em menos de 5 milissegundos"]
 
-    A3 --&gt; A4["📥 4. Enfileiramento na Fila de Contingência Local\nPersistência em pending_criacoes e pending_sync"]
+    A3 --&gt; A4["📥 4. Enfileiramento na Fila de Contingência Local\nPersistência em pending_criacoes e pending_sync no IndexedDB"]
 
-    A4 --&gt; B1["🚪 5. Saída da Câmara e Retomada de Sinal\nReconexão detectada com Wi-Fi ou rede 4G e 5G"]
+    A4 --&gt; B1["🚪 5. Saída da Câmara e Retomada de Sinal\nReconexão detectada com Wi-Fi ou rede celular 4G/5G"]
 
     B1 --&gt; B2["⚡ 6. Instant Sync Delta com Supabase Cloud\nSincronização bidirecional em menos de 30 milissegundos"]
 
-    B2 --&gt; B3["🧹 7. Despacho e Expurgo Atômico da Fila Local\nEvita qualquer envio duplicado de paletes"]</code></pre>
+    B2 --&gt; B3["🧹 7. Despacho e Expurgo Atômico da Fila Local\nRotina removerCriacoesPendentes elimina qualquer envio duplicado"]</code></pre>
 <hr />
 <h2 id="2-motor-de-service-worker-swts-serwistnext">🛠️ 2. Motor de Service Worker (<code>sw.ts</code> / <code>@serwist/next</code>)</h2>
 <p>O gerenciamento de cache é orquestrado pelo <strong>Serwist</strong>, compilado em tempo de build:</p>
@@ -1288,13 +1323,59 @@
 </span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="nx">serwist</span><span class="p">.</span><span class="nx">addEventListeners</span><span class="p">();</span>
 </span></code></pre></div>
 <hr />
-<h2 id="3-banco-de-dados-local-first-watermelondb-indexeddb">🗄️ 3. Banco de Dados Local-First (WatermelonDB &amp; IndexedDB)</h2>
-<p>Diferente de soluções convencionais que utilizam apenas o <code>localStorage</code> (limitado a 5MB e síncrono), o PaletScan utiliza o <strong>WatermelonDB</strong> construído sobre adaptadores <strong>IndexedDB / LokiJS</strong>:</p>
-<ul>
-<li><strong>Zero Latência</strong>: Leitura e escrita completas em menos de 5 milissegundos.</li>
-<li><strong>Invalidação de Hash e Propagação de DUNs</strong>: O sincronizador compara a assinatura de hash do catálogo remoto e invalida o cache local somente quando há mutações reais, forçando a propagação imediata de vínculos de DUN-14 para o IndexedDB móvel.</li>
-<li><strong>Fila de Contingência <code>pending_sync</code></strong>: Caso ocorra instabilidade de rede no envio para o Supabase, as mutações são preservadas localmente e despachadas automaticamente ao restabelecer o sinal.</li>
+<h2 id="3-sincronizacao-seletiva-invalidacao-de-hash-purga-de-alienigenas-libdatabasesyncts">🗄️ 3. Sincronização Seletiva, Invalidação de Hash &amp; Purga de Alienígenas (<code>lib/database/sync.ts</code>)</h2>
+<p>Diferente de abordagens tradicionais que baixam o catálogo completo de ~3.800 produtos para todos os celulares (gerando lentidão e vazamento de dados de concorrentes), o motor de sincronização do PaletScan adota uma arquitetura <strong>Seletiva, Segmentada e Econômica</strong>:</p>
+<pre class="mermaid"><code>flowchart TD
+    SYNC_START["⚡ Início do Ciclo de Sincronização: syncLocalDB()"]
+
+    SYNC_START --&gt; GET_ACCESS["1. Identificação do Escopo Ativo (getActiveUserBrandAccess)\nRecupera filial ativa e marcas autorizadas da sessão"]
+
+    GET_ACCESS --&gt; CALC_SCOPE{"Usuário possui acesso a todas as marcas?"}
+
+    CALC_SCOPE --&gt;|Sim (Admin / Geral)| SCOPE_ALL["brandHashScope = 'all'\nAlvo: Catálogo Pleno (~3.800 SKUs)"]
+    CALC_SCOPE --&gt;|Não (Promotor Restrito)| SCOPE_BRAND["brandHashScope = 'sadia|perdigao'\nAlvo: Fatia Estrita (~250 SKUs)"]
+
+    SCOPE_ALL --&gt; CHECK_HASH["2. Avaliação da Assinatura de Mudança Remota\ncurrentRemoteHash = (maxDate + count + brandHashScope)"]
+    SCOPE_BRAND --&gt; CHECK_HASH
+
+    CHECK_HASH --&gt; HASH_MATCH{"Hash Remoto == ps_pwa_db_hash Local?"}
+
+    HASH_MATCH --&gt;|Sim (Catálogo Inalterado)| SKIP_PULL["🚀 Catálogo Inalterado (&lt; 10ms)\nPula download de produtos e parte direto para paletes"]
+
+    HASH_MATCH --&gt;|Não (Novo Escopo ou Atualização Remota)| SELECTIVE_PULL["3. Download Seletivo no Supabase (vw_produtos_com_marcas)\nFiltra: in('marca_nome', marcasPermitidas)\nTrafega &lt; 100 KB para promotores"]
+
+    SELECTIVE_PULL --&gt; PULL_CB["4. Otimização no Pull de Códigos de Barras:\n- Se 0 produtos: dispara 0 requisições\n- Se catálogo restrito: resolve em 1 única requisição leve"]
+
+    PULL_CB --&gt; PURGE["5. Purga Automática de Alienígenas: purgeAlienProdutos()\nVarre o WatermelonDB local e expurga em lotes (batch de 500)\nquaisquer produtos de marcas concorrentes"]
+
+    PURGE --&gt; SAVE_BATCH["6. Gravação Não-Bloqueante no IndexedDB\ndatabase.batch(...) sem engasgos na UI ou leitor de câmera"]
+
+    SAVE_BATCH --&gt; UPDATE_HASH["7. Atualiza ps_pwa_db_hash com o novo brandHashScope"]
+    SKIP_PULL --&gt; SYNC_PALETES["8. Sincronização Delta de Paletes e Vagas da Filial Ativa"]
+    UPDATE_HASH --&gt; SYNC_PALETES</code></pre>
+<h3 id="principais-pilares-da-sincronizacao-local-first">Principais Pilares da Sincronização Local-First:</h3>
+<ol>
+<li><strong>Cache Inteligente por Hash de Escopo (<code>brandHashScope</code>)</strong>:</li>
+<li>A fórmula da chave de hash incorpora as marcas outorgadas ao operador:
+     <div class="language-typescript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">brandHashScope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">brandAccess</span><span class="p">.</span><span class="nx">acessoTodasMarcas</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="o">?</span><span class="w"> </span><span class="s1">'all'</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">brandAccess</span><span class="p">.</span><span class="nx">marcasPermitidas</span><span class="p">.</span><span class="nx">slice</span><span class="p">().</span><span class="nx">sort</span><span class="p">().</span><span class="nx">map</span><span class="p">(</span><span class="nx">m</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">m</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">trim</span><span class="p">()).</span><span class="nx">join</span><span class="p">(</span><span class="s1">'|'</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nx">currentRemoteHash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">maxProdDate</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">remoteProdCount</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">remoteCbCount</span><span class="si">}</span><span class="sb">_v51_catalog_3684_update_</span><span class="si">${</span><span class="nx">brandHashScope</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></code></pre></div></li>
+<li>Ao reabrir o PWA, a checagem leva <strong>menos de 10ms</strong>. Caso o catálogo do promotor não tenha sofrido alterações na indústria, o app <strong>não consome dados de rede nem recarrega tabelas</strong>.</li>
+<li>Se o promotor fizer logout e entrar um promotor de marca concorrente, o <code>brandHashScope</code> se altera instantaneamente, forçando a invalidação imediata e o download apenas da nova fatia.</li>
+<li><strong>Purga Atômica de Produtos Alienígenas (<a href="file:///root/repo_pwa/lib/database/sync.ts#L494"><code>purgeAlienProdutos</code></a>)</strong>:</li>
+<li>Em smartphones ou coletores compartilhados entre turnos, se um promotor anterior deixou produtos de marcas concorrentes no IndexedDB, a rotina de purga é acionada no login e expurga em lotes atômicos de 500 registros (<code>database.batch</code>) todos os produtos estranhos à credencial ativa.</li>
+<li><strong>Otimização Extrema de Códigos de Barras (<a href="file:///root/repo_pwa/lib/database/sync.ts#L891"><code>sync.ts</code></a>)</strong>:</li>
+<li>Caso nenhum produto seja puxado para o operador, <strong>zero</strong> requisições são disparadas para a tabela <code>codigos_barras</code>.</li>
+<li>Para catálogos restritos de promotores (~250 itens), a busca de EANs, DUNs e pesagens é resolvida em uma <strong>única página HTTP</strong>, gerando uma economia superior a <strong>85% de banda e tempo de processamento</strong>.</li>
+<li><strong>Telemetria de Sincronização Fidedigna (<a href="file:///root/repo_pwa/components/StatusSincronizacao.tsx"><code>StatusSincronizacao.tsx</code></a>)</strong>:</li>
+<li>A pílula de sincronização na barra de navegação calcula o status com base no escopo autorizado:<ul>
+<li>Promotor BRF (248 produtos autorizados): exibe <code>Sincronizado (248)</code> com badge verde;</li>
+<li>Administrador Geral (3.800 produtos): exibe <code>Sincronizado (3800)</code>.</li>
 </ul>
+</li>
+</ol>
 <hr />
 <h2 id="4-fila-offline-pending_criacoes-expurgo-imediato-anti-duplicacao">🛡️ 4. Fila Offline <code>pending_criacoes</code> &amp; Expurgo Imediato Anti-Duplicação</h2>
 <p>Um dos desafios mais sutis em aplicações móveis industriais é a <strong>duplicação de registros por sincronização concorrente</strong>.</p>
@@ -1323,7 +1404,7 @@
 
     RES --&gt;|Não ou Falha de Rede| KEEP["5. Item Permanece na Fila Local\nSerá sincronizado automaticamente na reconexão física"]</code></pre>
 <hr />
-<h2 id="5-barreira-de-idempotencia-no-backend-paletelifecyclets">⏱️ 5. Barreira de Idempotência no Backend (<code>paleteLifecycle.ts</code>)</h2>
+<h2 id="5-barreira-de-idempotencia-temporal-no-backend-paletelifecyclets">⏱️ 5. Barreira de Idempotência Temporal no Backend (<code>paleteLifecycle.ts</code>)</h2>
 <p>Como rede industrial em galpões de alvenaria e câmaras frigoríficas pode reenviar pacotes TCP ou o operador pode dar duplo clique rápido no botão tátil do smartphone, o backend implementa uma <strong>Barreira de Idempotência Temporal de 30 Segundos</strong>:</p>
 <pre class="mermaid"><code>flowchart TD
     REQ["📥 Requisição de Registro de Evento\n(CRIACAO_PALETE, CRIACAO ou ADICAO_PRODUTO)"]

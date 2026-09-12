@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#integracao-supabase-database-storage" class="md-skip">
+        <a href="#integracao-supabase-database-storage-postgresql-rls" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -1011,10 +1011,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-comandos-de-sincronizacao-teste" class="md-nav__link">
+  <a href="#5-governanca-postgresql-row-level-security-rls-nativas-por-marca" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💻 5. Comandos de Sincronização &amp; Teste
+        🔐 5. Governança PostgreSQL Row Level Security (RLS) Nativas por Marca
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 5. Governança PostgreSQL Row Level Security (RLS) Nativas por Marca">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#politicas-rls-aplicadas-scriptsaplicar_rls_marcas_supabasesql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Políticas RLS Aplicadas (scripts/aplicar_rls_marcas_supabase.sql):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coexistencia-com-service_role-bypass-rls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coexistência com service_role (Bypass RLS):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-comandos-de-sincronizacao-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 6. Comandos de Sincronização &amp; Teste
       
     </span>
   </a>
@@ -1163,10 +1202,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-comandos-de-sincronizacao-teste" class="md-nav__link">
+  <a href="#5-governanca-postgresql-row-level-security-rls-nativas-por-marca" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💻 5. Comandos de Sincronização &amp; Teste
+        🔐 5. Governança PostgreSQL Row Level Security (RLS) Nativas por Marca
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 5. Governança PostgreSQL Row Level Security (RLS) Nativas por Marca">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#politicas-rls-aplicadas-scriptsaplicar_rls_marcas_supabasesql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Políticas RLS Aplicadas (scripts/aplicar_rls_marcas_supabase.sql):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coexistencia-com-service_role-bypass-rls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coexistência com service_role (Bypass RLS):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-comandos-de-sincronizacao-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 6. Comandos de Sincronização &amp; Teste
       
     </span>
   </a>
@@ -1190,8 +1268,8 @@
 
 
 
-<h1 id="integracao-supabase-database-storage">⚡ Integração Supabase (Database &amp; Storage)</h1>
-<p>O módulo de integração (<a href="file:///root/paletscan-etl/db_sync/sync.ts"><code>db_sync/sync.ts</code></a> e <a href="file:///root/paletscan-etl/db_sync/sync_images.ts"><code>db_sync/sync_images.ts</code></a>) realiza a carga dos dados sanitizados e mídias tratadas diretamente nas instâncias do Supabase PostgreSQL e Supabase Storage.</p>
+<h1 id="integracao-supabase-database-storage-postgresql-rls">⚡ Integração Supabase (Database, Storage &amp; PostgreSQL RLS)</h1>
+<p>O módulo de integração (<a href="file:///root/paletscan-etl/db_sync/sync.ts"><code>db_sync/sync.ts</code></a> e <a href="file:///root/paletscan-etl/db_sync/sync_images.ts"><code>db_sync/sync_images.ts</code></a>) realiza a carga dos dados sanitizados e mídias tratadas diretamente nas instâncias do Supabase PostgreSQL e Supabase Storage, enquanto as políticas nativas de <strong>Row Level Security (RLS)</strong> blindam o banco relacional contra acessos indevidos de operadores e terceiros.</p>
 <hr />
 <h2 id="1-pipeline-de-sincronizacao-relacional-db_syncsyncts">🔄 1. Pipeline de Sincronização Relacional (<code>db_sync/sync.ts</code>)</h2>
 <p>O script <code>sync.ts</code> lê o staging sanitizado, gera as chaves determinísticas UUIDv5 e executa as chamadas de gravação relacional no Supabase em um fluxo vertical de alta resiliência:</p>
@@ -1250,7 +1328,89 @@
 <li><code>updated_at</code>: Atualiza o timestamp da última mutação para orientar a sincronização delta do PWA.</li>
 </ol>
 <hr />
-<h2 id="5-comandos-de-sincronizacao-teste">💻 5. Comandos de Sincronização &amp; Teste</h2>
+<h2 id="5-governanca-postgresql-row-level-security-rls-nativas-por-marca">🔐 5. Governança PostgreSQL Row Level Security (RLS) Nativas por Marca</h2>
+<p>Para assegurar o isolamento dos dados diretamente na autoridade máxima (o banco relacional PostgreSQL), o Supabase utiliza <strong>Row Level Security (RLS)</strong> ativo nas tabelas mestres de catálogo:</p>
+<pre class="mermaid"><code>flowchart TD
+    CLIENT_REQ["🌐 Requisição HTTP do Cliente (PWA ou cURL)\nHeader: Authorization: Bearer &lt;ps_supabase_token&gt;"]
+
+    CLIENT_REQ --&gt; POSTGREST["⚙️ Supabase PostgREST Gateway"]
+
+    POSTGREST --&gt; VERIFY_JWT["Validação Criptográfica do JWT com SUPABASE_JWT_SECRET (HS256)"]
+
+    VERIFY_JWT --&gt; IS_VALID{"Assinatura Válida?"}
+
+    IS_VALID --&gt;|Não / Sem Token| ROLE_ANON["Role: anon\nPolíticas RLS negam leitura/gravação (Retorna 0 linhas)"]
+
+    IS_VALID --&gt;|Sim| ROLE_AUTH["Role: authenticated\nPostgreSQL popula auth.jwt()"]
+
+    ROLE_AUTH --&gt; EVAL_RLS["Execução da Função auth.get_user_marcas():\nExtrai marcas_permitidas do app_metadata"]
+
+    EVAL_RLS --&gt; CHECK_FULL{"auth.has_full_brand_access() == true?"}
+
+    CHECK_FULL --&gt;|Sim (Admin / Geral)| ALLOW_ALL["✅ Retorna Todas as Linhas do Catálogo"]
+
+    CHECK_FULL --&gt;|Não (Promotor Restrito)| FILTER_BRANDS["🔒 WHERE marca_id IN (\n  SELECT id FROM marcas WHERE lower(nome) = ANY(auth.get_user_marcas())\n)"]
+
+    FILTER_BRANDS --&gt; RETURN_RESTRICTED["✅ Retorna Apenas Linhas das Marcas Autorizadas (~250 SKUs)"]</code></pre>
+<h3 id="politicas-rls-aplicadas-scriptsaplicar_rls_marcas_supabasesql">Políticas RLS Aplicadas (<a href="file:///root/repo_pwa/scripts/aplicar_rls_marcas_supabase.sql"><code>scripts/aplicar_rls_marcas_supabase.sql</code></a>):</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tabela</th>
+<th style="text-align: left;">Política</th>
+<th style="text-align: center;">Operação</th>
+<th style="text-align: left;">Escopo / Regra de Avaliação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>public.produtos</code></td>
+<td style="text-align: left;"><code>produtos_select_policy</code></td>
+<td style="text-align: center;"><code>SELECT</code></td>
+<td style="text-align: left;"><code>auth.has_full_brand_access() OR marca_id IN (marcas autorizadas)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>public.produtos</code></td>
+<td style="text-align: left;"><code>produtos_insert_policy</code></td>
+<td style="text-align: center;"><code>INSERT</code></td>
+<td style="text-align: left;">Exige <code>pode_cadastrar_produto == true</code> E marca autorizada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>public.produtos</code></td>
+<td style="text-align: left;"><code>produtos_update_policy</code></td>
+<td style="text-align: center;"><code>UPDATE</code></td>
+<td style="text-align: left;">Exige que o produto atual pertença à marca autorizada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>public.produtos</code></td>
+<td style="text-align: left;"><code>produtos_delete_policy</code></td>
+<td style="text-align: center;"><code>DELETE</code></td>
+<td style="text-align: left;">Exclusivo para administradores (<code>has_full_brand_access()</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>public.codigos_barras</code></td>
+<td style="text-align: left;"><code>codigos_barras_select_policy</code></td>
+<td style="text-align: center;"><code>SELECT</code></td>
+<td style="text-align: left;">Apenas códigos vinculados a produtos de marcas autorizadas</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>public.codigos_barras</code></td>
+<td style="text-align: left;"><code>codigos_barras_insert_policy</code></td>
+<td style="text-align: center;"><code>INSERT</code></td>
+<td style="text-align: left;">Apenas para produtos de marcas autorizadas</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>public.codigos_barras</code></td>
+<td style="text-align: left;"><code>codigos_barras_update_policy</code></td>
+<td style="text-align: center;"><code>UPDATE</code></td>
+<td style="text-align: left;">Apenas para produtos de marcas autorizadas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="coexistencia-com-service_role-bypass-rls">Coexistência com <code>service_role</code> (Bypass RLS):</h3>
+<p>As rotas de backend do Next.js que utilizam <code>supabaseAdmin</code> com a chave <code>SUPABASE_SERVICE_ROLE_KEY</code> operam com o atributo PostgreSQL <code>BYPASSRLS</code>. Isso assegura que tarefas administrativas centrais (como moderação de reportes e rotinas de expurgo automatizado) operem sem bloqueios, mantendo as requisições diretas de clientes sob isolamento hermético.</p>
+<hr />
+<h2 id="6-comandos-de-sincronizacao-teste">💻 6. Comandos de Sincronização &amp; Teste</h2>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Sincronizar dados relacionais de todas as indústrias para o Supabase</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>npm<span class="w"> </span>run<span class="w"> </span>sync:supabase
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
@@ -1259,6 +1419,9 @@
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Validar imunidade a perda de dados e integridade relacional do PWA</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>npx<span class="w"> </span>tsx<span class="w"> </span>scripts/test_pwa_crud_and_sync_safety.ts
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># Aplicar o script SQL de Row Level Security no Supabase SQL Editor</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1"># Arquivo: scripts/aplicar_rls_marcas_supabase.sql</span>
 </span></code></pre></div>
 
 
