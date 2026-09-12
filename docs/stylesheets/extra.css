@@ -2,11 +2,112 @@
    PaletScan Mobile & Touch-First Styling Enhancements
    ========================================================================== */
 
-/* 1. Rolagem Horizontal Fluida e Leitura Arejada para Todas as Tabelas no Mobile */
-.md-typeset table:not([class]) {
+/* 1. Wrapper Responsivo e Rolagem Fluida para Todas as Tabelas */
+.table-responsive-wrapper {
+  position: relative;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 2rem 0 !important;
+}
+
+/* Badge Indicador de Rolagem para Telas Touch */
+.table-scroll-hint {
+  display: none;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color, #4f46e5);
+  background-color: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.65rem;
+  width: fit-content;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s ease;
+  user-select: none;
+}
+
+.table-scroll-hint .table-hint-icon {
+  font-size: 0.85rem;
+  font-weight: 800;
+  animation: pulse-horizontal 1.8s infinite;
+}
+
+.table-scroll-hint.is-scrolled {
+  opacity: 0.35;
+}
+
+.table-scroll-hint.is-hidden {
+  display: none !important;
+}
+
+@keyframes pulse-horizontal {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
+@media screen and (max-width: 60em) {
+  .table-scroll-hint {
+    display: inline-flex;
+  }
+}
+
+/* Container de Rolagem com Bordas e Sombras */
+.table-scroll-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-x !important;
+  overscroll-behavior-x: contain !important;
+  border-radius: 0.65rem !important;
+  border: 1px solid var(--md-default-fg-color--lightest) !important;
+  background-color: var(--md-default-bg-color) !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05) !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--md-primary-fg-color, #4f46e5) rgba(148, 163, 184, 0.15) !important;
+}
+
+/* Barra de rolagem horizontal sempre visível, elegante e ergonômica para touch */
+.table-scroll-container::-webkit-scrollbar,
+.md-typeset table:not([class])::-webkit-scrollbar {
+  height: 6px !important;
+  display: block !important;
+}
+
+.table-scroll-container::-webkit-scrollbar-track,
+.md-typeset table:not([class])::-webkit-scrollbar-track {
+  background: rgba(148, 163, 184, 0.12) !important;
+  border-radius: 9999px !important;
+  margin: 0 4px !important;
+}
+
+.table-scroll-container::-webkit-scrollbar-thumb,
+.md-typeset table:not([class])::-webkit-scrollbar-thumb {
+  background: var(--md-primary-fg-color, #4f46e5) !important;
+  border-radius: 9999px !important;
+}
+
+/* Tabela Interna com Largura Mínima Generosa */
+.table-scroll-container table,
+.md-typeset table.enhanced-table {
+  display: table !important;
+  width: 100% !important;
+  min-width: 920px !important;
+  border-collapse: collapse !important;
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 0.825rem !important;
+}
+
+/* Fallback CSS-only para tabelas bare */
+.md-typeset table:not(.enhanced-table) {
   display: block !important;
   width: 100% !important;
   max-width: 100% !important;
+  min-width: 100% !important;
   overflow-x: auto !important;
   -webkit-overflow-scrolling: touch !important;
   touch-action: pan-x !important;
@@ -14,71 +115,89 @@
   border-collapse: collapse !important;
   font-size: 0.825rem !important;
   margin: 1.75rem 0 !important;
-  border-radius: 0.6rem !important;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06) !important;
-  background-color: var(--md-default-bg-color) !important;
+  border-radius: 0.65rem !important;
   border: 1px solid var(--md-default-fg-color--lightest) !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05) !important;
   scrollbar-width: thin !important;
   scrollbar-color: var(--md-primary-fg-color, #4f46e5) rgba(148, 163, 184, 0.15) !important;
 }
 
-/* Barra de rolagem horizontal sempre visível, elegante e ergonômica para touch */
-.md-typeset table:not([class])::-webkit-scrollbar {
-  height: 6px !important;
-  display: block !important;
-}
-
-.md-typeset table:not([class])::-webkit-scrollbar-track {
-  background: rgba(148, 163, 184, 0.12) !important;
-  border-radius: 9999px !important;
-  margin: 0 4px !important;
-}
-
-.md-typeset table:not([class])::-webkit-scrollbar-thumb {
-  background: var(--md-primary-fg-color, #4f46e5) !important;
-  border-radius: 9999px !important;
-}
-
-/* Células e Cabeçalhos: Espaçamento Generoso sem Compressão de Dados */
-.md-typeset table:not([class]) th,
-.md-typeset table:not([class]) td {
-  padding: 0.75rem 1rem !important;
+/* Células e Cabeçalhos: Espaçamento Generoso e Totalmente Sem Quebra de Palavras */
+.table-scroll-container table th,
+.table-scroll-container table td,
+.md-typeset table th,
+.md-typeset table td {
+  padding: 0.85rem 1.15rem !important;
   vertical-align: top !important;
-  line-height: 1.5 !important;
+  line-height: 1.55 !important;
   white-space: normal !important;
   word-break: normal !important;
   overflow-wrap: normal !important;
   border-bottom: 1px solid var(--md-default-fg-color--lightest) !important;
 }
 
-/* Em telas mobile, garante largura mínima legível para evitar compressão de colunas */
-@media screen and (max-width: 60em) {
-  .md-typeset table:not([class]) th,
-  .md-typeset table:not([class]) td {
-    min-width: 140px !important;
-  }
-}
-
-.md-typeset table:not([class]) th {
+.table-scroll-container table th,
+.md-typeset table th {
   font-weight: 700 !important;
   background-color: var(--md-default-bg-color--lighter) !important;
   white-space: nowrap !important;
   border-bottom: 2px solid var(--md-default-fg-color--lightest) !important;
   color: var(--md-default-fg-color) !important;
+  letter-spacing: 0.025em !important;
+  font-size: 0.775rem !important;
+  text-transform: uppercase !important;
+}
+
+/* Larguras mínimas estratégicas para prevenir compressão de colunas no mobile */
+.table-scroll-container table th:first-child,
+.table-scroll-container table td:first-child,
+.md-typeset table th:first-child,
+.md-typeset table td:first-child {
+  min-width: 170px !important;
+  white-space: nowrap !important;
+}
+
+.table-scroll-container table th:nth-child(2),
+.table-scroll-container table td:nth-child(2),
+.md-typeset table th:nth-child(2),
+.md-typeset table td:nth-child(2) {
+  min-width: 260px !important;
+  white-space: nowrap !important;
+}
+
+.table-scroll-container table th:nth-child(3),
+.table-scroll-container table td:nth-child(3),
+.md-typeset table th:nth-child(3),
+.md-typeset table td:nth-child(3) {
+  min-width: 180px !important;
+}
+
+.table-scroll-container table th:nth-child(4),
+.table-scroll-container table td:nth-child(4),
+.md-typeset table th:nth-child(4),
+.md-typeset table td:nth-child(4) {
+  min-width: 340px !important;
+  white-space: normal !important;
+  word-break: normal !important;
 }
 
 /* 2. Formatação Limpa de Códigos Inline e Links dentro de Tabelas */
-.md-typeset table:not([class]) code {
+.table-scroll-container table code,
+.md-typeset table code {
   white-space: nowrap !important;
   word-break: normal !important;
   font-size: 0.775rem !important;
-  padding: 0.15rem 0.4rem !important;
+  padding: 0.2rem 0.5rem !important;
   border-radius: 0.35rem !important;
+  display: inline-block !important;
 }
 
-.md-typeset table:not([class]) a {
+.table-scroll-container table a,
+.md-typeset table a {
   word-break: normal !important;
-  font-size: 0.8rem !important;
+  white-space: nowrap !important;
+  font-size: 0.825rem !important;
+  color: var(--md-primary-fg-color, #4f46e5) !important;
 }
 
 /* 3. Ajuste e Espaçamento de Respiro para Diagramas Mermaid (Vertical Mobile) */
