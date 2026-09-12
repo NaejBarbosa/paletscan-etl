@@ -1339,7 +1339,7 @@
 
     VERIFY_JWT --&gt; IS_VALID{"Assinatura Válida?"}
 
-    IS_VALID --&gt;|Não / Sem Token| ROLE_ANON["Role: anon\nPolíticas RLS negam leitura/gravação (Retorna 0 linhas)"]
+    IS_VALID --&gt;|Não - Sem Token| ROLE_ANON["Role: anon\nPolíticas RLS negam leitura/gravação (Retorna 0 linhas)"]
 
     IS_VALID --&gt;|Sim| ROLE_AUTH["Role: authenticated\nPostgreSQL popula auth.jwt()"]
 
@@ -1347,9 +1347,9 @@
 
     EVAL_RLS --&gt; CHECK_FULL{"auth.has_full_brand_access() == true?"}
 
-    CHECK_FULL --&gt;|Sim (Admin / Geral)| ALLOW_ALL["✅ Retorna Todas as Linhas do Catálogo"]
+    CHECK_FULL --&gt;|Sim - Admin ou Geral| ALLOW_ALL["✅ Retorna Todas as Linhas do Catálogo"]
 
-    CHECK_FULL --&gt;|Não (Promotor Restrito)| FILTER_BRANDS["🔒 WHERE marca_id IN (\n  SELECT id FROM marcas WHERE lower(nome) = ANY(auth.get_user_marcas())\n)"]
+    CHECK_FULL --&gt;|Não - Promotor Restrito| FILTER_BRANDS["🔒 WHERE marca_id IN (\n  SELECT id FROM marcas WHERE lower(nome) = ANY(auth.get_user_marcas())\n)"]
 
     FILTER_BRANDS --&gt; RETURN_RESTRICTED["✅ Retorna Apenas Linhas das Marcas Autorizadas (~250 SKUs)"]</code></pre>
 <h3 id="politicas-rls-aplicadas-scriptsaplicar_rls_marcas_supabasesql">Políticas RLS Aplicadas (<a href="file:///root/repo_pwa/scripts/aplicar_rls_marcas_supabase.sql"><code>scripts/aplicar_rls_marcas_supabase.sql</code></a>):</h3>

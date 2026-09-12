@@ -1163,9 +1163,9 @@
 
     VAL_MATH --&gt; BRAND_GUARD{"5. Barreira de Segurança de Marcas:\nO produto pertence a marcasPermitidas do operador?"}
 
-    BRAND_GUARD --&gt;|Não (Marca Concorrente)| REJECT["🚫 BLOQUEIO IMEDIATO NO SCANNER\nStatus: unauthorized_brand\n- Alerta visual em alto contraste (Vermelho)\n- Toca som e feedback háptico de erro\n- Aborta imediatamente abertura do formulário"]
+    BRAND_GUARD --&gt;|Não - Marca Concorrente| REJECT["🚫 BLOQUEIO IMEDIATO NO SCANNER\nStatus: unauthorized_brand\n- Alerta visual em alto contraste (Vermelho)\n- Toca som e feedback háptico de erro\n- Aborta imediatamente abertura do formulário"]
 
-    BRAND_GUARD --&gt;|Sim (Marca Autorizada ou Admin)| AUTOFILL["✅ 6. Preenchimento Automático do Formulário de Palete\nEAN, Validade, Lote, Peso e Vaga física preenchidos em &lt; 5ms"]</code></pre>
+    BRAND_GUARD --&gt;|Sim - Marca Autorizada ou Admin| AUTOFILL["✅ 6. Preenchimento Automático do Formulário de Palete\nEAN, Validade, Lote, Peso e Vaga física preenchidos em &lt; 5ms"]</code></pre>
 <hr />
 <h2 id="2-motor-de-regex-industrial-libregexts">🧩 2. Motor de Regex Industrial (<code>lib/regex.ts</code>)</h2>
 <p>O motor de expressões regulares atua em pipeline sequencial vertical, tratando diferentes padrões de indústrias alimentícias sem gerar falsos positivos:</p>

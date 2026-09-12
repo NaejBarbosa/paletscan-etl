@@ -1473,13 +1473,13 @@
 
     RESOLVE --&gt; AUTH_CHECK{"Usuário possui\nacessoTodasMarcas == true?"}
 
-    AUTH_CHECK --&gt;|Sim (Admin / Geral)| ALLOW["✅ Acesso Total Concedido\nExibe Detalhes, Permite Cadastro e Bipagem"]
+    AUTH_CHECK --&gt;|Sim - Admin ou Geral| ALLOW["✅ Acesso Total Concedido\nExibe Detalhes, Permite Cadastro e Bipagem"]
 
     AUTH_CHECK --&gt;|Não| BRAND_CHECK{"Marca do Produto está em\nmarcasPermitidas do Operador?"}
 
-    BRAND_CHECK --&gt;|Sim (Marca Autorizada)| ALLOW
+    BRAND_CHECK --&gt;|Sim - Marca Autorizada| ALLOW
 
-    BRAND_CHECK --&gt;|Não (Marca Concorrente)| BLOCK["🚫 BLOQUEIO IMEDIATO &amp; IRREVERSÍVEL\nStatus: unauthorized_brand"]
+    BRAND_CHECK --&gt;|Não - Marca Concorrente| BLOCK["🚫 BLOQUEIO IMEDIATO &amp; IRREVERSÍVEL\nStatus: unauthorized_brand"]
 
     BLOCK --&gt; UI_ALERT["📱 Interface PWA:\nAlerta Vermelho: 'Produto de marca não autorizada.\nSeu acesso nesta filial está restrito a: [Marcas]'"]
 
@@ -1583,7 +1583,7 @@
 
     SESS_OK --&gt;|Sim| AUTH_USER["Valida se o usuário tem privilégio isAdmin == true"]
 
-    SESS_OK --&gt;|Não (Latência SSR)| ATTEMPT2["Tentativa 2: Extrai cookie/token bruto da requisição"]
+    SESS_OK --&gt;|Não - Latência SSR| ATTEMPT2["Tentativa 2: Extrai cookie/token bruto da requisição"]
 
     ATTEMPT2 --&gt; DB_LOOKUP["Consulta Direta no Repositório de Credenciais (lib/authDb.ts)"]
 
