@@ -19,7 +19,7 @@
 
       var hint = document.createElement('div');
       hint.className = 'table-scroll-hint';
-      hint.innerHTML = '<span class="table-hint-icon">⇄</span> Deslize para os lados para visualizar todas as colunas';
+      hint.innerHTML = '<span class="table-hint-icon">⇄</span> Deslize horizontalmente para ver mais colunas ou verticalmente para rolar';
 
       var scrollContainer = document.createElement('div');
       scrollContainer.className = 'table-scroll-container';
@@ -28,6 +28,35 @@
       wrapper.appendChild(hint);
       scrollContainer.appendChild(table);
       wrapper.appendChild(scrollContainer);
+
+      // Suporte a arrasto ergonômico com mouse (desktop grab-to-scroll horizontal)
+      var isMouseDown = false;
+      var startX = 0;
+      var scrollStartLeft = 0;
+
+      scrollContainer.addEventListener('mousedown', function (e) {
+        if (e.button !== 0 || e.target.closest('a, button, input, select, textarea')) return;
+        isMouseDown = true;
+        startX = e.pageX - scrollContainer.offsetLeft;
+        scrollStartLeft = scrollContainer.scrollLeft;
+      });
+
+      window.addEventListener('mouseup', function () {
+        if (isMouseDown) {
+          isMouseDown = false;
+          scrollContainer.classList.remove('is-dragging');
+        }
+      });
+
+      scrollContainer.addEventListener('mousemove', function (e) {
+        if (!isMouseDown) return;
+        var x = e.pageX - scrollContainer.offsetLeft;
+        var walk = x - startX;
+        if (Math.abs(walk) > 4) {
+          scrollContainer.classList.add('is-dragging');
+          scrollContainer.scrollLeft = scrollStartLeft - walk;
+        }
+      });
 
       function checkOverflow() {
         var isOverflowing = scrollContainer.scrollWidth > scrollContainer.clientWidth + 8;
