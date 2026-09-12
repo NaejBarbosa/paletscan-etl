@@ -2,40 +2,83 @@
    PaletScan Mobile & Touch-First Styling Enhancements
    ========================================================================== */
 
-/* 1. Otimização de Tabelas para Telas de Smartphone (Sem Overflow Horizontal) */
+/* 1. Rolagem Horizontal Fluida e Leitura Arejada para Todas as Tabelas no Mobile */
 .md-typeset table:not([class]) {
-  display: table !important;
+  display: block !important;
   width: 100% !important;
-  table-layout: fixed !important;
-  word-break: break-word !important;
-  overflow-wrap: break-word !important;
-  font-size: 0.8rem !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-x !important;
+  overscroll-behavior-x: contain !important;
+  border-collapse: collapse !important;
+  font-size: 0.825rem !important;
   margin: 1.75rem 0 !important;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 0.6rem !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06) !important;
+  background-color: var(--md-default-bg-color) !important;
+  border: 1px solid var(--md-default-fg-color--lightest) !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--md-primary-fg-color, #4f46e5) rgba(148, 163, 184, 0.15) !important;
 }
 
+/* Barra de rolagem horizontal sempre visível, elegante e ergonômica para touch */
+.md-typeset table:not([class])::-webkit-scrollbar {
+  height: 6px !important;
+  display: block !important;
+}
+
+.md-typeset table:not([class])::-webkit-scrollbar-track {
+  background: rgba(148, 163, 184, 0.12) !important;
+  border-radius: 9999px !important;
+  margin: 0 4px !important;
+}
+
+.md-typeset table:not([class])::-webkit-scrollbar-thumb {
+  background: var(--md-primary-fg-color, #4f46e5) !important;
+  border-radius: 9999px !important;
+}
+
+/* Células e Cabeçalhos: Espaçamento Generoso sem Compressão de Dados */
 .md-typeset table:not([class]) th,
 .md-typeset table:not([class]) td {
-  padding: 0.6rem 0.5rem !important;
-  word-wrap: break-word !important;
+  padding: 0.75rem 1rem !important;
+  vertical-align: top !important;
+  line-height: 1.5 !important;
   white-space: normal !important;
-  vertical-align: middle !important;
-  line-height: 1.4 !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest) !important;
+}
+
+/* Em telas mobile, garante largura mínima legível para evitar compressão de colunas */
+@media screen and (max-width: 60em) {
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    min-width: 140px !important;
+  }
 }
 
 .md-typeset table:not([class]) th {
   font-weight: 700 !important;
-  background-color: var(--md-default-bg-color--lighter);
+  background-color: var(--md-default-bg-color--lighter) !important;
+  white-space: nowrap !important;
+  border-bottom: 2px solid var(--md-default-fg-color--lightest) !important;
+  color: var(--md-default-fg-color) !important;
 }
 
-/* 2. Quebra Limpa de Links, Códigos Inline e Tags dentro de Tabelas */
-.md-typeset table:not([class]) code,
-.md-typeset table:not([class]) a {
-  word-break: break-all !important;
-  white-space: normal !important;
+/* 2. Formatação Limpa de Códigos Inline e Links dentro de Tabelas */
+.md-typeset table:not([class]) code {
+  white-space: nowrap !important;
+  word-break: normal !important;
   font-size: 0.775rem !important;
+  padding: 0.15rem 0.4rem !important;
+  border-radius: 0.35rem !important;
+}
+
+.md-typeset table:not([class]) a {
+  word-break: normal !important;
+  font-size: 0.8rem !important;
 }
 
 /* 3. Ajuste e Espaçamento de Respiro para Diagramas Mermaid (Vertical Mobile) */
