@@ -101,13 +101,13 @@ flowchart TD
     
     RESOLVE --> AUTH_CHECK{"Usuário possui\nacessoTodasMarcas == true?"}
     
-    AUTH_CHECK -->|Sim (Admin / Geral)| ALLOW["✅ Acesso Total Concedido\nExibe Detalhes, Permite Cadastro e Bipagem"]
+    AUTH_CHECK -->|Sim - Admin ou Geral| ALLOW["✅ Acesso Total Concedido\nExibe Detalhes, Permite Cadastro e Bipagem"]
     
     AUTH_CHECK -->|Não| BRAND_CHECK{"Marca do Produto está em\nmarcasPermitidas do Operador?"}
     
-    BRAND_CHECK -->|Sim (Marca Autorizada)| ALLOW
+    BRAND_CHECK -->|Sim - Marca Autorizada| ALLOW
     
-    BRAND_CHECK -->|Não (Marca Concorrente)| BLOCK["🚫 BLOQUEIO IMEDIATO & IRREVERSÍVEL\nStatus: unauthorized_brand"]
+    BRAND_CHECK -->|Não - Marca Concorrente| BLOCK["🚫 BLOQUEIO IMEDIATO & IRREVERSÍVEL\nStatus: unauthorized_brand"]
     
     BLOCK --> UI_ALERT["📱 Interface PWA:\nAlerta Vermelho: 'Produto de marca não autorizada.\nSeu acesso nesta filial está restrito a: [Marcas]'"]
     
@@ -228,7 +228,7 @@ flowchart TD
     
     SESS_OK -->|Sim| AUTH_USER["Valida se o usuário tem privilégio isAdmin == true"]
     
-    SESS_OK -->|Não (Latência SSR)| ATTEMPT2["Tentativa 2: Extrai cookie/token bruto da requisição"]
+    SESS_OK -->|Não - Latência SSR| ATTEMPT2["Tentativa 2: Extrai cookie/token bruto da requisição"]
     
     ATTEMPT2 --> DB_LOOKUP["Consulta Direta no Repositório de Credenciais (lib/authDb.ts)"]
     

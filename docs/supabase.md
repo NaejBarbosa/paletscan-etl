@@ -92,7 +92,7 @@ flowchart TD
     
     VERIFY_JWT --> IS_VALID{"Assinatura Válida?"}
     
-    IS_VALID -->|Não / Sem Token| ROLE_ANON["Role: anon\nPolíticas RLS negam leitura/gravação (Retorna 0 linhas)"]
+    IS_VALID -->|Não - Sem Token| ROLE_ANON["Role: anon\nPolíticas RLS negam leitura/gravação (Retorna 0 linhas)"]
     
     IS_VALID -->|Sim| ROLE_AUTH["Role: authenticated\nPostgreSQL popula auth.jwt()"]
     
@@ -100,9 +100,9 @@ flowchart TD
     
     EVAL_RLS --> CHECK_FULL{"auth.has_full_brand_access() == true?"}
     
-    CHECK_FULL -->|Sim (Admin / Geral)| ALLOW_ALL["✅ Retorna Todas as Linhas do Catálogo"]
+    CHECK_FULL -->|Sim - Admin ou Geral| ALLOW_ALL["✅ Retorna Todas as Linhas do Catálogo"]
     
-    CHECK_FULL -->|Não (Promotor Restrito)| FILTER_BRANDS["🔒 WHERE marca_id IN (\n  SELECT id FROM marcas WHERE lower(nome) = ANY(auth.get_user_marcas())\n)"]
+    CHECK_FULL -->|Não - Promotor Restrito| FILTER_BRANDS["🔒 WHERE marca_id IN (\n  SELECT id FROM marcas WHERE lower(nome) = ANY(auth.get_user_marcas())\n)"]
     
     FILTER_BRANDS --> RETURN_RESTRICTED["✅ Retorna Apenas Linhas das Marcas Autorizadas (~250 SKUs)"]
 ```

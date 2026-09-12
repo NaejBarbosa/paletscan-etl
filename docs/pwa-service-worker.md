@@ -101,17 +101,17 @@ flowchart TD
     
     GET_ACCESS --> CALC_SCOPE{"Usuário possui acesso a todas as marcas?"}
     
-    CALC_SCOPE -->|Sim (Admin / Geral)| SCOPE_ALL["brandHashScope = 'all'\nAlvo: Catálogo Pleno (~3.800 SKUs)"]
-    CALC_SCOPE -->|Não (Promotor Restrito)| SCOPE_BRAND["brandHashScope = 'sadia|perdigao'\nAlvo: Fatia Estrita (~250 SKUs)"]
+    CALC_SCOPE -->|Sim - Admin ou Geral| SCOPE_ALL["brandHashScope = 'all'\nAlvo: Catálogo Pleno (~3.800 SKUs)"]
+    CALC_SCOPE -->|Não - Promotor Restrito| SCOPE_BRAND["brandHashScope = 'sadia|perdigao'\nAlvo: Fatia Estrita (~250 SKUs)"]
     
     SCOPE_ALL --> CHECK_HASH["2. Avaliação da Assinatura de Mudança Remota\ncurrentRemoteHash = (maxDate + count + brandHashScope)"]
     SCOPE_BRAND --> CHECK_HASH
     
     CHECK_HASH --> HASH_MATCH{"Hash Remoto == ps_pwa_db_hash Local?"}
     
-    HASH_MATCH -->|Sim (Catálogo Inalterado)| SKIP_PULL["🚀 Catálogo Inalterado (< 10ms)\nPula download de produtos e parte direto para paletes"]
+    HASH_MATCH -->|Sim - Catálogo Inalterado| SKIP_PULL["🚀 Catálogo Inalterado (< 10ms)\nPula download de produtos e parte direto para paletes"]
     
-    HASH_MATCH -->|Não (Novo Escopo ou Atualização Remota)| SELECTIVE_PULL["3. Download Seletivo no Supabase (vw_produtos_com_marcas)\nFiltra: in('marca_nome', marcasPermitidas)\nTrafega < 100 KB para promotores"]
+    HASH_MATCH -->|Não - Novo Escopo ou Atualização Remota| SELECTIVE_PULL["3. Download Seletivo no Supabase (vw_produtos_com_marcas)\nFiltra: in('marca_nome', marcasPermitidas)\nTrafega < 100 KB para promotores"]
     
     SELECTIVE_PULL --> PULL_CB["4. Otimização no Pull de Códigos de Barras:\n- Se 0 produtos: dispara 0 requisições\n- Se catálogo restrito: resolve em 1 única requisição leve"]
     

@@ -20,9 +20,9 @@ flowchart TD
     
     VAL_MATH --> BRAND_GUARD{"5. Barreira de Segurança de Marcas:\nO produto pertence a marcasPermitidas do operador?"}
     
-    BRAND_GUARD -->|Não (Marca Concorrente)| REJECT["🚫 BLOQUEIO IMEDIATO NO SCANNER\nStatus: unauthorized_brand\n- Alerta visual em alto contraste (Vermelho)\n- Toca som e feedback háptico de erro\n- Aborta imediatamente abertura do formulário"]
+    BRAND_GUARD -->|Não - Marca Concorrente| REJECT["🚫 BLOQUEIO IMEDIATO NO SCANNER\nStatus: unauthorized_brand\n- Alerta visual em alto contraste (Vermelho)\n- Toca som e feedback háptico de erro\n- Aborta imediatamente abertura do formulário"]
     
-    BRAND_GUARD -->|Sim (Marca Autorizada ou Admin)| AUTOFILL["✅ 6. Preenchimento Automático do Formulário de Palete\nEAN, Validade, Lote, Peso e Vaga física preenchidos em < 5ms"]
+    BRAND_GUARD -->|Sim - Marca Autorizada ou Admin| AUTOFILL["✅ 6. Preenchimento Automático do Formulário de Palete\nEAN, Validade, Lote, Peso e Vaga física preenchidos em < 5ms"]
 ```
 
 ---
