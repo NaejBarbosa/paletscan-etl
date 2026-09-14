@@ -253,6 +253,19 @@ export async function runCopacolScraper() {
       criado_em: now
     });
 
+    // Código SKU Interno
+    if (rawProd.sku && rawProd.sku !== eanClean && rawProd.sku !== dunClean) {
+      codigosBarrasList.push({
+        id: `cb_copacol_sku_${rawProd.sku}`,
+        produto_id: prodId,
+        tipo: 'SKU',
+        codigo: String(rawProd.sku).trim(),
+        embalagem: null,
+        quantidade_embalagem: null,
+        criado_em: now
+      });
+    }
+
     // Código EAN-13
     if (eanClean) {
       codigosBarrasList.push({

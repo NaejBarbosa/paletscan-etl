@@ -349,10 +349,15 @@ export async function syncStagingToSupabase() {
       if (!cb.codigo || !/^\d+$/.test(cb.codigo.trim())) continue;
 
       let tipoNormalizado = (cb.tipo || '').trim();
-      if (tipoNormalizado.toUpperCase().includes('EAN')) {
-        tipoNormalizado = 'EAN';
-      } else if (tipoNormalizado.toUpperCase().includes('DUN')) {
+      const tipoUpper = tipoNormalizado.toUpperCase();
+      const cleanCode = cb.codigo.trim();
+
+      if (tipoUpper.includes('DUN') || (/^\d{14}$/.test(cleanCode) && !tipoUpper.includes('SKU'))) {
         tipoNormalizado = 'DUN';
+      } else if (tipoUpper.includes('EAN') || (/^\d{13}$/.test(cleanCode) && !tipoUpper.includes('SKU'))) {
+        tipoNormalizado = 'EAN';
+      } else {
+        tipoNormalizado = 'SKU';
       }
 
       codigosBarrasUUID.push({
@@ -418,17 +423,32 @@ export async function syncStagingToSupabase() {
       // Continua se a busca falhar
     }
 
-    // Preserva status_imagem aprovado/reprovado e imagem_url aprovada pré-existente no Supabase para não sobrescrever validações manuais
+    // Preserva status_imagem e imagem_url conforme política de integridade:
+    // 1. Se a imagem foi rejeitada ('reprovado') por curadoria humana, preserva o status e mantém nulo.
+    // 2. Se o scraper não trouxe imagem nesta execução, preserva imagem aprovada anterior.
+    // 3. Se o scraper trouxe nova URL válida e o status atual não for reprovado, aceita a nova imagem e normaliza status para 'aprovado'.
     const produtosUUIDParaUpsert = produtosUUID.map(p => {
       const existing = existingProductsMap.get(p.id);
-      if (existing && (existing.status_imagem === 'aprovado' || existing.status_imagem === 'reprovado')) {
-        return {
-          ...p,
-          status_imagem: existing.status_imagem,
-          imagem_url: existing.imagem_url || p.imagem_url,
-        };
+      if (existing) {
+        if (existing.status_imagem === 'reprovado') {
+          return {
+            ...p,
+            status_imagem: 'reprovado',
+            imagem_url: null,
+          };
+        }
+        if (!p.imagem_url && existing.imagem_url && existing.status_imagem === 'aprovado') {
+          return {
+            ...p,
+            status_imagem: existing.status_imagem,
+            imagem_url: existing.imagem_url,
+          };
+        }
       }
-      return p;
+      return {
+        ...p,
+        status_imagem: p.imagem_url ? 'aprovado' : (p.status_imagem || 'sem_imagem'),
+      };
     });
 
     console.log('\n🚀 Executando Carga Relacional Ordenada Resiliente (.upsert)...');
@@ -452,19 +472,47 @@ export async function syncStagingToSupabase() {
     totalConflictsGlobal += resCB.conflictCount;
 
     // -------------------------------------------------------------
+    // INDEXAÇÃO ESTRUTURADA DE CÓDIGOS DE BARRAS (SKU, EAN-13, DUN-14)
+    // -------------------------------------------------------------
+    interface ProductBarcodeGroup {
+      sku?: string;
+      ean?: string;
+      dun?: string;
+    }
+    const barcodesByProduct = new Map<string, ProductBarcodeGroup>();
+    for (const cb of codigosBarrasUUID) {
+      const pId = cb.produto_id;
+      if (!barcodesByProduct.has(pId)) {
+        barcodesByProduct.set(pId, {});
+      }
+      const group = barcodesByProduct.get(pId)!;
+      const code = String(cb.codigo || '').trim();
+      if (!code) continue;
+
+      const tipoUpper = (cb.tipo || '').toUpperCase();
+      if (tipoUpper === 'DUN' || /^\d{14}$/.test(code)) {
+        group.dun = code;
+      } else if (tipoUpper === 'EAN' || (/^\d{13}$/.test(code) && tipoUpper !== 'SKU')) {
+        group.ean = code;
+      } else if (tipoUpper === 'SKU' || code.length < 13) {
+        group.sku = code;
+      }
+    }
+
+    // -------------------------------------------------------------
     // DETECÇÃO DE NOVOS PRODUTOS INCLUÍDOS NESTE ARQUIVO
     // -------------------------------------------------------------
     const novosProdutos = produtosUUID.filter(p => !existingProductIds.has(p.id));
     const marcasMap = new Map(marcasFiltradas.map(m => [toUUID5(m.id), m.nome]));
-    const cbMap = new Map(codigosBarrasUUID.map(c => [c.produto_id, c]));
 
     novosProdutos.forEach(p => {
-      const cb = cbMap.get(p.id);
+      const bg = barcodesByProduct.get(p.id) || {};
       allNovosProdutosLog.push({
         id: p.id,
         marca: marcasMap.get(p.marca_id) || 'N/D',
-        ean: cb?.tipo === 'EAN' ? cb.codigo : (cb?.codigo || ''),
-        dun: cb?.tipo === 'DUN' ? cb.codigo : '',
+        sku: bg.sku || '',
+        ean: bg.ean || '',
+        dun: bg.dun || '',
         descricao: p.descricao_padronizada || p.descricao_original,
         classe: p.classe,
         conservacao: p.conservacao,
@@ -476,8 +524,10 @@ export async function syncStagingToSupabase() {
     // DETECÇÃO DE ALTERAÇÕES E ATUALIZAÇÕES EM PRODUTOS EXISTENTES
     // -------------------------------------------------------------
     const produtosExistentes = produtosUUID.filter(p => existingProductIds.has(p.id));
+    const produtosParaUpsertMap = new Map(produtosUUIDParaUpsert.map(p => [p.id, p]));
 
-    for (const p of produtosExistentes) {
+    for (const pRaw of produtosExistentes) {
+      const p = produtosParaUpsertMap.get(pRaw.id) || pRaw;
       const existing = existingProductsMap.get(p.id);
       if (!existing) continue;
 
@@ -532,12 +582,13 @@ export async function syncStagingToSupabase() {
       }
 
       if (alteracoes.length > 0) {
-        const cb = cbMap.get(p.id);
+        const bg = barcodesByProduct.get(p.id) || {};
         allProdutosAtualizadosLog.push({
           id: p.id,
           marca: marcasMap.get(p.marca_id) || 'N/D',
-          ean: cb?.tipo === 'EAN' ? cb.codigo : (cb?.codigo || ''),
-          dun: cb?.tipo === 'DUN' ? cb.codigo : '',
+          sku: bg.sku || '',
+          ean: bg.ean || '',
+          dun: bg.dun || '',
           descricao: p.descricao_padronizada || p.descricao_original,
           alteracoes,
           atualizado_em: new Date().toISOString()
@@ -561,13 +612,20 @@ export async function syncStagingToSupabase() {
   console.log(`🥩 Produtos sincronizados:    ${totalProdutosSynced}`);
   console.log(`📊 Códigos de Barras:         ${totalCodigosSynced}`);
 
+  const formatBarcodeSummary = (item: { sku?: string; ean?: string; dun?: string }) => {
+    const parts: string[] = [];
+    if (item.sku) parts.push(`SKU: ${item.sku}`);
+    if (item.ean) parts.push(`EAN: ${item.ean}`);
+    if (item.dun) parts.push(`DUN: ${item.dun}`);
+    return parts.length > 0 ? parts.join(' | ') : 'Sem códigos';
+  };
+
   if (allNovosProdutosLog.length > 0) {
     console.log('\n✨ ==================================================');
     console.log(`🆕 NOVOS PRODUTOS INCLUÍDOS NA BASE NESTA EXECUÇÃO (${allNovosProdutosLog.length}):`);
     console.log('==================================================');
     allNovosProdutosLog.forEach((item, idx) => {
-      const eanStr = item.ean ? `EAN: ${item.ean}` : 'Sem EAN';
-      console.log(`  ${idx + 1}. [${item.marca}] ${eanStr} | ${item.descricao}`);
+      console.log(`  ${idx + 1}. [${item.marca}] ${formatBarcodeSummary(item)} | ${item.descricao}`);
     });
     console.log('==================================================');
   } else {
@@ -579,8 +637,7 @@ export async function syncStagingToSupabase() {
     console.log(`📝 PRODUTOS ALTERADOS / ATUALIZADOS NA BASE NESTA EXECUÇÃO (${allProdutosAtualizadosLog.length}):`);
     console.log('==================================================');
     allProdutosAtualizadosLog.forEach((item, idx) => {
-      const eanStr = item.ean ? `EAN: ${item.ean}` : 'Sem EAN';
-      console.log(`  ${idx + 1}. [${item.marca}] ${eanStr} | ${item.descricao}`);
+      console.log(`  ${idx + 1}. [${item.marca}] ${formatBarcodeSummary(item)} | ${item.descricao}`);
       item.alteracoes.forEach((alt: any) => {
         console.log(`     └─ • ${alt.campo}: de "${alt.de}" ➔ "${alt.para}"`);
       });

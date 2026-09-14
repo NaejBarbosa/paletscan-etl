@@ -381,7 +381,7 @@ export async function runAuroraScraper() {
 
     // Determina URL de imagem e Fallback de Extração do PDF
     let finalImageUrl: string | null = null;
-    let imageStatus: string = 'SEM_IMAGEM';
+    let imageStatus: 'aprovado' | 'pendente_aprovacao' | 'sem_imagem' = 'sem_imagem';
 
     const barcodePrimary = eanClean || dunClean || rawProd.sku;
     const localPreparedPath = `/root/projetos-scraping/scraping-aurora/imagens_preparadas/${barcodePrimary}.webp`;
@@ -390,19 +390,19 @@ export async function runAuroraScraper() {
     if (fs.existsSync(localPreparedPath)) {
       finalImageUrl = `/imagens_produtos/${barcodePrimary}.webp`;
       localImageFallbackCount++;
-      imageStatus = 'VALIDATED';
+      imageStatus = 'aprovado';
     } else if (rawProd.image_url && rawProd.image_url.startsWith('http') && brandInfo.slug === 'aurora') {
       // 2. Se a URL do banco legado já for um link direto HTTP/HTTPS válido e for da marca Aurora
       finalImageUrl = rawProd.image_url;
       webImageMatchCount++;
-      imageStatus = 'VALIDATED';
+      imageStatus = 'aprovado';
     } else if (brandInfo.slug === 'aurora') {
       // 3. Executa o algoritmo de cruzamento no sitemap da Aurora APENAS se a marca for Aurora
       const webMatch = findBestAuroraWebImage(rawProd.sku, rawTitle, sitemapList);
       if (webMatch) {
         finalImageUrl = webMatch;
         webImageMatchCount++;
-        imageStatus = 'VALIDATED';
+        imageStatus = 'aprovado';
       }
     }
 
@@ -412,7 +412,7 @@ export async function runAuroraScraper() {
       const pdfRes = extractAndAdaptAuroraPdfImage(rawProd.sku, barcodePrimary);
       if (pdfRes.success && pdfRes.image_path && fs.existsSync(pdfRes.image_path)) {
         finalImageUrl = `/imagens_produtos/${barcodePrimary}.webp`;
-        imageStatus = 'PDF_EXTRACTED';
+        imageStatus = 'aprovado';
         pdfImageExtractCount++;
         console.log(`[+] Imagem extraída e tratada do PDF com sucesso para SKU ${rawProd.sku}.`);
       }
@@ -432,12 +432,25 @@ export async function runAuroraScraper() {
       criado_em: now
     });
 
+    // Código SKU Interno
+    if (rawProd.sku && rawProd.sku !== eanClean && rawProd.sku !== dunClean) {
+      codigosBarrasList.push({
+        id: `cb_aurora_sku_${rawProd.sku}`,
+        produto_id: prodId,
+        tipo: 'SKU',
+        codigo: String(rawProd.sku).trim(),
+        embalagem: null,
+        quantidade_embalagem: null,
+        criado_em: now
+      });
+    }
+
     // Código EAN-13
     if (eanClean) {
       codigosBarrasList.push({
         id: `cb_ean_${eanClean}`,
         produto_id: prodId,
-        tipo: 'EAN-13',
+        tipo: 'EAN',
         codigo: eanClean,
         embalagem: 'Unidade / Pacote',
         quantidade_embalagem: 1,
@@ -450,7 +463,7 @@ export async function runAuroraScraper() {
       codigosBarrasList.push({
         id: `cb_dun_${dunClean}`,
         produto_id: prodId,
-        tipo: 'DUN-14',
+        tipo: 'DUN',
         codigo: dunClean,
         embalagem: 'Caixa Comercial',
         quantidade_embalagem: null,

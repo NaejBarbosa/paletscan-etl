@@ -356,12 +356,20 @@ async function runPipeline() {
     });
   }
 
+  const formatBarcodeSummary = (item: any) => {
+    const parts: string[] = [];
+    if (item.sku) parts.push(`SKU: ${item.sku}`);
+    if (item.ean) parts.push(`EAN: ${item.ean}`);
+    if (item.dun) parts.push(`DUN: ${item.dun}`);
+    return parts.length > 0 ? parts.join(' | ') : 'Sem códigos';
+  };
+
   if (novosCount > 0) {
     console.log("\x1b[1;36m────────────────────────────────────\x1b[0m");
     console.log(` ✨ Novos Produtos:    \x1b[1;32m${novosCount} recém-incluídos nesta execução\x1b[0m`);
     console.log("\x1b[1;33m📌 RESUMO DOS NOVOS PRODUTOS:\x1b[0m");
     novosItems.slice(0, 8).forEach((item: any, idx: number) => {
-      console.log(`   ${idx + 1}. \x1b[1m${item.marca || 'N/D'}\x1b[0m - EAN: ${item.ean || 'N/D'} | ${item.descricao}`);
+      console.log(`   ${idx + 1}. \x1b[1m${item.marca || 'N/D'}\x1b[0m - ${formatBarcodeSummary(item)} | ${item.descricao}`);
     });
     if (novosItems.length > 8) {
       console.log(`   ... e mais ${novosItems.length - 8} novos produtos (\x1b[1;36metl-novos\x1b[0m).`);
@@ -376,7 +384,7 @@ async function runPipeline() {
     console.log("\x1b[1;33m📌 RESUMO DAS ALTERAÇÕES/ATUALIZAÇÕES:\x1b[0m");
     atualizadosItems.slice(0, 8).forEach((item: any, idx: number) => {
       const camposStr = item.alteracoes?.map((a: any) => a.campo).join(', ') || '';
-      console.log(`   ${idx + 1}. \x1b[1m${item.marca || 'N/D'}\x1b[0m - EAN: ${item.ean || 'N/D'} | ${item.descricao}`);
+      console.log(`   ${idx + 1}. \x1b[1m${item.marca || 'N/D'}\x1b[0m - ${formatBarcodeSummary(item)} | ${item.descricao}`);
       console.log(`      └─ Campos: ${camposStr}`);
     });
     if (atualizadosItems.length > 8) {

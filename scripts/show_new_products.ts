@@ -7,7 +7,8 @@ export interface NovoProdutoEntry {
   id: string;
   fornecedor?: string;
   marca: string;
-  ean: string;
+  sku?: string;
+  ean?: string;
   dun?: string;
   descricao: string;
   classe?: string;
@@ -34,9 +35,12 @@ export function showNewProducts() {
     }
 
     items.forEach((item, idx) => {
-      const eanStr = item.ean ? `EAN: ${item.ean}` : 'Sem EAN';
-      const dunStr = item.dun ? ` | DUN: ${item.dun}` : '';
-      console.log(`\x1b[1;33m[${idx + 1}/${items.length}]\x1b[0m \x1b[1m${item.marca || 'N/D'}\x1b[0m - \x1b[0;36m${eanStr}${dunStr}\x1b[0m`);
+      const parts: string[] = [];
+      if (item.sku) parts.push(`SKU: ${item.sku}`);
+      if (item.ean) parts.push(`EAN: ${item.ean}`);
+      if (item.dun) parts.push(`DUN: ${item.dun}`);
+      const codesStr = parts.length > 0 ? parts.join(' | ') : 'Sem códigos';
+      console.log(`\x1b[1;33m[${idx + 1}/${items.length}]\x1b[0m \x1b[1m${item.marca || 'N/D'}\x1b[0m - \x1b[0;36m${codesStr}\x1b[0m`);
       console.log(`   📦 ${item.descricao}`);
       if (item.classe || item.conservacao) {
         console.log(`   🏷️  Classe: ${item.classe || 'N/D'} | ❄️ Conservação: ${item.conservacao || 'N/D'}`);
