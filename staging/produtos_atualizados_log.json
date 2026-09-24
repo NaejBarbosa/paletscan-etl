@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "id": "68375db3-c99c-5ce4-b5b7-95517d4920fa",
+    "marca": "Eder",
+    "sku": "712",
+    "ean": "7894904069774",
+    "dun": "",
+    "descricao": "Bacon Tablete - Eder (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.searafoodsolutions.com.br/files/2025/07/233149-bacon-tablete-eder.png",
+        "para": "https://www.searafoodsolutions.com.br/files/2024/01/233149-Bacon-Tablet-Eder.png"
+      }
+    ],
+    "atualizado_em": "2026-09-24T06:11:29.069Z"
+  },
+  {
+    "id": "395bb805-7085-5796-a168-ee2fd4086055",
+    "marca": "Seara",
+    "sku": "",
+    "ean": "7894904605002",
+    "dun": "",
+    "descricao": "Lasanha Bolonhesa Air Fryer Seara 300g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "https://www.seara.com.br/wp-content/uploads/2026/09/seara-product-30178-500.webp",
+        "para": "https://www.seara.com.br/wp-content/uploads/2025/05/Lasanha-Bolonhesa-Air-Fryer-Seara-300g.png"
+      }
+    ],
+    "atualizado_em": "2026-09-24T06:11:29.071Z"
+  }
+]

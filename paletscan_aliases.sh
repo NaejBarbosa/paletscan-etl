@@ -260,6 +260,9 @@ if [ "$1" = "etl-full-cron" ]; then
   _paletscan_run full_cron npm run full
 fi
 
+alias sentinel-logs='network_sentinel logs'
+alias sentinel-status='network_sentinel status'
+
 # Mensagem amigável de carregamento do alias
 if [ -t 1 ]; then
   echo -e "\033[1;32m✔ PaletScan Aliases carregados!\033[0m Digite \033[1;36mpaletscan\033[0m para ajuda."

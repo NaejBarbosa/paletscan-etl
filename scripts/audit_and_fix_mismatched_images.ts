@@ -43,8 +43,7 @@ async function auditAndFix() {
   console.log(`📊 Produtos sem imagem aprovada no Supabase: ${allNoImageProds.length}`);
 
   const publicDirs = [
-    '/root/repo_pwa/public/imagens_produtos',
-    '/root/meus-repos/PaletScan/public/imagens_produtos'
+    '/root/repo_pwa/public/imagens_produtos'
   ];
 
   let removedCount = 0;
