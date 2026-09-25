@@ -1098,7 +1098,6 @@
 
 <h1 id="visao-geral-da-aplicacao-pwa-local-first">📱 Visão Geral da Aplicação PWA Local-First</h1>
 <p>O <strong>PaletScan PWA</strong> é a interface operacional de chão de fábrica do ecossistema, projetada para operadores de empilhadeira, conferentes e auditores de estoque atuando no setor de perecíveis (câmaras de congelados e resfriados).</p>
-<hr />
 <h2 id="1-principais-funcionalidades-da-aplicacao">🎯 1. Principais Funcionalidades da Aplicação</h2>
 <p>A esteira de módulos operacionais do aplicativo está estruturada em fluxo sequencial vertical:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1121,21 +1120,22 @@
 
     D5 --&gt; M6["🔒 6. Módulo de Autenticação &amp; Telemetria"]
     M6 --&gt; D6["Passkeys, Barreira de Marcas, Eruda DevTools Móvel e logs_sessao"]</code></pre>
-<hr />
 <h2 id="2-diferenciais-do-pwa-no-ambiente-frigorifico">⚡ 2. Diferenciais do PWA no Ambiente Frigorífico</h2>
 <ol>
 <li><strong>Fullscreen Edge-to-Edge &amp; Safe Area Insets</strong>:</li>
 <li>Funciona em tela cheia com respeito às variáveis de ambiente CSS <code>env(safe-area-inset-top)</code> e <code>env(safe-area-inset-bottom)</code>, garantindo visualização desimpedida em celulares com entalhes (<em>notch</em>), ilhas dinâmicas ou botões virtuais de navegação.</li>
-<li><strong>Barra Superior Minimalista &amp; Ergonomia</strong>:</li>
-<li>Cabeçalho limpo com identificação visual do app e versão, mantendo detalhes de login organizados na área de configurações.</li>
+<li><strong>Cápsula Minimalista de Status no Header</strong>:</li>
+<li>Cabeçalho limpo com identificação visual do app, versão, badge da filial ativa (ex: Loja 410 vs Homologação 999), pílula reativa de sincronização com contagem exata e menu contextual de configurações.</li>
+<li><strong>Resiliência de Rede com Circuit Breaker Tri-State</strong>:</li>
+<li>Monitoramento dinâmico de conectividade que detecta estados <em>Online</em>, <em>Offline</em> e <em>Degradado/Oscilante</em>, evitando sobrecarga da CPU do smartphone durante micro-quedas de sinal no tráfego entre câmaras.</li>
 <li><strong>Alerta Flutuante de Modo Offline em Alto Contraste</strong>:</li>
 <li>Indicador de status de rede calibrado com paleta luminosa para câmaras escuras, posicionado estrategicamente para não cobrir botões de ação e leitura.</li>
 <li><strong>Design Ergonômico de Alta Densidade (<em>Touch-First</em>)</strong>:</li>
 <li>Botões ampliados e layout em contraste elevado (paletas <em>Slate/Dark</em>) adequados para operação com luvas térmicas em temperaturas negativas (-18°C a -25°C).</li>
 <li><strong>Leitura Resiliente a Condensação e Reflexos</strong>:</li>
-<li>Ferramenta integrada de recorte manual (<code>react-zoom-pan-pinch</code>) para leitura de códigos em paletes com filme stretch embaçado ou amassado.</li>
+<li>Ferramenta integrada de recorte manual (<code>react-zoom-pan-pinch</code>) para leitura de códigos em paletes com filme stretch embaçado ou amassado, combinada ao leitor acelerado nativo <code>BarcodeDetector API</code> e controle de lanterna (Torch).</li>
 <li><strong>Alocação Rígida sem Duplicidades &amp; Prevenção de Colisão</strong>:</li>
-<li>Bloqueio ativo de confirmação via polling (4s) e escuta WebSocket no Supabase Realtime, impedindo que múltiplos operadores (coletor vs desktop) sobreponham cargas na mesma coordenada física.</li>
+<li>Bloqueio ativo de confirmação via polling e escuta WebSocket no Supabase Realtime, impedindo que múltiplos operadores sobreponham cargas na mesma coordenada física.</li>
 <li><strong>Isolamento de Ciclos de Vida por Vaga</strong>:</li>
 <li>O histórico de paletes antigos que já deixaram a câmara não contamina o palete recém-alocado, eliminando registros duplicados no histórico e no desktop.</li>
 </ol>

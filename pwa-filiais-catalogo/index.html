@@ -1366,7 +1366,6 @@
 
 <h1 id="multi-filiais-privilegios-granulares-governanca-de-catalogo-gs1-modulo-10">🏬 Multi-Filiais, Privilégios Granulares, Governança de Catálogo &amp; GS1 Módulo 10</h1>
 <p>Com a expansão da operação do <strong>PaletScan PWA</strong> para redes de atacarejo e distribuição alimentícia (como a rede Fort Atacadista), o ecossistema implementa uma arquitetura robusta de <strong>Multi-Filiais (Multi-Tenant)</strong>, combinando governança estrita do <strong>Catálogo Mestre</strong>, matriz de privilégios independentes por loja (<code>privilegiosPorFilial</code>), autonomia operacional local para balanças de pesagem (PLU), barreiras de edição cruzada de marcas e canal colaborativo (crowdsourcing) de reportes.</p>
-<hr />
 <h2 id="1-arquitetura-multi-filial-governanca-de-catalogo">🏛️ 1. Arquitetura Multi-Filial &amp; Governança de Catálogo</h2>
 <p>No modelo de atacarejo, produtos industriais compartilham as mesmas características de catálogo em todo o país (fotos tratadas por IA, descrições padronizadas, conservação térmica e códigos EAN/DUN), mas cada filial possui sua própria realidade física de recebimento, equipes de operadores, marcas negociadas e balanças de pesagem locais.</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1391,7 +1390,6 @@
 <li><strong>Crowdsourcing Inteligente via Modal de Detalhes</strong>:</li>
 <li>Qualquer operador de chão de fábrica pode reportar divergências observadas (ex: nova embalagem na indústria, divergência de peso), alimentando o painel de pendências da central junto com o snapshot de logs do cliente.</li>
 </ol>
-<hr />
 <h2 id="2-matriz-dinamica-de-privilegios-por-filial-privilegiosporfilial">🏢 2. Matriz Dinâmica de Privilégios por Filial (<code>privilegiosPorFilial</code>)</h2>
 <p>O PaletScan PWA implementa a capacidade de configurar <strong>permissões e marcas distintas para o mesmo operador em cada loja onde ele atua</strong>. </p>
 <pre class="mermaid"><code>flowchart TD
@@ -1435,7 +1433,6 @@
 <li><strong>Eliminação de Delay na Definição de Permissões</strong>: No painel <code>/admin</code>, ao marcar/desmarcar a opção de multi-filiais, o formulário ajusta instantaneamente os privilégios da loja selecionada, mantendo as demais com privilégios desmarcados por padrão sem travamento de estado.</li>
 <li><strong>Prevenção de Falso 403 em Requisições Administrativas</strong>: Endpoints como <code>/api/admin/usuarios</code> utilizam a função <code>verifyAdminSession</code>, que autentica a sessão do administrador sem conflitar com o identificador do usuário que está sendo editado.</li>
 </ul>
-<hr />
 <h2 id="3-barreira-de-edicao-cruzada-de-atributos-de-produtos">🛡️ 3. Barreira de Edição Cruzada de Atributos de Produtos</h2>
 <p>No PaletScan, mesmo que um usuário possua permissões booleanas ativas (como <code>podeEditarDescricaoProduto</code>, <code>podeEditarClasse</code> ou <code>podeEditarConservacao</code>), <strong>ele não pode editar produtos de marcas concorrentes</strong>:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1445,7 +1442,7 @@
 
     GET_SESS --&gt; FETCH_PROD["2. Busca do Produto Alvo no Banco Relacional (Supabase)\nRecupera o registro atual em vw_produtos_com_marcas"]
 
-    FETCH_PROD --&gt; CHECK_BRAND{"verificarAutorizacaoMarca(user, prod.marca_nome)?"}
+    GET_SESS --&gt; CHECK_BRAND{"verificarAutorizacaoMarca(user, prod.marca_nome)?"}
 
     CHECK_BRAND --&gt;|Não Autorizado| REJECT_403["🚫 HTTP 403 Forbidden\n'Acesso negado: Você só pode editar produtos das marcas: [Marcas]'"]
 
@@ -1462,7 +1459,6 @@
 <li><a href="file:///root/repo_pwa/pages/api/atualizar-marca.ts"><code>/api/atualizar-marca</code></a>: Valida autorização tanto para a marca antiga quanto para a nova marca atribuída.</li>
 <li><a href="file:///root/repo_pwa/pages/api/atualizar-pesar-cod.ts"><code>/api/atualizar-pesar-cod</code></a>: Regula vínculos de códigos de balança local.</li>
 </ul>
-<hr />
 <h2 id="4-filial-999-sandbox-ambiente-de-homologacao-testes">🧪 4. Filial 999 - Sandbox (Ambiente de Homologação &amp; Testes)</h2>
 <p>Para permitir que operadores e desenvolvedores validem novas funcionalidades, bipagens, cadastros de produtos e simulação de conflitos de vaga diretamente em coletores ou celulares sem tocar na base real da <strong>Loja 410 (Produção)</strong>, foi projetada a <strong>Filial 999 - Sandbox</strong>:</p>
 <pre class="mermaid"><code>flowchart LR
@@ -1480,7 +1476,6 @@
 <li><strong>Blindagem de Sessão Concorrente (<code>lib/serverAuth.ts</code>)</strong>: Elimina condições de corrida na hidratação de sessão do NextAuth, permitindo alternância instantânea entre Produção e Homologação sem bloqueios de permissão indevidos.</li>
 <li><strong>Pílula de Status Reativa no Header</strong>: Quando em homologação, o topo da aplicação exibe o badge de advertência <code>[🧪 HOMOLOGAÇÃO / SANDBOX]</code>, garantindo que o usuário tenha clareza total do ambiente em que está operando.</li>
 </ul>
-<hr />
 <h2 id="5-autonomia-do-codigo-de-balanca-plu-por-filial">⚖️ 5. Autonomia do Código de Balança (PLU) por Filial</h2>
 <p>No setor de carnes, aves e congelados, balanças como Toledo Prix ou Filizola exigem códigos PLU específicos de cada filial.</p>
 <ul>
@@ -1491,7 +1486,6 @@
 </blockquote>
 </li>
 </ul>
-<hr />
 <h2 id="6-validacao-matematica-gs1-modulo-10-correlacao">📐 6. Validação Matemática GS1 (Módulo 10) &amp; Correlação</h2>
 <p>Para eliminar erros de digitação de operadores em ambiente industrial, o PWA integra o motor matemático oficial GS1 (<a href="file:///root/repo_pwa/lib/gs1Validator.ts"><code>lib/gs1Validator.ts</code></a>).</p>
 <h3 id="a-algoritmo-de-digito-verificador-gs1-modulo-10">A. Algoritmo de Dígito Verificador GS1 Módulo 10</h3>
@@ -1517,9 +1511,8 @@
     COMP --&gt;|Sim| OK["✅ Código Válido e Aprovado\n(Vínculo ou Cadastro Liberado)"]</code></pre>
 <h3 id="b-correlacao-matematica-ean-13-x-dun-14">B. Correlação Matemática EAN-13 x DUN-14</h3>
 <p>O validador correlaciona a raiz do GTIN-13 com o DUN-14:
-* <strong>Variante Direta</strong>: O DUN-14 possui a mesma raiz de 12 dígitos do EAN-13, precedido pelo indicador logístico <code>1..8</code>.
-* <strong>Caixa de Distribuição Agrupada</strong>: O prefixo GS1 da empresa coincide, identificando fardos e caixas industriais da mesma linha de produto.</p>
-<hr />
+- <strong>Variante Direta</strong>: O DUN-14 possui a mesma raiz de 12 dígitos do EAN-13, precedido pelo indicador logístico <code>1..8</code>.
+- <strong>Caixa de Distribuição Agrupada</strong>: O prefixo GS1 da empresa coincide, identificando fardos e caixas industriais da mesma linha de produto.</p>
 <h2 id="7-canal-de-crowdsourcing-moderacao-de-reportes">💬 7. Canal de Crowdsourcing &amp; Moderação de Reportes</h2>
 <p>Para garantir que o catálogo mestre permaneça atualizado sem abrir brechas de integridade, o PWA disponibiliza o canal de reporte colaborativo:</p>
 <ol>

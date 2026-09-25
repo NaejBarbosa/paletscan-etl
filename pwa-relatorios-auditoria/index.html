@@ -736,6 +736,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-termo-de-conferencia-semanal-obrigatoria-bloqueio-compulsorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 6. Termo de Conferência Semanal Obrigatória &amp; Bloqueio Compulsório
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1247,6 +1258,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-termo-de-conferencia-semanal-obrigatoria-bloqueio-compulsorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 6. Termo de Conferência Semanal Obrigatória &amp; Bloqueio Compulsório
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1266,17 +1288,18 @@
 
 <h1 id="relatorios-auditoria-mobile-first-ciclos-de-vida-telemetria">📊 Relatórios, Auditoria Mobile-First, Ciclos de Vida &amp; Telemetria</h1>
 <p>Os módulos de relatórios e auditoria do <strong>PaletScan PWA</strong> centralizam o controle de estoque em câmaras frigoríficas, acompanhamento de validades, conferência física de paletes, layout mobile-first para auditoria administrativa, motor semântico de ciclos de vida e telemetria remota de erros via Eruda DevTools.</p>
-<hr />
 <h2 id="1-relatorio-geral-de-paletes-relatoriotsx">📈 1. Relatório Geral de Paletes (<a href="file:///root/repo_pwa/components/Relatorio.tsx"><code>Relatorio.tsx</code></a>)</h2>
 <ul>
 <li><strong>Cards de Métricas Operacionais</strong>: Total de paletes, SKUs únicos, câmaras em uso e divisão Congelados/Resfriados.</li>
 <li><strong>Filtro Multi-Seleção de Marcas em Estoque Físico</strong>: O seletor de marcas calcula dinamicamente as opções disponíveis a partir dos paletes reais armazenados nas câmaras frias, permitindo seleção múltipla sem poluir a lista com marcas sem estoque.</li>
+<li><strong>Dropdown de Ordenação Dinâmica</strong>: Permite ordenar os cards de paletes por data de validade (FEFO/PVPS), data de recebimento ou coordenada de vaga física.</li>
+<li><strong>Modal de Seleção de Câmara com Estoque</strong>: Ao iniciar a conferência, um modal exibe as câmaras ativas com a contagem exata de paletes em cada uma, agilizando o roteiro de inspeção.</li>
+<li><strong>Exportação com Nomes Únicos e Timestamp</strong>: Geração de planilhas CSV (delimitador <code>;</code> e codificação <code>cp1252</code>) e PDFs com identificadores temporais únicos (ex: <code>paletes_410_20260924_153022.csv</code>), indexados nativamente no Android pelo utilitário <code>termux-media-scan</code>.</li>
 <li><strong>Cabeçalho Adaptativo e Responsivo</strong>:</li>
 <li><strong>Desktop / Tablet</strong>: Exibição tabular completa (Recebimento, Código, Descrição, Marca, Vaga, Validade e Dias Restantes).</li>
 <li><strong>Smartphone</strong>: Layout compacto e verticalizado, otimizando o espaço da tela para visualização rápida da posição física da carga.</li>
 <li><strong>Padronização de Contêiner</strong>: Largura simétrica fixa (<code>min-w-[92px] sm:min-w-[100px]</code>) para exibição consistente de contadores de itens em smartphones.</li>
 </ul>
-<hr />
 <h2 id="2-painel-de-auditoria-mobile-first-pagesadmintsx">📱 2. Painel de Auditoria Mobile-First (<a href="file:///root/repo_pwa/pages/admin.tsx"><code>pages/admin.tsx</code></a>)</h2>
 <p>Para conferentes e auditores que utilizam smartphones ou coletores Android estreitos (ex: largura de 360px a 390px), o painel de auditoria foi totalmente refatorado com ergonomia móvel:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1295,7 +1318,6 @@
 <li><strong>Ação Rápida de Restauração</strong>: O botão <em>"Restaurar Vaga"</em> ocupa a largura total da tela no smartphone (<code>w-full</code>), oferecendo área de toque confortável.</li>
 <li><strong>Fallback Seguro de Câmara</strong>: Caso o log histórico não traga a câmara explicitada, o sistema aplica fallback seguro para <code>CAMARA 01</code>.</li>
 </ul>
-<hr />
 <h2 id="3-blindagem-de-expurgo-offline-prevencao-de-flash-de-tela-vazia">🛡️ 3. Blindagem de Expurgo Offline &amp; Prevenção de Flash de Tela Vazia</h2>
 <p>Um problema comum em aplicações reativas é o <strong>efeito de "ressurreição" visual ou flash de tela vazia</strong> durante transições assíncronas entre o banco local e a nuvem. O PaletScan implementa uma blindagem de três camadas:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1317,7 +1339,6 @@
     UPDATE_UI --&gt; SYNC_PULL
 
     SYNC_PULL --&gt; IMMUNITY["🔒 Proteção optimisticPending:\nImpede que itens deletados localmente ressuscitem na tela antes da nuvem processar"]</code></pre>
-<hr />
 <h2 id="4-motor-de-historico-ciclos-de-vida-paletehistoricoenginets">🧬 4. Motor de Histórico &amp; Ciclos de Vida (<code>paleteHistoricoEngine.ts</code>)</h2>
 <p>Para garantir rastreabilidade total sem poluir a interface do usuário com dezenas de linhas individuais para o mesmo palete, o componente de histórico processa os eventos brutos em <strong>Grupos Semânticos e Ciclos de Vida</strong>:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1347,8 +1368,8 @@
 <li><code>EDICAO_VALIDADE</code>: Ajuste manual na data de validade de um produto alocado.</li>
 <li><code>EXCLUSAO_TOTAL_PALETE</code>: Baixa completa do palete da vaga, selando o ciclo de vida.</li>
 <li><code>RESTAURACAO_PALETE</code>: Recuperação de palete ou produto excluído acidentalmente.</li>
+<li><strong>Isolamento do Palete Atual</strong>: O motor isola eventos do palete ativo em relação a ciclos arquivados, assegurando que o histórico exibido no modal reflita estritamente o lote sob contagem.</li>
 </ul>
-<hr />
 <h2 id="5-telemetria-de-sessao-e-devtools-remoto-eruda-logs_sessao">📡 5. Telemetria de Sessão e DevTools Remoto (Eruda &amp; <code>logs_sessao</code>)</h2>
 <p>O chão de fábrica apresenta variáveis incontroláveis de hardware e rede (temperaturas extremas, lentes de câmera embaçadas por condensação térmica e dispositivos de diferentes marcas). </p>
 <p>Para permitir diagnósticos em tempo real sem necessidade de conectar cabos USB no interior das câmaras frias:</p>
@@ -1375,6 +1396,17 @@
 <li><strong>Snapshot de Ambiente do Dispositivo</strong>: Resolução de tela (ex: <code>390x844</code> para iPhone / Android vs <code>1600x765</code> para desktop), User-Agent, status online/offline e rota ativa.</li>
 <li><strong>Integração com Reportes de Divergência</strong>: Quando o operador reporta uma embalagem divergente em <a href="file:///root/repo_pwa/components/ReportarDivergenciaModal.tsx"><code>ReportarDivergenciaModal.tsx</code></a>, o snapshot dos últimos logs do console do Eruda é anexado automaticamente para análise remota.</li>
 </ul>
+<h2 id="6-termo-de-conferencia-semanal-obrigatoria-bloqueio-compulsorio">📋 6. Termo de Conferência Semanal Obrigatória &amp; Bloqueio Compulsório</h2>
+<p>Para garantir compliance operacional e precisão no controle contábil de perdas em perecíveis:
+- <strong>Interlock Mandatório (<a href="file:///root/repo_pwa/components/TermoConferenciaModal.tsx"><code>TermoConferenciaModal.tsx</code></a>)</strong>: Se o ciclo semanal de conferência física presencial expirar, o PWA apresenta um bloqueio compulsório de tela cheia que impede o registro de novas cargas até a formalização do aceite.
+- <strong>Quatro Cláusulas Operacionais Estritas</strong>:
+  1. <em>Responsabilidade da Conferência</em>: Declaração de vistoria física in loco nas câmaras de congelados e resfriados.
+  2. <em>Validação de Validades</em>: Compromisso de verificação rigorosa das datas impressas nas caixas e paletes.
+  3. <em>Endereçamento Físico</em>: Confirmação de que todas as coordenadas de 4 dígitos conferem com a posição real.
+  4. <em>Rastreabilidade</em>: Reconhecimento de que as baixas e alterações são registradas de forma imutável para auditoria.
+- <strong>Rolagem Assistida via IntersectionObserver</strong>: O botão e o checkbox de confirmação permanecem desabilitados até que o operador realize a rolagem integral do texto, atingindo visualmente a 4ª cláusula.
+- <strong>Controles de Acessibilidade</strong>: O modal oferece alternância dinâmica entre tema claro e escuro e seletor de idiomas (Português, Inglês e Espanhol) para facilitar o uso por equipes multilíngues.
+- <strong>Isolamento por Filial (<a href="file:///root/repo_pwa/lib/conferenciaLifecycle.ts"><code>lib/conferenciaLifecycle.ts</code></a>)</strong>: O registro de aceite é vinculado à <code>filialId</code> ativa do usuário, garantindo que o cumprimento de metas na Loja 410 não afete o controle das demais lojas da rede.</p>
 
 
 

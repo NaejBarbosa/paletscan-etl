@@ -1334,7 +1334,6 @@
 <blockquote>
 <p>O <strong>Ecossistema PaletScan</strong> é uma solução industrial completa e integrada, projetada para eliminar perdas financeiras por vencimento, acelerar o giro de mercadorias perecíveis (<strong>FEFO / PVPS</strong>) e garantir precisão cirúrgica no endereçamento de paletes em câmaras frigoríficas industriais (congelados e resfriados).</p>
 </blockquote>
-<hr />
 <h2 id="1-a-simbiose-perfeita-do-b2b-ao-chao-de-fabrica">🧬 1. A Simbiose Perfeita: Do B2B ao Chão de Fábrica</h2>
 <p>O PaletScan une duas frentes de tecnologia que operam em harmonia contínua através de uma esteira vertical integrada:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1359,7 +1358,6 @@
 <li>Decodifica códigos complexos (GS1-128, Data Matrix 2D, regra Lar <code>+365 dias</code>, BRF, pesagem dinâmica) com tempo de resposta inferior a <strong>5 milissegundos</strong>.</li>
 <li>Gerencia alocação de vagas em coordenadas de 4 dígitos (<code>A10D</code> a <code>B53E</code>) com <strong>prevenção ativa de colisão via Supabase Realtime</strong>, controle de inventário físico, listas prioritárias (Watchlist com confetes) e exportação de relatórios executivos.</li>
 </ol>
-<hr />
 <h2 id="2-autoria-e-origem-operacional">🎯 2. Autoria e Origem Operacional</h2>
 <p>O projeto foi integralmente idealizado, desenhado e desenvolvido por <strong>Jean Barbosa</strong>, Operador de Empilhadeira do setor de Perecíveis na <strong>Loja 410 do Fort Atacadista no Rio Tavares (Florianópolis - SC)</strong>, em parceria estratégica com o <strong>Agente Antigravity</strong> (IA da Google DeepMind).</p>
 <blockquote>
@@ -1367,7 +1365,6 @@
 <strong>Engenharia Autônoma 100% Mobile</strong>:<br />
 Todo o ecossistema — desde os scrapers em TypeScript, pipelines de visão computacional em Python, banco de dados relacional e a aplicação PWA em React/Next.js — foi <strong>codificado e mantido a partir de um smartphone pessoal</strong>, utilizando o emulador de terminal <strong>Termux</strong> com distribuição Linux containerizada (<strong>PRoot Ubuntu</strong>).</p>
 </blockquote>
-<hr />
 <h2 id="3-ciclo-de-vida-da-informacao-ponta-a-ponta">🔄 3. Ciclo de Vida da Informação Ponta a Ponta</h2>
 <p>Abaixo, o fluxo de dados industrial é apresentado em formato estritamente vertical para leitura perfeita em smartphones e coletores móveis:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1378,7 +1375,6 @@ Todo o ecossistema — desde os scrapers em TypeScript, pipelines de visão comp
     E4 --&gt; E5["5. Operação Offline na Câmara Frigorífica\nLeitura óptica e gravação no WatermelonDB em menos de 5ms"]
     E5 --&gt; E6["6. Vínculo Manual e Conferência\nPrevenção de colisão de vagas e auditoria física"]
     E6 --&gt; E7["7. Retorno com Expurgo Atômico e Idempotência\nZero duplo envio e precedência sobre o ETL"]</code></pre>
-<hr />
 <h2 id="4-a-simbiose-tecnologica-como-as-tecnologias-se-relacionam">🧩 4. A Simbiose Tecnológica: Como as Tecnologias se Relacionam</h2>
 <p>A arquitetura do PaletScan foi desenhada para que cada tecnologia complemente a outra de forma sinérgica e estritamente vertical:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1426,7 +1422,6 @@ Todo o ecossistema — desde os scrapers em TypeScript, pipelines de visão comp
 </li>
 <li>Toda a esteira de engenharia de software — do desenvolvimento dos scrapers, treinamento de heurísticas, testes unitários até a publicação automatizada do MkDocs — é operada diretamente no smartphone do autor.</li>
 </ol>
-<hr />
 <h2 id="5-sumario-da-stack-tecnologica-unificada">🛠️ 5. Sumário da Stack Tecnológica Unificada</h2>
 <table>
 <thead>
@@ -1464,7 +1459,7 @@ Todo o ecossistema — desde os scrapers em TypeScript, pipelines de visão comp
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Banco Reativo Local</strong></td>
-<td style="text-align: left;"><a href="https://watermelondb.dev/">WatermelonDB v11</a> (<a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>)</td>
+<td style="text-align: left;"><a href="https://watermelondb.dev/">WatermelonDB (Schema v14)</a> (<a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>)</td>
 <td style="text-align: left;">Operação offline de alta performance com tempos de resposta rápidos (&lt; 5ms).</td>
 </tr>
 <tr>
@@ -1489,7 +1484,6 @@ Todo o ecossistema — desde os scrapers em TypeScript, pipelines de visão comp
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="6-guia-de-navegacao-na-documentacao">📚 6. Guia de Navegação na Documentação</h2>
 <p>Explore os módulos completos do ecossistema organizados por área:</p>
 <h3 id="ecossistema-arquitetura">🏛️ Ecossistema &amp; Arquitetura</h3>
@@ -1506,6 +1500,7 @@ Todo o ecossistema — desde os scrapers em TypeScript, pipelines de visão comp
 <li><a href="pwa-pesquisa-watchlist/">Pesquisa, Consulta &amp; Radar Watchlist</a>: Busca Fuzzy, múltiplas Watchlists, celebração com confetes e vínculos de caixas DUN-14.</li>
 <li><a href="pwa-relatorios-auditoria/">Relatórios, Conferência &amp; Auditoria</a>: Modo conferência física com checklist, expurgo em massa e relatórios CSV/PDF com MediaScan.</li>
 <li><a href="pwa-auth-permissoes/">Autenticação, Passkeys &amp; Permissões</a>: Sessões híbridas offline, biometria WebAuthn FIDO2, matriz de permissões RBAC e APIs serverless.</li>
+<li><a href="pwa-testes-qualidade/">Testes de Qualidade &amp; Zero Regressão</a>: Suíte de 11 Quality Gates automatizados, resiliência offline, RBAC universal e contrato WatermelonDB vs Supabase.</li>
 </ul>
 <h3 id="engenharia-de-dados-etl-pipeline">⚙️ Engenharia de Dados (ETL &amp; Pipeline)</h3>
 <ul>

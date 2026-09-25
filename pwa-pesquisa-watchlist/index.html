@@ -1210,7 +1210,6 @@
 
 <h1 id="pesquisa-consulta-radar-watchlist">🔎 Pesquisa, Consulta &amp; Radar Watchlist</h1>
 <p>O módulo de <strong>Pesquisa e Consulta</strong> (<a href="file:///root/repo_pwa/components/PesquisaProduto.tsx"><code>PesquisaProduto.tsx</code></a>) é a central de consulta técnica de SKUs, busca inteligente por aproximação textual, consulta estrita por código de barras e monitoramento prioritário de validades (Watchlist) no <strong>PaletScan PWA</strong>.</p>
-<hr />
 <h2 id="1-mecanismo-de-busca-hibrido-exato-vs-fuzzy">🔍 1. Mecanismo de Busca Híbrido (Exato vs Fuzzy)</h2>
 <p>O motor de pesquisa adota uma abordagem de dois ramos baseada na natureza da entrada do operador:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1234,7 +1233,6 @@
 <li><strong>Busca Fuzzy Textual (<code>fuzzball</code>)</strong>: Utiliza o algoritmo <code>token_set_ratio</code> com pontuação ponderada, permitindo encontrar produtos mesmo com inversão de palavras, variações de corte ou falta de acentuação no teclado do smartphone.</li>
 <li><strong>Consulta Local Imediata</strong>: Execução local-first direta sobre a base sincronizada no WatermelonDB / IndexedDB sem dependência de internet.</li>
 </ul>
-<hr />
 <h2 id="2-radar-de-produtos-procurados-multi-watchlists-sincronizacao">🎯 2. Radar de Produtos Procurados (Multi-Watchlists &amp; Sincronização)</h2>
 <p>O módulo de radar gerencia listas prioritárias e cruza os dados com o estoque físico em tempo real:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1259,7 +1257,6 @@
 <li><strong>Menu Flutuante via React Portal</strong>: Ações de itens e listas são renderizadas em portal isolado no DOM com detecção dinâmica de bordas (<em>viewport boundary collision</em>), impedindo que menus sejam cortados em telas estreitas de smartphones.</li>
 <li><strong>Barra de Progresso e Filtros de Status</strong>: Acompanhamento visual da taxa de localização de itens (Localizados vs Pendentes) nas câmaras frias.</li>
 </ul>
-<hr />
 <h2 id="3-sincronizacao-multi-sessao-ao-vivo-cross-session-realtime">⚡ 3. Sincronização Multi-Sessão ao Vivo (Cross-Session Realtime)</h2>
 <p>Além da propagação local intra-dispositivo via <code>BroadcastChannel</code>, o ecossistema disponibiliza sincronização <strong>Cross-Session em tempo real</strong> através de canais WebSocket do Supabase:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1283,7 +1280,6 @@
 <li>A Lista Principal possui identificador canônico protegido (<code>DEFAULT_WATCHLIST_ID = 'watchlist_principal'</code>).</li>
 <li>Funções de checagem (<code>isListaPrincipal</code>) impedem que a lista base seja deletada ou tenha seu nome corrompido durante transmissões remotas concorrentes.</li>
 </ul>
-<hr />
 <h2 id="4-gerenciamento-e-vinculo-de-codigos-gerenciarcodigosmodaltsx">🏷️ 4. Gerenciamento e Vínculo de Códigos (<code>GerenciarCodigosModal.tsx</code>)</h2>
 <ul>
 <li><strong>Isolamento Estrito de Códigos</strong>:</li>

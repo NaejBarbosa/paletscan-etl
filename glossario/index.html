@@ -1728,7 +1728,6 @@
 
 <h1 id="glossario-de-termos-tecnicos">📖 Glossário de Termos Técnicos</h1>
 <p>Este glossário reúne as definições e o contexto prático de todos os termos técnicos, jargões de arquitetura de dados e expressões de engenharia de software utilizados na documentação e no ecossistema do <strong>PaletScan ETL</strong>.</p>
-<hr />
 <h2 id="a-c">🔤 A - C</h2>
 <h3 id="alpha-channel-canal-alpha-transparencia"><strong>Alpha Channel (Canal Alpha / Transparência)</strong></h3>
 <p>Componente de uma imagem digital que define o grau de opacidade ou transparência de cada pixel (formato <code>RGBA</code>). No pipeline de visão computacional do PaletScan, o canal Alpha gerado pela Inteligência Artificial é utilizado para isolar o produto do fundo original e compor a imagem sobre um fundo branco sólido (<code>#FFFFFF</code>).</p>
@@ -1742,7 +1741,6 @@
 <p>Mecanismos de armazenamento de dados diretamente no navegador web do usuário:
 - <strong>CacheStorage</strong>: Armazena requisições HTTP e arquivos estáticos gerenciados pelo <em>Service Worker</em>.
 - <strong>LocalStorage</strong>: Armazena pares de chave-valor de dados simples (como tokens de autenticação e filas de pendência offline).</p>
-<hr />
 <h2 id="d-i">🔤 D - I</h2>
 <h3 id="dun-14-data-universal-numbering-ean-14"><strong>DUN-14 (Data Universal Numbering / EAN-14)</strong></h3>
 <p>Código de barras de 14 dígitos utilizado pela GS1 para a identificação de caixas de embarque, fardos e embalagens coletivas de distribuição logística nas câmaras frias.</p>
@@ -1758,7 +1756,6 @@
 <li><strong>IndexedDB</strong>: Banco de dados relacional/NoSQL cliente embutido nos navegadores modernos.</li>
 <li><strong>WatermelonDB</strong>: Framework de banco de dados reativo de alta velocidade que gerencia o armazenamento local offline no aplicativo PaletScan PWA.</li>
 </ul>
-<hr />
 <h2 id="m-p">🔤 M - P</h2>
 <h3 id="modulus-10-gs1-mod10"><strong>Modulus 10 (GS1 Mod10)</strong></h3>
 <p>Algoritmo matemático estipulado pela organização GS1 para calcular e verificar o último dígito (dígito verificador) de códigos EAN-13, EAN-8 e DUN-14, prevenindo erros de digitação e leituras inválidas de scanners.</p>
@@ -1766,7 +1763,6 @@
 <p>Elemento visual temporário ou imagem padrão utilizada na interface da aplicação quando o recurso principal ainda não está disponível ou o produto não possui foto cadastrada (ex: status <code>sem_imagem</code>).</p>
 <h3 id="pwa-progressive-web-app-aplicativo-web-progressivo"><strong>PWA (Progressive Web App / Aplicativo Web Progressivo)</strong></h3>
 <p>Aplicação web construída com tecnologias modernas (como Service Workers e IndexedDB) que oferece experiência idêntica à de um aplicativo nativo, incluindo suporte a uso 100% offline em dispositivos móveis e coletores industriais.</p>
-<hr />
 <h2 id="r-s">🔤 R - S</h2>
 <h3 id="rembg-u2net-onnx"><strong>rembg / U2Net / ONNX</strong></h3>
 <ul>
@@ -1786,7 +1782,6 @@
 <p>Versão de um texto amigável para URLs, convertida em letras minúsculas, sem acentos e separada por hífens (ex: <code>"coxinha-da-asa-resfriada"</code>).</p>
 <h3 id="staging-ambiente-arquivo-intermediario-de-preparacao"><strong>Staging (Ambiente / Arquivo Intermediário de Preparação)</strong></h3>
 <p>Camada intermediária do pipeline onde os dados brutos recém-extraídos são armazenados temporariamente em arquivos JSON sanitizados (<code>staging/*_staging.json</code>) antes de passarem pela validação relacional e carga no banco final.</p>
-<hr />
 <h2 id="t-u">🔤 T - U</h2>
 <h3 id="truncamento-truncamento-de-zeros"><strong>Truncamento (Truncamento de Zeros)</strong></h3>
 <p>Erro comum em bancos de dados ou linguagens de programação quando um código numérico iniciado por zero (ex: <code>"07891515..."</code>) é convertido indevidamente para o tipo inteiro (<code>integer</code>), resultando na perda do zero à esquerda (<code>7891515...</code>).</p>

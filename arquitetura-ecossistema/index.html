@@ -1276,7 +1276,6 @@
 
 <h1 id="arquitetura-integrada-ponta-a-ponta">🏗️ Arquitetura Integrada Ponta a Ponta</h1>
 <p>A simbiose entre o <strong>Pipeline ETL</strong> e o <strong>PaletScan PWA</strong> foi desenhada para resolver um clássico dilema da engenharia de software industrial: <strong>como manter um catálogo corporativo massivo atualizado sem comprometer a autonomia, a velocidade e a resiliência offline da operação de campo?</strong></p>
-<hr />
 <h2 id="1-o-circuito-fechado-de-dados-closed-loop-data-flow">🔄 1. O Circuito Fechado de Dados (Closed-Loop Data Flow)</h2>
 <p>O ecossistema opera através de um circuito fechado de dados bidirecional:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1297,7 +1296,6 @@
     G --&gt; H["8. Tabela de Overrides produtos_atributos_manuais\n(Imunidade absoluta do operador sobre cargas automáticas de ETL)"]
 
     H --&gt;|Realimenta com Precedência Máxima| C</code></pre>
-<hr />
 <h2 id="2-modelo-de-convivencia-e-imunidade-de-dados-manuais">🛡️ 2. Modelo de Convivência e Imunidade de Dados Manuais</h2>
 <p>Um dos problemas mais comuns em pipelines ETL corporativos é a sobreescrita acidental de dados refinados manualmente por operadores de campo durante as cargas automatizadas de fornecedores.</p>
 <p>Para solucionar isso, o PaletScan implementa o padrão <strong>Dual-Layer Persistence</strong>:</p>
@@ -1333,7 +1331,6 @@
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">marcas</span><span class="w"> </span><span class="n">pr_marca</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">marca_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pr_marca</span><span class="p">.</span><span class="n">id</span>
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">produtos_atributos_manuais</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">ean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">produto_ean</span><span class="p">;</span>
 </span></code></pre></div>
-<hr />
 <h2 id="3-instant-sync-em-menos-de-30ms-status-hash">⚡ 3. Instant Sync em Menos de 30ms (Status Hash)</h2>
 <p>Para não sobrecarregar a franquia de dados móveis e garantir velocidade instantânea de inicialização no coletor, o motor de sincronização utiliza um algoritmo de comparação de integridade baseado em hashes:</p>
 <ol>
@@ -1341,7 +1338,6 @@
 <li><strong>Comparação com Cache Local</strong>: Se os hashes <code>ps_pwa_db_hash</code> e <code>ps_pwa_paletes_hash</code> coincidirem com os valores locais salvos no <code>localStorage</code>, a sincronização é <strong>finalizada em menos de 30ms</strong> sem transferir nenhuma linha do catálogo.</li>
 <li><strong>Delta Download</strong>: Se houver divergência, o sistema baixa exclusivamente os registros adicionados ou modificados desde o último timestamp, atualizando atomicamente o WatermelonDB local.</li>
 </ol>
-<hr />
 <h2 id="4-contratos-de-dados-e-tipagens-compartilhadas">📦 4. Contratos de Dados e Tipagens Compartilhadas</h2>
 <p>Ambos os projetos compartilham as mesmas convenções de tipagem TypeScript para SKUs, conservação e códigos de barras:</p>
 <table>
@@ -1410,7 +1406,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="5-mapeamento-da-persistencia-de-dados-topologia-de-armazenamento">💾 5. Mapeamento da Persistência de Dados &amp; Topologia de Armazenamento</h2>
 <p>Para viabilizar a arquitetura <strong>Local-First</strong> com alta tolerância a blackouts de rede dentro de câmaras frias blindadas, o ecossistema PaletScan distribui a persistência dos dados em <strong>6 camadas complementares</strong>, desde a memória volátil do smartphone até o cluster PostgreSQL em nuvem:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1419,7 +1414,7 @@
     CLIENT --&gt; C_RAM["1. Memória RAM do Navegador\n(React State / Hooks / ZXing Buffer)"]
     C_RAM --&gt; C_STORAGE["2. LocalStorage do PWA\n(Sessões, Fila Offline e Hash de Cache)"]
     C_STORAGE --&gt; C_SW["3. Cache API do Service Worker\n(Assets Estáticos, CSS, JS e Sons)"]
-    C_STORAGE --&gt; C_WMDB["4. WatermelonDB Local (IndexedDB)\n(Catálogo Master 3684 SKUs e Paletes Locais)"]
+    C_STORAGE --&gt; C_WMDB["4. WatermelonDB Local (IndexedDB)\n(Catálogo Master 3.776 SKUs e Paletes Locais)"]
 
     C_WMDB --&gt; EDGE["☁️ CAMADA DE BORDA &amp; SERVERLESS (VERCEL)"]
 
@@ -1437,7 +1432,7 @@
 <tr>
 <th style="text-align: left;">Camada / Tecnologia</th>
 <th style="text-align: left;">Onde Reside</th>
-<th style="text-align: center;">Volatilidade</th>
+<th style="text-align: left;">Volatilidade</th>
 <th style="text-align: left;">O Que Armazena</th>
 <th style="text-align: center;">Tempo de Acesso</th>
 <th style="text-align: left;">Estratégia de Invalidação / Purga</th>
@@ -1447,7 +1442,7 @@
 <tr>
 <td style="text-align: left;"><strong>Memória RAM do Cliente</strong> <em>(React Context / Hooks)</em></td>
 <td style="text-align: left;">Smartphone / Coletor</td>
-<td style="text-align: center;"><strong>Altamente Volátil</strong> <em>(Zera ao fechar aba)</em></td>
+<td style="text-align: left;"><strong>Altamente Volátil</strong> <em>(Zera ao fechar aba)</em></td>
 <td style="text-align: left;">Estados momentâneos de UI, flags de modal aberto, buffer de vídeo da câmera ZXing, instâncias WebSocket do Realtime.</td>
 <td style="text-align: center;"><code>&lt; 1ms</code></td>
 <td style="text-align: left;">Automática ao desmontar componentes ou recarregar página.</td>
@@ -1455,7 +1450,7 @@
 <tr>
 <td style="text-align: left;"><strong>LocalStorage</strong> <em>(Browser Web Storage)</em></td>
 <td style="text-align: left;">Smartphone / Coletor</td>
-<td style="text-align: center;"><strong>Persistente</strong> <em>(Sobrevive a reinícios)</em></td>
+<td style="text-align: left;"><strong>Persistente</strong> <em>(Sobrevive a reinícios)</em></td>
 <td style="text-align: left;">• <code>ps_auth_session</code>: Sessão offline de usuário.<br>• <code>ps_meus_paletes_conflito</code>: IDs que bloqueiam o app.<br>• <code>pending_sync</code>: Fila de contingência de paletes.<br>• <code>ps_pwa_paletes_hash</code>: Hash MD5 do catálogo.<br>• <code>ps_filial_ativa</code>: Loja multi-tenant ativa.</td>
 <td style="text-align: center;"><code>&lt; 2ms</code></td>
 <td style="text-align: left;">• Expurgado após resolução de conflitos.<br>• Limpo via <code>Reset Database</code> no menu.</td>
@@ -1463,7 +1458,7 @@
 <tr>
 <td style="text-align: left;"><strong>Service Worker Cache</strong> <em>(Serwist / Cache API)</em></td>
 <td style="text-align: left;">Smartphone / Coletor</td>
-<td style="text-align: center;"><strong>Persistente</strong> <em>(Cache de App Shell)</em></td>
+<td style="text-align: left;"><strong>Persistente</strong> <em>(Cache de App Shell)</em></td>
 <td style="text-align: left;">HTML estático prerenderizado, bundles JS do Next.js, folhas CSS Tailwind, fontes, ícones do manifesto e áudios de bip.</td>
 <td style="text-align: center;"><code>&lt; 5ms</code></td>
 <td style="text-align: left;">Invalidação automática por hash de revisão a cada novo deploy em produção.</td>
@@ -1471,15 +1466,15 @@
 <tr>
 <td style="text-align: left;"><strong>WatermelonDB</strong> <em>(IndexedDB / LokiJS)</em></td>
 <td style="text-align: left;">Smartphone / Coletor</td>
-<td style="text-align: center;"><strong>Persistente</strong> <em>(Banco Local-First)</em></td>
-<td style="text-align: left;">• <code>produtos</code>: 3.684 SKUs do catálogo mestre higienizado.<br>• <code>paletes</code>: Cargas ativas e baixadas na filial.<br>• <code>codigos_barras</code>: Variantes de DUN-14 e pesagem.</td>
+<td style="text-align: left;"><strong>Persistente</strong> <em>(Banco Local-First)</em></td>
+<td style="text-align: left;">• <code>produtos</code>: 3.776 SKUs do catálogo mestre higienizado.<br>• <code>paletes</code>: Cargas ativas e baixadas na filial.<br>• <code>codigos_barras</code>: Variantes de DUN-14 e pesagem.</td>
 <td style="text-align: center;"><code>&lt; 5ms</code></td>
 <td style="text-align: left;">Atualização delta via <code>syncLocalDB</code> ou <code>unsafeResetDatabase()</code> forçado.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Vercel Serverless RAM</strong> <em>(Node.js <code>global._appCache</code>)</em></td>
 <td style="text-align: left;">Borda em Nuvem <em>(Vercel Lambdas)</em></td>
-<td style="text-align: center;"><strong>Efêmera</strong> <em>(Desliga ao congelar container)</em></td>
+<td style="text-align: left;"><strong>Efêmera</strong> <em>(Desliga ao congelar container)</em></td>
 <td style="text-align: left;">Cache em memória de respostas das rotas <code>/api/vagas-ocupadas</code> e catálogo para amortecer rajadas repetidas.</td>
 <td style="text-align: center;"><code>&lt; 2ms</code></td>
 <td style="text-align: left;">TTL configurado (ex: 5 a 60 seg) ou purga manual no <code>clearCache()</code>.</td>
@@ -1487,15 +1482,15 @@
 <tr>
 <td style="text-align: left;"><strong>Vercel KV / Upstash Redis</strong> <em>(Redis REST API)</em></td>
 <td style="text-align: left;">Nuvem Global <em>(Edge KV)</em></td>
-<td style="text-align: center;"><strong>Persistente em Memória Distribuída</strong></td>
-<td style="text-align: left;">• <code>banco_valida_data_v50_catalog_3684</code>: Catálogo compilado compartilhado entre lambdas.<br>• <code>paletscan:users</code>: Sincronização de credenciais e operadores.<br>• <em>FIDO2 Challenges</em>: Desafios WebAuthn/Passkeys.</td>
+<td style="text-align: left;"><strong>Persistente em Memória Distribuída</strong></td>
+<td style="text-align: left;">• <code>v54_catalog_update</code>: Catálogo compilado compartilhado entre lambdas.<br>• <code>paletscan:users</code>: Sincronização de credenciais e operadores.<br>• <em>FIDO2 Challenges</em>: Desafios WebAuthn/Passkeys.</td>
 <td style="text-align: center;"><code>&lt; 25ms</code></td>
 <td style="text-align: left;">Invalidação explícita via comando <code>DEL</code> emitido pela função <code>clearCache(key)</code>.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Supabase PostgreSQL</strong> <em>(Database Central)</em></td>
 <td style="text-align: left;">Nuvem <em>(AWS / Supabase)</em></td>
-<td style="text-align: center;"><strong>Persistente Permanente</strong> <em>(ACID)</em></td>
+<td style="text-align: left;"><strong>Persistente Permanente</strong> <em>(ACID)</em></td>
 <td style="text-align: left;"><strong>Fonte Única da Verdade</strong>: Tabelas <code>produtos</code>, <code>marcas</code>, <code>paletes_armazenados</code>, <code>paletes_historico</code>, <code>filiais</code>, <code>usuarios</code>, <code>reportes</code>, <code>watchlists</code> e <code>logs_sessao</code>.</td>
 <td style="text-align: center;"><code>&lt; 80ms</code></td>
 <td style="text-align: left;">Atualizações atômicas transacionais, backups diários e soft deletes (<code>deleted_at</code>).</td>
@@ -1503,7 +1498,7 @@
 <tr>
 <td style="text-align: left;"><strong>Supabase Realtime</strong> <em>(WebSocket / Postgres CDC)</em></td>
 <td style="text-align: left;">Nuvem <em>(pg_notify)</em></td>
-<td style="text-align: center;"><strong>Canal Efêmero de Transporte</strong></td>
+<td style="text-align: left;"><strong>Canal Efêmero de Transporte</strong></td>
 <td style="text-align: left;">Eventos <code>INSERT</code>, <code>UPDATE</code> e <code>DELETE</code> em tempo real disparados para todas as sessões ativas da filial.</td>
 <td style="text-align: center;"><code>&lt; 50ms</code></td>
 <td style="text-align: left;">Desconexão / reconexão resiliente com fallback para polling a cada 4 segundos.</td>
@@ -1511,14 +1506,13 @@
 <tr>
 <td style="text-align: left;"><strong>Supabase Storage</strong> <em>(S3-Compatible CDN)</em></td>
 <td style="text-align: left;">Nuvem <em>(Storage Bucket)</em></td>
-<td style="text-align: center;"><strong>Persistente Permanente</strong></td>
+<td style="text-align: left;"><strong>Persistente Permanente</strong></td>
 <td style="text-align: left;">Imagens WebP tratadas e otimizadas dos produtos alimentícios (bucket <code>produtos-imagens</code>).</td>
 <td style="text-align: center;">CDN Edge</td>
 <td style="text-align: left;">Substituição atômica de imagens via <code>upsert: true</code> no pipeline de scraping/ETL.</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="isolamento-e-seguranca-entre-camadas">Isolamento e Segurança entre Camadas</h3>
 <ol>
 <li><strong>Blackout Total de Conectividade</strong>: O operador consegue trabalhar sem interrupção porque o <strong>WatermelonDB</strong> e o <strong>LocalStorage</strong> fornecem autonomia de leitura e escrita a 100% dos recursos críticos.</li>

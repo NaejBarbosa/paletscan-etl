@@ -1298,7 +1298,6 @@
 
 <h1 id="integracao-supabase-database-storage-postgresql-rls">⚡ Integração Supabase (Database, Storage &amp; PostgreSQL RLS)</h1>
 <p>O módulo de integração (<a href="file:///root/paletscan-etl/db_sync/sync.ts"><code>db_sync/sync.ts</code></a> e <a href="file:///root/paletscan-etl/db_sync/sync_images.ts"><code>db_sync/sync_images.ts</code></a>) realiza a carga dos dados sanitizados e mídias tratadas diretamente nas instâncias do Supabase PostgreSQL e Supabase Storage, enquanto as políticas nativas de <strong>Row Level Security (RLS)</strong> blindam o banco relacional contra acessos indevidos de operadores e terceiros.</p>
-<hr />
 <h2 id="1-pipeline-de-sincronizacao-relacional-db_syncsyncts">🔄 1. Pipeline de Sincronização Relacional (<code>db_sync/sync.ts</code>)</h2>
 <p>O script <code>sync.ts</code> lê o staging sanitizado, gera as chaves determinísticas UUIDv5 e executa as chamadas de gravação relacional no Supabase em um fluxo vertical de alta resiliência:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1313,7 +1312,6 @@
     ERR --&gt; S6["Ativa Fallback Item por Item"]
     S6 --&gt; S7["Isola Código Conflitante e Mantém o Lote"]
     S7 --&gt; S8["Registra Detalhes em Log de Auditoria"]</code></pre>
-<hr />
 <h2 id="2-tratamento-resiliente-de-conflitos-de-ean-erro-23505">🛡️ 2. Tratamento Resiliente de Conflitos de EAN (<code>Erro 23505</code>)</h2>
 <p>Como fornecedores diferentes podem comercializar o mesmo produto com o mesmo EAN-13, a tentativa de inserção pode disparar uma exceção de violação de chave única no PostgreSQL (<code>error code 23505</code> - <code>unique_violation</code>).</p>
 <h3 id="a-algoritmo-de-fallback-item-por-item">A. Algoritmo de Fallback Item-por-Item</h3>
@@ -1330,7 +1328,6 @@
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">]</span>
 </span></code></pre></div>
-<hr />
 <h2 id="3-alinhamento-relacional-estrito-politica-zero-data-loss">🔒 3. Alinhamento Relacional Estrito &amp; Política Zero Data Loss</h2>
 <p>Para garantir que nenhuma alteração manual realizada pelo operador no chão de fábrica do PWA seja sobrescrita ou perdida em rotinas automáticas de ETL:</p>
 <ol>
@@ -1342,7 +1339,6 @@
 <li><strong>Suíte de Testes de Imunidade a Perda de Dados</strong>:</li>
 <li>O script <a href="file:///root/paletscan-etl/scripts/test_pwa_crud_and_sync_safety.ts"><code>scripts/test_pwa_crud_and_sync_safety.ts</code></a> valida o ciclo CRUD completo e garante 100% de preservação de dados após operações de wipe ou sincronizações globais.</li>
 </ol>
-<hr />
 <h2 id="4-sincronizacao-de-midias-e-upload-cdn-db_syncsync_imagests">🖼️ 4. Sincronização de Mídias e Upload CDN (<code>db_sync/sync_images.ts</code>)</h2>
 <p>O script <a href="file:///root/paletscan-etl/db_sync/sync_images.ts"><code>db_sync/sync_images.ts</code></a> gerencia o upload das imagens WebP tratadas para o bucket público do Supabase Storage:</p>
 <ol>
@@ -1355,11 +1351,10 @@
 <li><code>status_imagem</code>: Atualiza para <code>aprovado</code>.</li>
 <li><code>updated_at</code>: Atualiza o timestamp da última mutação para orientar a sincronização delta do PWA.</li>
 </ol>
-<hr />
 <h2 id="5-governanca-postgresql-row-level-security-rls-nativas-por-marca">🔐 5. Governança PostgreSQL Row Level Security (RLS) Nativas por Marca</h2>
 <p>Para assegurar o isolamento dos dados diretamente na autoridade máxima (o banco relacional PostgreSQL), o Supabase utiliza <strong>Row Level Security (RLS)</strong> ativo nas tabelas mestres de catálogo:</p>
 <pre class="mermaid"><code>flowchart TD
-    CLIENT_REQ["🌐 Requisição HTTP do Cliente (PWA ou cURL)\nHeader: Authorization: Bearer &lt;ps_supabase_token&gt;"]
+    CLIENT_REQ["🌐 Requisição HTTP do Cliente (PWA ou cURL)\nHeader: Authorization: Bearer ps_supabase_token"]
 
     CLIENT_REQ --&gt; POSTGREST["⚙️ Supabase PostgREST Gateway"]
 
@@ -1437,7 +1432,6 @@
 </table>
 <h3 id="coexistencia-com-service_role-bypass-rls">Coexistência com <code>service_role</code> (Bypass RLS):</h3>
 <p>As rotas de backend do Next.js que utilizam <code>supabaseAdmin</code> com a chave <code>SUPABASE_SERVICE_ROLE_KEY</code> operam com o atributo PostgreSQL <code>BYPASSRLS</code>. Isso assegura que tarefas administrativas centrais (como moderação de reportes e rotinas de expurgo automatizado) operem sem bloqueios, mantendo as requisições diretas de clientes sob isolamento hermético.</p>
-<hr />
 <h2 id="6-comandos-de-sincronizacao-teste">💻 6. Comandos de Sincronização &amp; Teste</h2>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Sincronizar dados relacionais de todas as indústrias para o Supabase</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>npm<span class="w"> </span>run<span class="w"> </span>sync:supabase

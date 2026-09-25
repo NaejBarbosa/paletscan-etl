@@ -836,6 +836,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#9-test_sincronizacao_cirurgicats-sincronizacao-cirurgica-delta-hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. test_sincronizacao_cirurgica.ts (Sincronização Cirúrgica &amp; Delta Hash)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-test_all_privileges_rbacts-seguranca-universal-rbac-default-deny" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. test_all_privileges_rbac.ts (Segurança Universal RBAC &amp; Default Deny)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-test_watermelondb_supabase_contractts-contrato-de-schema-watermelondb-vs-supabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. test_watermelondb_supabase_contract.ts (Contrato de Schema WatermelonDB vs Supabase)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1295,6 +1328,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#9-test_sincronizacao_cirurgicats-sincronizacao-cirurgica-delta-hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. test_sincronizacao_cirurgica.ts (Sincronização Cirúrgica &amp; Delta Hash)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-test_all_privileges_rbacts-seguranca-universal-rbac-default-deny" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. test_all_privileges_rbac.ts (Segurança Universal RBAC &amp; Default Deny)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-test_watermelondb_supabase_contractts-contrato-de-schema-watermelondb-vs-supabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. test_watermelondb_supabase_contract.ts (Contrato de Schema WatermelonDB vs Supabase)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1331,9 +1397,8 @@
 <h1 id="suite-de-testes-automatizados-garantias-qualidade-continua">🧪 Suíte de Testes Automatizados, Garantias &amp; Qualidade Contínua</h1>
 <p>O ecossistema <strong>PaletScan PWA</strong> opera em um dos cenários mais exigentes da indústria logística: câmaras frigoríficas industriais (-18°C a -25°C), ausência total de sinal de rede (Gaiola de Faraday), dispositivos móveis de diversas marcas operados por conferentes com luvas térmicas e controle rigoroso de validade de mercadorias perecíveis de alto valor agregado.</p>
 <p>Para assegurar que qualquer alteração de código, refatoração de backend ou ajuste de interface preserve a estabilidade absoluta da operação, o projeto adota uma <strong>filosofia de Zero Regressão</strong>, amparada por uma suíte robusta de testes ponta a ponta, testes de integração local-first, validações criptográficas e barreiras de segurança multitenant.</p>
-<hr />
 <h2 id="1-arquitetura-do-pipeline-de-testes-e-portas-de-qualidade-quality-gates">🏛️ 1. Arquitetura do Pipeline de Testes e Portas de Qualidade (Quality Gates)</h2>
-<p>Todos os testes são orquestrados no pipeline contínuo através do comando central <code>npm test</code>, executando uma esteira sequencial de verificação rigorosa antes de qualquer deploy ou liberação para os operadores de campo:</p>
+<p>Todos os testes são orquestrados no pipeline contínuo através do comando central <code>npm test</code>, executando uma esteira sequencial de 11 portas de verificação rigorosa antes de qualquer deploy ou liberação para os operadores de campo:</p>
 <pre class="mermaid"><code>flowchart TD
     START["🚀 Início do Pipeline de Qualidade: npm test"]
 
@@ -1353,8 +1418,13 @@
 
     G7 --&gt; G8["Gate 8: test_alinhamento_local_remoto.ts\nAlinhamento Sessão vs RLS, Cache Hash e Otimização de Barcodes"]
 
-    G8 --&gt; SUCCESS["🎉 SUCESSO: Todos os Testes Aprovados (Zero Regressão)\nAplicação Pronta para Deploy em Produção"]</code></pre>
-<hr />
+    G8 --&gt; G9["Gate 9: test_sincronizacao_cirurgica.ts\nSincronização Cirúrgica com Cooldown de 60s e Troca de Filial"]
+
+    G9 --&gt; G10["Gate 10: test_all_privileges_rbac.ts\nDefault Deny Rigoroso em Todos os Privilégios e Módulos"]
+
+    G10 --&gt; G11["Gate 11: test_watermelondb_supabase_contract.ts\nContrato Estrito de Schema WatermelonDB vs Supabase"]
+
+    G11 --&gt; SUCCESS["🎉 SUCESSO: Todos os Testes Aprovados (Zero Regressão)\nAplicação Pronta para Deploy em Produção"]</code></pre>
 <h2 id="2-matriz-geral-das-suites-de-testes">📊 2. Matriz Geral das Suítes de Testes</h2>
 <table>
 <thead>
@@ -1415,14 +1485,37 @@
 <td style="text-align: left;">Alinhamento da sessão local com o RLS remoto do Supabase, PULL seletivo de catálogo, purga automática de alienígenas (<code>purgeAlienProdutos</code>), cache por hash (<code>brandHashScope</code>) e telemetria da pílula.</td>
 </tr>
 <tr>
+<td style="text-align: left;"><code>npm run test:sync</code></td>
+<td style="text-align: left;"><a href="file:///root/repo_pwa/scripts/test_sincronizacao_cirurgica.ts"><code>scripts/test_sincronizacao_cirurgica.ts</code></a></td>
+<td style="text-align: left;">Sincronização / Resiliência</td>
+<td style="text-align: left;">Cooldown de 60s contra requisições redundantes, checagem prévia de mutações locais e preservação de dados durante alternância de filiais.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>npm run test:rbac</code></td>
+<td style="text-align: left;"><a href="file:///root/repo_pwa/scripts/test_all_privileges_rbac.ts"><code>scripts/test_all_privileges_rbac.ts</code></a></td>
+<td style="text-align: left;">Segurança / RBAC Universal</td>
+<td style="text-align: left;">Validação rigorosa do princípio Default Deny para todos os 15 privilégios e ocultação dinâmica de módulos restritos na home do app.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>npm run test:contract</code></td>
+<td style="text-align: left;"><a href="file:///root/repo_pwa/scripts/test_watermelondb_supabase_contract.ts"><code>scripts/test_watermelondb_supabase_contract.ts</code></a></td>
+<td style="text-align: left;">Integridade de Schema / Contrato</td>
+<td style="text-align: left;">Contrato estrito de integridade entre schema local v14 do WatermelonDB e tabelas relacionais do Supabase.</td>
+</tr>
+<tr>
 <td style="text-align: left;"><code>npm run test:mobile</code></td>
 <td style="text-align: left;"><a href="file:///root/repo_pwa/scripts/test_mobile_resilience.ts"><code>scripts/test_mobile_resilience.ts</code></a></td>
 <td style="text-align: left;">Interface / Hardware Móvel</td>
 <td style="text-align: left;">Resiliência da viewport móvel, gestos de pinça e zoom anti-névoa na câmera, consumo de memória e ciclo de vida do Eruda DevTools.</td>
 </tr>
+<tr>
+<td style="text-align: left;"><code>npm run test:network</code></td>
+<td style="text-align: left;"><a href="file:///root/repo_pwa/scripts/test_network_chaos_resilience.ts"><code>scripts/test_network_chaos_resilience.ts</code></a></td>
+<td style="text-align: left;">Redes / Circuit Breaker</td>
+<td style="text-align: left;">Simulação de jitter, latência extrema e reconexão pós-blackout sob o Circuit Breaker Tri-State.</td>
+</tr>
 </tbody>
 </table>
-<hr />
 <h2 id="3-detalhamento-aprofundado-beneficios-garantias-de-cada-teste">🔍 3. Detalhamento Aprofundado: Benefícios &amp; Garantias de Cada Teste</h2>
 <h3 id="1-test_user_flowts-fluxo-operacional-ponta-a-ponta">1. <code>test_user_flow.ts</code> (Fluxo Operacional Ponta a Ponta)</h3>
 <ul>
@@ -1438,7 +1531,6 @@
 <li><strong>Zero Erros de Digitação:</strong> Um operador com luvas não consegue salvar acidentalmente um código de barras com dígito verificador adulterado, eliminando falhas graves no inventário contábil.</li>
 <li><strong>Zero Colisão de Endereçamento:</strong> Garante que o padrão rígido de vagas da câmara seja cumprido à risca.</li>
 </ul>
-<hr />
 <h3 id="2-test_filial_isolationts-blindagem-multi-tenant-410-vs-999">2. <code>test_filial_isolation.ts</code> (Blindagem Multi-Tenant: 410 vs 999)</h3>
 <ul>
 <li><strong>O que valida</strong>:</li>
@@ -1449,7 +1541,6 @@
 <li><strong>Garantias para o Negócio &amp; Chão de Fábrica</strong>:</li>
 <li><strong>Imunidade Absoluta da Matriz:</strong> Uma operação de "limpeza de banco" ou simulação de conflito na loja 999 <strong>jamais</strong> apaga ou movimenta paletes físicos da loja real 410.</li>
 </ul>
-<hr />
 <h3 id="3-test_pwa_offlinets-resiliencia-local-first-gaiola-de-faraday">3. <code>test_pwa_offline.ts</code> (Resiliência Local-First &amp; Gaiola de Faraday)</h3>
 <ul>
 <li><strong>O que valida</strong>:</li>
@@ -1461,7 +1552,6 @@
 <li><strong>Garantias para o Negócio &amp; Chão de Fábrica</strong>:</li>
 <li><strong>Zero Perda de Bipagem no Frio Extremo:</strong> O operador pode registrar 50 paletes no fundo da câmara escura sem sinal; ao cruzar a porta do depósito e retomar o 4G/Wi-Fi, todos os dados sobem de forma atômica e sem duplicações.</li>
 </ul>
-<hr />
 <h3 id="4-test_operator_feedback_fixests-ergonomia-movel-estabilidade-visual">4. <code>test_operator_feedback_fixes.ts</code> (Ergonomia Móvel &amp; Estabilidade Visual)</h3>
 <ul>
 <li><strong>O que valida</strong>:</li>
@@ -1474,7 +1564,6 @@
 <li><strong>Fim do Piscar de Tela:</strong> A interface não tem surtos visuais de "sumiço de paletes" durante sincronizações em segundo plano, evitando pânico no conferente.</li>
 <li><strong>Operação Desimpedida com Luvas:</strong> Botões de restauração em largura total (<code>w-full</code>) facilitam o clique rápido no coletor.</li>
 </ul>
-<hr />
 <h3 id="5-test_granular_permissionsts-rbac-integridade-de-perfis">5. <code>test_granular_permissions.ts</code> (RBAC &amp; Integridade de Perfis)</h3>
 <ul>
 <li><strong>O que valida</strong>:</li>
@@ -1486,7 +1575,6 @@
 <li><strong>Garantias para o Negócio &amp; Chão de Fábrica</strong>:</li>
 <li><strong>Princípio do Menor Privilégio:</strong> Visitantes e operadores temporários não recebem privilégios indevidos por falha de inicialização de perfil.</li>
 </ul>
-<hr />
 <h3 id="6-test_multifilial_privilegiosts-permissoes-customizadas-por-loja">6. <code>test_multifilial_privilegios.ts</code> (Permissões Customizadas por Loja)</h3>
 <ul>
 <li><strong>O que valida</strong>:</li>
@@ -1499,7 +1587,6 @@
 <li><strong>Garantias para o Negócio &amp; Chão de Fábrica</strong>:</li>
 <li><strong>Flexibilidade com Segurança:</strong> Promotores que cobrem múltiplas lojas têm seus privilégios rigorosamente ajustados de acordo com os acordos comerciais de cada praça.</li>
 </ul>
-<hr />
 <h3 id="7-test_restricao_marcas_totalts-seguranca-total-de-marcas-supabase-jwt">7. <code>test_restricao_marcas_total.ts</code> (Segurança Total de Marcas &amp; Supabase JWT)</h3>
 <ul>
 <li><strong>O que valida</strong>:</li>
@@ -1513,7 +1600,6 @@
 <li><strong>Garantias para o Negócio &amp; Chão de Fábrica</strong>:</li>
 <li><strong>Sigilo Concorrencial Inviolável:</strong> Um promotor da Sadia não consegue visualizar preços, validades, lotes ou histórico de produtos da Seara ou de qualquer outro concorrente, nem mesmo inspecionando o tráfego HTTP.</li>
 </ul>
-<hr />
 <h3 id="8-test_alinhamento_local_remotots-alinhamento-local-remoto-performance">8. <code>test_alinhamento_local_remoto.ts</code> (Alinhamento Local-Remoto &amp; Performance)</h3>
 <ul>
 <li><strong>O que valida</strong>:</li>
@@ -1529,9 +1615,50 @@
 <li><strong>Agilidade e Baixo Consumo de Bateria:</strong> O coletor não esquenta, não trava por falta de memória RAM e não consome a franquia do plano de dados móveis do depósito.</li>
 <li><strong>Telemetria Confiável:</strong> A pílula exibe com exatidão a fatia do operador, eliminando dúvidas se a carga está realmente atualizada.</li>
 </ul>
-<hr />
+<h3 id="9-test_sincronizacao_cirurgicats-sincronizacao-cirurgica-delta-hash">9. <code>test_sincronizacao_cirurgica.ts</code> (Sincronização Cirúrgica &amp; Delta Hash)</h3>
+<ul>
+<li><strong>O que valida</strong>:</li>
+<li>Atualização cirúrgica de catálogo e cálculo determinístico do Delta Hash (<code>v54_catalog_update</code> com <code>maxCbDate</code>);</li>
+<li>Gestão de ciclo de vida de Watchlists com suporte offline, mutações pendentes (<code>pending_mutations</code>) e fila de exclusão (<code>pending_deletions</code>);</li>
+<li>Cadastro de paletes em contingência offline (<code>pending_sync</code> e <code>ps_pending_criacoes_v1</code>) e commit atômico pós-reconexão;</li>
+<li>Regra de Fila Zero Conectada (<code>hasPendingLocalSyncItems === false</code>), garantindo que nenhuma sincronização fique retida quando há conexão ativa;</li>
+<li>Economia de banda superior a 99,9% via checagem cirúrgica de hash (~80 bytes) versus carga completa (2,4 MB) para o catálogo completo;</li>
+<li>Isolamento estrito de Delta Hash entre filiais de Produção (410) e Homologação (999).</li>
+<li><strong>Benefícios para o Desenvolvimento</strong>:</li>
+<li>Fornece um simulador completo do ciclo offline/online sem necessidade de infraestrutura real, prevenindo perda de dados ou retransmissões redundantes.</li>
+<li><strong>Garantias para o Negócio &amp; Chão de Fábrica</strong>:</li>
+<li><strong>Eficiência Extrema de Tráfego:</strong> Reduz drasticamente a troca de mensagens na rede Wi-Fi e dados móveis do depósito.</li>
+<li><strong>Integridade Transacional:</strong> Assegura que nenhum palete bipado durante quedas de sinal seja esquecido na memória do aparelho.</li>
+</ul>
+<h3 id="10-test_all_privileges_rbacts-seguranca-universal-rbac-default-deny">10. <code>test_all_privileges_rbac.ts</code> (Segurança Universal RBAC &amp; Default Deny)</h3>
+<ul>
+<li><strong>O que valida</strong>:</li>
+<li>Cobertura integral das 15 permissões granulares do sistema (<code>scanner</code>, <code>cadastrar</code>, <code>editar_descricao</code>, <code>editar_marca</code>, <code>editar_classe</code>, <code>editar_conservacao</code>, <code>editar_pesar_cod</code>, <code>gerenciar_codigos</code>, <code>historico_paletes</code>, <code>excluir_paletes</code>, <code>realocar_paletes</code>, <code>detalhes_vaga</code>, <code>watchlists</code>, <code>painel_admin</code>, <code>switch_filial</code>);</li>
+<li>Princípio Default Deny rigoroso: requisições anônimas resultam em 401 Unauthorized e operadores desprovidos da flag recebem 403 Forbidden em todos os endpoints de API;</li>
+<li>Execução autorizada somente quando a flag específica está explicitamente habilitada no perfil do usuário ou na resolução dinâmica por filial;</li>
+<li>Sanitização de permissões sensíveis (<code>painel_admin</code> e <code>switch_filial</code>) que exigem validação de sessão administrativa.</li>
+<li><strong>Benefícios para o Desenvolvimento</strong>:</li>
+<li>Testa exaustivamente cada rota de API (<code>pages/api/...</code>) com chamadas mockadas diretas, impedindo brechas de autorização por ausência de middleware.</li>
+<li><strong>Garantias para o Negócio &amp; Chão de Fábrica</strong>:</li>
+<li><strong>Blindagem Contra Acessos Indevidos:</strong> Conferentes de chão de fábrica não conseguem acidentalmente alterar descrições fiscais de produtos, remapear códigos de barras ou acionar exclusões em massa.</li>
+</ul>
+<h3 id="11-test_watermelondb_supabase_contractts-contrato-de-schema-watermelondb-vs-supabase">11. <code>test_watermelondb_supabase_contract.ts</code> (Contrato de Schema WatermelonDB vs Supabase)</h3>
+<ul>
+<li><strong>O que valida</strong>:</li>
+<li>Conformidade estrita do schema v14 do WatermelonDB com as tabelas relacionais do Supabase (<code>produtos</code>, <code>paletes_armazenados</code>, <code>watchlists</code>, <code>auditorias</code>, <code>locais_armazenagem</code>, <code>logs_sessao</code>);</li>
+<li>Mapeamento bidirecional de colunas e propriedades (conversão entre snake_case no PostgreSQL e camelCase nos modelos TypeScript);</li>
+<li>Conversão simétrica de timestamps (ISO 8601 string para Unix milissegundos numérico);</li>
+<li>UUID determinístico (<code>getDeterministicUUID</code>) e resolução de concorrência com regra "Último a Gravar Vence" (<em>Last-Write-Wins</em>);</li>
+<li>Soft-delete e prevenção contra ressurreição de paletes excluídos via registros de exclusão com timestamp;</li>
+<li>Normalização canônica de câmaras frigoríficas (<code>normalizarNomeCamara</code>, <code>isMesmaCamara</code>), assegurando paridade entre variações nominais.</li>
+<li><strong>Benefícios para o Desenvolvimento</strong>:</li>
+<li>Atua como garantia de quebra de contrato de banco de dados, acusando imediatamente no CI/CD se uma migração de schema local desalinhar do banco central na nuvem.</li>
+<li><strong>Garantias para o Negócio &amp; Chão de Fábrica</strong>:</li>
+<li><strong>Consistência Absoluta de Dados:</strong> Elimina falhas de conversão que poderiam corromper datas de validade ou duplicar paletes após sincronização remota.</li>
+<li><strong>Rastreabilidade Fidedigna:</strong> Garante que todas as movimentações físicas reflitam com precisão cirúrgica no saldo contábil de estoque.</li>
+</ul>
 <h2 id="4-como-executar-os-testes">🚀 4. Como Executar os Testes</h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Executar a bateria completa de testes automatizados (Quality Gate)</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Executar a bateria completa de testes automatizados (11 Quality Gates):</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>npm<span class="w"> </span><span class="nb">test</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Executar suítes específicas individualmente:</span>
@@ -1539,8 +1666,12 @@
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>npm<span class="w"> </span>run<span class="w"> </span>test:marcas<span class="w">         </span><span class="c1"># Restrição total de marcas e JWT Supabase</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>npm<span class="w"> </span>run<span class="w"> </span>test:multifilial<span class="w">    </span><span class="c1"># Privilégios distintos por filial</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>npm<span class="w"> </span>run<span class="w"> </span>test:permissions<span class="w">    </span><span class="c1"># Matriz RBAC granular</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>npm<span class="w"> </span>run<span class="w"> </span>test:offline<span class="w">        </span><span class="c1"># Resiliência offline e filas de contingência</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>npm<span class="w"> </span>run<span class="w"> </span>test:mobile<span class="w">         </span><span class="c1"># Ergonomia e resiliência de viewport móvel</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>npm<span class="w"> </span>run<span class="w"> </span>test:sync<span class="w">           </span><span class="c1"># Sincronização cirúrgica e Delta Hash</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>npm<span class="w"> </span>run<span class="w"> </span>test:rbac<span class="w">           </span><span class="c1"># Default Deny em todas as 15 permissões</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>npm<span class="w"> </span>run<span class="w"> </span>test:contract<span class="w">       </span><span class="c1"># Contrato de schema WatermelonDB vs Supabase</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>npm<span class="w"> </span>run<span class="w"> </span>test:offline<span class="w">        </span><span class="c1"># Resiliência offline e filas de contingência</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>npm<span class="w"> </span>run<span class="w"> </span>test:mobile<span class="w">         </span><span class="c1"># Ergonomia e resiliência de viewport móvel</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>npm<span class="w"> </span>run<span class="w"> </span>test:network<span class="w">        </span><span class="c1"># Resiliência a oscilações e caos de rede</span>
 </span></code></pre></div>
 
 

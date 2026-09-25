@@ -1232,7 +1232,6 @@
 
 <h1 id="core-engine-heuristicas-e-normalizadores">🧮 Core Engine: Heurísticas e Normalizadores</h1>
 <p>O diretório <a href="file:///root/paletscan-etl/core/"><code>core/</code></a> abriga os algoritmos de sanitização, normalização e heurísticas de domínio do PaletScan ETL. É o responsável por transformar dados brutos e ruidosos vindos da web em registros padronizados com alta integridade de negócios.</p>
-<hr />
 <h2 id="1-normalizacao-de-texto-e-pesos-text_parserts">🔤 1. Normalização de Texto e Pesos (<code>text_parser.ts</code>)</h2>
 <p>O arquivo <a href="file:///root/paletscan-etl/core/normalizers/text_parser.ts"><code>core/normalizers/text_parser.ts</code></a> implementa regras estritas de padronização textual voltadas para a indústria alimentícia em Português (PT-BR).</p>
 <h3 id="a-conversao-de-caixa-e-preservacao-de-acentos-title-case-pt-br">A. Conversão de Caixa e Preservação de Acentos (Title Case PT-BR)</h3>
@@ -1246,7 +1245,6 @@
 <li><strong>Pesos Fixos (<code>peso_gramas</code>)</strong>: Extrai valores gramaticais e converte para gramas numéricas inteiras (ex: <code>"500g"</code> ➔ <code>500</code>, <code>"1.2kg"</code> ➔ <code>1200</code>).</li>
 <li><strong>Cortes por Peso Variável</strong>: Identifica cortes de carne e produtos vendidos por pesagem dinâmica na câmara fria (ex: <em>"peça vácuo"</em>, <em>"peso variável"</em>), ajustando a descrição do produto para incluir o sufixo <code>(pesar)</code>.</li>
 </ul>
-<hr />
 <h2 id="2-algoritmos-matematicos-modulus-10-gs1-ean-13-dun-14">🔢 2. Algoritmos Matemáticos Modulus 10 (GS1 EAN-13 &amp; DUN-14)</h2>
 <p>A validação de códigos de barras é uma das etapas mais críticas do PaletScan. Códigos mal formatados ou com zeros truncados inviabilizam a leitura no scanner do operador.</p>
 <pre class="mermaid"><code>flowchart TD

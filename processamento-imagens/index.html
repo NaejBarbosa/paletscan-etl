@@ -1298,7 +1298,6 @@
 
 <h1 id="pipeline-de-ia-e-processamento-de-imagens">🖼️ Pipeline de IA e Processamento de Imagens</h1>
 <p>O módulo de visão computacional do <strong>PaletScan ETL</strong> (<a href="file:///root/paletscan-etl/images/ai_pipeline/process_image.py"><code>images/ai_pipeline/process_image.py</code></a>) é responsável pela remoção de fundo por inteligência artificial, padronização em fundo branco sólido, detecção de atualizações de layout de embalagens e otimização para o formato WebP ultra-leve.</p>
-<hr />
 <h2 id="1-pipeline-de-inteligencia-artificial-local-process_imagepy">🤖 1. Pipeline de Inteligência Artificial Local (<code>process_image.py</code>)</h2>
 <p>Em vez de depender de APIs de terceiros pagas, o PaletScan utiliza um pipeline de IA <strong>100% local e privado</strong> construído em Python com <code>rembg</code> (baseado em modelos de redes neurais U2Net/ONNX) e <code>Pillow</code>.</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1307,7 +1306,6 @@
     C --&gt; D["4. Achatamento sobre Fundo Branco Sólido (#FFFFFF)"]
     D --&gt; E["5. Redimensionamento Proporcional (Pillow Resampling)"]
     E --&gt; F["6. Arquivo Otimizado .webp (Menos de 150KB)"]</code></pre>
-<hr />
 <h2 id="2-etapas-do-processamento-visual">⚙️ 2. Etapas do Processamento Visual</h2>
 <h3 id="a-remocao-de-fundo-via-ia-rembg">A. Remoção de Fundo via IA (<code>rembg</code>)</h3>
 <p>A imagem bruta baixada pelo scraper em <code>images/raw/</code> é submetida ao modelo neural da biblioteca <code>rembg</code>. O modelo isola a peça de carne ou embalagem comercial do cenário original (estantes, sombras de estúdio ou marcas d'água), gerando uma imagem intermediária com transparência no canal Alpha (<code>RGBA</code>).</p>
@@ -1322,7 +1320,6 @@
 <li><strong>Dimensão Máxima (<code>--max-dim 1000</code>)</strong>: Mantém a proporção original da foto limitando a maior dimensão a 1000 pixels, o que garante excelente definição de rótulos e selos sem desperdício de resolução.</li>
 <li><strong>Conversão Otimizada para <code>.webp</code></strong>: Salva a imagem final no formato WebP de alta eficiência, reduzindo o peso médio dos arquivos de 2MB-5MB (brutos) para <strong>menos de 100-150KB</strong>.</li>
 </ul>
-<hr />
 <h2 id="3-ciclo-de-vida-das-imagens-nos-diretorios">📁 3. Ciclo de Vida das Imagens nos Diretórios</h2>
 <p>O gerenciamento de arquivos de mídia segue um fluxo limpo e rastreável dentro de <code>images/</code>:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>images/
@@ -1331,7 +1328,6 @@
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├── archived/    # Imagens que já foram enviadas com sucesso para o Supabase Storage
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>└── ai_pipeline/ # Código-fonte Python (process_image.py)
 </span></code></pre></div>
-<hr />
 <h2 id="4-deteccao-de-novos-layouts-de-embalagem-e-ciclo-de-atualizacao">🔄 4. Detecção de Novos Layouts de Embalagem e Ciclo de Atualização</h2>
 <p>Quando um fornecedor atualiza o visual da embalagem ou lança um novo layout no mercado, o PaletScan detecta a alteração e executa o reprocessamento automático:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1356,7 +1352,6 @@
 <li><strong>Atualização Relacional PostgreSQL</strong>: O script atualiza a coluna <code>imagem_url</code> na tabela <code>produtos</code> do Supabase e registra o carimbo de data <code>updated_at</code>.</li>
 <li><strong>Propagação para o Aplicativo PWA</strong>: O script <code>generate_pwa_produtos_json.ts</code> regera o catálogo <code>produtos.json</code>. No PWA do operador, ao acionar <strong>"Limpar Banco Local e Sincronizar"</strong> (ou via sync automático em segundo plano), o módulo <code>imageOfflineCache.ts</code> realiza o <em>prefetch</em> do novo WebP e substitui a foto no cache local do dispositivo.</li>
 </ol>
-<hr />
 <h2 id="5-como-executar-o-script">🖥️ 5. Como Executar o Script</h2>
 <p>O script pode ser executado manualmente via linha de comando ou ser invocado pelo pipeline TypeScript:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Execução básica apontando para o diretório de imagens brutas</span>

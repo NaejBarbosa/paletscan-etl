@@ -1128,10 +1128,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-bateria-completa-de-testes-de-ponta-a-ponta-do-pwa-9-etapas-125-testes" class="md-nav__link">
+  <a href="#c-bateria-completa-de-testes-de-ponta-a-ponta-do-pwa-11-quality-gates-sequenciais" class="md-nav__link">
     <span class="md-ellipsis">
       
-        C. Bateria Completa de Testes de Ponta a Ponta do PWA (9 Etapas — 125 Testes)
+        C. Bateria Completa de Testes de Ponta a Ponta do PWA (11 Quality Gates Sequenciais)
       
     </span>
   </a>
@@ -1721,10 +1721,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-bateria-completa-de-testes-de-ponta-a-ponta-do-pwa-9-etapas-125-testes" class="md-nav__link">
+  <a href="#c-bateria-completa-de-testes-de-ponta-a-ponta-do-pwa-11-quality-gates-sequenciais" class="md-nav__link">
     <span class="md-ellipsis">
       
-        C. Bateria Completa de Testes de Ponta a Ponta do PWA (9 Etapas — 125 Testes)
+        C. Bateria Completa de Testes de Ponta a Ponta do PWA (11 Quality Gates Sequenciais)
       
     </span>
   </a>
@@ -1766,7 +1766,6 @@
 
 <h1 id="guia-pratico-de-operacoes-cli-e-manutencao-de-dados">🛠️ Guia Prático de Operações, CLI e Manutenção de Dados</h1>
 <p>Este guia fornece os procedimentos operacionais padrão para administradores e engenheiros de dados executarem a <strong>suíte de aliases Linux (Mobile CLI UX)</strong>, <strong>execução completa do pipeline com relatório de timestamps</strong>, <strong>sincronização dinâmica via manifesto</strong>, <strong>acompanhamento de logs</strong> e <strong>agendamento via Crontab</strong> no ecossistema PaletScan.</p>
-<hr />
 <h2 id="1-instalacao-e-ativacao-dos-aliases-no-terminal-linux-1-passo">⚡ 1. Instalação e Ativação dos Aliases no Terminal Linux (1 Passo)</h2>
 <p>A suíte de aliases foi otimizada para o ambiente <strong>Linux / Termux em smartphones Android</strong>, com suporte a telas de 36 colunas de largura sem quebras serrilhadas (<em>line wrapping</em>).</p>
 <p>Para ativar os aliases na sessão atual do seu terminal:</p>
@@ -1775,7 +1774,6 @@
 <blockquote>
 <p>💡 <strong>Carregamento Automático:</strong> O arquivo <code>~/.bashrc</code> está configurado para carregar automaticamente a suíte <code>~/.paletscan_aliases.sh</code> a cada nova janela de terminal aberta.</p>
 </blockquote>
-<hr />
 <h2 id="2-o-comando-all-in-one-etl-run-etl-pipeline">🚀 2. O Comando All-in-One: <code>etl-run</code> / <code>etl-pipeline</code></h2>
 <p>Para rodar todo o pipeline de ponta a ponta, sincronizar o Supabase, sanitizar o banco, exportar para o PWA, auditar e <strong>exibir o relatório completo de timestamps e logs na tela</strong>, utilize o comando:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>etl-run
@@ -1859,7 +1857,7 @@
 </span><span id="__span-2-74"><a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a>📊 BASE DE DADOS SUPABASE (AO VIVO):
 </span><span id="__span-2-75"><a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a> 🏢 Fabricantes:       4
 </span><span id="__span-2-76"><a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a> 🏷️  Marcas:            143
-</span><span id="__span-2-77"><a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a> 🥩 Produtos Totais:   3.415
+</span><span id="__span-2-77"><a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a> 🥩 Produtos Totais:   3.776
 </span><span id="__span-2-78"><a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a> 📊 Códigos de Barras: 9.310
 </span><span id="__span-2-79"><a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a> ✨ Novos Produtos:    20 recém-incluídos
 </span><span id="__span-2-80"><a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a>📌 RESUMO DOS NOVOS PRODUTOS:
@@ -1874,7 +1872,6 @@
 </span><span id="__span-2-89"><a id="__codelineno-2-89" name="__codelineno-2-89" href="#__codelineno-2-89"></a>✔ PIPELINE FINALIZADO COM SUCESSO!
 </span><span id="__span-2-90"><a id="__codelineno-2-90" name="__codelineno-2-90" href="#__codelineno-2-90"></a>────────────────────────────────────────────────────────────────────────
 </span></code></pre></div>
-<hr />
 <h2 id="3-compatibilidade-dinamica-com-o-manifesto-do-projeto-schema_manifestjson">📖 3. Compatibilidade Dinâmica com o Manifesto do Projeto (<code>schema_manifest.json</code>)</h2>
 <p>Para evitar inconsistências caso uma marca ou holding entre ou saia do projeto, os aliases e a central de ajuda CLI (<code>paletscan</code> ou <code>etl-help</code>) consomem dinamicamente as seções <code>manifesto_holdings</code> e <code>manifesto_aliases</code> registradas em <a href="file:///root/paletscan-etl/core/manifest/schema_manifest.json"><code>core/manifest/schema_manifest.json</code></a>.</p>
 <h3 id="dicionario-completo-de-aliases-disponiveis">Dicionário Completo de Aliases Disponíveis:</h3>
@@ -2014,7 +2011,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="6-monitoramento-de-novos-produtos-incluidos">🆕 6. Monitoramento de Novos Produtos Incluídos</h2>
 <p>Quando novas cargas de scrapers ou ingestões de fornecedores são executadas, o pipeline detecta automaticamente quais produtos foram incorporados pela primeira vez ao banco relacional.</p>
 <ul>
@@ -2026,7 +2022,6 @@
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># ou o atalho equivalente:</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>etl-novos-produtos
 </span></code></pre></div>
-<hr />
 <h2 id="7-monitoramento-de-produtos-alterados-e-atualizados">📝 7. Monitoramento de Produtos Alterados e Atualizados</h2>
 <p>Quando dados de produtos pré-existentes sofrem modificação no staging (como atualização de foto, descrição padronizada, classe, conservação, peso ou marca):</p>
 <ul>
@@ -2039,7 +2034,6 @@
 </span></code></pre></div>
 <h2 id="8-agendamento-automatico-e-gestao-de-tarefas-recorrentes-linux-crontab">⏰ 8. Agendamento Automático e Gestão de Tarefas Recorrentes (Linux / Crontab)</h2>
 <p>Para manter a base de dados permanentemente atualizada sem intervenção manual, o ecossistema PaletScan dispõe de integração nativa com o <strong>Crontab do Linux</strong>, permitindo agendamentos flexíveis com logs e relatórios automáticos.</p>
-<hr />
 <h3 id="a-agendamento-interativo-via-cli-etl-schedule">A. Agendamento Interativo via CLI (<code>etl-schedule</code>)</h3>
 <p>Execute no terminal:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>etl-schedule
@@ -2056,7 +2050,6 @@
 </span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a> 5) Cancelar
 </span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>Opção [1-5]:
 </span></code></pre></div>
-<hr />
 <h3 id="b-sintaxe-e-expressoes-cron-personalizadas">B. Sintaxe e Expressões Cron Personalizadas</h3>
 <p>Caso selecione a <strong>Opção 4 (Personalizado)</strong>, você pode definir qualquer regra de execução utilizando a estrutura padrão de 5 campos do Cron:</p>
 <div class="arithmatex">\[\begin{matrix} \text{Minuto} &amp; \text{Hora} &amp; \text{Dia-do-Mês} &amp; \text{Mês} &amp; \text{Dia-da-Semana} \\ \text{(0-59)} &amp; \text{(0-23)} &amp; \text{(1-31)} &amp; \text{(1-12)} &amp; \text{(0-6, Dom=0)} \end{matrix}\]</div>
@@ -2112,7 +2105,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="c-inspecionar-status-ao-vivo-e-daemon-etl-cron-status-etl-cron-list">C. Inspecionar Status ao Vivo e Daemon (<code>etl-cron-status</code> / <code>etl-cron-list</code>)</h3>
 <p>Para inspecionar o agendador, verificar a saúde do daemon Linux em tempo real e consultar o último log gerado:</p>
 <h4 id="1-via-alias-paletscan-com-autocura-recomendado">1. Via Alias PaletScan com Autocura (Recomendado):</h4>
@@ -2133,7 +2125,6 @@
 <p>Toda execução do agendador redireciona o output em tempo real para <code>logs/cron_output.log</code>. Para visualizar a transmissão dos logs ao vivo:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>tail<span class="w"> </span>-f<span class="w"> </span>logs/cron_output.log
 </span></code></pre></div>
-<hr />
 <h3 id="d-cancelar-e-remover-agendamentos">D. Cancelar e Remover Agendamentos</h3>
 <h4 id="1-remocao-rapida-via-cli">1. Remoção Rápida via CLI:</h4>
 <p><div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>etl-cron-remove
@@ -2144,7 +2135,6 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>crontab<span class="w"> </span>-e
 </span></code></pre></div>
 <em>(Utilize o editor para remover a linha da tarefa <code>PALETSCAN_ETL_FULL_JOB</code> e salve o arquivo).</em></p>
-<hr />
 <h3 id="e-garantias-de-execucao-em-segundo-plano-no-android-termux">E. Garantias de Execução em Segundo Plano no Android / Termux</h3>
 <p>Para agendamentos executados no <strong>Termux (Android)</strong>, garanta as seguintes diretrizes para evitar que o sistema operacional interrompa a rotina quando a tela estiver apagada:</p>
 <ol>
@@ -2166,7 +2156,6 @@
 </li>
 <li>Se o celular for reiniciado, basta abrir o aplicativo Termux uma vez para ativar automaticamente o daemon do <code>crond</code> e o <code>termux-wake-lock</code>.</li>
 </ol>
-<hr />
 <h2 id="9-limpeza-total-de-bases-de-dados-e-caches-multi-camadas">🧹 9. Limpeza Total de Bases de Dados e Caches Multi-Camadas</h2>
 <p>Quando for necessário resetar o ambiente ou zerar completamente o catálogo antes de um novo ciclo de ingestão de dados, siga o protocolo de limpeza em 3 níveis (Banco Remoto, Fallbacks Estáticos e Cache PWA):</p>
 <h3 id="a-limpeza-no-supabase-remoto-via-cli">A. Limpeza no Supabase (Remoto via CLI)</h3>
@@ -2179,7 +2168,6 @@
 <h3 id="c-execucao-via-console-sql-no-supabase">C. Execução via Console SQL no Supabase</h3>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">TRUNCATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">codigos_barras</span><span class="p">,</span><span class="w"> </span><span class="n">paletes_armazenados</span><span class="p">,</span><span class="w"> </span><span class="n">produtos</span><span class="p">,</span><span class="w"> </span><span class="n">marcas</span><span class="p">,</span><span class="w"> </span><span class="n">fabricantes</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">;</span>
 </span></code></pre></div>
-<hr />
 <h2 id="10-suite-de-testes-automatizados-integridade-relacional">🧪 10. Suíte de Testes Automatizados &amp; Integridade Relacional</h2>
 <p>O ecossistema conta com rotinas de testes contínuos para garantir a integridade dos dados e prevenir regressões arquiteturais:</p>
 <h3 id="a-teste-de-imunidade-a-perda-de-dados-zero-data-loss">A. Teste de Imunidade a Perda de Dados (Zero Data Loss)</h3>
@@ -2190,17 +2178,17 @@
 <p>Audita a higienização de EANs/DUNs, integridade relacional de marcas e fabricantes, e conformidade com o schema oficial:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>npx<span class="w"> </span>tsx<span class="w"> </span>scripts/test_sync_and_catalog.ts
 </span></code></pre></div>
-<h3 id="c-bateria-completa-de-testes-de-ponta-a-ponta-do-pwa-9-etapas-125-testes">C. Bateria Completa de Testes de Ponta a Ponta do PWA (9 Etapas — 125 Testes)</h3>
-<p>Executa a validação exaustiva do fluxo completo do usuário, regras industriais, segurança multi-tenant e resiliência crítica de alocação de paletes no chão de fábrica:</p>
+<h3 id="c-bateria-completa-de-testes-de-ponta-a-ponta-do-pwa-11-quality-gates-sequenciais">C. Bateria Completa de Testes de Ponta a Ponta do PWA (11 Quality Gates Sequenciais)</h3>
+<p>O comando central <code>npm test</code> no repositório do PWA executa uma esteira de 11 Quality Gates ponta a ponta. Dentre eles, o Gate 1 (<a href="file:///root/repo_pwa/scripts/test_user_flow.ts"><code>scripts/test_user_flow.ts</code></a>) executa 9 etapas com 125 casos de teste exaustivos:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Executado a partir do repositório do PWA (/root/repo_pwa)</span>
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>npm<span class="w"> </span><span class="nb">test</span>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="c1"># ou diretamente via ts-node:</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="c1"># ou diretamente via ts-node para o Gate 1:</span>
 </span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>npx<span class="w"> </span>ts-node<span class="w"> </span>--compiler-options<span class="w"> </span><span class="s1">'{"module":"commonjs"}'</span><span class="w"> </span>scripts/test_user_flow.ts
 </span></code></pre></div>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Etapa</th>
+<th style="text-align: left;">Etapa do Gate 1</th>
 <th style="text-align: left;">Escopo Técnico &amp; Regras de Negócio Testadas</th>
 <th style="text-align: center;">Quantidade</th>
 </tr>
@@ -2253,7 +2241,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="d-validador-de-sintaxe-mermaid-para-mkdocs">D. Validador de Sintaxe Mermaid para MkDocs</h3>
 <p>Verifica se todos os diagramas Mermaid na documentação cumprem as regras de esteiras estritamente verticais e compatibilidade mobile:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>npm<span class="w"> </span>run<span class="w"> </span>validate:mermaid

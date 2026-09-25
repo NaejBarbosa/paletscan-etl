@@ -916,10 +916,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-execucao-do-pipeline-via-linha-de-comando" class="md-nav__link">
+  <a href="#4-execucao-do-pipeline-e-reconciliacao-gs1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚡ 4. Execução do Pipeline via Linha de Comando
+        ⚡ 4. Execução do Pipeline e Reconciliação GS1
       
     </span>
   </a>
@@ -1169,10 +1169,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-execucao-do-pipeline-via-linha-de-comando" class="md-nav__link">
+  <a href="#4-execucao-do-pipeline-e-reconciliacao-gs1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚡ 4. Execução do Pipeline via Linha de Comando
+        ⚡ 4. Execução do Pipeline e Reconciliação GS1
       
     </span>
   </a>
@@ -1198,7 +1198,6 @@
 
 <h1 id="pipeline-friboi-jbs-oracle-ccstore">🥩 Pipeline Friboi / JBS &amp; Oracle CCStore</h1>
 <p>O pipeline de extração e higienização da <strong>JBS / Friboi</strong> (<a href="file:///root/paletscan-etl/scrapers/friboi/"><code>scrapers/friboi/</code></a>) é o mais complexo e volumoso do PaletScan ETL, abrangendo mais de 1.800 SKUs de cortes bovinos resfriados, congelados, porcionados e industrializados.</p>
-<hr />
 <h2 id="1-arquitetura-de-ingestao-em-duas-etapas">🏗️ 1. Arquitetura de Ingestão em Duas Etapas</h2>
 <p>Em vez de scraping de páginas HTML, o pipeline Friboi conecta-se diretamente às APIs da plataforma <strong>Oracle Commerce Cloud (CCStore)</strong> da JBS:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1209,17 +1208,15 @@
     API --&gt; STRUCT["5. Parser Estrutural: Peso, DUN-14,\nTabela Nutricional e Imagens HD"]
     STRUCT --&gt; NORM["6. Normalização Modulus 10 GS1\ne Higienização Title Case PT-BR"]
     NORM --&gt; STG["7. Gravação em Staging Sanitizado\n(staging/friboi_staging.json)"]</code></pre>
-<hr />
 <h2 id="2-marcas-mapeadas-no-grupo-jbs">🏷️ 2. Marcas Mapeadas no Grupo JBS</h2>
 <p>O pipeline classifica e isola automaticamente as seguintes marcas canônicas da holding:
-* <strong>Friboi Tradicional</strong>: Linha principal de cortes in-natura resfriados e congelados.
-* <strong>Maturatta Friboi</strong>: Cortes nobres maturados para churrasco.
-* <strong>1953 Friboi</strong>: Linha premium de cruzamento de raças europeias.
-* <strong>Reserva Friboi</strong>: Cortes selecionados para autosserviço e atacarejo.
-* <strong>Do Chef Friboi</strong>: Embalagens institucionais para food service.
-* <strong>Black Friboi</strong>: Linha super-premium de marmoreio elevado.
-* <strong>Swift</strong>: Cortes congelados e pratos prontos associados.</p>
-<hr />
+- <strong>Friboi Tradicional</strong>: Linha principal de cortes in-natura resfriados e congelados.
+- <strong>Maturatta Friboi</strong>: Cortes nobres maturados para churrasco.
+- <strong>1953 Friboi</strong>: Linha premium de cruzamento de raças europeias.
+- <strong>Reserva Friboi</strong>: Cortes selecionados para autosserviço e atacarejo.
+- <strong>Do Chef Friboi</strong>: Embalagens institucionais para food service.
+- <strong>Black Friboi</strong>: Linha super-premium de marmoreio elevado.
+- <strong>Swift</strong>: Cortes congelados e pratos prontos associados.</p>
 <h2 id="3-extracao-e-resolucao-de-dun-14-e-pesagem-dinamica">📦 3. Extração e Resolução de DUN-14 e Pesagem Dinâmica</h2>
 <h3 id="a-resolucao-de-caixa-de-embarque-dun-14">A. Resolução de Caixa de Embarque (DUN-14)</h3>
 <p>A API Oracle retorna propriedades personalizadas para logística de atacarejo:
@@ -1230,13 +1227,16 @@
 <p>Para peças inteiras com peso variável (como <em>Picanha</em>, <em>Costela</em>, <em>Alcatra</em> e <em>Fraldinha</em>):
 - O script identifica o atributo <code>x_pesoVariavel: true</code> ou termos na descrição (<em>"peça a vácuo"</em>).
 - Insere automaticamente o indicativo <code>(pesar)</code> no nome do produto, instruindo o PWA a exigir o input de pesagem na balança pelo operador.</p>
-<hr />
-<h2 id="4-execucao-do-pipeline-via-linha-de-comando">⚡ 4. Execução do Pipeline via Linha de Comando</h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Executar a extração completa da Friboi</span>
+<h2 id="4-execucao-do-pipeline-e-reconciliacao-gs1">⚡ 4. Execução do Pipeline e Reconciliação GS1</h2>
+<p>A extração e a validação integrada são executadas através dos scripts centrais do repositório:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Executar a extração completa e geração do staging da Friboi</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>npm<span class="w"> </span>run<span class="w"> </span>scrape:friboi
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Executar a normalização e staging</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>npm<span class="w"> </span>run<span class="w"> </span>normalize:friboi
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Reconciliar paridade GS1 entre códigos DUN-14 e EAN-13</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>npx<span class="w"> </span>tsx<span class="w"> </span>scripts/reconcile_dun_ean.ts
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Executar o pipeline completo ponta a ponta com relatório</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>npm<span class="w"> </span>run<span class="w"> </span>full
 </span></code></pre></div>
 
 

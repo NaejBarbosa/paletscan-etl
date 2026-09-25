@@ -629,6 +629,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#7-circuit-breaker-tri-state-de-conectividade-networkhealthts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📡 7. Circuit Breaker Tri-State de Conectividade (networkHealth.ts)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-auto-update-proativo-heartbeat-de-30s-prevencao-de-duplo-reload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 8. Auto-Update Proativo, Heartbeat de 30s &amp; Prevenção de Duplo Reload
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-filas-de-contingencia-offline-para-reportes-e-telemetria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 9. Filas de Contingência Offline para Reportes e Telemetria
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1257,6 +1290,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#7-circuit-breaker-tri-state-de-conectividade-networkhealthts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📡 7. Circuit Breaker Tri-State de Conectividade (networkHealth.ts)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-auto-update-proativo-heartbeat-de-30s-prevencao-de-duplo-reload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 8. Auto-Update Proativo, Heartbeat de 30s &amp; Prevenção de Duplo Reload
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-filas-de-contingencia-offline-para-reportes-e-telemetria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 9. Filas de Contingência Offline para Reportes e Telemetria
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1277,12 +1343,11 @@
 <h1 id="service-worker-resiliencia-offline-motor-local-first-watermelondb">⚡ Service Worker, Resiliência Offline &amp; Motor Local-First (WatermelonDB)</h1>
 <p>O <strong>PaletScan PWA</strong> foi concebido para resolver o problema clássico de conectividade em depósitos industriais: <strong>o isolamento térmico das câmaras frigoríficas atua fisicamente como uma Gaiola de Faraday</strong>, bloqueando sinais Wi-Fi e redes móveis (4G/5G).</p>
 <p>Para operar sem interrupções nesse ambiente hostil, o sistema emprega uma arquitetura <strong>Local-First</strong> com Service Worker inteligente (<a href="https://github.com/serwist/serwist">Serwist</a>), banco de dados reativo de alta performance (<strong>WatermelonDB / IndexedDB</strong>), sincronização delta seletiva por escopo de marcas e purga automática de dados alienígenas.</p>
-<hr />
 <h2 id="1-o-desafio-da-camara-frigorifica">❄️ 1. O Desafio da Câmara Frigorífica</h2>
 <pre class="mermaid"><code>flowchart TD
     A1["❄️ 1. Interior da Câmara Frigorífica (Blackout Total de Rede)\nColetor ou Smartphone em Modo 100% Offline (-18°C a -25°C)"]
 
-    A1 --&gt; A2["📱 2. App Shell e Login Servidos pelo Serwist Cache\nAbertura instantânea da interface sem sinal de rede (&lt; 100ms)"]
+    A1 --&gt; A2["📱 2. App Shell e Login Servidos pelo Serwist Cache\nAbertura instantânea da interface sem sinal de rede em menos de 100ms"]
 
     A2 --&gt; A3["💾 3. Catálogo e Validação no WatermelonDB Local\nBipagem e gravação reativa em menos de 5 milissegundos"]
 
@@ -1293,7 +1358,6 @@
     B1 --&gt; B2["⚡ 6. Instant Sync Delta com Supabase Cloud\nSincronização bidirecional em menos de 30 milissegundos"]
 
     B2 --&gt; B3["🧹 7. Despacho e Expurgo Atômico da Fila Local\nRotina removerCriacoesPendentes elimina qualquer envio duplicado"]</code></pre>
-<hr />
 <h2 id="2-motor-de-service-worker-swts-serwistnext">🛠️ 2. Motor de Service Worker (<code>sw.ts</code> / <code>@serwist/next</code>)</h2>
 <p>O gerenciamento de cache é orquestrado pelo <strong>Serwist</strong>, compilado em tempo de build:</p>
 <div class="language-typescript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">/// &lt;reference lib="webworker" /&gt;</span>
@@ -1308,7 +1372,7 @@
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nx">precacheEntries</span><span class="o">:</span><span class="w"> </span><span class="kt">self.__SW_MANIFEST</span><span class="p">,</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nx">skipWaiting</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nx">clientsClaim</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nx">navigationPreload</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nx">navigationPreload</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nx">fallbacks</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nx">entries</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="p">{</span>
@@ -1350,9 +1414,8 @@
 </span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
 </span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="nx">serwist</span><span class="p">.</span><span class="nx">addEventListeners</span><span class="p">();</span>
 </span></code></pre></div>
-<hr />
 <h2 id="3-sincronizacao-seletiva-invalidacao-de-hash-purga-de-alienigenas-libdatabasesyncts">🗄️ 3. Sincronização Seletiva, Invalidação de Hash &amp; Purga de Alienígenas (<code>lib/database/sync.ts</code>)</h2>
-<p>Diferente de abordagens tradicionais que baixam o catálogo completo de ~3.800 produtos para todos os celulares (gerando lentidão e vazamento de dados de concorrentes), o motor de sincronização do PaletScan adota uma arquitetura <strong>Seletiva, Segmentada e Econômica</strong>:</p>
+<p>Diferente de abordagens tradicionais que baixam o catálogo completo de 3.776 produtos para todos os celulares (gerando lentidão e vazamento de dados de concorrentes), o motor de sincronização do PaletScan adota uma arquitetura <strong>Seletiva, Segmentada e Econômica</strong>:</p>
 <pre class="mermaid"><code>flowchart TD
     SYNC_START["⚡ Início do Ciclo de Sincronização: syncLocalDB()"]
 
@@ -1360,17 +1423,17 @@
 
     GET_ACCESS --&gt; CALC_SCOPE{"Usuário possui acesso a todas as marcas?"}
 
-    CALC_SCOPE --&gt;|Sim - Admin ou Geral| SCOPE_ALL["brandHashScope = 'all'\nAlvo: Catálogo Pleno (~3.800 SKUs)"]
+    CALC_SCOPE --&gt;|Sim - Admin ou Geral| SCOPE_ALL["brandHashScope = 'all'\nAlvo: Catálogo Pleno (3.776 SKUs)"]
     CALC_SCOPE --&gt;|Não - Promotor Restrito| SCOPE_BRAND["brandHashScope = 'sadia|perdigao'\nAlvo: Fatia Estrita (~250 SKUs)"]
 
-    SCOPE_ALL --&gt; CHECK_HASH["2. Avaliação da Assinatura de Mudança Remota\ncurrentRemoteHash = (maxDate + count + brandHashScope)"]
+    SCOPE_ALL --&gt; CHECK_HASH["2. Avaliação da Assinatura de Mudança Remota\ncurrentRemoteHash = (maxDate + maxCbDate + count + scope)"]
     SCOPE_BRAND --&gt; CHECK_HASH
 
     CHECK_HASH --&gt; HASH_MATCH{"Hash Remoto == ps_pwa_db_hash Local?"}
 
-    HASH_MATCH --&gt;|Sim - Catálogo Inalterado| SKIP_PULL["🚀 Catálogo Inalterado (&lt; 10ms)\nPula download de produtos e parte direto para paletes"]
+    HASH_MATCH --&gt;|Sim - Catálogo Inalterado| SKIP_PULL["🚀 Catálogo Inalterado em menos de 10ms\nPula download de produtos e parte direto para paletes"]
 
-    HASH_MATCH --&gt;|Não - Novo Escopo ou Atualização Remota| SELECTIVE_PULL["3. Download Seletivo no Supabase (vw_produtos_com_marcas)\nFiltra: in('marca_nome', marcasPermitidas)\nTrafega &lt; 100 KB para promotores"]
+    HASH_MATCH --&gt;|Não - Novo Escopo ou Atualização Remota| SELECTIVE_PULL["3. Download Seletivo no Supabase (vw_produtos_com_marcas)\nFiltra: in('marca_nome', marcasPermitidas)\nTrafega menos de 100 KB para promotores"]
 
     SELECTIVE_PULL --&gt; PULL_CB["4. Otimização no Pull de Códigos de Barras:\n- Se 0 produtos: dispara 0 requisições\n- Se catálogo restrito: resolve em 1 única requisição leve"]
 
@@ -1384,11 +1447,11 @@
 <h3 id="principais-pilares-da-sincronizacao-local-first">Principais Pilares da Sincronização Local-First:</h3>
 <ol>
 <li><strong>Cache Inteligente por Hash de Escopo (<code>brandHashScope</code>)</strong>:</li>
-<li>A fórmula da chave de hash incorpora as marcas outorgadas ao operador:
+<li>A fórmula da chave de hash incorpora as marcas outorgadas ao operador e a última mutação de códigos de barras (<code>maxCbDate</code>):
      <div class="language-typescript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">brandHashScope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">brandAccess</span><span class="p">.</span><span class="nx">acessoTodasMarcas</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="o">?</span><span class="w"> </span><span class="s1">'all'</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">brandAccess</span><span class="p">.</span><span class="nx">marcasPermitidas</span><span class="p">.</span><span class="nx">slice</span><span class="p">().</span><span class="nx">sort</span><span class="p">().</span><span class="nx">map</span><span class="p">(</span><span class="nx">m</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">m</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">trim</span><span class="p">()).</span><span class="nx">join</span><span class="p">(</span><span class="s1">'|'</span><span class="p">);</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nx">currentRemoteHash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">maxProdDate</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">remoteProdCount</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">remoteCbCount</span><span class="si">}</span><span class="sb">_v51_catalog_3684_update_</span><span class="si">${</span><span class="nx">brandHashScope</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nx">currentRemoteHash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">maxProdDate</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">maxCbDate</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">remoteProdCount</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">remoteCbCount</span><span class="si">}</span><span class="sb">_v54_catalog_update_</span><span class="si">${</span><span class="nx">brandHashScope</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
 </span></code></pre></div></li>
 <li>Ao reabrir o PWA, a checagem leva <strong>menos de 10ms</strong>. Caso o catálogo do promotor não tenha sofrido alterações na indústria, o app <strong>não consome dados de rede nem recarrega tabelas</strong>.</li>
 <li>Se o promotor fizer logout e entrar um promotor de marca concorrente, o <code>brandHashScope</code> se altera instantaneamente, forçando a invalidação imediata e o download apenas da nova fatia.</li>
@@ -1400,11 +1463,10 @@
 <li><strong>Telemetria de Sincronização Fidedigna (<a href="file:///root/repo_pwa/components/StatusSincronizacao.tsx"><code>StatusSincronizacao.tsx</code></a>)</strong>:</li>
 <li>A pílula de sincronização na barra de navegação calcula o status com base no escopo autorizado:<ul>
 <li>Promotor BRF (248 produtos autorizados): exibe <code>Sincronizado (248)</code> com badge verde;</li>
-<li>Administrador Geral (3.800 produtos): exibe <code>Sincronizado (3800)</code>.</li>
+<li>Administrador Geral (3.776 produtos): exibe <code>Sincronizado (3776)</code>.</li>
 </ul>
 </li>
 </ol>
-<hr />
 <h2 id="4-fila-offline-pending_criacoes-expurgo-imediato-anti-duplicacao">🛡️ 4. Fila Offline <code>pending_criacoes</code> &amp; Expurgo Imediato Anti-Duplicação</h2>
 <p>Um dos desafios mais sutis em aplicações móveis industriais é a <strong>duplicação de registros por sincronização concorrente</strong>.</p>
 <h3 id="o-cenario-de-corrida-race-condition">O Cenário de Corrida (Race Condition):</h3>
@@ -1431,7 +1493,6 @@
     PURGE --&gt; SYNC_SAFE["4. Sincronizador de fundo não encontra duplicatas\nNenhum duplo envio ocorre no Supabase"]
 
     RES --&gt;|Não ou Falha de Rede| KEEP["5. Item Permanece na Fila Local\nSerá sincronizado automaticamente na reconexão física"]</code></pre>
-<hr />
 <h2 id="5-barreira-de-idempotencia-temporal-no-backend-paletelifecyclets">⏱️ 5. Barreira de Idempotência Temporal no Backend (<code>paleteLifecycle.ts</code>)</h2>
 <p>Como rede industrial em galpões de alvenaria e câmaras frigoríficas pode reenviar pacotes TCP ou o operador pode dar duplo clique rápido no botão tátil do smartphone, o backend implementa uma <strong>Barreira de Idempotência Temporal de 30 Segundos</strong>:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1446,12 +1507,27 @@
 <li><strong>Escopo da Proteção</strong>: Eventos de criação inicial e adições de produtos ficam blindados contra reenvios acidentais.</li>
 <li><strong>Janela Temporal Calibrada</strong>: O período de 30 segundos cobre confortavelmente oscilações de conexão e retentativas automáticas de Service Workers e navegadores.</li>
 </ul>
-<hr />
 <h2 id="6-invariantes-estritos-de-schema-do-watermelondb">📐 6. Invariantes Estritos de Schema do WatermelonDB</h2>
 <p>Para evitar travamentos silenciosos no motor de banco local no smartphone:
-* Colunas de carimbo de tempo gerenciadas pelo motor (como <code>updated_at</code> e <code>created_at</code>) devem ser estritamente do tipo <code>number</code> e <strong>não opcionais</strong> (<code>isOptional: false</code>).
-* Qualquer migração ou schema que marque <code>updated_at</code> como opcional dispara erro de invariante no WatermelonDB (<code>Diagnostic error: updated_at must be of type number and not optional</code>).
-* A arquitetura garante que todos os schemas e migrações sigam rigorosamente a tipagem numérica invariante.</p>
+- Colunas de carimbo de tempo gerenciadas pelo motor (como <code>updated_at</code> e <code>created_at</code>) devem ser estritamente do tipo <code>number</code> e <strong>não opcionais</strong> (<code>isOptional: false</code>).
+- Qualquer migração ou schema que marque <code>updated_at</code> como opcional dispara erro de invariante no WatermelonDB (<code>Diagnostic error: updated_at must be of type number and not optional</code>).
+- A arquitetura garante que todos os schemas e migrações sigam rigorosamente a tipagem numérica invariante.</p>
+<h2 id="7-circuit-breaker-tri-state-de-conectividade-networkhealthts">📡 7. Circuit Breaker Tri-State de Conectividade (<code>networkHealth.ts</code>)</h2>
+<p>Para proteger o operador contra congelamento da interface durante oscilações de sinal:
+- <strong>Estados Tri-State da Rede</strong>: O sistema avalia dinamicamente os estados <code>ONLINE</code> (latência estável &lt; 1.500ms), <code>OSCILANDO</code> (perda parcial de pacotes ou latência elevada) e <code>OFFLINE</code> (blackout total de sinal na câmara).
+- <strong>Pílula de Conectividade na Base da Tela (<a href="file:///root/repo_pwa/components/NetworkStatusPill.tsx"><code>NetworkStatusPill.tsx</code></a>)</strong>: Exibe o status da conexão em formato flutuante e ergonômico, com opção de descarte rápido pelo operador para desobstruir a área de trabalho.
+- <strong>Modo Preventivo Offline</strong>: Quando a rede começa a oscilar, o circuito desarma requisições longas de rede e comuta automaticamente para gravação imediata no IndexedDB local, evitando engasgos ou telas pretas.
+- <strong>Daemon de Monitoramento Bash (<a href="file:///root/repo_pwa/scripts/network_sentinel.sh"><code>network_sentinel.sh</code></a>)</strong>: Script sentinela em segundo plano que valida conectividade contínua em ambientes Termux através de comandos integrados <code>npm run sentinel:status</code>.</p>
+<h2 id="8-auto-update-proativo-heartbeat-de-30s-prevencao-de-duplo-reload">🔄 8. Auto-Update Proativo, Heartbeat de 30s &amp; Prevenção de Duplo Reload</h2>
+<p>Para garantir que correções críticas de software cheguem aos smartphones sem exigir intervenção manual do operador:
+- <strong>Heartbeat de Verificação (30 Segundos)</strong>: Ciclo em segundo plano no <code>pages/_app.tsx</code> que consulta a existência de novos Service Workers registrados.
+- <strong>Prevenção de Recarregamento Duplo</strong>: Utiliza a chave <code>ps_manual_reload_ts</code> em <code>sessionStorage</code> para impedir que reloads automáticos colidam com recarregamentos manuais acionados pelo usuário.
+- <strong>Purga Ativa de Caches Obsoletos</strong>: Ao detectar uma nova versão, o Service Worker expurga caches legados de páginas e bundles Javascript antes de aplicar o <code>window.location.reload()</code>, assegurando inicialização limpa.</p>
+<h2 id="9-filas-de-contingencia-offline-para-reportes-e-telemetria">📦 9. Filas de Contingência Offline para Reportes e Telemetria</h2>
+<ul>
+<li><strong>Fila Offline de Divergências (<a href="file:///root/repo_pwa/lib/reportesOffline.ts"><code>lib/reportesOffline.ts</code></a>)</strong>: Divergências de cadastro apontadas na câmara fria são enfileiradas no IndexedDB e despachadas para o Supabase assim que a conexão se restabelece.</li>
+<li><strong>Fila de Logs e Telemetria DevTools (<a href="file:///root/repo_pwa/lib/clientLogBridge.ts"><code>lib/clientLogBridge.ts</code></a>)</strong>: Eventos do console Eruda e erros operacionais ocorridos sem sinal são armazenados localmente e sincronizados em lote com a tabela <code>logs_sessao</code>.</li>
+</ul>
 
 
 

@@ -699,10 +699,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#matriz-comparativa-de-papeis-operacionais" class="md-nav__link">
+  <a href="#matriz-comparativa-de-papeis-operacionais-rbac" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Matriz Comparativa de Papéis Operacionais:
+        Matriz Comparativa de Papéis Operacionais (RBAC):
       
     </span>
   </a>
@@ -786,6 +786,17 @@
     <span class="md-ellipsis">
       
         🛡️ 5. Blindagem de Sessão em Alta Concorrência (lib/serverAuth.ts)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-onboarding-e-convite-por-whatsapp-com-link-tokenizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📲 6. Onboarding e Convite por WhatsApp com Link Tokenizado
       
     </span>
   </a>
@@ -1210,10 +1221,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#matriz-comparativa-de-papeis-operacionais" class="md-nav__link">
+  <a href="#matriz-comparativa-de-papeis-operacionais-rbac" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Matriz Comparativa de Papéis Operacionais:
+        Matriz Comparativa de Papéis Operacionais (RBAC):
       
     </span>
   </a>
@@ -1303,6 +1314,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-onboarding-e-convite-por-whatsapp-com-link-tokenizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📲 6. Onboarding e Convite por WhatsApp com Link Tokenizado
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1322,7 +1344,6 @@
 
 <h1 id="autenticacao-passkeys-permissoes-granulares-supabase-rls">🔒 Autenticação, Passkeys, Permissões Granulares &amp; Supabase RLS</h1>
 <p>O <strong>PaletScan PWA</strong> dispõe de uma arquitetura de segurança multicamadas de nível corporativo que combina autenticação tradicional, biometria via Passkeys (WebAuthn FIDO2), fluxo de seleção de filiais em etapas com credenciais protegidas, controle de acesso baseado em papéis (RBAC) com suporte a matriz de privilégios independentes por filial (<code>privilegiosPorFilial</code>), restrição total de acesso a marcas e governança nativa no PostgreSQL do Supabase via <strong>Row Level Security (RLS)</strong> alimentado por tokens JWT customizados.</p>
-<hr />
 <h2 id="1-fluxo-de-autenticacao-em-etapas-passkeys-resiliencia-offline">🔐 1. Fluxo de Autenticação em Etapas, Passkeys &amp; Resiliência Offline</h2>
 <p>O acesso à aplicação adota um padrão de segurança em etapas (<em>Step-Up Authentication</em>), projetado para proteger a topologia de lojas da rede contra vazamento de metadados e oferecer alta ergonomia operacional para conferentes usando luvas térmicas no frio.</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1361,7 +1382,6 @@
 <li><strong>Auto-Logout por Inatividade (5 Minutos)</strong>: Temporizador reativo que encerra a sessão ativa caso o dispositivo fique sem interação física no chão de fábrica, evitando registros inadvertidos em coletores compartilhados. No logout, <code>ps_auth_session</code>, <code>ps_supabase_token</code> e <code>ps_active_filial</code> são limpos atômica e simultaneamente.</li>
 <li><strong>Isenção de Expiração para Operadores Fixos</strong>: Credenciais operacionais de administração (como <code>JeanBfreitas_</code>) contam com política de não-expiração forçada de senha (<code>senhaNuncaExpira: true</code>), prevenindo travamento do turno de trabalho.</li>
 </ul>
-<hr />
 <h2 id="2-matriz-de-controle-de-acesso-rbac-granular-por-filial">🛡️ 2. Matriz de Controle de Acesso (RBAC) Granular por Filial</h2>
 <p>O modelo de segurança do PaletScan PWA evoluiu de privilégios estáticos globais para uma <strong>matriz dinâmica de privilégios e marcas independentes por filial</strong> (<code>privilegiosPorFilial</code>). O mesmo usuário pode ser um operador pleno na Filial 410 e atuar como promotor restrito na Filial 411:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1377,7 +1397,7 @@
 
     APPLY_LOCAL --&gt; CONTEXT["Contexto de Operação Ativo no PWA &amp; Supabase Token"]
     APPLY_GLOBAL --&gt; CONTEXT</code></pre>
-<h3 id="matriz-comparativa-de-papeis-operacionais">Matriz Comparativa de Papéis Operacionais:</h3>
+<h3 id="matriz-comparativa-de-papeis-operacionais-rbac">Matriz Comparativa de Papéis Operacionais (RBAC):</h3>
 <table>
 <thead>
 <tr>
@@ -1434,12 +1454,12 @@
 <td style="text-align: left;"><strong>Cadastrar SKUs no Catálogo</strong></td>
 <td style="text-align: left;"><code>podeCadastrarProduto</code></td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌ (Geralmente falso)</td>
+<td style="text-align: center;">❌ (Default Deny)</td>
 <td style="text-align: center;">❌ (Central)</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Vincular DUN-14 / Pesar</strong></td>
+<td style="text-align: left;"><strong>Vincular DUN-14 à Caixa</strong></td>
 <td style="text-align: left;"><code>podeVincularDun</code></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">🔒 Se autorizado (sua marca)</td>
@@ -1450,12 +1470,12 @@
 <td style="text-align: left;"><strong>Editar Vaga de Palete</strong></td>
 <td style="text-align: left;"><code>podeEditarVaga</code></td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌ (Default Deny)</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Editar Atributos de Produtos</strong></td>
+<td style="text-align: left;"><strong>Editar Atributos de Descrição</strong></td>
 <td style="text-align: left;"><code>podeEditarDescricaoProduto</code></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">🔒 Se autorizado (sua marca)</td>
@@ -1463,7 +1483,71 @@
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Exportar Relatórios</strong></td>
+<td style="text-align: left;"><strong>Editar Marca do Produto</strong></td>
+<td style="text-align: left;"><code>podeEditarMarcaProduto</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌ (Default Deny)</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Editar Conservação / Classe</strong></td>
+<td style="text-align: left;"><code>podeEditarConservacao</code> / <code>podeEditarClasse</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌ (Default Deny)</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Editar Código de Balança (PLU)</strong></td>
+<td style="text-align: left;"><code>podeEditarPesarCod</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">🔒 Se autorizado (sua marca)</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Modo Conferência de Estoque</strong></td>
+<td style="text-align: left;"><code>podeModoConferencia</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌ (Default Deny)</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Auditoria &amp; Histórico</strong></td>
+<td style="text-align: left;"><code>podeAuditoria</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌ (Oculta módulo na tela inicial)</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gerenciar Watchlist / Radar</strong></td>
+<td style="text-align: left;"><code>podeAdicionarRadar</code> / <code>podeRemoverRadar</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">🔒 Apenas sua marca</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gerar e Imprimir QR Code</strong></td>
+<td style="text-align: left;"><code>podeGerarQrCode</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌ (Default Deny)</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Acessar Eruda DevTools Móvel</strong></td>
+<td style="text-align: left;"><code>podeDevTools</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Exportar Relatórios PDF/CSV</strong></td>
 <td style="text-align: left;"><code>podeExportarRelatorio</code></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">🔒 Se atribuído</td>
@@ -1471,15 +1555,7 @@
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Gerenciar Watchlist / Radar</strong></td>
-<td style="text-align: left;"><code>podeAdicionarRadar</code></td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">🔒 Apenas sua marca</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Acesso a Marcas</strong></td>
+<td style="text-align: left;"><strong>Acesso Amplo a Todas Marcas</strong></td>
 <td style="text-align: left;"><code>acessoTodasMarcas</code></td>
 <td style="text-align: center;"><code>true</code> (Universal)</td>
 <td style="text-align: center;"><code>false</code> (<code>marcasPermitidas: [...]</code>)</td>
@@ -1488,7 +1564,9 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<blockquote>
+<p>🛡️ <strong>Política de Default Deny:</strong> Todo novo privilégio ou perfil sem concessão expressa assume o valor estrito <code>false</code>. Operadores com permissões parciais têm módulos restritos automaticamente ocultados da tela inicial.</p>
+</blockquote>
 <h2 id="3-restricao-total-de-acesso-a-marcas-brand-guardrail-absoluto">🏬 3. Restrição Total de Acesso a Marcas (Brand Guardrail Absoluto)</h2>
 <p>Em redes varejistas e atacarejos, promotores de vendas terceirizados (ex: <strong>BRF - Sadia/Perdigão</strong> ou <strong>JBS - Seara</strong>) utilizam coletores para auditar validades. Para garantir o sigilo concorrencial e a governança de estoque:</p>
 <blockquote>
@@ -1599,7 +1677,6 @@
 </span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">  </span><span class="p">)</span>
 </span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="p">);</span>
 </span></code></pre></div>
-<hr />
 <h2 id="5-blindagem-de-sessao-em-alta-concorrencia-libserverauthts">🛡️ 5. Blindagem de Sessão em Alta Concorrência (<code>lib/serverAuth.ts</code>)</h2>
 <p>Durante a alternância dinâmica de filial entre Produção (<code>410</code>) e Homologação (<code>999</code>), requisições de API (<code>switch-filial</code>, <code>filiais</code>, <code>usuarios</code>, <code>logs</code>, <code>pendencias</code>) utilizam o helper centralizado <a href="file:///root/repo_pwa/lib/serverAuth.ts"><code>lib/serverAuth.ts</code></a>:</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1625,6 +1702,11 @@
 <li><strong>Eliminação de Condições de Corrida</strong>: Previne o falso bloqueio de permissão ("você não tem permissão para trocar de filial") ao alternar de ambiente em dispositivos móveis sob latência de rede.</li>
 <li><strong>Auditoria Contínua</strong>: Cada alternância de filial grava um evento rastreável em <code>logs_sessao</code> no Supabase com data, identificador do operador e ambientes de origem e destino.</li>
 </ul>
+<h2 id="6-onboarding-e-convite-por-whatsapp-com-link-tokenizado">📲 6. Onboarding e Convite por WhatsApp com Link Tokenizado</h2>
+<p>Para agilizar o credenciamento de novos operadores e promotores no chão de fábrica:
+- <strong>Disparo Imediato no Cadastro (<a href="file:///root/repo_pwa/components/ConviteWhatsAppModal.tsx"><code>ConviteWhatsAppModal.tsx</code></a>)</strong>: Ao salvar ou editar um usuário no painel administrativo <code>/admin</code>, o sistema abre automaticamente um modal com atalho para envio de convite.
+- <strong>Tokens Criptográficos de Convite (<a href="file:///root/repo_pwa/lib/inviteToken.ts"><code>lib/inviteToken.ts</code></a>)</strong>: Gera links assinados com prazo de expiração configurado, embutindo filial de destino e privilégios outorgados.
+- <strong>Mensagem Formatada para WhatsApp</strong>: O botão <em>"Enviar Convite via WhatsApp"</em> abre a URI <code>whatsapp://send</code> com texto de boas-vindas pronto, instruções de login e o link direto para instalação e abertura do PWA no smartphone.</p>
 
 
 
