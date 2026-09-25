@@ -13,7 +13,7 @@ async function updateSupabaseLocalImageUrls() {
   console.log('🔄 === INICIANDO PADRONIZAÇÃO COMPLETA DE URLs DE IMAGEM NO SUPABASE ===\n');
 
   const publicImgDir = '/root/repo_pwa/public/imagens_produtos';
-  const auroraPreparedDir = '/root/projetos-scraping/scraping-aurora/imagens_preparadas';
+  const auroraPreparedDir = path.join(process.cwd(), 'images', 'processed');
 
   // 1. Carregar TODOS os EANs da tabela codigos_barras sem filtro restritivo de tipo
   let from = 0;

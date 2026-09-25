@@ -45,8 +45,6 @@ const BASE_DIR = path.resolve(process.cwd());
 const STAGING_DIR = path.join(BASE_DIR, 'staging');
 const STAGING_FILE = path.join(STAGING_DIR, 'aurora_staging.json');
 const STAGING_UUID_FILE = path.join(STAGING_DIR, 'aurora_staging_uuid.json');
-const LEGACY_DB_PATH = '/root/projetos-scraping/scraping-aurora/aurora_catalogo.db';
-const LEGACY_SITEMAP_JSON = '/root/projetos-scraping/scraping-aurora/sitemap_aurora.json';
 const SITEMAP_URL = 'https://www.auroraalimentos.com.br/produto-sitemap.xml';
 
 export interface RawAuroraProduct {
@@ -99,40 +97,65 @@ export async function fetchLiveSitemap(): Promise<SitemapEntry[]> {
       console.log(`[+] Sitemap ao vivo lido: ${entries.length} URLs mapeadas.`);
     }
   } catch (err: any) {
-    console.warn(`[!] Aviso no sitemap ao vivo: ${err.message}. Carregando base sitemap local...`);
-  }
-
-  // Carrega sitemap JSON local se necessário para complementar
-  if (fs.existsSync(LEGACY_SITEMAP_JSON)) {
-    try {
-      const legacyEntries: SitemapEntry[] = JSON.parse(fs.readFileSync(LEGACY_SITEMAP_JSON, 'utf-8'));
-      const existingUrls = new Set(entries.map(e => e.url));
-      for (const leg of legacyEntries) {
-        if (!existingUrls.has(leg.url) && leg.image_url) {
-          entries.push(leg);
-        }
-      }
-      console.log(`[+] Sitemap consolidado com base salva: ${entries.length} URLs com imagens.`);
-    } catch {}
+    console.warn(`[!] Aviso no sitemap ao vivo: ${err.message}.`);
   }
 
   return entries;
 }
 
 export function readLegacyDatabase(): RawAuroraProduct[] {
-  if (!fs.existsSync(LEGACY_DB_PATH)) {
-    console.error(`[!] Banco de dados legado não encontrado em: ${LEGACY_DB_PATH}`);
+  if (!fs.existsSync(STAGING_FILE)) {
+    console.error(`[!] Staging da Aurora não encontrado em: ${STAGING_FILE}`);
     return [];
   }
 
-  const pythonCmd = `python3 -c "import sqlite3, json; conn = sqlite3.connect('${LEGACY_DB_PATH}'); conn.row_factory = sqlite3.Row; c = conn.cursor(); c.execute('SELECT * FROM produtos;'); print(json.dumps([dict(r) for r in c.fetchall()], ensure_ascii=False))"`;
   try {
-    const rawJson = execSync(pythonCmd, { encoding: 'utf-8' });
-    const products: RawAuroraProduct[] = JSON.parse(rawJson);
-    console.log(`[+] Lidos ${products.length} produtos do catálogo legado da Aurora.`);
+    const rawContent = fs.readFileSync(STAGING_FILE, 'utf-8');
+    const staging = JSON.parse(rawContent);
+    if (!staging.produtos || !Array.isArray(staging.produtos)) return [];
+
+    const cbsByProduct = new Map<string, { sku?: string; ean?: string; dun?: string }>();
+    if (Array.isArray(staging.codigos_barras)) {
+      for (const cb of staging.codigos_barras) {
+        const pId = cb.produto_id;
+        if (!cbsByProduct.has(pId)) cbsByProduct.set(pId, {});
+        const group = cbsByProduct.get(pId)!;
+        const tipo = (cb.tipo || '').toUpperCase();
+        if (tipo === 'SKU') group.sku = cb.codigo;
+        else if (tipo === 'EAN') group.ean = cb.codigo;
+        else if (tipo === 'DUN') group.dun = cb.codigo;
+      }
+    }
+
+    const marcasMap = new Map<string, string>();
+    if (Array.isArray(staging.marcas)) {
+      for (const m of staging.marcas) {
+        marcasMap.set(m.id, m.nome);
+      }
+    }
+
+    const products: RawAuroraProduct[] = [];
+    for (const p of staging.produtos) {
+      const cbs = cbsByProduct.get(p.id) || {};
+      const sku = cbs.sku || (p.id ? p.id.replace('prod_aurora_', '') : '');
+      products.push({
+        sku,
+        title: p.descricao_original || p.descricao_padronizada || '',
+        descrFiscal: p.descricao_original || '',
+        ean: cbs.ean || '',
+        dun: cbs.dun || '',
+        marca: marcasMap.get(p.marca_id) || 'Aurora',
+        classe: p.classe || '',
+        conservacao: p.conservacao || '',
+        pesoLiquido: p.peso_gramas ? `${p.peso_gramas}g` : '',
+        image_url: p.imagem_url || ''
+      });
+    }
+
+    console.log(`[+] Lidos ${products.length} produtos da base consolidada da Aurora (Staging).`);
     return products;
   } catch (err: any) {
-    console.error(`[!] Erro ao executar dump no banco SQLite: ${err.message}`);
+    console.error(`[!] Erro ao ler base interna Aurora: ${err.message}`);
     return [];
   }
 }
@@ -384,7 +407,7 @@ export async function runAuroraScraper() {
     let imageStatus: 'aprovado' | 'pendente_aprovacao' | 'sem_imagem' = 'sem_imagem';
 
     const barcodePrimary = eanClean || dunClean || rawProd.sku;
-    const localPreparedPath = `/root/projetos-scraping/scraping-aurora/imagens_preparadas/${barcodePrimary}.webp`;
+    const localPreparedPath = path.join(BASE_DIR, 'images', 'processed', `${barcodePrimary}.webp`);
 
     // 1. Tenta imagem estática local preparada primeiro (prioridade máxima por ser a embalagem exata do EAN)
     if (fs.existsSync(localPreparedPath)) {
@@ -480,6 +503,12 @@ export async function runAuroraScraper() {
     produtos: produtosList,
     codigos_barras: codigosBarrasList
   };
+
+  // Proteção de integridade: nunca sobrescreve o staging se o total de produtos for zero
+  if (produtosList.length === 0) {
+    console.warn(`[!] Aviso de segurança: O scraper Aurora produziu 0 produtos. Staging preservado.`);
+    return stagingData;
+  }
 
   // Salva staging de IDs texto
   fs.writeFileSync(STAGING_FILE, JSON.stringify(stagingData, null, 2), 'utf-8');

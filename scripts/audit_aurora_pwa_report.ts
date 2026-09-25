@@ -5,7 +5,7 @@ async function auditAuroraPwaReport() {
   const pwaJsonPath = '/root/repo_pwa/public/produtos.json';
   const auroraStagingPath = '/root/paletscan-etl/staging/aurora_staging_uuid.json';
   const publicImgDir = '/root/repo_pwa/public/imagens_produtos';
-  const auroraPreparedDir = '/root/projetos-scraping/scraping-aurora/imagens_preparadas';
+  const auroraPreparedDir = path.join(process.cwd(), 'images', 'processed');
 
   const prodsPwa = JSON.parse(fs.readFileSync(pwaJsonPath, 'utf-8'));
   const auroraStaging = JSON.parse(fs.readFileSync(auroraStagingPath, 'utf-8'));

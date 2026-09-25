@@ -1,34 +1,5136 @@
 [
   {
-    "id": "68375db3-c99c-5ce4-b5b7-95517d4920fa",
-    "marca": "Eder",
-    "sku": "712",
-    "ean": "7894904069774",
-    "dun": "",
-    "descricao": "Bacon Tablete - Eder (Pesar)",
+    "id": "31e4a6c9-4548-5560-a262-1b9b843bb28e",
+    "marca": "Aurora",
+    "sku": "463",
+    "ean": "7891164004637",
+    "dun": "87891164004633",
+    "descricao": "Linguiça Churrasco Congelada 700g Cx. de 16,8kg - 24 Pcts. de 700g",
     "alteracoes": [
       {
         "campo": "Imagem (URL)",
-        "de": "https://www.searafoodsolutions.com.br/files/2025/07/233149-bacon-tablete-eder.png",
-        "para": "https://www.searafoodsolutions.com.br/files/2024/01/233149-Bacon-Tablet-Eder.png"
+        "de": "/imagens_produtos/7891164004637.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LINGUICA-CHURRASCO-CONGELADA-AURORA-700G-463.png"
       }
     ],
-    "atualizado_em": "2026-09-24T06:11:29.069Z"
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
   },
   {
-    "id": "395bb805-7085-5796-a168-ee2fd4086055",
-    "marca": "Seara",
-    "sku": "",
-    "ean": "7894904605002",
-    "dun": "",
-    "descricao": "Lasanha Bolonhesa Air Fryer Seara 300g",
+    "id": "0ba3704d-0e14-5531-b5f6-cf9e005bd245",
+    "marca": "Aurora",
+    "sku": "401",
+    "ean": "7891164004019",
+    "dun": "37891164004010",
+    "descricao": "Linguiça Toscana 5kg Cx. de 25kg - 5 Pcts. de 5kg",
     "alteracoes": [
       {
         "campo": "Imagem (URL)",
-        "de": "https://www.seara.com.br/wp-content/uploads/2026/09/seara-product-30178-500.webp",
-        "para": "https://www.seara.com.br/wp-content/uploads/2025/05/Lasanha-Bolonhesa-Air-Fryer-Seara-300g.png"
+        "de": "/imagens_produtos/7891164004019.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LINGUICA-TOSCANA-CONGELADA-AURORA-5-KG-401-novo-2.png"
       }
     ],
-    "atualizado_em": "2026-09-24T06:11:29.071Z"
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "2d11af14-2aa7-56cc-a15a-4efbdd9e1f35",
+    "marca": "Aurora",
+    "sku": "419",
+    "ean": "7891164004194",
+    "dun": "37891164004195",
+    "descricao": "Linguiça de Pernil 5kg Cx. de 25kg - 5 Pcts. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164004194.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LINGUICA-DE-PERNIL-RESFRIADA-AURORA-5KG-4190.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "8527cbce-04bd-5379-bd8c-a507c5fc27fd",
+    "marca": "Aurora",
+    "sku": "422",
+    "ean": "7891164004224",
+    "dun": "37891164004225",
+    "descricao": "Linguiça Churrasco 5kg Cx. de 25kg - 5 Pcts. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164004224.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LINGUICA-CHURRASCO-CONGELADA-AURORA-5-KG-422.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "4f428c92-9036-586a-ae9f-28469133c61b",
+    "marca": "Aurora",
+    "sku": "450",
+    "ean": "7891164004507",
+    "dun": "47891164004505",
+    "descricao": "Linguiça de Frango 2,5kg Cx. de 25kg - 10 Pcts. de 2,5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164004507.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LINGUICA-DE-FRANGO-CONGELADA-AURORA-25-KG-450.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "be0dbfb5-ed1b-5986-94a4-e5fef9828542",
+    "marca": "Aurora",
+    "sku": "1642",
+    "ean": "7891164016425",
+    "dun": "37891164016426",
+    "descricao": "Linguiça de Frango 5kg Cx. de 25kg - 5 Pcts. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016425.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LINGUICA-DE-FRANGO-CONGELADA-5KG-1642.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "747dc86e-fad9-5c0f-a942-aa2bdfe57f85",
+    "marca": "Aurora",
+    "sku": "466",
+    "ean": "7891164004668",
+    "dun": "87891164004664",
+    "descricao": "Linguiça de Pernil Resfriada 700g Cx. de 8,4kg - 12 Pcts. de 700g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164004668.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LINGUICA-PERNIL-RESFRIADA-700G-466.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "f5f142b1-10ef-5ad6-8612-99e859cee2dd",
+    "marca": "Aurora",
+    "sku": "4190",
+    "ean": "7891164041908",
+    "dun": "37891164041909",
+    "descricao": "Linguiça de Pernil Resfriada 5kg Cx. de 25kg - 5 Pcts. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164041908.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LINGUICA-DE-PERNIL-RESFRIADA-AURORA-5KG-4190.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "4abb4da1-68cc-50f0-9d5d-b08dcb187a10",
+    "marca": "Aurora",
+    "sku": "464",
+    "ean": "7891164004644",
+    "dun": "87891164004640",
+    "descricao": "Linguiça Churrasco Resfriada 700g Cx. de 8,4kg - 12 Pcts. de 700g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164004644.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LINGUIC%CC%A7A-CHURRASCO-RESFRIADA-AURORA-700G-464-1_Prancheta-1-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "e471b43b-bdec-5f4b-bbab-774c25ed79ae",
+    "marca": "Aurora",
+    "sku": "452",
+    "ean": "7891164004521",
+    "dun": "17891164004528",
+    "descricao": "Linguiça Churrasco Resfriada 5kg Cx. de 10kg - 2 Pcts. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164004521.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LINGUICA-CHURRASCO-RESFRIADA-5kg-452.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "e1327bec-e280-502d-b6ed-e7588c218f62",
+    "marca": "Aurora",
+    "sku": "1739",
+    "ean": "7891164017392",
+    "dun": "37891164017393",
+    "descricao": "Linguiça de Frango Resfriada 5kg Cx. de 25kg - 5 Pcts. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164017392.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LINGUICA-DE-FRANGO-RESFRIADA-5KG-1739.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "59dba50c-9a22-5281-80bd-5cf77b0508e1",
+    "marca": "Aurora",
+    "sku": "581",
+    "ean": "7891164005818",
+    "dun": "47891164005816",
+    "descricao": "Linguiça Portuguesa 400g Cx. de 5,2kg - 13 Pcts. de 400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005818.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/581-LINGUICA-TIPO-PORTUGUESA.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "a3b07664-d13a-514a-8c97-b91d5e7a1923",
+    "marca": "Aurora",
+    "sku": "582",
+    "ean": "7891164005825",
+    "dun": "47891164005823",
+    "descricao": "Linguiça Paio 400g Cx. de 5,2kg - 13 Pcts. de 400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005825.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/582-PAIO-400G.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "fc017a02-16e6-55e5-af94-aa6dd2e5c630",
+    "marca": "Aurora",
+    "sku": "583",
+    "ean": "7891164005832",
+    "dun": "47891164005830",
+    "descricao": "Linguiça Calabresa Defumada 400g Cx. de 5,2kg - 13 Pcts. de 400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005832.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/583-LINGUICA-CALABRESA-400G-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "2cf198bd-71bd-596c-9a32-0b096367ba2b",
+    "marca": "Aurora",
+    "sku": "575",
+    "ean": "7891164005757",
+    "dun": "47891164005755",
+    "descricao": "Linguiça Fininha Defumada 220g Cx. de 4,4kg - 20 Pcts. de 220g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005757.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/575-linguica-fininha-defumada-220g-1-1.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.131Z"
+  },
+  {
+    "id": "8ffd0ea0-9046-55bb-94ea-adf4cf8b8149",
+    "marca": "Aurora",
+    "sku": "547",
+    "ean": "7891164005474",
+    "dun": "37891164005475",
+    "descricao": "Linguiça Mista Fina Defumada 5kg Cx. de 25kg - 5 Pcts. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005474.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/547-Linguica-mista-fina-defumada-5kg.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "12019b65-cbe9-59d6-acff-4042286cc94d",
+    "marca": "Aurora",
+    "sku": "573",
+    "ean": "7891164005733",
+    "dun": "57891164005738",
+    "descricao": "Linguiça Calabresa Reta Defumada 3kg Cx. de 15kg - 5 Pcts. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005733.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/573-CALABRESA-RETA-5-KG.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "96c299c1-f68d-53d6-95ea-05b7deb82233",
+    "marca": "Aurora",
+    "sku": "593",
+    "ean": "7891164005931",
+    "dun": "17891164005938",
+    "descricao": "Linguiça Calabresa Defumada Fatiada 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005931.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/593-CALABRESA-FATIADA.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "a4db20e9-6249-52aa-9a17-88b45136222b",
+    "marca": "Aurora",
+    "sku": "589",
+    "ean": "7891164005894",
+    "dun": "47891164005892",
+    "descricao": "Mortadela Defumada 4kg Cx. de 8kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005894.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/589-MORTADELA-DEFUMADA-PECA.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "4ed03036-c937-5dd1-9196-3c209c079059",
+    "marca": "Aurora",
+    "sku": "670",
+    "ean": "7891164006709",
+    "dun": "17891164006706",
+    "descricao": "Mortadela Tradicional 5kg Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164006709.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/MORTADELA-AURORA-TRADICIONAL-5KG-670.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "4e843124-aafc-5169-ba0a-7875fb5a17e1",
+    "marca": "Aurora",
+    "sku": "524",
+    "ean": "7891164005245",
+    "dun": "17891164005242",
+    "descricao": "Mortadela 1kg Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005245.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/MORTADELA-SEM-TOUCINHO-AURORA-1KG-532.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "ef701937-ef49-5438-9b2b-b63a2b631996",
+    "marca": "Aurora",
+    "sku": "532",
+    "ean": "7891164005320",
+    "dun": "17891164005327",
+    "descricao": "Mortadela sem Toucinho 1kg Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005320.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/MORTADELA-SEM-TOUCINHO-AURORA-1KG-532.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "94bb5c25-06bd-5f65-8f8f-abea7849f527",
+    "marca": "Aurora",
+    "sku": "568",
+    "ean": "7891164005689",
+    "dun": "57891164005684",
+    "descricao": "Mortadela sem Toucinho 2,5kg Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005689.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/MORTADELA-SEM-TOUCINHO-TUBULAR-AURORA-25KG-568.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "ef93198c-53a4-5c14-ae23-73075582f179",
+    "marca": "Aurora",
+    "sku": "684",
+    "ean": "7891164006846",
+    "dun": "47891164006844",
+    "descricao": "Mortadela 400g Cx. de 6kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164006846.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/684-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "e44f5a48-ec17-56f2-8942-4e2c0cb05ca7",
+    "marca": "Aurora",
+    "sku": "685",
+    "ean": "7891164006853",
+    "dun": "47891164006851",
+    "descricao": "Mortadela sem Toucinho 400g Cx. de 6kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164006853.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/MORTADELA-SEM-TOUCINHO-AURORA-400G-685.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "9b600fca-b170-555b-9072-3ee70ecdd5af",
+    "marca": "Aurora",
+    "sku": "686",
+    "ean": "7891164006860",
+    "dun": "47891164006868",
+    "descricao": "Mortadela de Frango 400g Cx. de 6kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164006860.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/mockup-FACH1-1890-TP-193330-V60-Mortadela-Aurora-400g-Rev01_2.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "3646182d-8a0f-5a99-8dd9-8e57d8148f73",
+    "marca": "Aurora",
+    "sku": "713",
+    "ean": "7891164016074",
+    "dun": "47891164007131",
+    "descricao": "Salsicha de Frango Hot Dog 500g Cx. de 6kg - 12 Pcts. de 500g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016074.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/SALSICHA-DE-FRANGO-AURORA-500G-713-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "54014a79-89c0-59d7-aa95-201a2b6d21e6",
+    "marca": "Aurora",
+    "sku": "5410",
+    "ean": "7891164005412",
+    "dun": "47891164054104",
+    "descricao": "Salsicha Hot Dog 500g Cx. de 6kg - 12 Pcts. de 500g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005412.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/SALSICHA-HOT-DOG-AURORA-500G-5410.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "b561adad-00b2-5f4c-b346-fcc2a823d2a6",
+    "marca": "Aurora",
+    "sku": "517",
+    "ean": "7891164005177",
+    "dun": "77891164005176",
+    "descricao": "Apresuntado 3,7kg Cx. de 7,4kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005177.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/APRESUNTADO-AURORA-3.7-KG-517.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "ad180842-1648-5bf7-b2b3-8eb03e432b86",
+    "marca": "Aurora",
+    "sku": "561",
+    "ean": "7891164005610",
+    "dun": "77891164005619",
+    "descricao": "Presunto Cozido S/ Capa de Gordura 3,5kg Cx. de 7kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005610.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/PRESUNTO-COZIDO-SEM-CAPA-DE-GORDURA-AURORA-35KG-561.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "a5064c8c-a552-53dd-ad3e-21b42b790a8e",
+    "marca": "Aurora",
+    "sku": "565",
+    "ean": "7891164005658",
+    "dun": "77891164005657",
+    "descricao": "Presunto de Frango 3,5kg Cx. de 7kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005658.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/PRESUNTO-DE-FRANGO-AURORA-35KG-565-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "aea23170-8e4b-58b9-9015-e3b16f3bb7e8",
+    "marca": "Aurora",
+    "sku": "1670",
+    "ean": "7891164016708",
+    "dun": "47891164016706",
+    "descricao": "Lanche de Frango 3,7kg Cx. de 7,4kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016708.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/HAMBURGUER-DE-FRANGO-GRANEL-AURORA-36X56G-2008.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "1d935461-b065-5c83-b9aa-233c336b8457",
+    "marca": "Aurora",
+    "sku": "1770",
+    "ean": "7891164017705",
+    "dun": "27891164017709",
+    "descricao": "Lanche de Frango Quadrado 2,5kg Cx. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164017705.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/HAMBURGUER-DE-FRANGO-GRANEL-AURORA-36X56G-2008.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "24680ba2-0ef6-5be0-b189-f61a176a13b8",
+    "marca": "Aurora",
+    "sku": "689",
+    "ean": "7891164116798",
+    "dun": "47891164006899",
+    "descricao": "Peito de Frango Defumado Fatiado 200g Cx. de 2,4kg - 12 Pcts. de 200g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164116798.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/09/PEITO-DE-FRANGO-BEM-LEVE-200g-689-2.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "46b811c6-0749-576c-a1b2-95f5f4b6962a",
+    "marca": "Aurora",
+    "sku": "620",
+    "ean": "7891164006204",
+    "dun": "87891164006200",
+    "descricao": "Salame Fatiado 100g Cx. de 3,5kg - 35 Pcts. de 100g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164006204.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/mockup-Salame-Italiano-Fatiado-100g-Rev01-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "f7e8ea10-4ec7-5777-b7e9-62d8e2251ee5",
+    "marca": "Aurora",
+    "sku": "625",
+    "ean": "7891164006259",
+    "dun": "87891164006255",
+    "descricao": "Copa Fatiada 100g Cx. de 3,5kg - 35 Pcts. de 100g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164006259.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/mockup-IACH-625-FL-22026-V65-Copa-Fatiada-100g-Rev01_0.5x_1-removebg-preview.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "25f5a50c-daf7-5aca-b7a9-57155236482d",
+    "marca": "Aurora",
+    "sku": "631",
+    "ean": "7891164016319",
+    "dun": "47891164006318",
+    "descricao": "Mortadela de Frango Fatiada 200g Cx. de 2,4kg - 12 Pcts. de 200g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016319.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/MORTADELA-DE-FRANGO-FATIADA-AURORA-631.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "d899bf30-540f-5212-ab1a-bef470d7fc4a",
+    "marca": "Aurora",
+    "sku": "672",
+    "ean": "7891164005726",
+    "dun": "47891164006721",
+    "descricao": "Mortadela Tipo Bologna Fatiada 200g Cx. de 2,4kg - 12 Pcts. de 200g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005726.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/MORTADELA-TIPO-BOLOGNA-FATIADA-AURORA-200G-672.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "48a83b7e-0b27-585e-a748-fb6e095f3d32",
+    "marca": "Aurora",
+    "sku": "674",
+    "ean": "7891164005740",
+    "dun": "47891164006745",
+    "descricao": "Presunto Fatiado 200g Cx. de 2,4kg - 12 Pcts. de 200g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005740.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/05/PRESUNTO-COZIDO-AUR-SEM-CAPA-DE-GORDURA-FATI-200G-674-1536x1536-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "ebb107be-3530-59f5-bcfa-765da86d56b1",
+    "marca": "Aurora",
+    "sku": "677",
+    "ean": "7891164005771",
+    "dun": "47891164006776",
+    "descricao": "Apresuntado Fatiado 200g Cx. de 2,4kg - 12 Pcts. de 200g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005771.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/APRESUNTADO-AURORA-FATIADO-200G-677-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "2da32b0e-5eeb-5153-a8a8-692c26b0e411",
+    "marca": "Aurora",
+    "sku": "679",
+    "ean": "7891164005795",
+    "dun": "47891164006790",
+    "descricao": "Lombo Cozido Fatiado Aurora 200g Cx. de 2,4kg - 12 Pcts. de 200g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005795.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LOMBO-COZIDO-FATIADO-AURORA-200G-679.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "1e4a9ae8-f358-5acf-8c8d-db8e75789b7a",
+    "marca": "Aurora",
+    "sku": "698",
+    "ean": "7891164005986",
+    "dun": "47891164006981",
+    "descricao": "Mortadela Defumada Fatiada 200g Cx. de 2,4kg - 12 Pcts. de 200g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164005986.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/MORTADELA-DEFUMADA-FATIADA-698.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "614ba7fb-d284-575d-8706-ff4fe46500dc",
+    "marca": "Aurora",
+    "sku": "1388",
+    "ean": "7891164013882",
+    "dun": "87891164013888",
+    "descricao": "Presunto Fatiado Bipack 2 X 400g Cx. de 2,4kg - 12 Pcts. de 200g 2x400g 2x400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164013882.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/Presunto-fatiado-Bipack-1388.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "92a8903d-b510-5e72-a4ba-7c0330938d48",
+    "marca": "Aurora",
+    "sku": "630",
+    "ean": "7891164006303",
+    "dun": "27891164006307",
+    "descricao": "Salame Tipo Hamburguês Cx. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164006303.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/05/mockup-Salame-Hamburgues.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "c918a746-ca5a-5141-b452-adca4f1f8879",
+    "marca": "Aurora",
+    "sku": "11005",
+    "ean": "7891164110055",
+    "dun": "47891164110053",
+    "descricao": "Auroggets Queijo Caixeta 300g Cx. de 4,8kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164110055.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2707_2902_mockup-Mussarela-Fatiada-150g-Rev02@0.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "a66e21a7-fa0e-554e-b5d9-58660b250227",
+    "marca": "Aurora",
+    "sku": "11356",
+    "ean": "7891164113568",
+    "dun": "47891164113566",
+    "descricao": "Tirinhas de Frango 300g Cx. de 4,8kg - 16 Pcts. de 300g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164113568.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/HAMBURGUER-DE-FRANGO-GRANEL-AURORA-36X56G-2008.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "4a17f5fd-47d3-55d8-bd08-516c01c2df68",
+    "marca": "Aurora",
+    "sku": "11151",
+    "ean": "7891164111519",
+    "dun": "47891164111517",
+    "descricao": "Steak Granel 100g Cx. de 3kg - 30 Pcts. de 100g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164111519.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/STEAK-GRANEL-AURORA-11151-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "34845c93-2499-5125-85d1-5485368e86e4",
+    "marca": "Aurora",
+    "sku": "11351",
+    "ean": "7891164113513",
+    "dun": "47891164113511",
+    "descricao": "Peito Empanado Granel 100g Cx. de 3kg - 30 Pcts. de 100g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164113513.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/mockup-Empanado-Peito-Frango-Aurora-100g-Rev01@0.5x.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "229bd4e1-b57b-56d1-9bdf-fa966245031a",
+    "marca": "Aurora",
+    "sku": "2009",
+    "ean": "7891164020095",
+    "dun": "47891164020093",
+    "descricao": "Hambúrguer de Frango Caixeta 672g Cx. de 8,064kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164020095.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/HAMBURGUER-DE-FRANGO-CAIXEITA-AURORA-672G-2009.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "0a4b60b0-cded-5bcb-ab3e-1a42ac6e65f7",
+    "marca": "Aurora",
+    "sku": "2014",
+    "ean": "7891164020149",
+    "dun": "47891164020147",
+    "descricao": "Faroeste Burger 90 X 56 a Granel Cx. de 5,04kg - 90 Unidades de 56g (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164020149.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FAROESTE-BURGER-GRANEL-AURORA-90X56G-2014-3.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "216a5c4b-0801-530a-b57c-a5eae99608a0",
+    "marca": "Aurora",
+    "sku": "2015",
+    "ean": "7891164020156",
+    "dun": "47891164020154",
+    "descricao": "Faroeste Burger Caixeta 672g Cx. de 8,064kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164020156.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FAROESTE-BURGUER-CHURRAS-CAIXETA-AURORA-672G-2015.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "5f258ca9-7808-505b-8fda-695717f51514",
+    "marca": "Aurora",
+    "sku": "2024",
+    "ean": "",
+    "dun": "47891164020246",
+    "descricao": "Faroeste Burger 36 X 56 a Granel Cx. de 2,016kg - 36 Unidades de 56g (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164020149.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FAROESTE-BURGER-CAIXETA-AURORA-672G-2119png.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "38c7acb3-292a-5368-b9bf-a9ecbbafb52f",
+    "marca": "Aurora",
+    "sku": "2025",
+    "ean": "7891164020088",
+    "dun": "47891164020253",
+    "descricao": "Hambúrguer de Frango 36 X 56 a Granel Cx. de 2,016kg - 36 Unidades de 56g (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164020088.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/WhatsApp_Image_2025-07-18_at_18.34.10-removebg-preview.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "a525f568-01ff-578a-93c0-bd5121e0655a",
+    "marca": "Aurora",
+    "sku": "2093",
+    "ean": "7891164020019",
+    "dun": "47891164020932",
+    "descricao": "Hambúrguer de Carne Bovina Caixeta 672g Cx. de 8,064kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164020019.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/HAMBURGUER-DE-CARNE-BOVINA-CAIXETA-AURORA-672G-2093-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "ba1f9c6a-a9a3-5b8e-9fd9-6609e51716e5",
+    "marca": "Aurora",
+    "sku": "2097",
+    "ean": "",
+    "dun": "47891164020970",
+    "descricao": "Hambúrguer de Carne Bovina 60 X 90 a Granel Caixa de 5,4kg - 60 Unidades de 90g (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164020040.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/HAMBURGUER-DE-CARNE-BOVINA-GRANEL-AURORA-60X90G-2097-2.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "821b8064-29e4-569a-86ba-9978b3e90935",
+    "marca": "Aurora",
+    "sku": "2099",
+    "ean": "7891164020323",
+    "dun": "47891164020994",
+    "descricao": "Faroeste Burger Sabor Cx. de 2,016kg - 36 Unidades de 56g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164020323.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FAROESTE-BURGUER-CHURRASCO-GRANEL-AURORA-36X56G-2099.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "db9d9872-8812-5ee5-885e-7e68e0485ccd",
+    "marca": "Aurora",
+    "sku": "2119",
+    "ean": "7891164020286",
+    "dun": "47891164021199",
+    "descricao": "Faroeste Burger Sabor Churrasco Caixeta 672g Cx. de 8,064kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164020286.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FAROESTE-BURGUER-CHURRAS-CAIXETA-AURORA-672G-2015.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "0469858d-c241-5a84-b91a-35da08c8084c",
+    "marca": "Aurora",
+    "sku": "2120",
+    "ean": "7891164020903",
+    "dun": "47891164021205",
+    "descricao": "Hambúrguer Picanha Caixeta 360g Cx. de 4,320kg - 12 Unidades de 360g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164020903.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/HAMBURGUER-PICANHA-CAIXETA-AURORA-360G-2120-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "e172d59c-f4e2-51c9-91c2-086b41bef06f",
+    "marca": "Aurora",
+    "sku": "2124",
+    "ean": "7891164021245",
+    "dun": "47891164021243",
+    "descricao": "Faroeste Burger Sabor Churrasco Caixeta 6 Unidades 24 Cxt. de 336g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164021245.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FAROESTE-BURGER-CAIXETA-AURORA-672G-2119png.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "87b3a58a-ec54-5a1c-b742-842c16807358",
+    "marca": "Aurora",
+    "sku": "2010",
+    "ean": "7891164020101",
+    "dun": "47891164020109",
+    "descricao": "Almôndegas Caixeta 500g Cx. de 6kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164020101.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2026/05/1935-File-Sobrecoxa-Chimichurri-Asado-500g-4.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "202f0519-0354-58a3-a9e5-27e449583bb3",
+    "marca": "Aurora",
+    "sku": "2020",
+    "ean": "7891164020200",
+    "dun": "47891164020208",
+    "descricao": "Kibe Caixeta 500g Cx. de 6kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164020200.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2020-LO-KIBE-CAIXETA-500g_FRONT.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "09f1b075-226e-5232-98c9-807de79f058d",
+    "marca": "Aurora",
+    "sku": "2613",
+    "ean": "7891164026134",
+    "dun": "47891164026132",
+    "descricao": "Lasanha de Presunto e Queijo 600g Cx. de 4,8kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026134.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LASANHA-PRESUNTO-E-QUEIJO-AURORA-600g-2613_comprimido.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "7ab9be2e-2ceb-575f-ae70-8fe3772c4ca1",
+    "marca": "Aurora",
+    "sku": "2653",
+    "ean": "7891164026530",
+    "dun": "47891164026538",
+    "descricao": "Lasanha À Bolonhesa 600g Cx. de 4,8kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026530.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LASANHA-A-BOLONHESA-AURORA-600g-2653_comprimido.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "1c0b1e99-a934-5894-8f0d-7a4c9835bc77",
+    "marca": "Aurora",
+    "sku": "2654",
+    "ean": "7891164026547",
+    "dun": "47891164026545",
+    "descricao": "Lasanha Quatro Queijos 600g Cx. de 4,8kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026547.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LASANHA-4-QUEIJOS-AURORA-600g-2654_comprimido.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "3abab706-3d41-5593-8ff5-a8d889a7f57c",
+    "marca": "Aurora",
+    "sku": "2657",
+    "ean": "7891164026578",
+    "dun": "47891164026576",
+    "descricao": "Lasanha de Frango 600g Cx. de 4,8kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026578.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LASANHA-DE-FRANGO-AURORA-600g-2657_comprimido.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "8e1f4e78-b308-575c-ba51-e7729e57ab7b",
+    "marca": "Aurora",
+    "sku": "2675",
+    "ean": "7891164026752",
+    "dun": "47891164026750",
+    "descricao": "Lasanha Calabresa 600g Cx. de 4,8kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026752.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LASANHA-CALABRESA-AURORA-600g-2675_comprimido.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "2ac7e2d6-a83e-56f0-a3c4-ed0fc5f3a0b8",
+    "marca": "Aurora",
+    "sku": "2673",
+    "ean": "7891164026738",
+    "dun": "47891164026736",
+    "descricao": "Lasanha À Bolonhesa 1kg Cx. de 4kg - 4 Unidades de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026738.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LASANHA-AO-MOLHO-BOLONHESA-1KG-2673_comprimido.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "2706ac66-4892-5d7e-9093-77d73f348f11",
+    "marca": "Aurora",
+    "sku": "2627",
+    "ean": "7891164026271",
+    "dun": "47891164026279",
+    "descricao": "Pizza de Lombo com Requeijão e Mussarela 460g Cx. de 3,680kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026271.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/PIZZA-DE-LOMBO-COM-REQUEIJAO-E-MUSSARELA-460G.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "6e574fb6-d0b7-50ee-87b1-30c96dad0253",
+    "marca": "Aurora",
+    "sku": "2641",
+    "ean": "7891164026417",
+    "dun": "47891164026415",
+    "descricao": "Pizza de Mussarela 440g Cx. de 3,520kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026417.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/PIZZA-DE-MUSSARELA-AURORA-460G-2641-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "08b85b97-1ae2-5f9b-a7b9-59c5d537d719",
+    "marca": "Aurora",
+    "sku": "2642",
+    "ean": "7891164026424",
+    "dun": "47891164026422",
+    "descricao": "Pizza de Calabresa 460g Cx. de 3,680kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026424.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/PIZZA-DE-CALABRESA-AURORA-460G-2642.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "4ea7ba87-7b01-5238-abd0-7ac6642de19b",
+    "marca": "Aurora",
+    "sku": "2646",
+    "ean": "7891164026462",
+    "dun": "47891164026460",
+    "descricao": "Pizza de Frango com Requeijão e Mussarela 460g Cx. de 3,680kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026462.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/PIZZA-FRANGO-COM-REQUEIJAO-E-MUSSARELA-460G-2646.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "bcb857af-3160-5a31-b51f-fac5b4a818dc",
+    "marca": "Aurora",
+    "sku": "2617",
+    "ean": "7891164026172",
+    "dun": "17891164026179",
+    "descricao": "Pão de Queijo Coquetel 400g Cx. de 10kg - 25 Pcts. de 400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026172.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/11/2875_mockup-Requeijao-Queijo-Tradicional-Aurora-400g-Rev02@0.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "6daa6565-5b65-5502-84b2-7b98d81c088f",
+    "marca": "Aurora",
+    "sku": "2650",
+    "ean": "7891164026509",
+    "dun": "17891164026506",
+    "descricao": "Pão de Queijo Tradicional 400g Cx. de 10kg - 25 Pcts. de 400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026509.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2650-2651.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "6c5ec3db-b08b-58ed-9f38-b8f5f02c4ebb",
+    "marca": "Aurora",
+    "sku": "2651",
+    "ean": "7891164026516",
+    "dun": "17891164026513",
+    "descricao": "Pão de Queijo Tradicional 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026516.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2650-2651.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "06d2cccd-da16-5153-b04a-1d5292c65018",
+    "marca": "Aurora",
+    "sku": "2611",
+    "ean": "7891164026110",
+    "dun": "87891164026116",
+    "descricao": "Pão de Alho Picante 340g Cx. de 3,4kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026110.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/PA%CC%83O-DE-ALHO-PICANTE-340G-2611-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "6cf7985e-2e84-5d59-a213-914582bc2eee",
+    "marca": "Aurora",
+    "sku": "2676",
+    "ean": "7891164026769",
+    "dun": "87891164026765",
+    "descricao": "Pão de Alho 340g Cx. de 3,4kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026769.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/PAO-DE-ALHO-AURORA-340G-2676-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "7baaaddb-30c2-5a9e-8f9f-5032c5af6e87",
+    "marca": "Aurora",
+    "sku": "3500",
+    "ean": "7891164035006",
+    "dun": "47891164035004",
+    "descricao": "Filé de Tilápia IQF 400g Cx. de 7,2kg - 18 Pcts. de 400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164035006.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FILE%CC%81-DE-TILA%CC%81PIA-IQF-400G-AURORA-3500.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "4df30da6-9457-5d9a-a5ff-325e0a0c27ee",
+    "marca": "Aurora",
+    "sku": "3502",
+    "ean": "7891164035020",
+    "dun": "47891164035028",
+    "descricao": "Filé de Tilápia IQF 800g Cx. de 9,6kg - 12 Pcts. de 800g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164035020.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FILE-DE-TILAPIA-IQF-800G-AURORA-3502.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "259a8c5b-3cdf-593b-b7b2-7978b948edf5",
+    "marca": "Aurora",
+    "sku": "3503",
+    "ean": "7891164035037",
+    "dun": "47891164035035",
+    "descricao": "Posta de Tilápia IQF 400g Cx. de 7,2kg - 18 Pcts. de 400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164035037.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/POSTA-DE-TILAPIA-IQF-400G-AURORA-3503.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "d2404fd3-4626-57e8-b846-d3eac0d43ae4",
+    "marca": "Aurora",
+    "sku": "3505",
+    "ean": "7891164035051",
+    "dun": "87891164035057",
+    "descricao": "Postas de Bacalhau Cx. de 9,6kg - 12 Pcts. de 800g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164035051.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/POSTA-DE-BACALHAU-3505_comprimido.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "6a40c68c-4692-55e3-b499-721ff26b2056",
+    "marca": "Aurora",
+    "sku": "3506",
+    "ean": "7891164035068",
+    "dun": "97891164035061",
+    "descricao": "Lombos de Bacalhau Cx. de 9,6kg - 12 Pcts. de 800g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164035068.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LOMBO-DE-BACALHAU-3506_comprimido.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "a0869c92-3c61-5edd-ba58-3e294b3da30d",
+    "marca": "Aurora",
+    "sku": "3507",
+    "ean": "7891164035075",
+    "dun": "97891164035078",
+    "descricao": "Bolinhos com Bacalhau Cx. de 8,64kg - 24 Pcts. de 360g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164035075.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/BOLINHO-DE-BACALHAU-3507_comprimido.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "3c735138-c41f-5360-a4f5-9c426dfda4f2",
+    "marca": "Aurora",
+    "sku": "3508",
+    "ean": "7891164035082",
+    "dun": "27891164035086",
+    "descricao": "Bacalhau Desfiado Cx. de 5kg - 10 Pcts. de 500g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164035082.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/BACALHAU-DESFIADO-3508_comprimido.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "a9811e1e-bb7a-5f2e-ab5a-b1fd49f3955b",
+    "marca": "Aurora",
+    "sku": "2624",
+    "ean": "7891164026240",
+    "dun": "87891164026246",
+    "descricao": "Batata Palito 400g Cx. de 12kg - 30 Pcts. de 400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026240.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2624-Batata-Palito-400.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "ee83d545-857d-562c-997b-383694f62138",
+    "marca": "Aurora",
+    "sku": "2637",
+    "ean": "7891164026370",
+    "dun": "87891164026376",
+    "descricao": "Batata Palito 2kg Cx. de 12kg - 6 Pcts. de 2kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164026370.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2637-Batata-2kg.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "2698b1ba-d7cc-5e74-a88c-49bd1dc4da09",
+    "marca": "Aurora",
+    "sku": "472",
+    "ean": "7891164004729",
+    "dun": "87891164004725",
+    "descricao": "Linguiça Fininha Apimentada Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164004729.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/05/LINGUICA-CALABRESA-FINA-APIMENTADA-600G-LINHA-PREMIUM-472.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "69f098e9-aa9f-5441-803a-eb99421af8e6",
+    "marca": "Aurora",
+    "sku": "473",
+    "ean": "7891164004736",
+    "dun": "47891164004734",
+    "descricao": "Linguiça de Lombo com Alho e Ervas Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164004736.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/05/LING-LOMBO-COM-ALHO-E-ERVAS-PREMIUM-673-2-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "d0326676-bd51-5ddb-b887-6471487a4892",
+    "marca": "Aurora",
+    "sku": "474",
+    "ean": "7891164004743",
+    "dun": "47891164004741",
+    "descricao": "Linguiça Toscana com Queijo Coalho Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164004743.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/05/Recheada-Queijo-Coalho-Aurora-Premium.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "f98edafd-69a5-523f-b580-a3e5602ed689",
+    "marca": "Aurora",
+    "sku": "1757",
+    "ean": "7891164017576",
+    "dun": "87891164017572",
+    "descricao": "Filé de Sobrecoxa Chimichurri Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164017576.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/05/FILE-SOBRECOXA-CHIMICHURRI-800g-1757-copia.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "b1389057-c9c5-5778-98c6-2bde47873056",
+    "marca": "Aurora",
+    "sku": "1429",
+    "ean": "7891164014292",
+    "dun": "47891164014290",
+    "descricao": "Espetinho de Panceta Suína Cx. de 8kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164014292.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/08/1428-PANCETA-SUINA.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "7ca8f047-512f-5cdb-b32a-18b6e1cd900d",
+    "marca": "Aurora",
+    "sku": "1394",
+    "ean": "7891164013943",
+    "dun": "17891164013940",
+    "descricao": "Filé Mignon Ao Chimichurri Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164013943.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/05/FILE-MIGNON-LINHA-PREMIUM-1394-2.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "49883d12-89e1-5780-a2f8-9e522454cc0a",
+    "marca": "Aurora",
+    "sku": "1395",
+    "ean": "7891164013950",
+    "dun": "17891164013957",
+    "descricao": "Picanha Sabor Manteiga e Ervas Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164013950.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/05/PICANHA-LINHA-PREMIUM-1395-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "6cac3ff8-9e58-5c28-95a6-404593d76438",
+    "marca": "Aurora",
+    "sku": "1396",
+    "ean": "7891164013967",
+    "dun": "17891164013964",
+    "descricao": "Panceta Suína Sabor Lemon Pepper Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164013967.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/05/Panceta-Suina-1396-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "af13f8f1-bc1c-56dd-a318-7b4daabdf4ca",
+    "marca": "Aurora",
+    "sku": "1397",
+    "ean": "7891164013974",
+    "dun": "17891164013971",
+    "descricao": "Costela Suína Sabor Barbecue Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164013974.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2024/10/COSTELA-BARBECUE-1402-AURORA-PREMIUM.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "285faaff-8838-590a-83d9-e167e1a02ebb",
+    "marca": "Aurora",
+    "sku": "1534",
+    "ean": "7891164015343",
+    "dun": "67891164015345",
+    "descricao": "Blesser ® Cx. de 20kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164015343.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/BLESSER%C2%AE-AURORA-PREPARO-FACIL-1534-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "07d94e08-aa00-5473-995f-9f1214e791d6",
+    "marca": "Aurora",
+    "sku": "1699",
+    "ean": "7891164016999",
+    "dun": "67891164016991",
+    "descricao": "Blesser ® Tempero Caseiro Cx. de 20kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016999.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/BLESSER%C2%AE-AURORA-Tempero-Caseiro-1699-2.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "3965685b-b31b-5132-a774-007fdce05180",
+    "marca": "Aurora",
+    "sku": "1754",
+    "ean": "7891164017545",
+    "dun": "67891164017547",
+    "descricao": "Blesser ® Ao Vinho Branco Cx. de 20kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164017545.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/BLESSER%C2%AE-AURORA-Ao-Vinho-Branco-1754-2.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "a59c5a36-d788-552c-989e-e677b91479f0",
+    "marca": "Aurora",
+    "sku": "15340",
+    "ean": "7891164153403",
+    "dun": "67891164153405",
+    "descricao": "Blesser ® Preparo Fácil Cx. de 20kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164153403.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/BLESSER%C2%AE-AURORA-PREPARO-FACIL-1534-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "c1f49c76-159a-5fb8-bc28-32233080774d",
+    "marca": "Aurora",
+    "sku": "276",
+    "ean": "7891164002763",
+    "dun": "17891164002760",
+    "descricao": "Lombo Temperado Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164002763.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/LOMBO-TEMPERADO-276-2.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "3d78e369-97eb-5bd3-9d73-6e7c7aec0cad",
+    "marca": "Aurora",
+    "sku": "292",
+    "ean": "7891164002923",
+    "dun": "67891164002925",
+    "descricao": "Pernil sem Osso Temperado Cx. de 20kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164002923.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/PERNIL-SEM-OSSO-TEMPERADO-AURORA-292-2.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "901639d3-2a2f-5e5b-8f62-972a78925d70",
+    "marca": "Aurora",
+    "sku": "427",
+    "ean": "7891164004279",
+    "dun": "17891164004276",
+    "descricao": "Sobrepaleta Recheada Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164004279.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/COPA-LOMBO-RECHEADA-AURORA-PREMIUM-427.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "80705d3b-0848-55be-abb3-547edf705682",
+    "marca": "Aurora",
+    "sku": "1391",
+    "ean": "7891164013912",
+    "dun": "47891164013910",
+    "descricao": "Alcatra Temperada Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164013912.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/ALCATRA-TEMPERADA-1391.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "7e0f4139-1727-563c-98a2-3aab515f9b06",
+    "marca": "Aurora",
+    "sku": "1390",
+    "ean": "7891164013905",
+    "dun": "47891164013903",
+    "descricao": "Filé Mignon Temperado Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164013905.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FILET-MIGNON-TEMPERADO-1390.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "553e822b-7ff1-544b-a75e-6d3e88cd7972",
+    "marca": "Aurora",
+    "sku": "119",
+    "ean": "7891164001193",
+    "dun": "17891164001190",
+    "descricao": "Filé Mignon Suíno Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164001193.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/119-FILEZINHO-AURORA-SUINO-DIAADIA-CONGELADO.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "9e8fcd69-aa8a-5c6c-9808-5a55f7155626",
+    "marca": "Aurora",
+    "sku": "1424",
+    "ean": "7891164014247",
+    "dun": "17891164014244",
+    "descricao": "Picanha Suína Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164014247.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/08/1424-PICANHA-SUINA-DIA-A-DIA-1-1-1-1-1-1-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "f5d0f5a9-bb5a-59b2-b989-7ad29d12e80b",
+    "marca": "Aurora",
+    "sku": "1428",
+    "ean": "7891164014285",
+    "dun": "17891164014282",
+    "descricao": "Panceta Suína Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164014285.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/08/1428-PANCETA-SUINA.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "97e6a97a-dfc4-5fd7-b34f-d5c1b680ea88",
+    "marca": "Aurora",
+    "sku": "122",
+    "ean": "7891164001223",
+    "dun": "67891164001225",
+    "descricao": "Pernil com Osso sem Pele Cx. de 20kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164001223.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/122-PERNIL-COM-OSSO-SEM-PELE-AURORA_.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "5b6d6e02-c0b8-58e4-8e3e-dc1eae21d192",
+    "marca": "Aurora",
+    "sku": "1149",
+    "ean": "7891164011499",
+    "dun": "67891164011491",
+    "descricao": "Pernil com Osso e Pele Cx. de 20kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164011499.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/1149-PERNIL-COM-OSSO-E-PELE-AURORA.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "93a9a861-6f02-5574-871e-890968494d59",
+    "marca": "Aurora",
+    "sku": "110",
+    "ean": "7891164001100",
+    "dun": "67891164001102",
+    "descricao": "Carré Suíno Cx. de 20kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164001100.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/05/11069-11070-AUROGGETS-TRADICIONAL-AURORA-257G.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "3db7aaae-3bf5-508d-8936-0e61dab61bd1",
+    "marca": "Aurora",
+    "sku": "1420",
+    "ean": "7891164014209",
+    "dun": "87891164014205",
+    "descricao": "Lombo Suíno Resfriado Caixa de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164014209.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/156-LOMBO-SUINO-AURORA.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "5ca80390-bbc3-5426-bb92-f799e2f32343",
+    "marca": "Aurora",
+    "sku": "1423",
+    "ean": "7891164014230",
+    "dun": "47891164014238",
+    "descricao": "Filé Mignon Suíno Resfriado Caixa de 8kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164014230.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/119-FILEZINHO-AURORA-SUINO-DIAADIA-CONGELADO.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "0a7763f5-7ae2-5185-b3af-91961668d2ff",
+    "marca": "Aurora",
+    "sku": "2720",
+    "ean": "7891164027209",
+    "dun": "67891164027201",
+    "descricao": "Pernil Temperado com Osso Cx. de 20kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164027209.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2720_pernil-com-osso-temperado-aurora.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "f7bd219a-eb01-54d1-98b4-bb9fe7e0f3fe",
+    "marca": "Aurora",
+    "sku": "311",
+    "ean": "7891164003111",
+    "dun": "47891164003119",
+    "descricao": "Bacon Especial Cx. de 11kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164003111.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/311.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "7dc0693e-ed41-5e4a-9707-12e4ee2672ca",
+    "marca": "Aurora",
+    "sku": "315",
+    "ean": "7891164003159",
+    "dun": "47891164003153",
+    "descricao": "Costela Defumada Cx. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164003159.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/COSTELA-DEFUMADA-AURORA-315.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "f0f23ac2-f516-5e1a-9011-1fea02d38363",
+    "marca": "Aurora",
+    "sku": "331",
+    "ean": "7891164003319",
+    "dun": "17891164003316",
+    "descricao": "Bacon em Cubos Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164003319.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/BACON-EM-CUBOS-AURORA-331.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "ce33452c-26ac-5377-a351-446a567a789a",
+    "marca": "Aurora",
+    "sku": "305",
+    "ean": "7891164003050",
+    "dun": "27891164003054",
+    "descricao": "Bacon Fatiado Cx. de 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164003050.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/BACON-EM-FATIAS-AURORA-305.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "337f8f78-b65b-535e-b55a-bfd2c7f91a06",
+    "marca": "Aurora",
+    "sku": "225",
+    "ean": "7891164002251",
+    "dun": "27891164002255",
+    "descricao": "Ingredientes para Feijoada 1kg Cx. de 5kg - 5 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164002251.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FILE-DE-COXAS-E-SOBRECOXAS-AURORA-3KG-1665-768x768-1.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "524e8faf-08d4-51d4-8e53-aec88d7422a8",
+    "marca": "Aurora",
+    "sku": "244",
+    "ean": "7891164002442",
+    "dun": "17891164002449",
+    "descricao": "Orelha Porcionada Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164002442.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/244-ORELHA-SALGADA-AURORA.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "9cd2f69a-6e11-550e-b916-f21ecf199727",
+    "marca": "Aurora",
+    "sku": "246",
+    "ean": "7891164002466",
+    "dun": "17891164002463",
+    "descricao": "Costela Porcionada Cx. de 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164002466.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/246-COSTELA-SALGADA-AURORA.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "70135c70-84ae-58bb-899f-f9187e9ccca3",
+    "marca": "Aurora",
+    "sku": "1589",
+    "ean": "7891164015893",
+    "dun": "87891164015899",
+    "descricao": "Frango a Passarinho Red Sauce 800g Cx. de 12kg - 15 Pcts. de 800g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164015893.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/FRANGO-A-PASSARINHO-AURORA-800G-1589.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "1797e1eb-89d2-51e1-86c4-a9d945c78c5a",
+    "marca": "Aurora",
+    "sku": "1933",
+    "ean": "7891164019334",
+    "dun": "87891164019330",
+    "descricao": "Sobrecoxas Red Sauce 800g Cx. de 12kg - 15 Pcts. de 800g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164019334.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/SOBRECOXA-TEMPERADA0-AURORA-800G-1933.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "adc620a5-4f45-57c5-9abc-2aafc438a942",
+    "marca": "Aurora",
+    "sku": "1934",
+    "ean": "7891164019341",
+    "dun": "87891164019347",
+    "descricao": "Filé de Peito Red Sauce 800g Cx. de 12kg - 15 Pcts. de 800g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164019341.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/FILE-DE-PEITO-TEMPERADO-AURORA-800G-1934.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "90f09331-59fd-5ea5-beb4-162601bfbfb0",
+    "marca": "Aurora",
+    "sku": "1758",
+    "ean": "7891164017583",
+    "dun": "87891164017589",
+    "descricao": "Coração Temperado Cx. de 12kg - 15 Pcts. de 800g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164017583.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/CORACAO-TEMPERADO-AURORA-800G-1758.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "5c3a3dd4-0a64-5eb1-b289-32dbaec2677f",
+    "marca": "Aurora",
+    "sku": "1759",
+    "ean": "7891164017590",
+    "dun": "87891164017596",
+    "descricao": "Coxinha da Asa Temperada Cx. de 12kg - 15 Pcts. de 800g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164017590.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/COXINHA-ASA-TEMPERADA-AURORA-800G-1759.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "b412fa69-7785-5bfe-9a35-eb43d7255e56",
+    "marca": "Aurora",
+    "sku": "1628",
+    "ean": "7891164016289",
+    "dun": "87891164016285",
+    "descricao": "Filé de Peito 3kg Cx. de 12kg - 4 Pcts. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016289.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FILE-DE-PEITO-AURORA-3KG-1628.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "93b6ecf5-b771-5ea7-87ab-5eeb4683ff15",
+    "marca": "Aurora",
+    "sku": "1629",
+    "ean": "7891164016296",
+    "dun": "17891164016293",
+    "descricao": "Filé de Peito 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016296.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FILE-DE-PEITO-AURORA-1KG-1629-.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "024c4deb-f94e-5e53-8b6c-0592bad6bba7",
+    "marca": "Aurora",
+    "sku": "1634",
+    "ean": "7891164016340",
+    "dun": "17891164016347",
+    "descricao": "Coxinhas das Asas 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016340.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/11/1817.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "9c346230-bb40-5430-bbe5-1ef359cb7912",
+    "marca": "Aurora",
+    "sku": "1635",
+    "ean": "7891164016357",
+    "dun": "87891164016353",
+    "descricao": "Coxinhas das Asas 3kg Cx. de 12kg - 4 Pcts. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016357.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/1694-LO-AURORA-COXINHA-ASAS_Prancheta-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "165754e2-02b9-5e66-a85c-95a0c3109f3c",
+    "marca": "Aurora",
+    "sku": "1636",
+    "ean": "7891164016364",
+    "dun": "17891164016361",
+    "descricao": "Filezinho 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016364.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/11/1822.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "158a74a1-bc35-5c9c-99d0-3a0a3eeeea85",
+    "marca": "Aurora",
+    "sku": "1645",
+    "ean": "7891164016456",
+    "dun": "87891164016452",
+    "descricao": "Coxas 3kg Cx. de 12kg - 4 Pcts. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016456.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/COXA-AURORA-3KG-1645-1-768x768-1.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "e0465d03-10d9-5f54-98eb-62e651a2d1cd",
+    "marca": "Aurora",
+    "sku": "1665",
+    "ean": "7891164016654",
+    "dun": "87891164016650",
+    "descricao": "Filé de Coxas e Sobrecoxas 3kg Cx. de 12kg - 4 Pcts. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016654.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FILE-DE-COXAS-E-SOBRECOXAS-AURORA-3KG-1665-768x768-1.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "94a16f5f-2709-5841-b35f-b8406c18513a",
+    "marca": "Aurora",
+    "sku": "1673",
+    "ean": "7891164016739",
+    "dun": "17891164016736",
+    "descricao": "Sobrecoxas 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016739.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/SOBRECOXA-AURORA-1KG-1673-1-768x768-1-1.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "e221b623-36a9-533a-b82b-b47b46c2444c",
+    "marca": "Aurora",
+    "sku": "16340",
+    "ean": "7891164163402",
+    "dun": "17891164163409",
+    "descricao": "Coxinhas das Asas 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164163402.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/11/1817.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "7414645d-01af-5a30-903a-f8d8fb45c7af",
+    "marca": "Aurora",
+    "sku": "16360",
+    "ean": "7891164163600",
+    "dun": "17891164163607",
+    "descricao": "Filezinho 1kg Cx. de 10kg - 10 Pcts. de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164163600.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/11/1822.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "0ed3b69f-80c4-5f7c-9280-0283796631fd",
+    "marca": "Aurora",
+    "sku": "1652",
+    "ean": "7891164016524",
+    "dun": "47891164016522",
+    "descricao": "Coxinhas das Asas 700g Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016524.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/1694-LO-AURORA-COXINHA-ASAS_Prancheta-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "48ce3ae6-81e3-50e2-b571-337e3cbbd0b4",
+    "marca": "Aurora",
+    "sku": "1653",
+    "ean": "7891164016531",
+    "dun": "47891164016539",
+    "descricao": "Filé de Coxas e Sobrecoxas 700g Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016531.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/05/FILE-SOBRECOXA-CHIMICHURRI-800g-1757-copia.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "1486ec4f-0655-558e-95fe-ef433e2e776f",
+    "marca": "Aurora",
+    "sku": "1654",
+    "ean": "7891164016548",
+    "dun": "47891164016546",
+    "descricao": "Filé de Peito 700g Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016548.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/COXA-DESOSSADA-DE-FRANGO-INTERFOLHADA-15780.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "f3f262a5-b806-529a-9b96-6423363f27ed",
+    "marca": "Aurora",
+    "sku": "1656",
+    "ean": "7891164016562",
+    "dun": "47891164016560",
+    "descricao": "Peito com Osso 700g Cx. de 10,5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016562.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/1558-LO-AURORA-PEITO-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "649b914c-109c-52d5-a477-5fb63065f2b1",
+    "marca": "Aurora",
+    "sku": "1738",
+    "ean": "7891164017385",
+    "dun": "47891164017383",
+    "descricao": "Filé de Peito Flow Pack Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164017385.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/1558-LO-AURORA-PEITO-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "4ef97f29-5232-5005-b190-164003191b1b",
+    "marca": "Aurora",
+    "sku": "1692",
+    "ean": "7891164016920",
+    "dun": "47891164016928",
+    "descricao": "Coxa Flow Pack Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016920.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/1566-LO-AURORA-COXAS-E-SOBRECOXAS-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "38767382-f7be-5017-96ec-d46012c76cbc",
+    "marca": "Aurora",
+    "sku": "1694",
+    "ean": "7891164016944",
+    "dun": "47891164016942",
+    "descricao": "Coxinha da Asa Flow Pack Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016944.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/COXA-DA-ASA-DE-FRANGO-INTERFOLHADA-AURORA-15600.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "0ce30bb8-1e70-508b-9bf6-66a49e73c120",
+    "marca": "Aurora",
+    "sku": "1697",
+    "ean": "7891164016975",
+    "dun": "47891164016973",
+    "descricao": "Sobrecoxa C/ Osso e C/ Pele Flow Pack Cx. de 17kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016975.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/1566-LO-AURORA-COXAS-E-SOBRECOXAS-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "381f9b69-c36a-503b-bce8-2cd18e6f54be",
+    "marca": "Aurora",
+    "sku": "15700",
+    "ean": "7891164015701",
+    "dun": "47891164157003",
+    "descricao": "Coração de Frango - Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164015701.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/HAMBURGUER-DE-FRANGO-GRANEL-AURORA-36X56G-2008.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "668da698-7afa-5eea-bd71-2f32b2800de8",
+    "marca": "Aurora",
+    "sku": "15710",
+    "ean": "7891164015718",
+    "dun": "47891164157102",
+    "descricao": "Fígado de Frango - Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164015718.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/HAMBURGUER-DE-FRANGO-GRANEL-AURORA-36X56G-2008.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "0afbeebf-6896-5179-8589-27899c0200ff",
+    "marca": "Aurora",
+    "sku": "1695",
+    "ean": "7891164016951",
+    "dun": "47891164016959",
+    "descricao": "Meio da Asa Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016951.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/COXA-DESOSSADA-DE-FRANGO-INTERFOLHADA-15780.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "0d3206ff-45eb-5f3c-a19a-5d8a8351ca76",
+    "marca": "Aurora",
+    "sku": "15720",
+    "ean": "7891164015725",
+    "dun": "47891164157201",
+    "descricao": "Moela de Frango - Pacote Cx. de 16kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164015725.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/HAMBURGUER-DE-FRANGO-GRANEL-AURORA-36X56G-2008.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "84618b2b-e565-509c-a346-ee3d75fefc58",
+    "marca": "Aurora",
+    "sku": "1817",
+    "ean": "7891164018177",
+    "dun": "87891164018173",
+    "descricao": "Coxinhas das Asas 1kg Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164018177.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/11/1817.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "c1808086-4ec9-5371-8b84-a94b3632b8df",
+    "marca": "Aurora",
+    "sku": "1818",
+    "ean": "7891164018184",
+    "dun": "87891164018180",
+    "descricao": "Coxas 1kg Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164018184.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FILE-DE-COXAS-E-SOBRECOXAS-AURORA-3KG-1665-768x768-1.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "68ebf2ac-4729-5473-8c1e-99cdf7bc742a",
+    "marca": "Aurora",
+    "sku": "1819",
+    "ean": "7891164018191",
+    "dun": "87891164018197",
+    "descricao": "Sobrecoxas 1kg Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164018191.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FILE-DE-COXAS-E-SOBRECOXAS-AURORA-3KG-1665-768x768-1.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "b4e0a7ff-c6c7-520c-942f-e5d7a97d3dff",
+    "marca": "Aurora",
+    "sku": "1821",
+    "ean": "7891164018214",
+    "dun": "87891164018210",
+    "descricao": "Filé de Peito 1kg Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164018214.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/11/1821.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "48c57f33-8500-5de7-8c57-49cd01aa6634",
+    "marca": "Aurora",
+    "sku": "1822",
+    "ean": "7891164018221",
+    "dun": "87891164018227",
+    "descricao": "Filezinho 1kg Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164018221.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/11/1822.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "5075127b-57c2-5b03-badb-0b93d0fa95bc",
+    "marca": "Aurora",
+    "sku": "1830",
+    "ean": "7891164018306",
+    "dun": "87891164018302",
+    "descricao": "Coração 1kg Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164018306.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/11/1830.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "9ec91287-c001-55d8-acd9-8e37bc615445",
+    "marca": "Aurora",
+    "sku": "1839",
+    "ean": "7891164018399",
+    "dun": "87891164018395",
+    "descricao": "Coxas e Sobrecoxas 1kg Cx. de 12kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164018399.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/FILE-DE-COXAS-E-SOBRECOXAS-AURORA-3KG-1665-768x768-1.jpg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "3608660c-7df0-5124-999d-e3a3ac729b65",
+    "marca": "Aurora",
+    "sku": "15390",
+    "ean": "7891164153908",
+    "dun": "57891164153903",
+    "descricao": "Coxas e Sobrecoxas Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164153908.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/COXA-E-SOBRECOXA-DE-FRANGO-INTERFOLHADA-AURORA-15390.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "05eea7e1-4b7a-57e7-bfaf-400eeb086a35",
+    "marca": "Aurora",
+    "sku": "15600",
+    "ean": "7891164156008",
+    "dun": "57891164156003",
+    "descricao": "Coxas das Asas Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164156008.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/COXA-DA-ASA-DE-FRANGO-INTERFOLHADA-AURORA-15600.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "2623e13b-5524-5ae7-ad83-388895f9a3db",
+    "marca": "Aurora",
+    "sku": "15620",
+    "ean": "7891164156206",
+    "dun": "57891164156201",
+    "descricao": "Coxas e Sobrecoxas Desossadas Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164156206.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/FILE-DE-PEITO-DE-FRANGO-INTERFOLHADO-AURORA-15620.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "766e130c-7a47-558c-a2f9-2a6a77c3db59",
+    "marca": "Aurora",
+    "sku": "15780",
+    "ean": "7891164157807",
+    "dun": "57891164157802",
+    "descricao": "Filé de Peito Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164157807.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2023/07/COXA-DESOSSADA-DE-FRANGO-INTERFOLHADA-15780.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "07e6ccd9-713c-5eac-a4f2-d127431fcb8a",
+    "marca": "Aurora",
+    "sku": "1696",
+    "ean": "7891164016968",
+    "dun": "57891164016963",
+    "descricao": "Peito com Osso e com Pele Cx. de 15kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164016968.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/1558-LO-AURORA-PEITO-1.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "ca47b57f-fb68-5b72-be34-fe06f0dab678",
+    "marca": "Aurora",
+    "sku": "2733",
+    "ean": "7891164027339",
+    "dun": "47891164027337",
+    "descricao": "Leite Uht Integral Cx. de 12l - 12 Unidades de 1l",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164027339.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2823_Integral-1L-FRENTE-Rev02@0.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "84b0ff22-7cd6-5a01-a5cd-5cb9eff58eaf",
+    "marca": "Aurora",
+    "sku": "2821",
+    "ean": "7891164028213",
+    "dun": "47891164028211",
+    "descricao": "Leite Uht Desnatado Tampa de Rosca Cx. de 12l - 12 Unidades de 1l",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164028213.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2821_Desnatado-1L-FRENTE-Rev02.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "43e83d9d-9804-54c5-8bdf-a438109e3408",
+    "marca": "Aurora",
+    "sku": "2822",
+    "ean": "7891164028220",
+    "dun": "47891164028228",
+    "descricao": "Leite Uht Semidesnatado Tampa de Rosca Cx. de 12l - 12 Unidades de 1l",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164028220.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2823_Semi-1L-FRENTE-Rev02@0.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "4a726d52-ffd5-5e94-a542-229e90d71732",
+    "marca": "Aurora",
+    "sku": "2823",
+    "ean": "7891164028237",
+    "dun": "47891164028235",
+    "descricao": "Leite Uht Integral Tampa de Rosca Cx. de 12l - 12 Unidades de 1l",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164028237.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2823_Integral-1L-FRENTE-Rev02@0.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "38bf41de-f819-55af-8fa0-68065335b735",
+    "marca": "Aurora",
+    "sku": "2829",
+    "ean": "7891164028299",
+    "dun": "47891164028297",
+    "descricao": "Leite Uht Integral 0% Lactose Tampa de Rosca Cx. de 12l - 12 Unidades de 1l",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164028299.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2823_Integral-1L-FRENTE-Rev02@0.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "13306c58-fdc7-5f08-b0b1-2439ffc6622c",
+    "marca": "Aurora",
+    "sku": "2830",
+    "ean": "7891164028305",
+    "dun": "47891164028303",
+    "descricao": "Leite Uht Semidesnatado 0% Lactose Tampa de Rosca Cx. de 12l - 12 Unidades de 1l",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164028305.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2823_Semi-1L-FRENTE-Rev02@0.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.132Z"
+  },
+  {
+    "id": "1e83901e-9733-592a-9db5-54b843e8e5fd",
+    "marca": "Aurora",
+    "sku": "2768",
+    "ean": "7891164027681",
+    "dun": "17891164027688",
+    "descricao": "Leite em Pó Integral Instantâneo 400g Saco de 10kg - 25 Pcts. de 400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164027681.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/mockup-26187-LEITE-EM-PO-INTEGRAL-INST-400g-Metalizado-Rev02@0.25x.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "8429f2ba-8258-5eb8-bbdd-4dfebc5c2a13",
+    "marca": "Aurora",
+    "sku": "2770",
+    "ean": "7891164027704",
+    "dun": "17891164027701",
+    "descricao": "Leite em Pó Integral 400g Saco de 10kg - 25 Pcts. de 400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164027704.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/mockup-26187-LEITE-EM-PO-INTEGRAL-INST-400g-Metalizado-Rev02@0.25x.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "1f7583fb-efe3-59ce-aec3-83147288d753",
+    "marca": "Aurora",
+    "sku": "2771",
+    "ean": "7891164027711",
+    "dun": "17891164027718",
+    "descricao": "Leite em Pó Integral 200g Saco de 10kg - 50 Pcts. de 200g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164027711.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2771_mockup-Leite-po-Aurora-INTEGRAL-200g-Metalizado-Rev01@0.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "3c4b8686-147a-59ba-9d5e-0cf8a98c4382",
+    "marca": "Aurora",
+    "sku": "2735",
+    "ean": "7891164027353",
+    "dun": "47891164027351",
+    "descricao": "Bebida Láctea Morango (Monodose) Cx. de 2,04kg",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "75fc320a-0761-5ff1-be8f-5a93390a6777",
+    "marca": "Aurora",
+    "sku": "2818",
+    "ean": "7891164028183",
+    "dun": "47891164028181",
+    "descricao": "Bebida Láctea Frutas Vermelhas (Monodose) Cx. de 2,04kg",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "960682f3-ac08-5fbb-8dbc-7e862137a517",
+    "marca": "Aurora",
+    "sku": "2862",
+    "ean": "7891164028626",
+    "dun": "47891164028624",
+    "descricao": "Bebida Láctea Coco Cx. de 5,1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164028626.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2862_mockup-ILAPZO-2862-RT-141147-V62_COCO-850g@0.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "65d8732e-74b5-5e70-848b-71dce99a1e4a",
+    "marca": "Aurora",
+    "sku": "2863",
+    "ean": "7891164028633",
+    "dun": "47891164028631",
+    "descricao": "Bebida Láctea Frutas Vermelhas Cx. de 5,1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164028633.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2863_mockup-ILAPZO-2863-RT-GARRAFAO-FRUTAS-VERMELHAS-850g@0.png"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "d308dcc2-a1e6-5af4-a323-f869fb501528",
+    "marca": "Aurora",
+    "sku": "2869",
+    "ean": "7891164028695",
+    "dun": "47891164028693",
+    "descricao": "Bebida Láctea Morango Cx. de 5,1kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164028695.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2869_mockup-ILAPZO-2869-RT-GARRAFAO-MORANGO-850g@0.png"
+      },
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "da9bbc3e-ddd3-570f-9eab-cc2f2ebb8563",
+    "marca": "Aurora",
+    "sku": "2866",
+    "ean": "7891164028664",
+    "dun": "47891164028662",
+    "descricao": "Bebida Láctea Frutas Vermelhas 0% Lactose Cx. de 5,1kg",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "82a9dfb5-cb77-50b6-800b-f13ca0777b74",
+    "marca": "Aurora",
+    "sku": "2870",
+    "ean": "7891164028701",
+    "dun": "47891164028709",
+    "descricao": "Bebida Láctea Morango 0% Lactose Cx. de 5,1kg",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Resfriado",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "249c9c51-cbc0-5300-8ab3-0019f13388a7",
+    "marca": "Aurora",
+    "sku": "2707",
+    "ean": "7891164027117",
+    "dun": "47891164027078",
+    "descricao": "Queijo Mussarela Fatiado 150g Cx. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164027117.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2707_2902_mockup-Mussarela-Fatiada-150g-Rev02@0.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "36749c79-5875-515a-a702-b2bb8a60ce63",
+    "marca": "Aurora",
+    "sku": "2708",
+    "ean": "7891164027124",
+    "dun": "47891164027085",
+    "descricao": "Queijo Prato Fatiado 150g Cx. de 3kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164027124.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2022/04/2708_2901_mockup-Prato-Fatiado-150g-Rev02@0.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "e9418ef9-4a3b-535c-a5eb-bc1bc6aa9d61",
+    "marca": "Aurora",
+    "sku": "2752",
+    "ean": "7891164027520",
+    "dun": "47891164027528",
+    "descricao": "Queijo Mussarela Peça Cx. de 15,9kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164027520.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2025/08/mockup-Queijo-Aurora-Mussarela-FRACIONADO-Peca-Rev01@0.25x.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "c814ff0e-42b5-5194-827a-d31b07453e26",
+    "marca": "Aurora",
+    "sku": "2753",
+    "ean": "",
+    "dun": "47891164027535",
+    "descricao": "Queijo Mussarela Peça Cx. de 16,2kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164027520.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2025/08/mockup-Queijo-Aurora-Mussarela-FRACIONADO-Peca-Rev01@0.25x.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "164db228-5922-5359-bdcc-6cb6a80b7ad9",
+    "marca": "Aurora",
+    "sku": "2819",
+    "ean": "",
+    "dun": "47891164028198",
+    "descricao": "Queijo Mussarela Peça Cx. de 16,05kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "/imagens_produtos/7891164027520.webp",
+        "para": "https://www.auroraalimentos.com.br/wp-content/uploads/2025/08/mockup-Queijo-Aurora-Mussarela-FRACIONADO-Peca-Rev01@0.25x.png"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:28.133Z"
+  },
+  {
+    "id": "b5668bf5-f4b9-5c98-ad1d-b25143acdcba",
+    "marca": "Sadia",
+    "sku": "176120",
+    "ean": "7891515647063",
+    "dun": "17891515647060",
+    "descricao": "Batata Palito Pop Pré Frita Sadia 400g C/25",
+    "alteracoes": [
+      {
+        "campo": "Conservação",
+        "de": "Temperatura Ambiente",
+        "para": "Congelado"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:39.596Z"
+  },
+  {
+    "id": "6d682e58-7bdb-5f4b-8f84-693c2d05dca8",
+    "marca": "Copacol",
+    "sku": "96225",
+    "ean": "7891527962253",
+    "dun": "17891527962250",
+    "descricao": "Coxinhahahaha da Asa Congelada IQF Pacotes de 800g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhaha da Asa Congelada IQF Pacotes de 800g",
+        "para": "Coxinhahahaha da Asa Congelada IQF Pacotes de 800g"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:43.505Z"
+  },
+  {
+    "id": "37893ef5-6920-5afc-b50e-db5868df30a0",
+    "marca": "Copacol",
+    "sku": "5791",
+    "ean": "7891527057911",
+    "dun": "17891527057918",
+    "descricao": "Coxinhahahaha da Asa Temperada Congelada Pacotes de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhaha da Asa Temperada Congelada Pacotes de 1kg",
+        "para": "Coxinhahahaha da Asa Temperada Congelada Pacotes de 1kg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:43.505Z"
+  },
+  {
+    "id": "fa6fe96c-93ac-562f-868b-4cbc8e8d19bb",
+    "marca": "Copacol",
+    "sku": "1917",
+    "ean": "7891527019179",
+    "dun": "17891527019176",
+    "descricao": "Coxinhahahaha da Asa Temperada Resfriada Pacotes de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhaha da Asa Temperada Resfriada Pacotes de 1kg",
+        "para": "Coxinhahahaha da Asa Temperada Resfriada Pacotes de 1kg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:43.505Z"
+  },
+  {
+    "id": "fef8a6cb-14b9-5bca-b20f-da5472360872",
+    "marca": "Copacol",
+    "sku": "49",
+    "ean": "7891527000498",
+    "dun": "17891527000495",
+    "descricao": "Coxinhahahaha da Asa Congelada Bandejas de 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhaha da Asa Congelada Bandejas de 1kg",
+        "para": "Coxinhahahaha da Asa Congelada Bandejas de 1kg"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:43.505Z"
+  },
+  {
+    "id": "c295b7d0-aff9-5fab-8bd0-bead506a992d",
+    "marca": "Copacol",
+    "sku": "6633",
+    "ean": "7891527066333",
+    "dun": "17891527066330",
+    "descricao": "Coxinhahahaha da Asa Resfriada Bandeja de 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhaha da Asa Resfriada Bandeja de 600g",
+        "para": "Coxinhahahaha da Asa Resfriada Bandeja de 600g"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:43.505Z"
+  },
+  {
+    "id": "8902304e-8366-5fef-aba2-916975322cbc",
+    "marca": "Copacol",
+    "sku": "47",
+    "ean": "7891527000474",
+    "dun": "17891527000471",
+    "descricao": "Coxinhahahaha da Asa Congelada (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhaha da Asa Congelada (Pesar)",
+        "para": "Coxinhahahaha da Asa Congelada (Pesar)"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:43.505Z"
+  },
+  {
+    "id": "22745bda-74c6-579c-acfb-e81e9a2dc052",
+    "marca": "Copacol",
+    "sku": "271",
+    "ean": "7891527002713",
+    "dun": "17891527002710",
+    "descricao": "Coxinhahahaha da Asa Resfriada (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhaha da Asa Resfriada (Pesar)",
+        "para": "Coxinhahahaha da Asa Resfriada (Pesar)"
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:11:43.505Z"
+  },
+  {
+    "id": "11dbc97b-03b4-574e-8dd9-dc62434bd575",
+    "marca": "Lar",
+    "sku": "281093",
+    "ean": "7896419730729",
+    "dun": "17896419730726",
+    "descricao": "Batata Palito Airfryer (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Batata Palito Airfryer 1,005kg",
+        "para": "Batata Palito Airfryer (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1005,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.925Z"
+  },
+  {
+    "id": "2adaccd2-d003-55a5-846f-e5c2599f39d6",
+    "marca": "Lar",
+    "sku": "311635",
+    "ean": "7896419731917",
+    "dun": "17896419731914",
+    "descricao": "Filé de Tilápia (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Tilápia 700g",
+        "para": "Filé de Tilápia (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.925Z"
+  },
+  {
+    "id": "ab31fde4-e8da-5d99-8fb3-2dd5cd6594af",
+    "marca": "Lar",
+    "sku": "310812",
+    "ean": "7896419731801",
+    "dun": "17896419731808",
+    "descricao": "Filé de Tilápia (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Tilápia 5kg",
+        "para": "Filé de Tilápia (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 5000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.925Z"
+  },
+  {
+    "id": "dd7675a5-15f0-5aa2-a9da-c777b5a0e2fd",
+    "marca": "Lar",
+    "sku": "311632",
+    "ean": "7896419731900",
+    "dun": "17896419731907",
+    "descricao": "Filé de Tilápia (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Tilápia 400g",
+        "para": "Filé de Tilápia (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 400,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.925Z"
+  },
+  {
+    "id": "fe0f3bf7-f6db-5409-a26f-f233bfbae6f3",
+    "marca": "Lar",
+    "sku": "59605",
+    "ean": "7896419720270",
+    "dun": "17896419720277",
+    "descricao": "Anéis de Cebola (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Anéis de Cebola 1,1kg",
+        "para": "Anéis de Cebola (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1100,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "401287cc-bf24-51e0-a9de-49b8b7e7f681",
+    "marca": "Lar",
+    "sku": "59604",
+    "ean": "7896419720287",
+    "dun": "17896419720284",
+    "descricao": "Anéis de Cebola (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Anéis de Cebola 400g",
+        "para": "Anéis de Cebola (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 400,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "eb852974-716e-5742-bd11-f88786c97a9d",
+    "marca": "Lar",
+    "sku": "280246",
+    "ean": "7896419730705",
+    "dun": "17896419730702",
+    "descricao": "Batata Palito (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Batata Palito 1,5kg",
+        "para": "Batata Palito (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1500,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "5b965366-4e3b-524c-80fd-8a7c148e5589",
+    "marca": "Lar",
+    "sku": "262634",
+    "ean": "7896419730347",
+    "dun": "17896419730344",
+    "descricao": "Batata Palito (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Batata Palito 700g",
+        "para": "Batata Palito (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "e6284360-e6b9-5819-8232-af9e5ffded7d",
+    "marca": "Lar",
+    "sku": "123050",
+    "ean": "7896419724384",
+    "dun": "17896419724381",
+    "descricao": "Polenta Palito (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Polenta Palito 1,1kg",
+        "para": "Polenta Palito (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1100,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "64c35b3d-e01a-5659-9007-e5dca522486a",
+    "marca": "Lar",
+    "sku": "666198",
+    "ean": "7896419712770",
+    "dun": "17896419712777",
+    "descricao": "Polenta Palito (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Polenta Palito 400g",
+        "para": "Polenta Palito (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 400,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "2c7cf502-cdfa-5506-a395-bd23295f2b88",
+    "marca": "Lar",
+    "sku": "203889",
+    "ean": "7896419728887",
+    "dun": "17896419728884",
+    "descricao": "Coração Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coração Bandeja 1kg",
+        "para": "Coração Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "636a6278-e2fc-51dd-9607-70333de0dadc",
+    "marca": "Lar",
+    "sku": "163687",
+    "ean": "7896419727286",
+    "dun": "17896419727283",
+    "descricao": "Coração Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coração Bandeja 600g",
+        "para": "Coração Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 600,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "baa68724-7028-55d7-978f-d1c2d337d614",
+    "marca": "Lar",
+    "sku": "203892",
+    "ean": "7896419728894",
+    "dun": "17896419728891",
+    "descricao": "Coxinhas das Asas Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhas das Asas Bandeja 1kg",
+        "para": "Coxinhas das Asas Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "bcb2fe2c-2bc8-5f2b-809c-abf3184381c7",
+    "marca": "Lar",
+    "sku": "163697",
+    "ean": "7896419727309",
+    "dun": "17896419727306",
+    "descricao": "Coxinhas das Asas Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhas das Asas Bandeja 600g",
+        "para": "Coxinhas das Asas Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 600,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "c1a2215d-573a-5b74-9614-4c9330c6b372",
+    "marca": "Lar",
+    "sku": "203885",
+    "ean": "7896419728870",
+    "dun": "17896419728877",
+    "descricao": "Filé de Peito Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Peito Bandeja 1kg",
+        "para": "Filé de Peito Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "94ff3e8b-fd38-5624-b9b4-ba4eede14d76",
+    "marca": "Lar",
+    "sku": "163703",
+    "ean": "7896419727316",
+    "dun": "17896419727313",
+    "descricao": "Filé de Peito Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Peito Bandeja 600g",
+        "para": "Filé de Peito Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 600,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "bd74c756-d439-55d1-88d9-b343eb26ae09",
+    "marca": "Lar",
+    "sku": "203907",
+    "ean": "7896419728917",
+    "dun": "17896419728914",
+    "descricao": "Filezinho Sassami Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Bandeja 1kg",
+        "para": "Filezinho Sassami Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "758a6cba-a194-5383-a930-a965b2d708b4",
+    "marca": "Lar",
+    "sku": "163708",
+    "ean": "7896419727323",
+    "dun": "17896419727320",
+    "descricao": "Filezinho Sassami Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Bandeja 600g",
+        "para": "Filezinho Sassami Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 600,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "738be5b6-e2e9-5ee1-8c55-1dd4c0c462cb",
+    "marca": "Lar",
+    "sku": "163683",
+    "ean": "7896419727279",
+    "dun": "17896419727276",
+    "descricao": "Moela Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Moela Bandeja 600g",
+        "para": "Moela Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 600,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "74ae45eb-984e-51c4-870c-709590881851",
+    "marca": "Lar",
+    "sku": "179655",
+    "ean": "7896419728078",
+    "dun": "17896419728075",
+    "descricao": "Coração Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coração Bandeja 600g",
+        "para": "Coração Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 600,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "00369476-844e-50f1-b3bd-ca3b44815c29",
+    "marca": "Lar",
+    "sku": "178651",
+    "ean": "7896419728047",
+    "dun": "17896419728044",
+    "descricao": "Coxinhas das Asas Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhas das Asas Bandeja 600g",
+        "para": "Coxinhas das Asas Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 600,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "1ac16cba-486c-58af-bfab-b103f044b36e",
+    "marca": "Lar",
+    "sku": "178580",
+    "ean": "7896419728023",
+    "dun": "17896419728020",
+    "descricao": "Filé de Peito Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Peito Bandeja 600g",
+        "para": "Filé de Peito Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 600,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "3c22386a-7b8c-57e1-a1a8-4298b959cb29",
+    "marca": "Lar",
+    "sku": "179706",
+    "ean": "7896419728085",
+    "dun": "17896419728082",
+    "descricao": "Filezinho Sassami Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Bandeja 600g",
+        "para": "Filezinho Sassami Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 600,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "172312af-b2ac-559f-86a7-c8d6d1fbedfc",
+    "marca": "Lar",
+    "sku": "178554",
+    "ean": "7896419727996",
+    "dun": "17896419727993",
+    "descricao": "Meio das Asas Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Meio das Asas Bandeja 600g",
+        "para": "Meio das Asas Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 600,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "050f3178-741f-5a6d-854f-13ad0dd7fd40",
+    "marca": "Lar",
+    "sku": "178648",
+    "ean": "7896419728030",
+    "dun": "17896419728037",
+    "descricao": "Moela Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Moela Bandeja 600g",
+        "para": "Moela Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 600,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "b62bf35d-83f1-5fdd-9179-55afeb052784",
+    "marca": "Lar",
+    "sku": "178557",
+    "ean": "7896419728009",
+    "dun": "17896419728006",
+    "descricao": "Sobrecoxas Bandeja (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Sobrecoxas Bandeja 600g",
+        "para": "Sobrecoxas Bandeja (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 600,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "7bcf8a8a-76eb-5951-8568-cfbe21f7e9df",
+    "marca": "Lar",
+    "sku": "304844",
+    "ean": "7896419731177",
+    "dun": "17896419731174",
+    "descricao": "Frango Desfiado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango Desfiado 1kg",
+        "para": "Frango Desfiado (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "7a160948-47b2-5e5d-975a-3bc90ecfa79b",
+    "marca": "Lar",
+    "sku": "852326",
+    "ean": "7896419714071",
+    "dun": "17896419714078",
+    "descricao": "Empanitos Empanado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Empanitos Empanado 1,5kg",
+        "para": "Empanitos Empanado (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1500,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "360f0d84-1b8d-5d3e-9476-cd5d6655f76f",
+    "marca": "Lar",
+    "sku": "134875",
+    "ean": "7896419725336",
+    "dun": "17896419725333",
+    "descricao": "Empanitos Empanado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Empanitos Empanado 700g",
+        "para": "Empanitos Empanado (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "68a15aa7-96e8-5d05-97e2-07c75fdb43d7",
+    "marca": "Lar",
+    "sku": "134904",
+    "ean": "7896419725480",
+    "dun": "17896419725487",
+    "descricao": "Filé À Milanesa (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé À Milanesa 700g",
+        "para": "Filé À Milanesa (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "8bcddb01-c380-56c7-9f70-53ba05771fe3",
+    "marca": "Lar",
+    "sku": "42309",
+    "ean": "7896419717560",
+    "dun": "17896419717567",
+    "descricao": "Filé de Coxas e Sobrecoxas Empanadas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Coxas e Sobrecoxas Empanadas 1,5kg",
+        "para": "Filé de Coxas e Sobrecoxas Empanadas (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1500,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "ab6470e7-91f3-505f-8d76-926bf6120592",
+    "marca": "Lar",
+    "sku": "42308",
+    "ean": "7896419725329",
+    "dun": "17896419725326",
+    "descricao": "Filé de Coxas e Sobrecoxas Empanadas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Coxas e Sobrecoxas Empanadas 700g",
+        "para": "Filé de Coxas e Sobrecoxas Empanadas (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "3bc29673-7d7a-5286-9611-a6e5d9b956ba",
+    "marca": "Lar",
+    "sku": "23882",
+    "ean": "7896419715566",
+    "dun": "17896419715563",
+    "descricao": "Filezinho Sassami Empanado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Empanado 1,5kg",
+        "para": "Filezinho Sassami Empanado (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1500,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "bad89910-c365-50dc-849c-d5bac9c33e09",
+    "marca": "Lar",
+    "sku": "27191",
+    "ean": "7896419716129",
+    "dun": "17896419716126",
+    "descricao": "Filezinho Sassami Empanado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Empanado 700g",
+        "para": "Filezinho Sassami Empanado (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "5c02f358-5dc6-5762-bd06-1bb6f80fbc78",
+    "marca": "Lar",
+    "sku": "250120",
+    "ean": "7896419730156",
+    "dun": "17896419730153",
+    "descricao": "Mini Hambúrguer Empanado de Frango (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Mini Hambúrguer Empanado de Frango 300g",
+        "para": "Mini Hambúrguer Empanado de Frango (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 300,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "818e697b-1efc-5380-83ff-140d4eb8de98",
+    "marca": "Lar",
+    "sku": "134903",
+    "ean": "7896419725459",
+    "dun": "17896419725456",
+    "descricao": "Iscas Empanadas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Iscas Empanadas 700g",
+        "para": "Iscas Empanadas (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "080a3a4b-9407-50fb-93dd-53d0a8adb450",
+    "marca": "Lar",
+    "sku": "852274",
+    "ean": "7896419713852",
+    "dun": "17896419713859",
+    "descricao": "Steak Empanado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Steak Empanado 100g",
+        "para": "Steak Empanado (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 100,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "a5502431-9c40-5052-b519-2f5b27d6e6f6",
+    "marca": "Lar",
+    "sku": "100212",
+    "ean": "",
+    "dun": "17896419723476",
+    "descricao": "Steak Empanado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Steak Empanado 100g",
+        "para": "Steak Empanado (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 100,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "bdadb759-54ae-516e-80ac-e7f37536baed",
+    "marca": "Lar",
+    "sku": "225974",
+    "ean": "7896419729143",
+    "dun": "17896419729140",
+    "descricao": "Hambúrguer Empanado de Frango (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Hambúrguer Empanado de Frango 100g",
+        "para": "Hambúrguer Empanado de Frango (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 100,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "acdb640a-7531-5917-bed8-4e3ceb1d898f",
+    "marca": "Lar",
+    "sku": "1015",
+    "ean": "7896419714224",
+    "dun": "17896419714221",
+    "descricao": "Coxas IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxas IQF 1kg",
+        "para": "Coxas IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "698d6326-b60c-5ea3-928a-e63c21565d03",
+    "marca": "Lar",
+    "sku": "722841",
+    "ean": "7896419713784",
+    "dun": "17896419713781",
+    "descricao": "Coxinhas das Asas IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhas das Asas IQF 1kg",
+        "para": "Coxinhas das Asas IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "69482ec1-0ad1-5593-9fbb-e59c54766380",
+    "marca": "Lar",
+    "sku": "29248",
+    "ean": "7896419716273",
+    "dun": "17896419716270",
+    "descricao": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF 1kg",
+        "para": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "89a547cb-5dc4-59a3-8494-0dc422452646",
+    "marca": "Lar",
+    "sku": "173850",
+    "ean": "7896419727859",
+    "dun": "17896419727856",
+    "descricao": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF 700g",
+        "para": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "ed1f6c9e-f0e0-5aba-a0e1-9cdbd6acff2f",
+    "marca": "Lar",
+    "sku": "173832",
+    "ean": "7896419727835",
+    "dun": "17896419727832",
+    "descricao": "Frango a Passarinho IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango a Passarinho IQF 700g",
+        "para": "Frango a Passarinho IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "9d330527-a15e-5fbe-b5f9-18b21f502ea9",
+    "marca": "Lar",
+    "sku": "29245",
+    "ean": "7896419701637",
+    "dun": "17896419701634",
+    "descricao": "Frango a Passarinho IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango a Passarinho IQF 1kg",
+        "para": "Frango a Passarinho IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "42045c01-5d7b-52ad-b37a-3ed3259485ae",
+    "marca": "Lar",
+    "sku": "29244",
+    "ean": "7896419716280",
+    "dun": "17896419716287",
+    "descricao": "Filé de Peito IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Peito IQF 1kg",
+        "para": "Filé de Peito IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "fba23199-a792-5a13-8b8a-26247436d1fa",
+    "marca": "Lar",
+    "sku": "1016",
+    "ean": "7896419714231",
+    "dun": "17896419714238",
+    "descricao": "Filezinho Sassami IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami IQF 1kg",
+        "para": "Filezinho Sassami IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "9ca350ad-a429-5ef1-bbb8-2841f5074bff",
+    "marca": "Lar",
+    "sku": "18399",
+    "ean": "7896419715047",
+    "dun": "17896419715044",
+    "descricao": "Sobrecoxas IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Sobrecoxas IQF 1kg",
+        "para": "Sobrecoxas IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "14744da6-05c6-5e92-a414-8ffa4ee443b9",
+    "marca": "Lar",
+    "sku": "18441",
+    "ean": "7896419715092",
+    "dun": "17896419715099",
+    "descricao": "Meio das Asas IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Meio das Asas IQF 1kg",
+        "para": "Meio das Asas IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "eeef1c3c-8537-51ed-8ddd-b7cc319bd8a4",
+    "marca": "Lar",
+    "sku": "203714",
+    "ean": "7896419728863",
+    "dun": "17896419728860",
+    "descricao": "Filé de Peito Moído (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Peito Moído 375g",
+        "para": "Filé de Peito Moído (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 375,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "4b994317-466f-54fb-83fb-7af0249be0cd",
+    "marca": "Lar",
+    "sku": "87787",
+    "ean": "7896419722656",
+    "dun": "17896419722653",
+    "descricao": "Linguiça de Frango Fininha (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Fininha 1kg",
+        "para": "Linguiça de Frango Fininha (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "7094649f-ed01-5359-960c-054e734ce2b2",
+    "marca": "Lar",
+    "sku": "179787",
+    "ean": "7896419728108",
+    "dun": "17896419728105",
+    "descricao": "Linguiça de Frango Fininha (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Fininha 700g",
+        "para": "Linguiça de Frango Fininha (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "68866c88-2673-528b-a4d3-22cd6588fd86",
+    "marca": "Lar",
+    "sku": "84559",
+    "ean": "7896419722274",
+    "dun": "17896419722271",
+    "descricao": "Linguiça de Frango Grossa (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Grossa 5kg",
+        "para": "Linguiça de Frango Grossa (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 5000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "4a465a53-9317-5cef-a133-e4bcc5432e1e",
+    "marca": "Lar",
+    "sku": "87788",
+    "ean": "7896419722663",
+    "dun": "17896419722660",
+    "descricao": "Linguiça de Frango Grossa (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Grossa 1kg",
+        "para": "Linguiça de Frango Grossa (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1000,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "f25bda40-1b94-52bd-ac2f-826c77ecb159",
+    "marca": "Lar",
+    "sku": "164035",
+    "ean": "7896419727439",
+    "dun": "17896419727436",
+    "descricao": "Linguiça de Frango Petisco (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Petisco 700g",
+        "para": "Linguiça de Frango Petisco (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "349ad5d8-05e1-5585-b5f3-8bdc89465058",
+    "marca": "Lar",
+    "sku": "230041",
+    "ean": "7896419729211",
+    "dun": "17896419729218",
+    "descricao": "Fígado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Fígado 700g",
+        "para": "Fígado (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "e38004a6-8738-5dcd-a91f-c0b8aae2e552",
+    "marca": "Lar",
+    "sku": "123021",
+    "ean": "7896419724612",
+    "dun": "17896419724619",
+    "descricao": "Brócolis (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Brócolis 300g",
+        "para": "Brócolis (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 300,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "09e6411d-10bb-583f-95ab-8a5bb712558b",
+    "marca": "Lar",
+    "sku": "123025",
+    "ean": "7896419724582",
+    "dun": "17896419724589",
+    "descricao": "Ervilhas Congeladas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Ervilhas 1,1kg",
+        "para": "Ervilhas Congeladas (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1100,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "dea5befc-67b2-55a0-883e-365f84eec38c",
+    "marca": "Lar",
+    "sku": "123027",
+    "ean": "7896419724599",
+    "dun": "17896419724596",
+    "descricao": "Ervilhas Congeladas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Ervilhas 300g",
+        "para": "Ervilhas Congeladas (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 300,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "55b26e57-9f7d-5123-b611-752bab003655",
+    "marca": "Lar",
+    "sku": "123040",
+    "ean": "7896419724537",
+    "dun": "17896419724534",
+    "descricao": "Mix de Vegetais (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Mix de Vegetais 300g",
+        "para": "Mix de Vegetais (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 300,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "4f049f08-bb0d-5b65-95b6-84542c3b485e",
+    "marca": "Lar",
+    "sku": "123043",
+    "ean": "7896419724483",
+    "dun": "17896419724480",
+    "descricao": "Seleta de Legumes Congeladas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Seleta de Legumes 1,1kg",
+        "para": "Seleta de Legumes Congeladas (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1100,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "4252bddd-39fd-5e01-a677-7c1b3e16f716",
+    "marca": "Lar",
+    "sku": "123045",
+    "ean": "7896419724490",
+    "dun": "17896419724497",
+    "descricao": "Seleta de Legumes Congeladas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Seleta de Legumes 300g",
+        "para": "Seleta de Legumes Congeladas (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 300,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "6b8306ca-e47e-5060-8f60-1cbacab902be",
+    "marca": "Lar",
+    "sku": "852313",
+    "ean": "7896419714064",
+    "dun": "17896419714061",
+    "descricao": "Tirinhas Empanadas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Tirinhas Empanadas 1,5kg",
+        "para": "Tirinhas Empanadas (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1500,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "5447ce04-24a2-5833-b9b8-8b1207e0def9",
+    "marca": "Lar",
+    "sku": "304568",
+    "ean": "7896419731160",
+    "dun": "78964197311671",
+    "descricao": "Frango Desfiado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango Desfiado 400g",
+        "para": "Frango Desfiado (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 400,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "5ede6a56-8f89-56ee-a34f-ad50e0d0a76e",
+    "marca": "Lar",
+    "sku": "253396",
+    "ean": "7896419730194",
+    "dun": "17896419730191",
+    "descricao": "Coxinha da Asa Temperadas IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinha da Asa Temperadas IQF 700g",
+        "para": "Coxinha da Asa Temperadas IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "fbdf1846-7832-5c28-913e-cd6cb9ba536f",
+    "marca": "Lar",
+    "sku": "291081",
+    "ean": "7896419730774",
+    "dun": "17896419730771",
+    "descricao": "Filé de Coxas e Sobrecoxas Temperada IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Coxas e Sobrecoxas Temperada IQF 700g",
+        "para": "Filé de Coxas e Sobrecoxas Temperada IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "a29a229d-5d72-5520-85d2-9cb51965b007",
+    "marca": "Lar",
+    "sku": "253411",
+    "ean": "7896419730200",
+    "dun": "17896419730207",
+    "descricao": "Frango a Passarinho Temperado IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango a Passarinho Temperado IQF 700g",
+        "para": "Frango a Passarinho Temperado IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "5b01914e-b69f-5dc9-ad02-cdf700455ec8",
+    "marca": "Lar",
+    "sku": "179824",
+    "ean": "7896419728115",
+    "dun": "17896419728112",
+    "descricao": "Linguiça de Frango Grossa (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Grossa 700g",
+        "para": "Linguiça de Frango Grossa (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "f0347bb8-623a-5edf-a910-0274f6199256",
+    "marca": "Lar",
+    "sku": "230002",
+    "ean": "7896419729198",
+    "dun": "17896419729195",
+    "descricao": "Coração (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coração 700g",
+        "para": "Coração (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "c1171923-1431-5a14-be77-1cca261b46ae",
+    "marca": "Lar",
+    "sku": "230026",
+    "ean": "7896419729204",
+    "dun": "17896419729201",
+    "descricao": "Moela (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Moela 700g",
+        "para": "Moela (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "46e66b20-337c-5700-b5d4-05973f93544a",
+    "marca": "Lar",
+    "sku": "253889",
+    "ean": "7896419730224",
+    "dun": "17896419730221",
+    "descricao": "Frango Inteiro Temperado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango Inteiro Temperado 2,4kg – 2,8kg",
+        "para": "Frango Inteiro Temperado (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 2400,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "6d92bb9d-ce2d-564b-9065-d4318a850f55",
+    "marca": "Lar",
+    "sku": "102007",
+    "ean": "7896419720010",
+    "dun": "17896419720017",
+    "descricao": "Brócolis (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Brócolis 1,1kg",
+        "para": "Brócolis (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1100,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "1674fdc1-1be8-5fb5-9929-a60f3883b640",
+    "marca": "Lar",
+    "sku": "123022",
+    "ean": "7896419720003",
+    "dun": "17896419720000",
+    "descricao": "Couve-Flor (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Couve-Flor 1,1kg",
+        "para": "Couve-Flor (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 1100,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "7f450a7f-5e0a-55d7-9bfa-c2f97e8dd6a2",
+    "marca": "Lar",
+    "sku": "249060",
+    "ean": "7896419730842",
+    "dun": "17896419720146",
+    "descricao": "Ave Natalina Temperada Recheada (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Ave Natalina Temperada Recheada 3,4 – 3,8kg",
+        "para": "Ave Natalina Temperada Recheada (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 3800,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "f7b83c9b-6529-54f2-b0f3-d29deb51ded1",
+    "marca": "Lar",
+    "sku": "134873",
+    "ean": "7896419725343",
+    "dun": "17896419725340",
+    "descricao": "Tirinhas Empanadas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Tirinhas Empanadas 700g",
+        "para": "Tirinhas Empanadas (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "c9fa059f-20dd-509e-8b49-8eb12f7a6a33",
+    "marca": "Lar",
+    "sku": "253387",
+    "ean": "7896419730187",
+    "dun": "17896419730184",
+    "descricao": "Meio da Asas Temperadas IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Meio da Asas Temperadas IQF 700g",
+        "para": "Meio da Asas Temperadas IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "902f76be-811b-58d1-905e-b7ca43078a96",
+    "marca": "Lar",
+    "sku": "291074",
+    "ean": "7896419730767",
+    "dun": "17896419730764",
+    "descricao": "Sobrecoxa Temperada IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Sobrecoxa Temperada IQF 700g",
+        "para": "Sobrecoxa Temperada IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "e7c41414-6bc7-513f-ba11-34cacfa92103",
+    "marca": "Lar",
+    "sku": "253416",
+    "ean": "7896419730217",
+    "dun": "17896419730214",
+    "descricao": "Filezinho Sassami Temperado IQF (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Temperado IQF 700g",
+        "para": "Filezinho Sassami Temperado IQF (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "2d2c1312-f9aa-50b5-8064-7bca9f20cac8",
+    "marca": "Lar",
+    "sku": "229642",
+    "ean": "7896419729181",
+    "dun": "17896419729188",
+    "descricao": "Coração Temperado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coração Temperado 700g",
+        "para": "Coração Temperado (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "6fc73921-1146-5a00-8bde-ea40b1015091",
+    "marca": "Lar",
+    "sku": "206879",
+    "ean": "7896419728955",
+    "dun": "17896419728952",
+    "descricao": "Coxinhas das Asas Temperadas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhas das Asas Temperadas 700g",
+        "para": "Coxinhas das Asas Temperadas (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "b7db4621-64f4-5f70-8384-1cdb6286ce83",
+    "marca": "Lar",
+    "sku": "206863",
+    "ean": "7896419728948",
+    "dun": "17896419728945",
+    "descricao": "Meio das Asas Temperadas (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Meio das Asas Temperadas 700g",
+        "para": "Meio das Asas Temperadas (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
+  },
+  {
+    "id": "61b0ac03-51f5-5b72-96dc-f2900427a3c4",
+    "marca": "Lar",
+    "sku": "206854",
+    "ean": "7896419728931",
+    "dun": "17896419728938",
+    "descricao": "Frango a Passarinho Temperado (Pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango a Passarinho Temperado 700g",
+        "para": "Frango a Passarinho Temperado (Pesar)"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": 700,
+        "para": "N/D"
+      },
+      {
+        "campo": "Fracionado",
+        "de": false,
+        "para": true
+      }
+    ],
+    "atualizado_em": "2026-09-25T13:12:02.926Z"
   }
 ]

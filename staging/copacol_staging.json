@@ -6,7 +6,7 @@
       "cnpj": "76.092.736/0001-38",
       "site_oficial": "https://www.copacol.com.br",
       "ativo": true,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     }
   ],
   "marcas": [
@@ -17,7 +17,7 @@
       "slug": "copacol",
       "descricao": "Produtos da Copacol Cooperativa Agroindustrial Consolata",
       "ativo": true,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     }
   ],
   "produtos": [
@@ -30,9 +30,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 400,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527039351.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6299",
@@ -43,9 +43,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527062991.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_3940",
@@ -56,9 +56,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 2000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527039405.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6809",
@@ -69,9 +69,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 600,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527068092.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6936",
@@ -82,9 +82,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527069365.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6996",
@@ -95,9 +95,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 600,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527069969.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_7014",
@@ -108,9 +108,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527070149.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_7015",
@@ -121,9 +121,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527070156.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6495",
@@ -136,7 +136,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6691",
@@ -149,7 +149,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5519",
@@ -160,9 +160,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 400,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527055191.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6922",
@@ -173,9 +173,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 380,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527069228.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6935",
@@ -186,9 +186,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 200,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527069358.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_7149",
@@ -199,9 +199,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527071498.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_7151",
@@ -212,9 +212,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527071511.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5507",
@@ -225,9 +225,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527055078.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6962",
@@ -240,7 +240,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5513",
@@ -253,7 +253,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6915",
@@ -264,9 +264,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 125,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527069150.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6916",
@@ -277,9 +277,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 400,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527069167.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6917",
@@ -292,7 +292,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_7156",
@@ -305,7 +305,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6585",
@@ -316,9 +316,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527065855.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5514",
@@ -329,9 +329,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527055146.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5512",
@@ -344,7 +344,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6565",
@@ -357,7 +357,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6775",
@@ -370,7 +370,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_7001",
@@ -383,7 +383,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_7002",
@@ -396,7 +396,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6538",
@@ -407,9 +407,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 400,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527065381.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6539",
@@ -420,9 +420,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 400,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527065398.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6540",
@@ -433,9 +433,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 400,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527065404.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6443",
@@ -446,9 +446,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527064438.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6492",
@@ -459,9 +459,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 100,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527064926.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6488",
@@ -472,9 +472,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527064889.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5417",
@@ -485,9 +485,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1500,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527054170.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6378",
@@ -498,9 +498,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527063783.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6377",
@@ -511,9 +511,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1500,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527063776.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6491",
@@ -524,9 +524,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 100,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527064919.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6490",
@@ -537,9 +537,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527064902.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6380",
@@ -550,9 +550,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1500,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527063806.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_97819",
@@ -563,9 +563,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 500,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527978193.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_4493",
@@ -576,9 +576,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 400,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527044935.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_4494",
@@ -589,9 +589,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 2000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527044942.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_672",
@@ -602,9 +602,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527006728.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6797",
@@ -615,9 +615,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527067972.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_96235",
@@ -628,22 +628,22 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527962352.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_96225",
       "marca_id": "marca_copacol",
-      "descricao_padronizada": "Coxinhaha da Asa Congelada IQF Pacotes de 800g",
-      "descricao_original": "coxinhaha da Asa Congelada IQF Pacotes de 800g",
+      "descricao_padronizada": "Coxinhahahaha da Asa Congelada IQF Pacotes de 800g",
+      "descricao_original": "coxinhahahaha da Asa Congelada IQF Pacotes de 800g",
       "classe": "Aves",
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527962253.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_96231",
@@ -654,9 +654,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527962314.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6372",
@@ -667,9 +667,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527063721.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_96233",
@@ -680,9 +680,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527962338.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_96237",
@@ -693,9 +693,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527962376.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_96227",
@@ -706,9 +706,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527962277.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6933",
@@ -719,9 +719,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527069334.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6796",
@@ -732,9 +732,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527067965.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6784",
@@ -745,9 +745,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527067842.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_96236",
@@ -758,9 +758,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527962369.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6931",
@@ -771,9 +771,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527069310.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_1907",
@@ -784,9 +784,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 800,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527019070.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6497",
@@ -797,22 +797,22 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527064971.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5791",
       "marca_id": "marca_copacol",
-      "descricao_padronizada": "Coxinhaha da Asa Temperada Congelada Pacotes de 1kg",
-      "descricao_original": "coxinhaha da Asa Temperada Congelada Pacotes de 1kg",
+      "descricao_padronizada": "Coxinhahahaha da Asa Temperada Congelada Pacotes de 1kg",
+      "descricao_original": "coxinhahahaha da Asa Temperada Congelada Pacotes de 1kg",
       "classe": "Aves",
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527057911.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6433",
@@ -823,9 +823,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527064339.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5792",
@@ -836,9 +836,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527057928.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6911",
@@ -849,9 +849,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527069112.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_3167",
@@ -862,9 +862,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527031676.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5793",
@@ -875,22 +875,22 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527057935.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_1917",
       "marca_id": "marca_copacol",
-      "descricao_padronizada": "Coxinhaha da Asa Temperada Resfriada Pacotes de 1kg",
-      "descricao_original": "coxinhaha da Asa Temperada Resfriada Pacotes de 1kg",
+      "descricao_padronizada": "Coxinhahahaha da Asa Temperada Resfriada Pacotes de 1kg",
+      "descricao_original": "coxinhahahaha da Asa Temperada Resfriada Pacotes de 1kg",
       "classe": "Aves",
       "conservacao": "Resfriado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527019179.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_1919",
@@ -901,9 +901,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527019193.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_1913",
@@ -914,9 +914,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527019131.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_1903",
@@ -927,9 +927,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527019032.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_81",
@@ -940,9 +940,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527000818.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_83",
@@ -953,9 +953,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527000832.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_85",
@@ -966,9 +966,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527000856.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_46",
@@ -979,9 +979,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527000467.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_51",
@@ -992,9 +992,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527000511.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_53",
@@ -1005,9 +1005,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527000535.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_55",
@@ -1018,22 +1018,22 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527000559.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_49",
       "marca_id": "marca_copacol",
-      "descricao_padronizada": "Coxinhaha da Asa Congelada Bandejas de 1kg",
-      "descricao_original": "coxinhaha da Asa Congelada Bandejas de 1kg",
+      "descricao_padronizada": "Coxinhahahaha da Asa Congelada Bandejas de 1kg",
+      "descricao_original": "coxinhahahaha da Asa Congelada Bandejas de 1kg",
       "classe": "Aves",
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527000498.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_277",
@@ -1044,9 +1044,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527002775.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_66",
@@ -1057,9 +1057,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527000665.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_77",
@@ -1070,9 +1070,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527000771.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6662",
@@ -1083,9 +1083,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": 600,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527066623.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6663",
@@ -1096,9 +1096,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": 600,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527066630.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6664",
@@ -1109,9 +1109,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": 600,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527066647.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6659",
@@ -1122,22 +1122,22 @@
       "conservacao": "Resfriado",
       "peso_gramas": 600,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527066593.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6633",
       "marca_id": "marca_copacol",
-      "descricao_padronizada": "Coxinhaha da Asa Resfriada Bandeja de 600g",
-      "descricao_original": "coxinhaha da Asa Resfriada Bandeja de 600g",
+      "descricao_padronizada": "Coxinhahahaha da Asa Resfriada Bandeja de 600g",
+      "descricao_original": "coxinhahahaha da Asa Resfriada Bandeja de 600g",
       "classe": "Aves",
       "conservacao": "Resfriado",
       "peso_gramas": 600,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527066333.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6626",
@@ -1148,9 +1148,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": 600,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527066265.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6649",
@@ -1161,9 +1161,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": 600,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527066494.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6657",
@@ -1174,9 +1174,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": 600,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527066579.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6646",
@@ -1187,9 +1187,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": 600,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527066463.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_80",
@@ -1200,9 +1200,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000801.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_84",
@@ -1213,9 +1213,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000849.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_45",
@@ -1226,9 +1226,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000450.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_50",
@@ -1239,9 +1239,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000504.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_52",
@@ -1252,9 +1252,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000528.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_54",
@@ -1265,22 +1265,22 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000542.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_47",
       "marca_id": "marca_copacol",
-      "descricao_padronizada": "Coxinhaha da Asa Congelada (pesar)",
-      "descricao_original": "coxinhaha da Asa Congelada",
+      "descricao_padronizada": "Coxinhahahaha da Asa Congelada (pesar)",
+      "descricao_original": "coxinhahahaha da Asa Congelada",
       "classe": "Aves",
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000474.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_57",
@@ -1291,9 +1291,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000573.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_61",
@@ -1304,9 +1304,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000610.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_79",
@@ -1317,9 +1317,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527000795.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_86",
@@ -1330,9 +1330,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000863.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_64",
@@ -1343,9 +1343,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000641.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_76",
@@ -1356,9 +1356,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000764.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5",
@@ -1369,9 +1369,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000054.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_8",
@@ -1382,22 +1382,22 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000085.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_271",
       "marca_id": "marca_copacol",
-      "descricao_padronizada": "Coxinhaha da Asa Resfriada (pesar)",
-      "descricao_original": "coxinhaha da Asa Resfriada",
+      "descricao_padronizada": "Coxinhahahaha da Asa Resfriada (pesar)",
+      "descricao_original": "coxinhahahaha da Asa Resfriada",
       "classe": "Aves",
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527002713.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6494",
@@ -1408,9 +1408,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527064940.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5439",
@@ -1421,9 +1421,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": 17000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527054392.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_280",
@@ -1434,9 +1434,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527002805.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_13",
@@ -1447,9 +1447,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000139.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_268",
@@ -1460,9 +1460,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527002683.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6964",
@@ -1473,9 +1473,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527069648.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_2",
@@ -1486,9 +1486,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000023.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_37",
@@ -1499,9 +1499,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527000375.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_967",
@@ -1512,9 +1512,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1700,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527009675.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5024",
@@ -1525,9 +1525,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1700,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527050240.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_447",
@@ -1538,9 +1538,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527004472.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6115",
@@ -1551,9 +1551,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527061154.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_98223",
@@ -1564,9 +1564,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7891527982237.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_7045",
@@ -1577,9 +1577,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 250,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527070453.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5496",
@@ -1590,9 +1590,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 720,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527054965.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5499",
@@ -1603,9 +1603,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 3900,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527054996.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5498",
@@ -1616,9 +1616,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 720,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527054989.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_5500",
@@ -1629,9 +1629,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 3900,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527055009.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6904",
@@ -1642,9 +1642,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": 380,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527069044.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6902",
@@ -1655,9 +1655,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 380,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527069020.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6898",
@@ -1668,9 +1668,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 380,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527068986.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_4488",
@@ -1681,9 +1681,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527044881.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_3781",
@@ -1694,9 +1694,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 2000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527037814.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6897",
@@ -1707,9 +1707,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 380,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527068979.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_4487",
@@ -1720,9 +1720,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527044874.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_3778",
@@ -1733,9 +1733,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 2000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527037784.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_6439",
@@ -1746,9 +1746,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 600,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7891527064391.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "prod_copacol_7017",
@@ -1761,7 +1761,7 @@
       "fracionado": false,
       "imagem_url": null,
       "status_imagem": "sem_imagem",
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     }
   ],
   "codigos_barras": [
@@ -1772,7 +1772,7 @@
       "codigo": "3935",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527039351",
@@ -1781,7 +1781,7 @@
       "codigo": "7891527039351",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527039358",
@@ -1790,7 +1790,7 @@
       "codigo": "17891527039358",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6299",
@@ -1799,7 +1799,7 @@
       "codigo": "6299",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527062991",
@@ -1808,7 +1808,7 @@
       "codigo": "7891527062991",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527062998",
@@ -1817,7 +1817,7 @@
       "codigo": "17891527062998",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_3940",
@@ -1826,7 +1826,7 @@
       "codigo": "3940",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527039405",
@@ -1835,7 +1835,7 @@
       "codigo": "7891527039405",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527039402",
@@ -1844,7 +1844,7 @@
       "codigo": "17891527039402",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6809",
@@ -1853,7 +1853,7 @@
       "codigo": "6809",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527068092",
@@ -1862,7 +1862,7 @@
       "codigo": "7891527068092",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527068099",
@@ -1871,7 +1871,7 @@
       "codigo": "17891527068099",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6936",
@@ -1880,7 +1880,7 @@
       "codigo": "6936",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069365",
@@ -1889,7 +1889,7 @@
       "codigo": "7891527069365",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069362",
@@ -1898,7 +1898,7 @@
       "codigo": "17891527069362",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6996",
@@ -1907,7 +1907,7 @@
       "codigo": "6996",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069969",
@@ -1916,7 +1916,7 @@
       "codigo": "7891527069969",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069966",
@@ -1925,7 +1925,7 @@
       "codigo": "17891527069966",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_7014",
@@ -1934,7 +1934,7 @@
       "codigo": "7014",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527070149",
@@ -1943,7 +1943,7 @@
       "codigo": "7891527070149",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527070146",
@@ -1952,7 +1952,7 @@
       "codigo": "17891527070146",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_7015",
@@ -1961,7 +1961,7 @@
       "codigo": "7015",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527070156",
@@ -1970,7 +1970,7 @@
       "codigo": "7891527070156",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527070153",
@@ -1979,7 +1979,7 @@
       "codigo": "17891527070153",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6495",
@@ -1988,7 +1988,7 @@
       "codigo": "6495",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527064957",
@@ -1997,7 +1997,7 @@
       "codigo": "7891527064957",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527064954",
@@ -2006,7 +2006,7 @@
       "codigo": "17891527064954",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6691",
@@ -2015,7 +2015,7 @@
       "codigo": "6691",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527066913",
@@ -2024,7 +2024,7 @@
       "codigo": "7891527066913",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527066910",
@@ -2033,7 +2033,7 @@
       "codigo": "17891527066910",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5519",
@@ -2042,7 +2042,7 @@
       "codigo": "5519",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527055191",
@@ -2051,7 +2051,7 @@
       "codigo": "7891527055191",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527055198",
@@ -2060,7 +2060,7 @@
       "codigo": "17891527055198",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6922",
@@ -2069,7 +2069,7 @@
       "codigo": "6922",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069228",
@@ -2078,7 +2078,7 @@
       "codigo": "7891527069228",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069225",
@@ -2087,7 +2087,7 @@
       "codigo": "17891527069225",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6935",
@@ -2096,7 +2096,7 @@
       "codigo": "6935",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069358",
@@ -2105,7 +2105,7 @@
       "codigo": "7891527069358",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069355",
@@ -2114,7 +2114,7 @@
       "codigo": "17891527069355",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_7149",
@@ -2123,7 +2123,7 @@
       "codigo": "7149",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527071498",
@@ -2132,7 +2132,7 @@
       "codigo": "7891527071498",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527071495",
@@ -2141,7 +2141,7 @@
       "codigo": "17891527071495",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_7151",
@@ -2150,7 +2150,7 @@
       "codigo": "7151",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527071511",
@@ -2159,7 +2159,7 @@
       "codigo": "7891527071511",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527071518",
@@ -2168,7 +2168,7 @@
       "codigo": "17891527071518",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5507",
@@ -2177,7 +2177,7 @@
       "codigo": "5507",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527055078",
@@ -2186,7 +2186,7 @@
       "codigo": "7891527055078",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527055075",
@@ -2195,7 +2195,7 @@
       "codigo": "17891527055075",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6962",
@@ -2204,7 +2204,7 @@
       "codigo": "6962",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069624",
@@ -2213,7 +2213,7 @@
       "codigo": "7891527069624",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069621",
@@ -2222,7 +2222,7 @@
       "codigo": "17891527069621",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5513",
@@ -2231,7 +2231,7 @@
       "codigo": "5513",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527055139",
@@ -2240,7 +2240,7 @@
       "codigo": "7891527055139",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527055136",
@@ -2249,7 +2249,7 @@
       "codigo": "17891527055136",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6915",
@@ -2258,7 +2258,7 @@
       "codigo": "6915",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069150",
@@ -2267,7 +2267,7 @@
       "codigo": "7891527069150",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069157",
@@ -2276,7 +2276,7 @@
       "codigo": "17891527069157",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6916",
@@ -2285,7 +2285,7 @@
       "codigo": "6916",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069167",
@@ -2294,7 +2294,7 @@
       "codigo": "7891527069167",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069164",
@@ -2303,7 +2303,7 @@
       "codigo": "17891527069164",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6917",
@@ -2312,7 +2312,7 @@
       "codigo": "6917",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069174",
@@ -2321,7 +2321,7 @@
       "codigo": "7891527069174",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069171",
@@ -2330,7 +2330,7 @@
       "codigo": "17891527069171",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_7156",
@@ -2339,7 +2339,7 @@
       "codigo": "7156",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527071566",
@@ -2348,7 +2348,7 @@
       "codigo": "7891527071566",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527071563",
@@ -2357,7 +2357,7 @@
       "codigo": "17891527071563",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6585",
@@ -2366,7 +2366,7 @@
       "codigo": "6585",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527065855",
@@ -2375,7 +2375,7 @@
       "codigo": "7891527065855",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527065852",
@@ -2384,7 +2384,7 @@
       "codigo": "17891527065852",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5514",
@@ -2393,7 +2393,7 @@
       "codigo": "5514",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527055146",
@@ -2402,7 +2402,7 @@
       "codigo": "7891527055146",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527055143",
@@ -2411,7 +2411,7 @@
       "codigo": "17891527055143",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5512",
@@ -2420,7 +2420,7 @@
       "codigo": "5512",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527055122",
@@ -2429,7 +2429,7 @@
       "codigo": "7891527055122",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527055129",
@@ -2438,7 +2438,7 @@
       "codigo": "17891527055129",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6565",
@@ -2447,7 +2447,7 @@
       "codigo": "6565",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527065657",
@@ -2456,7 +2456,7 @@
       "codigo": "7891527065657",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527065654",
@@ -2465,7 +2465,7 @@
       "codigo": "17891527065654",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6775",
@@ -2474,7 +2474,7 @@
       "codigo": "6775",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527067750",
@@ -2483,7 +2483,7 @@
       "codigo": "7891527067750",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527067757",
@@ -2492,7 +2492,7 @@
       "codigo": "17891527067757",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_7001",
@@ -2501,7 +2501,7 @@
       "codigo": "7001",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527070019",
@@ -2510,7 +2510,7 @@
       "codigo": "7891527070019",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527070016",
@@ -2519,7 +2519,7 @@
       "codigo": "17891527070016",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_7002",
@@ -2528,7 +2528,7 @@
       "codigo": "7002",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527070026",
@@ -2537,7 +2537,7 @@
       "codigo": "7891527070026",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527070023",
@@ -2546,7 +2546,7 @@
       "codigo": "17891527070023",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6538",
@@ -2555,7 +2555,7 @@
       "codigo": "6538",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527065381",
@@ -2564,7 +2564,7 @@
       "codigo": "7891527065381",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527065388",
@@ -2573,7 +2573,7 @@
       "codigo": "17891527065388",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6539",
@@ -2582,7 +2582,7 @@
       "codigo": "6539",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527065398",
@@ -2591,7 +2591,7 @@
       "codigo": "7891527065398",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527065395",
@@ -2600,7 +2600,7 @@
       "codigo": "17891527065395",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6540",
@@ -2609,7 +2609,7 @@
       "codigo": "6540",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527065404",
@@ -2618,7 +2618,7 @@
       "codigo": "7891527065404",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527065401",
@@ -2627,7 +2627,7 @@
       "codigo": "17891527065401",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6443",
@@ -2636,7 +2636,7 @@
       "codigo": "6443",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527064438",
@@ -2645,7 +2645,7 @@
       "codigo": "7891527064438",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527064435",
@@ -2654,7 +2654,7 @@
       "codigo": "17891527064435",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6492",
@@ -2663,7 +2663,7 @@
       "codigo": "6492",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527064926",
@@ -2672,7 +2672,7 @@
       "codigo": "7891527064926",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527064923",
@@ -2681,7 +2681,7 @@
       "codigo": "17891527064923",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6488",
@@ -2690,7 +2690,7 @@
       "codigo": "6488",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527064889",
@@ -2699,7 +2699,7 @@
       "codigo": "7891527064889",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527064886",
@@ -2708,7 +2708,7 @@
       "codigo": "17891527064886",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5417",
@@ -2717,7 +2717,7 @@
       "codigo": "5417",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527054170",
@@ -2726,7 +2726,7 @@
       "codigo": "7891527054170",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527054177",
@@ -2735,7 +2735,7 @@
       "codigo": "17891527054177",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6378",
@@ -2744,7 +2744,7 @@
       "codigo": "6378",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527063783",
@@ -2753,7 +2753,7 @@
       "codigo": "7891527063783",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527063780",
@@ -2762,7 +2762,7 @@
       "codigo": "17891527063780",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6377",
@@ -2771,7 +2771,7 @@
       "codigo": "6377",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527063776",
@@ -2780,7 +2780,7 @@
       "codigo": "7891527063776",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527063773",
@@ -2789,7 +2789,7 @@
       "codigo": "17891527063773",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6491",
@@ -2798,7 +2798,7 @@
       "codigo": "6491",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527064919",
@@ -2807,7 +2807,7 @@
       "codigo": "7891527064919",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527064916",
@@ -2816,7 +2816,7 @@
       "codigo": "17891527064916",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6490",
@@ -2825,7 +2825,7 @@
       "codigo": "6490",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527064902",
@@ -2834,7 +2834,7 @@
       "codigo": "7891527064902",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527064909",
@@ -2843,7 +2843,7 @@
       "codigo": "17891527064909",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6380",
@@ -2852,7 +2852,7 @@
       "codigo": "6380",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527063806",
@@ -2861,7 +2861,7 @@
       "codigo": "7891527063806",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527063803",
@@ -2870,7 +2870,7 @@
       "codigo": "17891527063803",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_97819",
@@ -2879,7 +2879,7 @@
       "codigo": "97819",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527978193",
@@ -2888,7 +2888,7 @@
       "codigo": "7891527978193",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527978190",
@@ -2897,7 +2897,7 @@
       "codigo": "17891527978190",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_4493",
@@ -2906,7 +2906,7 @@
       "codigo": "4493",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527044935",
@@ -2915,7 +2915,7 @@
       "codigo": "7891527044935",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527044932",
@@ -2924,7 +2924,7 @@
       "codigo": "17891527044932",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_4494",
@@ -2933,7 +2933,7 @@
       "codigo": "4494",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527044942",
@@ -2942,7 +2942,7 @@
       "codigo": "7891527044942",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527044949",
@@ -2951,7 +2951,7 @@
       "codigo": "17891527044949",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_672",
@@ -2960,7 +2960,7 @@
       "codigo": "672",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527006728",
@@ -2969,7 +2969,7 @@
       "codigo": "7891527006728",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527006725",
@@ -2978,7 +2978,7 @@
       "codigo": "17891527006725",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6797",
@@ -2987,7 +2987,7 @@
       "codigo": "6797",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527067972",
@@ -2996,7 +2996,7 @@
       "codigo": "7891527067972",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527067979",
@@ -3005,7 +3005,7 @@
       "codigo": "17891527067979",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_96235",
@@ -3014,7 +3014,7 @@
       "codigo": "96235",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527962352",
@@ -3023,7 +3023,7 @@
       "codigo": "7891527962352",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527962359",
@@ -3032,7 +3032,7 @@
       "codigo": "17891527962359",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_96225",
@@ -3041,7 +3041,7 @@
       "codigo": "96225",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527962253",
@@ -3050,7 +3050,7 @@
       "codigo": "7891527962253",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527962250",
@@ -3059,7 +3059,7 @@
       "codigo": "17891527962250",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_96231",
@@ -3068,7 +3068,7 @@
       "codigo": "96231",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527962314",
@@ -3077,7 +3077,7 @@
       "codigo": "7891527962314",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527962311",
@@ -3086,7 +3086,7 @@
       "codigo": "17891527962311",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6372",
@@ -3095,7 +3095,7 @@
       "codigo": "6372",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527063721",
@@ -3104,7 +3104,7 @@
       "codigo": "7891527063721",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527063728",
@@ -3113,7 +3113,7 @@
       "codigo": "17891527063728",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_96233",
@@ -3122,7 +3122,7 @@
       "codigo": "96233",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527962338",
@@ -3131,7 +3131,7 @@
       "codigo": "7891527962338",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527962335",
@@ -3140,7 +3140,7 @@
       "codigo": "17891527962335",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_96237",
@@ -3149,7 +3149,7 @@
       "codigo": "96237",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527962376",
@@ -3158,7 +3158,7 @@
       "codigo": "7891527962376",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527962373",
@@ -3167,7 +3167,7 @@
       "codigo": "17891527962373",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_96227",
@@ -3176,7 +3176,7 @@
       "codigo": "96227",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527962277",
@@ -3185,7 +3185,7 @@
       "codigo": "7891527962277",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527962274",
@@ -3194,7 +3194,7 @@
       "codigo": "17891527962274",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6933",
@@ -3203,7 +3203,7 @@
       "codigo": "6933",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069334",
@@ -3212,7 +3212,7 @@
       "codigo": "7891527069334",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069331",
@@ -3221,7 +3221,7 @@
       "codigo": "17891527069331",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6796",
@@ -3230,7 +3230,7 @@
       "codigo": "6796",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527067965",
@@ -3239,7 +3239,7 @@
       "codigo": "7891527067965",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527067962",
@@ -3248,7 +3248,7 @@
       "codigo": "17891527067962",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6784",
@@ -3257,7 +3257,7 @@
       "codigo": "6784",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527067842",
@@ -3266,7 +3266,7 @@
       "codigo": "7891527067842",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527067849",
@@ -3275,7 +3275,7 @@
       "codigo": "17891527067849",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_96236",
@@ -3284,7 +3284,7 @@
       "codigo": "96236",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527962369",
@@ -3293,7 +3293,7 @@
       "codigo": "7891527962369",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527962366",
@@ -3302,7 +3302,7 @@
       "codigo": "17891527962366",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6931",
@@ -3311,7 +3311,7 @@
       "codigo": "6931",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069310",
@@ -3320,7 +3320,7 @@
       "codigo": "7891527069310",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069317",
@@ -3329,7 +3329,7 @@
       "codigo": "17891527069317",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_1907",
@@ -3338,7 +3338,7 @@
       "codigo": "1907",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527019070",
@@ -3347,7 +3347,7 @@
       "codigo": "7891527019070",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_27891527019074",
@@ -3356,7 +3356,7 @@
       "codigo": "27891527019074",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6497",
@@ -3365,7 +3365,7 @@
       "codigo": "6497",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527064971",
@@ -3374,7 +3374,7 @@
       "codigo": "7891527064971",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527064978",
@@ -3383,7 +3383,7 @@
       "codigo": "17891527064978",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5791",
@@ -3392,7 +3392,7 @@
       "codigo": "5791",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527057911",
@@ -3401,7 +3401,7 @@
       "codigo": "7891527057911",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527057918",
@@ -3410,7 +3410,7 @@
       "codigo": "17891527057918",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6433",
@@ -3419,7 +3419,7 @@
       "codigo": "6433",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527064339",
@@ -3428,7 +3428,7 @@
       "codigo": "7891527064339",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527064336",
@@ -3437,7 +3437,7 @@
       "codigo": "17891527064336",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5792",
@@ -3446,7 +3446,7 @@
       "codigo": "5792",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527057928",
@@ -3455,7 +3455,7 @@
       "codigo": "7891527057928",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527057925",
@@ -3464,7 +3464,7 @@
       "codigo": "17891527057925",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6911",
@@ -3473,7 +3473,7 @@
       "codigo": "6911",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069112",
@@ -3482,7 +3482,7 @@
       "codigo": "7891527069112",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069119",
@@ -3491,7 +3491,7 @@
       "codigo": "17891527069119",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_3167",
@@ -3500,7 +3500,7 @@
       "codigo": "3167",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527031676",
@@ -3509,7 +3509,7 @@
       "codigo": "7891527031676",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527031673",
@@ -3518,7 +3518,7 @@
       "codigo": "17891527031673",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5793",
@@ -3527,7 +3527,7 @@
       "codigo": "5793",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527057935",
@@ -3536,7 +3536,7 @@
       "codigo": "7891527057935",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527057932",
@@ -3545,7 +3545,7 @@
       "codigo": "17891527057932",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_1917",
@@ -3554,7 +3554,7 @@
       "codigo": "1917",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527019179",
@@ -3563,7 +3563,7 @@
       "codigo": "7891527019179",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527019176",
@@ -3572,7 +3572,7 @@
       "codigo": "17891527019176",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_1919",
@@ -3581,7 +3581,7 @@
       "codigo": "1919",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527019193",
@@ -3590,7 +3590,7 @@
       "codigo": "7891527019193",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527019190",
@@ -3599,7 +3599,7 @@
       "codigo": "17891527019190",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_1913",
@@ -3608,7 +3608,7 @@
       "codigo": "1913",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527019131",
@@ -3617,7 +3617,7 @@
       "codigo": "7891527019131",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527019138",
@@ -3626,7 +3626,7 @@
       "codigo": "17891527019138",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_1903",
@@ -3635,7 +3635,7 @@
       "codigo": "1903",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527019032",
@@ -3644,7 +3644,7 @@
       "codigo": "7891527019032",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527019039",
@@ -3653,7 +3653,7 @@
       "codigo": "17891527019039",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_81",
@@ -3662,7 +3662,7 @@
       "codigo": "81",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000818",
@@ -3671,7 +3671,7 @@
       "codigo": "7891527000818",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000815",
@@ -3680,7 +3680,7 @@
       "codigo": "17891527000815",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_83",
@@ -3689,7 +3689,7 @@
       "codigo": "83",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000832",
@@ -3698,7 +3698,7 @@
       "codigo": "7891527000832",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000839",
@@ -3707,7 +3707,7 @@
       "codigo": "17891527000839",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_85",
@@ -3716,7 +3716,7 @@
       "codigo": "85",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000856",
@@ -3725,7 +3725,7 @@
       "codigo": "7891527000856",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000853",
@@ -3734,7 +3734,7 @@
       "codigo": "17891527000853",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_46",
@@ -3743,7 +3743,7 @@
       "codigo": "46",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000467",
@@ -3752,7 +3752,7 @@
       "codigo": "7891527000467",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000464",
@@ -3761,7 +3761,7 @@
       "codigo": "17891527000464",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_51",
@@ -3770,7 +3770,7 @@
       "codigo": "51",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000511",
@@ -3779,7 +3779,7 @@
       "codigo": "7891527000511",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000518",
@@ -3788,7 +3788,7 @@
       "codigo": "17891527000518",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_53",
@@ -3797,7 +3797,7 @@
       "codigo": "53",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000535",
@@ -3806,7 +3806,7 @@
       "codigo": "7891527000535",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000532",
@@ -3815,7 +3815,7 @@
       "codigo": "17891527000532",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_55",
@@ -3824,7 +3824,7 @@
       "codigo": "55",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000559",
@@ -3833,7 +3833,7 @@
       "codigo": "7891527000559",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000556",
@@ -3842,7 +3842,7 @@
       "codigo": "17891527000556",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_49",
@@ -3851,7 +3851,7 @@
       "codigo": "49",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000498",
@@ -3860,7 +3860,7 @@
       "codigo": "7891527000498",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000495",
@@ -3869,7 +3869,7 @@
       "codigo": "17891527000495",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_277",
@@ -3878,7 +3878,7 @@
       "codigo": "277",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527002775",
@@ -3887,7 +3887,7 @@
       "codigo": "7891527002775",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527002772",
@@ -3896,7 +3896,7 @@
       "codigo": "17891527002772",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_66",
@@ -3905,7 +3905,7 @@
       "codigo": "66",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000665",
@@ -3914,7 +3914,7 @@
       "codigo": "7891527000665",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000662",
@@ -3923,7 +3923,7 @@
       "codigo": "17891527000662",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_77",
@@ -3932,7 +3932,7 @@
       "codigo": "77",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000771",
@@ -3941,7 +3941,7 @@
       "codigo": "7891527000771",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000778",
@@ -3950,7 +3950,7 @@
       "codigo": "17891527000778",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6662",
@@ -3959,7 +3959,7 @@
       "codigo": "6662",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527066623",
@@ -3968,7 +3968,7 @@
       "codigo": "7891527066623",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527066620",
@@ -3977,7 +3977,7 @@
       "codigo": "17891527066620",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6663",
@@ -3986,7 +3986,7 @@
       "codigo": "6663",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527066630",
@@ -3995,7 +3995,7 @@
       "codigo": "7891527066630",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527066637",
@@ -4004,7 +4004,7 @@
       "codigo": "17891527066637",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6664",
@@ -4013,7 +4013,7 @@
       "codigo": "6664",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527066647",
@@ -4022,7 +4022,7 @@
       "codigo": "7891527066647",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527066644",
@@ -4031,7 +4031,7 @@
       "codigo": "17891527066644",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6659",
@@ -4040,7 +4040,7 @@
       "codigo": "6659",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527066593",
@@ -4049,7 +4049,7 @@
       "codigo": "7891527066593",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527066590",
@@ -4058,7 +4058,7 @@
       "codigo": "17891527066590",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6633",
@@ -4067,7 +4067,7 @@
       "codigo": "6633",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527066333",
@@ -4076,7 +4076,7 @@
       "codigo": "7891527066333",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527066330",
@@ -4085,7 +4085,7 @@
       "codigo": "17891527066330",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6626",
@@ -4094,7 +4094,7 @@
       "codigo": "6626",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527066265",
@@ -4103,7 +4103,7 @@
       "codigo": "7891527066265",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527066262",
@@ -4112,7 +4112,7 @@
       "codigo": "17891527066262",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6649",
@@ -4121,7 +4121,7 @@
       "codigo": "6649",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527066494",
@@ -4130,7 +4130,7 @@
       "codigo": "7891527066494",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527066491",
@@ -4139,7 +4139,7 @@
       "codigo": "17891527066491",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6657",
@@ -4148,7 +4148,7 @@
       "codigo": "6657",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527066579",
@@ -4157,7 +4157,7 @@
       "codigo": "7891527066579",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527066576",
@@ -4166,7 +4166,7 @@
       "codigo": "17891527066576",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6646",
@@ -4175,7 +4175,7 @@
       "codigo": "6646",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527066463",
@@ -4184,7 +4184,7 @@
       "codigo": "7891527066463",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527066460",
@@ -4193,7 +4193,7 @@
       "codigo": "17891527066460",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_80",
@@ -4202,7 +4202,7 @@
       "codigo": "80",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000801",
@@ -4211,7 +4211,7 @@
       "codigo": "7891527000801",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000808",
@@ -4220,7 +4220,7 @@
       "codigo": "17891527000808",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_84",
@@ -4229,7 +4229,7 @@
       "codigo": "84",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000849",
@@ -4238,7 +4238,7 @@
       "codigo": "7891527000849",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000846",
@@ -4247,7 +4247,7 @@
       "codigo": "17891527000846",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_45",
@@ -4256,7 +4256,7 @@
       "codigo": "45",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000450",
@@ -4265,7 +4265,7 @@
       "codigo": "7891527000450",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000457",
@@ -4274,7 +4274,7 @@
       "codigo": "17891527000457",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_50",
@@ -4283,7 +4283,7 @@
       "codigo": "50",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000504",
@@ -4292,7 +4292,7 @@
       "codigo": "7891527000504",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000501",
@@ -4301,7 +4301,7 @@
       "codigo": "17891527000501",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_52",
@@ -4310,7 +4310,7 @@
       "codigo": "52",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000528",
@@ -4319,7 +4319,7 @@
       "codigo": "7891527000528",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000525",
@@ -4328,7 +4328,7 @@
       "codigo": "17891527000525",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_54",
@@ -4337,7 +4337,7 @@
       "codigo": "54",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000542",
@@ -4346,7 +4346,7 @@
       "codigo": "7891527000542",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000549",
@@ -4355,7 +4355,7 @@
       "codigo": "17891527000549",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_47",
@@ -4364,7 +4364,7 @@
       "codigo": "47",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000474",
@@ -4373,7 +4373,7 @@
       "codigo": "7891527000474",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000471",
@@ -4382,7 +4382,7 @@
       "codigo": "17891527000471",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_57",
@@ -4391,7 +4391,7 @@
       "codigo": "57",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000573",
@@ -4400,7 +4400,7 @@
       "codigo": "7891527000573",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000570",
@@ -4409,7 +4409,7 @@
       "codigo": "17891527000570",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_61",
@@ -4418,7 +4418,7 @@
       "codigo": "61",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000610",
@@ -4427,7 +4427,7 @@
       "codigo": "7891527000610",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000617",
@@ -4436,7 +4436,7 @@
       "codigo": "17891527000617",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_79",
@@ -4445,7 +4445,7 @@
       "codigo": "79",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000795",
@@ -4454,7 +4454,7 @@
       "codigo": "7891527000795",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000792",
@@ -4463,7 +4463,7 @@
       "codigo": "17891527000792",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_86",
@@ -4472,7 +4472,7 @@
       "codigo": "86",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000863",
@@ -4481,7 +4481,7 @@
       "codigo": "7891527000863",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000860",
@@ -4490,7 +4490,7 @@
       "codigo": "17891527000860",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_64",
@@ -4499,7 +4499,7 @@
       "codigo": "64",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000641",
@@ -4508,7 +4508,7 @@
       "codigo": "7891527000641",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000648",
@@ -4517,7 +4517,7 @@
       "codigo": "17891527000648",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_76",
@@ -4526,7 +4526,7 @@
       "codigo": "76",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000764",
@@ -4535,7 +4535,7 @@
       "codigo": "7891527000764",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000761",
@@ -4544,7 +4544,7 @@
       "codigo": "17891527000761",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5",
@@ -4553,7 +4553,7 @@
       "codigo": "5",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000054",
@@ -4562,7 +4562,7 @@
       "codigo": "7891527000054",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000051",
@@ -4571,7 +4571,7 @@
       "codigo": "17891527000051",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_8",
@@ -4580,7 +4580,7 @@
       "codigo": "8",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000085",
@@ -4589,7 +4589,7 @@
       "codigo": "7891527000085",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000082",
@@ -4598,7 +4598,7 @@
       "codigo": "17891527000082",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_271",
@@ -4607,7 +4607,7 @@
       "codigo": "271",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527002713",
@@ -4616,7 +4616,7 @@
       "codigo": "7891527002713",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527002710",
@@ -4625,7 +4625,7 @@
       "codigo": "17891527002710",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6494",
@@ -4634,7 +4634,7 @@
       "codigo": "6494",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527064940",
@@ -4643,7 +4643,7 @@
       "codigo": "7891527064940",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527064947",
@@ -4652,7 +4652,7 @@
       "codigo": "17891527064947",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5439",
@@ -4661,7 +4661,7 @@
       "codigo": "5439",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527054392",
@@ -4670,7 +4670,7 @@
       "codigo": "7891527054392",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527054399",
@@ -4679,7 +4679,7 @@
       "codigo": "17891527054399",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_280",
@@ -4688,7 +4688,7 @@
       "codigo": "280",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527002805",
@@ -4697,7 +4697,7 @@
       "codigo": "7891527002805",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527002802",
@@ -4706,7 +4706,7 @@
       "codigo": "17891527002802",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_13",
@@ -4715,7 +4715,7 @@
       "codigo": "13",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000139",
@@ -4724,7 +4724,7 @@
       "codigo": "7891527000139",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000136",
@@ -4733,7 +4733,7 @@
       "codigo": "17891527000136",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_268",
@@ -4742,7 +4742,7 @@
       "codigo": "268",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527002683",
@@ -4751,7 +4751,7 @@
       "codigo": "7891527002683",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527002680",
@@ -4760,7 +4760,7 @@
       "codigo": "17891527002680",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6964",
@@ -4769,7 +4769,7 @@
       "codigo": "6964",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069648",
@@ -4778,7 +4778,7 @@
       "codigo": "7891527069648",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069645",
@@ -4787,7 +4787,7 @@
       "codigo": "17891527069645",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_2",
@@ -4796,7 +4796,7 @@
       "codigo": "2",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000023",
@@ -4805,7 +4805,7 @@
       "codigo": "7891527000023",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000020",
@@ -4814,7 +4814,7 @@
       "codigo": "17891527000020",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_37",
@@ -4823,7 +4823,7 @@
       "codigo": "37",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527000375",
@@ -4832,7 +4832,7 @@
       "codigo": "7891527000375",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527000372",
@@ -4841,7 +4841,7 @@
       "codigo": "17891527000372",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_967",
@@ -4850,7 +4850,7 @@
       "codigo": "967",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527009675",
@@ -4859,7 +4859,7 @@
       "codigo": "7891527009675",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527009672",
@@ -4868,7 +4868,7 @@
       "codigo": "17891527009672",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5024",
@@ -4877,7 +4877,7 @@
       "codigo": "5024",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527050240",
@@ -4886,7 +4886,7 @@
       "codigo": "7891527050240",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527050247",
@@ -4895,7 +4895,7 @@
       "codigo": "17891527050247",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_447",
@@ -4904,7 +4904,7 @@
       "codigo": "447",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527004472",
@@ -4913,7 +4913,7 @@
       "codigo": "7891527004472",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527004479",
@@ -4922,7 +4922,7 @@
       "codigo": "17891527004479",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6115",
@@ -4931,7 +4931,7 @@
       "codigo": "6115",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527061154",
@@ -4940,7 +4940,7 @@
       "codigo": "7891527061154",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527061151",
@@ -4949,7 +4949,7 @@
       "codigo": "17891527061151",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_98223",
@@ -4958,7 +4958,7 @@
       "codigo": "98223",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527982237",
@@ -4967,7 +4967,7 @@
       "codigo": "7891527982237",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527982234",
@@ -4976,7 +4976,7 @@
       "codigo": "17891527982234",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_7045",
@@ -4985,7 +4985,7 @@
       "codigo": "7045",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527070453",
@@ -4994,7 +4994,7 @@
       "codigo": "7891527070453",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527070450",
@@ -5003,7 +5003,7 @@
       "codigo": "17891527070450",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5496",
@@ -5012,7 +5012,7 @@
       "codigo": "5496",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527054965",
@@ -5021,7 +5021,7 @@
       "codigo": "7891527054965",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527054962",
@@ -5030,7 +5030,7 @@
       "codigo": "17891527054962",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5499",
@@ -5039,7 +5039,7 @@
       "codigo": "5499",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527054996",
@@ -5048,7 +5048,7 @@
       "codigo": "7891527054996",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527054993",
@@ -5057,7 +5057,7 @@
       "codigo": "17891527054993",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5498",
@@ -5066,7 +5066,7 @@
       "codigo": "5498",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527054989",
@@ -5075,7 +5075,7 @@
       "codigo": "7891527054989",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527054986",
@@ -5084,7 +5084,7 @@
       "codigo": "17891527054986",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_5500",
@@ -5093,7 +5093,7 @@
       "codigo": "5500",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527055009",
@@ -5102,7 +5102,7 @@
       "codigo": "7891527055009",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527055006",
@@ -5111,7 +5111,7 @@
       "codigo": "17891527055006",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6904",
@@ -5120,7 +5120,7 @@
       "codigo": "6904",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069044",
@@ -5129,7 +5129,7 @@
       "codigo": "7891527069044",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069041",
@@ -5138,7 +5138,7 @@
       "codigo": "17891527069041",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6902",
@@ -5147,7 +5147,7 @@
       "codigo": "6902",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527069020",
@@ -5156,7 +5156,7 @@
       "codigo": "7891527069020",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527069027",
@@ -5165,7 +5165,7 @@
       "codigo": "17891527069027",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6898",
@@ -5174,7 +5174,7 @@
       "codigo": "6898",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527068986",
@@ -5183,7 +5183,7 @@
       "codigo": "7891527068986",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527068983",
@@ -5192,7 +5192,7 @@
       "codigo": "17891527068983",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_4488",
@@ -5201,7 +5201,7 @@
       "codigo": "4488",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527044881",
@@ -5210,7 +5210,7 @@
       "codigo": "7891527044881",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527044888",
@@ -5219,7 +5219,7 @@
       "codigo": "17891527044888",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_3781",
@@ -5228,7 +5228,7 @@
       "codigo": "3781",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527037814",
@@ -5237,7 +5237,7 @@
       "codigo": "7891527037814",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527037811",
@@ -5246,7 +5246,7 @@
       "codigo": "17891527037811",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6897",
@@ -5255,7 +5255,7 @@
       "codigo": "6897",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527068979",
@@ -5264,7 +5264,7 @@
       "codigo": "7891527068979",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527068976",
@@ -5273,7 +5273,7 @@
       "codigo": "17891527068976",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_4487",
@@ -5282,7 +5282,7 @@
       "codigo": "4487",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527044874",
@@ -5291,7 +5291,7 @@
       "codigo": "7891527044874",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527044871",
@@ -5300,7 +5300,7 @@
       "codigo": "17891527044871",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_3778",
@@ -5309,7 +5309,7 @@
       "codigo": "3778",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527037784",
@@ -5318,7 +5318,7 @@
       "codigo": "7891527037784",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527037781",
@@ -5327,7 +5327,7 @@
       "codigo": "17891527037781",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_6439",
@@ -5336,7 +5336,7 @@
       "codigo": "6439",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527064391",
@@ -5345,7 +5345,7 @@
       "codigo": "7891527064391",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527064398",
@@ -5354,7 +5354,7 @@
       "codigo": "17891527064398",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_copacol_sku_7017",
@@ -5363,7 +5363,7 @@
       "codigo": "7017",
       "embalagem": null,
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_ean_7891527070170",
@@ -5372,7 +5372,7 @@
       "codigo": "7891527070170",
       "embalagem": "Unidade / Pacote",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     },
     {
       "id": "cb_dun_17891527070177",
@@ -5381,10 +5381,58 @@
       "codigo": "17891527070177",
       "embalagem": "Caixa Comercial",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:16.998Z"
+      "criado_em": "2026-09-25T13:11:15.490Z"
     }
   ],
   "pending_images_approval": [
+    {
+      "produto_id": "prod_copacol_3935",
+      "sku": "3935",
+      "descricao": "Filé de Tilápia In Natura Congelado IQF Pacotes de 400g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6299",
+      "sku": "6299",
+      "descricao": "Filé de Tilápia In Natura Congelado IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_3940",
+      "sku": "3940",
+      "descricao": "Filé de Tilápia In Natura Congelado IQF Pacotes de 2kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6809",
+      "sku": "6809",
+      "descricao": "Petisco de Tilápia Congelado IQF Pacotes de 600g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6936",
+      "sku": "6936",
+      "descricao": "Posta de Tilápia Congelada IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6996",
+      "sku": "6996",
+      "descricao": "Costela de Tilápia Congelada IQF Pacotes de 600g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_7014",
+      "sku": "7014",
+      "descricao": "Tilápia Inteira Eviscerada Cong. (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_7015",
+      "sku": "7015",
+      "descricao": "Tilápia Inteira Eviscerada Cong. (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
     {
       "produto_id": "prod_copacol_6495",
       "sku": "6495",
@@ -5395,6 +5443,42 @@
       "produto_id": "prod_copacol_6691",
       "sku": "6691",
       "descricao": "Filé de Tilápia Resf. In Natura IQF (80g Up) Caixa com 4,54kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5519",
+      "sku": "5519",
+      "descricao": "Camarão Sete Barbas Descas. Cong. Pacotes de 400g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6922",
+      "sku": "6922",
+      "descricao": "Camarão Vannamei Cozido e Descas. Cong. Pacotes de 380g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6935",
+      "sku": "6935",
+      "descricao": "Camarão Vannamei Inteiro Cozido Cong. Pacotes de 200g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_7149",
+      "sku": "7149",
+      "descricao": "Camarão Van. Cozido Des. Eviscerado Cong. Unidades de 300g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_7151",
+      "sku": "7151",
+      "descricao": "Camarão Vannamei sem Cabeça Unidades de 300g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5507",
+      "sku": "5507",
+      "descricao": "Filé de Merluza Congelado Pacotes de 800g",
       "placeholder_url": "/imagens_produtos/placeholder.webp"
     },
     {
@@ -5410,6 +5494,18 @@
       "placeholder_url": "/imagens_produtos/placeholder.webp"
     },
     {
+      "produto_id": "prod_copacol_6915",
+      "sku": "6915",
+      "descricao": "Filé de Salmão Individual Cong. Pacotes de 125g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6916",
+      "sku": "6916",
+      "descricao": "Filé de Salmão em Pedaços Cong. Pacotes de 400g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
       "produto_id": "prod_copacol_6917",
       "sku": "6917",
       "descricao": "Filé de Salmão com Pele Cong. Pacotes de 800g",
@@ -5419,6 +5515,18 @@
       "produto_id": "prod_copacol_7156",
       "sku": "7156",
       "descricao": "Lombo de Salmão com Pele Cong. Unidades de 400g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6585",
+      "sku": "6585",
+      "descricao": "Filé de Sardinha Laje Espalmado Cong. Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5514",
+      "sku": "5514",
+      "descricao": "Sardinha Inteira Congelada Pacotes de 800g",
       "placeholder_url": "/imagens_produtos/placeholder.webp"
     },
     {
@@ -5449,6 +5557,630 @@
       "produto_id": "prod_copacol_7002",
       "sku": "7002",
       "descricao": "Lombo de Bacalhau Cong. Embalagem de 600g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6538",
+      "sku": "6538",
+      "descricao": "Filé de Tilápia Empanado Multigrãos Cong. Pacotes de 400g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6539",
+      "sku": "6539",
+      "descricao": "Filé de Tilápia Empanado Tradicional Cong. Pacotes de 400g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6540",
+      "sku": "6540",
+      "descricao": "Filé de Tilápia Empanado Coco Cong. Pacotes de 400g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6443",
+      "sku": "6443",
+      "descricao": "Isca de Filé de Tilápia Empanada Cong. Pacotes de 300g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6492",
+      "sku": "6492",
+      "descricao": "Steak de Tilápia Emp. Congelado Unidades de 100g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6488",
+      "sku": "6488",
+      "descricao": "Stick de Tilápia Emp. Pré-Frito Coz. Cong. Pacotes de 300g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5417",
+      "sku": "5417",
+      "descricao": "Stick de Tilápia Emp. Pré-Frito Coz. Cong. Pacotes de 1,5kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6378",
+      "sku": "6378",
+      "descricao": "Filezinho de Frango Empanado Congelado Pacotes de 700g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6377",
+      "sku": "6377",
+      "descricao": "Filezinho de Frango Empanado Congelado Pacotes de 1,5kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6491",
+      "sku": "6491",
+      "descricao": "Steak de Frango Congelado Unidades de 100g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6490",
+      "sku": "6490",
+      "descricao": "Stick de Frango Empanado Congelado Pacotes de 300g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6380",
+      "sku": "6380",
+      "descricao": "Stick de Frango Empanado Congelado Pacotes de 1,5kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_97819",
+      "sku": "97819",
+      "descricao": "Filé de Peito de Fgo. Moído Cong. Unidades de 500g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_4493",
+      "sku": "4493",
+      "descricao": "Filé de Peito de Fgo. Temp. Coz. Desf. Cong. Pacotes de 400g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_4494",
+      "sku": "4494",
+      "descricao": "Filé de Peito de Fgo. Tem. Coz. Desf. Cong. Pacotes de 2kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_672",
+      "sku": "672",
+      "descricao": "Frango Temperado Desossado Cong. (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6797",
+      "sku": "6797",
+      "descricao": "Coxa de Frango Congelada IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_96235",
+      "sku": "96235",
+      "descricao": "Coxa/sobrecoxa a Passarinho Congelada IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_96225",
+      "sku": "96225",
+      "descricao": "Coxinhahahaha da Asa Congelada IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_96231",
+      "sku": "96231",
+      "descricao": "Filé de Peito Congelado IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6372",
+      "sku": "6372",
+      "descricao": "Filé de Peito em Bifes Congelado IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_96233",
+      "sku": "96233",
+      "descricao": "Filezinho (Sassami) Congelado IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_96237",
+      "sku": "96237",
+      "descricao": "Frango a Passarinho Congelado IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_96227",
+      "sku": "96227",
+      "descricao": "Meio da Asa Congelado IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6933",
+      "sku": "6933",
+      "descricao": "Filé de Coxa e Sobrecoxa Congelada IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6796",
+      "sku": "6796",
+      "descricao": "Filé de Peito em Bifes Temp. Cebola Na Manteiga Cong. IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6784",
+      "sku": "6784",
+      "descricao": "Filé de Peito em Bifes Temp. com Manjericão Cong. IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_96236",
+      "sku": "96236",
+      "descricao": "Frango a Passarinho Temp. Cong. IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6931",
+      "sku": "6931",
+      "descricao": "Peito de Frango a Passarinho Temp. Cong. IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_1907",
+      "sku": "1907",
+      "descricao": "Filezinho Sassami Temp. Sabor Cebola Na Manteiga IQF Pacotes de 800g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6497",
+      "sku": "6497",
+      "descricao": "Costelinha de Frango Temperada Congelada Pacotes de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5791",
+      "sku": "5791",
+      "descricao": "Coxinhahahaha da Asa Temperada Congelada Pacotes de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6433",
+      "sku": "6433",
+      "descricao": "Filé de Coxa e Sobrecoxa S/o C/p Temp. Congelado Pacotes de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5792",
+      "sku": "5792",
+      "descricao": "Meio da Asa Temperado Congelado Pacotes de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6911",
+      "sku": "6911",
+      "descricao": "Pescocinho de Frango Temperado Congelado Pacotes de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_3167",
+      "sku": "3167",
+      "descricao": "Petisco de Frango Temperado Congelado Pacotes de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5793",
+      "sku": "5793",
+      "descricao": "Sobrecoxa Temperada Congelada Pacotes de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_1917",
+      "sku": "1917",
+      "descricao": "Coxinhahahaha da Asa Temperada Resfriada Pacotes de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_1919",
+      "sku": "1919",
+      "descricao": "Frango a Passarinho Temperado Resfriado Pacotes de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_1913",
+      "sku": "1913",
+      "descricao": "Meio da Asa Temperado Resfriado Pacotes de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_1903",
+      "sku": "1903",
+      "descricao": "Sobrecoxa Temperada Resfriada Pacotes de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_81",
+      "sku": "81",
+      "descricao": "Coração Congelado Bandejas de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_83",
+      "sku": "83",
+      "descricao": "Fígado Congelado Bandejas de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_85",
+      "sku": "85",
+      "descricao": "Moela Congelada Bandejas de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_46",
+      "sku": "46",
+      "descricao": "Asa Inteira Congelada Bandejas de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_51",
+      "sku": "51",
+      "descricao": "Coxa Congelada Bandejas de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_53",
+      "sku": "53",
+      "descricao": "Coxa/sobrecoxa Congelada Bandejas de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_55",
+      "sku": "55",
+      "descricao": "Filé de Coxa/sobrecoxa S/osso Cong. Bandejas de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_49",
+      "sku": "49",
+      "descricao": "Coxinhahahaha da Asa Congelada Bandejas de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_277",
+      "sku": "277",
+      "descricao": "Filé de Coxa e Sobrecoxa S/osso S/pele Cong. Bandejas de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_66",
+      "sku": "66",
+      "descricao": "Filé de Peito Congelado Bandejas de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_77",
+      "sku": "77",
+      "descricao": "Sobrecoxa Congelada Bandejas de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6662",
+      "sku": "6662",
+      "descricao": "Coração Resfriado Bandeja de 600g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6663",
+      "sku": "6663",
+      "descricao": "Fígado Resfriado Bandeja de 600g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6664",
+      "sku": "6664",
+      "descricao": "Moela Resfriada Bandeja de 600g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6659",
+      "sku": "6659",
+      "descricao": "Filé de Coxa e Sobrecoxa S/osso S/pele Resfriado Bandeja de 600g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6633",
+      "sku": "6633",
+      "descricao": "Coxinhahahaha da Asa Resfriada Bandeja de 600g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6626",
+      "sku": "6626",
+      "descricao": "Filé de Peito em Bifes Resfriado Bandeja de 600g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6649",
+      "sku": "6649",
+      "descricao": "Filé de Peito Resfriado Bandeja de 600g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6657",
+      "sku": "6657",
+      "descricao": "Filezinho (Sassami) Resfriado Bandeja de 600g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6646",
+      "sku": "6646",
+      "descricao": "Sobrecoxa sem Pele Resfriada Bandeja de 600g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_80",
+      "sku": "80",
+      "descricao": "Coração Congelado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_84",
+      "sku": "84",
+      "descricao": "Moela Congelada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_45",
+      "sku": "45",
+      "descricao": "Asa Inteira Congelada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_50",
+      "sku": "50",
+      "descricao": "Coxa Congelada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_52",
+      "sku": "52",
+      "descricao": "Coxa/sobrecoxa Congelada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_54",
+      "sku": "54",
+      "descricao": "Filé de Coxa e Sobrecoxa S/osso C/pele Cong. (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_47",
+      "sku": "47",
+      "descricao": "Coxinhahahaha da Asa Congelada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_57",
+      "sku": "57",
+      "descricao": "Dorso Congelado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_61",
+      "sku": "61",
+      "descricao": "Filé de Peito Congelado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_79",
+      "sku": "79",
+      "descricao": "Filezinho (Sassami) Congelado Pacotes de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_86",
+      "sku": "86",
+      "descricao": "Meio da Asa Congelado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_64",
+      "sku": "64",
+      "descricao": "Peito Inteiro Congelado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_76",
+      "sku": "76",
+      "descricao": "Sobrecoxa Congelada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5",
+      "sku": "5",
+      "descricao": "Asa Inteira Resfriada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_8",
+      "sku": "8",
+      "descricao": "Coxa/sobrecoxa Resfriada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_271",
+      "sku": "271",
+      "descricao": "Coxinhahahaha da Asa Resfriada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6494",
+      "sku": "6494",
+      "descricao": "Filé de Peito Resfriado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5439",
+      "sku": "5439",
+      "descricao": "Filé de Peito Resfriado Pacotes de 17kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_280",
+      "sku": "280",
+      "descricao": "Meio da Asa Resfriado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_13",
+      "sku": "13",
+      "descricao": "Peito Inteiro Resfriado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_268",
+      "sku": "268",
+      "descricao": "Sobrecoxa S/ Pele Resfriada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6964",
+      "sku": "6964",
+      "descricao": "Sobrecoxa Resfriada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_2",
+      "sku": "2",
+      "descricao": "Frango Inteiro sem Miúdos Resfriado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_37",
+      "sku": "37",
+      "descricao": "Frango Inteiro sem Miúdos Congelado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_967",
+      "sku": "967",
+      "descricao": "Frango Inteiro sem Miúdos Temp. Congelado de 1,7kg a 2,8kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5024",
+      "sku": "5024",
+      "descricao": "Frango Inteiro sem Miúdos Temp. Congelado de 1,7kg a 2,8kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_447",
+      "sku": "447",
+      "descricao": "Frango Navidad Temperado Congelado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6115",
+      "sku": "6115",
+      "descricao": "Frango Navidad Temperado Congelado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_98223",
+      "sku": "98223",
+      "descricao": "Frango Navidad Temperado Congelado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_7045",
+      "sku": "7045",
+      "descricao": "Linguiça de Frango Cozida Defumada Pacotes de 250g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5496",
+      "sku": "5496",
+      "descricao": "Mortadela de Frango Defumada Bolinha Unid. Aprox. 720g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5499",
+      "sku": "5499",
+      "descricao": "Mortadela de Frango Defumada Unid. Aprox. 3,9kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5498",
+      "sku": "5498",
+      "descricao": "Mortadela Defumada Bolinha Unid. Aprox. 720g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_5500",
+      "sku": "5500",
+      "descricao": "Mortadela Defumada Unid. Aprox. 3,9kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6904",
+      "sku": "6904",
+      "descricao": "Mortadela de Frango Light Resfriada Unidades de 380g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6902",
+      "sku": "6902",
+      "descricao": "Mortadela de Frango Unidades de 380g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6898",
+      "sku": "6898",
+      "descricao": "Mortadela com Toucinho Unidades de 380g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_4488",
+      "sku": "4488",
+      "descricao": "Mortadela com Toucinho Unidades de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_3781",
+      "sku": "3781",
+      "descricao": "Mortadela com Toucinho Unidades de 2kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6897",
+      "sku": "6897",
+      "descricao": "Mortadela sem Toucinho Unidades de 380g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_4487",
+      "sku": "4487",
+      "descricao": "Mortadela sem Toucinho Unidades de 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_3778",
+      "sku": "3778",
+      "descricao": "Mortadela sem Toucinho Unidades de 2kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_copacol_6439",
+      "sku": "6439",
+      "descricao": "Salsichão Curvo Unidades de 600g",
       "placeholder_url": "/imagens_produtos/placeholder.webp"
     },
     {

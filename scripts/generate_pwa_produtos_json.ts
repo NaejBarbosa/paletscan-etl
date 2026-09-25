@@ -120,12 +120,7 @@ async function generatePwaProdutosJson() {
   if (!fs.existsSync(publicImgDir)) fs.mkdirSync(publicImgDir, { recursive: true });
 
   const preparedDirs = [
-    '/root/projetos-scraping/scraping-aurora/imagens_preparadas',
-    '/root/projetos-scraping/scraping-copacol/imagens_preparadas',
-    '/root/projetos-scraping/scraping-brf/imagens_preparadas',
-    '/root/projetos-scraping/scraping-friboi/imagens_preparadas',
-    '/root/projetos-scraping/scraping-lar/imagens_preparadas',
-    '/root/projetos-scraping/scraping-seara/imagens_preparadas'
+    path.join(process.cwd(), 'images', 'processed')
   ];
 
   let totalCopied = 0;

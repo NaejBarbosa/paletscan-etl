@@ -24,7 +24,6 @@ const SADIA_SITEMAP = 'https://www.sadia.com.br/sitemap.xml';
 const PERDIGAO_SITEMAP = 'https://www.perdigao.com.br/sitemap.xml';
 const CENTRAL_BRF_SITEMAP = 'https://centralmbrf.com.br/sitemap-product-1.xml';
 
-const LEGACY_DB_PATH = '/root/projetos-scraping/scraping-brf/brf-dun/brf_produtos_b2b.db';
 const PALETSCAN_NAMESPACE = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
 
 const HTTP_HEADERS = {
@@ -139,20 +138,68 @@ function isInvalidImageUrl(url: string | null | undefined): boolean {
 }
 
 /**
- * Carrega os dados brutos consolidados da base de dados BRF SQLite via Python.
+ * Carrega a base consolidada de produtos BRF a partir do staging interno do repositório
  */
-function loadLegacyDatabase(): any[] {
-  if (!fs.existsSync(LEGACY_DB_PATH)) {
-    console.warn(`[!] Banco de dados local não encontrado em ${LEGACY_DB_PATH}. Iniciando sem cache SQLite.`);
+function loadBaselineProducts(): any[] {
+  if (!fs.existsSync(STAGING_FILE)) {
+    console.warn(`[!] Arquivo de staging BRF não encontrado em ${STAGING_FILE}.`);
     return [];
   }
 
   try {
-    const pyCmd = `python3 -c "import sqlite3, json; conn = sqlite3.connect('${LEGACY_DB_PATH}'); conn.row_factory = sqlite3.Row; cursor = conn.cursor(); cursor.execute('SELECT * FROM produtos'); print(json.dumps([dict(r) for r in cursor.fetchall()]))"`;
-    const jsonStr = execSync(pyCmd, { encoding: 'utf-8', maxBuffer: 10 * 1024 * 1024 });
-    return JSON.parse(jsonStr);
-  } catch (err) {
-    console.warn(`[!] Erro ao ler SQLite via Python: ${err}`);
+    const rawContent = fs.readFileSync(STAGING_FILE, 'utf-8');
+    const staging = JSON.parse(rawContent);
+    if (!staging.produtos || !Array.isArray(staging.produtos)) {
+      return [];
+    }
+
+    const cbsByProduct = new Map<string, { sku?: string; ean?: string; dun?: string }>();
+    if (Array.isArray(staging.codigos_barras)) {
+      for (const cb of staging.codigos_barras) {
+        const pId = cb.produto_id;
+        if (!cbsByProduct.has(pId)) cbsByProduct.set(pId, {});
+        const group = cbsByProduct.get(pId)!;
+        const tipo = (cb.tipo || '').toUpperCase();
+        if (tipo === 'SKU') group.sku = cb.codigo;
+        else if (tipo === 'EAN') group.ean = cb.codigo;
+        else if (tipo === 'DUN') group.dun = cb.codigo;
+      }
+    }
+
+    const marcasMap = new Map<string, string>();
+    if (Array.isArray(staging.marcas)) {
+      for (const m of staging.marcas) {
+        marcasMap.set(m.id, m.nome);
+      }
+    }
+
+    const items: any[] = [];
+    for (const p of staging.produtos) {
+      const cbs = cbsByProduct.get(p.id) || {};
+      items.push({
+        sku: cbs.sku || '',
+        title: p.descricao_original || p.descricao_padronizada || '',
+        descrFiscal: p.descricao_original || '',
+        ean: cbs.ean || '',
+        dun: cbs.dun || '',
+        marca: marcasMap.get(p.marca_id) || 'Sadia',
+        classe: p.classe || '',
+        conservacao: p.conservacao || '',
+        tempMin: '',
+        tempMax: '',
+        pesoLiquido: p.peso_gramas ? `${p.peso_gramas}g` : '',
+        pesoBruto: '',
+        vidaUtil: '',
+        url: '',
+        image_url: p.imagem_url || '',
+        source: 'BRF_STAGING'
+      });
+    }
+
+    console.log(`📦 Base BRF consolidada interna carregada com ${items.length} produtos do staging.`);
+    return items;
+  } catch (err: any) {
+    console.error(`[!] Erro ao ler staging interno BRF: ${err.message}`);
     return [];
   }
 }
@@ -176,6 +223,10 @@ async function fetchSitemapUrls(sitemapUrl: string, domainName: string): Promise
     for (const loc of locs) {
       const u = loc.replace(/<\/?loc>/g, '').trim();
       if (u.includes('/produtos/')) {
+        // Ignora URLs que não representam produtos finais (categorias, receitas, etc.)
+        if (u.includes('/categoria/') || u.includes('/receitas/') || u.includes('/dicas/') || u.includes('/linha/')) {
+          continue;
+        }
         const parts = u.replace('https://', '').split('/').filter(Boolean);
         if (parts.length >= 4) {
           prodUrls.push(u);
@@ -280,9 +331,9 @@ async function scrapeInstitutionalPage(url: string, marcaNome: string): Promise<
 export async function runBRFScraper(): Promise<StagingPayload> {
   console.log('🚀 Iniciando Pipeline ETL BRF (Combinação Multi-Fonte: B2B MBRF, PDF, Sadia e Perdigão)...');
 
-  // 1. Carrega a base B2B + PDF (com SKU, EAN-13, DUN-14 e especificações técnicas de câmara fria)
-  const legacyRows = loadLegacyDatabase();
-  console.log(`📦 Base B2B MBRF / PDF carregada com ${legacyRows.length} registros.`);
+  // 1. Carrega a base B2B consolidada interna a partir do staging
+  const legacyRows = loadBaselineProducts();
+  console.log(`📦 Base B2B MBRF carregada com ${legacyRows.length} registros.`);
 
   // Dicionário de produtos unificados indexados por EAN, SKU e Título
   const productMapByEan = new Map<string, any>();
@@ -356,37 +407,13 @@ export async function runBRFScraper(): Promise<StagingPayload> {
       if (!existingItem.ean && instData.ean) {
         existingItem.ean = instData.ean;
       }
-    } else if (instData.ean) {
-      // Produto novo da linha institucional não presente no catálogo B2B
-      const newSku = `INST_${instData.ean}`;
-      const newItem = {
-        sku: newSku,
-        title: instData.title,
-        descrFiscal: instData.title,
-        ean: instData.ean,
-        dun: normalizeDUN14('', instData.ean) || '',
-        marca: task.marca,
-        classe: '',
-        conservacao: 'Resfriado',
-        tempMin: '',
-        tempMax: '',
-        pesoLiquido: '',
-        pesoBruto: '',
-        vidaUtil: '',
-        url: instData.url,
-        image_url: instData.image_url,
-        source: task.marca
-      };
-      productMapBySku.set(newSku, newItem);
-      productMapByEan.set(instData.ean, newItem);
-      newInstProductsCount++;
     }
 
     // Pequeno delay entre requisições
     await new Promise(res => setTimeout(res, 50));
   }
 
-  console.log(`✅ Fusão de imagens concluída! ${updatedImagesCount} produtos com imagem HD atualizada, ${newInstProductsCount} novos produtos institucionais adicionados.`);
+  console.log(`✅ Fusão de imagens concluída! ${updatedImagesCount} produtos com imagem HD atualizada.`);
 
   // 3. Montagem da estrutura relacional padronizada para o PaletScan ETL
   const fabricantesMap = new Map<string, Fabricante>();
@@ -502,6 +529,12 @@ export async function runBRFScraper(): Promise<StagingPayload> {
     codigos_barras: Array.from(codigosBarrasMap.values()),
     pending_images_approval: pendingImagesApproval
   };
+
+  // Proteção de integridade: nunca sobrescreve o staging se o total de produtos for zero
+  if (payload.produtos.length === 0) {
+    console.warn(`[!] Aviso de segurança: O scraper BRF produziu 0 produtos. Staging preservado.`);
+    return payload;
+  }
 
   // Garante que o diretório staging existe e escreve o JSON
   if (!fs.existsSync(STAGING_DIR)) {

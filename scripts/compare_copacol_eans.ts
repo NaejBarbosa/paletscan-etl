@@ -6,10 +6,10 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const OLD_DB_PATH = '/root/projetos-scraping/scraping-copacol/copacol_catalogo.db';
-const OLD_JSON_PATH = '/root/projetos-scraping/scraping-copacol/produtos_enriquecidos.json';
+const OLD_DB_PATH = '';
+const OLD_JSON_PATH = '';
 
-const NEW_STAGING_PATH = '/root/paletscan-etl/staging/copacol_staging.json';
+const NEW_STAGING_PATH = path.join(process.cwd(), 'staging', 'copacol_staging.json');
 
 const SUPABASE_URL = process.env.SUPABASE_URL || 'https://xyujqsitpshfqnlogeib.supabase.co';
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY || '';

@@ -287,27 +287,6 @@ export async function runSearaScraper() {
     }
   }
 
-  // Fallback / Enriquecimento B2B via cache local de HTMLs se houver
-  const localB2BDir = '/root/projetos-scraping/scraping-seara/html_produtos';
-  if (fs.existsSync(localB2BDir)) {
-    const localFiles = fs.readdirSync(localB2BDir).filter(f => f.endsWith('.html'));
-    let localAdded = 0;
-    for (const f of localFiles) {
-      const html = fs.readFileSync(path.join(localB2BDir, f), 'utf-8');
-      const parsed = parseSearaB2BPage(html, `https://www.searafoodsolutions.com.br/produto/${f.replace('.html', '')}`);
-      if (parsed && parsed.title) {
-        const key = parsed.ean || parsed.sku || parsed.title;
-        if (!processedSkus.has(key)) {
-          processedSkus.add(key);
-          rawProducts.push(parsed);
-          localAdded++;
-        }
-      }
-    }
-    if (localAdded > 0) {
-      console.log(`\n📦 Enriquecidos ${localAdded} produtos B2B a partir do repositório local de HTMLs.`);
-    }
-  }
   console.log(`\n✅ Extraídos ${rawProducts.length} produtos B2B no total.`);
 
   // 2. Extração B2C (Seara Institucional)
@@ -335,27 +314,6 @@ export async function runSearaScraper() {
     }
   }
 
-  // Fallback / Enriquecimento B2C via cache local de HTMLs se houver
-  const localB2CDir = '/root/projetos-scraping/scraping-seara/html_produtos_b2c';
-  if (fs.existsSync(localB2CDir)) {
-    const localFiles = fs.readdirSync(localB2CDir).filter(f => f.endsWith('.html'));
-    let localAdded = 0;
-    for (const f of localFiles) {
-      const html = fs.readFileSync(path.join(localB2CDir, f), 'utf-8');
-      const parsed = parseSearaB2CPage(html, `https://www.seara.com.br/produto/${f.replace('.html', '')}`);
-      if (parsed && parsed.title) {
-        const key = parsed.ean || parsed.sku || parsed.title;
-        if (!processedSkus.has(key)) {
-          processedSkus.add(key);
-          rawProducts.push(parsed);
-          localAdded++;
-        }
-      }
-    }
-    if (localAdded > 0) {
-      console.log(`\n📦 Enriquecidos ${localAdded} produtos B2C a partir do repositório local de HTMLs.`);
-    }
-  }
   console.log(`\n✅ Extraídos ${rawProducts.length - b2cCountBefore} produtos B2C da Seara.`);
   console.log(`🔥 Total Bruto Combinado de Produtos Seara: ${rawProducts.length}`);
 
@@ -461,6 +419,11 @@ export async function runSearaScraper() {
     produtos: Object.values(produtosMap),
     codigos_barras: codigosBarras
   };
+
+  if (payload.produtos.length === 0) {
+    console.warn(`[!] Aviso de segurança: O scraper Seara produziu 0 produtos. Staging preservado.`);
+    return;
+  }
 
   if (!fs.existsSync(STAGING_DIR)) {
     fs.mkdirSync(STAGING_DIR, { recursive: true });

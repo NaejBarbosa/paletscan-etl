@@ -44,8 +44,6 @@ const BASE_DIR = path.resolve(process.cwd());
 const STAGING_DIR = path.join(BASE_DIR, 'staging');
 const STAGING_FILE = path.join(STAGING_DIR, 'copacol_staging.json');
 const STAGING_UUID_FILE = path.join(STAGING_DIR, 'copacol_staging_uuid.json');
-const LEGACY_DB_PATH = '/root/projetos-scraping/scraping-copacol/copacol_catalogo.db';
-const LEGACY_JSON_PATH = '/root/projetos-scraping/scraping-copacol/produtos_enriquecidos.json';
 
 export interface RawCopacolProduct {
   sku: string;
@@ -64,30 +62,61 @@ export interface RawCopacolProduct {
 }
 
 export function readLegacyCopacolDatabase(): RawCopacolProduct[] {
-  if (fs.existsSync(LEGACY_DB_PATH)) {
-    const pythonCmd = `python3 -c "import sqlite3, json; conn = sqlite3.connect('${LEGACY_DB_PATH}'); conn.row_factory = sqlite3.Row; c = conn.cursor(); c.execute('SELECT * FROM produtos;'); print(json.dumps([dict(r) for r in c.fetchall()], ensure_ascii=False))"`;
-    try {
-      const rawJson = execSync(pythonCmd, { encoding: 'utf-8' });
-      const products: RawCopacolProduct[] = JSON.parse(rawJson);
-      console.log(`[+] Lidos ${products.length} produtos do catálogo mestre Copacol (SQLite).`);
-      return products;
-    } catch (err: any) {
-      console.warn(`[!] Aviso ao ler banco SQLite: ${err.message}. Tentando fallback JSON...`);
-    }
+  if (!fs.existsSync(STAGING_FILE)) {
+    console.error(`[!] Staging da Copacol não encontrado em: ${STAGING_FILE}`);
+    return [];
   }
 
-  if (fs.existsSync(LEGACY_JSON_PATH)) {
-    try {
-      const rawJson = fs.readFileSync(LEGACY_JSON_PATH, 'utf-8');
-      const products: RawCopacolProduct[] = JSON.parse(rawJson);
-      console.log(`[+] Lidos ${products.length} produtos do catálogo mestre Copacol (JSON).`);
-      return products;
-    } catch (err: any) {
-      console.error(`[!] Erro ao ler JSON fallback Copacol: ${err.message}`);
-    }
-  }
+  try {
+    const rawContent = fs.readFileSync(STAGING_FILE, 'utf-8');
+    const staging = JSON.parse(rawContent);
+    if (!staging.produtos || !Array.isArray(staging.produtos)) return [];
 
-  return [];
+    const cbsByProduct = new Map<string, { sku?: string; ean?: string; dun?: string }>();
+    if (Array.isArray(staging.codigos_barras)) {
+      for (const cb of staging.codigos_barras) {
+        const pId = cb.produto_id;
+        if (!cbsByProduct.has(pId)) cbsByProduct.set(pId, {});
+        const group = cbsByProduct.get(pId)!;
+        const tipo = (cb.tipo || '').toUpperCase();
+        if (tipo === 'SKU') group.sku = cb.codigo;
+        else if (tipo === 'EAN') group.ean = cb.codigo;
+        else if (tipo === 'DUN') group.dun = cb.codigo;
+      }
+    }
+
+    const marcasMap = new Map<string, string>();
+    if (Array.isArray(staging.marcas)) {
+      for (const m of staging.marcas) {
+        marcasMap.set(m.id, m.nome);
+      }
+    }
+
+    const products: RawCopacolProduct[] = [];
+    for (const p of staging.produtos) {
+      const cbs = cbsByProduct.get(p.id) || {};
+      const sku = cbs.sku || (p.id ? p.id.replace('prod_copacol_', '') : '');
+      products.push({
+        sku,
+        title: p.descricao_original || p.descricao_padronizada || '',
+        descricao: p.descricao_original || p.descricao_padronizada || '',
+        descrFiscal: p.descricao_original || '',
+        ean: cbs.ean || '',
+        dun: cbs.dun || '',
+        marca: marcasMap.get(p.marca_id) || 'Copacol',
+        classe: p.classe || '',
+        conservacao: p.conservacao || '',
+        pesoLiquido: p.peso_gramas ? `${p.peso_gramas}g` : '',
+        image_url: p.imagem_url || ''
+      });
+    }
+
+    console.log(`[+] Lidos ${products.length} produtos da base consolidada da Copacol (Staging).`);
+    return products;
+  } catch (err: any) {
+    console.error(`[!] Erro ao ler base interna Copacol: ${err.message}`);
+    return [];
+  }
 }
 
 /**
@@ -219,7 +248,7 @@ export async function runCopacolScraper() {
     let imageStatus: 'aprovado' | 'pendente_aprovacao' | 'sem_imagem' = 'sem_imagem';
 
     const primaryBarcode = eanClean || dunClean;
-    const localPreparedPath = primaryBarcode ? `/root/projetos-scraping/scraping-copacol/imagens_preparadas/${primaryBarcode}.webp` : '';
+    const localPreparedPath = primaryBarcode ? path.join(BASE_DIR, 'images', 'processed', `${primaryBarcode}.webp`) : '';
 
     if (localPreparedPath && fs.existsSync(localPreparedPath)) {
       finalImageUrl = `/imagens_produtos/${primaryBarcode}.webp`;
@@ -302,6 +331,12 @@ export async function runCopacolScraper() {
     codigos_barras: codigosBarrasList,
     pending_images_approval: pendingImagesApprovalList
   };
+
+  // Proteção de integridade: nunca sobrescreve o staging se o total de produtos for zero
+  if (produtosList.length === 0) {
+    console.warn(`[!] Aviso de segurança: O scraper Copacol produziu 0 produtos. Staging preservado.`);
+    return stagingData;
+  }
 
   // Salva staging de IDs texto
   fs.writeFileSync(STAGING_FILE, JSON.stringify(stagingData, null, 2), 'utf-8');

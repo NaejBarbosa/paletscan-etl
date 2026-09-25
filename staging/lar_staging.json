@@ -6,7 +6,7 @@
       "cnpj": "76.879.878/0001-00",
       "site_oficial": "https://www.lar.ind.br",
       "ativo": true,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     }
   ],
   "marcas": [
@@ -17,165 +17,165 @@
       "slug": "lar",
       "descricao": "Produtos da Lar Cooperativa Agroindustrial",
       "ativo": true,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     }
   ],
   "produtos": [
     {
       "id": "prod_lar_281093",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Batata Palito Airfryer 1,005kg",
+      "descricao_padronizada": "Batata Palito Airfryer (pesar)",
       "descricao_original": "Batata Palito Airfryer",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 1005,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419730729.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_311635",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Tilápia 700g",
+      "descricao_padronizada": "Filé de Tilápia (pesar)",
       "descricao_original": "Filé de Tilápia",
       "classe": "Pescados",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419731917.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_310812",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Tilápia 5kg",
+      "descricao_padronizada": "Filé de Tilápia (pesar)",
       "descricao_original": "Filé de Tilápia",
       "classe": "Pescados",
       "conservacao": "Congelado",
-      "peso_gramas": 5000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419731801.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_311632",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Tilápia 400g",
+      "descricao_padronizada": "Filé de Tilápia (pesar)",
       "descricao_original": "Filé de Tilápia",
       "classe": "Pescados",
       "conservacao": "Congelado",
-      "peso_gramas": 400,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419731900.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_59605",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Anéis de Cebola 1,1kg",
+      "descricao_padronizada": "Anéis de Cebola (pesar)",
       "descricao_original": "Anéis de Cebola",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 1100,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419720270.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_59604",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Anéis de Cebola 400g",
+      "descricao_padronizada": "Anéis de Cebola (pesar)",
       "descricao_original": "Anéis de Cebola",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 400,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419720287.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_280246",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Batata Palito 1,5kg",
+      "descricao_padronizada": "Batata Palito (pesar)",
       "descricao_original": "Batata Palito",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 1500,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419730705.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_262634",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Batata Palito 700g",
+      "descricao_padronizada": "Batata Palito (pesar)",
       "descricao_original": "Batata Palito",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419730347.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_123050",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Polenta Palito 1,1kg",
+      "descricao_padronizada": "Polenta Palito (pesar)",
       "descricao_original": "Polenta Palito",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 1100,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419724384.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_666198",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Polenta Palito 400g",
+      "descricao_padronizada": "Polenta Palito (pesar)",
       "descricao_original": "Polenta Palito",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 400,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419712770.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_203889",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Coração Bandeja 1kg",
+      "descricao_padronizada": "Coração Bandeja (pesar)",
       "descricao_original": "Coração Bandeja • Congelada",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728887.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_163687",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Coração Bandeja 600g",
+      "descricao_padronizada": "Coração Bandeja (pesar)",
       "descricao_original": "Coração Bandeja • Congelada",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 600,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727286.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_203898",
@@ -186,204 +186,204 @@
       "conservacao": "Congelado",
       "peso_gramas": 1000,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728900.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_203892",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Coxinhas das Asas Bandeja 1kg",
+      "descricao_padronizada": "Coxinhas das Asas Bandeja (pesar)",
       "descricao_original": "Coxinhas das Asas Bandeja • Congelada",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728894.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_163697",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Coxinhas das Asas Bandeja 600g",
+      "descricao_padronizada": "Coxinhas das Asas Bandeja (pesar)",
       "descricao_original": "Coxinhas das Asas Bandeja • Congelada",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 600,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727309.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_203885",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Peito Bandeja 1kg",
+      "descricao_padronizada": "Filé de Peito Bandeja (pesar)",
       "descricao_original": "Filé de Peito Bandeja • Congelada",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728870.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_163703",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Peito Bandeja 600g",
+      "descricao_padronizada": "Filé de Peito Bandeja (pesar)",
       "descricao_original": "Filé de Peito Bandeja • Congelada",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 600,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727316.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_203907",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filezinho Sassami Bandeja 1kg",
+      "descricao_padronizada": "Filezinho Sassami Bandeja (pesar)",
       "descricao_original": "Filezinho Sassami Bandeja • Congelada",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728917.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_163708",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filezinho Sassami Bandeja 600g",
+      "descricao_padronizada": "Filezinho Sassami Bandeja (pesar)",
       "descricao_original": "Filezinho Sassami Bandeja • Congelada",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 600,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727323.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_163683",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Moela Bandeja 600g",
+      "descricao_padronizada": "Moela Bandeja (pesar)",
       "descricao_original": "Moela Bandeja • Congelada",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 600,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727279.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_179655",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Coração Bandeja 600g",
+      "descricao_padronizada": "Coração Bandeja (pesar)",
       "descricao_original": "Coração Bandeja • Resfriado",
       "classe": "Aves",
       "conservacao": "Resfriado",
-      "peso_gramas": 600,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728078.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_178651",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Coxinhas das Asas Bandeja 600g",
+      "descricao_padronizada": "Coxinhas das Asas Bandeja (pesar)",
       "descricao_original": "Coxinhas das Asas Bandeja • Resfriada",
       "classe": "Aves",
       "conservacao": "Resfriado",
-      "peso_gramas": 600,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728047.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_178580",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Peito Bandeja 600g",
+      "descricao_padronizada": "Filé de Peito Bandeja (pesar)",
       "descricao_original": "Filé de Peito Bandeja • Resfriado",
       "classe": "Aves",
       "conservacao": "Resfriado",
-      "peso_gramas": 600,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728023.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_179706",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filezinho Sassami Bandeja 600g",
+      "descricao_padronizada": "Filezinho Sassami Bandeja (pesar)",
       "descricao_original": "Filezinho Sassami Bandeja • Resfriada",
       "classe": "Aves",
       "conservacao": "Resfriado",
-      "peso_gramas": 600,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728085.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_178554",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Meio das Asas Bandeja 600g",
+      "descricao_padronizada": "Meio das Asas Bandeja (pesar)",
       "descricao_original": "Meio das Asas Bandeja • Resfriada",
       "classe": "Aves",
       "conservacao": "Resfriado",
-      "peso_gramas": 600,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727996.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_178648",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Moela Bandeja 600g",
+      "descricao_padronizada": "Moela Bandeja (pesar)",
       "descricao_original": "Moela Bandeja • Resfriada",
       "classe": "Aves",
       "conservacao": "Resfriado",
-      "peso_gramas": 600,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728030.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_178557",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Sobrecoxas Bandeja 600g",
+      "descricao_padronizada": "Sobrecoxas Bandeja (pesar)",
       "descricao_original": "Sobrecoxas Bandeja • Resfriada",
       "classe": "Aves",
       "conservacao": "Resfriado",
-      "peso_gramas": 600,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728009.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_304844",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Frango Desfiado 1kg",
+      "descricao_padronizada": "Frango Desfiado (pesar)",
       "descricao_original": "Frango Desfiado",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419731177.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_200667",
@@ -394,9 +394,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728757.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_200653",
@@ -407,9 +407,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728740.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_202951",
@@ -420,9 +420,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728849.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_LAR_meio-da-asa-assada-linha-minuto-300g",
@@ -433,9 +433,9 @@
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728818.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_202924",
@@ -446,165 +446,165 @@
       "conservacao": "Congelado",
       "peso_gramas": 300,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728825.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_852326",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Empanitos Empanado 1,5kg",
+      "descricao_padronizada": "Empanitos Empanado (pesar)",
       "descricao_original": "Empanitos Empanado",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 1500,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419714071.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_134875",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Empanitos Empanado 700g",
+      "descricao_padronizada": "Empanitos Empanado (pesar)",
       "descricao_original": "Empanitos Empanado",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419725336.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_134904",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé À Milanesa 700g",
+      "descricao_padronizada": "Filé À Milanesa (pesar)",
       "descricao_original": "Filé à milanesa",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419725480.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_42309",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Coxas e Sobrecoxas Empanadas 1,5kg",
+      "descricao_padronizada": "Filé de Coxas e Sobrecoxas Empanadas (pesar)",
       "descricao_original": "Filé de Coxas e Sobrecoxas Empanadas",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 1500,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419717560.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_42308",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Coxas e Sobrecoxas Empanadas 700g",
+      "descricao_padronizada": "Filé de Coxas e Sobrecoxas Empanadas (pesar)",
       "descricao_original": "Filé de Coxas e Sobrecoxas Empanadas",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419725329.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_23882",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filezinho Sassami Empanado 1,5kg",
+      "descricao_padronizada": "Filezinho Sassami Empanado (pesar)",
       "descricao_original": "Filezinho Sassami Empanado",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 1500,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419715566.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_27191",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filezinho Sassami Empanado 700g",
+      "descricao_padronizada": "Filezinho Sassami Empanado (pesar)",
       "descricao_original": "Filezinho Sassami Empanado",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419716129.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_250120",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Mini Hambúrguer Empanado de Frango 300g",
+      "descricao_padronizada": "Mini Hambúrguer Empanado de Frango (pesar)",
       "descricao_original": "Mini Hambúrguer Empanado de Frango",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 300,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419730156.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_134903",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Iscas Empanadas 700g",
+      "descricao_padronizada": "Iscas Empanadas (pesar)",
       "descricao_original": "Iscas Empanadas",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419725459.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_852274",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Steak Empanado 100g",
+      "descricao_padronizada": "Steak Empanado (pesar)",
       "descricao_original": "Steak Empanado",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 100,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419713852.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_100212",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Steak Empanado 100g",
+      "descricao_padronizada": "Steak Empanado (pesar)",
       "descricao_original": "Steak Empanado",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 100,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419713852.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_225974",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Hambúrguer Empanado de Frango 100g",
+      "descricao_padronizada": "Hambúrguer Empanado de Frango (pesar)",
       "descricao_original": "Hambúrguer Empanado de Frango",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 100,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419729143.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_75561",
@@ -615,9 +615,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419721475.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_71707",
@@ -628,9 +628,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419720799.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_71710",
@@ -641,9 +641,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419719977.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_78263",
@@ -654,9 +654,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419721536.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_71713",
@@ -667,9 +667,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419720386.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_71719",
@@ -680,9 +680,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419720447.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_61707",
@@ -693,9 +693,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419720393.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_71722",
@@ -706,9 +706,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419720997.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_71711",
@@ -719,9 +719,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419720676.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_65763",
@@ -732,9 +732,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419720959.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_96367",
@@ -745,9 +745,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419723424.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_96366",
@@ -758,9 +758,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419723400.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_65767",
@@ -771,9 +771,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419720973.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_65765",
@@ -784,9 +784,9 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419720966.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_65766",
@@ -797,22 +797,22 @@
       "conservacao": "Resfriado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419720980.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_1015",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Coxas IQF 1kg",
+      "descricao_padronizada": "Coxas IQF (pesar)",
       "descricao_original": "Coxas IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419714224.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_173809",
@@ -823,22 +823,22 @@
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727811.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_722841",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Coxinhas das Asas IQF 1kg",
+      "descricao_padronizada": "Coxinhas das Asas IQF (pesar)",
       "descricao_original": "Coxinhas das Asas IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419713784.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_173766",
@@ -849,74 +849,74 @@
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727774.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_29248",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF 1kg",
+      "descricao_padronizada": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF (pesar)",
       "descricao_original": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419716273.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_173850",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF 700g",
+      "descricao_padronizada": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF (pesar)",
       "descricao_original": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727859.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_173832",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Frango a Passarinho IQF 700g",
+      "descricao_padronizada": "Frango a Passarinho IQF (pesar)",
       "descricao_original": "Frango a Passarinho IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727835.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_29245",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Frango a Passarinho IQF 1kg",
+      "descricao_padronizada": "Frango a Passarinho IQF (pesar)",
       "descricao_original": "Frango a Passarinho IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419701637.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_29244",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Peito IQF 1kg",
+      "descricao_padronizada": "Filé de Peito IQF (pesar)",
       "descricao_original": "Filé de Peito IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419716280.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_173781",
@@ -927,22 +927,22 @@
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727804.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_1016",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filezinho Sassami IQF 1kg",
+      "descricao_padronizada": "Filezinho Sassami IQF (pesar)",
       "descricao_original": "Filezinho Sassami IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419714231.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_173776",
@@ -953,22 +953,22 @@
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727798.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_18399",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Sobrecoxas IQF 1kg",
+      "descricao_padronizada": "Sobrecoxas IQF (pesar)",
       "descricao_original": "Sobrecoxas IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419715047.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_173826",
@@ -979,61 +979,61 @@
       "conservacao": "Congelado",
       "peso_gramas": 700,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727828.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_18441",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Meio das Asas IQF 1kg",
+      "descricao_padronizada": "Meio das Asas IQF (pesar)",
       "descricao_original": "Meio das Asas IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419715092.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_203714",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Peito Moído 375g",
+      "descricao_padronizada": "Filé de Peito Moído (pesar)",
       "descricao_original": "Filé de Peito Moído",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 375,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728863.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_87787",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Linguiça de Frango Fininha 1kg",
+      "descricao_padronizada": "Linguiça de Frango Fininha (pesar)",
       "descricao_original": "Linguiça de Frango Fininha Congelada",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419722656.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_179787",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Linguiça de Frango Fininha 700g",
+      "descricao_padronizada": "Linguiça de Frango Fininha (pesar)",
       "descricao_original": "Linguiça de Frango Fininha Congelada",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728108.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_179770",
@@ -1044,308 +1044,308 @@
       "conservacao": "Resfriado",
       "peso_gramas": 700,
       "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728092.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_84559",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Linguiça de Frango Grossa 5kg",
+      "descricao_padronizada": "Linguiça de Frango Grossa (pesar)",
       "descricao_original": "Linguiça de Frango Grossa Congelada",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 5000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419722274.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_87788",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Linguiça de Frango Grossa 1kg",
+      "descricao_padronizada": "Linguiça de Frango Grossa (pesar)",
       "descricao_original": "Linguiça de Frango Grossa Congelada",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 1000,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419722663.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_164035",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Linguiça de Frango Petisco 700g",
+      "descricao_padronizada": "Linguiça de Frango Petisco (pesar)",
       "descricao_original": "Linguiça de Frango Petisco Congelada",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419727439.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_230041",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Fígado 700g",
+      "descricao_padronizada": "Fígado (pesar)",
       "descricao_original": "Fígado",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419729211.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_123021",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Brócolis 300g",
+      "descricao_padronizada": "Brócolis (pesar)",
       "descricao_original": "Brócolis Congelado",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 300,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419724612.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_123025",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Ervilhas 1,1kg",
+      "descricao_padronizada": "Ervilhas Congeladas (pesar)",
       "descricao_original": "Ervilhas Congeladas",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 1100,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419724582.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_123027",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Ervilhas 300g",
+      "descricao_padronizada": "Ervilhas Congeladas (pesar)",
       "descricao_original": "Ervilhas Congeladas",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 300,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419724599.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_123040",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Mix de Vegetais 300g",
+      "descricao_padronizada": "Mix de Vegetais (pesar)",
       "descricao_original": "Mix de Vegetais Congelado",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 300,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419724537.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_123043",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Seleta de Legumes 1,1kg",
+      "descricao_padronizada": "Seleta de Legumes Congeladas (pesar)",
       "descricao_original": "Seleta de Legumes Congeladas",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 1100,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419724483.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_123045",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Seleta de Legumes 300g",
+      "descricao_padronizada": "Seleta de Legumes Congeladas (pesar)",
       "descricao_original": "Seleta de Legumes Congeladas",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 300,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419724490.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_852313",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Tirinhas Empanadas 1,5kg",
+      "descricao_padronizada": "Tirinhas Empanadas (pesar)",
       "descricao_original": "Tirinhas Empanadas",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 1500,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419714064.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_304568",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Frango Desfiado 400g",
+      "descricao_padronizada": "Frango Desfiado (pesar)",
       "descricao_original": "Frango Desfiado",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 400,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419731160.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_253396",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Coxinha da Asa Temperadas IQF 700g",
+      "descricao_padronizada": "Coxinha da Asa Temperadas IQF (pesar)",
       "descricao_original": "Coxinha da Asa Temperadas IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419730194.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_291081",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filé de Coxas e Sobrecoxas Temperada IQF 700g",
+      "descricao_padronizada": "Filé de Coxas e Sobrecoxas Temperada IQF (pesar)",
       "descricao_original": "Filé de Coxas e Sobrecoxas Temperada IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419730774.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_253411",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Frango a Passarinho Temperado IQF 700g",
+      "descricao_padronizada": "Frango a Passarinho Temperado IQF (pesar)",
       "descricao_original": "Frango a Passarinho Temperado IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419730200.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_179824",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Linguiça de Frango Grossa 700g",
+      "descricao_padronizada": "Linguiça de Frango Grossa (pesar)",
       "descricao_original": "Linguiça de Frango Grossa Congelada",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728115.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_230002",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Coração 700g",
+      "descricao_padronizada": "Coração (pesar)",
       "descricao_original": "Coração",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419729198.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_230026",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Moela 700g",
+      "descricao_padronizada": "Moela (pesar)",
       "descricao_original": "Moela",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419729204.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_253889",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Frango Inteiro Temperado 2,4kg – 2,8kg",
+      "descricao_padronizada": "Frango Inteiro Temperado (pesar)",
       "descricao_original": "Frango Inteiro Temperado Congelado",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 2400,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419730224.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_102007",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Brócolis 1,1kg",
+      "descricao_padronizada": "Brócolis (pesar)",
       "descricao_original": "Brócolis Congelado",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 1100,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419720010.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_123022",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Couve-Flor 1,1kg",
+      "descricao_padronizada": "Couve-Flor (pesar)",
       "descricao_original": "Couve-Flor Congelado",
       "classe": "Vegetais & Congelados",
       "conservacao": "Congelado",
-      "peso_gramas": 1100,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419720003.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_249060",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Ave Natalina Temperada Recheada 3,4 – 3,8kg",
+      "descricao_padronizada": "Ave Natalina Temperada Recheada (pesar)",
       "descricao_original": "Ave Natalina Temperada Recheada Congelada",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 3800,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419730842.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_134873",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Tirinhas Empanadas 700g",
+      "descricao_padronizada": "Tirinhas Empanadas (pesar)",
       "descricao_original": "Tirinhas Empanadas",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419725343.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_71367",
@@ -1356,9 +1356,9 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419721116.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_94633",
@@ -1369,100 +1369,100 @@
       "conservacao": "Congelado",
       "peso_gramas": null,
       "fracionado": true,
-      "imagem_url": "/imagens_produtos/7896419723233.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_253387",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Meio da Asas Temperadas IQF 700g",
+      "descricao_padronizada": "Meio da Asas Temperadas IQF (pesar)",
       "descricao_original": "Meio da Asas Temperadas IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419730187.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_291074",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Sobrecoxa Temperada IQF 700g",
+      "descricao_padronizada": "Sobrecoxa Temperada IQF (pesar)",
       "descricao_original": "Sobrecoxa Temperada IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419730767.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_253416",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Filezinho Sassami Temperado IQF 700g",
+      "descricao_padronizada": "Filezinho Sassami Temperado IQF (pesar)",
       "descricao_original": "Filezinho Sassami Temperado IQF",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419730217.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_229642",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Coração Temperado 700g",
+      "descricao_padronizada": "Coração Temperado (pesar)",
       "descricao_original": "Coração Temperado",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419729181.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_206879",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Coxinhas das Asas Temperadas 700g",
+      "descricao_padronizada": "Coxinhas das Asas Temperadas (pesar)",
       "descricao_original": "Coxinhas das Asas Temperadas",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728955.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_206863",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Meio das Asas Temperadas 700g",
+      "descricao_padronizada": "Meio das Asas Temperadas (pesar)",
       "descricao_original": "Meio das Asas Temperadas",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728948.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "prod_lar_206854",
       "marca_id": "marca_lar",
-      "descricao_padronizada": "Frango a Passarinho Temperado 700g",
+      "descricao_padronizada": "Frango a Passarinho Temperado (pesar)",
       "descricao_original": "Frango a Passarinho Temperado",
       "classe": "Aves",
       "conservacao": "Congelado",
-      "peso_gramas": 700,
-      "fracionado": false,
-      "imagem_url": "/imagens_produtos/7896419728931.webp",
-      "status_imagem": "aprovado",
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "peso_gramas": null,
+      "fracionado": true,
+      "imagem_url": null,
+      "status_imagem": "sem_imagem",
+      "criado_em": "2026-09-25T13:11:08.592Z"
     }
   ],
   "codigos_barras": [
@@ -1473,7 +1473,7 @@
       "codigo": "7896419730729",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419730726",
@@ -1482,7 +1482,7 @@
       "codigo": "17896419730726",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_281093",
@@ -1491,7 +1491,7 @@
       "codigo": "281093",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419731917",
@@ -1500,7 +1500,7 @@
       "codigo": "7896419731917",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419731914",
@@ -1509,7 +1509,7 @@
       "codigo": "17896419731914",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_311635",
@@ -1518,7 +1518,7 @@
       "codigo": "311635",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419731801",
@@ -1527,7 +1527,7 @@
       "codigo": "7896419731801",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419731808",
@@ -1536,7 +1536,7 @@
       "codigo": "17896419731808",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_310812",
@@ -1545,7 +1545,7 @@
       "codigo": "310812",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419731900",
@@ -1554,7 +1554,7 @@
       "codigo": "7896419731900",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419731907",
@@ -1563,7 +1563,7 @@
       "codigo": "17896419731907",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_311632",
@@ -1572,7 +1572,7 @@
       "codigo": "311632",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720270",
@@ -1581,7 +1581,7 @@
       "codigo": "7896419720270",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419720277",
@@ -1590,7 +1590,7 @@
       "codigo": "17896419720277",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_59605",
@@ -1599,7 +1599,7 @@
       "codigo": "59605",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720287",
@@ -1608,7 +1608,7 @@
       "codigo": "7896419720287",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419720284",
@@ -1617,7 +1617,7 @@
       "codigo": "17896419720284",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_59604",
@@ -1626,7 +1626,7 @@
       "codigo": "59604",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419730705",
@@ -1635,7 +1635,7 @@
       "codigo": "7896419730705",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419730702",
@@ -1644,7 +1644,7 @@
       "codigo": "17896419730702",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_280246",
@@ -1653,7 +1653,7 @@
       "codigo": "280246",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419730347",
@@ -1662,7 +1662,7 @@
       "codigo": "7896419730347",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419730344",
@@ -1671,7 +1671,7 @@
       "codigo": "17896419730344",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_262634",
@@ -1680,7 +1680,7 @@
       "codigo": "262634",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419724384",
@@ -1689,7 +1689,7 @@
       "codigo": "7896419724384",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419724381",
@@ -1698,7 +1698,7 @@
       "codigo": "17896419724381",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_123050",
@@ -1707,7 +1707,7 @@
       "codigo": "123050",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419712770",
@@ -1716,7 +1716,7 @@
       "codigo": "7896419712770",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419712777",
@@ -1725,7 +1725,7 @@
       "codigo": "17896419712777",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_666198",
@@ -1734,7 +1734,7 @@
       "codigo": "666198",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728887",
@@ -1743,7 +1743,7 @@
       "codigo": "7896419728887",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728884",
@@ -1752,7 +1752,7 @@
       "codigo": "17896419728884",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_203889",
@@ -1761,7 +1761,7 @@
       "codigo": "203889",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727286",
@@ -1770,7 +1770,7 @@
       "codigo": "7896419727286",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727283",
@@ -1779,7 +1779,7 @@
       "codigo": "17896419727283",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_163687",
@@ -1788,7 +1788,7 @@
       "codigo": "163687",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728900",
@@ -1797,7 +1797,7 @@
       "codigo": "7896419728900",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728907",
@@ -1806,7 +1806,7 @@
       "codigo": "17896419728907",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_203898",
@@ -1815,7 +1815,7 @@
       "codigo": "203898",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728894",
@@ -1824,7 +1824,7 @@
       "codigo": "7896419728894",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728891",
@@ -1833,7 +1833,7 @@
       "codigo": "17896419728891",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_203892",
@@ -1842,7 +1842,7 @@
       "codigo": "203892",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727309",
@@ -1851,7 +1851,7 @@
       "codigo": "7896419727309",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727306",
@@ -1860,7 +1860,7 @@
       "codigo": "17896419727306",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_163697",
@@ -1869,7 +1869,7 @@
       "codigo": "163697",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728870",
@@ -1878,7 +1878,7 @@
       "codigo": "7896419728870",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728877",
@@ -1887,7 +1887,7 @@
       "codigo": "17896419728877",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_203885",
@@ -1896,7 +1896,7 @@
       "codigo": "203885",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727316",
@@ -1905,7 +1905,7 @@
       "codigo": "7896419727316",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727313",
@@ -1914,7 +1914,7 @@
       "codigo": "17896419727313",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_163703",
@@ -1923,7 +1923,7 @@
       "codigo": "163703",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728917",
@@ -1932,7 +1932,7 @@
       "codigo": "7896419728917",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728914",
@@ -1941,7 +1941,7 @@
       "codigo": "17896419728914",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_203907",
@@ -1950,7 +1950,7 @@
       "codigo": "203907",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727323",
@@ -1959,7 +1959,7 @@
       "codigo": "7896419727323",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727320",
@@ -1968,7 +1968,7 @@
       "codigo": "17896419727320",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_163708",
@@ -1977,7 +1977,7 @@
       "codigo": "163708",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727279",
@@ -1986,7 +1986,7 @@
       "codigo": "7896419727279",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727276",
@@ -1995,7 +1995,7 @@
       "codigo": "17896419727276",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_163683",
@@ -2004,7 +2004,7 @@
       "codigo": "163683",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728078",
@@ -2013,7 +2013,7 @@
       "codigo": "7896419728078",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728075",
@@ -2022,7 +2022,7 @@
       "codigo": "17896419728075",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_179655",
@@ -2031,7 +2031,7 @@
       "codigo": "179655",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728047",
@@ -2040,7 +2040,7 @@
       "codigo": "7896419728047",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728044",
@@ -2049,7 +2049,7 @@
       "codigo": "17896419728044",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_178651",
@@ -2058,7 +2058,7 @@
       "codigo": "178651",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728023",
@@ -2067,7 +2067,7 @@
       "codigo": "7896419728023",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728020",
@@ -2076,7 +2076,7 @@
       "codigo": "17896419728020",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_178580",
@@ -2085,7 +2085,7 @@
       "codigo": "178580",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728085",
@@ -2094,7 +2094,7 @@
       "codigo": "7896419728085",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728082",
@@ -2103,7 +2103,7 @@
       "codigo": "17896419728082",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_179706",
@@ -2112,7 +2112,7 @@
       "codigo": "179706",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727996",
@@ -2121,7 +2121,7 @@
       "codigo": "7896419727996",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727993",
@@ -2130,7 +2130,7 @@
       "codigo": "17896419727993",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_178554",
@@ -2139,7 +2139,7 @@
       "codigo": "178554",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728030",
@@ -2148,7 +2148,7 @@
       "codigo": "7896419728030",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728037",
@@ -2157,7 +2157,7 @@
       "codigo": "17896419728037",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_178648",
@@ -2166,7 +2166,7 @@
       "codigo": "178648",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728009",
@@ -2175,7 +2175,7 @@
       "codigo": "7896419728009",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728006",
@@ -2184,7 +2184,7 @@
       "codigo": "17896419728006",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_178557",
@@ -2193,7 +2193,7 @@
       "codigo": "178557",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419731177",
@@ -2202,7 +2202,7 @@
       "codigo": "7896419731177",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419731174",
@@ -2211,7 +2211,7 @@
       "codigo": "17896419731174",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_304844",
@@ -2220,7 +2220,7 @@
       "codigo": "304844",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728757",
@@ -2229,7 +2229,7 @@
       "codigo": "7896419728757",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_27896419728751",
@@ -2238,7 +2238,7 @@
       "codigo": "27896419728751",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_200667",
@@ -2247,7 +2247,7 @@
       "codigo": "200667",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728740",
@@ -2256,7 +2256,7 @@
       "codigo": "7896419728740",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_27896419728744",
@@ -2265,7 +2265,7 @@
       "codigo": "27896419728744",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_200653",
@@ -2274,7 +2274,7 @@
       "codigo": "200653",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728849",
@@ -2283,7 +2283,7 @@
       "codigo": "7896419728849",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728846",
@@ -2292,7 +2292,7 @@
       "codigo": "17896419728846",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_202951",
@@ -2301,7 +2301,7 @@
       "codigo": "202951",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728818",
@@ -2310,7 +2310,7 @@
       "codigo": "7896419728818",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728815",
@@ -2319,7 +2319,7 @@
       "codigo": "17896419728815",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_LAR_meio-da-asa-assada-linha-minuto-300g",
@@ -2328,7 +2328,7 @@
       "codigo": "LAR_meio-da-asa-assada-linha-minuto-300g",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728825",
@@ -2337,7 +2337,7 @@
       "codigo": "7896419728825",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728822",
@@ -2346,7 +2346,7 @@
       "codigo": "17896419728822",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_202924",
@@ -2355,7 +2355,7 @@
       "codigo": "202924",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419714071",
@@ -2364,7 +2364,7 @@
       "codigo": "7896419714071",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419714078",
@@ -2373,7 +2373,7 @@
       "codigo": "17896419714078",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_852326",
@@ -2382,7 +2382,7 @@
       "codigo": "852326",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419725336",
@@ -2391,7 +2391,7 @@
       "codigo": "7896419725336",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419725333",
@@ -2400,7 +2400,7 @@
       "codigo": "17896419725333",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_134875",
@@ -2409,7 +2409,7 @@
       "codigo": "134875",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419725480",
@@ -2418,7 +2418,7 @@
       "codigo": "7896419725480",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419725487",
@@ -2427,7 +2427,7 @@
       "codigo": "17896419725487",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_134904",
@@ -2436,7 +2436,7 @@
       "codigo": "134904",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419717560",
@@ -2445,7 +2445,7 @@
       "codigo": "7896419717560",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419717567",
@@ -2454,7 +2454,7 @@
       "codigo": "17896419717567",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_42309",
@@ -2463,7 +2463,7 @@
       "codigo": "42309",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419725329",
@@ -2472,7 +2472,7 @@
       "codigo": "7896419725329",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419725326",
@@ -2481,7 +2481,7 @@
       "codigo": "17896419725326",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_42308",
@@ -2490,7 +2490,7 @@
       "codigo": "42308",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419715566",
@@ -2499,7 +2499,7 @@
       "codigo": "7896419715566",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419715563",
@@ -2508,7 +2508,7 @@
       "codigo": "17896419715563",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_23882",
@@ -2517,7 +2517,7 @@
       "codigo": "23882",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419716129",
@@ -2526,7 +2526,7 @@
       "codigo": "7896419716129",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419716126",
@@ -2535,7 +2535,7 @@
       "codigo": "17896419716126",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_27191",
@@ -2544,7 +2544,7 @@
       "codigo": "27191",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419730156",
@@ -2553,7 +2553,7 @@
       "codigo": "7896419730156",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419730153",
@@ -2562,7 +2562,7 @@
       "codigo": "17896419730153",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_250120",
@@ -2571,7 +2571,7 @@
       "codigo": "250120",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419725459",
@@ -2580,7 +2580,7 @@
       "codigo": "7896419725459",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419725456",
@@ -2589,7 +2589,7 @@
       "codigo": "17896419725456",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_134903",
@@ -2598,7 +2598,7 @@
       "codigo": "134903",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419713852",
@@ -2607,7 +2607,7 @@
       "codigo": "7896419713852",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419713859",
@@ -2616,7 +2616,7 @@
       "codigo": "17896419713859",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_852274",
@@ -2625,7 +2625,7 @@
       "codigo": "852274",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419713852",
@@ -2634,7 +2634,7 @@
       "codigo": "7896419713852",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419723476",
@@ -2643,7 +2643,7 @@
       "codigo": "17896419723476",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_100212",
@@ -2652,7 +2652,7 @@
       "codigo": "100212",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419729143",
@@ -2661,7 +2661,7 @@
       "codigo": "7896419729143",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419729140",
@@ -2670,7 +2670,7 @@
       "codigo": "17896419729140",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_225974",
@@ -2679,7 +2679,7 @@
       "codigo": "225974",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419721475",
@@ -2688,7 +2688,7 @@
       "codigo": "7896419721475",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419721472",
@@ -2697,7 +2697,7 @@
       "codigo": "17896419721472",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_75561",
@@ -2706,7 +2706,7 @@
       "codigo": "75561",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720799",
@@ -2715,7 +2715,7 @@
       "codigo": "7896419720799",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419721168",
@@ -2724,7 +2724,7 @@
       "codigo": "17896419721168",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_71707",
@@ -2733,7 +2733,7 @@
       "codigo": "71707",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419719977",
@@ -2742,7 +2742,7 @@
       "codigo": "7896419719977",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419721175",
@@ -2751,7 +2751,7 @@
       "codigo": "17896419721175",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_71710",
@@ -2760,7 +2760,7 @@
       "codigo": "71710",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419721536",
@@ -2769,7 +2769,7 @@
       "codigo": "7896419721536",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419721533",
@@ -2778,7 +2778,7 @@
       "codigo": "17896419721533",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_78263",
@@ -2787,7 +2787,7 @@
       "codigo": "78263",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720386",
@@ -2796,7 +2796,7 @@
       "codigo": "7896419720386",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419721182",
@@ -2805,7 +2805,7 @@
       "codigo": "17896419721182",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_71713",
@@ -2814,7 +2814,7 @@
       "codigo": "71713",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720447",
@@ -2823,7 +2823,7 @@
       "codigo": "7896419720447",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419721205",
@@ -2832,7 +2832,7 @@
       "codigo": "17896419721205",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_71719",
@@ -2841,7 +2841,7 @@
       "codigo": "71719",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720393",
@@ -2850,7 +2850,7 @@
       "codigo": "7896419720393",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419720390",
@@ -2859,7 +2859,7 @@
       "codigo": "17896419720390",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_61707",
@@ -2868,7 +2868,7 @@
       "codigo": "61707",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720997",
@@ -2877,7 +2877,7 @@
       "codigo": "7896419720997",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419721212",
@@ -2886,7 +2886,7 @@
       "codigo": "17896419721212",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_71722",
@@ -2895,7 +2895,7 @@
       "codigo": "71722",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720676",
@@ -2904,7 +2904,7 @@
       "codigo": "7896419720676",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419721267",
@@ -2913,7 +2913,7 @@
       "codigo": "17896419721267",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_71711",
@@ -2922,7 +2922,7 @@
       "codigo": "71711",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720959",
@@ -2931,7 +2931,7 @@
       "codigo": "7896419720959",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419720956",
@@ -2940,7 +2940,7 @@
       "codigo": "17896419720956",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_65763",
@@ -2949,7 +2949,7 @@
       "codigo": "65763",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419723424",
@@ -2958,7 +2958,7 @@
       "codigo": "7896419723424",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419723421",
@@ -2967,7 +2967,7 @@
       "codigo": "17896419723421",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_96367",
@@ -2976,7 +2976,7 @@
       "codigo": "96367",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419723400",
@@ -2985,7 +2985,7 @@
       "codigo": "7896419723400",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419723407",
@@ -2994,7 +2994,7 @@
       "codigo": "17896419723407",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_96366",
@@ -3003,7 +3003,7 @@
       "codigo": "96366",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720973",
@@ -3012,7 +3012,7 @@
       "codigo": "7896419720973",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419720970",
@@ -3021,7 +3021,7 @@
       "codigo": "17896419720970",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_65767",
@@ -3030,7 +3030,7 @@
       "codigo": "65767",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720966",
@@ -3039,7 +3039,7 @@
       "codigo": "7896419720966",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419720963",
@@ -3048,7 +3048,7 @@
       "codigo": "17896419720963",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_65765",
@@ -3057,7 +3057,7 @@
       "codigo": "65765",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720980",
@@ -3066,7 +3066,7 @@
       "codigo": "7896419720980",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419720987",
@@ -3075,7 +3075,7 @@
       "codigo": "17896419720987",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_65766",
@@ -3084,7 +3084,7 @@
       "codigo": "65766",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419714224",
@@ -3093,7 +3093,7 @@
       "codigo": "7896419714224",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419714221",
@@ -3102,7 +3102,7 @@
       "codigo": "17896419714221",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_1015",
@@ -3111,7 +3111,7 @@
       "codigo": "1015",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727811",
@@ -3120,7 +3120,7 @@
       "codigo": "7896419727811",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727825",
@@ -3129,7 +3129,7 @@
       "codigo": "17896419727825",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_173809",
@@ -3138,7 +3138,7 @@
       "codigo": "173809",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419713784",
@@ -3147,7 +3147,7 @@
       "codigo": "7896419713784",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419713781",
@@ -3156,7 +3156,7 @@
       "codigo": "17896419713781",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_722841",
@@ -3165,7 +3165,7 @@
       "codigo": "722841",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727774",
@@ -3174,7 +3174,7 @@
       "codigo": "7896419727774",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727771",
@@ -3183,7 +3183,7 @@
       "codigo": "17896419727771",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_173766",
@@ -3192,7 +3192,7 @@
       "codigo": "173766",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419716273",
@@ -3201,7 +3201,7 @@
       "codigo": "7896419716273",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419716270",
@@ -3210,7 +3210,7 @@
       "codigo": "17896419716270",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_29248",
@@ -3219,7 +3219,7 @@
       "codigo": "29248",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727859",
@@ -3228,7 +3228,7 @@
       "codigo": "7896419727859",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727856",
@@ -3237,7 +3237,7 @@
       "codigo": "17896419727856",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_173850",
@@ -3246,7 +3246,7 @@
       "codigo": "173850",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727835",
@@ -3255,7 +3255,7 @@
       "codigo": "7896419727835",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727832",
@@ -3264,7 +3264,7 @@
       "codigo": "17896419727832",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_173832",
@@ -3273,7 +3273,7 @@
       "codigo": "173832",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419701637",
@@ -3282,7 +3282,7 @@
       "codigo": "7896419701637",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419701634",
@@ -3291,7 +3291,7 @@
       "codigo": "17896419701634",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_29245",
@@ -3300,7 +3300,7 @@
       "codigo": "29245",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419716280",
@@ -3309,7 +3309,7 @@
       "codigo": "7896419716280",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419716287",
@@ -3318,7 +3318,7 @@
       "codigo": "17896419716287",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_29244",
@@ -3327,7 +3327,7 @@
       "codigo": "29244",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727804",
@@ -3336,7 +3336,7 @@
       "codigo": "7896419727804",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727801",
@@ -3345,7 +3345,7 @@
       "codigo": "17896419727801",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_173781",
@@ -3354,7 +3354,7 @@
       "codigo": "173781",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419714231",
@@ -3363,7 +3363,7 @@
       "codigo": "7896419714231",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419714238",
@@ -3372,7 +3372,7 @@
       "codigo": "17896419714238",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_1016",
@@ -3381,7 +3381,7 @@
       "codigo": "1016",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727798",
@@ -3390,7 +3390,7 @@
       "codigo": "7896419727798",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727795",
@@ -3399,7 +3399,7 @@
       "codigo": "17896419727795",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_173776",
@@ -3408,7 +3408,7 @@
       "codigo": "173776",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419715047",
@@ -3417,7 +3417,7 @@
       "codigo": "7896419715047",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419715044",
@@ -3426,7 +3426,7 @@
       "codigo": "17896419715044",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_18399",
@@ -3435,7 +3435,7 @@
       "codigo": "18399",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727828",
@@ -3444,7 +3444,7 @@
       "codigo": "7896419727828",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727825",
@@ -3453,7 +3453,7 @@
       "codigo": "17896419727825",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_173826",
@@ -3462,7 +3462,7 @@
       "codigo": "173826",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419715092",
@@ -3471,7 +3471,7 @@
       "codigo": "7896419715092",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419715099",
@@ -3480,7 +3480,7 @@
       "codigo": "17896419715099",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_18441",
@@ -3489,7 +3489,7 @@
       "codigo": "18441",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728863",
@@ -3498,7 +3498,7 @@
       "codigo": "7896419728863",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728860",
@@ -3507,7 +3507,7 @@
       "codigo": "17896419728860",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_203714",
@@ -3516,7 +3516,7 @@
       "codigo": "203714",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419722656",
@@ -3525,7 +3525,7 @@
       "codigo": "7896419722656",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419722653",
@@ -3534,7 +3534,7 @@
       "codigo": "17896419722653",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_87787",
@@ -3543,7 +3543,7 @@
       "codigo": "87787",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728108",
@@ -3552,7 +3552,7 @@
       "codigo": "7896419728108",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728105",
@@ -3561,7 +3561,7 @@
       "codigo": "17896419728105",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_179787",
@@ -3570,7 +3570,7 @@
       "codigo": "179787",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728092",
@@ -3579,7 +3579,7 @@
       "codigo": "7896419728092",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728099",
@@ -3588,7 +3588,7 @@
       "codigo": "17896419728099",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_179770",
@@ -3597,7 +3597,7 @@
       "codigo": "179770",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419722274",
@@ -3606,7 +3606,7 @@
       "codigo": "7896419722274",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419722271",
@@ -3615,7 +3615,7 @@
       "codigo": "17896419722271",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_84559",
@@ -3624,7 +3624,7 @@
       "codigo": "84559",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419722663",
@@ -3633,7 +3633,7 @@
       "codigo": "7896419722663",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419722660",
@@ -3642,7 +3642,7 @@
       "codigo": "17896419722660",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_87788",
@@ -3651,7 +3651,7 @@
       "codigo": "87788",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419727439",
@@ -3660,7 +3660,7 @@
       "codigo": "7896419727439",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419727436",
@@ -3669,7 +3669,7 @@
       "codigo": "17896419727436",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_164035",
@@ -3678,7 +3678,7 @@
       "codigo": "164035",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419729211",
@@ -3687,7 +3687,7 @@
       "codigo": "7896419729211",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419729218",
@@ -3696,7 +3696,7 @@
       "codigo": "17896419729218",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_230041",
@@ -3705,7 +3705,7 @@
       "codigo": "230041",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419724612",
@@ -3714,7 +3714,7 @@
       "codigo": "7896419724612",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419724619",
@@ -3723,7 +3723,7 @@
       "codigo": "17896419724619",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_123021",
@@ -3732,7 +3732,7 @@
       "codigo": "123021",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419724582",
@@ -3741,7 +3741,7 @@
       "codigo": "7896419724582",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419724589",
@@ -3750,7 +3750,7 @@
       "codigo": "17896419724589",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_123025",
@@ -3759,7 +3759,7 @@
       "codigo": "123025",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419724599",
@@ -3768,7 +3768,7 @@
       "codigo": "7896419724599",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419724596",
@@ -3777,7 +3777,7 @@
       "codigo": "17896419724596",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_123027",
@@ -3786,7 +3786,7 @@
       "codigo": "123027",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419724537",
@@ -3795,7 +3795,7 @@
       "codigo": "7896419724537",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419724534",
@@ -3804,7 +3804,7 @@
       "codigo": "17896419724534",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_123040",
@@ -3813,7 +3813,7 @@
       "codigo": "123040",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419724483",
@@ -3822,7 +3822,7 @@
       "codigo": "7896419724483",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419724480",
@@ -3831,7 +3831,7 @@
       "codigo": "17896419724480",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_123043",
@@ -3840,7 +3840,7 @@
       "codigo": "123043",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419724490",
@@ -3849,7 +3849,7 @@
       "codigo": "7896419724490",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419724497",
@@ -3858,7 +3858,7 @@
       "codigo": "17896419724497",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_123045",
@@ -3867,7 +3867,7 @@
       "codigo": "123045",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419714064",
@@ -3876,7 +3876,7 @@
       "codigo": "7896419714064",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419714061",
@@ -3885,7 +3885,7 @@
       "codigo": "17896419714061",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_852313",
@@ -3894,7 +3894,7 @@
       "codigo": "852313",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419731160",
@@ -3903,7 +3903,7 @@
       "codigo": "7896419731160",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_78964197311671",
@@ -3912,7 +3912,7 @@
       "codigo": "78964197311671",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_304568",
@@ -3921,7 +3921,7 @@
       "codigo": "304568",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419730194",
@@ -3930,7 +3930,7 @@
       "codigo": "7896419730194",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419730191",
@@ -3939,7 +3939,7 @@
       "codigo": "17896419730191",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_253396",
@@ -3948,7 +3948,7 @@
       "codigo": "253396",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419730774",
@@ -3957,7 +3957,7 @@
       "codigo": "7896419730774",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419730771",
@@ -3966,7 +3966,7 @@
       "codigo": "17896419730771",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_291081",
@@ -3975,7 +3975,7 @@
       "codigo": "291081",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419730200",
@@ -3984,7 +3984,7 @@
       "codigo": "7896419730200",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419730207",
@@ -3993,7 +3993,7 @@
       "codigo": "17896419730207",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_253411",
@@ -4002,7 +4002,7 @@
       "codigo": "253411",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728115",
@@ -4011,7 +4011,7 @@
       "codigo": "7896419728115",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728112",
@@ -4020,7 +4020,7 @@
       "codigo": "17896419728112",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_179824",
@@ -4029,7 +4029,7 @@
       "codigo": "179824",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419729198",
@@ -4038,7 +4038,7 @@
       "codigo": "7896419729198",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419729195",
@@ -4047,7 +4047,7 @@
       "codigo": "17896419729195",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_230002",
@@ -4056,7 +4056,7 @@
       "codigo": "230002",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419729204",
@@ -4065,7 +4065,7 @@
       "codigo": "7896419729204",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419729201",
@@ -4074,7 +4074,7 @@
       "codigo": "17896419729201",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_230026",
@@ -4083,7 +4083,7 @@
       "codigo": "230026",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419730224",
@@ -4092,7 +4092,7 @@
       "codigo": "7896419730224",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419730221",
@@ -4101,7 +4101,7 @@
       "codigo": "17896419730221",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_253889",
@@ -4110,7 +4110,7 @@
       "codigo": "253889",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720010",
@@ -4119,7 +4119,7 @@
       "codigo": "7896419720010",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419720017",
@@ -4128,7 +4128,7 @@
       "codigo": "17896419720017",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_102007",
@@ -4137,7 +4137,7 @@
       "codigo": "102007",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419720003",
@@ -4146,7 +4146,7 @@
       "codigo": "7896419720003",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419720000",
@@ -4155,7 +4155,7 @@
       "codigo": "17896419720000",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_123022",
@@ -4164,7 +4164,7 @@
       "codigo": "123022",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419730842",
@@ -4173,7 +4173,7 @@
       "codigo": "7896419730842",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419720146",
@@ -4182,7 +4182,7 @@
       "codigo": "17896419720146",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_249060",
@@ -4191,7 +4191,7 @@
       "codigo": "249060",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419725343",
@@ -4200,7 +4200,7 @@
       "codigo": "7896419725343",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419725340",
@@ -4209,7 +4209,7 @@
       "codigo": "17896419725340",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_134873",
@@ -4218,7 +4218,7 @@
       "codigo": "134873",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419721116",
@@ -4227,7 +4227,7 @@
       "codigo": "7896419721116",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419721113",
@@ -4236,7 +4236,7 @@
       "codigo": "17896419721113",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_71367",
@@ -4245,7 +4245,7 @@
       "codigo": "71367",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419723233",
@@ -4254,7 +4254,7 @@
       "codigo": "7896419723233",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419723230",
@@ -4263,7 +4263,7 @@
       "codigo": "17896419723230",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_94633",
@@ -4272,7 +4272,7 @@
       "codigo": "94633",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419730187",
@@ -4281,7 +4281,7 @@
       "codigo": "7896419730187",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419730184",
@@ -4290,7 +4290,7 @@
       "codigo": "17896419730184",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_253387",
@@ -4299,7 +4299,7 @@
       "codigo": "253387",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419730767",
@@ -4308,7 +4308,7 @@
       "codigo": "7896419730767",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419730764",
@@ -4317,7 +4317,7 @@
       "codigo": "17896419730764",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_291074",
@@ -4326,7 +4326,7 @@
       "codigo": "291074",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419730217",
@@ -4335,7 +4335,7 @@
       "codigo": "7896419730217",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419730214",
@@ -4344,7 +4344,7 @@
       "codigo": "17896419730214",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_253416",
@@ -4353,7 +4353,7 @@
       "codigo": "253416",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419729181",
@@ -4362,7 +4362,7 @@
       "codigo": "7896419729181",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419729188",
@@ -4371,7 +4371,7 @@
       "codigo": "17896419729188",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_229642",
@@ -4380,7 +4380,7 @@
       "codigo": "229642",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728955",
@@ -4389,7 +4389,7 @@
       "codigo": "7896419728955",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728952",
@@ -4398,7 +4398,7 @@
       "codigo": "17896419728952",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_206879",
@@ -4407,7 +4407,7 @@
       "codigo": "206879",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728948",
@@ -4416,7 +4416,7 @@
       "codigo": "7896419728948",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728945",
@@ -4425,7 +4425,7 @@
       "codigo": "17896419728945",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_206863",
@@ -4434,7 +4434,7 @@
       "codigo": "206863",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_ean_7896419728931",
@@ -4443,7 +4443,7 @@
       "codigo": "7896419728931",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_dun_17896419728938",
@@ -4452,7 +4452,7 @@
       "codigo": "17896419728938",
       "embalagem": "CX",
       "quantidade_embalagem": null,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     },
     {
       "id": "cb_lar_sku_206854",
@@ -4461,8 +4461,675 @@
       "codigo": "206854",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-09-24T06:10:09.574Z"
+      "criado_em": "2026-09-25T13:11:08.592Z"
     }
   ],
-  "pending_images_approval": []
+  "pending_images_approval": [
+    {
+      "produto_id": "prod_lar_281093",
+      "sku": "281093",
+      "descricao": "Batata Palito Airfryer (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_311635",
+      "sku": "311635",
+      "descricao": "Filé de Tilápia (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_310812",
+      "sku": "310812",
+      "descricao": "Filé de Tilápia (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_311632",
+      "sku": "311632",
+      "descricao": "Filé de Tilápia (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_59605",
+      "sku": "59605",
+      "descricao": "Anéis de Cebola (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_59604",
+      "sku": "59604",
+      "descricao": "Anéis de Cebola (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_280246",
+      "sku": "280246",
+      "descricao": "Batata Palito (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_262634",
+      "sku": "262634",
+      "descricao": "Batata Palito (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_123050",
+      "sku": "123050",
+      "descricao": "Polenta Palito (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_666198",
+      "sku": "666198",
+      "descricao": "Polenta Palito (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_203889",
+      "sku": "203889",
+      "descricao": "Coração Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_163687",
+      "sku": "163687",
+      "descricao": "Coração Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_203898",
+      "sku": "203898",
+      "descricao": "Coxas e Sobrecoxas Bandeja 1kg",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_203892",
+      "sku": "203892",
+      "descricao": "Coxinhas das Asas Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_163697",
+      "sku": "163697",
+      "descricao": "Coxinhas das Asas Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_203885",
+      "sku": "203885",
+      "descricao": "Filé de Peito Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_163703",
+      "sku": "163703",
+      "descricao": "Filé de Peito Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_203907",
+      "sku": "203907",
+      "descricao": "Filezinho Sassami Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_163708",
+      "sku": "163708",
+      "descricao": "Filezinho Sassami Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_163683",
+      "sku": "163683",
+      "descricao": "Moela Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_179655",
+      "sku": "179655",
+      "descricao": "Coração Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_178651",
+      "sku": "178651",
+      "descricao": "Coxinhas das Asas Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_178580",
+      "sku": "178580",
+      "descricao": "Filé de Peito Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_179706",
+      "sku": "179706",
+      "descricao": "Filezinho Sassami Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_178554",
+      "sku": "178554",
+      "descricao": "Meio das Asas Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_178648",
+      "sku": "178648",
+      "descricao": "Moela Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_178557",
+      "sku": "178557",
+      "descricao": "Sobrecoxas Bandeja (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_304844",
+      "sku": "304844",
+      "descricao": "Frango Desfiado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_200667",
+      "sku": "200667",
+      "descricao": "Meio Peito Cozido em Cubos Linha Minuto 300g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_200653",
+      "sku": "200653",
+      "descricao": "Meio Peito Cozido em Tiras Linha Minuto 300g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_202951",
+      "sku": "202951",
+      "descricao": "Coxinha da Asa Assado Linha Minuto 300g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_LAR_meio-da-asa-assada-linha-minuto-300g",
+      "sku": "LAR_meio-da-asa-assada-linha-minuto-300g",
+      "descricao": "Meio da Asa Assada Linha Minuto 300g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_202924",
+      "sku": "202924",
+      "descricao": "Filezinho Sassami Assado Linha Minuto 300g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_852326",
+      "sku": "852326",
+      "descricao": "Empanitos Empanado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_134875",
+      "sku": "134875",
+      "descricao": "Empanitos Empanado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_134904",
+      "sku": "134904",
+      "descricao": "Filé À Milanesa (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_42309",
+      "sku": "42309",
+      "descricao": "Filé de Coxas e Sobrecoxas Empanadas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_42308",
+      "sku": "42308",
+      "descricao": "Filé de Coxas e Sobrecoxas Empanadas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_23882",
+      "sku": "23882",
+      "descricao": "Filezinho Sassami Empanado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_27191",
+      "sku": "27191",
+      "descricao": "Filezinho Sassami Empanado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_250120",
+      "sku": "250120",
+      "descricao": "Mini Hambúrguer Empanado de Frango (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_134903",
+      "sku": "134903",
+      "descricao": "Iscas Empanadas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_852274",
+      "sku": "852274",
+      "descricao": "Steak Empanado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_100212",
+      "sku": "100212",
+      "descricao": "Steak Empanado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_225974",
+      "sku": "225974",
+      "descricao": "Hambúrguer Empanado de Frango (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_75561",
+      "sku": "75561",
+      "descricao": "Asas Envelopadas Congeladas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_71707",
+      "sku": "71707",
+      "descricao": "Coxinhas das Asas Envelopadas Congeladas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_71710",
+      "sku": "71710",
+      "descricao": "Coxas e Sobrecoxas Envelopadas Congeladas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_78263",
+      "sku": "78263",
+      "descricao": "Filé de Coxas Sobrecoxas Envelopadas Congeladas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_71713",
+      "sku": "71713",
+      "descricao": "Filé de Peito Envelopado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_71719",
+      "sku": "71719",
+      "descricao": "Filezinho Sassami Envelopado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_61707",
+      "sku": "61707",
+      "descricao": "Peito com Osso Envelopado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_71722",
+      "sku": "71722",
+      "descricao": "Sambiquira Envelopada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_71711",
+      "sku": "71711",
+      "descricao": "Sobrecoxas Envelopadas Congeladas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_65763",
+      "sku": "65763",
+      "descricao": "Coxas e Sobrecoxas Envelopadas Resfriadas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_96367",
+      "sku": "96367",
+      "descricao": "Sobrecoxas Envelopadas Resfriadas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_96366",
+      "sku": "96366",
+      "descricao": "Coxas e Sobrecoxas sem Osso Envelopadas Resfriadas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_65767",
+      "sku": "65767",
+      "descricao": "Coxinhas das Asas Envelopadas Resfriadas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_65765",
+      "sku": "65765",
+      "descricao": "Filé de Peito Envelopado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_65766",
+      "sku": "65766",
+      "descricao": "Peito com Osso Envelopado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_1015",
+      "sku": "1015",
+      "descricao": "Coxas IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_173809",
+      "sku": "173809",
+      "descricao": "Coxas IQF 700g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_722841",
+      "sku": "722841",
+      "descricao": "Coxinhas das Asas IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_173766",
+      "sku": "173766",
+      "descricao": "Coxinhas das Asas IQF 700g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_29248",
+      "sku": "29248",
+      "descricao": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_173850",
+      "sku": "173850",
+      "descricao": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_173832",
+      "sku": "173832",
+      "descricao": "Frango a Passarinho IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_29245",
+      "sku": "29245",
+      "descricao": "Frango a Passarinho IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_29244",
+      "sku": "29244",
+      "descricao": "Filé de Peito IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_173781",
+      "sku": "173781",
+      "descricao": "Filé de Peito IQF 700g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_1016",
+      "sku": "1016",
+      "descricao": "Filezinho Sassami IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_173776",
+      "sku": "173776",
+      "descricao": "Filezinho Sassami IQF 700g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_18399",
+      "sku": "18399",
+      "descricao": "Sobrecoxas IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_173826",
+      "sku": "173826",
+      "descricao": "Sobrecoxas IQF 700g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_18441",
+      "sku": "18441",
+      "descricao": "Meio das Asas IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_203714",
+      "sku": "203714",
+      "descricao": "Filé de Peito Moído (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_87787",
+      "sku": "87787",
+      "descricao": "Linguiça de Frango Fininha (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_179787",
+      "sku": "179787",
+      "descricao": "Linguiça de Frango Fininha (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_179770",
+      "sku": "179770",
+      "descricao": "Linguiça de Frango Fininha 700g",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_84559",
+      "sku": "84559",
+      "descricao": "Linguiça de Frango Grossa (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_87788",
+      "sku": "87788",
+      "descricao": "Linguiça de Frango Grossa (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_164035",
+      "sku": "164035",
+      "descricao": "Linguiça de Frango Petisco (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_230041",
+      "sku": "230041",
+      "descricao": "Fígado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_123021",
+      "sku": "123021",
+      "descricao": "Brócolis (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_123025",
+      "sku": "123025",
+      "descricao": "Ervilhas Congeladas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_123027",
+      "sku": "123027",
+      "descricao": "Ervilhas Congeladas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_123040",
+      "sku": "123040",
+      "descricao": "Mix de Vegetais (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_123043",
+      "sku": "123043",
+      "descricao": "Seleta de Legumes Congeladas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_123045",
+      "sku": "123045",
+      "descricao": "Seleta de Legumes Congeladas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_852313",
+      "sku": "852313",
+      "descricao": "Tirinhas Empanadas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_304568",
+      "sku": "304568",
+      "descricao": "Frango Desfiado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_253396",
+      "sku": "253396",
+      "descricao": "Coxinha da Asa Temperadas IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_291081",
+      "sku": "291081",
+      "descricao": "Filé de Coxas e Sobrecoxas Temperada IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_253411",
+      "sku": "253411",
+      "descricao": "Frango a Passarinho Temperado IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_179824",
+      "sku": "179824",
+      "descricao": "Linguiça de Frango Grossa (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_230002",
+      "sku": "230002",
+      "descricao": "Coração (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_230026",
+      "sku": "230026",
+      "descricao": "Moela (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_253889",
+      "sku": "253889",
+      "descricao": "Frango Inteiro Temperado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_102007",
+      "sku": "102007",
+      "descricao": "Brócolis (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_123022",
+      "sku": "123022",
+      "descricao": "Couve-Flor (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_249060",
+      "sku": "249060",
+      "descricao": "Ave Natalina Temperada Recheada (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_134873",
+      "sku": "134873",
+      "descricao": "Tirinhas Empanadas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_71367",
+      "sku": "71367",
+      "descricao": "Coxas e Sobrecoxas com Porção Dorsal Envelopadas Congeladas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_94633",
+      "sku": "94633",
+      "descricao": "Coxas e Sobrecoxas sem Osso sem Pele Envelopadas Congeladas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_253387",
+      "sku": "253387",
+      "descricao": "Meio da Asas Temperadas IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_291074",
+      "sku": "291074",
+      "descricao": "Sobrecoxa Temperada IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_253416",
+      "sku": "253416",
+      "descricao": "Filezinho Sassami Temperado IQF (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_229642",
+      "sku": "229642",
+      "descricao": "Coração Temperado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_206879",
+      "sku": "206879",
+      "descricao": "Coxinhas das Asas Temperadas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_206863",
+      "sku": "206863",
+      "descricao": "Meio das Asas Temperadas (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    },
+    {
+      "produto_id": "prod_lar_206854",
+      "sku": "206854",
+      "descricao": "Frango a Passarinho Temperado (pesar)",
+      "placeholder_url": "/imagens_produtos/placeholder.webp"
+    }
+  ]
 }

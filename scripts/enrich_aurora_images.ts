@@ -12,7 +12,7 @@ const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABA
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const publicImgDir = '/root/repo_pwa/public/imagens_produtos';
-const auroraPreparedDir = '/root/projetos-scraping/scraping-aurora/imagens_preparadas';
+const auroraPreparedDir = path.join(process.cwd(), 'images', 'processed');
 const auroraStagingUuidFile = '/root/paletscan-etl/staging/aurora_staging_uuid.json';
 const pwaJsonPath = '/root/repo_pwa/public/produtos.json';
 
