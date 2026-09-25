@@ -2,8 +2,6 @@
 
 O módulo de visão computacional do **PaletScan ETL** ([`images/ai_pipeline/process_image.py`](file:///root/paletscan-etl/images/ai_pipeline/process_image.py)) é responsável pela remoção de fundo por inteligência artificial, padronização em fundo branco sólido, detecção de atualizações de layout de embalagens e otimização para o formato WebP ultra-leve.
 
----
-
 ## 🤖 1. Pipeline de Inteligência Artificial Local (`process_image.py`)
 
 Em vez de depender de APIs de terceiros pagas, o PaletScan utiliza um pipeline de IA **100% local e privado** construído em Python com `rembg` (baseado em modelos de redes neurais U2Net/ONNX) e `Pillow`.
@@ -16,8 +14,6 @@ flowchart TD
     D --> E["5. Redimensionamento Proporcional (Pillow Resampling)"]
     E --> F["6. Arquivo Otimizado .webp (Menos de 150KB)"]
 ```
-
----
 
 ## ⚙️ 2. Etapas do Processamento Visual
 
@@ -37,8 +33,6 @@ background.paste(img_rgba, mask=img_rgba.split()[3])  # Aplica o Alpha channel
 - **Dimensão Máxima (`--max-dim 1000`)**: Mantém a proporção original da foto limitando a maior dimensão a 1000 pixels, o que garante excelente definição de rótulos e selos sem desperdício de resolução.
 - **Conversão Otimizada para `.webp`**: Salva a imagem final no formato WebP de alta eficiência, reduzindo o peso médio dos arquivos de 2MB-5MB (brutos) para **menos de 100-150KB**.
 
----
-
 ## 📁 3. Ciclo de Vida das Imagens nos Diretórios
 
 O gerenciamento de arquivos de mídia segue um fluxo limpo e rastreável dentro de `images/`:
@@ -50,8 +44,6 @@ images/
 ├── archived/    # Imagens que já foram enviadas com sucesso para o Supabase Storage
 └── ai_pipeline/ # Código-fonte Python (process_image.py)
 ```
-
----
 
 ## 🔄 4. Detecção de Novos Layouts de Embalagem e Ciclo de Atualização
 
@@ -79,8 +71,6 @@ flowchart TD
 2. **Upload Resiliente na CDN (`db_sync/sync_images.ts`)**: A nova foto `.webp` é enviada para o bucket `produtos-imagens` no Supabase Storage utilizando `upsert: true`, sobrescrevendo o ativo antigo na CDN.
 3. **Atualização Relacional PostgreSQL**: O script atualiza a coluna `imagem_url` na tabela `produtos` do Supabase e registra o carimbo de data `updated_at`.
 4. **Propagação para o Aplicativo PWA**: O script `generate_pwa_produtos_json.ts` regera o catálogo `produtos.json`. No PWA do operador, ao acionar **"Limpar Banco Local e Sincronizar"** (ou via sync automático em segundo plano), o módulo `imageOfflineCache.ts` realiza o *prefetch* do novo WebP e substitui a foto no cache local do dispositivo.
-
----
 
 ## 🖥️ 5. Como Executar o Script
 

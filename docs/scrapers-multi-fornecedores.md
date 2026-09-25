@@ -2,8 +2,6 @@
 
 O módulo de extração do **PaletScan ETL** ([`scrapers/`](file:///root/paletscan-etl/scrapers/)) é composto por pipelines de web scraping de alta concorrência projetados para coletar catalogação atualizada, dados nutricionais, códigos logísticos e mídias de produtos diretamente dos portais institucionais e APIs B2B dos maiores grupos frigoríficos e alimentícios parceiros: **JBS / Friboi**, **BRF S.A.**, **Seara Alimentos**, **Cooperativa Lar**, **Copacol** e **Cooperativa Aurora**.
 
----
-
 ## 📊 1. Matriz Comparativa dos Scrapers B2B
 
 | Fabricante (Holding) | Diretório do Scraper | Estratégia de Captura | Produtos Brutos | Produtos Validados (com EAN) | Tempo Médio |
@@ -15,8 +13,6 @@ O módulo de extração do **PaletScan ETL** ([`scrapers/`](file:///root/paletsc
 | **Cooperativa Lar** | [`scrapers/lar/`](file:///root/paletscan-etl/scrapers/lar/index.ts) | Portal Institucional Lar Alimentos | ~111 | **110** | **5s a 10s** |
 | **Cooperativa Aurora** | [`scrapers/aurora/`](file:///root/paletscan-etl/scrapers/aurora/index.ts) | Catálogo Institucional Aurora Coop | ~350 | **310** | **10s a 20s** |
 
----
-
 ## 🏗️ 2. Arquitetura Geral de Extração Concorrente
 
 Os scrapers do PaletScan utilizam um fluxo vertical otimizado para requisições HTTP diretas e concorrência controlada via `p-limit`:
@@ -25,11 +21,9 @@ Os scrapers do PaletScan utilizam um fluxo vertical otimizado para requisições
 flowchart TD
     P1["1. Portais B2B, Sitemaps XML e APIs REST"] --> P2["2. Motor de Scraping em TypeScript e Node.js 20"]
     P2 --> P3["3. Algoritmo de Seleção e Acurácia de Imagens"]
-    P3 --> P4["4. Normalizador de Texto e GS1 Modulus 10"]
+    P2 --> P4["4. Normalizador de Texto e GS1 Modulus 10"]
     P4 --> P5["5. Geração de Datasets Sanitizados em Staging"]
 ```
-
----
 
 ## 🏭 3. Detalhamento dos Pipelines de Ingestão por Fornecedor
 

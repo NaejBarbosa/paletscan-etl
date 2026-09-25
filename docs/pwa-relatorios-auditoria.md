@@ -2,18 +2,18 @@
 
 Os módulos de relatórios e auditoria do **PaletScan PWA** centralizam o controle de estoque em câmaras frigoríficas, acompanhamento de validades, conferência física de paletes, layout mobile-first para auditoria administrativa, motor semântico de ciclos de vida e telemetria remota de erros via Eruda DevTools.
 
----
 
 ## 📈 1. Relatório Geral de Paletes ([`Relatorio.tsx`](file:///root/repo_pwa/components/Relatorio.tsx))
 
-* **Cards de Métricas Operacionais**: Total de paletes, SKUs únicos, câmaras em uso e divisão Congelados/Resfriados.
-* **Filtro Multi-Seleção de Marcas em Estoque Físico**: O seletor de marcas calcula dinamicamente as opções disponíveis a partir dos paletes reais armazenados nas câmaras frias, permitindo seleção múltipla sem poluir a lista com marcas sem estoque.
-* **Cabeçalho Adaptativo e Responsivo**:
+- **Cards de Métricas Operacionais**: Total de paletes, SKUs únicos, câmaras em uso e divisão Congelados/Resfriados.
+- **Filtro Multi-Seleção de Marcas em Estoque Físico**: O seletor de marcas calcula dinamicamente as opções disponíveis a partir dos paletes reais armazenados nas câmaras frias, permitindo seleção múltipla sem poluir a lista com marcas sem estoque.
+- **Dropdown de Ordenação Dinâmica**: Permite ordenar os cards de paletes por data de validade (FEFO/PVPS), data de recebimento ou coordenada de vaga física.
+- **Modal de Seleção de Câmara com Estoque**: Ao iniciar a conferência, um modal exibe as câmaras ativas com a contagem exata de paletes em cada uma, agilizando o roteiro de inspeção.
+- **Exportação com Nomes Únicos e Timestamp**: Geração de planilhas CSV (delimitador `;` e codificação `cp1252`) e PDFs com identificadores temporais únicos (ex: `paletes_410_20260924_153022.csv`), indexados nativamente no Android pelo utilitário `termux-media-scan`.
+- **Cabeçalho Adaptativo e Responsivo**:
   - **Desktop / Tablet**: Exibição tabular completa (Recebimento, Código, Descrição, Marca, Vaga, Validade e Dias Restantes).
   - **Smartphone**: Layout compacto e verticalizado, otimizando o espaço da tela para visualização rápida da posição física da carga.
-* **Padronização de Contêiner**: Largura simétrica fixa (`min-w-[92px] sm:min-w-[100px]`) para exibição consistente de contadores de itens em smartphones.
-
----
+- **Padronização de Contêiner**: Largura simétrica fixa (`min-w-[92px] sm:min-w-[100px]`) para exibição consistente de contadores de itens em smartphones.
 
 ## 📱 2. Painel de Auditoria Mobile-First ([`pages/admin.tsx`](file:///root/repo_pwa/pages/admin.tsx))
 
@@ -33,11 +33,9 @@ flowchart TD
 ```
 
 ### Características de Usabilidade:
-* **Prevenção de Truncamento de Palavras**: Uso da classe `[overflow-wrap:anywhere] break-words`, permitindo leitura limpa de termos técnicos e códigos sem extrapolar a largura do visor.
-* **Ação Rápida de Restauração**: O botão *"Restaurar Vaga"* ocupa a largura total da tela no smartphone (`w-full`), oferecendo área de toque confortável.
-* **Fallback Seguro de Câmara**: Caso o log histórico não traga a câmara explicitada, o sistema aplica fallback seguro para `CAMARA 01`.
-
----
+- **Prevenção de Truncamento de Palavras**: Uso da classe `[overflow-wrap:anywhere] break-words`, permitindo leitura limpa de termos técnicos e códigos sem extrapolar a largura do visor.
+- **Ação Rápida de Restauração**: O botão *"Restaurar Vaga"* ocupa a largura total da tela no smartphone (`w-full`), oferecendo área de toque confortável.
+- **Fallback Seguro de Câmara**: Caso o log histórico não traga a câmara explicitada, o sistema aplica fallback seguro para `CAMARA 01`.
 
 ## 🛡️ 3. Blindagem de Expurgo Offline & Prevenção de Flash de Tela Vazia
 
@@ -64,9 +62,6 @@ flowchart TD
     
     SYNC_PULL --> IMMUNITY["🔒 Proteção optimisticPending:\nImpede que itens deletados localmente ressuscitem na tela antes da nuvem processar"]
 ```
-
----
-
 ## 🧬 4. Motor de Histórico & Ciclos de Vida (`paleteHistoricoEngine.ts`)
 
 Para garantir rastreabilidade total sem poluir a interface do usuário com dezenas de linhas individuais para o mesmo palete, o componente de histórico processa os eventos brutos em **Grupos Semânticos e Ciclos de Vida**:
@@ -93,15 +88,14 @@ flowchart TD
 ```
 
 ### Tipos Canônicos de Eventos de Ciclo de Vida:
-* `CRIACAO_PALETE` / `CRIACAO`: Criação de novo palete na vaga. Eventos na mesma janela temporal são agrupados (*"Criação do Palete: X itens"*).
-* `ADICAO_PRODUTO`: Adição de novo SKU a um palete já existente na câmara fria.
-* `CONFERENCIA_ITEM_CONFIRMADO`: Validação física de que a caixa/fardo está presente na câmara.
-* `CONFERENCIA_AUSENTE_REMOVIDO`: Baixa de produto ausente durante o checklist.
-* `EDICAO_VALIDADE`: Ajuste manual na data de validade de um produto alocado.
-* `EXCLUSAO_TOTAL_PALETE`: Baixa completa do palete da vaga, selando o ciclo de vida.
-* `RESTAURACAO_PALETE`: Recuperação de palete ou produto excluído acidentalmente.
-
----
+- `CRIACAO_PALETE` / `CRIACAO`: Criação de novo palete na vaga. Eventos na mesma janela temporal são agrupados (*"Criação do Palete: X itens"*).
+- `ADICAO_PRODUTO`: Adição de novo SKU a um palete já existente na câmara fria.
+- `CONFERENCIA_ITEM_CONFIRMADO`: Validação física de que a caixa/fardo está presente na câmara.
+- `CONFERENCIA_AUSENTE_REMOVIDO`: Baixa de produto ausente durante o checklist.
+- `EDICAO_VALIDADE`: Ajuste manual na data de validade de um produto alocado.
+- `EXCLUSAO_TOTAL_PALETE`: Baixa completa do palete da vaga, selando o ciclo de vida.
+- `RESTAURACAO_PALETE`: Recuperação de palete ou produto excluído acidentalmente.
+- **Isolamento do Palete Atual**: O motor isola eventos do palete ativo em relação a ciclos arquivados, assegurando que o histórico exibido no modal reflita estritamente o lote sob contagem.
 
 ## 📡 5. Telemetria de Sessão e DevTools Remoto (Eruda & `logs_sessao`)
 
@@ -131,5 +125,18 @@ flowchart TD
 ```
 
 ### Recursos de Telemetria Operacional:
-* **Snapshot de Ambiente do Dispositivo**: Resolução de tela (ex: `390x844` para iPhone / Android vs `1600x765` para desktop), User-Agent, status online/offline e rota ativa.
-* **Integração com Reportes de Divergência**: Quando o operador reporta uma embalagem divergente em [`ReportarDivergenciaModal.tsx`](file:///root/repo_pwa/components/ReportarDivergenciaModal.tsx), o snapshot dos últimos logs do console do Eruda é anexado automaticamente para análise remota.
+- **Snapshot de Ambiente do Dispositivo**: Resolução de tela (ex: `390x844` para iPhone / Android vs `1600x765` para desktop), User-Agent, status online/offline e rota ativa.
+- **Integração com Reportes de Divergência**: Quando o operador reporta uma embalagem divergente em [`ReportarDivergenciaModal.tsx`](file:///root/repo_pwa/components/ReportarDivergenciaModal.tsx), o snapshot dos últimos logs do console do Eruda é anexado automaticamente para análise remota.
+
+## 📋 6. Termo de Conferência Semanal Obrigatória & Bloqueio Compulsório
+
+Para garantir compliance operacional e precisão no controle contábil de perdas em perecíveis:
+- **Interlock Mandatório ([`TermoConferenciaModal.tsx`](file:///root/repo_pwa/components/TermoConferenciaModal.tsx))**: Se o ciclo semanal de conferência física presencial expirar, o PWA apresenta um bloqueio compulsório de tela cheia que impede o registro de novas cargas até a formalização do aceite.
+- **Quatro Cláusulas Operacionais Estritas**:
+  1. *Responsabilidade da Conferência*: Declaração de vistoria física in loco nas câmaras de congelados e resfriados.
+  2. *Validação de Validades*: Compromisso de verificação rigorosa das datas impressas nas caixas e paletes.
+  3. *Endereçamento Físico*: Confirmação de que todas as coordenadas de 4 dígitos conferem com a posição real.
+  4. *Rastreabilidade*: Reconhecimento de que as baixas e alterações são registradas de forma imutável para auditoria.
+- **Rolagem Assistida via IntersectionObserver**: O botão e o checkbox de confirmação permanecem desabilitados até que o operador realize a rolagem integral do texto, atingindo visualmente a 4ª cláusula.
+- **Controles de Acessibilidade**: O modal oferece alternância dinâmica entre tema claro e escuro e seletor de idiomas (Português, Inglês e Espanhol) para facilitar o uso por equipes multilíngues.
+- **Isolamento por Filial ([`lib/conferenciaLifecycle.ts`](file:///root/repo_pwa/lib/conferenciaLifecycle.ts))**: O registro de aceite é vinculado à `filialId` ativa do usuário, garantindo que o cumprimento de metas na Loja 410 não afete o controle das demais lojas da rede.

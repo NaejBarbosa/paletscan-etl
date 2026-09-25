@@ -2,7 +2,6 @@
 
 O sistema de endereçamento do **PaletScan PWA** organiza espacialmente as câmaras frias através de coordenadas de 4 caracteres, prevenindo perdas de tempo na localização de lotes por operadores de empilhadeira.
 
----
 
 ## 📌 1. Composição da Coordenada de Vaga (4 Caracteres)
 
@@ -32,8 +31,6 @@ flowchart TD
 | **Gaveta** | Nível/Altura | `0` (Chão) \| `1` \| `2` \| `3` | Nível vertical (`0` = Solo, `1`/`2`/`3` = Prateleiras suspensas). |
 | **Vaga** | Posição Lateral | `D` (Direita) \| `E` (Esquerda) | Posição exata do palete dentro do plano da gaveta. |
 
----
-
 ## ❄️ 2. Zoneamento das Câmaras Frigoríficas
 
 ```mermaid
@@ -49,10 +46,8 @@ flowchart TD
     C1 --> VC["Grade Completa de Vagas A10D a B53E"]
 ```
 
-* **Resfriados (`R1` / `R2`)**: Produtos lácteos, embutidos, margarinas e carnes resfriadas (0°C a 4°C).
-* **Congelados (`C1` / `C2`)**: Vegetais, pratos prontos, polpas e aves/cortes congelados (-18°C).
-
----
+- **Resfriados (`R1` / `R2`)**: Produtos lácteos, embutidos, margarinas e carnes resfriadas (0°C a 4°C).
+- **Congelados (`C1` / `C2`)**: Vegetais, pratos prontos, polpas e aves/cortes congelados (-18°C).
 
 ## 🛑 3. Prevenção Ativa de Colisão de Vagas & Detecção de Concorrência
 
@@ -117,20 +112,16 @@ flowchart TD
 ```
 
 ### Diretrizes do Motor de Ciclos:
-* **Fim da Fusão Indevida de Paletes**: Impede que a criação de um palete hoje seja fundida no grupo de criação de um palete antigo de ontem que já foi expedido.
-* **Sintetização de `EXCLUSAO_TOTAL_PALETE`**: Quando uma vaga é esvaziada sem emissão de evento explícito pelo coletor (ex: limpeza direta no banco), o endpoint `/api/paletes-historico` sintetiza o evento de exclusão total, demarcando de forma definitiva a fronteira do ciclo.
-* **Status do Ciclo**:
+- **Fim da Fusão Indevida de Paletes**: Impede que a criação de um palete hoje seja fundida no grupo de criação de um palete antigo de ontem que já foi expedido.
+- **Sintetização de `EXCLUSAO_TOTAL_PALETE`**: Quando uma vaga é esvaziada sem emissão de evento explícito pelo coletor (ex: limpeza direta no banco), o endpoint `/api/paletes-historico` sintetiza o evento de exclusão total, demarcando de forma definitiva a fronteira do ciclo.
+- **Status do Ciclo**:
   - `ativo`: Representa a carga física presente na câmara neste instante.
   - `excluido`: Representa cargas passadas já baixadas do estoque, acessíveis exclusivamente para conferência de auditoria e rastreabilidade.
-
----
 
 ## 🏷️ 5. Protocolo de Sinalização Física
 1. **Etiquetas Adesivas**: Duas etiquetas impressas na balança e coladas no primeiro lastro de caixas.
 2. **Marcador Vermelho**: Escrita manual da identificação (ex: `R1-A32E` ou `C2-B20D`).
 3. **Frente e Verso**: Visibilidade garantida para o operador de empilhadeira em qualquer sentido de circulação.
-
----
 
 ## 🧮 6. Resolução Inteligente de Conflitos Offline & Bloqueio Mandatório (Interlock)
 
@@ -208,17 +199,17 @@ $$\text{Distância} = (\Delta\text{Rua} \times 100) + (\Delta\text{Nível} \time
 
 ### C. Motor de Sugestão Inteligente (`obterVagaMaisProxima`)
 O algoritmo avalia as vagas livres e seleciona atomicamente a melhor coordenada disponível, gerando a justificativa técnica contextual:
-* **Distância = 2**: *"Mesmo vão, lado oposto"* (ex: de `A10D` para `A10E`).
-* **Distância = 10**: *"Mesmo nível, coluna ao lado"* (ex: de `A10D` para `A11D`).
-* **Distância = 15**: *"Mesma rua, nível adjacente"* (ex: de `A10D` para `A20D`).
+- **Distância = 2**: *"Mesmo vão, lado oposto"* (ex: de `A10D` para `A10E`).
+- **Distância = 10**: *"Mesmo nível, coluna ao lado"* (ex: de `A10D` para `A11D`).
+- **Distância = 15**: *"Mesma rua, nível adjacente"* (ex: de `A10D` para `A20D`).
 
 ### D. Bloqueio Mandatório de Tela (Interlock Mobile)
 O componente [`ModalBloqueioRealocacaoObrigatoria.tsx`](file:///root/repo_pwa/components/ModalBloqueioRealocacaoObrigatoria.tsx) impõe uma barreira física e visual inegociável:
-* **Overlay com `z-[99999]`**: Cobre totalmente a viewport móvel, sem botão de fechar (X), sem fechamento por clique fora e sem cancelamento por tecla `Escape`.
-* **Amarração ao Usuário Criador**: O bloqueio é ativado se o usuário logado for o criador do palete (`created_by === currentUserName`), se o ID do palete estiver no `localStorage` do dispositivo ou se for um operador comum com pendências na câmara.
-* **Bloqueio Total de Módulos**: O leitor de código de barras (câmera), consulta de estoque, relatórios e menus permanecem inoperantes até a definição da vaga.
-* **Resolução em 1 Clique**: Um card destacado exibe a vaga sugerida com botão de toque largo: `[ ✓ Confirmar e Alocar na Vaga {vagaSugerida} → ]`.
-* **Opção de Escolha Manual Ordenada**: Permite ao operador alternar para uma grade de botões com todas as outras vagas livres da câmara, automaticamente pré-ordenadas da mais próxima para a mais distante.
+- **Overlay com `z-[99999]`**: Cobre totalmente a viewport móvel, sem botão de fechar (X), sem fechamento por clique fora e sem cancelamento por tecla `Escape`.
+- **Amarração ao Usuário Criador**: O bloqueio é ativado se o usuário logado for o criador do palete (`created_by === currentUserName`), se o ID do palete estiver no `localStorage` do dispositivo ou se for um operador comum com pendências na câmara.
+- **Bloqueio Total de Módulos**: O leitor de código de barras (câmera), consulta de estoque, relatórios e menus permanecem inoperantes até a definição da vaga.
+- **Resolução em 1 Clique**: Um card destacado exibe a vaga sugerida com botão de toque largo: `[ ✓ Confirmar e Alocar na Vaga {vagaSugerida} → ]`.
+- **Opção de Escolha Manual Ordenada**: Permite ao operador alternar para uma grade de botões com todas as outras vagas livres da câmara, automaticamente pré-ordenadas da mais próxima para a mais distante.
 
 ### E. Transação de Realocação e Desbloqueio (`/api/paletes/realocar`)
 Ao pressionar o botão de confirmação:
@@ -226,8 +217,6 @@ Ao pressionar o botão de confirmação:
 2. **Reativação do Palete**: Remove `deleted_at` e `motivo_exclusao`, atualiza `vaga` para a nova coordenada e registra o operador em `updated_by`.
 3. **Auditoria Imutável**: Grava na tabela `paletes_historico` o evento `EDICAO_PALETE` com detalhes `tipo: 'REALOCACAO_CONFLITO'`, salvando a vaga anterior e a nova vaga para rastreabilidade de inventário.
 4. **Purga de Cache & Liberação**: O `localStorage.ps_meus_paletes_conflito` é expurgado no cliente, o cache das câmaras no servidor é limpo e a aplicação é desbloqueada instantaneamente.
-
----
 
 ## 🧬 7. Código de Vínculo Estrito por Câmara, Vaga e Filial
 
@@ -243,7 +232,7 @@ $$\mathbf{f\{\text{filial}\}}-\mathbf{\{\text{câmaraSlug}\}}-\mathbf{\{\text{va
 
 ```mermaid
 flowchart TD
-    ROOT["🏷️ Código de Vínculo do Produto\n<b>f410-CAMARA01-B12D-1787938989868-7891527977035-a1b2c</b>"]
+    ROOT["🏷️ Código de Vínculo do Produto\nf410-CAMARA01-B12D-1787938989868-7891527977035-a1b2c"]
 
     ROOT --> S1["🏢 1. Filial (f410)\nIsolamento Multi-tenant contra vazamento entre lojas"]
     
@@ -269,8 +258,6 @@ flowchart TD
 | **EAN** | `7891527977035` | Produto | Código de barras comercial do SKU individual. |
 | **Sal** | `a1b2c` | Sufixo | Aleatoriedade determinística para suportar múltiplos lotes no mesmo milissegundo. |
 
----
-
 ### B. Relação de Integridade: A Chave Mestra do Palete Misto
 
 Quando um palete é composto por **múltiplos produtos distintos** (palete misto), todos os itens recebem a mesma **Assinatura Canônica da Câmara/Vaga na Sessão**:
@@ -279,7 +266,7 @@ $$\text{Chave Mestra da Vaga} = \mathbf{f410-CAMARA01-B12D-1787938989868}$$
 
 ```mermaid
 flowchart TD
-    VAGA["🔑 Chave Mestra da Câmara/Vaga no Ciclo\n<b>f410-CAMARA01-B12D-1787938989868</b>\n(Compartilhada por todos os produtos do mesmo palete)"]
+    VAGA["🔑 Chave Mestra da Câmara/Vaga no Ciclo\nf410-CAMARA01-B12D-1787938989868\n(Compartilhada por todos os produtos do mesmo palete)"]
     
     VAGA --> P1["📦 Produto A: Presunto Sadia\nEAN: 7891164163600 | Val: 2026-11-30\nID: f410-CAMARA01-B12D-1787938989868-7891164163600-k9x2a"]
     
@@ -295,8 +282,6 @@ flowchart TD
     REGRAS --> R_BLOCK_CROSS["🚫 Bloqueio Cruzado:\nCódigo rejeitado se a câmara, vaga ou filial enviada diferir do código"]
 ```
 
----
-
 ### C. Fluxo Vertical de Validação de Vínculo na API
 
 Antes de qualquer inserção ou atualização no Supabase, o endpoint [`pages/api/cadastrar.ts`](file:///root/repo_pwa/pages/api/cadastrar.ts) valida a compatibilidade do código através da rotina `validarCompatibilidadeVinculo`:
@@ -309,7 +294,7 @@ flowchart TD
     
     EXTRACT --> HAS_ID{"Código do Produto já foi enviado?"}
     
-    HAS_ID -->|Não: Primeira Geração| GEN["⚙️ gerarCodigoVinculoPalete\nMonta f{filial}-{camara}-{vaga}-{ts}-{ean}-{salt}"]
+    HAS_ID -->|Não: Primeira Geração| GEN["⚙️ gerarCodigoVinculoPalete\nMonta f-filial-camara-vaga-ts-ean-salt"]
     
     HAS_ID -->|Sim: Código Existente| VAL["2. Executa validarCompatibilidadeVinculo"]
     

@@ -2,8 +2,6 @@
 
 Este guia fornece os procedimentos operacionais padrão para administradores e engenheiros de dados executarem a **suíte de aliases Linux (Mobile CLI UX)**, **execução completa do pipeline com relatório de timestamps**, **sincronização dinâmica via manifesto**, **acompanhamento de logs** e **agendamento via Crontab** no ecossistema PaletScan.
 
----
-
 ## ⚡ 1. Instalação e Ativação dos Aliases no Terminal Linux (1 Passo)
 
 A suíte de aliases foi otimizada para o ambiente **Linux / Termux em smartphones Android**, com suporte a telas de 36 colunas de largura sem quebras serrilhadas (*line wrapping*).
@@ -15,8 +13,6 @@ source ~/.paletscan_aliases.sh
 ```
 
 > 💡 **Carregamento Automático:** O arquivo `~/.bashrc` está configurado para carregar automaticamente a suíte `~/.paletscan_aliases.sh` a cada nova janela de terminal aberta.
-
----
 
 ## 🚀 2. O Comando All-in-One: `etl-run` / `etl-pipeline`
 
@@ -107,7 +103,7 @@ etl-pipeline
 📊 BASE DE DADOS SUPABASE (AO VIVO):
  🏢 Fabricantes:       4
  🏷️  Marcas:            143
- 🥩 Produtos Totais:   3.415
+ 🥩 Produtos Totais:   3.776
  📊 Códigos de Barras: 9.310
  ✨ Novos Produtos:    20 recém-incluídos
 📌 RESUMO DOS NOVOS PRODUTOS:
@@ -122,8 +118,6 @@ etl-pipeline
 ✔ PIPELINE FINALIZADO COM SUCESSO!
 ────────────────────────────────────────────────────────────────────────
 ```
-
----
 
 ## 📖 3. Compatibilidade Dinâmica com o Manifesto do Projeto (`schema_manifest.json`)
 
@@ -159,8 +153,6 @@ Para evitar inconsistências caso uma marca ou holding entre ou saia do projeto,
 | `etl-cron-list` | `etl-cron-status` | Lista e audita o agendamento ativo e integridade do cron. |
 | `etl-cron-remove`| `crontab -r` | Remove os agendamentos do PaletScan no Crontab. |
 
----
-
 ## 🆕 6. Monitoramento de Novos Produtos Incluídos
 
 Quando novas cargas de scrapers ou ingestões de fornecedores são executadas, o pipeline detecta automaticamente quais produtos foram incorporados pela primeira vez ao banco relacional.
@@ -176,8 +168,6 @@ etl-novos
 etl-novos-produtos
 ```
 
----
-
 ## 📝 7. Monitoramento de Produtos Alterados e Atualizados
 
 Quando dados de produtos pré-existentes sofrem modificação no staging (como atualização de foto, descrição padronizada, classe, conservação, peso ou marca):
@@ -191,13 +181,9 @@ etl-atualizados
 etl-alteracoes
 ```
 
-
-
 ## ⏰ 8. Agendamento Automático e Gestão de Tarefas Recorrentes (Linux / Crontab)
 
 Para manter a base de dados permanentemente atualizada sem intervenção manual, o ecossistema PaletScan dispõe de integração nativa com o **Crontab do Linux**, permitindo agendamentos flexíveis com logs e relatórios automáticos.
-
----
 
 ### A. Agendamento Interativo via CLI (`etl-schedule`)
 
@@ -222,8 +208,6 @@ Frequência para etl-run:
 Opção [1-5]:
 ```
 
----
-
 ### B. Sintaxe e Expressões Cron Personalizadas
 
 Caso selecione a **Opção 4 (Personalizado)**, você pode definir qualquer regra de execução utilizando a estrutura padrão de 5 campos do Cron:
@@ -242,8 +226,6 @@ $$\begin{matrix} \text{Minuto} & \text{Hora} & \text{Dia-do-Mês} & \text{Mês} 
 | **A cada 15 minutos (Alta Frequência)** | `*/15 * * * *` | Roda a cada 15 minutos, 24h por dia. |
 | **Executar 4 vezes ao dia (a cada 3h)** | `0 0,6,12,18 * * *` | Roda a cada 6 horas marcadas no relógio. |
 | **Apenas aos Finais de Semana** | `0 4 * * 0,6` | Roda às 04:00 da manhã aos sábados e domingos. |
-
----
 
 ### C. Inspecionar Status ao Vivo e Daemon (`etl-cron-status` / `etl-cron-list`)
 
@@ -275,8 +257,6 @@ Toda execução do agendador redireciona o output em tempo real para `logs/cron_
 tail -f logs/cron_output.log
 ```
 
----
-
 ### D. Cancelar e Remover Agendamentos
 
 #### 1. Remoção Rápida via CLI:
@@ -291,8 +271,6 @@ Para alterar ou remover uma linha específica manualmente:
 crontab -e
 ```
 *(Utilize o editor para remover a linha da tarefa `PALETSCAN_ETL_FULL_JOB` e salve o arquivo).*
-
----
 
 ### E. Garantias de Execução em Segundo Plano no Android / Termux
 
@@ -310,8 +288,6 @@ Para agendamentos executados no **Termux (Android)**, garanta as seguintes diret
 
 3. **Início do Serviço Daemon Pós-Reboot**:
    - Se o celular for reiniciado, basta abrir o aplicativo Termux uma vez para ativar automaticamente o daemon do `crond` e o `termux-wake-lock`.
-
----
 
 ## 🧹 9. Limpeza Total de Bases de Dados e Caches Multi-Camadas
 
@@ -333,8 +309,6 @@ echo "[]" > /root/repo_pwa/public/produtos.json
 TRUNCATE TABLE codigos_barras, paletes_armazenados, produtos, marcas, fabricantes CASCADE;
 ```
 
----
-
 ## 🧪 10. Suíte de Testes Automatizados & Integridade Relacional
 
 O ecossistema conta com rotinas de testes contínuos para garantir a integridade dos dados e prevenir regressões arquiteturais:
@@ -353,17 +327,17 @@ Audita a higienização de EANs/DUNs, integridade relacional de marcas e fabrica
 npx tsx scripts/test_sync_and_catalog.ts
 ```
 
-### C. Bateria Completa de Testes de Ponta a Ponta do PWA (9 Etapas — 125 Testes)
-Executa a validação exaustiva do fluxo completo do usuário, regras industriais, segurança multi-tenant e resiliência crítica de alocação de paletes no chão de fábrica:
+### C. Bateria Completa de Testes de Ponta a Ponta do PWA (11 Quality Gates Sequenciais)
+O comando central `npm test` no repositório do PWA executa uma esteira de 11 Quality Gates ponta a ponta. Dentre eles, o Gate 1 ([`scripts/test_user_flow.ts`](file:///root/repo_pwa/scripts/test_user_flow.ts)) executa 9 etapas com 125 casos de teste exaustivos:
 
 ```bash
 # Executado a partir do repositório do PWA (/root/repo_pwa)
 npm test
-# ou diretamente via ts-node:
+# ou diretamente via ts-node para o Gate 1:
 npx ts-node --compiler-options '{"module":"commonjs"}' scripts/test_user_flow.ts
 ```
 
-| Etapa | Escopo Técnico & Regras de Negócio Testadas | Quantidade |
+| Etapa do Gate 1 | Escopo Técnico & Regras de Negócio Testadas | Quantidade |
 | :--- | :--- | :---: |
 | **1. Usuários & Multi-Tenant** | Operador padrão e visitante vinculados à Filial 410 (Rio Tavares), segregação de escopos por CNPJ, validação PBKDF2 de senhas e bloqueio de privilégios não autorizados. | 17 testes |
 | **2. Ciclo de Vida de Operadores** | Criação dinâmica de operadores, concessão/revogação de permissões granulares, filtro de marcas permitidas e deleção segura. | 8 testes |
@@ -375,14 +349,9 @@ npx ts-node --compiler-options '{"module":"commonjs"}' scripts/test_user_flow.ts
 | **8. Isolamento de Ciclos & Idempotência** | Segmentação temporal de histórico em ciclos independentes por vaga (5 minutos), prevenção de contaminação entre paletes antigos e novos, deduplicação de posições e bloqueio contra chamadas repetidas. | 10 testes |
 | **9. Conflitos de Vagas, Sugestão 3D & Bloqueio Mandatório** | Decomposição física de coordenadas, cálculo de distância ponderada, recomendação da vaga mais próxima em 1 clique, desempate por timestamp (mais recente vence), ativação de interlock total do app para o criador do palete em conflito e reativação no banco. | 36 testes |
 
----
-
 ### D. Validador de Sintaxe Mermaid para MkDocs
 Verifica se todos os diagramas Mermaid na documentação cumprem as regras de esteiras estritamente verticais e compatibilidade mobile:
 
 ```bash
 npm run validate:mermaid
 ```
-
-
-

@@ -2,8 +2,6 @@
 
 O módulo de governança do **PaletScan ETL** assegura que nenhum dado corrompido, órfão ou fora de contrato seja inserido no banco de dados relacional. Ele combina contratos formais em JSON Schema ([`schema_manifest.json`](file:///root/paletscan-etl/core/manifest/schema_manifest.json)) com identificadores determinísticos UUIDv5, sincronização dinâmica de marcas/aliases e funções de sanitização em PL/pgSQL no PostgreSQL / Supabase.
 
----
-
 ## 📊 1. Relação Atual de Métricas e Volumes no Banco de Dados
 
 Após a execução do pipeline de ingestão e sanitização estrita, a base de dados relacional encontra-se auditada e 100% íntegra, apresentando a seguinte relação de volumes:
@@ -12,10 +10,8 @@ Após a execução do pipeline de ingestão e sanitização estrita, a base de d
 | :--- | :--- | :--- |
 | **Fabricantes (Holdings)** | **4** | JBS S.A., Seara Alimentos LTDA, BRF S.A. e Cooperativa Agroindustrial Lar. |
 | **Marcas Comerciais** | **143** | Marcas ativas associadas (ex: Friboi, Seara, Sadia, Perdigão, Lar, Maturatta, 1953). |
-| **Produtos Validados** | **3.386** | Todos 100% respaldados por EAN numérico único (0 produtos órfãos ou sem EAN). |
-| **Códigos de Barras** | **9.310** | Registros catalogados e normalizados nas tipagens estritas `EAN` e `DUN`. |
-
----
+| **Produtos Validados no PWA** | **3.776** | Catálogo unificado oficial 100% respaldado por EAN-13 numérico único. |
+| **Códigos de Barras** | **9.310+** | Registros catalogados e normalizados nas tipagens estritas `EAN` e `DUN`. |
 
 ## 🏛️ 2. Modelo Relacional Anti-Redundância
 
@@ -118,8 +114,6 @@ Para garantir que a inclusão ou remoção de marcas e fornecedores seja refleti
 
 > 🔄 **Dinamicidade Garantida:** O script `scripts/render_help_from_manifest.ts` lê este manifesto em tempo de execução. Se uma marca entrar ou sair do projeto, a CLI atualiza seu menu mobile sem requerer alteração de código.
 
----
-
 ## 🔑 4. Identificadores Determinísticos via UUIDv5
 
 Para garantir que reexecuções do pipeline ETL não gerem registros duplicados ou IDs aleatórios a cada sincronização, todos os identificadores primários são gerados via **UUIDv5** a partir de um namespace estático:
@@ -132,13 +126,9 @@ Exemplo de chaves naturais utilizadas:
 - **Produto ID**: `UUIDv5(NAMESPACE, "sku-109403")`
 - **Código de Barras ID**: `UUIDv5(NAMESPACE, "ean-7891515432101")`
 
----
-
 ## 🛢️ 5. Higienização SQL em Nível de Banco (`validar_e_corrigir_eans.sql`)
 
 Como camada adicional de proteção e governança, o arquivo [`db_sync/validar_e_corrigir_eans.sql`](file:///root/paletscan-etl/db_sync/validar_e_corrigir_eans.sql) instala a função `fn_calculate_mod10_ean13` diretamente no banco Supabase em PL/pgSQL.
-
----
 
 ## 📱 6. Diretrizes Estritas de Exportação ao PWA (Regras de Negócio)
 
@@ -147,4 +137,12 @@ Para preservar a excelência da experiência do usuário e a precisão operacion
 1. **Requisito Mínimo de EAN-13:** Apenas produtos com código **EAN numérico de 13 dígitos** válido são exportados para os arquivos `produtos.json` e servidos ao PWA.
 2. **Eliminação de SKUs na Interface do Usuário:** O PWA não exibe códigos SKU ou referências internas de fabricante. A experiência de usuário restringe-se exclusivamente aos identificadores **EAN (13 dígitos)** e **DUN (14 dígitos)**.
 3. **Isolamento Relacional de Produtos sem EAN:** Produtos provenientes de canais B2B que contenham apenas SKU interno ou DUN são preservados no Supabase para auditoria e rastreabilidade, mas são categoricamente descartados da publicação no catálogo do PWA.
+
+## 🔄 7. Reconciliação GS1 de Códigos DUN & EAN (`reconcile_dun_ean.ts`)
+
+Para eliminar duplicidades decorrentes de fornecedores que cadastram caixas sem especificar o produto unitário:
+- **Separação Canônica de Tipagem**: Códigos de barras são estritamente segregados entre `EAN` (13 dígitos) e `DUN` (14 dígitos), impedindo que um DUN de caixa seja salvo como SKU unitário.
+- **Derivação Determinística de EAN**: O script [`scripts/reconcile_dun_ean.ts`](file:///root/paletscan-etl/scripts/reconcile_dun_ean.ts) extrai os dígitos 1 a 12 do DUN-14 e recalcula o dígito verificador Modulus 10, gerando o EAN consumidor com precisão matemática.
+- **Eliminação de Recorrência de Alteração de Imagem**: Os registros conciliados congelam a URL de mídia validada, evitando downloads desnecessários nas execuções periódicas do pipeline.
+
 

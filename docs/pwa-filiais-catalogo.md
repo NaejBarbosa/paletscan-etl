@@ -2,8 +2,6 @@
 
 Com a expansão da operação do **PaletScan PWA** para redes de atacarejo e distribuição alimentícia (como a rede Fort Atacadista), o ecossistema implementa uma arquitetura robusta de **Multi-Filiais (Multi-Tenant)**, combinando governança estrita do **Catálogo Mestre**, matriz de privilégios independentes por loja (`privilegiosPorFilial`), autonomia operacional local para balanças de pesagem (PLU), barreiras de edição cruzada de marcas e canal colaborativo (crowdsourcing) de reportes.
 
----
-
 ## 🏛️ 1. Arquitetura Multi-Filial & Governança de Catálogo
 
 No modelo de atacarejo, produtos industriais compartilham as mesmas características de catálogo em todo o país (fotos tratadas por IA, descrições padronizadas, conservação térmica e códigos EAN/DUN), mas cada filial possui sua própria realidade física de recebimento, equipes de operadores, marcas negociadas e balanças de pesagem locais.
@@ -31,8 +29,6 @@ flowchart TD
    - Códigos de balança para pesagem fracionada/açougue variam de filial para filial. O sistema isola o código de pesagem por loja, impedindo que a Loja 410 altere a configuração da Loja 411.
 3. **Crowdsourcing Inteligente via Modal de Detalhes**:
    - Qualquer operador de chão de fábrica pode reportar divergências observadas (ex: nova embalagem na indústria, divergência de peso), alimentando o painel de pendências da central junto com o snapshot de logs do cliente.
-
----
 
 ## 🏢 2. Matriz Dinâmica de Privilégios por Filial (`privilegiosPorFilial`)
 
@@ -80,10 +76,8 @@ flowchart TD
 }
 ```
 
-* **Eliminação de Delay na Definição de Permissões**: No painel `/admin`, ao marcar/desmarcar a opção de multi-filiais, o formulário ajusta instantaneamente os privilégios da loja selecionada, mantendo as demais com privilégios desmarcados por padrão sem travamento de estado.
-* **Prevenção de Falso 403 em Requisições Administrativas**: Endpoints como `/api/admin/usuarios` utilizam a função `verifyAdminSession`, que autentica a sessão do administrador sem conflitar com o identificador do usuário que está sendo editado.
-
----
+- **Eliminação de Delay na Definição de Permissões**: No painel `/admin`, ao marcar/desmarcar a opção de multi-filiais, o formulário ajusta instantaneamente os privilégios da loja selecionada, mantendo as demais com privilégios desmarcados por padrão sem travamento de estado.
+- **Prevenção de Falso 403 em Requisições Administrativas**: Endpoints como `/api/admin/usuarios` utilizam a função `verifyAdminSession`, que autentica a sessão do administrador sem conflitar com o identificador do usuário que está sendo editado.
 
 ## 🛡️ 3. Barreira de Edição Cruzada de Atributos de Produtos
 
@@ -97,7 +91,7 @@ flowchart TD
     
     GET_SESS --> FETCH_PROD["2. Busca do Produto Alvo no Banco Relacional (Supabase)\nRecupera o registro atual em vw_produtos_com_marcas"]
     
-    FETCH_PROD --> CHECK_BRAND{"verificarAutorizacaoMarca(user, prod.marca_nome)?"}
+    GET_SESS --> CHECK_BRAND{"verificarAutorizacaoMarca(user, prod.marca_nome)?"}
     
     CHECK_BRAND -->|Não Autorizado| REJECT_403["🚫 HTTP 403 Forbidden\n'Acesso negado: Você só pode editar produtos das marcas: [Marcas]'"]
     
@@ -109,13 +103,11 @@ flowchart TD
 ```
 
 ### Endpoints Protegidos por Barreira de Marca:
-* [`/api/atualizar-descricao`](file:///root/repo_pwa/pages/api/atualizar-descricao.ts): Atualiza nome comercial e título padronizado.
-* [`/api/atualizar-classe`](file:///root/repo_pwa/pages/api/atualizar-classe.ts): Atualiza classificação tributária e fiscal.
-* [`/api/atualizar-conservacao`](file:///root/repo_pwa/pages/api/atualizar-conservacao.ts): Ajusta regime térmico (Congelado vs Resfriado).
-* [`/api/atualizar-marca`](file:///root/repo_pwa/pages/api/atualizar-marca.ts): Valida autorização tanto para a marca antiga quanto para a nova marca atribuída.
-* [`/api/atualizar-pesar-cod`](file:///root/repo_pwa/pages/api/atualizar-pesar-cod.ts): Regula vínculos de códigos de balança local.
-
----
+- [`/api/atualizar-descricao`](file:///root/repo_pwa/pages/api/atualizar-descricao.ts): Atualiza nome comercial e título padronizado.
+- [`/api/atualizar-classe`](file:///root/repo_pwa/pages/api/atualizar-classe.ts): Atualiza classificação tributária e fiscal.
+- [`/api/atualizar-conservacao`](file:///root/repo_pwa/pages/api/atualizar-conservacao.ts): Ajusta regime térmico (Congelado vs Resfriado).
+- [`/api/atualizar-marca`](file:///root/repo_pwa/pages/api/atualizar-marca.ts): Valida autorização tanto para a marca antiga quanto para a nova marca atribuída.
+- [`/api/atualizar-pesar-cod`](file:///root/repo_pwa/pages/api/atualizar-pesar-cod.ts): Regula vínculos de códigos de balança local.
 
 ## 🧪 4. Filial 999 - Sandbox (Ambiente de Homologação & Testes)
 
@@ -134,22 +126,18 @@ flowchart LR
     SW -->|Contexto Ativo| F999
 ```
 
-* **Segregação Estrita de Dados**: Consultas, relatórios, ocupação de vagas e exclusões são filtrados pela coluna `empresa_id` / `filial_id`. Uma exclusão em massa ou conflito gerado na filial 999 **nunca** afeta o inventário da filial 410.
-* **Blindagem de Sessão Concorrente (`lib/serverAuth.ts`)**: Elimina condições de corrida na hidratação de sessão do NextAuth, permitindo alternância instantânea entre Produção e Homologação sem bloqueios de permissão indevidos.
-* **Pílula de Status Reativa no Header**: Quando em homologação, o topo da aplicação exibe o badge de advertência `[🧪 HOMOLOGAÇÃO / SANDBOX]`, garantindo que o usuário tenha clareza total do ambiente em que está operando.
-
----
+- **Segregação Estrita de Dados**: Consultas, relatórios, ocupação de vagas e exclusões são filtrados pela coluna `empresa_id` / `filial_id`. Uma exclusão em massa ou conflito gerado na filial 999 **nunca** afeta o inventário da filial 410.
+- **Blindagem de Sessão Concorrente (`lib/serverAuth.ts`)**: Elimina condições de corrida na hidratação de sessão do NextAuth, permitindo alternância instantânea entre Produção e Homologação sem bloqueios de permissão indevidos.
+- **Pílula de Status Reativa no Header**: Quando em homologação, o topo da aplicação exibe o badge de advertência `[🧪 HOMOLOGAÇÃO / SANDBOX]`, garantindo que o usuário tenha clareza total do ambiente em que está operando.
 
 ## ⚖️ 5. Autonomia do Código de Balança (PLU) por Filial
 
 No setor de carnes, aves e congelados, balanças como Toledo Prix ou Filizola exigem códigos PLU específicos de cada filial.
 
-* **Armazenamento Híbrido**: Persistência isolada na entidade `pesar_cod_filial` indexada pela chave tripla `(empresa_id, filial_id, ean)`.
-* **Resiliência Offline**: Espelhamento local em cache JSON (`lib/pesar_cod_filial_db.json`) sincronizado em segundo plano com o Supabase quando há sinal de rede.
-* **Interface Clara com Badge da Loja**: No modal [`GerenciarCodigosModal.tsx`](file:///root/repo_pwa/components/GerenciarCodigosModal.tsx), o campo de código de pesar apresenta o badge da loja do operador (`Loja 410`) e a mensagem de apoio:
+- **Armazenamento Híbrido**: Persistência isolada na entidade `pesar_cod_filial` indexada pela chave tripla `(empresa_id, filial_id, ean)`.
+- **Resiliência Offline**: Espelhamento local em cache JSON (`lib/pesar_cod_filial_db.json`) sincronizado em segundo plano com o Supabase quando há sinal de rede.
+- **Interface Clara com Badge da Loja**: No modal [`GerenciarCodigosModal.tsx`](file:///root/repo_pwa/components/GerenciarCodigosModal.tsx), o campo de código de pesar apresenta o badge da loja do operador (`Loja 410`) e a mensagem de apoio:
   > *"Código PLU local exclusivo desta filial. Não afeta as outras lojas."*
-
----
 
 ## 📐 6. Validação Matemática GS1 (Módulo 10) & Correlação
 
@@ -182,10 +170,8 @@ flowchart TD
 
 ### B. Correlação Matemática EAN-13 x DUN-14
 O validador correlaciona a raiz do GTIN-13 com o DUN-14:
-* **Variante Direta**: O DUN-14 possui a mesma raiz de 12 dígitos do EAN-13, precedido pelo indicador logístico `1..8`.
-* **Caixa de Distribuição Agrupada**: O prefixo GS1 da empresa coincide, identificando fardos e caixas industriais da mesma linha de produto.
-
----
+- **Variante Direta**: O DUN-14 possui a mesma raiz de 12 dígitos do EAN-13, precedido pelo indicador logístico `1..8`.
+- **Caixa de Distribuição Agrupada**: O prefixo GS1 da empresa coincide, identificando fardos e caixas industriais da mesma linha de produto.
 
 ## 💬 7. Canal de Crowdsourcing & Moderação de Reportes
 

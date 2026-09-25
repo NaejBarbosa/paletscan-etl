@@ -2,8 +2,6 @@
 
 Este glossário reúne as definições e o contexto prático de todos os termos técnicos, jargões de arquitetura de dados e expressões de engenharia de software utilizados na documentação e no ecossistema do **PaletScan ETL**.
 
----
-
 ## 🔤 A - C
 
 ### **Alpha Channel (Canal Alpha / Transparência)**
@@ -23,8 +21,6 @@ Mecanismos de armazenamento de dados diretamente no navegador web do usuário:
 - **CacheStorage**: Armazena requisições HTTP e arquivos estáticos gerenciados pelo *Service Worker*.
 - **LocalStorage**: Armazena pares de chave-valor de dados simples (como tokens de autenticação e filas de pendência offline).
 
----
-
 ## 🔤 D - I
 
 ### **DUN-14 (Data Universal Numbering / EAN-14)**
@@ -43,8 +39,6 @@ Arquitetura de integração de dados dividida em três fases:
 - **IndexedDB**: Banco de dados relacional/NoSQL cliente embutido nos navegadores modernos.
 - **WatermelonDB**: Framework de banco de dados reativo de alta velocidade que gerencia o armazenamento local offline no aplicativo PaletScan PWA.
 
----
-
 ## 🔤 M - P
 
 ### **Modulus 10 (GS1 Mod10)**
@@ -55,8 +49,6 @@ Elemento visual temporário ou imagem padrão utilizada na interface da aplicaç
 
 ### **PWA (Progressive Web App / Aplicativo Web Progressivo)**
 Aplicação web construída com tecnologias modernas (como Service Workers e IndexedDB) que oferece experiência idêntica à de um aplicativo nativo, incluindo suporte a uso 100% offline em dispositivos móveis e coletores industriais.
-
----
 
 ## 🔤 R - S
 
@@ -82,8 +74,6 @@ Versão de um texto amigável para URLs, convertida em letras minúsculas, sem a
 
 ### **Staging (Ambiente / Arquivo Intermediário de Preparação)**
 Camada intermediária do pipeline onde os dados brutos recém-extraídos são armazenados temporariamente em arquivos JSON sanitizados (`staging/*_staging.json`) antes de passarem pela validação relacional e carga no banco final.
-
----
 
 ## 🔤 T - U
 

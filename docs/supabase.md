@@ -2,7 +2,6 @@
 
 O módulo de integração ([`db_sync/sync.ts`](file:///root/paletscan-etl/db_sync/sync.ts) e [`db_sync/sync_images.ts`](file:///root/paletscan-etl/db_sync/sync_images.ts)) realiza a carga dos dados sanitizados e mídias tratadas diretamente nas instâncias do Supabase PostgreSQL e Supabase Storage, enquanto as políticas nativas de **Row Level Security (RLS)** blindam o banco relacional contra acessos indevidos de operadores e terceiros.
 
----
 
 ## 🔄 1. Pipeline de Sincronização Relacional (`db_sync/sync.ts`)
 
@@ -22,8 +21,6 @@ flowchart TD
     S6 --> S7["Isola Código Conflitante e Mantém o Lote"]
     S7 --> S8["Registra Detalhes em Log de Auditoria"]
 ```
-
----
 
 ## 🛡️ 2. Tratamento Resiliente de Conflitos de EAN (`Erro 23505`)
 
@@ -47,8 +44,6 @@ Todas as tentativas de inserção duplicada são registradas no arquivo `staging
 ]
 ```
 
----
-
 ## 🔒 3. Alinhamento Relacional Estrito & Política Zero Data Loss
 
 Para garantir que nenhuma alteração manual realizada pelo operador no chão de fábrica do PWA seja sobrescrita ou perdida em rotinas automáticas de ETL:
@@ -60,8 +55,6 @@ Para garantir que nenhuma alteração manual realizada pelo operador no chão de
    - `vw_produtos_com_marcas`: View relacional consolidada consumida pelo PWA durante a sincronização delta.
 2. **Suíte de Testes de Imunidade a Perda de Dados**:
    - O script [`scripts/test_pwa_crud_and_sync_safety.ts`](file:///root/paletscan-etl/scripts/test_pwa_crud_and_sync_safety.ts) valida o ciclo CRUD completo e garante 100% de preservação de dados após operações de wipe ou sincronizações globais.
-
----
 
 ## 🖼️ 4. Sincronização de Mídias e Upload CDN (`db_sync/sync_images.ts`)
 
@@ -76,7 +69,6 @@ O script [`db_sync/sync_images.ts`](file:///root/paletscan-etl/db_sync/sync_imag
    - `status_imagem`: Atualiza para `aprovado`.
    - `updated_at`: Atualiza o timestamp da última mutação para orientar a sincronização delta do PWA.
 
----
 
 ## 🔐 5. Governança PostgreSQL Row Level Security (RLS) Nativas por Marca
 
@@ -84,7 +76,7 @@ Para assegurar o isolamento dos dados diretamente na autoridade máxima (o banco
 
 ```mermaid
 flowchart TD
-    CLIENT_REQ["🌐 Requisição HTTP do Cliente (PWA ou cURL)\nHeader: Authorization: Bearer <ps_supabase_token>"]
+    CLIENT_REQ["🌐 Requisição HTTP do Cliente (PWA ou cURL)\nHeader: Authorization: Bearer ps_supabase_token"]
     
     CLIENT_REQ --> POSTGREST["⚙️ Supabase PostgREST Gateway"]
     
@@ -121,8 +113,6 @@ flowchart TD
 
 ### Coexistência com `service_role` (Bypass RLS):
 As rotas de backend do Next.js que utilizam `supabaseAdmin` com a chave `SUPABASE_SERVICE_ROLE_KEY` operam com o atributo PostgreSQL `BYPASSRLS`. Isso assegura que tarefas administrativas centrais (como moderação de reportes e rotinas de expurgo automatizado) operem sem bloqueios, mantendo as requisições diretas de clientes sob isolamento hermético.
-
----
 
 ## 💻 6. Comandos de Sincronização & Teste
 

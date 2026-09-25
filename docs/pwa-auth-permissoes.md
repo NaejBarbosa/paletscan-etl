@@ -2,8 +2,6 @@
 
 O **PaletScan PWA** dispõe de uma arquitetura de segurança multicamadas de nível corporativo que combina autenticação tradicional, biometria via Passkeys (WebAuthn FIDO2), fluxo de seleção de filiais em etapas com credenciais protegidas, controle de acesso baseado em papéis (RBAC) com suporte a matriz de privilégios independentes por filial (`privilegiosPorFilial`), restrição total de acesso a marcas e governança nativa no PostgreSQL do Supabase via **Row Level Security (RLS)** alimentado por tokens JWT customizados.
 
----
-
 ## 🔐 1. Fluxo de Autenticação em Etapas, Passkeys & Resiliência Offline
 
 O acesso à aplicação adota um padrão de segurança em etapas (*Step-Up Authentication*), projetado para proteger a topologia de lojas da rede contra vazamento de metadados e oferecer alta ergonomia operacional para conferentes usando luvas térmicas no frio.
@@ -41,12 +39,10 @@ flowchart TD
 ```
 
 ### Componentes de Segurança e Sessão:
-* **Dropdown de Filiais Revelado sob Demanda**: O seletor de lojas **nunca** é exibido para visitantes anônimos. Apenas após a confirmação criptográfica da senha ou biometria o sistema consulta `/api/auth/filiais-usuario` e renderiza as lojas autorizadas para aquele operador específico.
-* **Passkeys / Biometria (WebAuthn FIDO2)**: Permite login por impressão digital ou reconhecimento facial sem necessidade de digitar senhas alfanuméricas com luvas térmicas no frio.
-* **Auto-Logout por Inatividade (5 Minutos)**: Temporizador reativo que encerra a sessão ativa caso o dispositivo fique sem interação física no chão de fábrica, evitando registros inadvertidos em coletores compartilhados. No logout, `ps_auth_session`, `ps_supabase_token` e `ps_active_filial` são limpos atômica e simultaneamente.
-* **Isenção de Expiração para Operadores Fixos**: Credenciais operacionais de administração (como `JeanBfreitas_`) contam com política de não-expiração forçada de senha (`senhaNuncaExpira: true`), prevenindo travamento do turno de trabalho.
-
----
+- **Dropdown de Filiais Revelado sob Demanda**: O seletor de lojas **nunca** é exibido para visitantes anônimos. Apenas após a confirmação criptográfica da senha ou biometria o sistema consulta `/api/auth/filiais-usuario` e renderiza as lojas autorizadas para aquele operador específico.
+- **Passkeys / Biometria (WebAuthn FIDO2)**: Permite login por impressão digital ou reconhecimento facial sem necessidade de digitar senhas alfanuméricas com luvas térmicas no frio.
+- **Auto-Logout por Inatividade (5 Minutos)**: Temporizador reativo que encerra a sessão ativa caso o dispositivo fique sem interação física no chão de fábrica, evitando registros inadvertidos em coletores compartilhados. No logout, `ps_auth_session`, `ps_supabase_token` e `ps_active_filial` são limpos atômica e simultaneamente.
+- **Isenção de Expiração para Operadores Fixos**: Credenciais operacionais de administração (como `JeanBfreitas_`) contam com política de não-expiração forçada de senha (`senhaNuncaExpira: true`), prevenindo travamento do turno de trabalho.
 
 ## 🛡️ 2. Matriz de Controle de Acesso (RBAC) Granular por Filial
 
@@ -68,7 +64,7 @@ flowchart TD
     APPLY_GLOBAL --> CONTEXT
 ```
 
-### Matriz Comparativa de Papéis Operacionais:
+### Matriz Comparativa de Papéis Operacionais (RBAC):
 
 | Permissão / Atributo | Flag de Perfil / Filial | Administrador (`operador`) | Promotor Dedicado (Ex: Seara) | Conferente de Loja | Visitante (`visitante`) |
 | :--- | :--- | :---: | :---: | :---: | :---: |
@@ -77,15 +73,22 @@ flowchart TD
 | **Pesquisa e Consulta de Produtos** | N/A | ✅ Todo o Catálogo | 🔒 **Apenas marcas autorizadas** | ✅ Todo o Catálogo | ✅ Catálogo |
 | **Visualizar Detalhes do Produto** | N/A | ✅ Liberado | 🔒 **Apenas marcas autorizadas** | ✅ Liberado | ✅ Liberado |
 | **Cadastrar Novos Paletes** | `podeCadastrarPalete` | ✅ | 🔒 Se autorizado (sua marca) | ✅ | ❌ |
-| **Cadastrar SKUs no Catálogo** | `podeCadastrarProduto` | ✅ | ❌ (Geralmente falso) | ❌ (Central) | ❌ |
-| **Vincular DUN-14 / Pesar** | `podeVincularDun` | ✅ | 🔒 Se autorizado (sua marca) | ✅ | ❌ |
-| **Editar Vaga de Palete** | `podeEditarVaga` | ✅ | ❌ | ✅ | ❌ |
-| **Editar Atributos de Produtos** | `podeEditarDescricaoProduto` | ✅ | 🔒 Se autorizado (sua marca) | ❌ | ❌ |
-| **Exportar Relatórios** | `podeExportarRelatorio` | ✅ | 🔒 Se atribuído | ✅ | ❌ |
-| **Gerenciar Watchlist / Radar** | `podeAdicionarRadar` | ✅ | 🔒 Apenas sua marca | ✅ | ❌ |
-| **Acesso a Marcas** | `acessoTodasMarcas` | `true` (Universal) | `false` (`marcasPermitidas: [...]`) | `true` (Loja) | `true` (Consulta) |
+| **Cadastrar SKUs no Catálogo** | `podeCadastrarProduto` | ✅ | ❌ (Default Deny) | ❌ (Central) | ❌ |
+| **Vincular DUN-14 à Caixa** | `podeVincularDun` | ✅ | 🔒 Se autorizado (sua marca) | ✅ | ❌ |
+| **Editar Vaga de Palete** | `podeEditarVaga` | ✅ | ❌ (Default Deny) | ✅ | ❌ |
+| **Editar Atributos de Descrição** | `podeEditarDescricaoProduto` | ✅ | 🔒 Se autorizado (sua marca) | ❌ | ❌ |
+| **Editar Marca do Produto** | `podeEditarMarcaProduto` | ✅ | ❌ (Default Deny) | ❌ | ❌ |
+| **Editar Conservação / Classe** | `podeEditarConservacao` / `podeEditarClasse` | ✅ | ❌ (Default Deny) | ❌ | ❌ |
+| **Editar Código de Balança (PLU)** | `podeEditarPesarCod` | ✅ | 🔒 Se autorizado (sua marca) | ✅ | ❌ |
+| **Modo Conferência de Estoque** | `podeModoConferencia` | ✅ | ❌ (Default Deny) | ✅ | ❌ |
+| **Auditoria & Histórico** | `podeAuditoria` | ✅ | ❌ (Oculta módulo na tela inicial) | ✅ | ❌ |
+| **Gerenciar Watchlist / Radar** | `podeAdicionarRadar` / `podeRemoverRadar` | ✅ | 🔒 Apenas sua marca | ✅ | ❌ |
+| **Gerar e Imprimir QR Code** | `podeGerarQrCode` | ✅ | ❌ (Default Deny) | ✅ | ❌ |
+| **Acessar Eruda DevTools Móvel** | `podeDevTools` | ✅ | ❌ | ❌ | ❌ |
+| **Exportar Relatórios PDF/CSV** | `podeExportarRelatorio` | ✅ | 🔒 Se atribuído | ✅ | ❌ |
+| **Acesso Amplo a Todas Marcas** | `acessoTodasMarcas` | `true` (Universal) | `false` (`marcasPermitidas: [...]`) | `true` (Loja) | `true` (Consulta) |
 
----
+> 🛡️ **Política de Default Deny:** Todo novo privilégio ou perfil sem concessão expressa assume o valor estrito `false`. Operadores com permissões parciais têm módulos restritos automaticamente ocultados da tela inicial.
 
 ## 🏬 3. Restrição Total de Acesso a Marcas (Brand Guardrail Absoluto)
 
@@ -212,8 +215,6 @@ USING (
 );
 ```
 
----
-
 ## 🛡️ 5. Blindagem de Sessão em Alta Concorrência (`lib/serverAuth.ts`)
 
 Durante a alternância dinâmica de filial entre Produção (`410`) e Homologação (`999`), requisições de API (`switch-filial`, `filiais`, `usuarios`, `logs`, `pendencias`) utilizam o helper centralizado [`lib/serverAuth.ts`](file:///root/repo_pwa/lib/serverAuth.ts):
@@ -240,5 +241,13 @@ flowchart TD
     AUTH_USER --> EXEC["✅ Executa a Operação com Auditoria em logs_sessao"]
 ```
 
-* **Eliminação de Condições de Corrida**: Previne o falso bloqueio de permissão ("você não tem permissão para trocar de filial") ao alternar de ambiente em dispositivos móveis sob latência de rede.
-* **Auditoria Contínua**: Cada alternância de filial grava um evento rastreável em `logs_sessao` no Supabase com data, identificador do operador e ambientes de origem e destino.
+- **Eliminação de Condições de Corrida**: Previne o falso bloqueio de permissão ("você não tem permissão para trocar de filial") ao alternar de ambiente em dispositivos móveis sob latência de rede.
+- **Auditoria Contínua**: Cada alternância de filial grava um evento rastreável em `logs_sessao` no Supabase com data, identificador do operador e ambientes de origem e destino.
+
+## 📲 6. Onboarding e Convite por WhatsApp com Link Tokenizado
+
+Para agilizar o credenciamento de novos operadores e promotores no chão de fábrica:
+- **Disparo Imediato no Cadastro ([`ConviteWhatsAppModal.tsx`](file:///root/repo_pwa/components/ConviteWhatsAppModal.tsx))**: Ao salvar ou editar um usuário no painel administrativo `/admin`, o sistema abre automaticamente um modal com atalho para envio de convite.
+- **Tokens Criptográficos de Convite ([`lib/inviteToken.ts`](file:///root/repo_pwa/lib/inviteToken.ts))**: Gera links assinados com prazo de expiração configurado, embutindo filial de destino e privilégios outorgados.
+- **Mensagem Formatada para WhatsApp**: O botão *"Enviar Convite via WhatsApp"* abre a URI `whatsapp://send` com texto de boas-vindas pronto, instruções de login e o link direto para instalação e abertura do PWA no smartphone.
+

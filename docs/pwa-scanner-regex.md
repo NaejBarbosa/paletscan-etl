@@ -2,7 +2,7 @@
 
 O módulo de leitura visual e decodificação do **PaletScan PWA** ([`Scanner.tsx`](file:///root/repo_pwa/components/Scanner.tsx)) combina o motor de leitura óptica da câmera com um funil especializado de expressões regulares industriais (normas GS1-128 e Data Matrix), validação matemática GS1 Módulo 10 e barreira imediata de marcas permitidas para promotores restritos.
 
----
+
 
 ## 📷 1. Componente Leitor Óptico & Fluxo Operacional
 
@@ -10,7 +10,7 @@ O módulo de leitura visual e decodificação do **PaletScan PWA** ([`Scanner.ts
 flowchart TD
     START["📷 Operador Inicia o Scanner no PWA\n(Câmera ao Vivo ou Foto com Recorte Tátil)"]
     
-    START --> CAPTURE["1. Captura Visual e Leitura do Sensor Óptico\n(ZXing BarcodeDetector + Zoom tátil anti-névoa)"]
+    START --> CAPTURE["1. Captura Visual e Leitura do Sensor Óptico\n(BarcodeDetector Nativo + Zoom tátil anti-névoa)"]
     
     CAPTURE --> RAW_DEC["2. Decodificação da String Bruta\n(Ex: '01078910001234561726083010L2026A')"]
     
@@ -22,10 +22,8 @@ flowchart TD
     
     BRAND_GUARD -->|Não - Marca Concorrente| REJECT["🚫 BLOQUEIO IMEDIATO NO SCANNER\nStatus: unauthorized_brand\n- Alerta visual em alto contraste (Vermelho)\n- Toca som e feedback háptico de erro\n- Aborta imediatamente abertura do formulário"]
     
-    BRAND_GUARD -->|Sim - Marca Autorizada ou Admin| AUTOFILL["✅ 6. Preenchimento Automático do Formulário de Palete\nEAN, Validade, Lote, Peso e Vaga física preenchidos em < 5ms"]
+    BRAND_GUARD -->|Sim - Marca Autorizada ou Admin| AUTOFILL["✅ 6. Preenchimento Automático do Formulário de Palete\nEAN, Validade, Lote, Peso e Vaga física preenchidos em menos de 5ms"]
 ```
-
----
 
 ## 🧩 2. Motor de Regex Industrial (`lib/regex.ts`)
 
@@ -65,17 +63,12 @@ flowchart TD
 | `(11)` ou `11` | Data de Fabricação (Marca Lar) | `11250830` | Na ausência do AI 17, projeta automaticamente **+365 dias** de validade. |
 | `(310X)` / `(pesar)` | Pesagem Variável | `3102001550` | Identifica peso em balança e abre o campo de quilos no formulário. |
 
----
-
 ## 📐 3. Validação Matemática GS1 Módulo 10 (`lib/gs1Validator.ts`)
 
 Além de extrair códigos por padrões regex, o sistema executa a validação matemática estrita da norma **GS1 Módulo 10** em tempo real:
-
-* **Validação de DUN-14**: Exige 14 dígitos numéricos estritos e calcula o dígito verificador ponderado. Códigos digitados incorretamente recebem alerta visual imediato prevenindo gravações incorretas.
-* **Validação de EAN-13**: Garante que o dígito de controle do produto comercial seja matematicamente válido antes de permitir a associação de novos SKUs.
-* **Detecção de Correlação EAN x DUN**: Avalia matematicamente se um código DUN-14 é uma variante direta (`variante_direta`) ou agrupamento logístico (`caixa_distribuicao`) do EAN base, evitando associações de produtos diferentes.
-
----
+- **Validação de DUN-14**: Exige 14 dígitos numéricos estritos e calcula o dígito verificador ponderado. Códigos digitados incorretamente recebem alerta visual imediato prevenindo gravações incorretas.
+- **Validação de EAN-13**: Garante que o dígito de controle do produto comercial seja matematicamente válido antes de permitir a associação de novos SKUs.
+- **Detecção de Correlação EAN x DUN**: Avalia matematicamente se um código DUN-14 é uma variante direta (`variante_direta`) ou agrupamento logístico (`caixa_distribuicao`) do EAN base, evitando associações de produtos diferentes.
 
 ## 🚫 4. Bloqueio no Scanner para Marcas Concorrentes
 
@@ -86,3 +79,16 @@ Quando um promotor (ex: **Sadia**) bipa um produto concorrente (ex: **Seara**):
 4. Exibe o alerta vermelho na tela:
    > *"Produto de marca não autorizada. Seu acesso nesta filial está restrito a: [Marcas Permitidas]."*
 5. A câmera permanece ativa para a leitura do próximo item sem travar a interface e sem expor informações de estoque ou validade do produto concorrente.
+
+## ⚡ 5. Aceleração por BarcodeDetector Nativo & Fallback ZXing
+
+Para assegurar resposta instantânea de leitura em smartphones modernos:
+- **Prioridade de Hardware Nativo (`useBarcodeDetector.ts`)**: O motor de câmera prioriza a `BarcodeDetector API` integrada ao Chromium do Android. Esse mecanismo utiliza aceleração por GPU/NPU do dispositivo, decodificando formatos complexos como Data Matrix e QR Code com taxa de quadros superior a 30 FPS.
+- **Fallback Automático via ZXing**: Em aparelhos ou navegadores sem suporte à API nativa, o sistema comuta de forma transparente para a biblioteca `@zxing/library` sem interromper a captura do operador.
+- **Controle Integrado de Lanterna (Torch)**: Botão de acionamento tátil no cabeçalho do visor de vídeo que ativa o LED do smartphone via `MediaStreamTrack.applyConstraints({ advanced: [{ torch: true }] })`, permitindo a leitura de etiquetas no fundo escuro de câmaras frigoríficas.
+- **Suporte Nativo a QR Code de Login**: O leitor de câmera reconhece credenciais de acesso rápido codificadas em QR Code (`lib/qrcodeDb.ts`), autenticando o operador instantaneamente sem necessidade de digitação em teclados móveis.
+
+## 🎛️ 6. Ergonomia Visual e Silenciamento de Leituras Irrelevantes
+
+- **Cápsula Minimalista Superior**: O menu de controles da câmera (botões de fechar, lanterna, zoom e alternância de sensor frontal/traseiro) foi encapsulado em uma barra flutuante unificada com backdrop translúcido, eliminando quebras indesejadas de linha em telas de 360px a 390px.
+- **Silenciamento de Códigos Irrelevantes**: O leitor ignora silenciosamente códigos sem relevância para perecíveis (como códigos de barras de embalagens terciárias desconhecidas), priorizando a detecção de EANs e DUNs válidos sem exibir múltiplos alertas vermelhos que interrompam o ritmo operacional.
