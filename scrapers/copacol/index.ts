@@ -17,6 +17,7 @@ import { execSync } from 'child_process';
 import { v5 as uuidv5 } from 'uuid';
 import {
   formatProductDescription,
+  sanitizeDescriptionAnomalies,
   normalizeEAN13,
   normalizeDUN14
 } from '../../core/normalizers/text_parser';
@@ -147,7 +148,7 @@ const TYPO_CORRECTIONS: Record<string, string> = {
   'milo': 'milho',
   'xerde': 'verde',
   'teleta': 'seleta',
-  'talsic': 'salsich',
+  'talsic': 'salsicha',
   'sustica': 'rústica',
   'conga': 'congelada',
   'soosso': 'sem osso'
@@ -155,12 +156,13 @@ const TYPO_CORRECTIONS: Record<string, string> = {
 
 function sanitizeTitle(rawText: string): string {
   if (!rawText) return '';
-  let cleaned = rawText.trim();
+  let cleaned = sanitizeDescriptionAnomalies(rawText.trim());
   for (const [typo, fix] of Object.entries(TYPO_CORRECTIONS)) {
-    const reg = new RegExp(typo, 'gi');
+    const escaped = typo.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const reg = new RegExp(`\\b${escaped}\\b`, 'gi');
     cleaned = cleaned.replace(reg, fix);
   }
-  return cleaned;
+  return sanitizeDescriptionAnomalies(cleaned);
 }
 
 export async function runCopacolScraper() {

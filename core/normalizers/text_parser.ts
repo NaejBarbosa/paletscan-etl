@@ -72,14 +72,42 @@ const ACCENT_CORRECTIONS: Record<string, string> = {
 };
 
 /**
+ * Higieniza anomalias textuais decorrentes de OCR, substituições em loop ou gagueira de sílabas.
+ * Trata casos como repetições acumulativas (ex: "Coxinhahahahaha..." -> "Coxinha"),
+ * reduplicações de sufixos e contrações de termos conhecidos.
+ */
+export function sanitizeDescriptionAnomalies(input: string): string {
+  if (!input) return '';
+
+  let sanitized = input;
+
+  // 1. Trata corrupções de "coxin" com loops de sufixo "ha" (ex: Coxinhahahahaha -> coxinha)
+  sanitized = sanitized.replace(/\bcoxin(?:ha)*(s)?\b/gi, 'coxinha$1');
+
+  // 2. Colapso de repetições anômalas de sílabas (loops OCR de 2 a 4 caracteres repetidos 3+ vezes)
+  sanitized = sanitized.replace(/([a-zA-ZáéíóúâêîôûãõçÁÉÍÓÚÂÊÎÔÛÃÕÇ]{2,4})\1{2,}/gi, '$1');
+
+  // 3. Trata caudas residuais de sufixo "ha" repetido em finais de palavras
+  sanitized = sanitized.replace(/\b([a-zA-ZáéíóúâêîôûãõçÁÉÍÓÚÂÊÎÔÛÃÕÇ]+?)ha{2,}\b/gi, '$1ha');
+
+  // 4. Desduplicação de palavras consecutivas idênticas (>= 3 caracteres)
+  sanitized = sanitized.replace(/\b([a-zA-ZáéíóúâêîôûãõçÁÉÍÓÚÂÊÎÔÛÃÕÇ]{3,})\s+\1\b/gi, '$1');
+
+  return sanitized;
+}
+
+/**
  * Converte uma string (mesmo em ALL CAPS) para Title Case padronizado em PT-BR,
  * higienizando unidades (kg/g) e acentuações.
  */
 export function toTitleCase(input: string): string {
   if (!input) return '';
 
+  // Higieniza anomalias e gagueiras de texto
+  const sanitized = sanitizeDescriptionAnomalies(input);
+
   // Remove caracteres decorativos como bullet points (•, |, ~) e limpa espaços
-  let cleanStr = input
+  let cleanStr = sanitized
     .replace(/[•|~]/g, ' ')
     .trim()
     .replace(/\s+/g, ' ');
@@ -254,8 +282,9 @@ export function formatProductDescription(
   knownWeightGrams?: number | null,
   isExplicitlyFracionado?: boolean
 ): ParsedProductText {
-  const cleanTitle = toTitleCase(rawTitle);
-  let weightData = extractWeight(rawTitle);
+  const sanitizedTitle = sanitizeDescriptionAnomalies(rawTitle);
+  const cleanTitle = toTitleCase(sanitizedTitle);
+  let weightData = extractWeight(sanitizedTitle);
 
   // Se o título não continha peso, mas temos um peso conhecido no catálogo e não é fracionado
   if (
