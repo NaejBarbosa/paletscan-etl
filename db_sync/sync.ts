@@ -429,6 +429,9 @@ export async function syncStagingToSupabase() {
     // 3. Se o scraper trouxe nova URL válida e o status atual não for reprovado, aceita a nova imagem e normaliza status para 'aprovado'.
     const produtosUUIDParaUpsert = produtosUUID.map(p => {
       const existing = existingProductsMap.get(p.id);
+      let targetImg = p.imagem_url;
+      let targetStatus = p.status_imagem;
+
       if (existing) {
         if (existing.status_imagem === 'reprovado') {
           return {
@@ -437,17 +440,30 @@ export async function syncStagingToSupabase() {
             imagem_url: null,
           };
         }
-        if (!p.imagem_url && existing.imagem_url && existing.status_imagem === 'aprovado') {
-          return {
-            ...p,
-            status_imagem: existing.status_imagem,
-            imagem_url: existing.imagem_url,
-          };
+        if (!targetImg && existing.imagem_url && existing.status_imagem === 'aprovado') {
+          targetImg = existing.imagem_url;
+          targetStatus = existing.status_imagem;
         }
       }
+
+      // Veto estrito a URLs externas de terceiros no Supabase
+      if (targetImg && (targetImg.startsWith('http://') || targetImg.startsWith('https://')) && !targetImg.includes('supabase.co/storage')) {
+        const bg = barcodesByProduct.get(p.id);
+        const candBarcode = bg?.ean || bg?.dun;
+        const localPwaPath = candBarcode ? path.join('/root/repo_pwa/public/imagens_produtos', `${candBarcode}.webp`) : '';
+        if (localPwaPath && fs.existsSync(localPwaPath)) {
+          targetImg = `/imagens_produtos/${candBarcode}.webp`;
+          targetStatus = 'aprovado';
+        } else {
+          targetImg = null;
+          targetStatus = 'sem_imagem';
+        }
+      }
+
       return {
         ...p,
-        status_imagem: p.imagem_url ? 'aprovado' : (p.status_imagem || 'sem_imagem'),
+        imagem_url: targetImg,
+        status_imagem: targetImg ? (targetStatus || 'aprovado') : (targetStatus || 'sem_imagem'),
       };
     });
 

@@ -229,6 +229,16 @@ async function generatePwaProdutosJson() {
       finalStatus = 'sem_imagem';
     }
 
+    // Veto estrito a URLs externas de terceiros no catálogo local
+    if (finalImgUrl && (finalImgUrl.startsWith('http://') || finalImgUrl.startsWith('https://')) && !finalImgUrl.includes('supabase.co/storage')) {
+      if (fs.existsSync(localPath) && fs.statSync(localPath).size > 1000) {
+        finalImgUrl = `/imagens_produtos/${localEanFile}`;
+      } else {
+        finalImgUrl = null;
+        finalStatus = 'sem_imagem';
+      }
+    }
+
     // Aplica catálogo oficial auditado (prioridade máxima para correção definitiva)
     const larSpec = getLarOfficialSpec(eanVal, rawSku);
     let finalDescr = descr;
