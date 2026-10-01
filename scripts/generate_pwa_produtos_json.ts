@@ -2,6 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import * as fs from 'fs';
 import * as path from 'path';
 import dotenv from 'dotenv';
+import { getLarOfficialSpec } from '../scrapers/lar/catalog_rules';
 
 dotenv.config();
 
@@ -228,6 +229,30 @@ async function generatePwaProdutosJson() {
       finalStatus = 'sem_imagem';
     }
 
+    // Aplica catálogo oficial auditado (prioridade máxima para correção definitiva)
+    const larSpec = getLarOfficialSpec(eanVal, rawSku);
+    let finalDescr = descr;
+    let finalPesoGramas = row.peso_gramas ?? null;
+    let finalFracionado = row.fracionado ?? false;
+    let finalPesarCod = '';
+
+    if (larSpec) {
+      finalDescr = larSpec.descr;
+      finalPesoGramas = larSpec.peso_gramas;
+      finalFracionado = larSpec.fracionado;
+      finalPesarCod = '';
+    } else {
+      // Se não for Lar oficial, limpa (Pesar) de produtos que já possuem gramatura no título
+      if (/\b\d+(\,\d+)?\s*(kg|g)\b/i.test(finalDescr)) {
+        finalDescr = finalDescr.replace(/\s*\([Pp]esar\)/gi, '').replace(/\s+/g, ' ').trim();
+        finalFracionado = false;
+      }
+      const candPesar = String(row.pesar_cod || row.codigo_balanca || '').trim();
+      if (finalFracionado && /^\d{1,6}$/.test(candPesar) && candPesar !== eanVal) {
+        finalPesarCod = candPesar;
+      }
+    }
+
     // A chave do Map é estritamente o ID ÚNICO DO PRODUTO (prodId), garantindo 1 item por produto no catálogo
     if (!mapUnicos.has(prodId)) {
       const criadoEmVal = row.criado_em || row.created_at || row.criadoEm || new Date().toISOString();
@@ -242,12 +267,12 @@ async function generatePwaProdutosJson() {
         produtoDun: dunVal, // DUN estritamente 14 dígitos numéricos ou ""
         sku: eanVal, // SKU normalizado para o EAN para evitar vazamento de códigos internos
         produtoConservacao: row.conservacao || row.produto_conservacao || '',
-        produtoDescr: descr,
-        title: descr,
-        descricao: descr,
-        peso_gramas: row.peso_gramas ?? null,
-        fracionado: row.fracionado ?? false,
-        pesarCod: row.tipo_codigo || row.codigo || row.pesar_cod || '',
+        produtoDescr: finalDescr,
+        title: finalDescr,
+        descricao: finalDescr,
+        peso_gramas: finalPesoGramas,
+        fracionado: finalFracionado,
+        pesarCod: finalPesarCod,
         imagemUrl: finalImgUrl,
         imagem_url: finalImgUrl,
         statusImagem: finalStatus,

@@ -1,130 +1,2422 @@
 [
   {
-    "id": "5cb355a8-881a-509e-924b-3f547df6f5a2",
-    "marca": "Sadia",
-    "sku": "620707",
-    "ean": "7891515532321",
-    "dun": "17891515323216",
-    "descricao": "Frango sem Miúdos Sadia Caixa 10kg",
+    "id": "11dbc97b-03b4-574e-8dd9-dc62434bd575",
+    "marca": "Lar",
+    "sku": "281093",
+    "ean": "7896419730729",
+    "dun": "17896419730726",
+    "descricao": "Batata Airfryer 1,005kg",
     "alteracoes": [
       {
         "campo": "Descrição",
-        "de": "Frango sem Miúdos Sadia Caixa Caixa 10kg",
-        "para": "Frango sem Miúdos Sadia Caixa 10kg"
+        "de": "Batata Palito Airfryer (Pesar)",
+        "para": "Batata Airfryer 1,005kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1005
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
       }
     ],
-    "atualizado_em": "2026-10-01T12:14:44.865Z"
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
   },
   {
-    "id": "6d682e58-7bdb-5f4b-8f84-693c2d05dca8",
-    "marca": "Copacol",
-    "sku": "96225",
-    "ean": "7891527962253",
-    "dun": "17891527962250",
-    "descricao": "Coxinha da Asa Congelada IQF Pacotes de 800g",
+    "id": "2adaccd2-d003-55a5-846f-e5c2599f39d6",
+    "marca": "Lar",
+    "sku": "311635",
+    "ean": "7896419731917",
+    "dun": "17896419731914",
+    "descricao": "Filé de Tilápia 600g",
     "alteracoes": [
       {
         "campo": "Descrição",
-        "de": "Coxinhahahahahahahahahahahaha da Asa Congelada IQF Pacotes de 800g",
-        "para": "Coxinha da Asa Congelada IQF Pacotes de 800g"
+        "de": "Filé de Tilápia (Pesar)",
+        "para": "Filé de Tilápia 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
       }
     ],
-    "atualizado_em": "2026-10-01T12:14:49.052Z"
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
   },
   {
-    "id": "37893ef5-6920-5afc-b50e-db5868df30a0",
-    "marca": "Copacol",
-    "sku": "5791",
-    "ean": "7891527057911",
-    "dun": "17891527057918",
-    "descricao": "Coxinha da Asa Temperada Congelada Pacotes de 1kg",
+    "id": "ab31fde4-e8da-5d99-8fb3-2dd5cd6594af",
+    "marca": "Lar",
+    "sku": "310812",
+    "ean": "7896419731801",
+    "dun": "17896419731808",
+    "descricao": "Filé de Tilápia 800g",
     "alteracoes": [
       {
         "campo": "Descrição",
-        "de": "Coxinhahahahahahahahahahahaha da Asa Temperada Congelada Pacotes de 1kg",
-        "para": "Coxinha da Asa Temperada Congelada Pacotes de 1kg"
+        "de": "Filé de Tilápia (Pesar)",
+        "para": "Filé de Tilápia 800g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 800
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
       }
     ],
-    "atualizado_em": "2026-10-01T12:14:49.052Z"
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
   },
   {
-    "id": "fa6fe96c-93ac-562f-868b-4cbc8e8d19bb",
-    "marca": "Copacol",
-    "sku": "1917",
-    "ean": "7891527019179",
-    "dun": "17891527019176",
-    "descricao": "Coxinha da Asa Temperada Resfriada Pacotes de 1kg",
+    "id": "dd7675a5-15f0-5aa2-a9da-c777b5a0e2fd",
+    "marca": "Lar",
+    "sku": "311632",
+    "ean": "7896419731900",
+    "dun": "17896419731907",
+    "descricao": "Filé de Tilápia 600g",
     "alteracoes": [
       {
         "campo": "Descrição",
-        "de": "Coxinhahahahahahahahahahahaha da Asa Temperada Resfriada Pacotes de 1kg",
-        "para": "Coxinha da Asa Temperada Resfriada Pacotes de 1kg"
+        "de": "Filé de Tilápia (Pesar)",
+        "para": "Filé de Tilápia 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
       }
     ],
-    "atualizado_em": "2026-10-01T12:14:49.052Z"
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
   },
   {
-    "id": "fef8a6cb-14b9-5bca-b20f-da5472360872",
-    "marca": "Copacol",
-    "sku": "49",
-    "ean": "7891527000498",
-    "dun": "17891527000495",
-    "descricao": "Coxinha da Asa Congelada Bandejas de 1kg",
+    "id": "fe0f3bf7-f6db-5409-a26f-f233bfbae6f3",
+    "marca": "Lar",
+    "sku": "59605",
+    "ean": "7896419720270",
+    "dun": "17896419720277",
+    "descricao": "Anéis de Cebola 1,1kg",
     "alteracoes": [
       {
         "campo": "Descrição",
-        "de": "Coxinhahahahahahahahahahahaha da Asa Congelada Bandejas de 1kg",
-        "para": "Coxinha da Asa Congelada Bandejas de 1kg"
+        "de": "Anéis de Cebola (Pesar)",
+        "para": "Anéis de Cebola 1,1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1100
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
       }
     ],
-    "atualizado_em": "2026-10-01T12:14:49.052Z"
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
   },
   {
-    "id": "c295b7d0-aff9-5fab-8bd0-bead506a992d",
-    "marca": "Copacol",
-    "sku": "6633",
-    "ean": "7891527066333",
-    "dun": "17891527066330",
-    "descricao": "Coxinha da Asa Resfriada Bandeja de 600g",
+    "id": "401287cc-bf24-51e0-a9de-49b8b7e7f681",
+    "marca": "Lar",
+    "sku": "59604",
+    "ean": "7896419720287",
+    "dun": "17896419720284",
+    "descricao": "Anéis de Cebola 400g",
     "alteracoes": [
       {
         "campo": "Descrição",
-        "de": "Coxinhahahahahahahahahahahaha da Asa Resfriada Bandeja de 600g",
-        "para": "Coxinha da Asa Resfriada Bandeja de 600g"
+        "de": "Anéis de Cebola (Pesar)",
+        "para": "Anéis de Cebola 400g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 400
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
       }
     ],
-    "atualizado_em": "2026-10-01T12:14:49.052Z"
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
   },
   {
-    "id": "8902304e-8366-5fef-aba2-916975322cbc",
-    "marca": "Copacol",
-    "sku": "47",
-    "ean": "7891527000474",
-    "dun": "17891527000471",
-    "descricao": "Coxinha da Asa Congelada (Pesar)",
+    "id": "eb852974-716e-5742-bd11-f88786c97a9d",
+    "marca": "Lar",
+    "sku": "280246",
+    "ean": "7896419730705",
+    "dun": "17896419730702",
+    "descricao": "Batata Palito 1,5kg",
     "alteracoes": [
       {
         "campo": "Descrição",
-        "de": "Coxinhahahahahahahahahahahaha da Asa Congelada (Pesar)",
-        "para": "Coxinha da Asa Congelada (Pesar)"
+        "de": "Batata Palito (Pesar)",
+        "para": "Batata Palito 1,5kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1500
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
       }
     ],
-    "atualizado_em": "2026-10-01T12:14:49.052Z"
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
   },
   {
-    "id": "22745bda-74c6-579c-acfb-e81e9a2dc052",
-    "marca": "Copacol",
-    "sku": "271",
-    "ean": "7891527002713",
-    "dun": "17891527002710",
-    "descricao": "Coxinha da Asa Resfriada (Pesar)",
+    "id": "5b965366-4e3b-524c-80fd-8a7c148e5589",
+    "marca": "Lar",
+    "sku": "262634",
+    "ean": "7896419730347",
+    "dun": "17896419730344",
+    "descricao": "Batata Palito 700g",
     "alteracoes": [
       {
         "campo": "Descrição",
-        "de": "Coxinhahahahahahahahahahahaha da Asa Resfriada (Pesar)",
-        "para": "Coxinha da Asa Resfriada (Pesar)"
+        "de": "Batata Palito (Pesar)",
+        "para": "Batata Palito 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
       }
     ],
-    "atualizado_em": "2026-10-01T12:14:49.052Z"
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "e6284360-e6b9-5819-8232-af9e5ffded7d",
+    "marca": "Lar",
+    "sku": "123050",
+    "ean": "7896419724384",
+    "dun": "17896419724381",
+    "descricao": "Polenta Palito 1,1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Polenta Palito (Pesar)",
+        "para": "Polenta Palito 1,1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1100
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "64c35b3d-e01a-5659-9007-e5dca522486a",
+    "marca": "Lar",
+    "sku": "666198",
+    "ean": "7896419712770",
+    "dun": "17896419712777",
+    "descricao": "Polenta Palito 400g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Polenta Palito (Pesar)",
+        "para": "Polenta Palito 400g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 400
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "2c7cf502-cdfa-5506-a395-bd23295f2b88",
+    "marca": "Lar",
+    "sku": "203889",
+    "ean": "7896419728887",
+    "dun": "17896419728884",
+    "descricao": "Coração Bandeja 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coração Bandeja (Pesar)",
+        "para": "Coração Bandeja 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "636a6278-e2fc-51dd-9607-70333de0dadc",
+    "marca": "Lar",
+    "sku": "163687",
+    "ean": "7896419727286",
+    "dun": "17896419727283",
+    "descricao": "Coração Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coração Bandeja (Pesar)",
+        "para": "Coração Bandeja 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "baa68724-7028-55d7-978f-d1c2d337d614",
+    "marca": "Lar",
+    "sku": "203892",
+    "ean": "7896419728894",
+    "dun": "17896419728891",
+    "descricao": "Coxinha da Asa Bandeja 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhas das Asas Bandeja (Pesar)",
+        "para": "Coxinha da Asa Bandeja 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "bcb2fe2c-2bc8-5f2b-809c-abf3184381c7",
+    "marca": "Lar",
+    "sku": "163697",
+    "ean": "7896419727309",
+    "dun": "17896419727306",
+    "descricao": "Coxinha da Asa Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhas das Asas Bandeja (Pesar)",
+        "para": "Coxinha da Asa Bandeja 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "c1a2215d-573a-5b74-9614-4c9330c6b372",
+    "marca": "Lar",
+    "sku": "203885",
+    "ean": "7896419728870",
+    "dun": "17896419728877",
+    "descricao": "Filé de Peito Bandeja 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Peito Bandeja (Pesar)",
+        "para": "Filé de Peito Bandeja 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "94ff3e8b-fd38-5624-b9b4-ba4eede14d76",
+    "marca": "Lar",
+    "sku": "163703",
+    "ean": "7896419727316",
+    "dun": "17896419727313",
+    "descricao": "Filé de Peito Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Peito Bandeja (Pesar)",
+        "para": "Filé de Peito Bandeja 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "bd74c756-d439-55d1-88d9-b343eb26ae09",
+    "marca": "Lar",
+    "sku": "203907",
+    "ean": "7896419728917",
+    "dun": "17896419728914",
+    "descricao": "Filezinho Sassami Bandeja 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Bandeja (Pesar)",
+        "para": "Filezinho Sassami Bandeja 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "758a6cba-a194-5383-a930-a965b2d708b4",
+    "marca": "Lar",
+    "sku": "163708",
+    "ean": "7896419727323",
+    "dun": "17896419727320",
+    "descricao": "Filezinho Sassami Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Bandeja (Pesar)",
+        "para": "Filezinho Sassami Bandeja 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "738be5b6-e2e9-5ee1-8c55-1dd4c0c462cb",
+    "marca": "Lar",
+    "sku": "163683",
+    "ean": "7896419727279",
+    "dun": "17896419727276",
+    "descricao": "Moela Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Moela Bandeja (Pesar)",
+        "para": "Moela Bandeja 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "74ae45eb-984e-51c4-870c-709590881851",
+    "marca": "Lar",
+    "sku": "179655",
+    "ean": "7896419728078",
+    "dun": "17896419728075",
+    "descricao": "Coração Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coração Bandeja (Pesar)",
+        "para": "Coração Bandeja 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "00369476-844e-50f1-b3bd-ca3b44815c29",
+    "marca": "Lar",
+    "sku": "178651",
+    "ean": "7896419728047",
+    "dun": "17896419728044",
+    "descricao": "Coxinha da Asa Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhas das Asas Bandeja (Pesar)",
+        "para": "Coxinha da Asa Bandeja 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "1ac16cba-486c-58af-bfab-b103f044b36e",
+    "marca": "Lar",
+    "sku": "178580",
+    "ean": "7896419728023",
+    "dun": "17896419728020",
+    "descricao": "Filé de Peito Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Peito Bandeja (Pesar)",
+        "para": "Filé de Peito Bandeja 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "3c22386a-7b8c-57e1-a1a8-4298b959cb29",
+    "marca": "Lar",
+    "sku": "179706",
+    "ean": "7896419728085",
+    "dun": "17896419728082",
+    "descricao": "Filezinho Sassami Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Bandeja (Pesar)",
+        "para": "Filezinho Sassami Bandeja 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "172312af-b2ac-559f-86a7-c8d6d1fbedfc",
+    "marca": "Lar",
+    "sku": "178554",
+    "ean": "7896419727996",
+    "dun": "17896419727993",
+    "descricao": "Meio da Asa Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Meio das Asas Bandeja (Pesar)",
+        "para": "Meio da Asa Bandeja 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "050f3178-741f-5a6d-854f-13ad0dd7fd40",
+    "marca": "Lar",
+    "sku": "178648",
+    "ean": "7896419728030",
+    "dun": "17896419728037",
+    "descricao": "Moela Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Moela Bandeja (Pesar)",
+        "para": "Moela Bandeja 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "b62bf35d-83f1-5fdd-9179-55afeb052784",
+    "marca": "Lar",
+    "sku": "178557",
+    "ean": "7896419728009",
+    "dun": "17896419728006",
+    "descricao": "Sobrecoxa Bandeja 600g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Sobrecoxas Bandeja (Pesar)",
+        "para": "Sobrecoxa Bandeja 600g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "7bcf8a8a-76eb-5951-8568-cfbe21f7e9df",
+    "marca": "Lar",
+    "sku": "304844",
+    "ean": "7896419731177",
+    "dun": "17896419731174",
+    "descricao": "Frango Desfiado 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango Desfiado (Pesar)",
+        "para": "Frango Desfiado 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.613Z"
+  },
+  {
+    "id": "12a5998c-c865-5ac4-ac5f-ad77facfff12",
+    "marca": "Lar",
+    "sku": "202951",
+    "ean": "7896419728849",
+    "dun": "17896419728846",
+    "descricao": "Coxinha da Asa Assada Linha Minuto 300g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinha da Asa Assado Linha Minuto 300g",
+        "para": "Coxinha da Asa Assada Linha Minuto 300g"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "7a160948-47b2-5e5d-975a-3bc90ecfa79b",
+    "marca": "Lar",
+    "sku": "852326",
+    "ean": "7896419714071",
+    "dun": "17896419714078",
+    "descricao": "Empanitos Empanado 1,5kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Empanitos Empanado (Pesar)",
+        "para": "Empanitos Empanado 1,5kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1500
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "360f0d84-1b8d-5d3e-9476-cd5d6655f76f",
+    "marca": "Lar",
+    "sku": "134875",
+    "ean": "7896419725336",
+    "dun": "17896419725333",
+    "descricao": "Empanitos Empanado 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Empanitos Empanado (Pesar)",
+        "para": "Empanitos Empanado 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "68a15aa7-96e8-5d05-97e2-07c75fdb43d7",
+    "marca": "Lar",
+    "sku": "134904",
+    "ean": "7896419725480",
+    "dun": "17896419725487",
+    "descricao": "Filé de Peito À Milanesa 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé À Milanesa (Pesar)",
+        "para": "Filé de Peito À Milanesa 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "8bcddb01-c380-56c7-9f70-53ba05771fe3",
+    "marca": "Lar",
+    "sku": "42309",
+    "ean": "7896419717560",
+    "dun": "17896419717567",
+    "descricao": "Filé de Coxa e Sobrecoxa Empanado 1,5kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Coxas e Sobrecoxas Empanadas (Pesar)",
+        "para": "Filé de Coxa e Sobrecoxa Empanado 1,5kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1500
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "ab6470e7-91f3-505f-8d76-926bf6120592",
+    "marca": "Lar",
+    "sku": "42308",
+    "ean": "7896419725329",
+    "dun": "17896419725326",
+    "descricao": "Filé de Coxa e Sobrecoxa Empanado 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Coxas e Sobrecoxas Empanadas (Pesar)",
+        "para": "Filé de Coxa e Sobrecoxa Empanado 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "3bc29673-7d7a-5286-9611-a6e5d9b956ba",
+    "marca": "Lar",
+    "sku": "23882",
+    "ean": "7896419715566",
+    "dun": "17896419715563",
+    "descricao": "Filezinho Sassami Empanado 1,5kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Empanado (Pesar)",
+        "para": "Filezinho Sassami Empanado 1,5kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1500
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "bad89910-c365-50dc-849c-d5bac9c33e09",
+    "marca": "Lar",
+    "sku": "27191",
+    "ean": "7896419716129",
+    "dun": "17896419716126",
+    "descricao": "Filezinho Sassami Empanado 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Empanado (Pesar)",
+        "para": "Filezinho Sassami Empanado 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "5c02f358-5dc6-5762-bd06-1bb6f80fbc78",
+    "marca": "Lar",
+    "sku": "250120",
+    "ean": "7896419730156",
+    "dun": "17896419730153",
+    "descricao": "Mini Hambúrguer Empanado de Frango 300g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Mini Hambúrguer Empanado de Frango (Pesar)",
+        "para": "Mini Hambúrguer Empanado de Frango 300g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 300
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "818e697b-1efc-5380-83ff-140d4eb8de98",
+    "marca": "Lar",
+    "sku": "134903",
+    "ean": "7896419725459",
+    "dun": "17896419725456",
+    "descricao": "Iscas de Filé de Peito Empanadas 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Iscas Empanadas (Pesar)",
+        "para": "Iscas de Filé de Peito Empanadas 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "080a3a4b-9407-50fb-93dd-53d0a8adb450",
+    "marca": "Lar",
+    "sku": "852274",
+    "ean": "7896419713852",
+    "dun": "17896419713859",
+    "descricao": "Steak Empanado 100g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Steak Empanado (Pesar)",
+        "para": "Steak Empanado 100g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 100
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "a5502431-9c40-5052-b519-2f5b27d6e6f6",
+    "marca": "Lar",
+    "sku": "100212",
+    "ean": "",
+    "dun": "17896419723476",
+    "descricao": "Steak Empanado 100g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Steak Empanado (Pesar)",
+        "para": "Steak Empanado 100g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 100
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "bdadb759-54ae-516e-80ac-e7f37536baed",
+    "marca": "Lar",
+    "sku": "225974",
+    "ean": "7896419729143",
+    "dun": "17896419729140",
+    "descricao": "Hambúrguer Empanado de Frango 100g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Hambúrguer Empanado de Frango (Pesar)",
+        "para": "Hambúrguer Empanado de Frango 100g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 100
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "6f74c31d-22ec-55d5-a6bd-a8ccef695302",
+    "marca": "Lar",
+    "sku": "75561",
+    "ean": "7896419721475",
+    "dun": "17896419721472",
+    "descricao": "Asas Envelopadas (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Asas Envelopadas Congeladas (Pesar)",
+        "para": "Asas Envelopadas (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "be7314e2-54a4-5eca-958f-eb9d8b33e93a",
+    "marca": "Lar",
+    "sku": "71707",
+    "ean": "7896419720799",
+    "dun": "17896419721168",
+    "descricao": "Coxinhas das Asas Envelopadas (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhas das Asas Envelopadas Congeladas (Pesar)",
+        "para": "Coxinhas das Asas Envelopadas (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "5478cd7c-fde6-53b5-a41c-504f139b6e4a",
+    "marca": "Lar",
+    "sku": "71710",
+    "ean": "7896419719977",
+    "dun": "17896419721175",
+    "descricao": "Coxas e Sobrecoxas Envelopadas (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxas e Sobrecoxas Envelopadas Congeladas (Pesar)",
+        "para": "Coxas e Sobrecoxas Envelopadas (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "39e84073-e047-5c7c-aadc-e89eb33530ec",
+    "marca": "Lar",
+    "sku": "78263",
+    "ean": "7896419721536",
+    "dun": "17896419721533",
+    "descricao": "Filé de Coxas Sobrecoxas Envelopadas (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Coxas Sobrecoxas Envelopadas Congeladas (Pesar)",
+        "para": "Filé de Coxas Sobrecoxas Envelopadas (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "b7bc454d-ffdd-5185-86bd-e778a212eb1c",
+    "marca": "Lar",
+    "sku": "71713",
+    "ean": "7896419720386",
+    "dun": "17896419721182",
+    "descricao": "Filé de Peito Envelopado (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Peito Envelopado (Pesar)",
+        "para": "Filé de Peito Envelopado (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "909965dd-5fb9-5abd-8391-478668c7ceba",
+    "marca": "Lar",
+    "sku": "71719",
+    "ean": "7896419720447",
+    "dun": "17896419721205",
+    "descricao": "Filezinho Sassami Envelopado (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Envelopado (Pesar)",
+        "para": "Filezinho Sassami Envelopado (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "eef16381-51fd-5248-a8e6-c2e19f8fb966",
+    "marca": "Lar",
+    "sku": "61707",
+    "ean": "7896419720393",
+    "dun": "17896419720390",
+    "descricao": "Peito com Osso Envelopado (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Peito com Osso Envelopado (Pesar)",
+        "para": "Peito com Osso Envelopado (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "b98ec681-c99a-5a5e-bf62-09ba26e619ff",
+    "marca": "Lar",
+    "sku": "71722",
+    "ean": "7896419720997",
+    "dun": "17896419721212",
+    "descricao": "Sambiquira Envelopada (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Sambiquira Envelopada (Pesar)",
+        "para": "Sambiquira Envelopada (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "7cb161d8-9692-5ea8-ae11-12a695114764",
+    "marca": "Lar",
+    "sku": "71711",
+    "ean": "7896419720676",
+    "dun": "17896419721267",
+    "descricao": "Sobrecoxas Envelopadas (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Sobrecoxas Envelopadas Congeladas (Pesar)",
+        "para": "Sobrecoxas Envelopadas (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "7644bd1f-3aa0-5ecd-bbad-454c25b7277e",
+    "marca": "Lar",
+    "sku": "65763",
+    "ean": "7896419720959",
+    "dun": "17896419720956",
+    "descricao": "Coxas e Sobrecoxas Envelopadas (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxas e Sobrecoxas Envelopadas Resfriadas (Pesar)",
+        "para": "Coxas e Sobrecoxas Envelopadas (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "19021417-a9a8-5548-a5bd-3906dc851e72",
+    "marca": "Lar",
+    "sku": "96367",
+    "ean": "7896419723424",
+    "dun": "17896419723421",
+    "descricao": "Sobrecoxas Envelopadas (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Sobrecoxas Envelopadas Resfriadas (Pesar)",
+        "para": "Sobrecoxas Envelopadas (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "18491c0a-9dd9-5fb8-9892-8a2e5650971e",
+    "marca": "Lar",
+    "sku": "96366",
+    "ean": "7896419723400",
+    "dun": "17896419723407",
+    "descricao": "Coxas e Sobrecoxas sem Osso Envelopadas (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxas e Sobrecoxas sem Osso Envelopadas Resfriadas (Pesar)",
+        "para": "Coxas e Sobrecoxas sem Osso Envelopadas (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "e13ae9d3-685f-53a3-af76-0a15a4131b50",
+    "marca": "Lar",
+    "sku": "65767",
+    "ean": "7896419720973",
+    "dun": "17896419720970",
+    "descricao": "Coxinhas das Asas Envelopadas (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhas das Asas Envelopadas Resfriadas (Pesar)",
+        "para": "Coxinhas das Asas Envelopadas (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "4e63075d-76f6-5a44-ba9e-5ba6b2934219",
+    "marca": "Lar",
+    "sku": "65765",
+    "ean": "7896419720966",
+    "dun": "17896419720963",
+    "descricao": "Filé de Peito Envelopado (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Peito Envelopado (Pesar)",
+        "para": "Filé de Peito Envelopado (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "18dbe688-2ced-5ae0-804f-f0815a782584",
+    "marca": "Lar",
+    "sku": "65766",
+    "ean": "7896419720980",
+    "dun": "17896419720987",
+    "descricao": "Peito com Osso Envelopado (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Peito com Osso Envelopado (Pesar)",
+        "para": "Peito com Osso Envelopado (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "acdb640a-7531-5917-bed8-4e3ceb1d898f",
+    "marca": "Lar",
+    "sku": "1015",
+    "ean": "7896419714224",
+    "dun": "17896419714221",
+    "descricao": "Coxa IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxas IQF (Pesar)",
+        "para": "Coxa IQF 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "698d6326-b60c-5ea3-928a-e63c21565d03",
+    "marca": "Lar",
+    "sku": "722841",
+    "ean": "7896419713784",
+    "dun": "17896419713781",
+    "descricao": "Coxinha da Asa IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhas das Asas IQF (Pesar)",
+        "para": "Coxinha da Asa IQF 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "69482ec1-0ad1-5593-9fbb-e59c54766380",
+    "marca": "Lar",
+    "sku": "29248",
+    "ean": "7896419716273",
+    "dun": "17896419716270",
+    "descricao": "Filé de Coxa e Sobrecoxa IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF (Pesar)",
+        "para": "Filé de Coxa e Sobrecoxa IQF 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "89a547cb-5dc4-59a3-8494-0dc422452646",
+    "marca": "Lar",
+    "sku": "173850",
+    "ean": "7896419727859",
+    "dun": "17896419727856",
+    "descricao": "Filé de Coxa e Sobrecoxa IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Coxas e Sobrecoxas sem Osso com Pele IQF (Pesar)",
+        "para": "Filé de Coxa e Sobrecoxa IQF 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "ed1f6c9e-f0e0-5aba-a0e1-9cdbd6acff2f",
+    "marca": "Lar",
+    "sku": "173832",
+    "ean": "7896419727835",
+    "dun": "17896419727832",
+    "descricao": "Frango a Passarinho IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango a Passarinho IQF (Pesar)",
+        "para": "Frango a Passarinho IQF 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "9d330527-a15e-5fbe-b5f9-18b21f502ea9",
+    "marca": "Lar",
+    "sku": "29245",
+    "ean": "7896419701637",
+    "dun": "17896419701634",
+    "descricao": "Frango a Passarinho IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango a Passarinho IQF (Pesar)",
+        "para": "Frango a Passarinho IQF 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "42045c01-5d7b-52ad-b37a-3ed3259485ae",
+    "marca": "Lar",
+    "sku": "29244",
+    "ean": "7896419716280",
+    "dun": "17896419716287",
+    "descricao": "Filé de Peito IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Peito IQF (Pesar)",
+        "para": "Filé de Peito IQF 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "fba23199-a792-5a13-8b8a-26247436d1fa",
+    "marca": "Lar",
+    "sku": "1016",
+    "ean": "7896419714231",
+    "dun": "17896419714238",
+    "descricao": "Filezinho Sassami IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami IQF (Pesar)",
+        "para": "Filezinho Sassami IQF 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "9ca350ad-a429-5ef1-bbb8-2841f5074bff",
+    "marca": "Lar",
+    "sku": "18399",
+    "ean": "7896419715047",
+    "dun": "17896419715044",
+    "descricao": "Sobrecoxa IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Sobrecoxas IQF (Pesar)",
+        "para": "Sobrecoxa IQF 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "14744da6-05c6-5e92-a414-8ffa4ee443b9",
+    "marca": "Lar",
+    "sku": "18441",
+    "ean": "7896419715092",
+    "dun": "17896419715099",
+    "descricao": "Meio da Asa IQF 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Meio das Asas IQF (Pesar)",
+        "para": "Meio da Asa IQF 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "eeef1c3c-8537-51ed-8ddd-b7cc319bd8a4",
+    "marca": "Lar",
+    "sku": "203714",
+    "ean": "7896419728863",
+    "dun": "17896419728860",
+    "descricao": "Filé de Peito Moído 375g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Peito Moído (Pesar)",
+        "para": "Filé de Peito Moído 375g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 375
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "4b994317-466f-54fb-83fb-7af0249be0cd",
+    "marca": "Lar",
+    "sku": "87787",
+    "ean": "7896419722656",
+    "dun": "17896419722653",
+    "descricao": "Linguiça de Frango Fininha 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Fininha (Pesar)",
+        "para": "Linguiça de Frango Fininha 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "7094649f-ed01-5359-960c-054e734ce2b2",
+    "marca": "Lar",
+    "sku": "179787",
+    "ean": "7896419728108",
+    "dun": "17896419728105",
+    "descricao": "Linguiça de Frango Fininha 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Fininha (Pesar)",
+        "para": "Linguiça de Frango Fininha 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "68866c88-2673-528b-a4d3-22cd6588fd86",
+    "marca": "Lar",
+    "sku": "84559",
+    "ean": "7896419722274",
+    "dun": "17896419722271",
+    "descricao": "Linguiça de Frango Grossa 5kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Grossa (Pesar)",
+        "para": "Linguiça de Frango Grossa 5kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 5000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "4a465a53-9317-5cef-a133-e4bcc5432e1e",
+    "marca": "Lar",
+    "sku": "87788",
+    "ean": "7896419722663",
+    "dun": "17896419722660",
+    "descricao": "Linguiça de Frango Grossa 1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Grossa (Pesar)",
+        "para": "Linguiça de Frango Grossa 1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1000
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "f25bda40-1b94-52bd-ac2f-826c77ecb159",
+    "marca": "Lar",
+    "sku": "164035",
+    "ean": "7896419727439",
+    "dun": "17896419727436",
+    "descricao": "Linguiça de Frango Petisco 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Petisco (Pesar)",
+        "para": "Linguiça de Frango Petisco 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "349ad5d8-05e1-5585-b5f3-8bdc89465058",
+    "marca": "Lar",
+    "sku": "230041",
+    "ean": "7896419729211",
+    "dun": "17896419729218",
+    "descricao": "Fígado 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Fígado (Pesar)",
+        "para": "Fígado 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "e38004a6-8738-5dcd-a91f-c0b8aae2e552",
+    "marca": "Lar",
+    "sku": "123021",
+    "ean": "7896419724612",
+    "dun": "17896419724619",
+    "descricao": "Brócolis 300g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Brócolis (Pesar)",
+        "para": "Brócolis 300g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 300
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "09e6411d-10bb-583f-95ab-8a5bb712558b",
+    "marca": "Lar",
+    "sku": "123025",
+    "ean": "7896419724582",
+    "dun": "17896419724589",
+    "descricao": "Ervilha 1,1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Ervilhas Congeladas (Pesar)",
+        "para": "Ervilha 1,1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1100
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "dea5befc-67b2-55a0-883e-365f84eec38c",
+    "marca": "Lar",
+    "sku": "123027",
+    "ean": "7896419724599",
+    "dun": "17896419724596",
+    "descricao": "Ervilha 300g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Ervilhas Congeladas (Pesar)",
+        "para": "Ervilha 300g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 300
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "55b26e57-9f7d-5123-b611-752bab003655",
+    "marca": "Lar",
+    "sku": "123040",
+    "ean": "7896419724537",
+    "dun": "17896419724534",
+    "descricao": "Mix de Vegetais 300g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Mix de Vegetais (Pesar)",
+        "para": "Mix de Vegetais 300g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 300
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "4f049f08-bb0d-5b65-95b6-84542c3b485e",
+    "marca": "Lar",
+    "sku": "123043",
+    "ean": "7896419724483",
+    "dun": "17896419724480",
+    "descricao": "Seleta de Legumes 1,1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Seleta de Legumes Congeladas (Pesar)",
+        "para": "Seleta de Legumes 1,1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1100
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "4252bddd-39fd-5e01-a677-7c1b3e16f716",
+    "marca": "Lar",
+    "sku": "123045",
+    "ean": "7896419724490",
+    "dun": "17896419724497",
+    "descricao": "Seleta de Legumes 300g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Seleta de Legumes Congeladas (Pesar)",
+        "para": "Seleta de Legumes 300g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 300
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "6b8306ca-e47e-5060-8f60-1cbacab902be",
+    "marca": "Lar",
+    "sku": "852313",
+    "ean": "7896419714064",
+    "dun": "17896419714061",
+    "descricao": "Tirinhas Empanadas 1,5kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Tirinhas Empanadas (Pesar)",
+        "para": "Tirinhas Empanadas 1,5kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1500
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "5447ce04-24a2-5833-b9b8-8b1207e0def9",
+    "marca": "Lar",
+    "sku": "304568",
+    "ean": "7896419731160",
+    "dun": "78964197311671",
+    "descricao": "Frango Desfiado 400g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango Desfiado (Pesar)",
+        "para": "Frango Desfiado 400g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 400
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "5ede6a56-8f89-56ee-a34f-ad50e0d0a76e",
+    "marca": "Lar",
+    "sku": "253396",
+    "ean": "7896419730194",
+    "dun": "17896419730191",
+    "descricao": "Coxinha da Asa Temperadas IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinha da Asa Temperadas IQF (Pesar)",
+        "para": "Coxinha da Asa Temperadas IQF 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "fbdf1846-7832-5c28-913e-cd6cb9ba536f",
+    "marca": "Lar",
+    "sku": "291081",
+    "ean": "7896419730774",
+    "dun": "17896419730771",
+    "descricao": "Filé de Coxa e Sobrecoxa Temperado IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filé de Coxas e Sobrecoxas Temperada IQF (Pesar)",
+        "para": "Filé de Coxa e Sobrecoxa Temperado IQF 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "a29a229d-5d72-5520-85d2-9cb51965b007",
+    "marca": "Lar",
+    "sku": "253411",
+    "ean": "7896419730200",
+    "dun": "17896419730207",
+    "descricao": "Frango a Passarinho Temperado IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango a Passarinho Temperado IQF (Pesar)",
+        "para": "Frango a Passarinho Temperado IQF 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "5b01914e-b69f-5dc9-ad02-cdf700455ec8",
+    "marca": "Lar",
+    "sku": "179824",
+    "ean": "7896419728115",
+    "dun": "17896419728112",
+    "descricao": "Linguiça de Frango Grossa 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Linguiça de Frango Grossa (Pesar)",
+        "para": "Linguiça de Frango Grossa 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "f0347bb8-623a-5edf-a910-0274f6199256",
+    "marca": "Lar",
+    "sku": "230002",
+    "ean": "7896419729198",
+    "dun": "17896419729195",
+    "descricao": "Coração 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coração (Pesar)",
+        "para": "Coração 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "c1171923-1431-5a14-be77-1cca261b46ae",
+    "marca": "Lar",
+    "sku": "230026",
+    "ean": "7896419729204",
+    "dun": "17896419729201",
+    "descricao": "Moela 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Moela (Pesar)",
+        "para": "Moela 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "46e66b20-337c-5700-b5d4-05973f93544a",
+    "marca": "Lar",
+    "sku": "253889",
+    "ean": "7896419730224",
+    "dun": "17896419730221",
+    "descricao": "Frango Inteiro Temperado ±2,6kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango Inteiro Temperado (Pesar)",
+        "para": "Frango Inteiro Temperado ±2,6kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 2600
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "6d92bb9d-ce2d-564b-9065-d4318a850f55",
+    "marca": "Lar",
+    "sku": "102007",
+    "ean": "7896419720010",
+    "dun": "17896419720017",
+    "descricao": "Brócolis 1,1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Brócolis (Pesar)",
+        "para": "Brócolis 1,1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1100
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "1674fdc1-1be8-5fb5-9929-a60f3883b640",
+    "marca": "Lar",
+    "sku": "123022",
+    "ean": "7896419720003",
+    "dun": "17896419720000",
+    "descricao": "Couve-Flor 1,1kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Couve-Flor (Pesar)",
+        "para": "Couve-Flor 1,1kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 1100
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "7f450a7f-5e0a-55d7-9bfa-c2f97e8dd6a2",
+    "marca": "Lar",
+    "sku": "249060",
+    "ean": "7896419730842",
+    "dun": "17896419720146",
+    "descricao": "Ave Natalina Temperada Congelada ±3,7kg",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Ave Natalina Temperada Recheada (Pesar)",
+        "para": "Ave Natalina Temperada Congelada ±3,7kg"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 3700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "f7b83c9b-6529-54f2-b0f3-d29deb51ded1",
+    "marca": "Lar",
+    "sku": "134873",
+    "ean": "7896419725343",
+    "dun": "17896419725340",
+    "descricao": "Tirinhas Empanadas 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Tirinhas Empanadas (Pesar)",
+        "para": "Tirinhas Empanadas 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "e1d1c141-5079-5d02-98af-405a5a0c7897",
+    "marca": "Lar",
+    "sku": "71367",
+    "ean": "7896419721116",
+    "dun": "17896419721113",
+    "descricao": "Coxas e Sobrecoxas com Porção Dorsal Envelopadas (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxas e Sobrecoxas com Porção Dorsal Envelopadas Congeladas (Pesar)",
+        "para": "Coxas e Sobrecoxas com Porção Dorsal Envelopadas (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "e77e200b-bfc5-5381-a647-2b30195a6b77",
+    "marca": "Lar",
+    "sku": "94633",
+    "ean": "7896419723233",
+    "dun": "17896419723230",
+    "descricao": "Coxas e Sobrecoxas sem Osso sem Pele Envelopadas (pesar)",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxas e Sobrecoxas sem Osso sem Pele Envelopadas Congeladas (Pesar)",
+        "para": "Coxas e Sobrecoxas sem Osso sem Pele Envelopadas (pesar)"
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "c9fa059f-20dd-509e-8b49-8eb12f7a6a33",
+    "marca": "Lar",
+    "sku": "253387",
+    "ean": "7896419730187",
+    "dun": "17896419730184",
+    "descricao": "Meio da Asa Temperado IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Meio da Asas Temperadas IQF (Pesar)",
+        "para": "Meio da Asa Temperado IQF 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "902f76be-811b-58d1-905e-b7ca43078a96",
+    "marca": "Lar",
+    "sku": "291074",
+    "ean": "7896419730767",
+    "dun": "17896419730764",
+    "descricao": "Sobrecoxa Temperada IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Sobrecoxa Temperada IQF (Pesar)",
+        "para": "Sobrecoxa Temperada IQF 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "e7c41414-6bc7-513f-ba11-34cacfa92103",
+    "marca": "Lar",
+    "sku": "253416",
+    "ean": "7896419730217",
+    "dun": "17896419730214",
+    "descricao": "Filezinho Sassami Temperado IQF 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Filezinho Sassami Temperado IQF (Pesar)",
+        "para": "Filezinho Sassami Temperado IQF 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "2d2c1312-f9aa-50b5-8064-7bca9f20cac8",
+    "marca": "Lar",
+    "sku": "229642",
+    "ean": "7896419729181",
+    "dun": "17896419729188",
+    "descricao": "Coração Temperado 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coração Temperado (Pesar)",
+        "para": "Coração Temperado 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "6fc73921-1146-5a00-8bde-ea40b1015091",
+    "marca": "Lar",
+    "sku": "206879",
+    "ean": "7896419728955",
+    "dun": "17896419728952",
+    "descricao": "Coxinhas das Asas Temperadas 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Coxinhas das Asas Temperadas (Pesar)",
+        "para": "Coxinhas das Asas Temperadas 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "b7db4621-64f4-5f70-8384-1cdb6286ce83",
+    "marca": "Lar",
+    "sku": "206863",
+    "ean": "7896419728948",
+    "dun": "17896419728945",
+    "descricao": "Meio das Asas Temperadas 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Meio das Asas Temperadas (Pesar)",
+        "para": "Meio das Asas Temperadas 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
+  },
+  {
+    "id": "61b0ac03-51f5-5b72-96dc-f2900427a3c4",
+    "marca": "Lar",
+    "sku": "206854",
+    "ean": "7896419728931",
+    "dun": "17896419728938",
+    "descricao": "Frango a Passarinho Temperado 700g",
+    "alteracoes": [
+      {
+        "campo": "Descrição",
+        "de": "Frango a Passarinho Temperado (Pesar)",
+        "para": "Frango a Passarinho Temperado 700g"
+      },
+      {
+        "campo": "Peso (g)",
+        "de": "N/D",
+        "para": 700
+      },
+      {
+        "campo": "Fracionado",
+        "de": true,
+        "para": false
+      }
+    ],
+    "atualizado_em": "2026-10-01T13:14:13.614Z"
   }
 ]

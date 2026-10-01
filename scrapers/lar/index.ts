@@ -27,6 +27,7 @@ import {
   FABRICANTE_LAR_NOME
 } from '../../core/heuristics/brand_classifier';
 import { classifyProduct } from '../../core/heuristics/category_classifier';
+import { getLarOfficialSpec } from './catalog_rules';
 
 const PALETSCAN_NAMESPACE = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
 
@@ -158,21 +159,51 @@ export async function runLarScraper() {
   let noImageCount = 0;
 
   for (const rawProd of rawProducts) {
-    // Monta texto com descrição completa e peso do catálogo
-    let fullDescr = (rawProd.descrFiscal && !rawProd.descrFiscal.includes('(pesar)'))
-      ? rawProd.descrFiscal
-      : (rawProd.pesoLiquido && rawProd.pesoLiquido.trim() !== '' && rawProd.pesoLiquido !== 'N/A' && !rawProd.pesoLiquido.toLowerCase().includes('variável')
-          ? `${rawProd.title} ${rawProd.pesoLiquido}`
-          : (rawProd.title || ''));
+    // EAN-13 e DUN-14
+    const eanClean = normalizeEAN13(rawProd.ean);
+    const dunClean = normalizeDUN14(rawProd.dun, eanClean);
 
-    // Limpa conservação duplicada no título se houver
-    fullDescr = fullDescr
-      .replace(/\s*[•\-\/,]?\s*(congelada|congelado|resfriada|resfriado)\b/gi, '')
-      .replace(/\s+/g, ' ')
-      .trim();
+    if (!eanClean && !dunClean) {
+      console.warn(`[!] Produto SKU ${rawProd.sku} sem EAN/DUN válido. Ignorando.`);
+      continue;
+    }
 
-    // Normalização de descrição e pesagens via text_parser.ts
-    const parsedText = formatProductDescription(fullDescr);
+    const prodId = `prod_lar_${rawProd.sku || eanClean}`;
+
+    // Consulta se o produto possui especificação auditada no catálogo oficial Lar
+    const officialSpec = getLarOfficialSpec(eanClean, rawProd.sku);
+    let finalDescrPadronizada: string;
+    let finalDescrOriginal: string;
+    let finalPesoGramas: number | null;
+    let finalFracionado: boolean;
+
+    if (officialSpec) {
+      finalDescrPadronizada = officialSpec.descr;
+      finalDescrOriginal = officialSpec.descr;
+      finalPesoGramas = officialSpec.peso_gramas;
+      finalFracionado = officialSpec.fracionado;
+    } else {
+      // Monta texto com descrição completa e peso do catálogo
+      let fullDescr = (rawProd.descrFiscal && !rawProd.descrFiscal.includes('(pesar)'))
+        ? rawProd.descrFiscal
+        : (rawProd.pesoLiquido && rawProd.pesoLiquido.trim() !== '' && rawProd.pesoLiquido !== 'N/A' && !rawProd.pesoLiquido.toLowerCase().includes('variável')
+            ? `${rawProd.title} ${rawProd.pesoLiquido}`
+            : (rawProd.title || ''));
+
+      // Limpa conservação duplicada no título se houver e resquícios de (pesar)
+      fullDescr = fullDescr
+        .replace(/\s*\([Pp]esar\)/gi, '')
+        .replace(/\s*[•\-\/,]?\s*(congelada|congelado|resfriada|resfriado)\b/gi, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+      // Normalização de descrição e pesagens via text_parser.ts
+      const parsedText = formatProductDescription(fullDescr);
+      finalDescrPadronizada = parsedText.formatted_description;
+      finalDescrOriginal = (rawProd.descrFiscal || rawProd.title || '').replace(/\s*\([Pp]esar\)/gi, '').trim();
+      finalPesoGramas = parsedText.peso_gramas;
+      finalFracionado = parsedText.fracionado;
+    }
 
     // Classificação da Marca
     const brandInfo = classifyBrand(rawProd.marca || 'Lar', rawProd.title, FABRICANTE_LAR_ID);
@@ -190,17 +221,6 @@ export async function runLarScraper() {
 
     // Classificação de Categoria/Conservação
     const categoryInfo = classifyProduct(rawProd.title, rawProd.classe, rawProd.conservacao);
-
-    // EAN-13 e DUN-14
-    const eanClean = normalizeEAN13(rawProd.ean);
-    const dunClean = normalizeDUN14(rawProd.dun, eanClean);
-
-    if (!eanClean && !dunClean) {
-      console.warn(`[!] Produto SKU ${rawProd.sku} sem EAN/DUN válido. Ignorando.`);
-      continue;
-    }
-
-    const prodId = `prod_lar_${rawProd.sku || eanClean}`;
 
     // Determina Mídia e Status de Imagem
     let finalImageUrl: string | null = null;
@@ -222,7 +242,7 @@ export async function runLarScraper() {
       pendingImagesApprovalList.push({
         produto_id: prodId,
         sku: rawProd.sku || primaryBarcode,
-        descricao: parsedText.formatted_description,
+        descricao: finalDescrPadronizada,
         placeholder_url: '/imagens_produtos/placeholder.webp'
       });
     }
@@ -230,12 +250,12 @@ export async function runLarScraper() {
     produtosList.push({
       id: prodId,
       marca_id: brandInfo.id,
-      descricao_padronizada: parsedText.formatted_description,
-      descricao_original: rawProd.title,
+      descricao_padronizada: finalDescrPadronizada,
+      descricao_original: finalDescrOriginal,
       classe: categoryInfo.classe,
       conservacao: categoryInfo.conservacao,
-      peso_gramas: parsedText.peso_gramas,
-      fracionado: parsedText.fracionado,
+      peso_gramas: finalPesoGramas,
+      fracionado: finalFracionado,
       imagem_url: finalImageUrl,
       status_imagem: imageStatus,
       criado_em: now
