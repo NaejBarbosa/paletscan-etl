@@ -306,22 +306,19 @@ export function formatProductDescription(
     };
   } else if (isExplicitlyFracionado === true) {
     weightData.fracionado = true;
-  } else if (isExplicitlyFracionado === false && weightData.peso_gramas !== null) {
+  } else if (isExplicitlyFracionado === false) {
     weightData.fracionado = false;
   }
 
-  let formatted_description = cleanTitle;
+  let formatted_description = cleanTitle.replace(/\s*\([Pp]esar\)/gi, '').trim();
 
-  if (weightData.fracionado || weightData.peso_gramas === null) {
-    // Garante sufixo "(pesar)" para produtos fracionados/sem peso fixo
-    if (!/\(pesar\)/i.test(formatted_description)) {
-      formatted_description = formatted_description
-        .replace(/\s+fracionad[oa]/gi, '')
-        .trim();
-      formatted_description = `${formatted_description} (pesar)`;
-    }
+  if (isExplicitlyFracionado === true && weightData.peso_gramas === null) {
+    // Apenas produtos explicitamente fracionados (carnes resfriadas manuais)
+    formatted_description = formatted_description
+      .replace(/\s+fracionad[oa]/gi, '')
+      .trim();
   } else if (weightData.peso_str) {
-    // Se a descrição limpa contiver "(pesar)", remove já que possui peso fixo
+    // Remove qualquer menção a (pesar) já que possui peso fixo
     formatted_description = formatted_description.replace(/\s*\(pesar\)/gi, '').trim();
 
     // Se a descrição limpa ainda não contiver o peso, anexa

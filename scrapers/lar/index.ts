@@ -247,15 +247,16 @@ export async function runLarScraper() {
       });
     }
 
+    const isLarResfriado = /resfriad/i.test(categoryInfo.conservacao || '');
     produtosList.push({
       id: prodId,
       marca_id: brandInfo.id,
-      descricao_padronizada: finalDescrPadronizada,
-      descricao_original: finalDescrOriginal,
+      descricao_padronizada: finalDescrPadronizada.replace(/\s*\([Pp]esar\)/gi, '').trim(),
+      descricao_original: finalDescrOriginal.replace(/\s*\([Pp]esar\)/gi, '').trim(),
       classe: categoryInfo.classe,
       conservacao: categoryInfo.conservacao,
       peso_gramas: finalPesoGramas,
-      fracionado: finalFracionado,
+      fracionado: isLarResfriado ? finalFracionado : false,
       imagem_url: finalImageUrl,
       status_imagem: imageStatus,
       criado_em: now

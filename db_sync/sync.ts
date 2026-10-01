@@ -319,22 +319,25 @@ export async function syncStagingToSupabase() {
         || (p as any).descricao
         || '';
 
+      const isResfriado = /resfriad/i.test(p.conservacao || '');
       const parsedText = formatProductDescription(
         rawText,
         p.peso_gramas,
-        p.fracionado
+        isResfriado ? p.fracionado : false
       );
 
       const finalPeso = parsedText.peso_gramas !== null ? parsedText.peso_gramas : (p.peso_gramas ?? null);
-      const finalFracionado = finalPeso !== null && finalPeso > 0
-        ? (p.fracionado === true ? true : parsedText.fracionado)
-        : true;
+      // REGRA DE NEGÓCIO MANDATÓRIA: Apenas produtos resfriados podem ser fracionados.
+      // Produtos congelados, secos ou temperatura ambiente NUNCA são fracionados nem usam pesagem de filial.
+      const finalFracionado = isResfriado && Boolean(p.fracionado ?? parsedText.fracionado);
+
+      const cleanDescrPadronizada = parsedText.formatted_description.replace(/\s*\([Pp]esar\)/gi, '').trim();
 
       return {
         ...p,
         id: toUUID5(p.id),
         marca_id: toUUID5(p.marca_id),
-        descricao_padronizada: parsedText.formatted_description,
+        descricao_padronizada: cleanDescrPadronizada,
         peso_gramas: finalPeso,
         fracionado: finalFracionado,
       };
