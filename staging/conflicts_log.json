@@ -103214,5 +103214,69 @@
     "codigo": "17896419727825",
     "error_message": "Duplicidade de código detectada no staging: 17896419727825",
     "timestamp": "2026-10-01T12:15:03.320Z"
+  },
+  {
+    "id": "75fa1f67-97bb-5213-b54f-da928381cd77",
+    "produto_id": "c9eb289a-ba08-5db8-9f51-7afe2ac78e9d",
+    "tipo": "EAN",
+    "codigo": "7891164006044",
+    "error_message": "Duplicidade de código detectada no staging: 7891164006044",
+    "timestamp": "2026-10-02T06:09:12.840Z"
+  },
+  {
+    "id": "4cf7667e-980a-554b-a715-80b5c36ed0f8",
+    "produto_id": "5f258ca9-7808-505b-8fda-695717f51514",
+    "tipo": "EAN",
+    "codigo": "7891164020149",
+    "error_message": "Duplicidade de código detectada no staging: 7891164020149",
+    "timestamp": "2026-10-02T06:09:12.935Z"
+  },
+  {
+    "id": "51d71c88-e5ce-5fcd-8b70-d9a6f8910c0a",
+    "produto_id": "78c6253c-43e3-5950-a98d-9dfd522d4cb8",
+    "tipo": "EAN",
+    "codigo": "7891164020026",
+    "error_message": "Duplicidade de código detectada no staging: 7891164020026",
+    "timestamp": "2026-10-02T06:09:13.017Z"
+  },
+  {
+    "id": "a5dce6ce-954e-5e6c-9b20-6c9b349fec5e",
+    "produto_id": "ba1f9c6a-a9a3-5b8e-9fd9-6609e51716e5",
+    "tipo": "EAN",
+    "codigo": "7891164020040",
+    "error_message": "Duplicidade de código detectada no staging: 7891164020040",
+    "timestamp": "2026-10-02T06:09:13.082Z"
+  },
+  {
+    "id": "24dc6fb6-83b2-523a-8823-0da7e7ffe6ee",
+    "produto_id": "c814ff0e-42b5-5194-827a-d31b07453e26",
+    "tipo": "EAN",
+    "codigo": "7891164027520",
+    "error_message": "Duplicidade de código detectada no staging: 7891164027520",
+    "timestamp": "2026-10-02T06:09:13.164Z"
+  },
+  {
+    "id": "24dc6fb6-83b2-523a-8823-0da7e7ffe6ee",
+    "produto_id": "164db228-5922-5359-bdcc-6cb6a80b7ad9",
+    "tipo": "EAN",
+    "codigo": "7891164027520",
+    "error_message": "Duplicidade de código detectada no staging: 7891164027520",
+    "timestamp": "2026-10-02T06:09:13.229Z"
+  },
+  {
+    "id": "c027ad4b-73ef-5b38-9f0f-0134e6844abb",
+    "produto_id": "79f0e807-984a-5054-92c5-ffb67841267b",
+    "tipo": "EAN",
+    "codigo": "7891164027278",
+    "error_message": "Duplicidade de código detectada no staging: 7891164027278",
+    "timestamp": "2026-10-02T06:09:13.322Z"
+  },
+  {
+    "id": "bc990e47-9a92-5ffc-9423-76e8be817477",
+    "produto_id": "dd0f212f-b1cf-597a-a274-d9b7d910bcd1",
+    "tipo": "EAN",
+    "codigo": "7891164133962",
+    "error_message": "Duplicidade de código detectada no staging: 7891164133962",
+    "timestamp": "2026-10-02T06:09:13.383Z"
   }
 ]
