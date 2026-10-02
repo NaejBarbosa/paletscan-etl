@@ -10,9 +10,53 @@
   margin: 2rem 0 !important;
 }
 
-/* Badge Indicador de Rolagem para Telas Touch */
+/* Sombras sutis indicadoras de conteúdo oculto nas bordas horizontais */
+.table-responsive-wrapper::before,
+.table-responsive-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 2.2rem;
+  bottom: 0;
+  width: 24px;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.25s ease;
+  opacity: 0;
+}
+
+.table-responsive-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.08), transparent);
+  border-top-left-radius: 0.65rem;
+  border-bottom-left-radius: 0.65rem;
+}
+
+.table-responsive-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.08), transparent);
+  border-top-right-radius: 0.65rem;
+  border-bottom-right-radius: 0.65rem;
+}
+
+.table-responsive-wrapper.has-overflow-left::before {
+  opacity: 1;
+}
+
+.table-responsive-wrapper.has-overflow-right::after {
+  opacity: 1;
+}
+
+[data-md-color-scheme="slate"] .table-responsive-wrapper::before {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.35), transparent);
+}
+
+[data-md-color-scheme="slate"] .table-responsive-wrapper::after {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.35), transparent);
+}
+
+/* Badge Indicador de Rolagem */
 .table-scroll-hint {
-  display: none;
+  display: inline-flex;
   align-items: center;
   gap: 0.45rem;
   font-size: 0.725rem;
@@ -47,33 +91,46 @@
   50% { transform: translateX(3px); }
 }
 
-@media screen and (max-width: 60em) {
-  .table-scroll-hint {
-    display: inline-flex;
-  }
-}
-
 /* Container de Rolagem com Bordas e Sombras */
 .table-scroll-container {
   width: 100% !important;
   max-width: 100% !important;
   overflow-x: auto !important;
-  overflow-y: visible !important;
+  overflow-y: hidden !important;
   -webkit-overflow-scrolling: touch !important;
   touch-action: pan-x pan-y !important;
-  overscroll-behavior-x: contain !important;
+  overscroll-behavior-x: auto !important;
   overscroll-behavior-y: auto !important;
+  overscroll-behavior: auto !important;
   border-radius: 0.65rem !important;
   border: 1px solid var(--md-default-fg-color--lightest) !important;
   background-color: var(--md-default-bg-color) !important;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05) !important;
   scrollbar-width: thin !important;
   scrollbar-color: var(--md-primary-fg-color, #4f46e5) rgba(148, 163, 184, 0.15) !important;
+  cursor: grab;
 }
 
+.table-scroll-container:active,
 .table-scroll-container.is-dragging {
   cursor: grabbing !important;
   user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.table-scroll-container.is-dragging * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* Propagação estrita de touch-action para não travar a rolagem vertical da página */
+.table-scroll-container table,
+.table-scroll-container thead,
+.table-scroll-container tbody,
+.table-scroll-container tr,
+.table-scroll-container th,
+.table-scroll-container td {
+  touch-action: pan-x pan-y !important;
 }
 
 /* Barra de rolagem horizontal sempre visível, elegante e ergonômica para touch */
@@ -116,11 +173,12 @@
   max-width: 100% !important;
   min-width: 100% !important;
   overflow-x: auto !important;
-  overflow-y: visible !important;
+  overflow-y: hidden !important;
   -webkit-overflow-scrolling: touch !important;
   touch-action: pan-x pan-y !important;
-  overscroll-behavior-x: contain !important;
+  overscroll-behavior-x: auto !important;
   overscroll-behavior-y: auto !important;
+  overscroll-behavior: auto !important;
   border-collapse: collapse !important;
   font-size: 0.825rem !important;
   margin: 1.75rem 0 !important;
