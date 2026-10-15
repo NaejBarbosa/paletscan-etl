@@ -14,6 +14,12 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "f3fef690-bb33-5ba9-a647-cf201d0819ec",
+    "details": "Produto \"MOELA DE FRANGO PACOTE (700G) - LAR\" (f3fef690-bb33-5ba9-a647-cf201d0819ec) possui códigos [SKU:364538], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "85449cf9-cfe2-5ab7-b070-bee66c726f07",
     "details": "Produto \"RAQUETE URUGUAIA - VILA\" (85449cf9-cfe2-5ab7-b070-bee66c726f07) possui códigos [SKU:394728], mas NENHUM EAN numérico válido!"
   },
@@ -38,14 +44,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "051934d6-3a07-59e6-afb6-cab3b5b40264",
-    "details": "Produto \"Bacon em Fatias 2.5kg – Seara Food Solutions\" (051934d6-3a07-59e6-afb6-cab3b5b40264) possui códigos [SKU:43], mas NENHUM EAN numérico válido!"
+    "item_id": "60df68c3-ef28-5b0a-bf4d-d144e840756a",
+    "details": "Produto \"BARRIGA SUÍNA COM PELE - FRIELLA\" (60df68c3-ef28-5b0a-bf4d-d144e840756a) possui códigos [SKU:363569], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "60df68c3-ef28-5b0a-bf4d-d144e840756a",
-    "details": "Produto \"BARRIGA SUÍNA COM PELE - FRIELLA\" (60df68c3-ef28-5b0a-bf4d-d144e840756a) possui códigos [SKU:363569], mas NENHUM EAN numérico válido!"
+    "item_id": "ab207996-7bc8-5249-900f-b2c95afbf47f",
+    "details": "Produto \"MOELA DE FRANGO PACOTE - SEARA\" (ab207996-7bc8-5249-900f-b2c95afbf47f) possui códigos [SKU:370656, DUN:17894904018229], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -56,26 +62,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "9d6ad4e9-f372-5830-9990-02bf78f2c4cf",
-    "details": "Produto \"CARRÉ T-BONE OVINO - DO CHEF\" (9d6ad4e9-f372-5830-9990-02bf78f2c4cf) possui códigos [SKU:399041], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "9e48acd9-9ab7-5f4d-95b8-8e71bce7e2e8",
     "details": "Produto \"PICANHA A SEM PELE MATURADA (ABAIXO DE 1,3KG) URUGUAIA - FRIGOYI\" (9e48acd9-9ab7-5f4d-95b8-8e71bce7e2e8) possui códigos [SKU:364321], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "47df2f80-d53b-5c35-9718-2d238e555b34",
-    "details": "Produto \"FILÉ DE PANGA PREMIUM INTERFOLHADO (5KG) - HUNGCA\" (47df2f80-d53b-5c35-9718-2d238e555b34) possui códigos [SKU:386286], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "5c0b6c7b-d1d8-504d-84f6-c78d501c0bea",
-    "details": "Produto \"SOBREPALETA SUÍNA SEM OSSO - FRIELLA\" (5c0b6c7b-d1d8-504d-84f6-c78d501c0bea) possui códigos [SKU:364382], mas NENHUM EAN numérico válido!"
+    "item_id": "9d6ad4e9-f372-5830-9990-02bf78f2c4cf",
+    "details": "Produto \"CARRÉ T-BONE OVINO - DO CHEF\" (9d6ad4e9-f372-5830-9990-02bf78f2c4cf) possui códigos [SKU:399041], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -86,8 +80,38 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "47df2f80-d53b-5c35-9718-2d238e555b34",
+    "details": "Produto \"FILÉ DE PANGA PREMIUM INTERFOLHADO (5KG) - HUNGCA\" (47df2f80-d53b-5c35-9718-2d238e555b34) possui códigos [SKU:386286], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "982481a7-af79-5d66-bacb-6063cd085e41",
     "details": "Produto \"LINGUIÇA ESPECIAL DE PERNIL PACOTE (5KG) - SEARA\" (982481a7-af79-5d66-bacb-6063cd085e41) possui códigos [SKU:350433, DUN:17894904005069], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "5c0b6c7b-d1d8-504d-84f6-c78d501c0bea",
+    "details": "Produto \"SOBREPALETA SUÍNA SEM OSSO - FRIELLA\" (5c0b6c7b-d1d8-504d-84f6-c78d501c0bea) possui códigos [SKU:364382], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "96e808f9-92ea-5fd8-83da-8b51a1fd1489",
+    "details": "Produto \"PICANHA (ABAIXO DE 1,5KG) ARGENTINA - PULL\" (96e808f9-92ea-5fd8-83da-8b51a1fd1489) possui códigos [SKU:387715], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "f91b0985-65e4-5b0c-8ea8-fa7feab4ddba",
+    "details": "Produto \"CARRÉ OVINO FRANCÊS (12 A 14) 340 A 397G - SWIFT\" (f91b0985-65e4-5b0c-8ea8-fa7feab4ddba) possui códigos [SKU:399877], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "1ad874a8-2ba2-563f-9a65-cafa6299a6ba",
+    "details": "Produto \"CARRÉ FRANCÊS (14 A 16) 397 A 454G - SWIFT\" (1ad874a8-2ba2-563f-9a65-cafa6299a6ba) possui códigos [SKU:399878], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -104,14 +128,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "ad54944a-3ec4-524e-aa3a-a058cf3a5a0e",
-    "details": "Produto \"FILÉ DE COSTELA URUGUAIA (ACIMA DE 2,0KG) MATURADA  - FRIGOYI\" (ad54944a-3ec4-524e-aa3a-a058cf3a5a0e) possui códigos [SKU:364323], mas NENHUM EAN numérico válido!"
+    "item_id": "46ebfff6-c709-5266-a945-0f992de3488e",
+    "details": "Produto \"FILÉ DE MEIO PEITO SEM PELE  PACOTE (7,5KG) - SEARA\" (46ebfff6-c709-5266-a945-0f992de3488e) possui códigos [SKU:399952, DUN:17894904545220], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "776db632-a10b-59ae-af11-c29fe6aea06d",
-    "details": "Produto \"CHARQUE PONTA DE AGULHA (5KG) - BERTIN\" (776db632-a10b-59ae-af11-c29fe6aea06d) possui códigos [SKU:370109], mas NENHUM EAN numérico válido!"
+    "item_id": "ad54944a-3ec4-524e-aa3a-a058cf3a5a0e",
+    "details": "Produto \"FILÉ DE COSTELA URUGUAIA (ACIMA DE 2,0KG) MATURADA  - FRIGOYI\" (ad54944a-3ec4-524e-aa3a-a058cf3a5a0e) possui códigos [SKU:364323], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -122,14 +146,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "227a7c47-8595-5257-b283-191fc13a68e0",
-    "details": "Produto \"EMPANITO DE FRANGO (1,5KG) - LAR\" (227a7c47-8595-5257-b283-191fc13a68e0) possui códigos [SKU:384996], mas NENHUM EAN numérico válido!"
+    "item_id": "b16459f3-2461-5716-affe-4eed110033ed",
+    "details": "Produto \"CORAÇÃO DE FRANGO PACOTE - CANÇÃO\" (b16459f3-2461-5716-affe-4eed110033ed) possui códigos [SKU:363890], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "b16459f3-2461-5716-affe-4eed110033ed",
-    "details": "Produto \"CORAÇÃO DE FRANGO PACOTE - CANÇÃO\" (b16459f3-2461-5716-affe-4eed110033ed) possui códigos [SKU:363890], mas NENHUM EAN numérico válido!"
+    "item_id": "d956f8f3-ca1b-56f3-8cc2-790d8e0bd814",
+    "details": "Produto \"BISTECA SUÍNA (5KG) - FRIELLA\" (d956f8f3-ca1b-56f3-8cc2-790d8e0bd814) possui códigos [SKU:368569], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -140,8 +164,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "a87029ad-b23d-5b21-bbe6-71d32227abe5",
-    "details": "Produto \"CONTRA FILÉ OVINO SEM OSSO - 1953\" (a87029ad-b23d-5b21-bbe6-71d32227abe5) possui códigos [SKU:397773], mas NENHUM EAN numérico válido!"
+    "item_id": "776db632-a10b-59ae-af11-c29fe6aea06d",
+    "details": "Produto \"CHARQUE PONTA DE AGULHA (5KG) - BERTIN\" (776db632-a10b-59ae-af11-c29fe6aea06d) possui códigos [SKU:370109], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -158,14 +182,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "028836ad-6d99-51e4-9075-d3fdca3bcafd",
-    "details": "Produto \"COSTELA DO TRASEIRO COM OSSO (8 RIPAS) URUGUAIA - LAS PIEDRA\" (028836ad-6d99-51e4-9075-d3fdca3bcafd) possui códigos [SKU:395313], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "60581e84-4326-5b1f-8086-69b8d42832c0",
-    "details": "Produto \"FRANGO À PASSARINHO PACOTE IQF - LAR\" (60581e84-4326-5b1f-8086-69b8d42832c0) possui códigos [SKU:364537], mas NENHUM EAN numérico válido!"
+    "item_id": "a87029ad-b23d-5b21-bbe6-71d32227abe5",
+    "details": "Produto \"CONTRA FILÉ OVINO SEM OSSO - 1953\" (a87029ad-b23d-5b21-bbe6-71d32227abe5) possui códigos [SKU:397773], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -176,14 +194,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "b78a2f2f-9814-5064-a8b3-e8a420079563",
-    "details": "Produto \"FILÉ DE SAITHE COM PELE IQF (10KG) - HUNCHUN\" (b78a2f2f-9814-5064-a8b3-e8a420079563) possui códigos [SKU:396560], mas NENHUM EAN numérico válido!"
+    "item_id": "60581e84-4326-5b1f-8086-69b8d42832c0",
+    "details": "Produto \"FRANGO À PASSARINHO PACOTE IQF - LAR\" (60581e84-4326-5b1f-8086-69b8d42832c0) possui códigos [SKU:364537], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "6bda99c4-477c-5908-be96-fdb832a616f6",
-    "details": "Produto \"FILÉ DE PEITO SEM SASSAMI INTERFOLHADO - C.VALE\" (6bda99c4-477c-5908-be96-fdb832a616f6) possui códigos [SKU:363020], mas NENHUM EAN numérico válido!"
+    "item_id": "b78a2f2f-9814-5064-a8b3-e8a420079563",
+    "details": "Produto \"FILÉ DE SAITHE COM PELE IQF (10KG) - HUNCHUN\" (b78a2f2f-9814-5064-a8b3-e8a420079563) possui códigos [SKU:396560], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -194,8 +212,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "770f56c4-ffff-541a-a6c1-1de78501709d",
-    "details": "Produto \"ANEL DE CEBOLA EMPANADA TURQUIA PACOTE (1,1KG) - EASYCHEF\" (770f56c4-ffff-541a-a6c1-1de78501709d) possui códigos [SKU:392019], mas NENHUM EAN numérico válido!"
+    "item_id": "6bda99c4-477c-5908-be96-fdb832a616f6",
+    "details": "Produto \"FILÉ DE PEITO SEM SASSAMI INTERFOLHADO - C.VALE\" (6bda99c4-477c-5908-be96-fdb832a616f6) possui códigos [SKU:363020], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -206,14 +224,20 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "849a65d1-1717-5982-a59d-d7b043c1757d",
-    "details": "Produto \"FILÉ DE MERLUZÃO SEM PELE (10KG) INTERFOLHADO - GOOD FISH\" (849a65d1-1717-5982-a59d-d7b043c1757d) possui códigos [SKU:398978], mas NENHUM EAN numérico válido!"
+    "item_id": "770f56c4-ffff-541a-a6c1-1de78501709d",
+    "details": "Produto \"ANEL DE CEBOLA EMPANADA TURQUIA PACOTE (1,1KG) - EASYCHEF\" (770f56c4-ffff-541a-a6c1-1de78501709d) possui códigos [SKU:392019], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
     "item_id": "921eb582-5f0a-5d40-994b-2736f8e4310e",
     "details": "Produto \"Picanha Maturada Argentina Perdigão na Brasa - 900g\" (921eb582-5f0a-5d40-994b-2736f8e4310e) possui códigos [SKU:165783], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "849a65d1-1717-5982-a59d-d7b043c1757d",
+    "details": "Produto \"FILÉ DE MERLUZÃO SEM PELE (10KG) INTERFOLHADO - GOOD FISH\" (849a65d1-1717-5982-a59d-d7b043c1757d) possui códigos [SKU:398978], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -230,12 +254,6 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "f7d02545-c866-5b5a-8bbe-9d4692dccf66",
-    "details": "Produto \"FILÉ DE COXA E SOBRECOXA COM PELE INTERFOLHADO - PIONEIRO\" (f7d02545-c866-5b5a-8bbe-9d4692dccf66) possui códigos [SKU:364546], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "37341666-491d-5b73-b426-0267b6b85914",
     "details": "Produto \"Chester Tradicional 3,9 kg a 4,2 kg\" (37341666-491d-5b73-b426-0267b6b85914) possui códigos [SKU:153583], mas NENHUM EAN numérico válido!"
   },
@@ -244,6 +262,12 @@
     "severity": "CRITICAL",
     "item_id": "22a100e2-5da4-5549-89b4-ad225dbd830c",
     "details": "Produto \"Maminha Da Alcatra Sadia Bassi Stars\" (22a100e2-5da4-5549-89b4-ad225dbd830c) possui códigos [SKU:5801044], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "f7d02545-c866-5b5a-8bbe-9d4692dccf66",
+    "details": "Produto \"FILÉ DE COXA E SOBRECOXA COM PELE INTERFOLHADO - PIONEIRO\" (f7d02545-c866-5b5a-8bbe-9d4692dccf66) possui códigos [SKU:364546], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -272,20 +296,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "cffe25a6-82b8-5cd4-87b8-658a0f15548b",
-    "details": "Produto \"Jerked Beef Dianteiro 5kg\" (cffe25a6-82b8-5cd4-87b8-658a0f15548b) possui códigos [SKU:1759], mas NENHUM EAN numérico válido!"
+    "item_id": "db936672-24b3-5b72-9ddb-085336563bb8",
+    "details": "Produto \"BATATA CRINKLE PROFESSIONAL PACOTE (2KG) - EASYCHEF\" (db936672-24b3-5b72-9ddb-085336563bb8) possui códigos [SKU:394858], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
     "item_id": "f1b2f5f2-0fbe-5133-ac9e-288fba44d788",
     "details": "Produto \"BACON EM MANTA ESPECIAL DEFUMADO - SEARA\" (f1b2f5f2-0fbe-5133-ac9e-288fba44d788) possui códigos [SKU:350436, DUN:17894904006455], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "db936672-24b3-5b72-9ddb-085336563bb8",
-    "details": "Produto \"BATATA CRINKLE PROFESSIONAL PACOTE (2KG) - EASYCHEF\" (db936672-24b3-5b72-9ddb-085336563bb8) possui códigos [SKU:394858], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -302,14 +320,20 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "babfd412-edf8-5a26-a1a0-8950e6d4024a",
-    "details": "Produto \"FILÉ DE PANGASIUS SEMIAPARADO IQF GRANEL (10KG) - PLANALTO\" (babfd412-edf8-5a26-a1a0-8950e6d4024a) possui códigos [SKU:386939], mas NENHUM EAN numérico válido!"
+    "item_id": "2c6448b8-276b-5f4d-ad9b-6fcbc341ad1b",
+    "details": "Produto \"LINGUIÇA TOSCANA PACOTE (5KG) - SEARA\" (2c6448b8-276b-5f4d-ad9b-6fcbc341ad1b) possui códigos [SKU:350530, DUN:17894904009289], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "2c6448b8-276b-5f4d-ad9b-6fcbc341ad1b",
-    "details": "Produto \"LINGUIÇA TOSCANA PACOTE (5KG) - SEARA\" (2c6448b8-276b-5f4d-ad9b-6fcbc341ad1b) possui códigos [SKU:350530, DUN:17894904009289], mas NENHUM EAN numérico válido!"
+    "item_id": "227a7c47-8595-5257-b283-191fc13a68e0",
+    "details": "Produto \"EMPANITO DE FRANGO (1,5KG) - LAR\" (227a7c47-8595-5257-b283-191fc13a68e0) possui códigos [SKU:384996], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "babfd412-edf8-5a26-a1a0-8950e6d4024a",
+    "details": "Produto \"FILÉ DE PANGASIUS SEMIAPARADO IQF GRANEL (10KG) - PLANALTO\" (babfd412-edf8-5a26-a1a0-8950e6d4024a) possui códigos [SKU:386939], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -350,8 +374,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "c1aa6409-db85-5003-8117-ce87fac30876",
-    "details": "Produto \"PICANHA A (ABAIXO DE 2,5 KG) MATURADA - TEYS\" (c1aa6409-db85-5003-8117-ce87fac30876) possui códigos [SKU:374272], mas NENHUM EAN numérico válido!"
+    "item_id": "028836ad-6d99-51e4-9075-d3fdca3bcafd",
+    "details": "Produto \"COSTELA DO TRASEIRO COM OSSO (8 RIPAS) URUGUAIA - LAS PIEDRA\" (028836ad-6d99-51e4-9075-d3fdca3bcafd) possui códigos [SKU:395313], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -362,8 +386,20 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "c1aa6409-db85-5003-8117-ce87fac30876",
+    "details": "Produto \"PICANHA A (ABAIXO DE 2,5 KG) MATURADA - TEYS\" (c1aa6409-db85-5003-8117-ce87fac30876) possui códigos [SKU:374272], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "841c4d48-9913-51d8-ac09-51a3240f0301",
     "details": "Produto \"FILÉ DE SAITHE COM PELE GRANEL (10KG) - SEAPRO\" (841c4d48-9913-51d8-ac09-51a3240f0301) possui códigos [SKU:399422], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "974e442d-2bf4-52c5-9976-2b17f9ee9f75",
+    "details": "Produto \"Picanha Pesada Sadia Bassi Stars - 1,4kg\" (974e442d-2bf4-52c5-9976-2b17f9ee9f75) possui códigos [SKU:800056], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -376,12 +412,6 @@
     "severity": "CRITICAL",
     "item_id": "4e7a9ba1-3951-5e01-9044-65c4cd01296e",
     "details": "Produto \"MAMINHA MATURADA - LAS PIEDRAS\" (4e7a9ba1-3951-5e01-9044-65c4cd01296e) possui códigos [SKU:377051], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "974e442d-2bf4-52c5-9976-2b17f9ee9f75",
-    "details": "Produto \"Picanha Pesada Sadia Bassi Stars - 1,4kg\" (974e442d-2bf4-52c5-9976-2b17f9ee9f75) possui códigos [SKU:800056], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -434,14 +464,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "fe6b5360-94b3-52dc-845a-cb0274dd9438",
-    "details": "Produto \"PICANHA SUÍNA COM ALHO - SEARA\" (fe6b5360-94b3-52dc-845a-cb0274dd9438) possui códigos [SKU:385883, DUN:17894904255747], mas NENHUM EAN numérico válido!"
+    "item_id": "b838a28c-14d5-520b-b21d-426db60d82d0",
+    "details": "Produto \"PICANHA A ANGUS (0,9 A 1,3KG) MATURADA URUGUAIA - LAS MORAS\" (b838a28c-14d5-520b-b21d-426db60d82d0) possui códigos [SKU:385587], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "b838a28c-14d5-520b-b21d-426db60d82d0",
-    "details": "Produto \"PICANHA A ANGUS (0,9 A 1,3KG) MATURADA URUGUAIA - LAS MORAS\" (b838a28c-14d5-520b-b21d-426db60d82d0) possui códigos [SKU:385587], mas NENHUM EAN numérico válido!"
+    "item_id": "fe6b5360-94b3-52dc-845a-cb0274dd9438",
+    "details": "Produto \"PICANHA SUÍNA COM ALHO - SEARA\" (fe6b5360-94b3-52dc-845a-cb0274dd9438) possui códigos [SKU:385883, DUN:17894904255747], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -470,8 +500,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "f3fef690-bb33-5ba9-a647-cf201d0819ec",
-    "details": "Produto \"MOELA DE FRANGO PACOTE (700G) - LAR\" (f3fef690-bb33-5ba9-a647-cf201d0819ec) possui códigos [SKU:364538], mas NENHUM EAN numérico válido!"
+    "item_id": "41c75fde-4215-5c47-a1ff-f32485716741",
+    "details": "Produto \"Peito Jerked Beef Dianteiro Perdigão Montana\" (41c75fde-4215-5c47-a1ff-f32485716741) possui códigos [SKU:800409], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -482,20 +512,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "463eea06-6d90-54b9-9339-fde40156ff3b",
-    "details": "Produto \"FILÉ DE SALMÃO EM PEDAÇOS COM PELE - PLANALTO\" (463eea06-6d90-54b9-9339-fde40156ff3b) possui códigos [SKU:384753], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "41c75fde-4215-5c47-a1ff-f32485716741",
-    "details": "Produto \"Peito Jerked Beef Dianteiro Perdigão Montana\" (41c75fde-4215-5c47-a1ff-f32485716741) possui códigos [SKU:800409], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "82ec23c9-3c2b-5532-8cd1-b835443c1c1e",
     "details": "Produto \"QUEIJO PRATO (3KG) - NATVILLE\" (82ec23c9-3c2b-5532-8cd1-b835443c1c1e) possui códigos [SKU:365599], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "463eea06-6d90-54b9-9339-fde40156ff3b",
+    "details": "Produto \"FILÉ DE SALMÃO EM PEDAÇOS COM PELE - PLANALTO\" (463eea06-6d90-54b9-9339-fde40156ff3b) possui códigos [SKU:384753], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -518,6 +542,12 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "97ced4c4-a0d3-5c2c-99a9-a3ffe3ca2150",
+    "details": "Produto \"Picanha Importado Leve San Jacinto - 1,2 a 1,8kg\" (97ced4c4-a0d3-5c2c-99a9-a3ffe3ca2150) possui códigos [SKU:771513], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "e2e3ddcf-c0bb-5d47-8dd0-1e160d9fe9e6",
     "details": "Produto \"BATATA EXTRA CROCANTE DELIVERY 9MM PACOTE - DO CHEF\" (e2e3ddcf-c0bb-5d47-8dd0-1e160d9fe9e6) possui códigos [SKU:385218], mas NENHUM EAN numérico válido!"
   },
@@ -530,14 +560,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "97ced4c4-a0d3-5c2c-99a9-a3ffe3ca2150",
-    "details": "Produto \"Picanha Importado Leve San Jacinto - 1,2 a 1,8kg\" (97ced4c4-a0d3-5c2c-99a9-a3ffe3ca2150) possui códigos [SKU:771513], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "d956f8f3-ca1b-56f3-8cc2-790d8e0bd814",
-    "details": "Produto \"BISTECA SUÍNA (5KG) - FRIELLA\" (d956f8f3-ca1b-56f3-8cc2-790d8e0bd814) possui códigos [SKU:368569], mas NENHUM EAN numérico válido!"
+    "item_id": "3f33d58a-3588-554b-887b-19a8178ded74",
+    "details": "Produto \"PRESUNTO COZIDO MAGRO OVAL - SEARA\" (3f33d58a-3588-554b-887b-19a8178ded74) possui códigos [DUN:17894904006301, SKU:368813], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -548,20 +572,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "3f33d58a-3588-554b-887b-19a8178ded74",
-    "details": "Produto \"PRESUNTO COZIDO MAGRO OVAL - SEARA\" (3f33d58a-3588-554b-887b-19a8178ded74) possui códigos [DUN:17894904006301, SKU:368813], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "20ec3a70-d691-5c8f-8ebe-1f6e2e8e77b3",
     "details": "Produto \"MEIO DA ASA PACOTE (1KG) - SEARA\" (20ec3a70-d691-5c8f-8ebe-1f6e2e8e77b3) possui códigos [DUN:17894904014290, SKU:368862], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "999ec602-e232-5b4c-8fcd-3fa4c3370f6b",
-    "details": "Produto \"Filé de Salmão Coho Premium Pacote Aysencoho - 700g a 1,8kg\" (999ec602-e232-5b4c-8fcd-3fa4c3370f6b) possui códigos [SKU:800469], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -572,14 +584,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "ab207996-7bc8-5249-900f-b2c95afbf47f",
-    "details": "Produto \"MOELA DE FRANGO PACOTE - SEARA\" (ab207996-7bc8-5249-900f-b2c95afbf47f) possui códigos [SKU:370656, DUN:17894904018229], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "1e627616-6efe-5367-ad4c-4c0140df4e05",
-    "details": "Produto \"FILÉ DE POLACA DO ALASCA GRANEL (10KG) - PLANALTO\" (1e627616-6efe-5367-ad4c-4c0140df4e05) possui códigos [SKU:374686], mas NENHUM EAN numérico válido!"
+    "item_id": "999ec602-e232-5b4c-8fcd-3fa4c3370f6b",
+    "details": "Produto \"Filé de Salmão Coho Premium Pacote Aysencoho - 700g a 1,8kg\" (999ec602-e232-5b4c-8fcd-3fa4c3370f6b) possui códigos [SKU:800469], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -590,14 +596,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "d534ea72-3ed2-57af-8c11-b658c92ffef1",
-    "details": "Produto \"FILÉ DE POLACA DO ALASCA PACOTE (800G) - PLANALTO\" (d534ea72-3ed2-57af-8c11-b658c92ffef1) possui códigos [SKU:374795], mas NENHUM EAN numérico válido!"
+    "item_id": "1e627616-6efe-5367-ad4c-4c0140df4e05",
+    "details": "Produto \"FILÉ DE POLACA DO ALASCA GRANEL (10KG) - PLANALTO\" (1e627616-6efe-5367-ad4c-4c0140df4e05) possui códigos [SKU:374686], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "0c3370a9-2fde-54cc-bc15-ff029775883d",
-    "details": "Produto \"MEIO DA ASA CONG INTERFOLHADO - CANÇÃO\" (0c3370a9-2fde-54cc-bc15-ff029775883d) possui códigos [SKU:364707], mas NENHUM EAN numérico válido!"
+    "item_id": "d534ea72-3ed2-57af-8c11-b658c92ffef1",
+    "details": "Produto \"FILÉ DE POLACA DO ALASCA PACOTE (800G) - PLANALTO\" (d534ea72-3ed2-57af-8c11-b658c92ffef1) possui códigos [SKU:374795], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -608,14 +614,20 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "f614ee53-f43f-5936-8509-3928d606e548",
-    "details": "Produto \"CORAÇÃO FRANGO BANDEJA- SEARA\" (f614ee53-f43f-5936-8509-3928d606e548) possui códigos [SKU:371276, DUN:17894904015426], mas NENHUM EAN numérico válido!"
+    "item_id": "0c3370a9-2fde-54cc-bc15-ff029775883d",
+    "details": "Produto \"MEIO DA ASA CONG INTERFOLHADO - CANÇÃO\" (0c3370a9-2fde-54cc-bc15-ff029775883d) possui códigos [SKU:364707], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
     "item_id": "aab6977f-4602-589a-ba0a-2b0e83ca7ba6",
     "details": "Produto \"GALETO COM OSSO (500G A 800G) PACOTE - SEARA\" (aab6977f-4602-589a-ba0a-2b0e83ca7ba6) possui códigos [SKU:388489], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "f614ee53-f43f-5936-8509-3928d606e548",
+    "details": "Produto \"CORAÇÃO FRANGO BANDEJA- SEARA\" (f614ee53-f43f-5936-8509-3928d606e548) possui códigos [SKU:371276, DUN:17894904015426], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -686,14 +698,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "69e7fc17-a184-5a8c-bd18-ed7a66c152fd",
-    "details": "Produto \"PICANHA B (ABAIXO DE 1,6KG) ARGENTINA - FRIMSA\" (69e7fc17-a184-5a8c-bd18-ed7a66c152fd) possui códigos [SKU:395195], mas NENHUM EAN numérico válido!"
+    "item_id": "07a65f51-3414-5617-81b7-dda7cb24ee03",
+    "details": "Produto \"FILÉ DE MERLUZA (60 A 200G) SEM PELE INTERFOLHADO - DEL MAR\" (07a65f51-3414-5617-81b7-dda7cb24ee03) possui códigos [SKU:391438], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "07a65f51-3414-5617-81b7-dda7cb24ee03",
-    "details": "Produto \"FILÉ DE MERLUZA (60 A 200G) SEM PELE INTERFOLHADO - DEL MAR\" (07a65f51-3414-5617-81b7-dda7cb24ee03) possui códigos [SKU:391438], mas NENHUM EAN numérico válido!"
+    "item_id": "69e7fc17-a184-5a8c-bd18-ed7a66c152fd",
+    "details": "Produto \"PICANHA B (ABAIXO DE 1,6KG) ARGENTINA - FRIMSA\" (69e7fc17-a184-5a8c-bd18-ed7a66c152fd) possui códigos [SKU:395195], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -710,6 +722,12 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "f61986d1-059e-5cc8-8322-db9d471ddd07",
+    "details": "Produto \"COSTELA DO TRASEIRO (PIRULITO) URUGUAIA - NIREA\" (f61986d1-059e-5cc8-8322-db9d471ddd07) possui códigos [SKU:399007], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "8ad1c7b7-a425-54d2-ac87-231304e23ff5",
     "details": "Produto \"Picanha Fatiada Quickfood\" (8ad1c7b7-a425-54d2-ac87-231304e23ff5) possui códigos [SKU:157512], mas NENHUM EAN numérico válido!"
   },
@@ -718,12 +736,6 @@
     "severity": "CRITICAL",
     "item_id": "86b5b67f-1e46-5da0-82c4-fc88a5e51f97",
     "details": "Produto \"FILÉ DE PEITO BANDEJA - SEARA\" (86b5b67f-1e46-5da0-82c4-fc88a5e51f97) possui códigos [SKU:370655, DUN:17894904015105], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "f61986d1-059e-5cc8-8322-db9d471ddd07",
-    "details": "Produto \"COSTELA DO TRASEIRO (PIRULITO) URUGUAIA - NIREA\" (f61986d1-059e-5cc8-8322-db9d471ddd07) possui códigos [SKU:399007], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -740,12 +752,6 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "6a5cb544-11b9-5303-addf-db28a8690936",
-    "details": "Produto \"BATATA PALITO 9MM PACOTE (400G) - DO CHEF\" (6a5cb544-11b9-5303-addf-db28a8690936) possui códigos [SKU:392902], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "553a985c-5286-5946-974f-11027a07894c",
     "details": "Produto \"CAÇÃO EM POSTA GRANEL (10KG) - GUIMARPEIXE\" (553a985c-5286-5946-974f-11027a07894c) possui códigos [SKU:396428], mas NENHUM EAN numérico válido!"
   },
@@ -758,14 +764,20 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "80bc15dd-d691-5593-b910-cdf70a04c2ee",
-    "details": "Produto \"Picanha Uruguaia P Sadia Bassi Stars\" (80bc15dd-d691-5593-b910-cdf70a04c2ee) possui códigos [SKU:163821], mas NENHUM EAN numérico válido!"
+    "item_id": "6a5cb544-11b9-5303-addf-db28a8690936",
+    "details": "Produto \"BATATA PALITO 9MM PACOTE (400G) - DO CHEF\" (6a5cb544-11b9-5303-addf-db28a8690936) possui códigos [SKU:392902], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
     "item_id": "9c2110e7-bea1-583c-91eb-a9af35058e4a",
     "details": "Produto \"FILÉ DE PANGA PREMIUM INTERFOLHADO (5KG) - FATIFISH\" (9c2110e7-bea1-583c-91eb-a9af35058e4a) possui códigos [SKU:369674], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "80bc15dd-d691-5593-b910-cdf70a04c2ee",
+    "details": "Produto \"Picanha Uruguaia P Sadia Bassi Stars\" (80bc15dd-d691-5593-b910-cdf70a04c2ee) possui códigos [SKU:163821], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -794,14 +806,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "f962e0f0-047e-5d02-929d-b84e6e2614bb",
-    "details": "Produto \"FILÉ DE PANGA SEM GORDURA GRANEL - JEAN VELEIRO\" (f962e0f0-047e-5d02-929d-b84e6e2614bb) possui códigos [SKU:398627], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "9c0accc4-9fa9-5b52-9c53-c97d80127795",
-    "details": "Produto \"FILÉ DE POLACA DO ALASCA (50 A 300G) IQF - SEAFOOD\" (9c0accc4-9fa9-5b52-9c53-c97d80127795) possui códigos [SKU:398817], mas NENHUM EAN numérico válido!"
+    "item_id": "f39b1a58-1979-5429-9749-e4dbf82fe11e",
+    "details": "Produto \"MAMINHA URUGUAIA (15KG) - TACUAREMBO\" (f39b1a58-1979-5429-9749-e4dbf82fe11e) possui códigos [SKU:385695], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -818,8 +824,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "f39b1a58-1979-5429-9749-e4dbf82fe11e",
-    "details": "Produto \"MAMINHA URUGUAIA (15KG) - TACUAREMBO\" (f39b1a58-1979-5429-9749-e4dbf82fe11e) possui códigos [SKU:385695], mas NENHUM EAN numérico válido!"
+    "item_id": "f962e0f0-047e-5d02-929d-b84e6e2614bb",
+    "details": "Produto \"FILÉ DE PANGA SEM GORDURA GRANEL - JEAN VELEIRO\" (f962e0f0-047e-5d02-929d-b84e6e2614bb) possui códigos [SKU:398627], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "9c0accc4-9fa9-5b52-9c53-c97d80127795",
+    "details": "Produto \"FILÉ DE POLACA DO ALASCA (50 A 300G) IQF - SEAFOOD\" (9c0accc4-9fa9-5b52-9c53-c97d80127795) possui códigos [SKU:398817], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -832,12 +844,6 @@
     "severity": "CRITICAL",
     "item_id": "86232513-b756-57fc-9959-8fbc46dbff3d",
     "details": "Produto \"ACÉM (DENVER) CANADA - BLACK FRIBOI\" (86232513-b756-57fc-9959-8fbc46dbff3d) possui códigos [SKU:397289], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "c5042581-67d7-5c90-8878-847b6e2e8dc7",
-    "details": "Produto \"BACON EM PEDAÇOS - SEARA\" (c5042581-67d7-5c90-8878-847b6e2e8dc7) possui códigos [DUN:17894904238962], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -860,14 +866,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "81ea7bb8-33be-5050-9ca2-253b56d5aa28",
-    "details": "Produto \"Picanha Fatiada Maturada Argentina Perdigão na Brasa - 200 a 350g\" (81ea7bb8-33be-5050-9ca2-253b56d5aa28) possui códigos [SKU:165785], mas NENHUM EAN numérico válido!"
+    "item_id": "e85ce5f2-1c36-51ec-a5ba-2f3927f070a6",
+    "details": "Produto \"PICANHA A URUGUAIA (1,0 A 1,3KG) - NIREA\" (e85ce5f2-1c36-51ec-a5ba-2f3927f070a6) possui códigos [SKU:392548], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "45ce4dee-4554-5b53-ad81-3b83fa3519e3",
-    "details": "Produto \"PICANHA B (ACIMA DE 1,4KG) URUGUAIA - LAS PIEDRAS\" (45ce4dee-4554-5b53-ad81-3b83fa3519e3) possui códigos [SKU:383375], mas NENHUM EAN numérico válido!"
+    "item_id": "81ea7bb8-33be-5050-9ca2-253b56d5aa28",
+    "details": "Produto \"Picanha Fatiada Maturada Argentina Perdigão na Brasa - 200 a 350g\" (81ea7bb8-33be-5050-9ca2-253b56d5aa28) possui códigos [SKU:165785], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -878,8 +884,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "e85ce5f2-1c36-51ec-a5ba-2f3927f070a6",
-    "details": "Produto \"PICANHA A URUGUAIA (1,0 A 1,3KG) - NIREA\" (e85ce5f2-1c36-51ec-a5ba-2f3927f070a6) possui códigos [SKU:392548], mas NENHUM EAN numérico válido!"
+    "item_id": "1b82003f-65a4-543d-956e-9c67aa3fe89e",
+    "details": "Produto \"Picanha Uruguaia L Sadia Bassi\" (1b82003f-65a4-543d-956e-9c67aa3fe89e) possui códigos [SKU:163803], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -890,14 +896,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "1b82003f-65a4-543d-956e-9c67aa3fe89e",
-    "details": "Produto \"Picanha Uruguaia L Sadia Bassi\" (1b82003f-65a4-543d-956e-9c67aa3fe89e) possui códigos [SKU:163803], mas NENHUM EAN numérico válido!"
+    "item_id": "686fd736-b51e-56c4-a8b0-01dcf599ec75",
+    "details": "Produto \"Coração Alcatra Red Uruguaia Sadia Bassi\" (686fd736-b51e-56c4-a8b0-01dcf599ec75) possui códigos [SKU:163820], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "686fd736-b51e-56c4-a8b0-01dcf599ec75",
-    "details": "Produto \"Coração Alcatra Red Uruguaia Sadia Bassi\" (686fd736-b51e-56c4-a8b0-01dcf599ec75) possui códigos [SKU:163820], mas NENHUM EAN numérico válido!"
+    "item_id": "45ce4dee-4554-5b53-ad81-3b83fa3519e3",
+    "details": "Produto \"PICANHA B (ACIMA DE 1,4KG) URUGUAIA - LAS PIEDRAS\" (45ce4dee-4554-5b53-ad81-3b83fa3519e3) possui códigos [SKU:383375], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -908,8 +914,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "39d3e68c-be69-53a6-9436-7417114e7777",
-    "details": "Produto \"FILÉ DE TILÁPIA (140 A 200G) SEM PELE (10KG) - MARFREE\" (39d3e68c-be69-53a6-9436-7417114e7777) possui códigos [SKU:396552], mas NENHUM EAN numérico válido!"
+    "item_id": "42f6f606-9abe-54b1-8652-fb1e88fac11b",
+    "details": "Produto \"FILÉ DE MERLUZA INTERFOLHADO (60 A 200G) - ARGENPESCA\" (42f6f606-9abe-54b1-8652-fb1e88fac11b) possui códigos [SKU:398938], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -920,8 +926,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "42f6f606-9abe-54b1-8652-fb1e88fac11b",
-    "details": "Produto \"FILÉ DE MERLUZA INTERFOLHADO (60 A 200G) - ARGENPESCA\" (42f6f606-9abe-54b1-8652-fb1e88fac11b) possui códigos [SKU:398938], mas NENHUM EAN numérico válido!"
+    "item_id": "39d3e68c-be69-53a6-9436-7417114e7777",
+    "details": "Produto \"FILÉ DE TILÁPIA (140 A 200G) SEM PELE (10KG) - MARFREE\" (39d3e68c-be69-53a6-9436-7417114e7777) possui códigos [SKU:396552], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -956,14 +962,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "3fbe6efa-f75f-5f87-90f1-5700a3c771e2",
-    "details": "Produto \"QUEIJO MUSSARELA (4KG) - PILOTO\" (3fbe6efa-f75f-5f87-90f1-5700a3c771e2) possui códigos [SKU:390009], mas NENHUM EAN numérico válido!"
+    "item_id": "72222f79-e784-587c-8e2e-e288f09c00a8",
+    "details": "Produto \"FRANGO À PASSARINHO TEMPERADO PACOTE IQF (700G) - LAR\" (72222f79-e784-587c-8e2e-e288f09c00a8) possui códigos [SKU:393877], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "72222f79-e784-587c-8e2e-e288f09c00a8",
-    "details": "Produto \"FRANGO À PASSARINHO TEMPERADO PACOTE IQF (700G) - LAR\" (72222f79-e784-587c-8e2e-e288f09c00a8) possui códigos [SKU:393877], mas NENHUM EAN numérico válido!"
+    "item_id": "3fbe6efa-f75f-5f87-90f1-5700a3c771e2",
+    "details": "Produto \"QUEIJO MUSSARELA (4KG) - PILOTO\" (3fbe6efa-f75f-5f87-90f1-5700a3c771e2) possui códigos [SKU:390009], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -974,8 +980,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "d93c4a99-249d-56e3-b297-d610620a1d6d",
-    "details": "Produto \"BARRIGA SUÍNA COM PELE INTERFOLHADA - DICASA\" (d93c4a99-249d-56e3-b297-d610620a1d6d) possui códigos [SKU:372712], mas NENHUM EAN numérico válido!"
+    "item_id": "1ff045a0-c6ee-5809-9170-454393edc82a",
+    "details": "Produto \"LULA TUBO (10KG) - CAMPECHE\" (1ff045a0-c6ee-5809-9170-454393edc82a) possui códigos [SKU:398939], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "66469603-6b6f-5ed5-ab78-8d13bd741a99",
+    "details": "Produto \"LULA TENTÁCULO (ACIMA DE 2KG) - INTERATLANTIC\" (66469603-6b6f-5ed5-ab78-8d13bd741a99) possui códigos [SKU:398940], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -992,14 +1004,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "1ff045a0-c6ee-5809-9170-454393edc82a",
-    "details": "Produto \"LULA TUBO (10KG) - CAMPECHE\" (1ff045a0-c6ee-5809-9170-454393edc82a) possui códigos [SKU:398939], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "66469603-6b6f-5ed5-ab78-8d13bd741a99",
-    "details": "Produto \"LULA TENTÁCULO (ACIMA DE 2KG) - INTERATLANTIC\" (66469603-6b6f-5ed5-ab78-8d13bd741a99) possui códigos [SKU:398940], mas NENHUM EAN numérico válido!"
+    "item_id": "d93c4a99-249d-56e3-b297-d610620a1d6d",
+    "details": "Produto \"BARRIGA SUÍNA COM PELE INTERFOLHADA - DICASA\" (d93c4a99-249d-56e3-b297-d610620a1d6d) possui códigos [SKU:372712], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1040,14 +1046,20 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "ff3998cb-0f01-5ccf-a4a5-ccc630de0a99",
+    "details": "Produto \"Pernil Cordeiro Stinco Nirea\" (ff3998cb-0f01-5ccf-a4a5-ccc630de0a99) possui códigos [SKU:771494], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "5d28d7b2-32c0-5e59-9669-889ffb2c12ef",
     "details": "Produto \"COXA E SOBRECOXA ENVELOPADA PACOTE- LAR\" (5d28d7b2-32c0-5e59-9669-889ffb2c12ef) possui códigos [SKU:393412, DUN:17896419719974], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "ff3998cb-0f01-5ccf-a4a5-ccc630de0a99",
-    "details": "Produto \"Pernil Cordeiro Stinco Nirea\" (ff3998cb-0f01-5ccf-a4a5-ccc630de0a99) possui códigos [SKU:771494], mas NENHUM EAN numérico válido!"
+    "item_id": "3555d00e-577f-5f4a-95c5-63293fa7df40",
+    "details": "Produto \"FILÉ DE SALMÃO COHO PREMIUM (1800 A 2000G) - AQUACHILE\" (3555d00e-577f-5f4a-95c5-63293fa7df40) possui códigos [SKU:391308], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1064,18 +1076,6 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "3555d00e-577f-5f4a-95c5-63293fa7df40",
-    "details": "Produto \"FILÉ DE SALMÃO COHO PREMIUM (1800 A 2000G) - AQUACHILE\" (3555d00e-577f-5f4a-95c5-63293fa7df40) possui códigos [SKU:391308], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "c456d444-7481-5ea6-b18f-ca2a9b967ee9",
-    "details": "Produto \"PE SUINO SALGADO PCT PD PVAR\" (c456d444-7481-5ea6-b18f-ca2a9b967ee9) possui códigos [SKU:173786], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "1a26b5d8-f9b0-50d9-b12d-2a53b30310b0",
     "details": "Produto \"BATATA LATTICE (XADREZ) EXTRA CROCANTE COM CASCA (2KG) - SIMPLOT\" (1a26b5d8-f9b0-50d9-b12d-2a53b30310b0) possui códigos [SKU:397379], mas NENHUM EAN numérico válido!"
   },
@@ -1088,14 +1088,20 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "abf1d567-143d-527e-9e4b-9afa6df863f4",
-    "details": "Produto \"PICANHA A FEEDLOT (1,0 A 1,4KG) URUGUAIA - LAS PIEDRAS\" (abf1d567-143d-527e-9e4b-9afa6df863f4) possui códigos [SKU:383373], mas NENHUM EAN numérico válido!"
+    "item_id": "c456d444-7481-5ea6-b18f-ca2a9b967ee9",
+    "details": "Produto \"PE SUINO SALGADO PCT PD PVAR\" (c456d444-7481-5ea6-b18f-ca2a9b967ee9) possui códigos [SKU:173786], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
     "item_id": "f2e895c7-b358-568d-8048-8b930b3c10de",
     "details": "Produto \"Lombo Suíno Fatiado Sadia 800g - Caixa c/10\" (f2e895c7-b358-568d-8048-8b930b3c10de) possui códigos [SKU:757086], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "abf1d567-143d-527e-9e4b-9afa6df863f4",
+    "details": "Produto \"PICANHA A FEEDLOT (1,0 A 1,4KG) URUGUAIA - LAS PIEDRAS\" (abf1d567-143d-527e-9e4b-9afa6df863f4) possui códigos [SKU:383373], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1112,14 +1118,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "b0df9e37-dd36-5d98-9d3b-e4c0e504f262",
-    "details": "Produto \"FRANGO INT S/MIUDOS TEMP CONG PVAR SD\" (b0df9e37-dd36-5d98-9d3b-e4c0e504f262) possui códigos [SKU:171361], mas NENHUM EAN numérico válido!"
+    "item_id": "2037f0c0-ba6b-5ebe-ab9c-58ce2a676ded",
+    "details": "Produto \"SOBRECOXA DE FRANGO INTERFOLHADA - CANÇÃO\" (2037f0c0-ba6b-5ebe-ab9c-58ce2a676ded) possui códigos [SKU:385542], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "2037f0c0-ba6b-5ebe-ab9c-58ce2a676ded",
-    "details": "Produto \"SOBRECOXA DE FRANGO INTERFOLHADA - CANÇÃO\" (2037f0c0-ba6b-5ebe-ab9c-58ce2a676ded) possui códigos [SKU:385542], mas NENHUM EAN numérico válido!"
+    "item_id": "b0df9e37-dd36-5d98-9d3b-e4c0e504f262",
+    "details": "Produto \"FRANGO INT S/MIUDOS TEMP CONG PVAR SD\" (b0df9e37-dd36-5d98-9d3b-e4c0e504f262) possui códigos [SKU:171361], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1148,8 +1154,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "55082f2a-ef4f-5916-a4ed-47f8ee2fe126",
-    "details": "Produto \"COSTELA SUÍNA SPECIAL LINE - SEARA\" (55082f2a-ef4f-5916-a4ed-47f8ee2fe126) possui códigos [SKU:350517, DUN:17894904009197], mas NENHUM EAN numérico válido!"
+    "item_id": "649d9ff2-6ecf-5881-b16b-fd967625d124",
+    "details": "Produto \"FILÉ DE MERLUZA SEM PELE (60 A 200G) INTERFOLHADO - PEIXES BRASIL\" (649d9ff2-6ecf-5881-b16b-fd967625d124) possui códigos [SKU:386277], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1160,20 +1166,26 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "55082f2a-ef4f-5916-a4ed-47f8ee2fe126",
+    "details": "Produto \"COSTELA SUÍNA SPECIAL LINE - SEARA\" (55082f2a-ef4f-5916-a4ed-47f8ee2fe126) possui códigos [SKU:350517, DUN:17894904009197], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "94faf7f0-469b-5232-90cf-5293571167ea",
     "details": "Produto \"LINGUIÇA CALABRESA CURVA PACOTE (2,5KG) - SEARA\" (94faf7f0-469b-5232-90cf-5293571167ea) possui códigos [SKU:350519, DUN:17894904009746], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "649d9ff2-6ecf-5881-b16b-fd967625d124",
-    "details": "Produto \"FILÉ DE MERLUZA SEM PELE (60 A 200G) INTERFOLHADO - PEIXES BRASIL\" (649d9ff2-6ecf-5881-b16b-fd967625d124) possui códigos [SKU:386277], mas NENHUM EAN numérico válido!"
+    "item_id": "9e256c9b-57e5-5f48-83cd-26c0e78ef03a",
+    "details": "Produto \"FILÉ DE MERLUZA IQF (10KG) PERUANA - SERMARSU\" (9e256c9b-57e5-5f48-83cd-26c0e78ef03a) possui códigos [SKU:399262], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "8d443ad4-0db7-54ac-af01-cc385a04218b",
-    "details": "Produto \"FILÉ DE SALMÃO COHO PREMIUM A VÁCUO (1500 A 2000G) - FRUMAR\" (8d443ad4-0db7-54ac-af01-cc385a04218b) possui códigos [SKU:386891], mas NENHUM EAN numérico válido!"
+    "item_id": "571ce03f-0ddf-5b41-b7de-4d3c611329fe",
+    "details": "Produto \"LINGUIÇA MISTA (600G) - LEBON\" (571ce03f-0ddf-5b41-b7de-4d3c611329fe) possui códigos [SKU:399293, DUN:17894904611611], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1202,14 +1214,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "9e256c9b-57e5-5f48-83cd-26c0e78ef03a",
-    "details": "Produto \"FILÉ DE MERLUZA IQF (10KG) PERUANA - SERMARSU\" (9e256c9b-57e5-5f48-83cd-26c0e78ef03a) possui códigos [SKU:399262], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "571ce03f-0ddf-5b41-b7de-4d3c611329fe",
-    "details": "Produto \"LINGUIÇA MISTA (600G) - LEBON\" (571ce03f-0ddf-5b41-b7de-4d3c611329fe) possui códigos [SKU:399293, DUN:17894904611611], mas NENHUM EAN numérico válido!"
+    "item_id": "8d443ad4-0db7-54ac-af01-cc385a04218b",
+    "details": "Produto \"FILÉ DE SALMÃO COHO PREMIUM A VÁCUO (1500 A 2000G) - FRUMAR\" (8d443ad4-0db7-54ac-af01-cc385a04218b) possui códigos [SKU:386891], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1250,6 +1256,18 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "877f1448-82bf-517b-80c6-949cc60f78d5",
+    "details": "Produto \"Fralda Maturado Red Sadia Bassi Stars\" (877f1448-82bf-517b-80c6-949cc60f78d5) possui códigos [SKU:5801023], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "88333f22-3c16-52f4-8466-da7dbba6040d",
+    "details": "Produto \"CORAÇÃO DE FRANGO ARGENTINA PACOTE (1KG) - POLLOLIN\" (88333f22-3c16-52f4-8466-da7dbba6040d) possui códigos [SKU:376026], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "c9529b65-acd4-5a17-a071-d7f2e039234b",
     "details": "Produto \"FILÉ DE COXA E SOBRECOXA COM PELE PACOTE - LAR\" (c9529b65-acd4-5a17-a071-d7f2e039234b) possui códigos [SKU:376252], mas NENHUM EAN numérico válido!"
   },
@@ -1268,14 +1286,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "88333f22-3c16-52f4-8466-da7dbba6040d",
-    "details": "Produto \"CORAÇÃO DE FRANGO ARGENTINA PACOTE (1KG) - POLLOLIN\" (88333f22-3c16-52f4-8466-da7dbba6040d) possui códigos [SKU:376026], mas NENHUM EAN numérico válido!"
+    "item_id": "2cda73eb-6003-5736-8514-836ca02b5150",
+    "details": "Produto \"BATATA PALITO 9MM PACOTE (1,05KG) - DO CHEF\" (2cda73eb-6003-5736-8514-836ca02b5150) possui códigos [SKU:394256], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "877f1448-82bf-517b-80c6-949cc60f78d5",
-    "details": "Produto \"Fralda Maturado Red Sadia Bassi Stars\" (877f1448-82bf-517b-80c6-949cc60f78d5) possui códigos [SKU:5801023], mas NENHUM EAN numérico válido!"
+    "item_id": "164db228-5922-5359-bdcc-6cb6a80b7ad9",
+    "details": "Produto \"Queijo Mussarela Peça Cx. de 16,05kg\" (164db228-5922-5359-bdcc-6cb6a80b7ad9) possui códigos [SKU:2819, DUN:47891164028198], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1292,32 +1310,20 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "2cda73eb-6003-5736-8514-836ca02b5150",
-    "details": "Produto \"BATATA PALITO 9MM PACOTE (1,05KG) - DO CHEF\" (2cda73eb-6003-5736-8514-836ca02b5150) possui códigos [SKU:394256], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "164db228-5922-5359-bdcc-6cb6a80b7ad9",
-    "details": "Produto \"Queijo Mussarela Peça Cx. de 16,05kg\" (164db228-5922-5359-bdcc-6cb6a80b7ad9) possui códigos [DUN:47891164028198, SKU:2819], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "bf8fb102-ef95-5384-8eb0-62b5058acbef",
     "details": "Produto \"LINGUIÇA MISTA MINI  (5KG) - Rezende\" (bf8fb102-ef95-5384-8eb0-62b5058acbef) possui códigos [SKU:382187, DUN:17894904227089], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "5bcd3bbb-d044-586e-83d5-cbdc301be5f5",
-    "details": "Produto \"PICANHA B (ACIMA DE 1,6KG) URUGUAIA - NIREA EL RANCHO\" (5bcd3bbb-d044-586e-83d5-cbdc301be5f5) possui códigos [SKU:399011], mas NENHUM EAN numérico válido!"
+    "item_id": "f25c2743-0fbe-594b-a475-d10308a24aef",
+    "details": "Produto \"PICANHA A URUGUAIA FEEDLOT (1,4 A 1,8KG) - LAS PIEDRAS\" (f25c2743-0fbe-594b-a475-d10308a24aef) possui códigos [SKU:395309], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "f25c2743-0fbe-594b-a475-d10308a24aef",
-    "details": "Produto \"PICANHA A URUGUAIA FEEDLOT (1,4 A 1,8KG) - LAS PIEDRAS\" (f25c2743-0fbe-594b-a475-d10308a24aef) possui códigos [SKU:395309], mas NENHUM EAN numérico válido!"
+    "item_id": "5bcd3bbb-d044-586e-83d5-cbdc301be5f5",
+    "details": "Produto \"PICANHA B (ACIMA DE 1,6KG) URUGUAIA - NIREA EL RANCHO\" (5bcd3bbb-d044-586e-83d5-cbdc301be5f5) possui códigos [SKU:399011], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1334,8 +1340,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "f4d8ac36-44b7-5252-9699-facb3b4b84f3",
-    "details": "Produto \"PICANHA B (ABAIXO DE 1,4KG) - LAS PIEDRAS\" (f4d8ac36-44b7-5252-9699-facb3b4b84f3) possui códigos [SKU:383374], mas NENHUM EAN numérico válido!"
+    "item_id": "86f1f73e-b910-5828-8253-e1f4ebd2c5d8",
+    "details": "Produto \"Picanha Importado Kilcoy\" (86f1f73e-b910-5828-8253-e1f4ebd2c5d8) possui códigos [SKU:771512], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1346,14 +1352,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "86f1f73e-b910-5828-8253-e1f4ebd2c5d8",
-    "details": "Produto \"Picanha Importado Kilcoy\" (86f1f73e-b910-5828-8253-e1f4ebd2c5d8) possui códigos [SKU:771512], mas NENHUM EAN numérico válido!"
+    "item_id": "7bf9ae26-9955-5a7b-8c40-d106e2473e22",
+    "details": "Produto \"COXINHA DA ASA PACOTE - LAR\" (7bf9ae26-9955-5a7b-8c40-d106e2473e22) possui códigos [SKU:364395], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "7bf9ae26-9955-5a7b-8c40-d106e2473e22",
-    "details": "Produto \"COXINHA DA ASA PACOTE - LAR\" (7bf9ae26-9955-5a7b-8c40-d106e2473e22) possui códigos [SKU:364395], mas NENHUM EAN numérico válido!"
+    "item_id": "f4d8ac36-44b7-5252-9699-facb3b4b84f3",
+    "details": "Produto \"PICANHA B (ABAIXO DE 1,4KG) - LAS PIEDRAS\" (f4d8ac36-44b7-5252-9699-facb3b4b84f3) possui códigos [SKU:383374], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1388,6 +1394,12 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "ff0ec493-fb9b-5ad6-bb74-3247175bc769",
+    "details": "Produto \"FILÉ DE TILÁPIA GRANEL (15KG) - MARFRESCO\" (ff0ec493-fb9b-5ad6-bb74-3247175bc769) possui códigos [SKU:395099], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "ee4c5a41-8a04-5383-a122-e0ef1faca89b",
     "details": "Produto \"MILHO DOCE PACOTE (2KG) - GRANO\" (ee4c5a41-8a04-5383-a122-e0ef1faca89b) possui códigos [SKU:358489], mas NENHUM EAN numérico válido!"
   },
@@ -1400,20 +1412,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "ff0ec493-fb9b-5ad6-bb74-3247175bc769",
-    "details": "Produto \"FILÉ DE TILÁPIA GRANEL (15KG) - MARFRESCO\" (ff0ec493-fb9b-5ad6-bb74-3247175bc769) possui códigos [SKU:395099], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "279e3b12-61f0-5b1e-bce7-16e0b53956fb",
     "details": "Produto \"PICANHA B (0,9 A 1,4KG) ARGENTINA - FRIMSA\" (279e3b12-61f0-5b1e-bce7-16e0b53956fb) possui códigos [SKU:395114], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "2080f734-2132-5dc2-b9cf-36bfbf5b36ec",
-    "details": "Produto \"Chicken Fingers 2kg - Seara Food Solutions\" (2080f734-2132-5dc2-b9cf-36bfbf5b36ec) possui códigos [SKU:410], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1426,6 +1426,12 @@
     "severity": "CRITICAL",
     "item_id": "a29be903-85e3-556b-983a-9a0d4d6e4d69",
     "details": "Produto \"PICANHA A URUGUAIA - EL RANCHO\" (a29be903-85e3-556b-983a-9a0d4d6e4d69) possui códigos [SKU:395189], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "2080f734-2132-5dc2-b9cf-36bfbf5b36ec",
+    "details": "Produto \"Chicken Fingers 2kg - Seara Food Solutions\" (2080f734-2132-5dc2-b9cf-36bfbf5b36ec) possui códigos [SKU:410], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1466,14 +1472,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "6fa35961-21ac-5024-b3db-82c0cf2a5f57",
-    "details": "Produto \"FILÉ DE MERLUZA (60 A 200G) SEM PELE INTERFOLHADO - DO CHEF\" (6fa35961-21ac-5024-b3db-82c0cf2a5f57) possui códigos [SKU:381616], mas NENHUM EAN numérico válido!"
+    "item_id": "ade37e4d-9808-5cd3-a50f-27b7f82a6759",
+    "details": "Produto \"POLACA DO ALASCA DESSALGADA DESFIADA (5KG) - MAR ALTO\" (ade37e4d-9808-5cd3-a50f-27b7f82a6759) possui códigos [SKU:395117], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "ade37e4d-9808-5cd3-a50f-27b7f82a6759",
-    "details": "Produto \"POLACA DO ALASCA DESSALGADA DESFIADA (5KG) - MAR ALTO\" (ade37e4d-9808-5cd3-a50f-27b7f82a6759) possui códigos [SKU:395117], mas NENHUM EAN numérico válido!"
+    "item_id": "6fa35961-21ac-5024-b3db-82c0cf2a5f57",
+    "details": "Produto \"FILÉ DE MERLUZA (60 A 200G) SEM PELE INTERFOLHADO - DO CHEF\" (6fa35961-21ac-5024-b3db-82c0cf2a5f57) possui códigos [SKU:381616], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1490,18 +1496,6 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "e2af5839-7862-5aa2-bf4c-b6a9fa574c52",
-    "details": "Produto \"BACALHAU SAITHE (13 A 15) (25KG) - FJORDLAKS\" (e2af5839-7862-5aa2-bf4c-b6a9fa574c52) possui códigos [SKU:398050], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "98549b74-648d-56d8-aa00-9ed8f75c24e8",
-    "details": "Produto \"ANÉIS DE LULA (5KG) - PECEPE\" (98549b74-648d-56d8-aa00-9ed8f75c24e8) possui códigos [SKU:398836], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "162b6022-a5bf-5fa5-8683-df187620bf1b",
     "details": "Produto \"PRESUNTO COZIDO SEM CAPA - LEBON\" (162b6022-a5bf-5fa5-8683-df187620bf1b) possui códigos [DUN:17896589554092, SKU:366512], mas NENHUM EAN numérico válido!"
   },
@@ -1510,6 +1504,18 @@
     "severity": "CRITICAL",
     "item_id": "4b78fd76-c3be-5bc6-b044-2deb9fdef008",
     "details": "Produto \"PEITO COM OSSO INDIVIDUAL - CANÇÃO\" (4b78fd76-c3be-5bc6-b044-2deb9fdef008) possui códigos [SKU:366801], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "e2af5839-7862-5aa2-bf4c-b6a9fa574c52",
+    "details": "Produto \"BACALHAU SAITHE (13 A 15) (25KG) - FJORDLAKS\" (e2af5839-7862-5aa2-bf4c-b6a9fa574c52) possui códigos [SKU:398050], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "98549b74-648d-56d8-aa00-9ed8f75c24e8",
+    "details": "Produto \"ANÉIS DE LULA (5KG) - PECEPE\" (98549b74-648d-56d8-aa00-9ed8f75c24e8) possui códigos [SKU:398836], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1538,12 +1544,6 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "0cbef866-41a5-593d-8233-4ad02e3bdd78",
-    "details": "Produto \"PICANHA A FEEDLOT (1,4 A 1,8KG) URUGUAIA - LAS PIEDRAS\" (0cbef866-41a5-593d-8233-4ad02e3bdd78) possui códigos [SKU:383366], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "5b8e0adc-90fc-5aac-a249-213e46ac89a0",
     "details": "Produto \"LINGUIÇA BOVINA (300G) - MATURATTA\" (5b8e0adc-90fc-5aac-a249-213e46ac89a0) possui códigos [SKU:396682], mas NENHUM EAN numérico válido!"
   },
@@ -1568,20 +1568,26 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "0cbef866-41a5-593d-8233-4ad02e3bdd78",
+    "details": "Produto \"PICANHA A FEEDLOT (1,4 A 1,8KG) URUGUAIA - LAS PIEDRAS\" (0cbef866-41a5-593d-8233-4ad02e3bdd78) possui códigos [SKU:383366], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "3a9bd0e3-c2d5-5ed3-952b-43e0fa1c02a6",
     "details": "Produto \"COXINHA DA ASA TEMPERADA PACOTE (700G) - LAR\" (3a9bd0e3-c2d5-5ed3-952b-43e0fa1c02a6) possui códigos [SKU:397056], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "41ba297b-4125-5077-8e1c-65d9b59abf02",
-    "details": "Produto \"SARDINHA INTEIRA GRANEL (15KG) - PORTO BELO PESCADOS\" (41ba297b-4125-5077-8e1c-65d9b59abf02) possui códigos [SKU:397122], mas NENHUM EAN numérico válido!"
+    "item_id": "fd9c84db-c5a0-5fd8-a23e-a7a365721ba6",
+    "details": "Produto \"FILÉZINHO (SASSAMI) IQF PACOTE 1KG - SEARA\" (fd9c84db-c5a0-5fd8-a23e-a7a365721ba6) possui códigos [SKU:368826, DUN:17894904197733], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "fd9c84db-c5a0-5fd8-a23e-a7a365721ba6",
-    "details": "Produto \"FILÉZINHO (SASSAMI) IQF PACOTE 1KG - SEARA\" (fd9c84db-c5a0-5fd8-a23e-a7a365721ba6) possui códigos [SKU:368826, DUN:17894904197733], mas NENHUM EAN numérico válido!"
+    "item_id": "41ba297b-4125-5077-8e1c-65d9b59abf02",
+    "details": "Produto \"SARDINHA INTEIRA GRANEL (15KG) - PORTO BELO PESCADOS\" (41ba297b-4125-5077-8e1c-65d9b59abf02) possui códigos [SKU:397122], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1616,6 +1622,12 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "ecd54217-fbbc-5d67-a0fe-ce2d12d139a7",
+    "details": "Produto \"PICANHA A SEM PELE (1,3 A 1,7KG) URUGUAIA - LAS MORAS\" (ecd54217-fbbc-5d67-a0fe-ce2d12d139a7) possui códigos [SKU:373495], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "108e09a8-f6f1-53fa-852f-aa97f8ce4446",
     "details": "Produto \"HAMBÚRGUER 180G (FRALDA) GRANEL - MATURATTA\" (108e09a8-f6f1-53fa-852f-aa97f8ce4446) possui códigos [SKU:397782], mas NENHUM EAN numérico válido!"
   },
@@ -1628,26 +1640,20 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "ecd54217-fbbc-5d67-a0fe-ce2d12d139a7",
-    "details": "Produto \"PICANHA A SEM PELE (1,3 A 1,7KG) URUGUAIA - LAS MORAS\" (ecd54217-fbbc-5d67-a0fe-ce2d12d139a7) possui códigos [SKU:373495], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "511513b7-be58-54d4-8ecf-27eeaed5ded3",
     "details": "Produto \"PICANHA (ABAIXO DE 1,3KG) PARAGUAIA - VICTÓRIA\" (511513b7-be58-54d4-8ecf-27eeaed5ded3) possui códigos [SKU:397823], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "33700cc9-5780-5dea-9c68-121e908ded48",
-    "details": "Produto \"PICANHA ARGENTINA (1,2 A 1,4KG) - FB MEAT\" (33700cc9-5780-5dea-9c68-121e908ded48) possui códigos [SKU:395548], mas NENHUM EAN numérico válido!"
+    "item_id": "5d4880c2-79a8-5e08-8e76-9758bcb99f67",
+    "details": "Produto \"PICANHA A ANGUS FEEDLOT MATURADA (1,0 A 1,4KG) URUGUAIA - LAS PIEDRAS\" (5d4880c2-79a8-5e08-8e76-9758bcb99f67) possui códigos [SKU:377034], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "5d4880c2-79a8-5e08-8e76-9758bcb99f67",
-    "details": "Produto \"PICANHA A ANGUS FEEDLOT MATURADA (1,0 A 1,4KG) URUGUAIA - LAS PIEDRAS\" (5d4880c2-79a8-5e08-8e76-9758bcb99f67) possui códigos [SKU:377034], mas NENHUM EAN numérico válido!"
+    "item_id": "33700cc9-5780-5dea-9c68-121e908ded48",
+    "details": "Produto \"PICANHA ARGENTINA (1,2 A 1,4KG) - FB MEAT\" (33700cc9-5780-5dea-9c68-121e908ded48) possui códigos [SKU:395548], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1664,14 +1670,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "1508d77c-a03f-5663-ad62-5caab75fc17a",
-    "details": "Produto \"BRÓCOLIS PACOTE (1,05KG) - DO CHEF\" (1508d77c-a03f-5663-ad62-5caab75fc17a) possui códigos [SKU:398052], mas NENHUM EAN numérico válido!"
+    "item_id": "612bdd0f-edaf-51a2-855c-bb5e25fa1421",
+    "details": "Produto \"BACALHAU SAITHE (16 A 20) (25KG) - FJORDLAKS\" (612bdd0f-edaf-51a2-855c-bb5e25fa1421) possui códigos [SKU:398051], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "612bdd0f-edaf-51a2-855c-bb5e25fa1421",
-    "details": "Produto \"BACALHAU SAITHE (16 A 20) (25KG) - FJORDLAKS\" (612bdd0f-edaf-51a2-855c-bb5e25fa1421) possui códigos [SKU:398051], mas NENHUM EAN numérico válido!"
+    "item_id": "1508d77c-a03f-5663-ad62-5caab75fc17a",
+    "details": "Produto \"BRÓCOLIS PACOTE (1,05KG) - DO CHEF\" (1508d77c-a03f-5663-ad62-5caab75fc17a) possui códigos [SKU:398052], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1700,12 +1706,6 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "fd5064c8-d196-5832-85a1-c0bfdcfb8fed",
-    "details": "Produto \"CARCAÇA OVINA - 1953\" (fd5064c8-d196-5832-85a1-c0bfdcfb8fed) possui códigos [SKU:397774], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "db655fc5-8aa5-5025-8a1d-74ed829b49f6",
     "details": "Produto \"Torta Chester com Calabresa e Molho Sabor Cheddar 500 g\" (db655fc5-8aa5-5025-8a1d-74ed829b49f6) possui códigos [SKU:175458], mas NENHUM EAN numérico válido!"
   },
@@ -1724,6 +1724,12 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "fd5064c8-d196-5832-85a1-c0bfdcfb8fed",
+    "details": "Produto \"CARCAÇA OVINA - 1953\" (fd5064c8-d196-5832-85a1-c0bfdcfb8fed) possui códigos [SKU:397774], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "9b9e903d-6a2e-58e4-bb8c-4fbd139d6f8b",
     "details": "Produto \"FILÉ DE TILÁPIA SEM PELE PACOTE (800G) - PLANALTO\" (9b9e903d-6a2e-58e4-bb8c-4fbd139d6f8b) possui códigos [SKU:398149], mas NENHUM EAN numérico válido!"
   },
@@ -1732,6 +1738,12 @@
     "severity": "CRITICAL",
     "item_id": "a474aa85-a7e3-5452-ab31-754981eb3d0f",
     "details": "Produto \"PERNIL OVINO COM OSSO - CASA BLANCA\" (a474aa85-a7e3-5452-ab31-754981eb3d0f) possui códigos [SKU:398150], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "4742f315-7f41-5de5-b9d0-7df69023e5ab",
+    "details": "Produto \"Ave Inteira Temperada Congelada Kidelli 3,6kg a 4,2 kg\" (4742f315-7f41-5de5-b9d0-7df69023e5ab) possui códigos [SKU:768594], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1750,12 +1762,6 @@
     "severity": "CRITICAL",
     "item_id": "c27e7f90-06bc-5928-9fcb-4f59e9703dae",
     "details": "Produto \"FILÉ DE TILÁPIA PACOTE (800G) - PLANALTO\" (c27e7f90-06bc-5928-9fcb-4f59e9703dae) possui códigos [SKU:398539], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "4742f315-7f41-5de5-b9d0-7df69023e5ab",
-    "details": "Produto \"Ave Inteira Temperada Congelada Kidelli 3,6kg a 4,2 kg\" (4742f315-7f41-5de5-b9d0-7df69023e5ab) possui códigos [SKU:768594], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1790,6 +1796,12 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "b10e8e96-7c70-5a3c-a642-a93f30a3942f",
+    "details": "Produto \"PERNIL OVINO COM OSSO - DO CHEF\" (b10e8e96-7c70-5a3c-a642-a93f30a3942f) possui códigos [SKU:398588], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "b4c22201-7d0e-55e4-9f6e-013512615b34",
     "details": "Produto \"PALETA OVINA (1,4 A 1,6KG) - DO CHEF\" (b4c22201-7d0e-55e4-9f6e-013512615b34) possui códigos [SKU:398591], mas NENHUM EAN numérico válido!"
   },
@@ -1798,12 +1810,6 @@
     "severity": "CRITICAL",
     "item_id": "fdcb29ee-3cb1-5f77-ba46-acd3bd605f43",
     "details": "Produto \"FILÉ DE PANGA SEM PELE  IQF - FATIFISH\" (fdcb29ee-3cb1-5f77-ba46-acd3bd605f43) possui códigos [SKU:398665], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "b10e8e96-7c70-5a3c-a642-a93f30a3942f",
-    "details": "Produto \"PERNIL OVINO COM OSSO - DO CHEF\" (b10e8e96-7c70-5a3c-a642-a93f30a3942f) possui códigos [SKU:398588], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1862,6 +1868,12 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "6bc8b214-dc13-5442-a119-33dad5f0c93a",
+    "details": "Produto \"PICANHA A URUGUAIA ANGUS BEEF (ACIMA DE 1,7KG) - LAS MORAS\" (6bc8b214-dc13-5442-a119-33dad5f0c93a) possui códigos [SKU:397957], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "211ec649-d741-5a99-b154-3cfd08ae51d9",
     "details": "Produto \"ALCATRA (PICANHA) OVINA ABAIXO DE 350G - DO CHEF\" (211ec649-d741-5a99-b154-3cfd08ae51d9) possui códigos [SKU:398594], mas NENHUM EAN numérico válido!"
   },
@@ -1876,12 +1888,6 @@
     "severity": "CRITICAL",
     "item_id": "405ffdad-533d-505b-9eb6-2ecbb8ca3bbf",
     "details": "Produto \"PICANHA A URUGUAIA FEEDLOT (ACIMA DE 1,8KG) - LAS PIEDRAS\" (405ffdad-533d-505b-9eb6-2ecbb8ca3bbf) possui códigos [SKU:395310], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "6bc8b214-dc13-5442-a119-33dad5f0c93a",
-    "details": "Produto \"PICANHA A URUGUAIA ANGUS BEEF (ACIMA DE 1,7KG) - LAS MORAS\" (6bc8b214-dc13-5442-a119-33dad5f0c93a) possui códigos [SKU:397957], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -1958,32 +1964,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "d8d036fe-b7e4-515f-9031-ac80f6f11985",
-    "details": "Produto \"FILÉ DE TILÁPIA PACOTE (5KG) - LAR\" (d8d036fe-b7e4-515f-9031-ac80f6f11985) possui códigos [SKU:397324], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "4fa5706a-9783-5322-a8ca-8e52115350d0",
     "details": "Produto \"Bife De Lombo De Cordeiro Com Gordura Nirea\" (4fa5706a-9783-5322-a8ca-8e52115350d0) possui códigos [SKU:771504], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "acfa2137-dabd-5951-b37e-7f18eb759815",
-    "details": "Produto \"RABO PARAGUAIO - AVICAR\" (acfa2137-dabd-5951-b37e-7f18eb759815) possui códigos [SKU:398443], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "3f2e5cdf-4b8a-5b84-a136-a057332c41a5",
-    "details": "Produto \"HAMBÚRGUER 180G (COSTELA) GRANEL- MATURATTA\" (3f2e5cdf-4b8a-5b84-a136-a057332c41a5) possui códigos [SKU:398459], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "9466b4bd-4f6e-5c48-acd7-e7eb4975edd9",
-    "details": "Produto \"RETALHO COST SUI SALG PCT 0,5 A 1KG PD\" (9466b4bd-4f6e-5c48-acd7-e7eb4975edd9) possui códigos [SKU:173779], mas NENHUM EAN numérico válido!"
+    "item_id": "d8d036fe-b7e4-515f-9031-ac80f6f11985",
+    "details": "Produto \"FILÉ DE TILÁPIA PACOTE (5KG) - LAR\" (d8d036fe-b7e4-515f-9031-ac80f6f11985) possui códigos [SKU:397324], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -2000,6 +1988,18 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "acfa2137-dabd-5951-b37e-7f18eb759815",
+    "details": "Produto \"RABO PARAGUAIO - AVICAR\" (acfa2137-dabd-5951-b37e-7f18eb759815) possui códigos [SKU:398443], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "9466b4bd-4f6e-5c48-acd7-e7eb4975edd9",
+    "details": "Produto \"RETALHO COST SUI SALG PCT 0,5 A 1KG PD\" (9466b4bd-4f6e-5c48-acd7-e7eb4975edd9) possui códigos [SKU:173779], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "218d4818-8fe1-5351-a90a-efc6f6708578",
     "details": "Produto \"FRANGO INT S/MIUDOS TEMP CONG PVAR SD\" (218d4818-8fe1-5351-a90a-efc6f6708578) possui códigos [SKU:171358], mas NENHUM EAN numérico válido!"
   },
@@ -2012,8 +2012,8 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "fb82c820-87f6-5902-b40d-92a5b269941d",
-    "details": "Produto \"SOBRECOXA DE FRANGO PACOTE - LAR\" (fb82c820-87f6-5902-b40d-92a5b269941d) possui códigos [SKU:364399], mas NENHUM EAN numérico válido!"
+    "item_id": "3f2e5cdf-4b8a-5b84-a136-a057332c41a5",
+    "details": "Produto \"HAMBÚRGUER 180G (COSTELA) GRANEL- MATURATTA\" (3f2e5cdf-4b8a-5b84-a136-a057332c41a5) possui códigos [SKU:398459], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -2024,20 +2024,26 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "fb82c820-87f6-5902-b40d-92a5b269941d",
+    "details": "Produto \"SOBRECOXA DE FRANGO PACOTE - LAR\" (fb82c820-87f6-5902-b40d-92a5b269941d) possui códigos [SKU:364399], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "f2565340-0e1e-5f31-9574-8d3e13228262",
     "details": "Produto \"PICANHA ARGENTINA (ACIMA DE 1,6KG) - FB MEAT\" (f2565340-0e1e-5f31-9574-8d3e13228262) possui códigos [SKU:397740], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "7da8a23b-b6d9-546b-8569-86f7fd303e53",
-    "details": "Produto \"FILÉ DE MERLUZA SEM PELE IINTERFOLHADO (60 A 200G) - BOM PEIXE\" (7da8a23b-b6d9-546b-8569-86f7fd303e53) possui códigos [SKU:393815], mas NENHUM EAN numérico válido!"
+    "item_id": "bc646681-cd1f-5dcb-94b9-ae278e877ae7",
+    "details": "Produto \"COXA DE FRANGO - REAL ALIMENTOS\" (bc646681-cd1f-5dcb-94b9-ae278e877ae7) possui códigos [SKU:398756], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "bc646681-cd1f-5dcb-94b9-ae278e877ae7",
-    "details": "Produto \"COXA DE FRANGO - REAL ALIMENTOS\" (bc646681-cd1f-5dcb-94b9-ae278e877ae7) possui códigos [SKU:398756], mas NENHUM EAN numérico válido!"
+    "item_id": "7da8a23b-b6d9-546b-8569-86f7fd303e53",
+    "details": "Produto \"FILÉ DE MERLUZA SEM PELE IINTERFOLHADO (60 A 200G) - BOM PEIXE\" (7da8a23b-b6d9-546b-8569-86f7fd303e53) possui códigos [SKU:393815], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -2114,6 +2120,12 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
+    "item_id": "940f048b-8fe4-5352-a7c3-9404dc313f54",
+    "details": "Produto \"FILÉ DE MERLUZÃO INTERFOLHADO (10KG) - PLANALTO\" (940f048b-8fe4-5352-a7c3-9404dc313f54) possui códigos [SKU:382769], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
     "item_id": "2b71fe2a-7153-511d-88dd-13b539d8aa99",
     "details": "Produto \"Filé Costela Sadia Bassi Stars - 2,5kg\" (2b71fe2a-7153-511d-88dd-13b539d8aa99) possui códigos [SKU:5801031], mas NENHUM EAN numérico válido!"
   },
@@ -2122,12 +2134,6 @@
     "severity": "CRITICAL",
     "item_id": "915dcd3c-b626-5a17-8121-0c9ccdc74216",
     "details": "Produto \"Ovino Paleta Importado Nirea - 2kg\" (915dcd3c-b626-5a17-8121-0c9ccdc74216) possui códigos [SKU:5800297], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "940f048b-8fe4-5352-a7c3-9404dc313f54",
-    "details": "Produto \"FILÉ DE MERLUZÃO INTERFOLHADO (10KG) - PLANALTO\" (940f048b-8fe4-5352-a7c3-9404dc313f54) possui códigos [SKU:382769], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -2162,14 +2168,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "1be7f133-3ec9-5729-a904-8805f0f36edd",
-    "details": "Produto \"FILÉ DE MERLUZÃO (10KG) INTERFOLHADO - PORTO BELO\" (1be7f133-3ec9-5729-a904-8805f0f36edd) possui códigos [SKU:364822], mas NENHUM EAN numérico válido!"
+    "item_id": "2eed80d6-1137-5bd7-a69d-2024ee665ef4",
+    "details": "Produto \"BACON SEM PELE - FRIELLA\" (2eed80d6-1137-5bd7-a69d-2024ee665ef4) possui códigos [SKU:364736], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "2eed80d6-1137-5bd7-a69d-2024ee665ef4",
-    "details": "Produto \"BACON SEM PELE - FRIELLA\" (2eed80d6-1137-5bd7-a69d-2024ee665ef4) possui códigos [SKU:364736], mas NENHUM EAN numérico válido!"
+    "item_id": "1be7f133-3ec9-5729-a904-8805f0f36edd",
+    "details": "Produto \"FILÉ DE MERLUZÃO (10KG) INTERFOLHADO - PORTO BELO\" (1be7f133-3ec9-5729-a904-8805f0f36edd) possui códigos [SKU:364822], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -2216,12 +2222,6 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "d43aba6c-3b31-5a86-9cb1-e84af3ae07d1",
-    "details": "Produto \"COXA PACOTE IQF PACOTE - SEARA\" (d43aba6c-3b31-5a86-9cb1-e84af3ae07d1) possui códigos [SKU:370657, DUN:17894904197726], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "683327ab-a4c2-5848-9964-ed1eaa4d8217",
     "details": "Produto \"LINGUIÇA DE FRANGO (5KG) - SEARA\" (683327ab-a4c2-5848-9964-ed1eaa4d8217) possui códigos [SKU:370682, DUN:17894904005182], mas NENHUM EAN numérico válido!"
   },
@@ -2246,20 +2246,20 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "021f3e75-87d5-55df-bcaa-f1975d16d44a",
-    "details": "Produto \"SALAME ITALIANO FATIADO - SEARA\" (021f3e75-87d5-55df-bcaa-f1975d16d44a) possui códigos [DUN:17894904555656], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "bda88ec9-eedb-5a19-ad01-1ff470d6a7f9",
-    "details": "Produto \"BISTECA SUÍNA - SEARA\" (bda88ec9-eedb-5a19-ad01-1ff470d6a7f9) possui códigos [SKU:370800, DUN:17894904594617], mas NENHUM EAN numérico válido!"
+    "item_id": "d43aba6c-3b31-5a86-9cb1-e84af3ae07d1",
+    "details": "Produto \"COXA PACOTE IQF PACOTE - SEARA\" (d43aba6c-3b31-5a86-9cb1-e84af3ae07d1) possui códigos [SKU:370657, DUN:17894904197726], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
     "item_id": "491f97ce-917d-52fb-9d63-76be6cc71a4b",
     "details": "Produto \"Carré Suíno Sadia Caixa 20Kg -Caixa c/1\" (491f97ce-917d-52fb-9d63-76be6cc71a4b) possui códigos [SKU:514675], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "bda88ec9-eedb-5a19-ad01-1ff470d6a7f9",
+    "details": "Produto \"BISTECA SUÍNA - SEARA\" (bda88ec9-eedb-5a19-ad01-1ff470d6a7f9) possui códigos [SKU:370800, DUN:17894904594617], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -2282,14 +2282,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "3879de9d-fdb2-542c-8105-7cb25010c079",
-    "details": "Produto \"FRANGO À PASSARINHO PACOTE - SEARA\" (3879de9d-fdb2-542c-8105-7cb25010c079) possui códigos [SKU:374076, DUN:17894904985507], mas NENHUM EAN numérico válido!"
+    "item_id": "a9db7d6d-9d56-5aac-a65e-347c796f5ec1",
+    "details": "Produto \"PICANHA B (1,0 A 1,3KG) URUGUAIA - NIREA EL RANCHO\" (a9db7d6d-9d56-5aac-a65e-347c796f5ec1) possui códigos [SKU:399009], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "a9db7d6d-9d56-5aac-a65e-347c796f5ec1",
-    "details": "Produto \"PICANHA B (1,0 A 1,3KG) URUGUAIA - NIREA EL RANCHO\" (a9db7d6d-9d56-5aac-a65e-347c796f5ec1) possui códigos [SKU:399009], mas NENHUM EAN numérico válido!"
+    "item_id": "3879de9d-fdb2-542c-8105-7cb25010c079",
+    "details": "Produto \"FRANGO À PASSARINHO PACOTE - SEARA\" (3879de9d-fdb2-542c-8105-7cb25010c079) possui códigos [SKU:374076, DUN:17894904985507], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -2366,14 +2366,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "391ec94d-b50c-5ef2-a88b-c5eb6570bc58",
-    "details": "Produto \"Chester Tradicional 3 kg a 3,6 kg\" (391ec94d-b50c-5ef2-a88b-c5eb6570bc58) possui códigos [SKU:153562], mas NENHUM EAN numérico válido!"
+    "item_id": "52c65136-bc06-5855-bd95-0e087b5686ce",
+    "details": "Produto \"COXA E SOBRECOXA COM PORÇÃO DORSAL E SAMBIQUIRA PACOTE - LAR\" (52c65136-bc06-5855-bd95-0e087b5686ce) possui códigos [SKU:392556], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "52c65136-bc06-5855-bd95-0e087b5686ce",
-    "details": "Produto \"COXA E SOBRECOXA COM PORÇÃO DORSAL E SAMBIQUIRA PACOTE - LAR\" (52c65136-bc06-5855-bd95-0e087b5686ce) possui códigos [SKU:392556], mas NENHUM EAN numérico válido!"
+    "item_id": "391ec94d-b50c-5ef2-a88b-c5eb6570bc58",
+    "details": "Produto \"Chester Tradicional 3 kg a 3,6 kg\" (391ec94d-b50c-5ef2-a88b-c5eb6570bc58) possui códigos [SKU:153562], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -2414,14 +2414,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "38975db9-abf5-563c-aa94-92c12eb0802d",
-    "details": "Produto \"Picanha Importado Kilcoy\" (38975db9-abf5-563c-aa94-92c12eb0802d) possui códigos [SKU:771510], mas NENHUM EAN numérico válido!"
+    "item_id": "b434b004-2853-5521-953a-6b9376d7d93a",
+    "details": "Produto \"FILÉ DE PANGA INTERFOLHADO (5KG) - HOANG LONG\" (b434b004-2853-5521-953a-6b9376d7d93a) possui códigos [SKU:394155], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "b434b004-2853-5521-953a-6b9376d7d93a",
-    "details": "Produto \"FILÉ DE PANGA INTERFOLHADO (5KG) - HOANG LONG\" (b434b004-2853-5521-953a-6b9376d7d93a) possui códigos [SKU:394155], mas NENHUM EAN numérico válido!"
+    "item_id": "38975db9-abf5-563c-aa94-92c12eb0802d",
+    "details": "Produto \"Picanha Importado Kilcoy\" (38975db9-abf5-563c-aa94-92c12eb0802d) possui códigos [SKU:771510], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -2444,18 +2444,6 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "274f1562-cf24-5c41-85d9-21fdaf7decb9",
-    "details": "Produto \"Lombo De Bacalhau Dessalgado Soguima\" (274f1562-cf24-5c41-85d9-21fdaf7decb9) possui códigos [SKU:800118], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
-    "item_id": "21769c4b-986a-5fc0-931c-eb9c957d6c79",
-    "details": "Produto \"Filé de Merluzão San Salvador - 100g\" (21769c4b-986a-5fc0-931c-eb9c957d6c79) possui códigos [SKU:5800302], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "235f152e-621d-5fc3-8a85-9f46f614fef4",
     "details": "Produto \"PALETA OVINA COM OSSO - CASA BLANCA\" (235f152e-621d-5fc3-8a85-9f46f614fef4) possui códigos [SKU:398151], mas NENHUM EAN numérico válido!"
   },
@@ -2464,6 +2452,18 @@
     "severity": "CRITICAL",
     "item_id": "5c7cf3cc-80f4-5e44-bd79-4db645711864",
     "details": "Produto \"FILÉ DE PANGA SEM GORDURA PACOTE - JEAN VELEIRO\" (5c7cf3cc-80f4-5e44-bd79-4db645711864) possui códigos [SKU:398619], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "274f1562-cf24-5c41-85d9-21fdaf7decb9",
+    "details": "Produto \"Lombo De Bacalhau Dessalgado Soguima\" (274f1562-cf24-5c41-85d9-21fdaf7decb9) possui códigos [SKU:800118], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "21769c4b-986a-5fc0-931c-eb9c957d6c79",
+    "details": "Produto \"Filé de Merluzão San Salvador - 100g\" (21769c4b-986a-5fc0-931c-eb9c957d6c79) possui códigos [SKU:5800302], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -2547,7 +2547,7 @@
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
     "item_id": "b4d2ec40-c119-5d17-8c47-e9d9193aa0b2",
-    "details": "Produto \"JERKED SUÍNO (400G) - SEARA\" (b4d2ec40-c119-5d17-8c47-e9d9193aa0b2) possui códigos [SKU:389770, DUN:17894904272393], mas NENHUM EAN numérico válido!"
+    "details": "Produto \"JERKED SUÍNO (400G) - SEARA\" (b4d2ec40-c119-5d17-8c47-e9d9193aa0b2) possui códigos [SKU:389770], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -2594,14 +2594,14 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "ead16458-157c-5760-b238-83b8c57bed13",
-    "details": "Produto \"FILÉ DE POLACA DO ALASCA IQF - DO CHEF\" (ead16458-157c-5760-b238-83b8c57bed13) possui códigos [SKU:396756], mas NENHUM EAN numérico válido!"
+    "item_id": "f873e276-4474-52fa-a96c-62e0f427d09a",
+    "details": "Produto \"FILÉ DE COXA E SOBRECOXA COM PELE PACOTE IQF - SEARA\" (f873e276-4474-52fa-a96c-62e0f427d09a) possui códigos [DUN:17894904298515], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "f873e276-4474-52fa-a96c-62e0f427d09a",
-    "details": "Produto \"FILÉ DE COXA E SOBRECOXA COM PELE PACOTE IQF - SEARA\" (f873e276-4474-52fa-a96c-62e0f427d09a) possui códigos [DUN:17894904298515], mas NENHUM EAN numérico válido!"
+    "item_id": "ead16458-157c-5760-b238-83b8c57bed13",
+    "details": "Produto \"FILÉ DE POLACA DO ALASCA IQF - DO CHEF\" (ead16458-157c-5760-b238-83b8c57bed13) possui códigos [SKU:396756], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
@@ -2738,26 +2738,26 @@
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "ae939ba8-bfdc-52ac-8fbf-ad9efba33b69",
-    "details": "Produto \"CORVINA EM POSTA GRANEL (15KG) - MARFRESCO\" (ae939ba8-bfdc-52ac-8fbf-ad9efba33b69) possui códigos [SKU:394074], mas NENHUM EAN numérico válido!"
-  },
-  {
-    "category": "PRODUTO_SEM_EAN_NUMERICO",
-    "severity": "CRITICAL",
     "item_id": "50f06f3f-5ae1-5768-b363-d8043e6e542f",
     "details": "Produto \"COXINHA DA ASA TEMPERADA IQF PACOTE (700G) - LAR\" (50f06f3f-5ae1-5768-b363-d8043e6e542f) possui códigos [SKU:393878], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
-    "item_id": "0766e727-5e21-528c-92d7-3104febe339b",
-    "details": "Produto \"FILÉ DE PANGA SUPER PREMIUM IQF (10KG) - NINEFISH\" (0766e727-5e21-528c-92d7-3104febe339b) possui códigos [SKU:394397], mas NENHUM EAN numérico válido!"
+    "item_id": "ae939ba8-bfdc-52ac-8fbf-ad9efba33b69",
+    "details": "Produto \"CORVINA EM POSTA GRANEL (15KG) - MARFRESCO\" (ae939ba8-bfdc-52ac-8fbf-ad9efba33b69) possui códigos [SKU:394074], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",
     "severity": "CRITICAL",
     "item_id": "5ef5bec9-570e-53f0-b834-a526c3ece95d",
     "details": "Produto \"ASA DE FRANGO INDIVIDUAL (20KG) PACOTE - RICO\" (5ef5bec9-570e-53f0-b834-a526c3ece95d) possui códigos [SKU:394789], mas NENHUM EAN numérico válido!"
+  },
+  {
+    "category": "PRODUTO_SEM_EAN_NUMERICO",
+    "severity": "CRITICAL",
+    "item_id": "0766e727-5e21-528c-92d7-3104febe339b",
+    "details": "Produto \"FILÉ DE PANGA SUPER PREMIUM IQF (10KG) - NINEFISH\" (0766e727-5e21-528c-92d7-3104febe339b) possui códigos [SKU:394397], mas NENHUM EAN numérico válido!"
   },
   {
     "category": "PRODUTO_SEM_EAN_NUMERICO",

@@ -1,1 +1,145 @@
-[]
+[
+  {
+    "id": "da4c3d13-d4c2-5d25-b309-7588ab888276",
+    "marca": "Friboi",
+    "sku": "289",
+    "ean": "7898302291850",
+    "dun": "17898302291857",
+    "descricao": "Capa do Coxão Mole - Friboi",
+    "classe": "Bovinos",
+    "conservacao": "Resfriado",
+    "criado_em": "2026-10-15T12:04:27.400Z"
+  },
+  {
+    "id": "96e808f9-92ea-5fd8-83da-8b51a1fd1489",
+    "marca": "TERCEIROS",
+    "sku": "387715",
+    "ean": "",
+    "dun": "",
+    "descricao": "Picanha (Abaixo de 1,5kg) Argentina - Pull",
+    "classe": "Bovinos",
+    "conservacao": "Congelado",
+    "criado_em": "2026-10-15T12:04:27.400Z"
+  },
+  {
+    "id": "682ff609-b2e0-58a0-966c-7b1017f1691c",
+    "marca": "Friboi",
+    "sku": "392728",
+    "ean": "7896031225818",
+    "dun": "17896031225815",
+    "descricao": "Patinho IQF (Bife 70 a 80g) Marinado - Friboi",
+    "classe": "Bovinos",
+    "conservacao": "Congelado",
+    "criado_em": "2026-10-15T12:04:27.400Z"
+  },
+  {
+    "id": "d8433baf-abaa-5260-b3fb-0bb0ac40f3a1",
+    "marca": "Do Chef",
+    "sku": "393207",
+    "ean": "7899567231346",
+    "dun": "17899567231343",
+    "descricao": "Carne Moída (5kg) - do Chef",
+    "classe": "Bovinos",
+    "conservacao": "Congelado",
+    "criado_em": "2026-10-15T12:04:27.400Z"
+  },
+  {
+    "id": "f91b0985-65e4-5b0c-8ea8-fa7feab4ddba",
+    "marca": "Swift",
+    "sku": "399877",
+    "ean": "",
+    "dun": "",
+    "descricao": "Carré Ovino Francês (12 a 14) 340 a 397g - Swift",
+    "classe": "Ovinos & Caprinos",
+    "conservacao": "Congelado",
+    "criado_em": "2026-10-15T12:04:27.400Z"
+  },
+  {
+    "id": "1ad874a8-2ba2-563f-9a65-cafa6299a6ba",
+    "marca": "Swift",
+    "sku": "399878",
+    "ean": "",
+    "dun": "",
+    "descricao": "Carré Francês (14 a 16) 397 a 454g - Swift",
+    "classe": "Ovinos & Caprinos",
+    "conservacao": "Congelado",
+    "criado_em": "2026-10-15T12:04:27.400Z"
+  },
+  {
+    "id": "1d0ab28a-d3fe-503e-9645-1b3f04ce09ad",
+    "marca": "PEROLA",
+    "sku": "399880",
+    "ean": "7898343550213",
+    "dun": "17898343550210",
+    "descricao": "Linguiça Pernil Nanica (5kg) - Perola",
+    "classe": "Processados & Embutidos",
+    "conservacao": "Congelado",
+    "criado_em": "2026-10-15T12:04:27.400Z"
+  },
+  {
+    "id": "46ebfff6-c709-5266-a945-0f992de3488e",
+    "marca": "Seara",
+    "sku": "399952",
+    "ean": "7894904545223",
+    "dun": "17894904545220",
+    "descricao": "Filé de Meio Peito sem Pele Pacote (7,5kg) - Seara",
+    "classe": "Aves",
+    "conservacao": "Congelado",
+    "criado_em": "2026-10-15T12:04:27.400Z"
+  },
+  {
+    "id": "8562b13c-8c49-5e89-a705-a72363643289",
+    "marca": "Marba",
+    "sku": "1759",
+    "ean": "7897268100459",
+    "dun": "",
+    "descricao": "Jerked Beef Dianteiro Marba 5kg",
+    "classe": "Bovinos",
+    "conservacao": "Congelado",
+    "criado_em": "2026-10-15T12:06:02.185Z"
+  },
+  {
+    "id": "e66914e2-7e15-5074-9495-139c538d817a",
+    "marca": "Seara",
+    "sku": "43",
+    "ean": "7894904280216",
+    "dun": "",
+    "descricao": "Bacon em Fatias 2.5kg – Seara Food Solutions",
+    "classe": "Suínos",
+    "conservacao": "Congelado",
+    "criado_em": "2026-10-15T12:06:02.185Z"
+  },
+  {
+    "id": "a0682af8-d5ca-5b67-87ba-381f7fe43661",
+    "marca": "Seara",
+    "sku": "2087",
+    "ean": "7894904604241",
+    "dun": "",
+    "descricao": "Linguiça Tipo Calabresa Fatiada Seara Food Solutions 1kg",
+    "classe": "Processados & Embutidos",
+    "conservacao": "Congelado",
+    "criado_em": "2026-10-15T12:06:02.185Z"
+  },
+  {
+    "id": "e69ddfb6-8f9a-50af-9d01-7d89c8a27ec7",
+    "marca": "Seara",
+    "sku": "",
+    "ean": "7894904616992",
+    "dun": "",
+    "descricao": "Peito de Fiesta Air Fryer Seara",
+    "classe": "Aves",
+    "conservacao": "Resfriado",
+    "criado_em": "2026-10-15T12:06:02.227Z"
+  },
+  {
+    "id": "39ec24a0-7f2b-5f23-b01e-6af66c91fafc",
+    "marca": "Seara",
+    "sku": "",
+    "ean": "7894904617197",
+    "dun": "",
+    "descricao": "Fiesta Marinado Seara 3,2 Kg",
+    "classe": "Aves",
+    "conservacao": "Resfriado",
+    "criado_em": "2026-10-15T12:06:02.227Z"
+  }
+]
