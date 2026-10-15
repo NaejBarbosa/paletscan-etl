@@ -398,8 +398,16 @@ async function runPipeline() {
   console.log(` 🏁 Término Geral do Pipeline: \x1b[1m${formatDateTime(globalEnd)}\x1b[0m`);
   console.log(` ⏱️  Tempo Total Decorrido   : \x1b[1;33m${totalDurationStr}\x1b[0m`);
   console.log("\x1b[1;36m────────────────────────────────────────────────────────────────────────\x1b[0m");
-  console.log("\x1b[1;32m✔ PIPELINE FINALIZADO COM SUCESSO!\x1b[0m");
-  console.log("\x1b[1;36m────────────────────────────────────────────────────────────────────────\x1b[0m");
+
+  const hasFailures = stages.some((s) => s.status === "ERRO");
+  if (hasFailures) {
+    console.log("\x1b[1;31m❌ PIPELINE FINALIZADO COM FALHAS!\x1b[0m");
+    console.log("\x1b[1;36m────────────────────────────────────────────────────────────────────────\x1b[0m");
+    process.exit(1);
+  } else {
+    console.log("\x1b[1;32m✔ PIPELINE FINALIZADO COM SUCESSO!\x1b[0m");
+    console.log("\x1b[1;36m────────────────────────────────────────────────────────────────────────\x1b[0m");
+  }
 }
 
 runPipeline().catch((err) => {

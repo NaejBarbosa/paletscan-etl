@@ -426,6 +426,34 @@ export async function syncStagingToSupabase() {
       // Continua se a busca falhar
     }
 
+    // -------------------------------------------------------------
+    // INDEXAÇÃO ESTRUTURADA DE CÓDIGOS DE BARRAS (SKU, EAN-13, DUN-14)
+    // -------------------------------------------------------------
+    interface ProductBarcodeGroup {
+      sku?: string;
+      ean?: string;
+      dun?: string;
+    }
+    const barcodesByProduct = new Map<string, ProductBarcodeGroup>();
+    for (const cb of codigosBarrasUUID) {
+      const pId = cb.produto_id;
+      if (!barcodesByProduct.has(pId)) {
+        barcodesByProduct.set(pId, {});
+      }
+      const group = barcodesByProduct.get(pId)!;
+      const code = String(cb.codigo || '').trim();
+      if (!code) continue;
+
+      const tipoUpper = (cb.tipo || '').toUpperCase();
+      if (tipoUpper === 'DUN' || /^\d{14}$/.test(code)) {
+        group.dun = code;
+      } else if (tipoUpper === 'EAN' || (/^\d{13}$/.test(code) && tipoUpper !== 'SKU')) {
+        group.ean = code;
+      } else if (tipoUpper === 'SKU' || code.length < 13) {
+        group.sku = code;
+      }
+    }
+
     // Preserva status_imagem e imagem_url conforme política de integridade:
     // 1. Se a imagem foi rejeitada ('reprovado') por curadoria humana, preserva o status e mantém nulo.
     // 2. Se o scraper não trouxe imagem nesta execução, preserva imagem aprovada anterior.
@@ -489,34 +517,6 @@ export async function syncStagingToSupabase() {
     totalProdutosSynced += resProdutos.totalSynced;
     totalCodigosSynced += resCB.totalSynced;
     totalConflictsGlobal += resCB.conflictCount;
-
-    // -------------------------------------------------------------
-    // INDEXAÇÃO ESTRUTURADA DE CÓDIGOS DE BARRAS (SKU, EAN-13, DUN-14)
-    // -------------------------------------------------------------
-    interface ProductBarcodeGroup {
-      sku?: string;
-      ean?: string;
-      dun?: string;
-    }
-    const barcodesByProduct = new Map<string, ProductBarcodeGroup>();
-    for (const cb of codigosBarrasUUID) {
-      const pId = cb.produto_id;
-      if (!barcodesByProduct.has(pId)) {
-        barcodesByProduct.set(pId, {});
-      }
-      const group = barcodesByProduct.get(pId)!;
-      const code = String(cb.codigo || '').trim();
-      if (!code) continue;
-
-      const tipoUpper = (cb.tipo || '').toUpperCase();
-      if (tipoUpper === 'DUN' || /^\d{14}$/.test(code)) {
-        group.dun = code;
-      } else if (tipoUpper === 'EAN' || (/^\d{13}$/.test(code) && tipoUpper !== 'SKU')) {
-        group.ean = code;
-      } else if (tipoUpper === 'SKU' || code.length < 13) {
-        group.sku = code;
-      }
-    }
 
     // -------------------------------------------------------------
     // DETECÇÃO DE NOVOS PRODUTOS INCLUÍDOS NESTE ARQUIVO
