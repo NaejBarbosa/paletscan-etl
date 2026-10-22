@@ -18,6 +18,7 @@ import { execSync } from 'child_process';
 import { formatProductDescription, normalizeEAN13, normalizeDUN14 } from '../../core/normalizers/text_parser.js';
 import { classifyBrand, FABRICANTE_BRF_ID, FABRICANTE_BRF_NOME } from '../../core/heuristics/brand_classifier.js';
 import { classifyProduct } from '../../core/heuristics/category_classifier.js';
+import { downloadAndConvertOfficialWebp, MANUAL_SEM_IMAGEM_EANS, PWA_PUBLIC_IMG_DIR, LOCAL_PROCESSED_IMG_DIR } from '../../core/normalizers/image_helper.js';
 
 // Constantes e Endpoints
 const SADIA_SITEMAP = 'https://www.sadia.com.br/sitemap.xml';
@@ -35,6 +36,7 @@ const HTTP_HEADERS = {
 const BASE_DIR = path.resolve(process.cwd());
 const STAGING_DIR = path.join(BASE_DIR, 'staging');
 const STAGING_FILE = path.join(STAGING_DIR, 'brf_staging.json');
+const MBRF_CACHE_FILE = path.join(STAGING_DIR, 'mbrf_b2b_cache.json');
 
 // Interface relacional compatível com schema_manifest.json
 interface Fabricante {
@@ -129,12 +131,106 @@ function isInvalidImageUrl(url: string | null | undefined): boolean {
     lower === 'undefined' ||
     lower.includes('default-product-image') ||
     lower.includes('placeholder') ||
-    lower.includes('blob.core.windows.net') ||
     lower.includes('brfsacoeintgrcprd') ||
     lower.includes('force.com') ||
     lower.includes('salesforce.com') ||
     lower.includes('servlet.imageserver')
   );
+}
+
+interface MBRFProductParsed {
+  sku: string;
+  ean: string;
+  title: string;
+  commercialName: string;
+  marca: string;
+  boxGrossWeight: string;
+  boxNetWeight: string;
+  packageQty: string;
+  minTemp: string;
+  maxTemp: string;
+  expirationDays: string;
+  url: string;
+  imageUrl: string | null;
+}
+
+/**
+ * Carrega a base oficial minerada da Central MBRF B2B via API Salesforce Commerce.
+ */
+function loadMBRFCatalog(): MBRFProductParsed[] {
+  if (!fs.existsSync(MBRF_CACHE_FILE)) {
+    console.log('[*] Cache B2B Central MBRF não encontrado. Disparando mineração automática via Python...');
+    try {
+      execSync('python3 /root/paletscan-etl/scripts/mine_mbrf_b2b.py', { stdio: 'inherit' });
+    } catch (err: any) {
+      console.warn(`[!] Falha ao executar minerador MBRF B2B: ${err.message}`);
+      return [];
+    }
+  }
+
+  if (!fs.existsSync(MBRF_CACHE_FILE)) {
+    return [];
+  }
+
+  try {
+    const raw = fs.readFileSync(MBRF_CACHE_FILE, 'utf-8');
+    const cache = JSON.parse(raw);
+    const parsed: MBRFProductParsed[] = [];
+
+    for (const [prodId, data] of Object.entries<any>(cache)) {
+      if (!data) continue;
+      const fields = data.fields || {};
+      const rawSku = fields.StockKeepingUnitSKU__c || fields.ProductCode || '';
+      const sku = String(rawSku).replace(/^0+/, '').trim();
+      const rawEan = fields.EAN__c || '';
+      const cleanEan = normalizeEAN13(String(rawEan).trim()) || '';
+      const title = String(fields.Name || fields.Description || '').trim();
+      const commercialName = String(fields.CommercialName__c || '').trim();
+      const rawBrand = String(fields.Brand__c || '').split(';')[0].trim();
+
+      // Resolve URL de imagem da Central MBRF
+      let rawImg = data.defaultImage?.url || fields.PortalDetailImageUrl__c || '';
+      let resolvedImg: string | null = null;
+      if (rawImg) {
+        if (rawImg.startsWith('/cms/delivery/media/')) {
+          resolvedImg = `https://centralmbrf.com.br/sfsites/c${rawImg}`;
+        } else if (rawImg.startsWith('/')) {
+          resolvedImg = `https://centralmbrf.com.br${rawImg}`;
+        } else if (rawImg.startsWith('http://') || rawImg.startsWith('https://')) {
+          resolvedImg = rawImg;
+        }
+      }
+
+      if (isInvalidImageUrl(resolvedImg)) {
+        resolvedImg = null;
+      }
+
+      const displayUrl = fields.DisplayUrl || '';
+      const prodUrl = displayUrl ? `https://centralmbrf.com.br/product/${displayUrl}` : '';
+
+      parsed.push({
+        sku,
+        ean: cleanEan,
+        title,
+        commercialName,
+        marca: rawBrand || 'Sadia',
+        boxGrossWeight: fields.BoxGrossWeight__c ? String(fields.BoxGrossWeight__c) : '',
+        boxNetWeight: fields.BoxNetWeight__c ? String(fields.BoxNetWeight__c) : '',
+        packageQty: fields.PackageQuantity__c ? String(fields.PackageQuantity__c) : '',
+        minTemp: fields.MinTemperature__c ? String(fields.MinTemperature__c) : '',
+        maxTemp: fields.MaxTemperature__c ? String(fields.MaxTemperature__c) : '',
+        expirationDays: fields.ExpirationDate__c ? String(fields.ExpirationDate__c) : '',
+        url: prodUrl,
+        imageUrl: resolvedImg
+      });
+    }
+
+    console.log(`📦 Catálogo B2B Central MBRF carregado com ${parsed.length} itens do cache.`);
+    return parsed;
+  } catch (err: any) {
+    console.error(`[!] Erro ao ler cache B2B MBRF: ${err.message}`);
+    return [];
+  }
 }
 
 /**
@@ -385,7 +481,119 @@ export async function runBRFScraper(): Promise<StagingPayload> {
     if (item.title) productMapByTitle.set(item.title.toLowerCase(), item);
   }
 
-  // 2. Scraping das Fontes Institucionais HD (Sadia e Perdigão) para atualizar imagens e verificar gramaturas
+  // 2. Mineração e Fusão com Catálogo B2B Central MBRF (Fase 2)
+  console.log('🏭 Integrando dados enriquecidos da Central MBRF B2B (EANs, DUNs, caixas master, temperatura)...');
+  const mbrfItems = loadMBRFCatalog();
+  let mbrfEnrichedCount = 0;
+  let mbrfEanResolvedCount = 0;
+  let mbrfDiscoveredCount = 0;
+  const discoveredProductsLog: any[] = [];
+
+  for (const mbrfItem of mbrfItems) {
+    const cleanEan = mbrfItem.ean;
+    const sku = mbrfItem.sku;
+
+    let existingItem: any = null;
+    if (sku && productMapBySku.has(sku)) {
+      existingItem = productMapBySku.get(sku);
+    } else if (mbrfItem.title && productMapByTitle.has(mbrfItem.title.toLowerCase())) {
+      existingItem = productMapByTitle.get(mbrfItem.title.toLowerCase());
+    } else if (cleanEan && productMapByEan.has(cleanEan)) {
+      const cand = productMapByEan.get(cleanEan);
+      if (!cand.sku || cand.sku === sku) {
+        existingItem = cand;
+      }
+    }
+
+    if (existingItem) {
+      mbrfEnrichedCount++;
+      // A) Resgata EAN oficial se o registro existente não possuía
+      if (!existingItem.ean && cleanEan) {
+        existingItem.ean = cleanEan;
+        if (!productMapByEan.has(cleanEan)) {
+          productMapByEan.set(cleanEan, existingItem);
+        }
+        mbrfEanResolvedCount++;
+      }
+      // B) Resgata / calcula DUN-14 se não possuía
+      if (!existingItem.dun && existingItem.ean) {
+        existingItem.dun = normalizeDUN14('', existingItem.ean);
+      }
+      // C) Peso Bruto e Líquido da Caixa Master B2B
+      if (mbrfItem.boxGrossWeight && !existingItem.pesoBruto) {
+        existingItem.pesoBruto = `${mbrfItem.boxGrossWeight}kg`;
+      }
+      if (mbrfItem.boxNetWeight && !existingItem.pesoLiquido) {
+        existingItem.pesoLiquido = `${mbrfItem.boxNetWeight}kg`;
+      }
+      // D) Condições térmicas de estocagem em câmara fria
+      if (mbrfItem.minTemp && !existingItem.tempMin) {
+        existingItem.tempMin = mbrfItem.minTemp;
+      }
+      if (mbrfItem.maxTemp && !existingItem.tempMax) {
+        existingItem.tempMax = mbrfItem.maxTemp;
+      }
+      // E) Prazo de validade
+      if (mbrfItem.expirationDays && !existingItem.vidaUtil) {
+        existingItem.vidaUtil = `${mbrfItem.expirationDays} dias`;
+      }
+      // F) Imagem: se o item existente estiver sem foto, aproveita a foto oficial da caixa B2B
+      if (!existingItem.image_url && mbrfItem.imageUrl) {
+        existingItem.image_url = mbrfItem.imageUrl;
+      }
+    } else {
+      // Descoberta ativa de novo produto comercial B2B na Central MBRF
+      // Garantia estrita de integridade: aceita APENAS produtos com EAN-13 numérico válido
+      if (!cleanEan || !/^\d{13}$/.test(cleanEan)) continue;
+      if (productMapByEan.has(cleanEan)) continue;
+
+      const brandInfo = classifyBrand(mbrfItem.marca, mbrfItem.title, FABRICANTE_BRF_ID);
+      const cleanDun = normalizeDUN14('', cleanEan);
+      const conservacao = mbrfItem.minTemp && Number(mbrfItem.minTemp) <= -12 ? 'Congelado' : 'Resfriado';
+
+      const newItem = {
+        sku: sku,
+        title: mbrfItem.commercialName || mbrfItem.title,
+        descrFiscal: mbrfItem.title,
+        ean: cleanEan,
+        dun: cleanDun,
+        marca: brandInfo.nome,
+        classe: '',
+        conservacao: conservacao,
+        tempMin: mbrfItem.minTemp || '',
+        tempMax: mbrfItem.maxTemp || '',
+        pesoLiquido: mbrfItem.boxNetWeight ? `${mbrfItem.boxNetWeight}kg` : '',
+        pesoBruto: mbrfItem.boxGrossWeight ? `${mbrfItem.boxGrossWeight}kg` : '',
+        vidaUtil: mbrfItem.expirationDays ? `${mbrfItem.expirationDays} dias` : '',
+        url: mbrfItem.url || '',
+        image_url: mbrfItem.imageUrl || '',
+        source: 'CENTRAL_MBRF_B2B',
+        isNewDiscovery: true
+      };
+
+      if (sku) productMapBySku.set(sku, newItem);
+      if (cleanEan && !productMapByEan.has(cleanEan)) {
+        productMapByEan.set(cleanEan, newItem);
+      }
+      if (newItem.title) productMapByTitle.set(newItem.title.toLowerCase(), newItem);
+
+      mbrfDiscoveredCount++;
+      discoveredProductsLog.push({
+        ean: cleanEan,
+        sku: sku,
+        marca: brandInfo.nome,
+        descricao: newItem.title,
+        origem: 'CENTRAL_MBRF_B2B',
+        url: newItem.url,
+        image_url: newItem.image_url,
+        descoberto_em: new Date().toISOString()
+      });
+    }
+  }
+
+  console.log(`✅ Mineração Central MBRF concluída: ${mbrfEnrichedCount} produtos enriquecidos, ${mbrfEanResolvedCount} EANs resgatados e ${mbrfDiscoveredCount} novos produtos descobertos.`);
+
+  // 3. Scraping das Fontes Institucionais HD (Sadia e Perdigão) para atualizar imagens e verificar gramaturas
   console.log('📸 Coletando fotografias HD e especificações atualizadas dos sites institucionais Sadia e Perdigão...');
   const sadiaUrls = await fetchSitemapUrls(SADIA_SITEMAP, 'Sadia');
   const perdigaoUrls = await fetchSitemapUrls(PERDIGAO_SITEMAP, 'Perdigão');
@@ -399,11 +607,12 @@ export async function runBRFScraper(): Promise<StagingPayload> {
 
   let updatedImagesCount = 0;
   let updatedDescriptionsCount = 0;
+  let newDiscoveredCount = 0;
 
   const batchSize = 15;
   for (let i = 0; i < instTasks.length; i += batchSize) {
     if (i % 60 === 0) {
-      console.log(`⏳ Progresso HD: [${i}/${instTasks.length}] | Imagens Atualizadas: ${updatedImagesCount}`);
+      console.log(`⏳ Progresso HD: [${i}/${instTasks.length}] | Imagens Atualizadas: ${updatedImagesCount} | Descobertas: ${newDiscoveredCount}`);
     }
 
     const batch = instTasks.slice(i, i + batchSize);
@@ -426,7 +635,8 @@ export async function runBRFScraper(): Promise<StagingPayload> {
           updatedImagesCount++;
         }
         if (!existingItem.ean && instData.ean) {
-          existingItem.ean = instData.ean;
+          const cleanEan = normalizeEAN13(instData.ean);
+          if (cleanEan) existingItem.ean = cleanEan;
         }
         // Verifica se houve alteração de gramatura unitária no portal oficial (preservando sufixo B2B -Caixa)
         if (instData.ean && existingItem.ean === instData.ean && instData.title) {
@@ -441,11 +651,54 @@ export async function runBRFScraper(): Promise<StagingPayload> {
             updatedDescriptionsCount++;
           }
         }
+      } else {
+        // Descoberta ativa de novo lançamento comercial (Sadia / Perdigão)
+        const cleanEan = normalizeEAN13(instData.ean);
+        // Garantia de integridade estrita: só aceita produtos com EAN-13 numérico válido
+        if (!cleanEan || !/^\d{13}$/.test(cleanEan)) continue;
+        if (productMapByEan.has(cleanEan)) continue;
+
+        const brandName = task.marca || (instData.url.includes('perdigao') ? 'Perdigão' : 'Sadia');
+        const unitWeight = extractUnitWeightStr(instData.title) || '';
+
+        const newItem = {
+          sku: '',
+          title: instData.title,
+          descrFiscal: instData.title,
+          ean: cleanEan,
+          dun: '',
+          marca: brandName,
+          classe: '',
+          conservacao: '',
+          tempMin: '',
+          tempMax: '',
+          pesoLiquido: unitWeight,
+          pesoBruto: '',
+          vidaUtil: '',
+          url: instData.url,
+          image_url: instData.image_url || '',
+          source: `DISCOVERY_${brandName.toUpperCase()}`,
+          isNewDiscovery: true
+        };
+
+        productMapByEan.set(cleanEan, newItem);
+        if (newItem.title) {
+          productMapByTitle.set(newItem.title.toLowerCase(), newItem);
+        }
+        newDiscoveredCount++;
+        discoveredProductsLog.push({
+          ean: cleanEan,
+          marca: brandName,
+          descricao: newItem.title,
+          url: newItem.url,
+          image_url: newItem.image_url,
+          descoberto_em: new Date().toISOString()
+        });
       }
     }
   }
 
-  console.log(`✅ Fusão concluída! ${updatedImagesCount} produtos com imagem HD atualizada e ${updatedDescriptionsCount} descrições ajustadas.`);
+  console.log(`✅ Fusão concluída! ${updatedImagesCount} produtos com imagem HD atualizada, ${updatedDescriptionsCount} descrições ajustadas e ${newDiscoveredCount} novos produtos descobertos.`);
 
   // 3. Montagem da estrutura relacional padronizada para o PaletScan ETL
   const fabricantesMap = new Map<string, Fabricante>();
@@ -464,7 +717,44 @@ export async function runBRFScraper(): Promise<StagingPayload> {
     criado_em: new Date().toISOString()
   });
 
-  const allCombinedItems = Array.from(productMapBySku.values());
+  // Consolidação segura: união de produtos indexados por SKU e produtos descobertos por EAN
+  const allCombinedItemsMap = new Map<string, any>();
+  for (const item of productMapBySku.values()) {
+    const key = item.sku || item.ean || item.title;
+    if (key) allCombinedItemsMap.set(key, item);
+  }
+  for (const item of productMapByEan.values()) {
+    const key = item.sku || item.ean || item.title;
+    if (key) allCombinedItemsMap.set(key, item);
+  }
+  const allCombinedItems = Array.from(allCombinedItemsMap.values());
+
+  // Download e conversão assíncrona para WebP das imagens oficiais ainda não processadas
+  const itemsToDownload = allCombinedItems.filter(rawItem => {
+    const barcode = rawItem.ean || rawItem.dun || rawItem.sku;
+    if (!barcode || MANUAL_SEM_IMAGEM_EANS.has(barcode)) return false;
+    const localPwa = path.join(PWA_PUBLIC_IMG_DIR, `${barcode}.webp`);
+    const localProc = path.join(LOCAL_PROCESSED_IMG_DIR, `${barcode}.webp`);
+    if (fs.existsSync(localPwa) || fs.existsSync(localProc)) return false;
+    return rawItem.image_url && !isInvalidImageUrl(rawItem.image_url) && rawItem.image_url.startsWith('http');
+  });
+
+  if (itemsToDownload.length > 0) {
+    console.log(`🖼️  Baixando e convertendo ${itemsToDownload.length} imagens oficiais BRF para WebP...`);
+    const IMG_CONCURRENCY = 5;
+    let convertedImgs = 0;
+    for (let i = 0; i < itemsToDownload.length; i += IMG_CONCURRENCY) {
+      const chunk = itemsToDownload.slice(i, i + IMG_CONCURRENCY);
+      await Promise.all(chunk.map(async item => {
+        const barcode = item.ean || item.dun || item.sku;
+        try {
+          const ok = await downloadAndConvertOfficialWebp(item.image_url, barcode);
+          if (ok) convertedImgs++;
+        } catch {}
+      }));
+    }
+    console.log(`✅ Otimização de mídia concluída: ${convertedImgs} novas fotos WebP salvas em disco.`);
+  }
 
   for (const rawItem of allCombinedItems) {
     // Classificação da Marca
@@ -489,13 +779,23 @@ export async function runBRFScraper(): Promise<StagingPayload> {
     const anchorId = rawItem.sku || rawItem.ean || rawItem.title;
     const produtoId = generateUUID(PALETSCAN_NAMESPACE, `BRF_PROD_${anchorId}`);
 
-    // Tratamento de Imagem
+    // Tratamento de Imagem: apenas caminhos locais locais são aprovados, evitando URLs externas terceiras
     let imagem_url: string | null = null;
     let status_imagem: 'aprovado' | 'pendente_aprovacao' | 'sem_imagem' = 'sem_imagem';
 
-    if (rawItem.image_url && !isInvalidImageUrl(rawItem.image_url)) {
-      imagem_url = rawItem.image_url;
+    const primaryBarcode = rawItem.ean || rawItem.dun || rawItem.sku;
+    const localPwa = primaryBarcode ? path.join(PWA_PUBLIC_IMG_DIR, `${primaryBarcode}.webp`) : '';
+    const localProc = primaryBarcode ? path.join(LOCAL_PROCESSED_IMG_DIR, `${primaryBarcode}.webp`) : '';
+
+    if (primaryBarcode && MANUAL_SEM_IMAGEM_EANS.has(primaryBarcode)) {
+      imagem_url = null;
+      status_imagem = 'sem_imagem';
+    } else if (fs.existsSync(localPwa) || fs.existsSync(localProc)) {
+      imagem_url = `/imagens_produtos/${primaryBarcode}.webp`;
       status_imagem = 'aprovado';
+    } else {
+      imagem_url = null;
+      status_imagem = 'sem_imagem';
     }
 
     // Grava Registro do Produto
@@ -574,6 +874,31 @@ export async function runBRFScraper(): Promise<StagingPayload> {
   }
 
   fs.writeFileSync(STAGING_FILE, JSON.stringify(payload, null, 2), 'utf-8');
+
+  // Grava relatório de novos produtos BRF descobertos nesta execução
+  const BRF_DISCOVERY_LOG = path.join(STAGING_DIR, 'brf_novos_produtos_descobertos.json');
+  if (discoveredProductsLog.length > 0) {
+    fs.writeFileSync(BRF_DISCOVERY_LOG, JSON.stringify(discoveredProductsLog, null, 2), 'utf-8');
+    console.log(`✨ Relatório de novos produtos descobertos salvo em: ${BRF_DISCOVERY_LOG} (${discoveredProductsLog.length} itens).`);
+
+    // Atualiza o registro histórico global de novos produtos
+    const globalLogPath = path.join(STAGING_DIR, 'novos_produtos_log.json');
+    let globalLog: any[] = [];
+    if (fs.existsSync(globalLogPath)) {
+      try {
+        const content = fs.readFileSync(globalLogPath, 'utf-8');
+        globalLog = JSON.parse(content);
+        if (!Array.isArray(globalLog)) globalLog = [];
+      } catch {}
+    }
+    const existingGlobalEans = new Set(globalLog.map(g => g.ean || g.codigo));
+    for (const item of discoveredProductsLog) {
+      if (!existingGlobalEans.has(item.ean)) {
+        globalLog.push(item);
+      }
+    }
+    fs.writeFileSync(globalLogPath, JSON.stringify(globalLog, null, 2), 'utf-8');
+  }
   console.log(`\n🎉 Pipeline ETL BRF concluído com sucesso! Payload salvo em: ${STAGING_FILE}`);
   console.log(`📊 Estatísticas da Carga:`);
   console.log(`   - Total de Produtos: ${payload.produtos.length}`);

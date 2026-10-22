@@ -1,218 +1,1220 @@
 [
   {
-    "id": "fe14e865-c0d7-5189-b949-98f9431ccdcc",
-    "marca": "Copacol",
-    "sku": "80",
-    "ean": "7891527000801",
-    "dun": "17891527000808",
-    "descricao": "Coração Congelado",
-    "alteracoes": [
-      {
-        "campo": "Descrição",
-        "de": "Miúdos Congelados de Frango Coração Pacote",
-        "para": "Coração Congelado"
-      }
-    ],
-    "atualizado_em": "2026-10-22T06:06:02.463Z"
-  },
-  {
-    "id": "3f5f45f5-0711-54b9-adbe-8d2055804fbe",
-    "marca": "Lar",
-    "sku": "377021",
-    "ean": "7896419724087",
-    "dun": "17896419724084",
-    "descricao": "Coxa de Frango com Osso Pacote - Lar",
-    "alteracoes": [
-      {
-        "campo": "Descrição",
-        "de": "Coxa de Frango Pacote 1kg",
-        "para": "Coxa de Frango com Osso Pacote - Lar"
-      },
-      {
-        "campo": "Peso (g)",
-        "de": 1000,
-        "para": "N/D"
-      }
-    ],
-    "atualizado_em": "2026-10-22T06:06:25.615Z"
-  },
-  {
-    "id": "a3d5ee51-89aa-50bf-8bb4-9c78b58f23de",
-    "marca": "TAMBAU",
-    "sku": "388140",
-    "ean": "7908373000043",
-    "dun": "17908373000040",
-    "descricao": "Coxa e Sobrecoxa Pacote - Tambau",
-    "alteracoes": [
-      {
-        "campo": "Descrição",
-        "de": "Coxa com Sobrecoxa Pacote - Tambau",
-        "para": "Coxa e Sobrecoxa Pacote - Tambau"
-      }
-    ],
-    "atualizado_em": "2026-10-22T06:06:25.617Z"
-  },
-  {
-    "id": "99e36dc8-6883-55aa-94d1-49ba09f57285",
-    "marca": "Lar",
-    "sku": "395578",
-    "ean": "7896419729235",
-    "dun": "17896419729232",
-    "descricao": "Meio da Asa Pacote - Lar",
-    "alteracoes": [
-      {
-        "campo": "Descrição",
-        "de": "Meio da Asa Pacote 1kg",
-        "para": "Meio da Asa Pacote - Lar"
-      },
-      {
-        "campo": "Peso (g)",
-        "de": 1000,
-        "para": "N/D"
-      }
-    ],
-    "atualizado_em": "2026-10-22T06:06:25.618Z"
-  },
-  {
-    "id": "7e667188-7244-5941-a6ff-c91baad3d4af",
-    "marca": "Lar",
-    "sku": "398604",
-    "ean": "7896419733164",
-    "dun": "17896419733161",
-    "descricao": "Meio Peito sem Osso e sem Pele Pacote - Lar",
-    "alteracoes": [
-      {
-        "campo": "Descrição",
-        "de": "Meio Peito sem Osso e sem Pele Pacote 1kg",
-        "para": "Meio Peito sem Osso e sem Pele Pacote - Lar"
-      },
-      {
-        "campo": "Peso (g)",
-        "de": 1000,
-        "para": "N/D"
-      }
-    ],
-    "atualizado_em": "2026-10-22T06:06:25.619Z"
-  },
-  {
-    "id": "2adaccd2-d003-55a5-846f-e5c2599f39d6",
-    "marca": "Lar",
-    "sku": "311635",
-    "ean": "7896419731917",
-    "dun": "17896419731914",
-    "descricao": "Filé de Tilápia 700g",
-    "alteracoes": [
-      {
-        "campo": "Descrição",
-        "de": "Filé de Tilápia 600g",
-        "para": "Filé de Tilápia 700g"
-      },
-      {
-        "campo": "Peso (g)",
-        "de": 600,
-        "para": 700
-      }
-    ],
-    "atualizado_em": "2026-10-22T06:06:30.007Z"
-  },
-  {
-    "id": "ab31fde4-e8da-5d99-8fb3-2dd5cd6594af",
-    "marca": "Lar",
-    "sku": "310812",
-    "ean": "7896419731801",
-    "dun": "17896419731808",
-    "descricao": "Filé de Tilápia Food Service 5kg",
-    "alteracoes": [
-      {
-        "campo": "Descrição",
-        "de": "Filé de Tilápia 800g",
-        "para": "Filé de Tilápia Food Service 5kg"
-      },
-      {
-        "campo": "Peso (g)",
-        "de": 800,
-        "para": 5000
-      }
-    ],
-    "atualizado_em": "2026-10-22T06:06:30.007Z"
-  },
-  {
-    "id": "dd7675a5-15f0-5aa2-a9da-c777b5a0e2fd",
-    "marca": "Lar",
-    "sku": "311632",
-    "ean": "7896419731900",
-    "dun": "17896419731907",
-    "descricao": "Filé de Tilápia 400g",
-    "alteracoes": [
-      {
-        "campo": "Descrição",
-        "de": "Filé de Tilápia 600g",
-        "para": "Filé de Tilápia 400g"
-      },
-      {
-        "campo": "Peso (g)",
-        "de": 600,
-        "para": 400
-      }
-    ],
-    "atualizado_em": "2026-10-22T06:06:30.007Z"
-  },
-  {
-    "id": "68a15aa7-96e8-5d05-97e2-07c75fdb43d7",
-    "marca": "Lar",
-    "sku": "134904",
-    "ean": "7896419725480",
-    "dun": "17896419725487",
-    "descricao": "Filé de Peito À Milanesa 700g",
-    "alteracoes": [
-      {
-        "campo": "Descrição",
-        "de": "Filé de Peito à Milanesa 700g",
-        "para": "Filé de Peito À Milanesa 700g"
-      }
-    ],
-    "atualizado_em": "2026-10-22T06:06:30.007Z"
-  },
-  {
-    "id": "a5502431-9c40-5052-b519-2f5b27d6e6f6",
-    "marca": "Lar",
-    "sku": "100212",
+    "id": "26c6232c-2d96-54ee-85b7-d2b23b1ad52d",
+    "marca": "Sadia",
+    "sku": "581760",
     "ean": "",
-    "dun": "17896419723476",
-    "descricao": "Steak Empanado 100g - 6kg 100g",
+    "dun": "17891515218680",
+    "descricao": "Patinho Suíno sem Osso Sadia Caixa 12kg",
     "alteracoes": [
       {
-        "campo": "Descrição",
-        "de": "Steak Empanado 100g",
-        "para": "Steak Empanado 100g - 6kg 100g"
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515521868.webp"
       },
       {
-        "campo": "Peso (g)",
-        "de": 100,
-        "para": 6000
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
       }
     ],
-    "atualizado_em": "2026-10-22T06:06:30.007Z"
+    "atualizado_em": "2026-10-22T14:01:16.912Z"
   },
   {
-    "id": "46e66b20-337c-5700-b5d4-05973f93544a",
-    "marca": "Lar",
-    "sku": "253889",
-    "ean": "7896419730224",
-    "dun": "17896419730221",
-    "descricao": "Frango Inteiro Temperado 2,4kg",
+    "id": "4f1e9779-d48b-5e9f-829b-f25bae56ad80",
+    "marca": "Sadia",
+    "sku": "581749",
+    "ean": "",
+    "dun": "17891515218512",
+    "descricao": "Miolo do Pernil Suíno Sadia Caixa 12kg -caixa C/1",
     "alteracoes": [
       {
-        "campo": "Descrição",
-        "de": "Frango Inteiro Temperado ±2,6kg",
-        "para": "Frango Inteiro Temperado 2,4kg"
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515521851.webp"
       },
       {
-        "campo": "Peso (g)",
-        "de": 2600,
-        "para": 2400
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
       }
     ],
-    "atualizado_em": "2026-10-22T06:06:30.008Z"
+    "atualizado_em": "2026-10-22T14:01:16.912Z"
+  },
+  {
+    "id": "1782e439-47b7-5f6f-98f2-3ccb2ba13625",
+    "marca": "Sadia",
+    "sku": "581746",
+    "ean": "",
+    "dun": "17891515218376",
+    "descricao": "Alcatra Suína sem Osso Sadia Caixa 12kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515521837.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "ca4824ea-18fa-5cb8-9ffb-e43066ed87ef",
+    "marca": "Sadia",
+    "sku": "564305",
+    "ean": "",
+    "dun": "17891515137196",
+    "descricao": "Lombo Suíno In Natura Sadia 0,8 Kg a 1,5 Kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515513719.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "961170de-2542-5910-8977-c1f160afef50",
+    "marca": "Perdigão",
+    "sku": "522052",
+    "ean": "",
+    "dun": "",
+    "descricao": "Asa Inteira de Peru Perdigão Caixa 10kg -caixa C/1",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515498139.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "491f97ce-917d-52fb-9d63-76be6cc71a4b",
+    "marca": "Sadia",
+    "sku": "514675",
+    "ean": "",
+    "dun": "",
+    "descricao": "Carré Suíno Sadia Caixa 20kg -caixa C/1",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7893000018778.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "2dc4575c-49bc-5fb1-a9a8-1818d36c4262",
+    "marca": "Sadia",
+    "sku": "500744",
+    "ean": "",
+    "dun": "",
+    "descricao": "Bacon Defumado Manta Sadia Peso Variável de 3 Até 4kg -caixa C/4",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7893000526044.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "6cff1e35-0388-514c-8f88-a0d51fd42eaf",
+    "marca": "Sadia",
+    "sku": "500743",
+    "ean": "",
+    "dun": "",
+    "descricao": "Costelinha Suína C/ Osso Sadia Peso Variável- Caixa C/10",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7893000516915.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "61f43993-bd8f-550e-9b9b-24e3fc05062d",
+    "marca": "Perdigão",
+    "sku": "451003",
+    "ean": "",
+    "dun": "17891515487284",
+    "descricao": "Peito de Frango Defumado Perdigão 2,6kg -caixa C/2",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515016715.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "3842c0f8-4884-51b3-ad4b-d3bd079d62a6",
+    "marca": "Sadia",
+    "sku": "435792",
+    "ean": "",
+    "dun": "17891515775473",
+    "descricao": "Retalho de Costela Suíno Food Service Sadia Caixa 12kg -caixa C/1",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515477547.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "fa5b93d7-58ed-5477-afe7-37e7b07c35ac",
+    "marca": "Sadia",
+    "sku": "435461",
+    "ean": "",
+    "dun": "17891515775305",
+    "descricao": "Retalho de Costela Suíno Premium Food Service Sadia Caixa 12kg -caixa C/1",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515477530.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "4403abdd-565b-584a-a583-66d27d2c112b",
+    "marca": "Perdigão",
+    "sku": "330075",
+    "ean": "",
+    "dun": "17891515752108",
+    "descricao": "Coração de Peru Perdigão Caixa 15kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515975210.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "6131f9b3-b7c0-553b-8a0c-a3d0063121f6",
+    "marca": "Perdigão",
+    "sku": "330004",
+    "ean": "",
+    "dun": "17891515755246",
+    "descricao": "Pescoço de Peru sem Pele Perdigão Caixa 15kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515975524.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "c456d444-7481-5ea6-b18f-ca2a9b967ee9",
+    "marca": "Perdigão",
+    "sku": "173786",
+    "ean": "",
+    "dun": "",
+    "descricao": "Pe Suíno Salgado Pct Pd Pvar",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515553210.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "9466b4bd-4f6e-5c48-acd7-e7eb4975edd9",
+    "marca": "Perdigão",
+    "sku": "173779",
+    "ean": "",
+    "dun": "",
+    "descricao": "Retalho Cost Sui Salg Pct 0,5 a 1kg Pd",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515553111.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "720249cd-aff8-5b8b-baea-b42c0b65ba5b",
+    "marca": "Sadia",
+    "sku": "173538",
+    "ean": "",
+    "dun": "",
+    "descricao": "Sobrepaleta Cong Sui S/osso Sd Pvar",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7893000528840.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "b0df9e37-dd36-5d98-9d3b-e4c0e504f262",
+    "marca": "Sadia",
+    "sku": "171361",
+    "ean": "",
+    "dun": "",
+    "descricao": "Frango Int S/miudos Temp Cong Pvar Sd",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515538736.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "218d4818-8fe1-5351-a90a-efc6f6708578",
+    "marca": "Sadia",
+    "sku": "171358",
+    "ean": "",
+    "dun": "",
+    "descricao": "Frango Int S/miudos Temp Cong Pvar Sd",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515538736.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "81ea7bb8-33be-5050-9ca2-253b56d5aa28",
+    "marca": "Perdigão",
+    "sku": "165785",
+    "ean": "",
+    "dun": "",
+    "descricao": "Picanha Fatiada Maturada Argentina Perdigão Na Brasa - 200 a 350g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/165785.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "0efb348a-ea3f-51ce-9056-9473eb3476b0",
+    "marca": "Sadia",
+    "sku": "163822",
+    "ean": "7899638371414",
+    "dun": "17899638371411",
+    "descricao": "Picanha Uruguaia L Sadia Bassi Stars",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7899638371414.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "686fd736-b51e-56c4-a8b0-01dcf599ec75",
+    "marca": "Sadia",
+    "sku": "163820",
+    "ean": "",
+    "dun": "",
+    "descricao": "Coração Alcatra Red Uruguaia Sadia Bassi",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/163820.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "0363b8a7-cbdd-59d2-a595-a0e8c6cdc474",
+    "marca": "Perdigão",
+    "sku": "161929",
+    "ean": "",
+    "dun": "",
+    "descricao": "Chester Azeite e Ervas 3,9 Kg a 4,2 Kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515937904.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "02c6aa00-f38a-568a-a149-f0e72edd769e",
+    "marca": "Perdigão",
+    "sku": "161927",
+    "ean": "",
+    "dun": "",
+    "descricao": "Chester Azeite e Ervas 3,6 Kg a 3,9 Kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515937904.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "37341666-491d-5b73-b426-0267b6b85914",
+    "marca": "Perdigão",
+    "sku": "153583",
+    "ean": "",
+    "dun": "",
+    "descricao": "Chester Tradicional 3,9 Kg a 4,2 Kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515195274.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "f13c7be5-3ee6-51e1-b506-139e3d37b9cc",
+    "marca": "Perdigão",
+    "sku": "153564",
+    "ean": "",
+    "dun": "",
+    "descricao": "Chester Tradicional 3,6 Kg a 3,9 Kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515195274.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "391ec94d-b50c-5ef2-a88b-c5eb6570bc58",
+    "marca": "Perdigão",
+    "sku": "153562",
+    "ean": "",
+    "dun": "",
+    "descricao": "Chester Tradicional 3 Kg a 3,6 Kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515195274.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.913Z"
+  },
+  {
+    "id": "c75f2544-974e-5fa0-9578-351ce0be7148",
+    "marca": "Sadia",
+    "sku": "5800296",
+    "ean": "7899638370530",
+    "dun": "17899638370537",
+    "descricao": "Picanha Maturada Uruguaia P Sadia Bassi - 1,4kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7899638370530.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "be39ee07-3eab-5861-bed5-2ceba73fdff4",
+    "marca": "Perdigão",
+    "sku": "800294",
+    "ean": "7899638366151",
+    "dun": "17899638366158",
+    "descricao": "Picanha Maturada Perdigão Na Brasa",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7899638366151.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "e7492c69-7c33-5331-bfb9-3d78f97a0519",
+    "marca": "Sadia",
+    "sku": "5800263",
+    "ean": "",
+    "dun": "",
+    "descricao": "Peito Sadia Bassi Angus",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/5800263.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "f2e895c7-b358-568d-8048-8b930b3c10de",
+    "marca": "Sadia",
+    "sku": "757086",
+    "ean": "",
+    "dun": "",
+    "descricao": "Lombo Suíno Fatiado Sadia 800g - Caixa C/10",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515558628.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "d922ba27-fe1a-5d74-b998-a09ab3f18b7d",
+    "marca": "Sadia",
+    "sku": "757085",
+    "ean": "",
+    "dun": "",
+    "descricao": "Copa Lombo Suíno Fatiado Sadia 800g - Caixa C/10",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515558611.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "844600c4-af50-5c9d-9c91-93bee83804b7",
+    "marca": "Sadia",
+    "sku": "757087",
+    "ean": "",
+    "dun": "",
+    "descricao": "Filé Mignon Suíno Fatiado Sadia 800g - Caixa C/10",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515558635.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "1b40286c-28c5-5721-9e85-1947e2d74233",
+    "marca": "Sadia",
+    "sku": "747559",
+    "ean": "",
+    "dun": "17891515538733",
+    "descricao": "Frango Inteiro S/miudos Temp Cong Sadia",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515538736.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "3d2456a7-a7ed-53ed-abdd-49ae675ca907",
+    "marca": "Sadia",
+    "sku": "731232",
+    "ean": "",
+    "dun": "27891515538730",
+    "descricao": "Frango Inteiro Temperado S/ Miúdos Sadia Peso 1,85kg -caixa C/7",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515538736.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "06b6aeaf-7d4c-55dc-b8db-ab44913e2f41",
+    "marca": "Sadia",
+    "sku": "672320",
+    "ean": "",
+    "dun": "17891515454132",
+    "descricao": "Torta Brócolis e Requeijão C/ Massa Iogurte Sadia Veg&tal 500g -caixa C/6",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515545413.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "3d1a2515-e880-5d84-8bd9-dc1d04e893de",
+    "marca": "Sadia",
+    "sku": "662479",
+    "ean": "",
+    "dun": "17891515391222",
+    "descricao": "Costela Suína em Tiras Sadia Caixa 10kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515539122.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "960ebf7f-b909-5726-83d1-a133e822f560",
+    "marca": "Perdigão",
+    "sku": "606561",
+    "ean": "",
+    "dun": "",
+    "descricao": "Peru Perdigão 4 Kg a 4,99 Kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515851941.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "c4b86af7-39c1-59c4-93b2-d06b6441d940",
+    "marca": "Sadia",
+    "sku": "500373",
+    "ean": "",
+    "dun": "",
+    "descricao": "Torta Caipira de Frango Sadia 500g -caixa C/6",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7893000012547.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "8b7a822c-9eb7-5fe8-a6f2-7d2fa6565435",
+    "marca": "Sadia",
+    "sku": "489590",
+    "ean": "",
+    "dun": "",
+    "descricao": "Torta Palmito e Requeijão com Massa de Iogurte Sadia 500g -caixa C/6",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7893000012578.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "5fa962c6-686e-52f6-85d3-1881f82b21e2",
+    "marca": "Sadia",
+    "sku": "489565",
+    "ean": "",
+    "dun": "",
+    "descricao": "Torta Frango e Requeijão Sadia 500g -caixa C/6",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7893000012509.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "cbb882ce-db87-5db5-9b41-3c97c3f4679c",
+    "marca": "Sadia",
+    "sku": "475635",
+    "ean": "",
+    "dun": "27891515528953",
+    "descricao": "Escondidinho de Frango Sadia 600g -caixa C/6",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7893000052895.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "f5047656-6f84-57c1-9c38-3414116b9cd4",
+    "marca": "Sadia",
+    "sku": "475633",
+    "ean": "",
+    "dun": "27891515528885",
+    "descricao": "Escondidinho de Carne Moída Sadia 600g -caixa C/6",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7893000052888.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "2d2dfbdd-e32c-5764-b2f4-c4af6daadcec",
+    "marca": "Perdigão",
+    "sku": "800497",
+    "ean": "",
+    "dun": "",
+    "descricao": "Jerked Beef Traseiro Perdigão Montana - 5kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7899638369015.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "1224f349-a5fc-59b3-b19e-f997cd6a18fc",
+    "marca": "Sadia",
+    "sku": "5801043",
+    "ean": "",
+    "dun": "",
+    "descricao": "Picanha Maturado Sadia Bassi Stars - 1,6kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7899638370219.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "0abc208a-aa50-5ea4-a378-e47e9e1d220e",
+    "marca": "Sadia",
+    "sku": "5801041",
+    "ean": "7899638370219",
+    "dun": "17899638370216",
+    "descricao": "Picanha Sadia Bassi Stars - 1,6kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7899638370219.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "566c2db8-251e-596e-a12b-73897eb40e17",
+    "marca": "Sadia",
+    "sku": "5801011",
+    "ean": "",
+    "dun": "",
+    "descricao": "Raquete Maturado Red Sadia Bassi Stars - 1,2kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7899638370226.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "f1667733-00a9-53de-a90e-44207e1113ac",
+    "marca": "Sadia",
+    "sku": "5801035",
+    "ean": "7899638370226",
+    "dun": "17899638370223",
+    "descricao": "Raquete Red Sadia Bassi Stars - 1,2kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7899638370226.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "274f1562-cf24-5c41-85d9-21fdaf7decb9",
+    "marca": "BRF",
+    "sku": "800118",
+    "ean": "",
+    "dun": "",
+    "descricao": "Lombo de Bacalhau Dessalgado Soguima",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/5602772055698.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.914Z"
+  },
+  {
+    "id": "41c75fde-4215-5c47-a1ff-f32485716741",
+    "marca": "Perdigão",
+    "sku": "800409",
+    "ean": "",
+    "dun": "",
+    "descricao": "Peito Jerked Beef Dianteiro Perdigão Montana",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515610715.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.915Z"
+  },
+  {
+    "id": "c84184c6-19cc-5a34-a5d3-46dd4280ab02",
+    "marca": "Perdigão",
+    "sku": "800506",
+    "ean": "",
+    "dun": "",
+    "descricao": "Jerked Beef Ponta de Agulha Perdigão Montana - 400g",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7899638369022.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.915Z"
+  },
+  {
+    "id": "2c9518c6-09e9-5040-8239-a8dfa6f03c33",
+    "marca": "Perdigão",
+    "sku": "800416",
+    "ean": "",
+    "dun": "",
+    "descricao": "Jerked Beef Ponta de Agulha Perdigão Montana - 30kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515610715.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.915Z"
+  },
+  {
+    "id": "872c7055-007c-5249-98c2-d2729a7ca5f5",
+    "marca": "Perdigão",
+    "sku": "786284",
+    "ean": "",
+    "dun": "",
+    "descricao": "Bacon Defumado Manta Perdigão 14kg -caixa C/4",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515767600.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.915Z"
+  },
+  {
+    "id": "4589fa85-4f63-5a38-8fb2-3784863d5a84",
+    "marca": "Perdigão",
+    "sku": "786276",
+    "ean": "",
+    "dun": "17891515767607",
+    "descricao": "Bacon Defumado Manta Perdigão",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515767600.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.915Z"
+  },
+  {
+    "id": "2602e20e-ffe5-5422-9e5e-71397c710d68",
+    "marca": "Perdigão",
+    "sku": "174813",
+    "ean": "",
+    "dun": "",
+    "descricao": "Costela Sui Cong Perd Pvar",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515359096.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.915Z"
+  },
+  {
+    "id": "99c4bbbd-c0ac-50d2-9674-cc353aa0327c",
+    "marca": "Perdigão",
+    "sku": "174814",
+    "ean": "",
+    "dun": "",
+    "descricao": "Costela Sui Cong Nabrasa Pd Pvar",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515023614.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.915Z"
+  },
+  {
+    "id": "a9ba90d5-c891-5ba4-86c2-d37494ff451d",
+    "marca": "Sadia",
+    "sku": "175459",
+    "ean": "",
+    "dun": "",
+    "descricao": "Torta Tender com Cream Cheese e Alho Poró Sadia 500 G",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515550790.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.915Z"
+  },
+  {
+    "id": "db655fc5-8aa5-5025-8a1d-74ed829b49f6",
+    "marca": "Perdigão",
+    "sku": "175458",
+    "ean": "",
+    "dun": "",
+    "descricao": "Torta Chester com Calabresa e Molho Sabor Cheddar 500 G",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/7891515592165.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.915Z"
+  },
+  {
+    "id": "4742f315-7f41-5de5-b9d0-7df69023e5ab",
+    "marca": "BRF",
+    "sku": "768594",
+    "ean": "",
+    "dun": "",
+    "descricao": "Ave Inteira Temperada Congelada Kidelli 3,6kg a 4,2 Kg",
+    "alteracoes": [
+      {
+        "campo": "Imagem (URL)",
+        "de": "Sem imagem",
+        "para": "/imagens_produtos/768594.webp"
+      },
+      {
+        "campo": "Status da Imagem",
+        "de": "sem_imagem",
+        "para": "aprovado"
+      }
+    ],
+    "atualizado_em": "2026-10-22T14:01:16.915Z"
   }
 ]

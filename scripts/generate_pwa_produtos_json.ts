@@ -3,6 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import dotenv from 'dotenv';
 import { getLarOfficialSpec } from '../scrapers/lar/catalog_rules';
+import { MANUAL_SEM_IMAGEM_EANS } from '../core/normalizers/image_helper';
 
 dotenv.config();
 
@@ -216,15 +217,14 @@ async function generatePwaProdutosJson() {
       finalStatus = 'sem_imagem';
     }
 
-    // Se o Supabase determinou que o produto está SEM_IMAGEM, não força imagem local legada
-    if (finalStatus === 'sem_imagem' || finalStatus === 'SEM_IMAGEM') {
+    // Se for produto com sem_imagem estrito conferido manualmente (ex: Lar Food Service 2kg)
+    if (MANUAL_SEM_IMAGEM_EANS.has(primaryBarcode)) {
       finalImgUrl = null;
+      finalStatus = 'sem_imagem';
     } else if (fs.existsSync(localPath) && fs.statSync(localPath).size > 1000) {
       finalImgUrl = `/imagens_produtos/${localEanFile}`;
-      if (!finalStatus) {
-        finalStatus = 'VALIDATED';
-      }
-    } else if (!finalImgUrl || finalStatus === 'pendente_aprovacao') {
+      finalStatus = 'aprovado';
+    } else if (!finalImgUrl || finalStatus === 'pendente_aprovacao' || finalStatus === 'sem_imagem' || finalStatus === 'SEM_IMAGEM') {
       finalImgUrl = null;
       finalStatus = 'sem_imagem';
     }

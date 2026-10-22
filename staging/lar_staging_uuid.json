@@ -479,7 +479,7 @@
     {
       "id": "68a15aa7-96e8-5d05-97e2-07c75fdb43d7",
       "marca_id": "e34195f6-bc57-5db6-98df-f8c5ff66a708",
-      "descricao_padronizada": "Filé de Peito à Milanesa 700g",
+      "descricao_padronizada": "Filé de Peito À Milanesa 700g",
       "descricao_original": "Filé de Peito à Milanesa 700g",
       "classe": "Processados & Embutidos",
       "conservacao": "Congelado",
@@ -2569,15 +2569,6 @@
       "criado_em": "2026-10-22T12:13:50.848Z"
     },
     {
-      "id": "41c1dbc6-3a5d-566d-ad42-2a16fbcb55e8",
-      "produto_id": "d454b8ba-d225-50ca-b1df-b36efa23f967",
-      "tipo": "SKU",
-      "codigo": "LAR_meio-da-asa-assada-linha-minuto-300g",
-      "embalagem": "UN",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-10-22T12:13:50.848Z"
-    },
-    {
       "id": "776b180b-be57-579d-9e06-bdbfe0234c5e",
       "produto_id": "b74a7947-05e5-55f2-adf3-0cc4dd2af080",
       "tipo": "EAN",
@@ -2870,15 +2861,6 @@
       "produto_id": "080a3a4b-9407-50fb-93dd-53d0a8adb450",
       "tipo": "SKU",
       "codigo": "852274",
-      "embalagem": "UN",
-      "quantidade_embalagem": 1,
-      "criado_em": "2026-10-22T12:13:50.848Z"
-    },
-    {
-      "id": "a5159fbc-e6d5-55f9-a4ca-8bfa06e71c3d",
-      "produto_id": "a5502431-9c40-5052-b519-2f5b27d6e6f6",
-      "tipo": "EAN",
-      "codigo": "7896419713852",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
       "criado_em": "2026-10-22T12:13:50.848Z"
@@ -3691,15 +3673,6 @@
       "codigo": "7896419727828",
       "embalagem": "UN",
       "quantidade_embalagem": 1,
-      "criado_em": "2026-10-22T12:13:50.848Z"
-    },
-    {
-      "id": "c9f46006-ed16-555d-bc16-ae6a7b957dfa",
-      "produto_id": "b6b0bbbe-a98a-55de-be1b-79d1721885e7",
-      "tipo": "DUN",
-      "codigo": "17896419727825",
-      "embalagem": "CX",
-      "quantidade_embalagem": null,
       "criado_em": "2026-10-22T12:13:50.848Z"
     },
     {
@@ -5206,15 +5179,6 @@
       "criado_em": "2026-10-22T12:13:50.848Z"
     },
     {
-      "id": "e28ab12e-5fcc-5101-ada1-86f92292c11a",
-      "produto_id": "fec4cd15-46c2-5d84-bb44-81954f49faa2",
-      "tipo": "DUN",
-      "codigo": "17896419723476",
-      "embalagem": "CX",
-      "quantidade_embalagem": null,
-      "criado_em": "2026-10-22T12:13:50.848Z"
-    },
-    {
       "id": "2b77114c-60ee-5f7a-bbc3-fc7e01be35a9",
       "produto_id": "fec4cd15-46c2-5d84-bb44-81954f49faa2",
       "tipo": "SKU",
@@ -5226,7 +5190,7 @@
   ],
   "pending_images_approval": [
     {
-      "produto_id": "9b6750f1-661f-5ee1-a24b-49e8cce3786c",
+      "produto_id": "prod_lar_733164",
       "sku": "733164",
       "descricao": "Meio Peito sem Osso e sem Pele Pacote 1kg",
       "placeholder_url": "/imagens_produtos/placeholder.webp"

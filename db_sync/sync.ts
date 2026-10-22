@@ -18,59 +18,12 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
 import { sanitizeDatabase } from './sanitize_supabase_db';
 import { formatProductDescription } from '../core/normalizers/text_parser';
-
-const PWA_PUBLIC_IMG_DIR = '/root/repo_pwa/public/imagens_produtos';
-const LOCAL_PROCESSED_IMG_DIR = path.join(process.cwd(), 'images', 'processed');
-
-async function downloadAndConvertOfficialWebp(imgUrl: string, targetBarcode: string): Promise<boolean> {
-  try {
-    if (!fs.existsSync(LOCAL_PROCESSED_IMG_DIR)) fs.mkdirSync(LOCAL_PROCESSED_IMG_DIR, { recursive: true });
-    if (!fs.existsSync(PWA_PUBLIC_IMG_DIR)) fs.mkdirSync(PWA_PUBLIC_IMG_DIR, { recursive: true });
-
-    const tempFile = path.join('/tmp', `etl_img_${targetBarcode}_${Date.now()}.tmp`);
-    const targetWebp1 = path.join(LOCAL_PROCESSED_IMG_DIR, `${targetBarcode}.webp`);
-    const targetWebp2 = path.join(PWA_PUBLIC_IMG_DIR, `${targetBarcode}.webp`);
-
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 12000);
-    const res = await fetch(imgUrl, {
-      signal: controller.signal,
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-      }
-    });
-    clearTimeout(timeoutId);
-
-    if (!res.ok) return false;
-    const arrayBuffer = await res.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
-    if (buffer.length < 1000) return false;
-
-    fs.writeFileSync(tempFile, buffer);
-
-    const pyScript = `
-import sys
-from PIL import Image
-try:
-    img = Image.open("${tempFile}").convert("RGBA")
-    bg = Image.new("RGBA", img.size, (255, 255, 255, 255))
-    alpha_composite = Image.alpha_composite(bg, img)
-    final_img = alpha_composite.convert("RGB")
-    final_img.save("${targetWebp1}", "WEBP", quality=92, method=6)
-    final_img.save("${targetWebp2}", "WEBP", quality=92, method=6)
-    print("OK")
-except Exception as e:
-    print(f"ERROR: {e}")
-`;
-    const pyCmd = `python3 -c '${pyScript.replace(/'/g, "'\\''")}'`;
-    const out = execSync(pyCmd, { encoding: 'utf-8' }).trim();
-    if (fs.existsSync(tempFile)) fs.unlinkSync(tempFile);
-
-    return out.includes('OK') && fs.existsSync(targetWebp2);
-  } catch {
-    return false;
-  }
-}
+import {
+  downloadAndConvertOfficialWebp,
+  MANUAL_SEM_IMAGEM_EANS,
+  PWA_PUBLIC_IMG_DIR,
+  LOCAL_PROCESSED_IMG_DIR
+} from '../core/normalizers/image_helper';
 
 // Carrega variáveis de ambiente (.env)
 dotenv.config();
@@ -508,6 +461,28 @@ export async function syncStagingToSupabase() {
       }
     }
 
+    // Fallback de mídia: converte imagens oficiais externas pendentes para WebP antes do upsert
+    for (const p of produtosUUID) {
+      if (p.status_imagem === 'sem_imagem') continue;
+      const existing = existingProductsMap.get(p.id);
+      if (existing && (existing.status_imagem === 'sem_imagem' || existing.status_imagem === 'reprovado')) continue;
+
+      const targetImg = p.imagem_url;
+      if (targetImg && (targetImg.startsWith('http://') || targetImg.startsWith('https://')) && !targetImg.includes('supabase.co/storage')) {
+        const bg = barcodesByProduct.get(p.id);
+        const candBarcode = bg?.ean || bg?.dun;
+        if (candBarcode && !MANUAL_SEM_IMAGEM_EANS.has(candBarcode)) {
+          const localPwaPath = path.join(PWA_PUBLIC_IMG_DIR, `${candBarcode}.webp`);
+          const localProcPath = path.join(LOCAL_PROCESSED_IMG_DIR, `${candBarcode}.webp`);
+          if (!fs.existsSync(localPwaPath) && !fs.existsSync(localProcPath)) {
+            try {
+              await downloadAndConvertOfficialWebp(targetImg, candBarcode);
+            } catch {}
+          }
+        }
+      }
+    }
+
     // Preserva status_imagem e imagem_url conforme política de integridade:
     // 1. Se a imagem foi rejeitada ('reprovado') por curadoria humana, preserva o status e mantém nulo.
     // 2. Se o scraper não trouxe imagem nesta execução, preserva imagem aprovada anterior.
@@ -525,16 +500,22 @@ export async function syncStagingToSupabase() {
             imagem_url: null,
           };
         }
-        if (existing.status_imagem === 'sem_imagem' || p.status_imagem === 'sem_imagem') {
+        const bg = barcodesByProduct.get(p.id);
+        const candBarcode = bg?.ean || bg?.dun;
+        if (candBarcode && MANUAL_SEM_IMAGEM_EANS.has(candBarcode)) {
           return {
             ...p,
             status_imagem: 'sem_imagem',
             imagem_url: null,
           };
         }
-        if (!targetImg && existing.imagem_url && existing.status_imagem === 'aprovado') {
+        // Se o scraper não trouxe imagem nesta execução ou trouxe sem_imagem, preserva imagem aprovada anterior
+        if ((!targetImg || p.status_imagem === 'sem_imagem') && existing.imagem_url && existing.status_imagem === 'aprovado') {
           targetImg = existing.imagem_url;
           targetStatus = existing.status_imagem;
+        } else if (existing.status_imagem === 'sem_imagem' && (!targetImg || p.status_imagem === 'sem_imagem')) {
+          targetImg = null;
+          targetStatus = 'sem_imagem';
         }
       }
 
