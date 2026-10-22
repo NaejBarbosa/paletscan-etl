@@ -14,11 +14,11 @@ export interface LarProductSpec {
 }
 
 export const LAR_OFFICIAL_CATALOG: Record<string, LarProductSpec> = {
-  // --- Cortes Lar IQF 1kg / 2kg ---
-  '7896419732556': { descr: 'Filé de Coxa e Sobrecoxa IQF 1kg', peso_gramas: 1000, fracionado: false },
-  '7896419732501': { descr: 'Coxinha da Asa IQF 1kg', peso_gramas: 1000, fracionado: false },
-  '7896419732518': { descr: 'Filé de Peito IQF 1kg', peso_gramas: 1000, fracionado: false },
-  '7896419732525': { descr: 'Filezinho Sassami IQF 1kg', peso_gramas: 1000, fracionado: false },
+  // --- Cortes Lar Food Service 2kg ---
+  '7896419732556': { descr: 'Filé de Coxa e Sobrecoxa Food Service 2kg', peso_gramas: 2000, fracionado: false },
+  '7896419732501': { descr: 'Coxinha da Asa Food Service 2kg', peso_gramas: 2000, fracionado: false },
+  '7896419732518': { descr: 'Filé de Peito Food Service 2kg', peso_gramas: 2000, fracionado: false },
+  '7896419732525': { descr: 'Filezinho Sassami Food Service 2kg', peso_gramas: 2000, fracionado: false },
 
   // --- Miúdos e Frango Desfiado Lar ---
   '7896419729211': { descr: 'Fígado 700g', peso_gramas: 700, fracionado: false },
@@ -155,9 +155,9 @@ export const LAR_OFFICIAL_CATALOG: Record<string, LarProductSpec> = {
   '7896419728740': { descr: 'Meio Peito Cozido em Tiras Linha Minuto 300g', peso_gramas: 300, fracionado: false },
 
   // --- Peixes Lar ---
-  '7896419731900': { descr: 'Filé de Tilápia 600g', peso_gramas: 600, fracionado: false },
-  '7896419731917': { descr: 'Filé de Tilápia 600g', peso_gramas: 600, fracionado: false },
-  '7896419731801': { descr: 'Filé de Tilápia 800g', peso_gramas: 800, fracionado: false }
+  '7896419731900': { descr: 'Filé de Tilápia 400g', peso_gramas: 400, fracionado: false },
+  '7896419731917': { descr: 'Filé de Tilápia 700g', peso_gramas: 700, fracionado: false },
+  '7896419731801': { descr: 'Filé de Tilápia Food Service 5kg', peso_gramas: 5000, fracionado: false }
 };
 
 /**

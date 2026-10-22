@@ -313,9 +313,11 @@ async function scrapeInstitutionalPage(url: string, marcaNome: string): Promise<
       }
     }
 
-    // 3. EAN (Procura padrão 789XXXXXXXXXX no HTML)
+    // 3. EAN (Prioriza tag oficial sku-ean ou data-zaply-product-gtin antes de regex geral)
+    const skuEanTag = html.match(/<span[^>]*class=["'][^"']*sku-ean[^"']*["'][^>]*>[\s\S]*?\b(789\d{10})\b[\s\S]*?<\/span>/i);
+    const zaplyGtin = html.match(/data-zaply-product-gtin=["'](789\d{10})["']/i);
     const eanMatches = html.match(/\b789\d{10}\b/g);
-    const ean = eanMatches ? eanMatches[0] : '';
+    const ean = skuEanTag ? skuEanTag[1] : (zaplyGtin ? zaplyGtin[1] : (eanMatches ? eanMatches[0] : ''));
 
     if (!title || !image_url) return null;
 
@@ -323,6 +325,12 @@ async function scrapeInstitutionalPage(url: string, marcaNome: string): Promise<
   } catch (err) {
     return null;
   }
+}
+
+function extractUnitWeightStr(text: string): string | null {
+  if (!text) return null;
+  const m = text.toLowerCase().match(/\b(\d+(?:[.,]\d+)?\s*(?:g|kg|ml|l))\b/);
+  return m ? m[1].replace(/\s+/g, '').replace(',', '.') : null;
 }
 
 /**
@@ -334,6 +342,18 @@ export async function runBRFScraper(): Promise<StagingPayload> {
   // 1. Carrega a base B2B consolidada interna a partir do staging
   const legacyRows = loadBaselineProducts();
   console.log(`📦 Base B2B MBRF carregada com ${legacyRows.length} registros.`);
+
+  // Consulta o sitemap oficial B2B Central MBRF para monitoramento de catálogo ativo
+  try {
+    const mbrfRes = await fetch(CENTRAL_BRF_SITEMAP, { headers: HTTP_HEADERS });
+    if (mbrfRes.ok) {
+      const mbrfXml = await mbrfRes.text();
+      const mbrfLocs = mbrfXml.match(/<loc>([^<]+)<\/loc>/g) || [];
+      console.log(`📡 Sitemap B2B Central MBRF verificado ao vivo: ${mbrfLocs.length} URLs ativas.`);
+    }
+  } catch {
+    // continua
+  }
 
   // Dicionário de produtos unificados indexados por EAN, SKU e Título
   const productMapByEan = new Map<string, any>();
@@ -365,8 +385,8 @@ export async function runBRFScraper(): Promise<StagingPayload> {
     if (item.title) productMapByTitle.set(item.title.toLowerCase(), item);
   }
 
-  // 2. Scraping das Fontes Institucionais HD (Sadia e Perdigão) para SOBRESCREVER imagens antigas
-  console.log('📸 Coletando fotografias HD atualizadas dos sites institucionais Sadia e Perdigão...');
+  // 2. Scraping das Fontes Institucionais HD (Sadia e Perdigão) para atualizar imagens e verificar gramaturas
+  console.log('📸 Coletando fotografias HD e especificações atualizadas dos sites institucionais Sadia e Perdigão...');
   const sadiaUrls = await fetchSitemapUrls(SADIA_SITEMAP, 'Sadia');
   const perdigaoUrls = await fetchSitemapUrls(PERDIGAO_SITEMAP, 'Perdigão');
 
@@ -378,42 +398,54 @@ export async function runBRFScraper(): Promise<StagingPayload> {
   console.log(`🔄 Processando ${instTasks.length} páginas de produtos institucionais...`);
 
   let updatedImagesCount = 0;
-  let newInstProductsCount = 0;
+  let updatedDescriptionsCount = 0;
 
-  for (let i = 0; i < instTasks.length; i++) {
-    const task = instTasks[i];
-    if (i % 20 === 0) {
+  const batchSize = 15;
+  for (let i = 0; i < instTasks.length; i += batchSize) {
+    if (i % 60 === 0) {
       console.log(`⏳ Progresso HD: [${i}/${instTasks.length}] | Imagens Atualizadas: ${updatedImagesCount}`);
     }
 
-    const instData = await scrapeInstitutionalPage(task.url, task.marca);
-    if (!instData) continue;
+    const batch = instTasks.slice(i, i + batchSize);
+    const results = await Promise.all(batch.map(t => scrapeInstitutionalPage(t.url, t.marca).then(d => ({ task: t, instData: d }))));
 
-    // Tenta casar por EAN-13 primeiro
-    let existingItem: any = null;
-    if (instData.ean && productMapByEan.has(instData.ean)) {
-      existingItem = productMapByEan.get(instData.ean);
-    } else if (instData.title && productMapByTitle.has(instData.title.toLowerCase())) {
-      existingItem = productMapByTitle.get(instData.title.toLowerCase());
-    }
+    for (const { task, instData } of results) {
+      if (!instData) continue;
 
-    if (existingItem) {
-      // Sobrescreve a imagem antiga do B2B com a imagem HD da embalagem institucional!
-      if (instData.image_url && instData.image_url !== 'N/A') {
-        existingItem.image_url = instData.image_url;
-        existingItem.hd_source = task.marca;
-        updatedImagesCount++;
+      let existingItem: any = null;
+      if (instData.ean && productMapByEan.has(instData.ean)) {
+        existingItem = productMapByEan.get(instData.ean);
+      } else if (instData.title && productMapByTitle.has(instData.title.toLowerCase())) {
+        existingItem = productMapByTitle.get(instData.title.toLowerCase());
       }
-      if (!existingItem.ean && instData.ean) {
-        existingItem.ean = instData.ean;
+
+      if (existingItem) {
+        if (instData.image_url && instData.image_url !== 'N/A') {
+          existingItem.image_url = instData.image_url;
+          existingItem.hd_source = task.marca;
+          updatedImagesCount++;
+        }
+        if (!existingItem.ean && instData.ean) {
+          existingItem.ean = instData.ean;
+        }
+        // Verifica se houve alteração de gramatura unitária no portal oficial (preservando sufixo B2B -Caixa)
+        if (instData.ean && existingItem.ean === instData.ean && instData.title) {
+          const liveUnitWeight = extractUnitWeightStr(instData.title);
+          const boxParts = String(existingItem.title || '').split(/\s*-?\s*Caixa\b/i);
+          const unitPrefix = boxParts[0] || '';
+          const exUnitWeight = extractUnitWeightStr(unitPrefix);
+          if (liveUnitWeight && exUnitWeight && liveUnitWeight !== exUnitWeight) {
+            const newPrefix = unitPrefix.replace(/\b\d+(?:[.,]\d+)?\s*(?:g|kg|ml|l)\b/i, liveUnitWeight.replace('.', ','));
+            existingItem.title = newPrefix + String(existingItem.title || '').slice(unitPrefix.length);
+            existingItem.descrFiscal = existingItem.title;
+            updatedDescriptionsCount++;
+          }
+        }
       }
     }
-
-    // Pequeno delay entre requisições
-    await new Promise(res => setTimeout(res, 50));
   }
 
-  console.log(`✅ Fusão de imagens concluída! ${updatedImagesCount} produtos com imagem HD atualizada.`);
+  console.log(`✅ Fusão concluída! ${updatedImagesCount} produtos com imagem HD atualizada e ${updatedDescriptionsCount} descrições ajustadas.`);
 
   // 3. Montagem da estrutura relacional padronizada para o PaletScan ETL
   const fabricantesMap = new Map<string, Fabricante>();

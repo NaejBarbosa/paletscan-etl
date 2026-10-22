@@ -27,7 +27,7 @@ import {
   FABRICANTE_LAR_NOME
 } from '../../core/heuristics/brand_classifier';
 import { classifyProduct } from '../../core/heuristics/category_classifier';
-import { getLarOfficialSpec } from './catalog_rules';
+import { getLarOfficialSpec, LAR_OFFICIAL_CATALOG } from './catalog_rules';
 
 const PALETSCAN_NAMESPACE = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
 
@@ -119,13 +119,191 @@ export function readLegacyLarDatabase(): RawLarProduct[] {
   }
 }
 
+const LAR_SITEMAP_URL = 'https://www.lar.ind.br/produtos-sitemap.xml';
+const LAR_HTTP_HEADERS = {
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'Accept-Language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+};
+
+export async function fetchLiveLarProducts(): Promise<RawLarProduct[]> {
+  console.log(`[*] Consultando sitemap oficial da Lar ao vivo (${LAR_SITEMAP_URL})...`);
+  const liveProducts: RawLarProduct[] = [];
+
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 15000);
+    const res = await fetch(LAR_SITEMAP_URL, { signal: controller.signal, headers: LAR_HTTP_HEADERS });
+    clearTimeout(timeoutId);
+
+    if (!res.ok) {
+      console.warn(`[!] Aviso ao consultar sitemap Lar: HTTP ${res.status}`);
+      return [];
+    }
+
+    const xml = await res.text();
+    const urls = (xml.match(/<loc>([^<]+)<\/loc>/g) || [])
+      .map(x => x.replace(/<\/?loc>/g, '').trim())
+      .filter(u => u.includes('lar.ind.br/produtos/') && u !== 'https://www.lar.ind.br/produtos/');
+
+    console.log(`[+] Sitemap oficial da Lar lido: ${urls.length} URLs de produtos PT-BR identificadas.`);
+
+    const batchSize = 20;
+    for (let i = 0; i < urls.length; i += batchSize) {
+      const batch = urls.slice(i, i + batchSize);
+      const results = await Promise.all(batch.map(async (url): Promise<RawLarProduct | null> => {
+        try {
+          const c = new AbortController();
+          const t = setTimeout(() => c.abort(), 12000);
+          const pageRes = await fetch(url, { signal: c.signal, headers: LAR_HTTP_HEADERS });
+          clearTimeout(t);
+          if (!pageRes.ok) return null;
+
+          const html = await pageRes.text();
+          const titleTag = (html.match(/<title>([^<]+)<\/title>/i) || [])[1] || '';
+          const rawTitle = titleTag
+            .replace(/\s*-\s*Lar Cooperativa Agroindustrial.*$/i, '')
+            .replace(/&#8211;|&#8226;/g, '-')
+            .trim();
+
+          const eanMatch = html.match(/EAN:\s*(\d{13})/i);
+          const dunMatch = html.match(/DUN:\s*(\d{14})/i);
+          const pesoUnMatch = html.match(/Peso\s*Un:\s*([0-9.,]+\s*(?:kg|g))/i);
+          const ogImgMatch = html.match(/<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']/i);
+
+          const ean = eanMatch ? eanMatch[1].trim() : '';
+          const dun = dunMatch ? dunMatch[1].trim() : '';
+          if (!rawTitle || (!ean && !dun)) return null;
+
+          const pesoLiquido = pesoUnMatch ? pesoUnMatch[1].replace(/\s+/g, '').trim() : '';
+          const ogImg = ogImgMatch && !ogImgMatch[1].includes('logo.png') ? ogImgMatch[1].trim() : '';
+          const conservacao = /resfriad/i.test(rawTitle) ? 'Resfriado' : 'Congelado';
+
+          return {
+            sku: ean ? ean.slice(-6) : '',
+            title: rawTitle,
+            descrFiscal: rawTitle,
+            ean,
+            dun,
+            marca: 'Lar',
+            classe: '',
+            conservacao,
+            pesoLiquido,
+            url,
+            image_url: ogImg
+          };
+        } catch {
+          return null;
+        }
+      }));
+
+      for (const r of results) {
+        if (r) liveProducts.push(r);
+      }
+    }
+
+    console.log(`[+] Extraídos ${liveProducts.length} produtos ao vivo do portal oficial da Lar.`);
+  } catch (err: any) {
+    console.warn(`[!] Aviso na extração ao vivo da Lar: ${err.message}. Preservando base consolidada.`);
+  }
+
+  return liveProducts;
+}
+
 export async function runLarScraper() {
   console.log('[*] Iniciando ETL Scraper da Lar Cooperativa Agroindustrial...');
   if (!fs.existsSync(STAGING_DIR)) {
     fs.mkdirSync(STAGING_DIR, { recursive: true });
   }
 
-  const rawProducts = readLegacyLarDatabase();
+  const baselineProducts = readLegacyLarDatabase();
+  const liveProducts = await fetchLiveLarProducts();
+
+  // Fusão Anti-Regressão: preserva 100% da base consolidada e aplica atualizações/novos itens da web ao vivo
+  const mergedByEan = new Map<string, RawLarProduct>();
+  const rawProducts: RawLarProduct[] = [];
+
+  for (const bp of baselineProducts) {
+    const cleanEan = normalizeEAN13(bp.ean);
+    if (cleanEan) {
+      mergedByEan.set(cleanEan, bp);
+    }
+    rawProducts.push(bp);
+  }
+
+  let liveUpdatedCount = 0;
+  let liveAddedCount = 0;
+
+  for (const lp of liveProducts) {
+    const cleanEan = normalizeEAN13(lp.ean);
+    if (!cleanEan) continue;
+
+    const existing = mergedByEan.get(cleanEan);
+    if (existing) {
+      if (lp.image_url && (!existing.image_url || !existing.image_url.startsWith('/imagens_produtos/'))) {
+        existing.image_url = lp.image_url;
+      }
+      if (!existing.dun && lp.dun) {
+        existing.dun = lp.dun;
+      }
+      // Se o site oficial da Lar informou um Peso Unitário diferente do que estava registrado, propaga a atualização
+      if (lp.pesoLiquido) {
+        const liveParsed = formatProductDescription(`${lp.title} ${lp.pesoLiquido}`);
+        const exParsed = formatProductDescription(`${existing.title} ${existing.pesoLiquido || ''}`);
+        if (liveParsed.peso_gramas && exParsed.peso_gramas && liveParsed.peso_gramas !== exParsed.peso_gramas) {
+          existing.title = lp.title;
+          existing.descrFiscal = `${lp.title} ${lp.pesoLiquido}`;
+          existing.pesoLiquido = lp.pesoLiquido;
+          (existing as any)._forceLiveOverride = true;
+          liveUpdatedCount++;
+        }
+      }
+    } else {
+      // Ignora produtos suínos de peso variável na web quando colidem no mesmo EAN ou garante unicidade estrita de EAN
+      mergedByEan.set(cleanEan, lp);
+      rawProducts.push(lp);
+      liveAddedCount++;
+    }
+  }
+
+  if (liveUpdatedCount > 0 || liveAddedCount > 0) {
+    console.log(`[+] Fusão Ao Vivo Lar: ${liveAddedCount} novos produtos descobertos no sitemap e ${liveUpdatedCount} atualizados.`);
+  }
+
+  // Inclusão de produtos do catálogo auditado que não estão na base legada nem no sitemap do consumidor
+  let officialAddedCount = 0;
+  const officialDuns: Record<string, string> = {
+    '7896419732518': '17896419732515',
+    '7896419732556': '17896419732553',
+    '7896419732525': '17896419732522',
+    '7896419732501': '17896419732508',
+  };
+
+  for (const [code, spec] of Object.entries(LAR_OFFICIAL_CATALOG)) {
+    const cleanEan = normalizeEAN13(code);
+    if (!cleanEan || mergedByEan.has(cleanEan)) continue;
+
+    const newProd: RawLarProduct = {
+      sku: cleanEan.slice(-6),
+      title: spec.descr,
+      descrFiscal: spec.descr,
+      ean: cleanEan,
+      dun: officialDuns[cleanEan] || '',
+      marca: 'Lar',
+      classe: 'Aves',
+      conservacao: 'Congelado',
+      pesoLiquido: spec.peso_gramas ? `${spec.peso_gramas}g` : '',
+      image_url: ''
+    };
+    mergedByEan.set(cleanEan, newProd);
+    rawProducts.push(newProd);
+    officialAddedCount++;
+  }
+
+  if (officialAddedCount > 0) {
+    console.log(`[+] Inclusão Catálogo Auditado Lar: ${officialAddedCount} produtos oficiais adicionados (incluindo linha Food Service).`);
+  }
+
   const now = new Date().toISOString();
 
   // 1. Fabricante Mestre Lar
@@ -170,8 +348,8 @@ export async function runLarScraper() {
 
     const prodId = `prod_lar_${rawProd.sku || eanClean}`;
 
-    // Consulta se o produto possui especificação auditada no catálogo oficial Lar
-    const officialSpec = getLarOfficialSpec(eanClean, rawProd.sku);
+    // Consulta se o produto possui especificação auditada no catálogo oficial Lar (a menos que o site ao vivo tenha atualizado o peso)
+    const officialSpec = (rawProd as any)._forceLiveOverride ? null : getLarOfficialSpec(eanClean, rawProd.sku);
     let finalDescrPadronizada: string;
     let finalDescrOriginal: string;
     let finalPesoGramas: number | null;
@@ -193,7 +371,7 @@ export async function runLarScraper() {
       // Limpa conservação duplicada no título se houver e resquícios de (pesar)
       fullDescr = fullDescr
         .replace(/\s*\([Pp]esar\)/gi, '')
-        .replace(/\s*[•\-\/,]?\s*(congelada|congelado|resfriada|resfriado)\b/gi, '')
+        .replace(/\s*[•\-\/,]?\s*(congeladas?|congelados?|resfriadas?|resfriados?)\b/gi, '')
         .replace(/\s+/g, ' ')
         .trim();
 
@@ -228,8 +406,14 @@ export async function runLarScraper() {
 
     const primaryBarcode = eanClean || dunClean;
     const localPreparedPath = primaryBarcode ? path.join(BASE_DIR, 'images', 'processed', `${primaryBarcode}.webp`) : '';
+    const localPwaPath = primaryBarcode ? path.join('/root/repo_pwa/public/imagens_produtos', `${primaryBarcode}.webp`) : '';
 
-    if (localPreparedPath && fs.existsSync(localPreparedPath)) {
+    const manualSemImagemEans = new Set(['7896419732518', '7896419732556', '7896419732525', '7896419732501']);
+    if (eanClean && manualSemImagemEans.has(eanClean)) {
+      finalImageUrl = null;
+      imageStatus = 'sem_imagem';
+      noImageCount++;
+    } else if ((localPreparedPath && fs.existsSync(localPreparedPath)) || (localPwaPath && fs.existsSync(localPwaPath))) {
       finalImageUrl = `/imagens_produtos/${primaryBarcode}.webp`;
       imageStatus = 'aprovado';
       imageValidatedCount++;

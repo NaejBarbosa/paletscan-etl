@@ -165,13 +165,197 @@ function sanitizeTitle(rawText: string): string {
   return sanitizeDescriptionAnomalies(cleaned);
 }
 
+const COPACOL_BASE_URL = 'https://www.copacol.com.br';
+const COPACOL_CATEGORIES = [
+  'produtos/aves',
+  'produtos/pescados',
+  'produtos/air-fryer',
+  'produtos/pratos-prontos',
+  'produtos/empanados',
+  'produtos/vegetais',
+  'produtos/linguicas',
+  'produtos/frios',
+  'produtos/temperados',
+  'produtos/salsichas',
+  'produtos/mestre-da-grelha',
+  'produtos/lanches'
+];
+
+const COPACOL_HTTP_HEADERS = {
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'Accept-Language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+};
+
+export async function fetchLiveCopacolProducts(): Promise<RawCopacolProduct[]> {
+  console.log(`[*] Consultando portal oficial da Copacol ao vivo (${COPACOL_BASE_URL}/produtos)...`);
+  const liveProducts: RawCopacolProduct[] = [];
+
+  try {
+    const prodUrls = new Set<string>();
+    const subCatUrls = new Set<string>();
+
+    await Promise.all(COPACOL_CATEGORIES.map(async (cat) => {
+      try {
+        const c = new AbortController();
+        const t = setTimeout(() => c.abort(), 12000);
+        const res = await fetch(`${COPACOL_BASE_URL}/${cat}`, { signal: c.signal, headers: COPACOL_HTTP_HEADERS });
+        clearTimeout(t);
+        if (!res.ok) return;
+        const html = await res.text();
+        const matches = html.match(/href=["'](produtos\/[^"']+)["']/gi) || [];
+        for (const m of matches) {
+          const p = m.replace(/^href=["']|["']$/g, '').trim();
+          const parts = p.split('/');
+          if (parts.length >= 5 && /^\d+$/.test(parts[3])) {
+            prodUrls.add(`${COPACOL_BASE_URL}/${p}`);
+          } else if (parts.length === 3) {
+            subCatUrls.add(`${COPACOL_BASE_URL}/${p}`);
+          }
+        }
+      } catch {
+        // continua
+      }
+    }));
+
+    await Promise.all(Array.from(subCatUrls).map(async (subUrl) => {
+      try {
+        const c = new AbortController();
+        const t = setTimeout(() => c.abort(), 12000);
+        const res = await fetch(subUrl, { signal: c.signal, headers: COPACOL_HTTP_HEADERS });
+        clearTimeout(t);
+        if (!res.ok) return;
+        const html = await res.text();
+        const matches = html.match(/href=["'](produtos\/[^"']+)["']/gi) || [];
+        for (const m of matches) {
+          const p = m.replace(/^href=["']|["']$/g, '').trim();
+          const parts = p.split('/');
+          if (parts.length >= 5 && /^\d+$/.test(parts[3])) {
+            prodUrls.add(`${COPACOL_BASE_URL}/${p}`);
+          }
+        }
+      } catch {
+        // continua
+      }
+    }));
+
+    const allUrls = Array.from(prodUrls);
+    console.log(`[+] Portal oficial da Copacol mapeado: ${allUrls.length} URLs de produtos identificadas.`);
+
+    const batchSize = 20;
+    for (let i = 0; i < allUrls.length; i += batchSize) {
+      const batch = allUrls.slice(i, i + batchSize);
+      const results = await Promise.all(batch.map(async (url): Promise<RawCopacolProduct | null> => {
+        try {
+          const c = new AbortController();
+          const t = setTimeout(() => c.abort(), 12000);
+          const res = await fetch(url, { signal: c.signal, headers: COPACOL_HTTP_HEADERS });
+          clearTimeout(t);
+          if (!res.ok) return null;
+
+          const html = await res.text();
+          const h1Match = html.match(/<h1[^>]*class=["'][^"']*product-produto-title[^"']*["'][^>]*>([\s\S]*?)<\/h1>/i);
+          const rawH1 = h1Match ? h1Match[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : '';
+          if (!rawH1) return null;
+
+          const imgMatch = html.match(/https:\/\/www\.copacol\.com\.br\/administrativo\/uploads\/Produto\/([^"'\s>]+)/i);
+          const ondeMatch = html.match(/onde-encontrar\/(\d+)\//i);
+          const skuFromImg = imgMatch ? (imgMatch[1].match(/^(\d+)___/) || [])[1] : '';
+          const sku = (ondeMatch ? ondeMatch[1] : skuFromImg || '').trim();
+          if (!sku) return null;
+
+          const apresMatch = html.match(/Apresenta(?:ç|&ccedil;)ão:\s*<strong>([\s\S]*?)<\/strong>/i);
+          const apres = apresMatch ? apresMatch[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : '';
+          const eanMatch = html.match(/\b(789\d{10})\b/);
+          const dunMatch = html.match(/\b([1-9]789\d{10})\b/);
+
+          const fullLiveTitle = (apres && !/vari[aá]vel/i.test(apres) && !rawH1.toLowerCase().includes(apres.toLowerCase()))
+            ? `${rawH1.replace(/\s+\d+(?:[.,]\d+)?\s*(?:kg|g)\b/i, '').trim()} ${apres}`
+            : rawH1;
+
+          return {
+            sku,
+            title: fullLiveTitle,
+            descricao: fullLiveTitle,
+            descrFiscal: fullLiveTitle,
+            ean: eanMatch ? eanMatch[1] : '',
+            dun: dunMatch ? dunMatch[1] : '',
+            marca: 'Copacol',
+            conservacao: /resfriad/i.test(rawH1) ? 'Resfriado' : 'Congelado',
+            pesoLiquido: apres,
+            url,
+            image_url: imgMatch ? imgMatch[0].trim() : ''
+          };
+        } catch {
+          return null;
+        }
+      }));
+
+      for (const r of results) {
+        if (r) liveProducts.push(r);
+      }
+    }
+
+    console.log(`[+] Extraídos ${liveProducts.length} produtos ao vivo do portal oficial da Copacol.`);
+  } catch (err: any) {
+    console.warn(`[!] Aviso na extração ao vivo da Copacol: ${err.message}. Preservando base consolidada.`);
+  }
+
+  return liveProducts;
+}
+
 export async function runCopacolScraper() {
   console.log('[*] Iniciando ETL Scraper da Copacol Cooperativa Agroindustrial Consolata...');
   if (!fs.existsSync(STAGING_DIR)) {
     fs.mkdirSync(STAGING_DIR, { recursive: true });
   }
 
-  const rawProducts = readLegacyCopacolDatabase();
+  const baselineProducts = readLegacyCopacolDatabase();
+  const liveProducts = await fetchLiveCopacolProducts();
+
+  // Fusão Anti-Regressão por SKU: preserva 100% da base auditada de EAN/DUN e aplica enriquecimento ao vivo
+  const mergedBySku = new Map<string, RawCopacolProduct>();
+  const rawProducts: RawCopacolProduct[] = [];
+
+  for (const bp of baselineProducts) {
+    if (bp.sku) {
+      mergedBySku.set(String(bp.sku).trim(), bp);
+    }
+    rawProducts.push(bp);
+  }
+
+  let liveUpdatedCount = 0;
+  let liveAddedCount = 0;
+
+  for (const lp of liveProducts) {
+    const skuKey = String(lp.sku || '').trim();
+    if (!skuKey) continue;
+
+    const existing = mergedBySku.get(skuKey);
+    if (existing) {
+      if (lp.image_url && (!existing.image_url || !existing.image_url.startsWith('/imagens_produtos/'))) {
+        existing.image_url = lp.image_url;
+      }
+      // Se o peso unitário oficial do produto mudou no portal da Copacol, atualiza o título e peso
+      const liveParsed = formatProductDescription( sanitizeTitle(lp.title || '') );
+      const exParsed = formatProductDescription( sanitizeTitle(existing.title || existing.descrFiscal || '') );
+      if (liveParsed.peso_gramas && exParsed.peso_gramas && liveParsed.peso_gramas !== exParsed.peso_gramas) {
+        existing.title = lp.title;
+        existing.descricao = lp.title;
+        existing.descrFiscal = lp.title;
+        liveUpdatedCount++;
+      }
+    } else if (lp.ean && normalizeEAN13(lp.ean)) {
+      mergedBySku.set(skuKey, lp);
+      rawProducts.push(lp);
+      liveAddedCount++;
+    }
+  }
+
+  if (liveUpdatedCount > 0 || liveAddedCount > 0) {
+    console.log(`[+] Fusão Ao Vivo Copacol: ${liveAddedCount} novos produtos e ${liveUpdatedCount} atualizados via portal oficial.`);
+  }
+
   const now = new Date().toISOString();
 
   // 1. Fabricante Mestre Copacol
@@ -251,8 +435,9 @@ export async function runCopacolScraper() {
 
     const primaryBarcode = eanClean || dunClean;
     const localPreparedPath = primaryBarcode ? path.join(BASE_DIR, 'images', 'processed', `${primaryBarcode}.webp`) : '';
+    const localPwaPath = primaryBarcode ? path.join('/root/repo_pwa/public/imagens_produtos', `${primaryBarcode}.webp`) : '';
 
-    if (localPreparedPath && fs.existsSync(localPreparedPath)) {
+    if ((localPreparedPath && fs.existsSync(localPreparedPath)) || (localPwaPath && fs.existsSync(localPwaPath))) {
       finalImageUrl = `/imagens_produtos/${primaryBarcode}.webp`;
       imageStatus = 'aprovado';
       imageValidatedCount++;

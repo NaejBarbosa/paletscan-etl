@@ -64,6 +64,8 @@ export interface RawAuroraProduct {
 export interface SitemapEntry {
   url: string;
   image_url: string;
+  sku?: string;
+  title?: string;
 }
 
 export async function fetchLiveSitemap(): Promise<SitemapEntry[]> {
@@ -94,7 +96,39 @@ export async function fetchLiveSitemap(): Promise<SitemapEntry[]> {
           });
         }
       }
-      console.log(`[+] Sitemap ao vivo lido: ${entries.length} URLs mapeadas.`);
+      console.log(`[+] Sitemap ao vivo lido: ${entries.length} URLs mapeadas. Extraindo fichas de produtos...`);
+
+      const prodEntries = entries.filter(e => e.url.includes('/produto/'));
+      const batchSize = 25;
+      for (let i = 0; i < prodEntries.length; i += batchSize) {
+        const batch = prodEntries.slice(i, i + batchSize);
+        await Promise.all(batch.map(async (entry) => {
+          try {
+            const c = new AbortController();
+            const t = setTimeout(() => c.abort(), 12000);
+            const pageRes = await fetch(entry.url, {
+              signal: c.signal,
+              headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml'
+              }
+            });
+            clearTimeout(t);
+            if (!pageRes.ok) return;
+            const html = await pageRes.text();
+            const skuMatch = html.match(/product\/sku\/(\d+)/i);
+            const h1Match = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
+            if (skuMatch) entry.sku = skuMatch[1].trim();
+            if (h1Match) entry.title = h1Match[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+            if (!entry.image_url) {
+              const ogImg = html.match(/<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']/i);
+              if (ogImg) entry.image_url = ogImg[1].trim();
+            }
+          } catch {
+            // continua
+          }
+        }));
+      }
     }
   } catch (err: any) {
     console.warn(`[!] Aviso no sitemap ao vivo: ${err.message}.`);
@@ -235,7 +269,14 @@ export function findBestAuroraWebImage(
   const titleWeight = extractWeightsStr(rawTitle);
   const titleNouns = getProductNounTags(rawTitle);
 
-  // 1. Tenta correspondência exata por SKU no nome do arquivo ou no slug da URL
+  // 0. Tenta correspondência direta pelo SKU extraído do HTML da página ao vivo (product/sku/{SKU})
+  for (const item of sitemapList) {
+    if (item.sku && item.sku === skuClean && item.image_url) {
+      return item.image_url;
+    }
+  }
+
+  // 1. Tenta correspondência exata por SKU no nome do arquivo ou no slug da URL (incluindo início do arquivo)
   for (const item of sitemapList) {
     const imgUrl = item.image_url || '';
     const url = item.url || '';
@@ -244,7 +285,7 @@ export function findBestAuroraWebImage(
     const filename = imgUrl.split('/').pop() || '';
     const slug = url.split('/produto/').pop()?.split('/')[0] || '';
 
-    const skuPattern = new RegExp(`[-_]${skuClean}([-_0-9]|\\.png|\\.jpg|\\.webp|$)`, 'i');
+    const skuPattern = new RegExp(`(?:^|[-_])${skuClean}([-_0-9.]|\\.png|\\.jpg|\\.webp|$)`, 'i');
     if (skuPattern.test(filename) || skuPattern.test(slug)) {
       return imgUrl;
     }
@@ -335,6 +376,13 @@ export async function runAuroraScraper() {
   const sitemapList = await fetchLiveSitemap();
   const rawProducts = readLegacyDatabase();
 
+  const liveBySku = new Map<string, SitemapEntry>();
+  for (const item of sitemapList) {
+    if (item.sku) {
+      liveBySku.set(item.sku.trim(), item);
+    }
+  }
+
   const now = new Date().toISOString();
 
   // 1. Fabricante mestre
@@ -368,8 +416,21 @@ export async function runAuroraScraper() {
   let pdfImageExtractCount = 0;
 
   for (const rawProd of rawProducts) {
-    const rawTitle = rawProd.title || rawProd.descrFiscal || '';
+    let rawTitle = rawProd.title || rawProd.descrFiscal || '';
     if (!rawTitle) continue;
+
+    // Verifica se o site oficial da Aurora alterou a gramatura unitária do SKU (preservando sufixo B2B de caixa)
+    const liveEntry = liveBySku.get(String(rawProd.sku || '').trim());
+    if (liveEntry && liveEntry.title) {
+      const liveUnitWeight = extractWeightsStr(liveEntry.title);
+      const boxSplit = rawTitle.split(/\b(Cx\.|Caixa|Saco)\b/i);
+      const unitPrefix = boxSplit[0] || rawTitle;
+      const existingUnitWeight = extractWeightsStr(unitPrefix);
+      if (liveUnitWeight && existingUnitWeight && liveUnitWeight !== existingUnitWeight) {
+        const updatedPrefix = unitPrefix.replace(/\b\d+(?:[.,]\d+)?\s*(?:g|kg|ml|l)\b/i, liveUnitWeight.replace('.', ','));
+        rawTitle = updatedPrefix + rawTitle.slice(unitPrefix.length);
+      }
+    }
 
     // Normalização de descrição e pesos
     const parsedText = formatProductDescription(rawTitle);
@@ -408,9 +469,10 @@ export async function runAuroraScraper() {
 
     const barcodePrimary = eanClean || dunClean || rawProd.sku;
     const localPreparedPath = path.join(BASE_DIR, 'images', 'processed', `${barcodePrimary}.webp`);
+    const localPwaPath = path.join('/root/repo_pwa/public/imagens_produtos', `${barcodePrimary}.webp`);
 
     // 1. Tenta imagem estática local preparada primeiro (prioridade máxima por ser a embalagem exata do EAN)
-    if (fs.existsSync(localPreparedPath)) {
+    if (fs.existsSync(localPreparedPath) || fs.existsSync(localPwaPath)) {
       finalImageUrl = `/imagens_produtos/${barcodePrimary}.webp`;
       localImageFallbackCount++;
       imageStatus = 'aprovado';
