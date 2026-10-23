@@ -251,3 +251,39 @@ Para agilizar o credenciamento de novos operadores e promotores no chão de fáb
 - **Tokens Criptográficos de Convite ([`lib/inviteToken.ts`](file:///root/repo_pwa/lib/inviteToken.ts))**: Gera links assinados com prazo de expiração configurado, embutindo filial de destino e privilégios outorgados.
 - **Mensagem Formatada para WhatsApp**: O botão *"Enviar Convite via WhatsApp"* abre a URI `whatsapp://send` com texto de boas-vindas pronto, instruções de login e o link direto para instalação e abertura do PWA no smartphone.
 
+## 🛡️ 7. Hardening de Segurança (SAST) & Resiliência Multi-Tenant
+
+A arquitetura do PaletScan PWA conta com uma camada rigorosa de segurança estática e de runtime (SAST) que protege contra ataques de elevação de privilégios, spoofing de cabeçalhos e injeção de comandos, preservando 100% da resiliência offline do operador em câmaras frias:
+
+```mermaid
+flowchart TD
+    REQ["📥 Requisição de API ou Mutação de Dados\n(/api/cadastrados, /api/cadastrar, /api/vaga-detalhes)"]
+    
+    REQ --> SESS_CHECK{"getServerSession(req, res, authOptions)\nSessão Válida e Ativa?"}
+    
+    SESS_CHECK -->|Não| ERR_401["❌ HTTP 401 Unauthorized\nAcesso não autorizado"]
+    
+    SESS_CHECK -->|Sim| GUARD["validarAcessoFilialEPrivilegio(sessionUser, filialAlvo, priv)"]
+    
+    GUARD --> IS_ADM{"sessionUser.isAdmin == true?"}
+    
+    IS_ADM -->|Sim| ALLOW["✅ Autorizado Irrestrito"]
+    
+    IS_ADM -->|Não| BRANCH_CHECK{"filialAlvo in filiaisPermitidas?"}
+    
+    BRANCH_CHECK -->|Não| ERR_403["❌ HTTP 403 Forbidden\nAcesso negado para esta filial"]
+    
+    BRANCH_CHECK -->|Sim| PRIV_CHECK{"Privilégio Concedido na Filial Alvo?"}
+    
+    PRIV_CHECK -->|Sim| ALLOW
+    PRIV_CHECK -->|Não| ERR_PRIV["❌ HTTP 403 Forbidden\nPrivilégio não concedido nesta filial"]
+```
+
+### Componentes de Blindagem SAST:
+- **Proteção de Sessão e Isolamento de Filial em `/api/cadastrados`**: A rota de listagem de estoque exige obrigatoriamente sessão autenticada (`getServerSession`). Operadores não-admin só podem consultar estoques de filiais expressamente autorizadas em `filiaisPermitidas`.
+- **Helper Centralizado `validarAcessoFilialEPrivilegio` (`lib/authFilialGuard.ts`)**: Valida autorização de filial e privilégio granular tanto no nível de filial quanto global, protegendo mutações nas rotas `/api/cadastrar`, `/api/vaga-detalhes`, `/api/excluir-paletes-massa` e `/api/paletes/realocar`.
+- **Anti-Spoofing de Headers em Rotas `/api/admin/*`**: Nenhuma rota administrativa aceita ou confia exclusivamente no header `x-paletscan-user` para outorga de privilégios. O acesso requer obrigatoriamente sessão de administrador autenticada via cookies de servidor ou JWT decodificado no servidor.
+- **Carregamento sob Demanda (Lazy Load) do Eruda DevTools**: O script `eruda.js` foi removido do boot de primeiro frame em `pages/_document.tsx`. O console móvel é injetado sob demanda em `lib/erudaUtils.ts` apenas quando o usuário aciona o painel DevTools, mantendo a telemetria em segundo plano via `clientLogBridge.ts`.
+- **Eliminação de Interpolação Shell no Pipeline ETL (`execFileSync`)**: As chamadas `execSync` com variáveis interpoladas em `core/validators/pdf_extractor.ts` e `core/normalizers/image_helper.ts` foram substituídas por `execFileSync` com vetores de argumentos estritos e leitura segura via `sys.argv`, eliminando riscos de Shell Injection.
+- **Mitigação de CVE de Planilhas (`xlsx`)**: Atualização do pacote para a versão oficial corrigida da SheetJS (0.20.3), neutralizando vulnerabilidades conhecidas de Prototype Pollution e ReDoS.
+

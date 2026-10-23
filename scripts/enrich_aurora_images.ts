@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { execSync } from 'child_process';
+import { execSync, execFileSync } from 'child_process';
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
 
@@ -91,20 +91,22 @@ import sys
 from PIL import Image
 
 try:
-    img = Image.open("${tempFile}").convert("RGBA")
+    src_file = sys.argv[1]
+    out_file1 = sys.argv[2]
+    out_file2 = sys.argv[3]
+    img = Image.open(src_file).convert("RGBA")
     # Cria canvas fundo branco sólido
     bg = Image.new("RGBA", img.size, (255, 255, 255, 255))
     alpha_composite = Image.alpha_composite(bg, img)
     final_img = alpha_composite.convert("RGB")
-    final_img.save("${targetWebpFile1}", "WEBP", quality=92, method=6)
-    final_img.save("${targetWebpFile2}", "WEBP", quality=92, method=6)
+    final_img.save(out_file1, "WEBP", quality=92, method=6)
+    final_img.save(out_file2, "WEBP", quality=92, method=6)
     print("OK")
 except Exception as e:
     print(f"ERROR: {e}")
 `;
 
-    const pyCmd = `python3 -c '${pyScript.replace(/'/g, "'\\''")}'`;
-    const out = execSync(pyCmd, { encoding: 'utf-8' }).trim();
+    const out = execFileSync('python3', ['-c', pyScript, tempFile, targetWebpFile1, targetWebpFile2], { encoding: 'utf-8' }).trim();
     if (fs.existsSync(tempFile)) fs.unlinkSync(tempFile);
 
     return out.includes('OK') && fs.existsSync(targetWebpFile2);

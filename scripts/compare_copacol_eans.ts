@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { execSync } from 'child_process';
+import { execFileSync } from 'child_process';
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
 
@@ -26,9 +26,9 @@ async function compare() {
   let oldUniqueEansSet = new Set<string>();
 
   if (fs.existsSync(OLD_DB_PATH)) {
-    const pythonCmd = `python3 -c "import sqlite3, json; conn = sqlite3.connect('${OLD_DB_PATH}'); conn.row_factory = sqlite3.Row; c = conn.cursor(); c.execute('SELECT * FROM produtos;'); print(json.dumps([dict(r) for r in c.fetchall()], ensure_ascii=False))"`;
+    const pyScript = "import sqlite3, json, sys; conn = sqlite3.connect(sys.argv[1]); conn.row_factory = sqlite3.Row; c = conn.cursor(); c.execute('SELECT * FROM produtos;'); print(json.dumps([dict(r) for r in c.fetchall()], ensure_ascii=False))";
     try {
-      const rawJson = execSync(pythonCmd, { encoding: 'utf-8' });
+      const rawJson = execFileSync('python3', ['-c', pyScript, OLD_DB_PATH], { encoding: 'utf-8' });
       const oldProds: any[] = JSON.parse(rawJson);
       oldTotalProds = oldProds.length;
       oldProds.forEach(p => {

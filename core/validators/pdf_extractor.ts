@@ -1,4 +1,4 @@
-import { execSync } from 'child_process';
+import { execFileSync } from 'child_process';
 import * as path from 'path';
 
 export interface PDFExtractionResult {
@@ -27,18 +27,22 @@ export function extractAndAdaptAuroraPdfImage(
   pdfPath?: string,
   outputDir?: string
 ): PDFExtractionResult {
-  let cmd = `python3 "${PDF_EXTRACTOR_SCRIPT}" "${sku.replace(/"/g, '\\"')}" --barcode "${barcode.replace(/"/g, '\\"')}"`;
+  const args = [PDF_EXTRACTOR_SCRIPT, sku, '--barcode', barcode];
   if (pdfPath) {
-    cmd += ` --pdf "${pdfPath.replace(/"/g, '\\"')}"`;
+    args.push('--pdf', pdfPath);
   }
   if (outputDir) {
-    cmd += ` --outdir "${outputDir.replace(/"/g, '\\"')}"`;
+    args.push('--outdir', outputDir);
   }
 
   try {
-    const rawOutput = execSync(cmd, { encoding: 'utf-8', timeout: 30000 });
+    const rawOutput = execFileSync('python3', args, { encoding: 'utf-8', timeout: 30000 });
     const result: PDFExtractionResult = JSON.parse(rawOutput.trim());
-    return result;
+    return {
+      sku,
+      barcode,
+      ...result,
+    };
   } catch (err: any) {
     return {
       success: false,
