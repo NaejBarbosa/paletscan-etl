@@ -803,6 +803,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#7-hardening-de-seguranca-sast-resiliencia-multi-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 7. Hardening de Segurança (SAST) &amp; Resiliência Multi-Tenant
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ 7. Hardening de Segurança (SAST) &amp; Resiliência Multi-Tenant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-de-blindagem-sast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes de Blindagem SAST:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1325,6 +1353,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#7-hardening-de-seguranca-sast-resiliencia-multi-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 7. Hardening de Segurança (SAST) &amp; Resiliência Multi-Tenant
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ 7. Hardening de Segurança (SAST) &amp; Resiliência Multi-Tenant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-de-blindagem-sast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes de Blindagem SAST:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1707,6 +1763,38 @@
 - <strong>Disparo Imediato no Cadastro (<a href="file:///root/repo_pwa/components/ConviteWhatsAppModal.tsx"><code>ConviteWhatsAppModal.tsx</code></a>)</strong>: Ao salvar ou editar um usuário no painel administrativo <code>/admin</code>, o sistema abre automaticamente um modal com atalho para envio de convite.
 - <strong>Tokens Criptográficos de Convite (<a href="file:///root/repo_pwa/lib/inviteToken.ts"><code>lib/inviteToken.ts</code></a>)</strong>: Gera links assinados com prazo de expiração configurado, embutindo filial de destino e privilégios outorgados.
 - <strong>Mensagem Formatada para WhatsApp</strong>: O botão <em>"Enviar Convite via WhatsApp"</em> abre a URI <code>whatsapp://send</code> com texto de boas-vindas pronto, instruções de login e o link direto para instalação e abertura do PWA no smartphone.</p>
+<h2 id="7-hardening-de-seguranca-sast-resiliencia-multi-tenant">🛡️ 7. Hardening de Segurança (SAST) &amp; Resiliência Multi-Tenant</h2>
+<p>A arquitetura do PaletScan PWA conta com uma camada rigorosa de segurança estática e de runtime (SAST) que protege contra ataques de elevação de privilégios, spoofing de cabeçalhos e injeção de comandos, preservando 100% da resiliência offline do operador em câmaras frias:</p>
+<pre class="mermaid"><code>flowchart TD
+    REQ["📥 Requisição de API ou Mutação de Dados\n(/api/cadastrados, /api/cadastrar, /api/vaga-detalhes)"]
+
+    REQ --&gt; SESS_CHECK{"getServerSession(req, res, authOptions)\nSessão Válida e Ativa?"}
+
+    SESS_CHECK --&gt;|Não| ERR_401["❌ HTTP 401 Unauthorized\nAcesso não autorizado"]
+
+    SESS_CHECK --&gt;|Sim| GUARD["validarAcessoFilialEPrivilegio(sessionUser, filialAlvo, priv)"]
+
+    GUARD --&gt; IS_ADM{"sessionUser.isAdmin == true?"}
+
+    IS_ADM --&gt;|Sim| ALLOW["✅ Autorizado Irrestrito"]
+
+    IS_ADM --&gt;|Não| BRANCH_CHECK{"filialAlvo in filiaisPermitidas?"}
+
+    BRANCH_CHECK --&gt;|Não| ERR_403["❌ HTTP 403 Forbidden\nAcesso negado para esta filial"]
+
+    BRANCH_CHECK --&gt;|Sim| PRIV_CHECK{"Privilégio Concedido na Filial Alvo?"}
+
+    PRIV_CHECK --&gt;|Sim| ALLOW
+    PRIV_CHECK --&gt;|Não| ERR_PRIV["❌ HTTP 403 Forbidden\nPrivilégio não concedido nesta filial"]</code></pre>
+<h3 id="componentes-de-blindagem-sast">Componentes de Blindagem SAST:</h3>
+<ul>
+<li><strong>Proteção de Sessão e Isolamento de Filial em <code>/api/cadastrados</code></strong>: A rota de listagem de estoque exige obrigatoriamente sessão autenticada (<code>getServerSession</code>). Operadores não-admin só podem consultar estoques de filiais expressamente autorizadas em <code>filiaisPermitidas</code>.</li>
+<li><strong>Helper Centralizado <code>validarAcessoFilialEPrivilegio</code> (<code>lib/authFilialGuard.ts</code>)</strong>: Valida autorização de filial e privilégio granular tanto no nível de filial quanto global, protegendo mutações nas rotas <code>/api/cadastrar</code>, <code>/api/vaga-detalhes</code>, <code>/api/excluir-paletes-massa</code> e <code>/api/paletes/realocar</code>.</li>
+<li><strong>Anti-Spoofing de Headers em Rotas <code>/api/admin/*</code></strong>: Nenhuma rota administrativa aceita ou confia exclusivamente no header <code>x-paletscan-user</code> para outorga de privilégios. O acesso requer obrigatoriamente sessão de administrador autenticada via cookies de servidor ou JWT decodificado no servidor.</li>
+<li><strong>Carregamento sob Demanda (Lazy Load) do Eruda DevTools</strong>: O script <code>eruda.js</code> foi removido do boot de primeiro frame em <code>pages/_document.tsx</code>. O console móvel é injetado sob demanda em <code>lib/erudaUtils.ts</code> apenas quando o usuário aciona o painel DevTools, mantendo a telemetria em segundo plano via <code>clientLogBridge.ts</code>.</li>
+<li><strong>Eliminação de Interpolação Shell no Pipeline ETL (<code>execFileSync</code>)</strong>: As chamadas <code>execSync</code> com variáveis interpoladas em <code>core/validators/pdf_extractor.ts</code> e <code>core/normalizers/image_helper.ts</code> foram substituídas por <code>execFileSync</code> com vetores de argumentos estritos e leitura segura via <code>sys.argv</code>, eliminando riscos de Shell Injection.</li>
+<li><strong>Mitigação de CVE de Planilhas (<code>xlsx</code>)</strong>: Atualização do pacote para a versão oficial corrigida da SheetJS (0.20.3), neutralizando vulnerabilidades conhecidas de Prototype Pollution e ReDoS.</li>
+</ul>
 
 
 
