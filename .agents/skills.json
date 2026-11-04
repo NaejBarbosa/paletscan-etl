@@ -1,0 +1,13 @@
+{
+  "entries": [
+    { "path": "/root/repo_pwa/.agents/skills/pwa" },
+    { "path": "/root/repo_pwa/.agents/skills/pwa-backlog" },
+    { "path": "/root/repo_pwa/.agents/skills/pwa-scan" },
+    { "path": "/root/repo_pwa/.agents/skills/pwa-run" },
+    { "path": "/root/repo_pwa/.agents/skills/pwa-complete" },
+    { "path": "/root/repo_pwa/.agents/skills/pwa-quota" },
+    { "path": "/root/repo_pwa/.agents/skills/pwa-devtools" },
+    { "path": "/root/repo_pwa/.agents/skills/pwa_devtools" },
+    { "path": "/root/repo_pwa/.agents/skills/pwa_devTools" }
+  ]
+}

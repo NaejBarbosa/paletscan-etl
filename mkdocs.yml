@@ -81,6 +81,7 @@ nav:
       - "Autenticação, Passkeys & Permissões": "pwa-auth-permissoes.md"
       - "Multi-Filiais & Governança de Catálogo": "pwa-filiais-catalogo.md"
       - "Suíte de Testes & Qualidade Contínua": "pwa-testes-qualidade.md"
+      - "Backlog Agêntico, Quota & Motor /pwa": "pwa-backlog-agentico.md"
   - "Engenharia de Dados (ETL & Pipeline)":
       - "Guia de Operações & CLI": "operacoes.md"
       - "Scrapers Multi-Fornecedores": "scrapers-multi-fornecedores.md"
