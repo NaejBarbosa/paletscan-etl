@@ -1,0 +1,1602 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica e operacional completa do ecossistema PaletScan: pipelines de engenharia de dados (ETL), inteligência de catálogo B2B, IA de visão computacional e Progressive Web App (PWA) Local-First para controle de validades em câmaras frias.">
+      
+      
+        <meta name="author" content="Jean Barbosa & Antigravity Data Engineering Team">
+      
+      
+        <link rel="canonical" href="https://NaejBarbosa.github.io/paletscan-etl/pwa-backlog-agentico/">
+      
+      
+        <link rel="prev" href="../pwa-testes-qualidade/">
+      
+      
+        <link rel="next" href="../operacoes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Backlog Agêntico, Quota & Motor /pwa - PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#backlog-agentico-telemetria-devtools-observatorio-de-quota-motor-zero-token-pwa" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="PaletScan - Documentação Unificada do Ecossistema (ETL &amp; PWA)" class="md-header__button md-logo" aria-label="PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Backlog Agêntico, Quota & Motor /pwa
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Alternar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Alternar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Alternar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PaletScan - Documentação Unificada do Ecossistema (ETL &amp; PWA)" class="md-nav__button md-logo" aria-label="PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    PaletScan - Documentação Unificada do Ecossistema (ETL & PWA)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ecossistema & Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ecossistema & Arquitetura
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral & Simbiose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arquitetura-ecossistema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura Ponta a Ponta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desenvolvimento-termux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev Móvel no Smartphone & Termux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicação PWA Local-First
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aplicação PWA Local-First
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwa-visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral & Conceito PWA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwa-service-worker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Worker & Resiliência Offline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwa-scanner-regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leitor Câmera & Regex Industrial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwa-vagas-zoneamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Endereçamento & Vagas de Câmaras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwa-pesquisa-watchlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pesquisa, Consulta & Radar Watchlist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwa-relatorios-auditoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios, Conferência & Auditoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwa-auth-permissoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autenticação, Passkeys & Permissões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwa-filiais-catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-Filiais & Governança de Catálogo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwa-testes-qualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suíte de Testes & Qualidade Contínua
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog Agêntico, Quota & Motor /pwa
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog Agêntico, Quota & Motor /pwa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-arquitetura-e-fluxo-ponta-a-ponta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Arquitetura e Fluxo Ponta a Ponta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-captura-em-campo-e-telemetria-devtools-offline-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Captura em Campo e Telemetria DevTools Offline-First
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Captura em Campo e Telemetria DevTools Offline-First">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resiliencia-em-camara-fria-backlogofflinesyncts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resiliência em Câmara Fria (backlogOfflineSync.ts)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-governanca-de-status-e-trava-de-homologacao-humana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Governança de Status e Trava de Homologação Humana
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-motor-deterministico-zero-token-e-auto-calibracao-ewma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Motor Determinístico Zero-Token e Auto-Calibração EWMA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Motor Determinístico Zero-Token e Auto-Calibração EWMA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-resolucao-estatica-de-arquivos-alvo-e-agrupamento-em-lote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Resolução Estática de Arquivos-Alvo e Agrupamento em Lote
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-arvore-de-decisao-de-modelo-e-raciocinio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Árvore de Decisão de Modelo e Raciocínio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-formulas-de-estimativa-cronometro-liquido-e-ewma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Fórmulas de Estimativa, Cronômetro Líquido e EWMA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-comandos-de-barra-pwa-no-antigravity-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Comandos de Barra (/pwa) no Antigravity CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-observatorio-analitico-bidirecional-e-persistencia-supabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Observatório Analítico Bidirecional e Persistência Supabase
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Engenharia de Dados (ETL & Pipeline)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Engenharia de Dados (ETL & Pipeline)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Operações & CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scrapers-multi-fornecedores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scrapers Multi-Fornecedores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline-friboi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Friboi / JBS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heuristicas-normalizadores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normalizadores & Heurísticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processamento-imagens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de IA de Imagens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema-manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governança de Schema & Manifesto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supabase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sincronização com Supabase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossário & Referências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-arquitetura-e-fluxo-ponta-a-ponta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Arquitetura e Fluxo Ponta a Ponta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-captura-em-campo-e-telemetria-devtools-offline-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Captura em Campo e Telemetria DevTools Offline-First
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Captura em Campo e Telemetria DevTools Offline-First">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resiliencia-em-camara-fria-backlogofflinesyncts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resiliência em Câmara Fria (backlogOfflineSync.ts)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-governanca-de-status-e-trava-de-homologacao-humana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Governança de Status e Trava de Homologação Humana
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-motor-deterministico-zero-token-e-auto-calibracao-ewma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Motor Determinístico Zero-Token e Auto-Calibração EWMA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Motor Determinístico Zero-Token e Auto-Calibração EWMA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-resolucao-estatica-de-arquivos-alvo-e-agrupamento-em-lote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Resolução Estática de Arquivos-Alvo e Agrupamento em Lote
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-arvore-de-decisao-de-modelo-e-raciocinio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Árvore de Decisão de Modelo e Raciocínio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-formulas-de-estimativa-cronometro-liquido-e-ewma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Fórmulas de Estimativa, Cronômetro Líquido e EWMA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-comandos-de-barra-pwa-no-antigravity-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Comandos de Barra (/pwa) no Antigravity CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-observatorio-analitico-bidirecional-e-persistencia-supabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Observatório Analítico Bidirecional e Persistência Supabase
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="backlog-agentico-telemetria-devtools-observatorio-de-quota-motor-zero-token-pwa">🚀 Backlog Agêntico, Telemetria DevTools, Observatório de Quota &amp; Motor Zero-Token (<code>/pwa</code>)</h1>
+<p>O módulo de <strong>Backlog Agêntico &amp; Observatório de Quota</strong> do <strong>PaletScan PWA</strong> integra a captura tátil de demandas em campo (câmaras frigoríficas e chão de loja) diretamente ao ciclo de engenharia autônoma da CLI do <strong>Antigravity</strong> no Termux.</p>
+<p>Sua arquitetura foi desenhada sob o princípio <strong>Zero-Token Estimation</strong>: toda a estimativa de tokens, tempo líquido de execução, agrupamento por afinidade de arquivos e auto-calibração matemática ocorre <strong>100% em CPU local via Node.js/TypeScript</strong>, preservando integralmente a quota semanal de LLM para codificação cirúrgica, testes e deploy.</p>
+<hr />
+<h2 id="1-arquitetura-e-fluxo-ponta-a-ponta">1. Arquitetura e Fluxo Ponta a Ponta</h2>
+<pre class="mermaid"><code>flowchart TD
+    A["📱 Operador em Campo (FAB Flutuante ou Painel ADM)"] --&gt;|"Captura DOM + Logs Eruda + Print WebP"| B["💾 Fila Local Offline-First (localStorage)"]
+    B --&gt;|"Auto-Sync Online (online / visibilitychange)"| C["☁️ Supabase (backlog_tarefas / logs_sessao)"]
+    C --&gt;|"Estimativa Determinística Instantânea (0 Tokens IA)"| D["🧠 Motor Zero-Token (/pwa-scan)"]
+    D --&gt;|"Agrupamento por Afinidade (LOTE-XX) + Modelo/Raciocínio"| E["📋 Painel ADM: Fila &amp; Observatório de Quota"]
+    E --&gt;|"Operador Prioriza Card (⚡ Priorizar / 🚀 Processar)"| F["⚡ Gatilho CLI (/pwa-run)"]
+    F --&gt;|"Valida Reserva 15% (Testes+Push) + Cronômetro Líquido"| G["🛠️ Execução Cirúrgica (grep -n + Janela Curta)"]
+    G --&gt;|"tsc --noEmit + Testes + Git Push"| H["✅ Fechamento (/pwa-complete -&gt; status: concluido)"]
+    H --&gt;|"Recálculo EWMA (70% Recente / 30% Histórico)"| I["👤 Homologação Humana no Painel (-&gt; status: resolvido)"]</code></pre>
+<hr />
+<h2 id="2-captura-em-campo-e-telemetria-devtools-offline-first">2. Captura em Campo e Telemetria DevTools Offline-First</h2>
+<p>Quando um usuário com a permissão granular <strong><code>podeBacklog</code></strong> (<code>Backlog Agêntico</code>) ativa o botão flutuante ou abre o formulário no Painel ADM (<code>/admin</code> ➔ <strong>Backlog &amp; Quota IA</strong>), o coletor <a href="https://github.com/NaejBarbosa/paletscan-pwa"><code>lib/backlog/devtoolsTelemetryCollector.ts</code></a> captura automaticamente:</p>
+<ul>
+<li><strong>Contexto Ambiental</strong>: Rota ativa (<code>pathname</code>), filial ativa (<code>410</code>, <code>999</code>, etc.), tema (<code>dark</code>/<code>light</code>), status de conectividade e dimensões reais do viewport mobile.</li>
+<li><strong>Inspeção DOM Tátil</strong>: Seletor, XPath simplificado, <code>boundingClientRect</code> e estilos computados (<code>pointer-events</code>, <code>overflow-y</code>, <code>z-index</code>, <code>touch-action</code>) do último elemento interagido e de qualquer modal/overlay ativo.</li>
+<li><strong>Buffer de Erros e Console</strong>: Últimas entradas do <code>clientLogBridge</code> e pilha de erros recentes capturados pelo Eruda/DevTools.</li>
+<li><strong>Evidência Visual Compacta</strong>: Compressão automática de print/imagem em Canvas HTML5 (<code>image/webp</code>, máximo <code>800px</code> de largura, qualidade <code>0.65</code>, <code>&lt; 80 KB</code>), evitando sobrecarga de payloads.</li>
+</ul>
+<h3 id="resiliencia-em-camara-fria-backlogofflinesyncts">Resiliência em Câmara Fria (<code>backlogOfflineSync.ts</code>)</h3>
+<ul>
+<li>Se o smartphone estiver sem rede no interior da câmara frigorífica, o card é salvo em <code>0ms</code> na chave isolada <code>paletscan_backlog_offline_queue_v1</code> com status <code>rascunho_offline</code> (sem jamais interferir nas chaves de inventário <code>pending_sync</code> ou <code>pending_deletions</code>).</li>
+<li>Ao recuperar conectividade, o serviço sincroniza automaticamente em background para o Supabase e promove o card para a fila ativa.</li>
+</ul>
+<hr />
+<h2 id="3-governanca-de-status-e-trava-de-homologacao-humana">3. Governança de Status e Trava de Homologação Humana</h2>
+<p>O ciclo de vida de cada tarefa (<code>BacklogStatus</code>) obedece a uma segregação estrita de responsabilidades entre o <strong>Agente CLI (<code>agent_cli</code>)</strong> e o <strong>Administrador Humano (<code>human_admin</code>)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Responsável</th>
+<th style="text-align: left;">Descrição Operacional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>rascunho_offline</code></td>
+<td style="text-align: left;">App Mobile (Offline)</td>
+<td style="text-align: left;">Card registrado sem rede na câmara fria aguardando reconexão.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>aberto</code></td>
+<td style="text-align: left;">Operador / Admin</td>
+<td style="text-align: left;">Card recém-sincronizado na fila do servidor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>estimado_ia</code></td>
+<td style="text-align: left;">Motor Zero-Token</td>
+<td style="text-align: left;">Card analisado matematicamente com arquivos-alvo, tokens e tempo estimados.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>priorizado</code></td>
+<td style="text-align: left;">Operador / Admin</td>
+<td style="text-align: left;">Card autorizado para processamento imediato na CLI (<code>/pwa-run</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>em_execucao</code></td>
+<td style="text-align: left;">Agente CLI</td>
+<td style="text-align: left;">Card em processamento ativo com Cronômetro Líquido em andamento.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>concluido</code></td>
+<td style="text-align: left;"><strong>Agente CLI (Teto)</strong></td>
+<td style="text-align: left;">Código implementado, testado e enviado via push. <strong>Aguarda revisão humana.</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>resolvido</code></td>
+<td style="text-align: left;"><strong>Exclusivo Humano</strong></td>
+<td style="text-align: left;">Homologado em produção pelo administrador via botão <strong>✓ Homologar e Marcar Resolvido</strong>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>Trava de Segurança Imutável</strong>: Tanto a API <code>/api/admin/backlog</code> quanto <code>enforceStatusPromotionGuard()</code> bloqueiam com HTTP <code>403</code> qualquer tentativa de um ator <code>agent_cli</code> promover uma tarefa diretamente para <code>resolvido</code>.</p>
+</blockquote>
+<hr />
+<h2 id="4-motor-deterministico-zero-token-e-auto-calibracao-ewma">4. Motor Determinístico Zero-Token e Auto-Calibração EWMA</h2>
+<p>Localizado em <code>scripts/pwa_backlog_agent.ts</code> e <code>lib/backlog/backlogServerStore.ts</code>, o motor calcula todas as métricas via CPU local em Node.js:</p>
+<h3 id="41-resolucao-estatica-de-arquivos-alvo-e-agrupamento-em-lote">4.1 Resolução Estática de Arquivos-Alvo e Agrupamento em Lote</h3>
+<ol>
+<li><strong>Mapeamento Determinístico</strong>: Analisa título, descrição, rota ativa e erros recentes para identificar os <code>arquivos_alvo</code> (ex: <code>pages/admin.tsx</code>, <code>pages/index.tsx</code>, <code>lib/database/sync.ts</code>, <code>docs/pwa-backlog-agentico.md</code>) e cruza com o ranking pré-indexado em <code>logs/repo_files_metrics.json</code>.</li>
+<li><strong>Afinidade de Lote (<code>conjunto</code>)</strong>: Quando 2 ou mais cards abertos/priorizados possuem interseção em <code>arquivos_alvo</code>, o motor atribui automaticamente o mesmo <code>grupo_lote_id</code> (ex: <code>LOTE-01</code>), define <code>modo_execucao = 'conjunto'</code> e desconta do orçamento de tokens a leitura duplicada dos arquivos compartilhados.</li>
+</ol>
+<h3 id="42-arvore-de-decisao-de-modelo-e-raciocinio">4.2 Árvore de Decisão de Modelo e Raciocínio</h3>
+<ul>
+<li><strong>Baixo (<code>Flash</code> / Raciocínio <code>baixo</code>)</strong>: Ajustes visuais (<code>tipo === 'ux'</code>), espaçamento CSS ou inputs isolados em 1 arquivo.</li>
+<li><strong>Médio (<code>3.1 Pro</code> / Raciocínio <code>medio</code>)</strong>: Novas rotas de API, múltiplos componentes ou melhorias funcionais/documentação.</li>
+<li><strong>Alto (<code>4 Argon</code> / Raciocínio <code>alto</code>)</strong>: Alterações em <code>lib/database/sync.ts</code>, resolução de conflitos WatermelonDB/offline ou tarefas críticas com mais de 3 arquivos-alvo.</li>
+</ul>
+<h3 id="43-formulas-de-estimativa-cronometro-liquido-e-ewma">4.3 Fórmulas de Estimativa, Cronômetro Líquido e EWMA</h3>
+<ul>
+<li><strong>Estimativa de Tokens</strong>:
+  $<span class="arithmatex">\(\text{Tokens}_{\text{est}} = \left(\frac{\text{Bytes}_{\text{cirúrgicos}}}{4} \times F_{\text{tipo}} + \text{Média}_{\text{hist}} + \text{Reserva}_{15\%}\right) \times F_{\text{calib\_tokens}}\)</span>$</li>
+<li><strong>Cronômetro Líquido (<code>NetExecutionTimer</code>)</strong>:
+  $<span class="arithmatex">\(\text{Tempo}_{\text{líquido}} = \text{Tempo}_{\text{bruto}} - \text{Tempo}_{\text{interrupção\_rede}}\)</span>$
+  Desconta automaticamente segundos perdidos com oscilações de rede ou timeouts HTTP no ambiente móvel.</li>
+<li><strong>Auto-Calibração EWMA (Exponentially Weighted Moving Average)</strong>:
+  Ao concluir cada corrida (<code>/pwa-complete</code>), os fatores <code>fator_calibracao_tokens</code> e <code>fator_calibracao_tempo</code> são recalculados atribuindo <strong>70% de peso às últimas 10 execuções</strong> e <strong>30% ao histórico acumulado</strong>.</li>
+</ul>
+<hr />
+<h2 id="5-comandos-de-barra-pwa-no-antigravity-cli">5. Comandos de Barra (<code>/pwa</code>) no Antigravity CLI</h2>
+<p>Todas as skills e workflows estão registrados em <code>.agents/skills/</code>, <code>.agents/workflows/</code> e <code>~/.gemini/config/skills/</code>, ficando disponíveis no autocompletar <code>/</code> do terminal:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Comando Slash</th>
+<th style="text-align: left;">Script Equivalente (<code>npm</code>)</th>
+<th style="text-align: left;">Função Principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>/pwa</code></td>
+<td style="text-align: left;"><code>npm run pwa</code></td>
+<td style="text-align: left;">Orquestrador completo: roda <code>scan</code>, valida <code>quota</code>, executa <code>run</code> nos cards priorizados e finaliza com <code>complete</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/pwa-backlog</code></td>
+<td style="text-align: left;"><code>npm run pwa:scan &amp;&amp; npm run pwa:run</code></td>
+<td style="text-align: left;">Atalho dedicado para inspecionar e processar a fila do Backlog Agêntico.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/pwa-scan</code></td>
+<td style="text-align: left;"><code>npm run pwa:scan</code></td>
+<td style="text-align: left;">Executa a estimativa determinística Zero-Token em todos os cards abertos/priorizados.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/pwa-run</code></td>
+<td style="text-align: left;"><code>npm run pwa:run</code></td>
+<td style="text-align: left;">Valida a reserva obrigatória de 15% (Testes+Push), inicia o Cronômetro Líquido e entrega linhas focais via <code>grep -n</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/pwa-complete</code></td>
+<td style="text-align: left;"><code>npx tsx scripts/pwa_backlog_agent.ts complete</code></td>
+<td style="text-align: left;">Promove o card/lote para <code>concluido</code>, desconta interrupções de rede e recalibra o EWMA.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/pwa-quota</code></td>
+<td style="text-align: left;"><code>npm run pwa:quota</code></td>
+<td style="text-align: left;">Exibe no terminal o saldo seguro de tokens, reserva de 15%, fatores EWMA e status dos modelos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/pwa-devtools</code></td>
+<td style="text-align: left;"><code>npm run devtools:diagnosticar &amp;&amp; npm run pwa:scan</code></td>
+<td style="text-align: left;">Diagnóstico unificado de logs do Eruda/Supabase + verificação da fila do Backlog.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-observatorio-analitico-bidirecional-e-persistencia-supabase">6. Observatório Analítico Bidirecional e Persistência Supabase</h2>
+<p>No Painel ADM (<code>/admin</code> ➔ <strong>Backlog &amp; Quota IA</strong>), o administrador dispõe de três visões integradas:</p>
+<ol>
+<li><strong>Header de Quota Semanal (<code>BacklogQuotaHeader.tsx</code>)</strong>:</li>
+<li>Barra segmentada em tempo real exibindo <strong>Tokens Consumidos</strong>, <strong>Reserva Obrigatória de 15% (Testes + Push)</strong> e <strong>Saldo Livre Seguro</strong>.</li>
+<li>Seletor rápido de disponibilidade dos modelos (<strong>Baixo / Flash</strong>, <strong>Médio / 3.1 Pro</strong>, <strong>Alto / 4 Argon</strong>) entre <code>Ativo</code>, <code>Reserva</code> e <code>Esgotado</code>.</li>
+<li><strong>Observatório Analítico (<code>BacklogTokenAnalytics.tsx</code>)</strong>:</li>
+<li><strong>Gráfico 1</strong>: Evolução do tamanho do repositório (KB/MB e LOC) vs. Queima de Tokens por Commit desde a criação dos repositórios (Julho/2026).</li>
+<li><strong>Gráfico 2</strong>: Evolução da Assertividade da IA (Tokens e Tempo Líquido <strong>Estimado vs. Real</strong>).</li>
+<li><strong>Ranking de Arquivos</strong>: Lista paginada (<code>Top 5</code> ➔ <code>Ver mais</code>) ordenada pelo histórico real de modificações.</li>
+<li><strong>Filtro Cruzado Bidirecional</strong>: Toque em um ponto do gráfico filtra os arquivos daquele commit; toque em um arquivo na lista destaca na curva apenas os commits que o modificaram.</li>
+<li><strong>Persistência Direta no Supabase (<code>backlogServerStore.ts</code>)</strong>:</li>
+<li>Todas as tarefas, configurações de quota, série histórica minerada (<code>860+</code> commits) e métricas de arquivos são sincronizados diretamente no Supabase (<code>logs_sessao</code> com chaves <code>PALETSCAN_BACKLOG_*</code> e tabelas dedicadas), garantindo disponibilidade imediata em deploys serverless (Vercel) e múltiplos dispositivos.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../pwa-testes-qualidade/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Suíte de Testes &amp; Qualidade Contínua">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Suíte de Testes & Qualidade Contínua
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../operacoes/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Guia de Operações &amp; CLI">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Guia de Operações & CLI
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.expand", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../javascripts/tables.js"></script>
+      
+    
+  </body>
+</html>
