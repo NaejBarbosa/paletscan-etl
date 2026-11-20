@@ -34,6 +34,9 @@
   <a href="https://termux.dev/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Termux_ARM64_Linux-000000?style=for-the-badge&logo=linux&logoColor=white" alt="Termux Linux">
   </a>
+  <a href="https://www.gov.br/inpi/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/INPI_Registro-BR512026010841--1-005696?style=for-the-badge&logoColor=white" alt="INPI BR512026010841-1">
+  </a>
 </div>
 
 > O **Ecossistema PaletScan** é uma solução industrial completa e integrada, projetada para eliminar perdas financeiras por vencimento, acelerar o giro de mercadorias perecíveis (**FEFO / PVPS**) e garantir precisão cirúrgica no endereçamento de paletes em câmaras frigoríficas industriais (congelados e resfriados).
