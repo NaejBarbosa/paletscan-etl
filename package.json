@@ -22,7 +22,9 @@
     "wipe": "npx tsx db_sync/wipe_db_only.ts",
     "validate:mermaid": "node scripts/validate_mermaid.js",
     "full": "npx tsx scripts/run_full_pipeline.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "npx tsx scripts/test_etl_regression.ts && npx tsx scripts/test_sast_exec_file_sync.ts",
+    "test:integration": "npx tsx scripts/test_sync_and_catalog.ts && npx tsx scripts/test_pwa_crud_and_sync_safety.ts"
   },
   "keywords": [
     "etl",
@@ -36,16 +38,22 @@
   ],
   "author": "PaletScan Data Team",
   "license": "ISC",
+  "engines": {
+    "node": ">=22.22.2",
+    "npm": ">=12.2.3"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
     "dotenv": "^16.4.5",
-    "uuid": "^10.0.0",
+    "uuid": "^14.0.3",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
-    "@types/uuid": "^10.0.0",
     "tsx": "^4.19.0",
     "typescript": "^5.5.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
